@@ -9749,7 +9749,7 @@ namespace SocketServer
 
 
                     KratosProtocolFrame Result = new KratosProtocolFrame();
-                    Result = Kratos_Protocol.DecodeKratusProtocol_Normal(TCPClientBuffer);
+                    Result = Kratos_Protocol.DecodeKratusProtocol_Standard(TCPClientBuffer);
                     TCPClientBuffer = new byte[0];
 
                     textBox_RxClientPreamble.BeginInvoke(new EventHandler(delegate
@@ -14091,9 +14091,9 @@ namespace SocketServer
                     KratosFrame.Preamble = Regex.Replace(textBox_Preamble.Text, @"\s+", "");
                     KratosFrame.Opcode = Regex.Replace(textBox_Opcode.Text, @"\s+", "");
                     KratosFrame.Data = Regex.Replace(textBox_data.Text, @"\s+", "");
-                    byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Normal(KratosFrame);
+                    byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
 
-                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Normal(Result);
+                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
                     //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
                     textBox_SentPreamble.Text = SentFrame.Preamble;
                     textBox_SentOpcode.Text = SentFrame.Opcode;

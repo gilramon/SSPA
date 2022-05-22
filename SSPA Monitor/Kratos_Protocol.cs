@@ -140,7 +140,7 @@ namespace Monitor
             
         }
 
-        static public byte[] EncodeKratusProtocol_Normal(KratosProtocolFrame i_Frame)
+        static public byte[] EncodeKratusProtocol_Standard(KratosProtocolFrame i_Frame)
         {
             try
             {
@@ -178,7 +178,7 @@ namespace Monitor
             }
         }
 
-        static public KratosProtocolFrame DecodeKratusProtocol_Normal(byte[] i_IncomingBytes)
+        static public KratosProtocolFrame DecodeKratusProtocol_Standard(byte[] i_IncomingBytes)
         {
             KratosProtocolFrame Ret = new KratosProtocolFrame();
 
