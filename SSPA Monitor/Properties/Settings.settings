@@ -1,0 +1,88 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Monitor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Start_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">7000</Value>
+    </Setting>
+    <Setting Name="Default_Server_Message" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Comport_Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="Comport_BaudRate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">115200</Value>
+    </Setting>
+    <Setting Name="Comport_Parity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="Comport_DataBits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="Comport_StopBit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">One</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastRunTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastSaveSMSTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PhoneBook" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
+    </Setting>
+    <Setting Name="SMS_Commands" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;BAT=,2,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;SPD=,5,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;POSDUR=,3,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;CDC=,1111,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;ENOUT=,1,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;STATSLP=,duration value,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;STAT?,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;MDM=,82.80.123.56,2002,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;HNAPN=,internetg,,,,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;TOW=,2,3,4,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;TILT=,2,3,4,;&lt;/string&gt;
+  &lt;string&gt;;S1BFR=,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;TD=,01/01/12,09:50:00,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;NUM=,&amp;lt;054111111&amp;gt;,&amp;lt; 054222222&amp;gt;,&amp;lt; 054333333&amp;gt;,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;SMSPASS=,4321,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;RST=,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;POSANGLE=,21,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;POSDISTANCE=,11,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;SETKM=,50000,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;GETLOC?,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;SMSSTAT?,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;GETCONFIG?,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;GPRSEN=,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;JAMEN=,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;JAMLEVEL=,LEVEL,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;SIRENEN=,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;GARAGE=,EN,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;DISARM=,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;ARM=,1,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;DOORIGDEL=,5,;&lt;/string&gt;
+  &lt;string&gt;;&amp;lt;S1BM&amp;gt;AUTOARM=,3,;&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="SerialPort_History" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;;&amp;lt;1234&amp;gt;STAT?,;&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="RegisterCommands" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

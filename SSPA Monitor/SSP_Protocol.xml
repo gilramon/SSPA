@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SSP_Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:SSP_Protocol.eMessegeType">
+            <summary>
+            SSP Message Type frame header
+            </summary>
+        </member>
+        <member name="F:SSP_Protocol.eMessegeType.CONFIG">
+            <summary>
+            Config frame
+            </summary>
+        </member>
+        <member name="F:SSP_Protocol.eMessegeType.TRACE">
+            <summary>
+            Trace frame
+            </summary>
+        </member>
+        <member name="F:SSP_Protocol.eMessegeType.TEST">
+            <summary>
+            Test Frame
+            </summary>
+        </member>
+        <member name="F:SSP_Protocol.eMessegeType.ACK">
+            <summary>
+            Acknowledge
+            </summary>
+        </member>
+        <member name="T:SSP_Protocol.SSP_Protocol">
+            <summary>
+            Class which help handle SSP protocol data
+            </summary>
+        </member>
+        <member name="M:SSP_Protocol.SSP_Protocol.SSPPacket_Decoder(System.Byte[])">
+            <summary>
+            Receive Byte array and returns the byte array of the data payload if recognize valid ssp frame.
+            for example: if get SSP frame 
+            0x55 0x55 0x00 0x3 0x1 0x2 0x3 0x9
+            it returns only the payload
+            0x1 0x2 0x3
+            In case the ssp frame is not valid: not started with 0x55 0x55 or checksum not valid or the size is not suit return NULL
+            </summary>
+            <param name="i_Buffer">byte array</param>
+            <returns>if valid SSP Frame valid retun payload else NULL</returns>
+        </member>
+        <member name="M:SSP_Protocol.SSP_Protocol.SSPPacket_Encoder(System.Byte[])">
+            <summary>
+            receive byte array of ssp payload and return the whole ssp frame 
+            for example: get payload
+            0x1 0x2 0x3
+            returns:
+            0x55 0x55 0x00 0x3 0x1 0x2 0x3 0x9
+            </summary>
+            <param name="i_SspData">byte array</param>
+            <returns></returns>
+        </member>
+        <member name="M:SSP_Protocol.SSP_Protocol.SSPPacket_Encoder(SSP_Protocol.eMessegeType,System.Byte[])">
+            <summary>
+            receive byte array of ssp payload and return the whole ssp frame 
+            for example: get payload
+            0x1 0x2 0x3
+            returns:
+            0x55 0x55 0x00 0x3 0x1 0x2 0x3 0x9
+            </summary>
+            <param name="i_SspData">byte array</param>
+            <param name="i_MessageType">Message Type header</param>
+            <returns></returns>
+        </member>
+        <member name="M:SSP_Protocol.SSP_Protocol.ReturnMessageType(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="i_SspData"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

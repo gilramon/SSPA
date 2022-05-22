@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Monitor.AddContact" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Monitor.AddContact.ConfigDataType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AddContact.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAEAAAAACAAEJAAAEigAAACAEAYIAAAMGBAIgEAAAA=</HashCode>
+      <FileName>AddContact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monitor.PhoneBookContact" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAEAAAAAAQAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>PhoneBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monitor.PhoneBook" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABCAYA=</HashCode>
+      <FileName>PhoneBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Logger" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAgAIQAIAAAgkACgACAQAAAAIAAgAAAACEAAAAEACQQ=</HashCode>
+      <FileName>Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.Form1" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="SocketServer.Form1.LogClass" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SocketServerForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="SocketServer.Form1.eComSource" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SocketServerForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SocketServer.Form1.eACKMessageReceived" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SocketServerForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SocketServer.Form1.ConfigDataType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SocketServerForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>/f+u/7Xr/6+m/7/nzv/r4f////8/9vP/8/d//793xr8=</HashCode>
+      <FileName>SocketServerForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketServer.System_Password" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAgAACAAAACQgAYAAACMGAAAAAAAAA=</HashCode>
+      <FileName>System_Password.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monitor.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monitor.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAIAAAAAAAEABAAIAAAAAABAAAAAQiAAEBAKAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModemStatus" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAEAAAAAAAAAAAAAAgAAAAAEAAAAAAARgAAIIg=</HashCode>
+      <FileName>SocketServerForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
