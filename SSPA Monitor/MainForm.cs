@@ -212,55 +212,14 @@ namespace SocketServer
         private ComboBox comboBox_ConnectionNumber;
         private GroupBox groupBox_SendSerialOrMonitorCommands;
         private Button button_SendSerialPort;
-        private TabPage tabPage_SMS;
-        private GroupBox groupBox33;
-        private Button button_AddContact;
-        private CheckedListBox checkedListBox_PhoneBook;
-        private GroupBox groupBox34;
-        private RichTextBox richTextBox_TextSendSMS;
-        private Button button_ImportToXML;
-        private Button button_ExportToXML;
-        private Button button_RemoveContact;
-        private GroupBox groupBox37;
-        private RichTextBox richTextBox_SMSConsole;
-        private CheckBox checkBox_RecordSMSConsole;
-        private CheckBox checkBox_PauseSMSConsole;
-        private Button button_ClearSMSConsole;
-        private GroupBox groupBox35;
-        private RichTextBox richTextBox_ModemStatus;
-        private Button button_SendSelectedSMS;
-        private Button button_SendAllCheckedSMS;
-        private Button button33;
-        private Button button36;
-        private Label label_SMSSendCharacters;
         private TextBox textBox_SerialPortRecognizePattern;
         private RichTextBox textBox_MaximumNumberReceivedRequest;
         private TextBox textBox_TotalFileLength;
-        private GroupBox groupBox39;
-        private Button button37;
-        private Button button38;
-        private Button button39;
-        private Button button40;
-        private Button button41;
-        private CheckBox checkBox_SendSMSAsIs;
-        private CheckBox checkBox1;
         private Button button_StartFOTAProcess;
         private RichTextBox textBox_IDKey;
-        private CheckBox checkBox_OpenPortSMS;
-        private ComboBox comboBox_ComportSMS;
         private SerialPort serialPort_SMS;
-        private CheckBox checkBox_DebugSMS;
-        private RichTextBox richTextBox_ContactDetails;
-        private CheckBox checkBox_SMSencrypted;
-        private GroupBox GrooupBox_Encryption;
-        private TextBox textBox_UnitIDForSMS;
-        private Label label5;
-        private TextBox textBox_CodeArrayForSMS;
-        private Label label2;
         private TextBox textBox_SerialPortRecognizePattern2;
         private TextBox textBox_SerialPortRecognizePattern3;
-        private Button button34;
-        private Button button_Ring;
         private Button button_ReScanComPort;
         private Button button_StopwatchReset;
         private Button button_Stopwatch_Start_Stop;
@@ -286,7 +245,6 @@ namespace SocketServer
         private TabPage tabPage_charts;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Button button_ScreenShot;
-        private ListBox listBox_SMSCommands;
         private TextBox textBox_SendSerialPort;
         private TextBox textBox_graph_XY;
         private Button button_ResetGraphs;
@@ -562,6 +520,48 @@ namespace SocketServer
         private Button button106;
         private Button button107;
         private TextBox textBox_SelectLOSource;
+        private TabPage tabPage_SMS;
+        private GroupBox groupBox39;
+        private GroupBox groupBox37;
+        private GroupBox groupBox35;
+        private GroupBox groupBox34;
+        private GroupBox groupBox33;
+        private CheckedListBox checkedListBox_PhoneBook;
+        private Button button_AddContact;
+        private Button button_RemoveContact;
+        private Button button_ExportToXML;
+        private Button button_ImportToXML;
+        private Button button33;
+        private RichTextBox richTextBox_ContactDetails;
+        private Button button34;
+        private RichTextBox richTextBox_TextSendSMS;
+        private Button button_SendAllCheckedSMS;
+        private Button button_SendSelectedSMS;
+        private Label label_SMSSendCharacters;
+        private CheckBox checkBox1;
+        private CheckBox checkBox_SendSMSAsIs;
+        private CheckBox checkBox_SMSencrypted;
+        private GroupBox GrooupBox_Encryption;
+        private TextBox textBox_UnitIDForSMS;
+        private Label label2;
+        private TextBox textBox_CodeArrayForSMS;
+        private Label label5;
+        private Button button_Ring;
+        private RichTextBox richTextBox_ModemStatus;
+        private ComboBox comboBox_ComportSMS;
+        private Button button36;
+        private CheckBox checkBox_OpenPortSMS;
+        private CheckBox checkBox_DebugSMS;
+        private Button button_ClearSMSConsole;
+        private CheckBox checkBox_PauseSMSConsole;
+        private CheckBox checkBox_RecordSMSConsole;
+        private RichTextBox richTextBox_SMSConsole;
+        private Button button41;
+        private Button button40;
+        private Button button39;
+        private Button button38;
+        private Button button37;
+        private ListBox listBox_SMSCommands;
         static readonly string MINIADA_HEADER = "53 00";
         //bool m_Exit = false;
 
@@ -688,8 +688,8 @@ namespace SocketServer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -702,48 +702,6 @@ namespace SocketServer
             this.button1 = new System.Windows.Forms.Button();
             this.txtDataTx = new System.Windows.Forms.TextBox();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
-            this.tabPage_SMS = new System.Windows.Forms.TabPage();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.richTextBox_SMSConsole = new System.Windows.Forms.RichTextBox();
-            this.checkBox_RecordSMSConsole = new System.Windows.Forms.CheckBox();
-            this.checkBox_PauseSMSConsole = new System.Windows.Forms.CheckBox();
-            this.button_ClearSMSConsole = new System.Windows.Forms.Button();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.checkBox_DebugSMS = new System.Windows.Forms.CheckBox();
-            this.checkBox_OpenPortSMS = new System.Windows.Forms.CheckBox();
-            this.button36 = new System.Windows.Forms.Button();
-            this.comboBox_ComportSMS = new System.Windows.Forms.ComboBox();
-            this.richTextBox_ModemStatus = new System.Windows.Forms.RichTextBox();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.button_Ring = new System.Windows.Forms.Button();
-            this.GrooupBox_Encryption = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_CodeArrayForSMS = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_UnitIDForSMS = new System.Windows.Forms.TextBox();
-            this.checkBox_SMSencrypted = new System.Windows.Forms.CheckBox();
-            this.checkBox_SendSMSAsIs = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label_SMSSendCharacters = new System.Windows.Forms.Label();
-            this.button_SendSelectedSMS = new System.Windows.Forms.Button();
-            this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
-            this.richTextBox_TextSendSMS = new System.Windows.Forms.RichTextBox();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.button34 = new System.Windows.Forms.Button();
-            this.richTextBox_ContactDetails = new System.Windows.Forms.RichTextBox();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button_ImportToXML = new System.Windows.Forms.Button();
-            this.button_ExportToXML = new System.Windows.Forms.Button();
-            this.button_RemoveContact = new System.Windows.Forms.Button();
-            this.button_AddContact = new System.Windows.Forms.Button();
-            this.checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
             this.tabPage_Configuration = new System.Windows.Forms.TabPage();
             this.tabControl_systems = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
@@ -1200,16 +1158,51 @@ namespace SocketServer
             this.label12 = new System.Windows.Forms.Label();
             this.label_ClientTCPConnected = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
+            this.button_AddContact = new System.Windows.Forms.Button();
+            this.button_RemoveContact = new System.Windows.Forms.Button();
+            this.button_ExportToXML = new System.Windows.Forms.Button();
+            this.button_ImportToXML = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.richTextBox_ContactDetails = new System.Windows.Forms.RichTextBox();
+            this.button34 = new System.Windows.Forms.Button();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.richTextBox_TextSendSMS = new System.Windows.Forms.RichTextBox();
+            this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
+            this.button_SendSelectedSMS = new System.Windows.Forms.Button();
+            this.label_SMSSendCharacters = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox_SendSMSAsIs = new System.Windows.Forms.CheckBox();
+            this.checkBox_SMSencrypted = new System.Windows.Forms.CheckBox();
+            this.GrooupBox_Encryption = new System.Windows.Forms.GroupBox();
+            this.textBox_UnitIDForSMS = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_CodeArrayForSMS = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button_Ring = new System.Windows.Forms.Button();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.richTextBox_ModemStatus = new System.Windows.Forms.RichTextBox();
+            this.comboBox_ComportSMS = new System.Windows.Forms.ComboBox();
+            this.button36 = new System.Windows.Forms.Button();
+            this.checkBox_OpenPortSMS = new System.Windows.Forms.CheckBox();
+            this.checkBox_DebugSMS = new System.Windows.Forms.CheckBox();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.button_ClearSMSConsole = new System.Windows.Forms.Button();
+            this.checkBox_PauseSMSConsole = new System.Windows.Forms.CheckBox();
+            this.checkBox_RecordSMSConsole = new System.Windows.Forms.CheckBox();
+            this.richTextBox_SMSConsole = new System.Windows.Forms.RichTextBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
+            this.tabPage_SMS = new System.Windows.Forms.TabPage();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
-            this.tabPage_SMS.SuspendLayout();
-            this.groupBox39.SuspendLayout();
-            this.groupBox37.SuspendLayout();
-            this.groupBox35.SuspendLayout();
-            this.groupBox34.SuspendLayout();
-            this.GrooupBox_Encryption.SuspendLayout();
-            this.groupBox33.SuspendLayout();
             this.tabPage_Configuration.SuspendLayout();
             this.tabControl_systems.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -1277,6 +1270,7 @@ namespace SocketServer
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.tabPage_SMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1423,480 +1417,6 @@ namespace SocketServer
             this.tabControl_Main.TabIndex = 8;
             this.tabControl_Main.TabStop = false;
             this.tabControl_Main.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TabControl1_KeyDown);
-            // 
-            // tabPage_SMS
-            // 
-            this.tabPage_SMS.Controls.Add(this.groupBox39);
-            this.tabPage_SMS.Controls.Add(this.groupBox37);
-            this.tabPage_SMS.Controls.Add(this.groupBox35);
-            this.tabPage_SMS.Controls.Add(this.groupBox34);
-            this.tabPage_SMS.Controls.Add(this.groupBox33);
-            this.tabPage_SMS.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_SMS.Name = "tabPage_SMS";
-            this.tabPage_SMS.Size = new System.Drawing.Size(1547, 682);
-            this.tabPage_SMS.TabIndex = 6;
-            this.tabPage_SMS.Text = "SMS";
-            this.tabPage_SMS.UseVisualStyleBackColor = true;
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Controls.Add(this.listBox_SMSCommands);
-            this.groupBox39.Controls.Add(this.button37);
-            this.groupBox39.Controls.Add(this.button38);
-            this.groupBox39.Controls.Add(this.button39);
-            this.groupBox39.Controls.Add(this.button40);
-            this.groupBox39.Controls.Add(this.button41);
-            this.groupBox39.Location = new System.Drawing.Point(476, 7);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(315, 429);
-            this.groupBox39.TabIndex = 6;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "SMS commands";
-            this.groupBox39.Enter += new System.EventHandler(this.GroupBox39_Enter);
-            // 
-            // listBox_SMSCommands
-            // 
-            this.listBox_SMSCommands.FormattingEnabled = true;
-            this.listBox_SMSCommands.ItemHeight = 18;
-            this.listBox_SMSCommands.Location = new System.Drawing.Point(6, 17);
-            this.listBox_SMSCommands.Name = "listBox_SMSCommands";
-            this.listBox_SMSCommands.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_SMSCommands.Size = new System.Drawing.Size(303, 292);
-            this.listBox_SMSCommands.TabIndex = 6;
-            this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(169, 359);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 5;
-            this.button37.Text = "Edit";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.Button37_Click);
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(88, 395);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(75, 23);
-            this.button38.TabIndex = 4;
-            this.button38.Text = "Import";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.Button38_Click);
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(7, 395);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 23);
-            this.button39.TabIndex = 3;
-            this.button39.Text = "Export";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.Button39_Click_1);
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(88, 359);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 2;
-            this.button40.Text = "Remove";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.Button40_Click);
-            // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(7, 359);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(75, 23);
-            this.button41.TabIndex = 1;
-            this.button41.Text = "Add";
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.Button41_Click);
-            // 
-            // groupBox37
-            // 
-            this.groupBox37.Controls.Add(this.richTextBox_SMSConsole);
-            this.groupBox37.Controls.Add(this.checkBox_RecordSMSConsole);
-            this.groupBox37.Controls.Add(this.checkBox_PauseSMSConsole);
-            this.groupBox37.Controls.Add(this.button_ClearSMSConsole);
-            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.Location = new System.Drawing.Point(797, 7);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(463, 656);
-            this.groupBox37.TabIndex = 8;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "SMS Console";
-            // 
-            // richTextBox_SMSConsole
-            // 
-            this.richTextBox_SMSConsole.EnableAutoDragDrop = true;
-            this.richTextBox_SMSConsole.Location = new System.Drawing.Point(6, 17);
-            this.richTextBox_SMSConsole.Name = "richTextBox_SMSConsole";
-            this.richTextBox_SMSConsole.Size = new System.Drawing.Size(451, 607);
-            this.richTextBox_SMSConsole.TabIndex = 0;
-            this.richTextBox_SMSConsole.Text = "";
-            // 
-            // checkBox_RecordSMSConsole
-            // 
-            this.checkBox_RecordSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_RecordSMSConsole.AutoSize = true;
-            this.checkBox_RecordSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_RecordSMSConsole.Location = new System.Drawing.Point(222, 630);
-            this.checkBox_RecordSMSConsole.Name = "checkBox_RecordSMSConsole";
-            this.checkBox_RecordSMSConsole.Size = new System.Drawing.Size(99, 26);
-            this.checkBox_RecordSMSConsole.TabIndex = 7;
-            this.checkBox_RecordSMSConsole.Text = "Record Log";
-            this.checkBox_RecordSMSConsole.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_PauseSMSConsole
-            // 
-            this.checkBox_PauseSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_PauseSMSConsole.AutoSize = true;
-            this.checkBox_PauseSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_PauseSMSConsole.Location = new System.Drawing.Point(327, 630);
-            this.checkBox_PauseSMSConsole.Name = "checkBox_PauseSMSConsole";
-            this.checkBox_PauseSMSConsole.Size = new System.Drawing.Size(62, 26);
-            this.checkBox_PauseSMSConsole.TabIndex = 5;
-            this.checkBox_PauseSMSConsole.Text = "Pause";
-            this.checkBox_PauseSMSConsole.UseVisualStyleBackColor = true;
-            // 
-            // button_ClearSMSConsole
-            // 
-            this.button_ClearSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ClearSMSConsole.Location = new System.Drawing.Point(395, 630);
-            this.button_ClearSMSConsole.Name = "button_ClearSMSConsole";
-            this.button_ClearSMSConsole.Size = new System.Drawing.Size(62, 26);
-            this.button_ClearSMSConsole.TabIndex = 6;
-            this.button_ClearSMSConsole.Text = "Clear";
-            this.button_ClearSMSConsole.UseVisualStyleBackColor = true;
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Controls.Add(this.checkBox_DebugSMS);
-            this.groupBox35.Controls.Add(this.checkBox_OpenPortSMS);
-            this.groupBox35.Controls.Add(this.button36);
-            this.groupBox35.Controls.Add(this.comboBox_ComportSMS);
-            this.groupBox35.Controls.Add(this.richTextBox_ModemStatus);
-            this.groupBox35.Location = new System.Drawing.Point(8, 587);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(456, 147);
-            this.groupBox35.TabIndex = 7;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Modem Status";
-            // 
-            // checkBox_DebugSMS
-            // 
-            this.checkBox_DebugSMS.AutoSize = true;
-            this.checkBox_DebugSMS.Location = new System.Drawing.Point(390, 54);
-            this.checkBox_DebugSMS.Name = "checkBox_DebugSMS";
-            this.checkBox_DebugSMS.Size = new System.Drawing.Size(67, 22);
-            this.checkBox_DebugSMS.TabIndex = 11;
-            this.checkBox_DebugSMS.Text = "Debug";
-            this.checkBox_DebugSMS.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_OpenPortSMS
-            // 
-            this.checkBox_OpenPortSMS.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_OpenPortSMS.AutoSize = true;
-            this.checkBox_OpenPortSMS.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_OpenPortSMS.Location = new System.Drawing.Point(363, 20);
-            this.checkBox_OpenPortSMS.Name = "checkBox_OpenPortSMS";
-            this.checkBox_OpenPortSMS.Size = new System.Drawing.Size(84, 29);
-            this.checkBox_OpenPortSMS.TabIndex = 10;
-            this.checkBox_OpenPortSMS.Text = "Open Port";
-            this.checkBox_OpenPortSMS.UseVisualStyleBackColor = true;
-            this.checkBox_OpenPortSMS.CheckedChanged += new System.EventHandler(this.CheckBox_OpenPortSMS_CheckedChanged);
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(269, 109);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 23);
-            this.button36.TabIndex = 6;
-            this.button36.Text = "Clear";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.Button36_Click);
-            // 
-            // comboBox_ComportSMS
-            // 
-            this.comboBox_ComportSMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_ComportSMS.FormattingEnabled = true;
-            this.comboBox_ComportSMS.Items.AddRange(new object[] {
-            "COM1",
-            "COM2",
-            "COM3",
-            "COM4",
-            "COM5",
-            "COM6"});
-            this.comboBox_ComportSMS.Location = new System.Drawing.Point(290, 22);
-            this.comboBox_ComportSMS.Name = "comboBox_ComportSMS";
-            this.comboBox_ComportSMS.Size = new System.Drawing.Size(67, 26);
-            this.comboBox_ComportSMS.TabIndex = 9;
-            this.comboBox_ComportSMS.Tag = "1";
-            this.comboBox_ComportSMS.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_2);
-            // 
-            // richTextBox_ModemStatus
-            // 
-            this.richTextBox_ModemStatus.Location = new System.Drawing.Point(7, 19);
-            this.richTextBox_ModemStatus.Name = "richTextBox_ModemStatus";
-            this.richTextBox_ModemStatus.Size = new System.Drawing.Size(256, 115);
-            this.richTextBox_ModemStatus.TabIndex = 0;
-            this.richTextBox_ModemStatus.Text = "";
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Controls.Add(this.button_Ring);
-            this.groupBox34.Controls.Add(this.GrooupBox_Encryption);
-            this.groupBox34.Controls.Add(this.checkBox_SMSencrypted);
-            this.groupBox34.Controls.Add(this.checkBox_SendSMSAsIs);
-            this.groupBox34.Controls.Add(this.checkBox1);
-            this.groupBox34.Controls.Add(this.label_SMSSendCharacters);
-            this.groupBox34.Controls.Add(this.button_SendSelectedSMS);
-            this.groupBox34.Controls.Add(this.button_SendAllCheckedSMS);
-            this.groupBox34.Controls.Add(this.richTextBox_TextSendSMS);
-            this.groupBox34.Location = new System.Drawing.Point(8, 436);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(783, 147);
-            this.groupBox34.TabIndex = 6;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "SMS text";
-            // 
-            // button_Ring
-            // 
-            this.button_Ring.Location = new System.Drawing.Point(88, 112);
-            this.button_Ring.Name = "button_Ring";
-            this.button_Ring.Size = new System.Drawing.Size(141, 23);
-            this.button_Ring.TabIndex = 14;
-            this.button_Ring.Text = "Ring";
-            this.toolTip1.SetToolTip(this.button_Ring, "Ring to contact");
-            this.toolTip2.SetToolTip(this.button_Ring, "Ring to contact");
-            this.button_Ring.UseVisualStyleBackColor = true;
-            this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
-            // 
-            // GrooupBox_Encryption
-            // 
-            this.GrooupBox_Encryption.Controls.Add(this.label5);
-            this.GrooupBox_Encryption.Controls.Add(this.textBox_CodeArrayForSMS);
-            this.GrooupBox_Encryption.Controls.Add(this.label2);
-            this.GrooupBox_Encryption.Controls.Add(this.textBox_UnitIDForSMS);
-            this.GrooupBox_Encryption.Enabled = false;
-            this.GrooupBox_Encryption.Location = new System.Drawing.Point(595, 38);
-            this.GrooupBox_Encryption.Name = "GrooupBox_Encryption";
-            this.GrooupBox_Encryption.Size = new System.Drawing.Size(184, 103);
-            this.GrooupBox_Encryption.TabIndex = 13;
-            this.GrooupBox_Encryption.TabStop = false;
-            this.GrooupBox_Encryption.Text = "Encryption";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 18);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Code";
-            // 
-            // textBox_CodeArrayForSMS
-            // 
-            this.textBox_CodeArrayForSMS.Location = new System.Drawing.Point(54, 46);
-            this.textBox_CodeArrayForSMS.MaxLength = 4;
-            this.textBox_CodeArrayForSMS.Name = "textBox_CodeArrayForSMS";
-            this.textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 26);
-            this.textBox_CodeArrayForSMS.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "UnitID";
-            // 
-            // textBox_UnitIDForSMS
-            // 
-            this.textBox_UnitIDForSMS.Location = new System.Drawing.Point(54, 17);
-            this.textBox_UnitIDForSMS.MaxLength = 16;
-            this.textBox_UnitIDForSMS.Name = "textBox_UnitIDForSMS";
-            this.textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 26);
-            this.textBox_UnitIDForSMS.TabIndex = 0;
-            // 
-            // checkBox_SMSencrypted
-            // 
-            this.checkBox_SMSencrypted.AutoSize = true;
-            this.checkBox_SMSencrypted.Location = new System.Drawing.Point(595, 20);
-            this.checkBox_SMSencrypted.Name = "checkBox_SMSencrypted";
-            this.checkBox_SMSencrypted.Size = new System.Drawing.Size(89, 22);
-            this.checkBox_SMSencrypted.TabIndex = 12;
-            this.checkBox_SMSencrypted.Text = "Encrypted";
-            this.checkBox_SMSencrypted.UseVisualStyleBackColor = true;
-            this.checkBox_SMSencrypted.CheckedChanged += new System.EventHandler(this.CheckBox_SMSencrypted_CheckedChanged);
-            // 
-            // checkBox_SendSMSAsIs
-            // 
-            this.checkBox_SendSMSAsIs.AutoSize = true;
-            this.checkBox_SendSMSAsIs.Location = new System.Drawing.Point(240, 115);
-            this.checkBox_SendSMSAsIs.Name = "checkBox_SendSMSAsIs";
-            this.checkBox_SendSMSAsIs.Size = new System.Drawing.Size(116, 22);
-            this.checkBox_SendSMSAsIs.TabIndex = 11;
-            this.checkBox_SendSMSAsIs.Text = "Send SMS as is";
-            this.checkBox_SendSMSAsIs.UseVisualStyleBackColor = true;
-            this.checkBox_SendSMSAsIs.CheckedChanged += new System.EventHandler(this.CheckBox_SendSMSAsIs_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(145, 145);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(92, 22);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label_SMSSendCharacters
-            // 
-            this.label_SMSSendCharacters.AutoSize = true;
-            this.label_SMSSendCharacters.Location = new System.Drawing.Point(12, 119);
-            this.label_SMSSendCharacters.Name = "label_SMSSendCharacters";
-            this.label_SMSSendCharacters.Size = new System.Drawing.Size(42, 18);
-            this.label_SMSSendCharacters.TabIndex = 9;
-            this.label_SMSSendCharacters.Text = "0/160";
-            // 
-            // button_SendSelectedSMS
-            // 
-            this.button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
-            this.button_SendSelectedSMS.Name = "button_SendSelectedSMS";
-            this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
-            this.button_SendSelectedSMS.TabIndex = 8;
-            this.button_SendSelectedSMS.Text = "Send SMS One";
-            this.toolTip1.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
-            this.toolTip2.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
-            this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
-            this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
-            // 
-            // button_SendAllCheckedSMS
-            // 
-            this.button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
-            this.button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
-            this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
-            this.button_SendAllCheckedSMS.TabIndex = 7;
-            this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
-            this.toolTip1.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
-            this.toolTip2.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
-            this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
-            this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
-            // 
-            // richTextBox_TextSendSMS
-            // 
-            this.richTextBox_TextSendSMS.AutoWordSelection = true;
-            this.richTextBox_TextSendSMS.EnableAutoDragDrop = true;
-            this.richTextBox_TextSendSMS.Location = new System.Drawing.Point(10, 18);
-            this.richTextBox_TextSendSMS.Name = "richTextBox_TextSendSMS";
-            this.richTextBox_TextSendSMS.Size = new System.Drawing.Size(579, 91);
-            this.richTextBox_TextSendSMS.TabIndex = 2;
-            this.richTextBox_TextSendSMS.Text = "";
-            this.richTextBox_TextSendSMS.TextChanged += new System.EventHandler(this.RichTextBox_TextSendSMS_TextChanged);
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.Controls.Add(this.button34);
-            this.groupBox33.Controls.Add(this.richTextBox_ContactDetails);
-            this.groupBox33.Controls.Add(this.button33);
-            this.groupBox33.Controls.Add(this.button_ImportToXML);
-            this.groupBox33.Controls.Add(this.button_ExportToXML);
-            this.groupBox33.Controls.Add(this.button_RemoveContact);
-            this.groupBox33.Controls.Add(this.button_AddContact);
-            this.groupBox33.Controls.Add(this.checkedListBox_PhoneBook);
-            this.groupBox33.Location = new System.Drawing.Point(8, 7);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(462, 429);
-            this.groupBox33.TabIndex = 1;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Phone Book";
-            this.groupBox33.Enter += new System.EventHandler(this.GroupBox33_Enter);
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(169, 400);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 7;
-            this.button34.Text = "Backup";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.Button34_Click_2);
-            // 
-            // richTextBox_ContactDetails
-            // 
-            this.richTextBox_ContactDetails.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox_ContactDetails.Location = new System.Drawing.Point(290, 19);
-            this.richTextBox_ContactDetails.Name = "richTextBox_ContactDetails";
-            this.richTextBox_ContactDetails.Size = new System.Drawing.Size(166, 328);
-            this.richTextBox_ContactDetails.TabIndex = 6;
-            this.richTextBox_ContactDetails.Text = "";
-            this.richTextBox_ContactDetails.TextChanged += new System.EventHandler(this.RichTextBox_ContactDetails_TextChanged);
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(169, 371);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 5;
-            this.button33.Text = "Edit";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.Button33_Click_2);
-            // 
-            // button_ImportToXML
-            // 
-            this.button_ImportToXML.Location = new System.Drawing.Point(88, 400);
-            this.button_ImportToXML.Name = "button_ImportToXML";
-            this.button_ImportToXML.Size = new System.Drawing.Size(75, 23);
-            this.button_ImportToXML.TabIndex = 4;
-            this.button_ImportToXML.Text = "Import";
-            this.button_ImportToXML.UseVisualStyleBackColor = true;
-            this.button_ImportToXML.Click += new System.EventHandler(this.Button_ImportToXML_Click);
-            // 
-            // button_ExportToXML
-            // 
-            this.button_ExportToXML.Location = new System.Drawing.Point(7, 400);
-            this.button_ExportToXML.Name = "button_ExportToXML";
-            this.button_ExportToXML.Size = new System.Drawing.Size(75, 23);
-            this.button_ExportToXML.TabIndex = 3;
-            this.button_ExportToXML.Text = "Export";
-            this.button_ExportToXML.UseVisualStyleBackColor = true;
-            this.button_ExportToXML.Click += new System.EventHandler(this.Button_ExportToXML_Click);
-            // 
-            // button_RemoveContact
-            // 
-            this.button_RemoveContact.Location = new System.Drawing.Point(88, 371);
-            this.button_RemoveContact.Name = "button_RemoveContact";
-            this.button_RemoveContact.Size = new System.Drawing.Size(75, 23);
-            this.button_RemoveContact.TabIndex = 2;
-            this.button_RemoveContact.Text = "Remove";
-            this.button_RemoveContact.UseVisualStyleBackColor = true;
-            this.button_RemoveContact.Click += new System.EventHandler(this.Button_RemoveContact_Click);
-            // 
-            // button_AddContact
-            // 
-            this.button_AddContact.Location = new System.Drawing.Point(7, 371);
-            this.button_AddContact.Name = "button_AddContact";
-            this.button_AddContact.Size = new System.Drawing.Size(75, 23);
-            this.button_AddContact.TabIndex = 1;
-            this.button_AddContact.Text = "Add";
-            this.button_AddContact.UseVisualStyleBackColor = true;
-            this.button_AddContact.Click += new System.EventHandler(this.Button33_Click_1);
-            // 
-            // checkedListBox_PhoneBook
-            // 
-            this.checkedListBox_PhoneBook.FormattingEnabled = true;
-            this.checkedListBox_PhoneBook.Location = new System.Drawing.Point(5, 19);
-            this.checkedListBox_PhoneBook.Name = "checkedListBox_PhoneBook";
-            this.checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 298);
-            this.checkedListBox_PhoneBook.TabIndex = 0;
-            this.checkedListBox_PhoneBook.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox_PhoneBook_SelectedIndexChanged);
-            this.checkedListBox_PhoneBook.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckedListBox_PhoneBook_KeyDown);
-            this.checkedListBox_PhoneBook.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckedListBox_PhoneBook_MouseDown);
             // 
             // tabPage_Configuration
             // 
@@ -5530,17 +5050,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -6933,6 +6453,435 @@ namespace SocketServer
             this.label14.TabIndex = 108;
             this.label14.Text = "Rx";
             // 
+            // groupBox33
+            // 
+            this.groupBox33.Location = new System.Drawing.Point(8, 7);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(462, 429);
+            this.groupBox33.TabIndex = 1;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Enter += new System.EventHandler(this.GroupBox33_Enter);
+            // 
+            // checkedListBox_PhoneBook
+            // 
+            this.checkedListBox_PhoneBook.FormattingEnabled = true;
+            this.checkedListBox_PhoneBook.Location = new System.Drawing.Point(5, 19);
+            this.checkedListBox_PhoneBook.Name = "checkedListBox_PhoneBook";
+            this.checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 298);
+            this.checkedListBox_PhoneBook.TabIndex = 0;
+            this.checkedListBox_PhoneBook.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox_PhoneBook_SelectedIndexChanged);
+            this.checkedListBox_PhoneBook.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckedListBox_PhoneBook_KeyDown);
+            this.checkedListBox_PhoneBook.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckedListBox_PhoneBook_MouseDown);
+            // 
+            // button_AddContact
+            // 
+            this.button_AddContact.Location = new System.Drawing.Point(7, 371);
+            this.button_AddContact.Name = "button_AddContact";
+            this.button_AddContact.Size = new System.Drawing.Size(75, 23);
+            this.button_AddContact.TabIndex = 1;
+            this.button_AddContact.Text = "Add";
+            this.button_AddContact.UseVisualStyleBackColor = true;
+            this.button_AddContact.Click += new System.EventHandler(this.Button33_Click_1);
+            // 
+            // button_RemoveContact
+            // 
+            this.button_RemoveContact.Location = new System.Drawing.Point(88, 371);
+            this.button_RemoveContact.Name = "button_RemoveContact";
+            this.button_RemoveContact.Size = new System.Drawing.Size(75, 23);
+            this.button_RemoveContact.TabIndex = 2;
+            this.button_RemoveContact.Text = "Remove";
+            this.button_RemoveContact.UseVisualStyleBackColor = true;
+            this.button_RemoveContact.Click += new System.EventHandler(this.Button_RemoveContact_Click);
+            // 
+            // button_ExportToXML
+            // 
+            this.button_ExportToXML.Location = new System.Drawing.Point(7, 400);
+            this.button_ExportToXML.Name = "button_ExportToXML";
+            this.button_ExportToXML.Size = new System.Drawing.Size(75, 23);
+            this.button_ExportToXML.TabIndex = 3;
+            this.button_ExportToXML.Text = "Export";
+            this.button_ExportToXML.UseVisualStyleBackColor = true;
+            this.button_ExportToXML.Click += new System.EventHandler(this.Button_ExportToXML_Click);
+            // 
+            // button_ImportToXML
+            // 
+            this.button_ImportToXML.Location = new System.Drawing.Point(88, 400);
+            this.button_ImportToXML.Name = "button_ImportToXML";
+            this.button_ImportToXML.Size = new System.Drawing.Size(75, 23);
+            this.button_ImportToXML.TabIndex = 4;
+            this.button_ImportToXML.Text = "Import";
+            this.button_ImportToXML.UseVisualStyleBackColor = true;
+            this.button_ImportToXML.Click += new System.EventHandler(this.Button_ImportToXML_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(169, 371);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 5;
+            this.button33.Text = "Edit";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.Button33_Click_2);
+            // 
+            // richTextBox_ContactDetails
+            // 
+            this.richTextBox_ContactDetails.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_ContactDetails.Location = new System.Drawing.Point(290, 19);
+            this.richTextBox_ContactDetails.Name = "richTextBox_ContactDetails";
+            this.richTextBox_ContactDetails.Size = new System.Drawing.Size(166, 328);
+            this.richTextBox_ContactDetails.TabIndex = 6;
+            this.richTextBox_ContactDetails.Text = "";
+            this.richTextBox_ContactDetails.TextChanged += new System.EventHandler(this.RichTextBox_ContactDetails_TextChanged);
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(169, 400);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 7;
+            this.button34.Text = "Backup";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.Button34_Click_2);
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Location = new System.Drawing.Point(8, 436);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(783, 147);
+            this.groupBox34.TabIndex = 6;
+            this.groupBox34.TabStop = false;
+            // 
+            // richTextBox_TextSendSMS
+            // 
+            this.richTextBox_TextSendSMS.AutoWordSelection = true;
+            this.richTextBox_TextSendSMS.EnableAutoDragDrop = true;
+            this.richTextBox_TextSendSMS.Location = new System.Drawing.Point(10, 18);
+            this.richTextBox_TextSendSMS.Name = "richTextBox_TextSendSMS";
+            this.richTextBox_TextSendSMS.Size = new System.Drawing.Size(579, 91);
+            this.richTextBox_TextSendSMS.TabIndex = 2;
+            this.richTextBox_TextSendSMS.Text = "";
+            this.richTextBox_TextSendSMS.TextChanged += new System.EventHandler(this.RichTextBox_TextSendSMS_TextChanged);
+            // 
+            // button_SendAllCheckedSMS
+            // 
+            this.button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
+            this.button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
+            this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
+            this.button_SendAllCheckedSMS.TabIndex = 7;
+            this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
+            this.toolTip1.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
+            this.toolTip2.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
+            this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
+            this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
+            // 
+            // button_SendSelectedSMS
+            // 
+            this.button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
+            this.button_SendSelectedSMS.Name = "button_SendSelectedSMS";
+            this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
+            this.button_SendSelectedSMS.TabIndex = 8;
+            this.button_SendSelectedSMS.Text = "Send SMS One";
+            this.toolTip1.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
+            this.toolTip2.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
+            this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
+            this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
+            // 
+            // label_SMSSendCharacters
+            // 
+            this.label_SMSSendCharacters.AutoSize = true;
+            this.label_SMSSendCharacters.Location = new System.Drawing.Point(12, 119);
+            this.label_SMSSendCharacters.Name = "label_SMSSendCharacters";
+            this.label_SMSSendCharacters.Size = new System.Drawing.Size(36, 13);
+            this.label_SMSSendCharacters.TabIndex = 9;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(145, 145);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(92, 22);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_SendSMSAsIs
+            // 
+            this.checkBox_SendSMSAsIs.AutoSize = true;
+            this.checkBox_SendSMSAsIs.Location = new System.Drawing.Point(240, 115);
+            this.checkBox_SendSMSAsIs.Name = "checkBox_SendSMSAsIs";
+            this.checkBox_SendSMSAsIs.Size = new System.Drawing.Size(116, 22);
+            this.checkBox_SendSMSAsIs.TabIndex = 11;
+            this.checkBox_SendSMSAsIs.Text = "Send SMS as is";
+            this.checkBox_SendSMSAsIs.UseVisualStyleBackColor = true;
+            this.checkBox_SendSMSAsIs.CheckedChanged += new System.EventHandler(this.CheckBox_SendSMSAsIs_CheckedChanged);
+            // 
+            // checkBox_SMSencrypted
+            // 
+            this.checkBox_SMSencrypted.AutoSize = true;
+            this.checkBox_SMSencrypted.Location = new System.Drawing.Point(595, 20);
+            this.checkBox_SMSencrypted.Name = "checkBox_SMSencrypted";
+            this.checkBox_SMSencrypted.Size = new System.Drawing.Size(89, 22);
+            this.checkBox_SMSencrypted.TabIndex = 12;
+            this.checkBox_SMSencrypted.Text = "Encrypted";
+            this.checkBox_SMSencrypted.UseVisualStyleBackColor = true;
+            this.checkBox_SMSencrypted.CheckedChanged += new System.EventHandler(this.CheckBox_SMSencrypted_CheckedChanged);
+            // 
+            // GrooupBox_Encryption
+            // 
+            this.GrooupBox_Encryption.Enabled = false;
+            this.GrooupBox_Encryption.Location = new System.Drawing.Point(595, 38);
+            this.GrooupBox_Encryption.Name = "GrooupBox_Encryption";
+            this.GrooupBox_Encryption.Size = new System.Drawing.Size(184, 103);
+            this.GrooupBox_Encryption.TabIndex = 13;
+            this.GrooupBox_Encryption.TabStop = false;
+            // 
+            // textBox_UnitIDForSMS
+            // 
+            this.textBox_UnitIDForSMS.Location = new System.Drawing.Point(54, 17);
+            this.textBox_UnitIDForSMS.MaxLength = 16;
+            this.textBox_UnitIDForSMS.Name = "textBox_UnitIDForSMS";
+            this.textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 20);
+            this.textBox_UnitIDForSMS.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 1;
+            // 
+            // textBox_CodeArrayForSMS
+            // 
+            this.textBox_CodeArrayForSMS.Location = new System.Drawing.Point(54, 46);
+            this.textBox_CodeArrayForSMS.MaxLength = 4;
+            this.textBox_CodeArrayForSMS.Name = "textBox_CodeArrayForSMS";
+            this.textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 20);
+            this.textBox_CodeArrayForSMS.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 3;
+            // 
+            // button_Ring
+            // 
+            this.button_Ring.Location = new System.Drawing.Point(88, 112);
+            this.button_Ring.Name = "button_Ring";
+            this.button_Ring.Size = new System.Drawing.Size(141, 23);
+            this.button_Ring.TabIndex = 14;
+            this.button_Ring.Text = "Ring";
+            this.toolTip1.SetToolTip(this.button_Ring, "Ring to contact");
+            this.toolTip2.SetToolTip(this.button_Ring, "Ring to contact");
+            this.button_Ring.UseVisualStyleBackColor = true;
+            this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Location = new System.Drawing.Point(8, 587);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(456, 147);
+            this.groupBox35.TabIndex = 7;
+            this.groupBox35.TabStop = false;
+            // 
+            // richTextBox_ModemStatus
+            // 
+            this.richTextBox_ModemStatus.Location = new System.Drawing.Point(7, 19);
+            this.richTextBox_ModemStatus.Name = "richTextBox_ModemStatus";
+            this.richTextBox_ModemStatus.Size = new System.Drawing.Size(256, 115);
+            this.richTextBox_ModemStatus.TabIndex = 0;
+            this.richTextBox_ModemStatus.Text = "";
+            // 
+            // comboBox_ComportSMS
+            // 
+            this.comboBox_ComportSMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ComportSMS.FormattingEnabled = true;
+            this.comboBox_ComportSMS.Items.AddRange(new object[] {
+            "COM1",
+            "COM2",
+            "COM3",
+            "COM4",
+            "COM5",
+            "COM6"});
+            this.comboBox_ComportSMS.Location = new System.Drawing.Point(290, 22);
+            this.comboBox_ComportSMS.Name = "comboBox_ComportSMS";
+            this.comboBox_ComportSMS.Size = new System.Drawing.Size(67, 21);
+            this.comboBox_ComportSMS.TabIndex = 9;
+            this.comboBox_ComportSMS.Tag = "1";
+            this.comboBox_ComportSMS.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_2);
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(269, 109);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 23);
+            this.button36.TabIndex = 6;
+            this.button36.Text = "Clear";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.Button36_Click);
+            // 
+            // checkBox_OpenPortSMS
+            // 
+            this.checkBox_OpenPortSMS.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_OpenPortSMS.AutoSize = true;
+            this.checkBox_OpenPortSMS.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_OpenPortSMS.Location = new System.Drawing.Point(363, 20);
+            this.checkBox_OpenPortSMS.Name = "checkBox_OpenPortSMS";
+            this.checkBox_OpenPortSMS.Size = new System.Drawing.Size(84, 29);
+            this.checkBox_OpenPortSMS.TabIndex = 10;
+            this.checkBox_OpenPortSMS.Text = "Open Port";
+            this.checkBox_OpenPortSMS.UseVisualStyleBackColor = true;
+            this.checkBox_OpenPortSMS.CheckedChanged += new System.EventHandler(this.CheckBox_OpenPortSMS_CheckedChanged);
+            // 
+            // checkBox_DebugSMS
+            // 
+            this.checkBox_DebugSMS.AutoSize = true;
+            this.checkBox_DebugSMS.Location = new System.Drawing.Point(390, 54);
+            this.checkBox_DebugSMS.Name = "checkBox_DebugSMS";
+            this.checkBox_DebugSMS.Size = new System.Drawing.Size(67, 22);
+            this.checkBox_DebugSMS.TabIndex = 11;
+            this.checkBox_DebugSMS.Text = "Debug";
+            this.checkBox_DebugSMS.UseVisualStyleBackColor = true;
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox37.Location = new System.Drawing.Point(797, 7);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Size = new System.Drawing.Size(463, 656);
+            this.groupBox37.TabIndex = 8;
+            this.groupBox37.TabStop = false;
+            // 
+            // button_ClearSMSConsole
+            // 
+            this.button_ClearSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearSMSConsole.Location = new System.Drawing.Point(395, 630);
+            this.button_ClearSMSConsole.Name = "button_ClearSMSConsole";
+            this.button_ClearSMSConsole.Size = new System.Drawing.Size(62, 26);
+            this.button_ClearSMSConsole.TabIndex = 6;
+            this.button_ClearSMSConsole.Text = "Clear";
+            this.button_ClearSMSConsole.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_PauseSMSConsole
+            // 
+            this.checkBox_PauseSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_PauseSMSConsole.AutoSize = true;
+            this.checkBox_PauseSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_PauseSMSConsole.Location = new System.Drawing.Point(327, 630);
+            this.checkBox_PauseSMSConsole.Name = "checkBox_PauseSMSConsole";
+            this.checkBox_PauseSMSConsole.Size = new System.Drawing.Size(62, 26);
+            this.checkBox_PauseSMSConsole.TabIndex = 5;
+            this.checkBox_PauseSMSConsole.Text = "Pause";
+            this.checkBox_PauseSMSConsole.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_RecordSMSConsole
+            // 
+            this.checkBox_RecordSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RecordSMSConsole.AutoSize = true;
+            this.checkBox_RecordSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_RecordSMSConsole.Location = new System.Drawing.Point(222, 630);
+            this.checkBox_RecordSMSConsole.Name = "checkBox_RecordSMSConsole";
+            this.checkBox_RecordSMSConsole.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordSMSConsole.TabIndex = 7;
+            this.checkBox_RecordSMSConsole.Text = "Record Log";
+            this.checkBox_RecordSMSConsole.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_SMSConsole
+            // 
+            this.richTextBox_SMSConsole.EnableAutoDragDrop = true;
+            this.richTextBox_SMSConsole.Location = new System.Drawing.Point(6, 17);
+            this.richTextBox_SMSConsole.Name = "richTextBox_SMSConsole";
+            this.richTextBox_SMSConsole.Size = new System.Drawing.Size(451, 607);
+            this.richTextBox_SMSConsole.TabIndex = 0;
+            this.richTextBox_SMSConsole.Text = "";
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Location = new System.Drawing.Point(476, 7);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(315, 429);
+            this.groupBox39.TabIndex = 6;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Enter += new System.EventHandler(this.GroupBox39_Enter);
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(7, 359);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 1;
+            this.button41.Text = "Add";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.Button41_Click);
+            // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(88, 359);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 2;
+            this.button40.Text = "Remove";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.Button40_Click);
+            // 
+            // button39
+            // 
+            this.button39.Location = new System.Drawing.Point(7, 395);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 23);
+            this.button39.TabIndex = 3;
+            this.button39.Text = "Export";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.Button39_Click_1);
+            // 
+            // button38
+            // 
+            this.button38.Location = new System.Drawing.Point(88, 395);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(75, 23);
+            this.button38.TabIndex = 4;
+            this.button38.Text = "Import";
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.Button38_Click);
+            // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(169, 359);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 5;
+            this.button37.Text = "Edit";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.Button37_Click);
+            // 
+            // listBox_SMSCommands
+            // 
+            this.listBox_SMSCommands.FormattingEnabled = true;
+            this.listBox_SMSCommands.ItemHeight = 18;
+            this.listBox_SMSCommands.Location = new System.Drawing.Point(6, 17);
+            this.listBox_SMSCommands.Name = "listBox_SMSCommands";
+            this.listBox_SMSCommands.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_SMSCommands.Size = new System.Drawing.Size(303, 290);
+            this.listBox_SMSCommands.TabIndex = 6;
+            this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
+            // 
+            // tabPage_SMS
+            // 
+            this.tabPage_SMS.Controls.Add(this.groupBox39);
+            this.tabPage_SMS.Controls.Add(this.groupBox37);
+            this.tabPage_SMS.Controls.Add(this.groupBox35);
+            this.tabPage_SMS.Controls.Add(this.groupBox34);
+            this.tabPage_SMS.Controls.Add(this.groupBox33);
+            this.tabPage_SMS.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SMS.Name = "tabPage_SMS";
+            this.tabPage_SMS.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_SMS.TabIndex = 6;
+            this.tabPage_SMS.Text = "SMS";
+            this.tabPage_SMS.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 19);
@@ -6961,17 +6910,6 @@ namespace SocketServer
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl_Main.ResumeLayout(false);
-            this.tabPage_SMS.ResumeLayout(false);
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox37.ResumeLayout(false);
-            this.groupBox37.PerformLayout();
-            this.groupBox35.ResumeLayout(false);
-            this.groupBox35.PerformLayout();
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox34.PerformLayout();
-            this.GrooupBox_Encryption.ResumeLayout(false);
-            this.GrooupBox_Encryption.PerformLayout();
-            this.groupBox33.ResumeLayout(false);
             this.tabPage_Configuration.ResumeLayout(false);
             this.tabControl_systems.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
@@ -7085,6 +7023,7 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.tabPage_SMS.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
