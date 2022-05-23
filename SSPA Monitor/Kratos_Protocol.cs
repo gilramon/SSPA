@@ -162,7 +162,7 @@ namespace Monitor
 
                 for (int i = 0; i < ListBytes.Count; i++)
                 {
-                    CheckSum ^= ListBytes[i];
+                    CheckSum += ListBytes[i];
                 }
                // intBytes = BitConverter.GetBytes(CheckSum);
                 ListBytes.Add(CheckSum);
@@ -182,8 +182,8 @@ namespace Monitor
         {
             KratosProtocolFrame Ret = new KratosProtocolFrame();
 
-            try
-            {
+            //try
+            //{
                 byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).ToArray();
 
                 UInt16 FrameDataLength = BitConverter.ToUInt16(DataLengthBytes, 0);
@@ -192,9 +192,9 @@ namespace Monitor
 
                 Byte CheckSumCalc = 0;
 
-                for (int i = 0; i < CheckSumIndex; i++)
+                for (int i = 0; i < CheckSumIndex ; i++)
                 {
-                    CheckSumCalc ^= i_IncomingBytes[i];
+                    CheckSumCalc += i_IncomingBytes[i];
                 }
 
                 byte[] CheckSumBytes = i_IncomingBytes.Skip(CheckSumIndex).Take(1).ToArray();
@@ -218,16 +218,16 @@ namespace Monitor
                 }
                 else
                 {
-                    throw new Exception("Check sum failed!");
+                    throw new Exception("Income Frame - Check sum failed!");
 
                 }
 
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
+            //}
+            //catch ()
+            //{
+            //    //throw new Exception(ex.Message);
 
-            }
+            //}
 
 
         }

@@ -693,8 +693,8 @@ namespace SocketServer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -1974,7 +1974,7 @@ namespace SocketServer
             this.cmbBaudRate.Name = "cmbBaudRate";
             this.cmbBaudRate.Size = new System.Drawing.Size(89, 26);
             this.cmbBaudRate.TabIndex = 3;
-            this.cmbBaudRate.Text = "115200";
+            this.cmbBaudRate.Text = "38400";
             this.cmbBaudRate.SelectedIndexChanged += new System.EventHandler(this.CmbBaudRate_SelectedIndexChanged);
             // 
             // cmb_StopBits
@@ -5157,17 +5157,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea6.AxisX.Title = "Freq";
-            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisY.Title = "Power [dBm]";
-            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.IsTextAutoFit = false;
-            legend6.Name = "Legend1";
-            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend6);
+            chartArea7.AxisX.Title = "Freq";
+            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.AxisY.Title = "Power [dBm]";
+            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend7.IsTextAutoFit = false;
+            legend7.Name = "Legend1";
+            legend7.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -9749,9 +9749,67 @@ namespace SocketServer
 
         }
 
+        void ParseKratosIncomeFrame(byte[] i_IncomeBuffer)
+        {
+            try
+            {
+                KratosProtocolFrame Result = new KratosProtocolFrame();
+                Result = Kratos_Protocol.DecodeKratusProtocol_Standard(i_IncomeBuffer);
+                TCPClientBuffer = new byte[0];
+
+                textBox_RxClientPreamble.BeginInvoke(new EventHandler(delegate
+                {
+                    if (Result != null)
+                    {
+                        textBox_RxClientPreamble.BackColor = Color.LightGreen;
+                        textBox_RxClientPreamble.Text = Result.Preamble;
+
+                        textBox_RxClientOpcode.BackColor = Color.LightGreen;
+                        textBox_RxClientOpcode.Text = Result.Opcode;
+
+                        textBox_RxClientData.BackColor = Color.LightGreen;
+                        textBox_RxClientData.Text = Result.Data;
+
+                        textBox_RxClientDataLength.BackColor = Color.LightGreen;
+                        textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
+
+                        textBox_RxClientCheckSum.BackColor = Color.LightGreen;
+                        textBox_RxClientCheckSum.Text = Result.CheckSum;
+
+                        MiniAdaParser = new MiniAda_Parser();
+                        string MiniAdaResult = MiniAdaParser.ParseKratosFrame(Result);
+
+                        SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
+                        SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
+                        SystemLogger.LogMessage(Color.Blue, Color.Azure, MiniAdaResult, true, false);
+
+
+
+
+                        richTextBox_ClientRx.Invoke(new EventHandler(delegate
+                        {
+                            byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
+                            richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
+                        //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
+
+
+
+                    }));
+
+                    }
+
+
+                }));
+            }
+            catch(Exception ex)
+            {
+                SystemLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
+            }
+        }
+
         int ChartIndex = 0;
         MiniAda_Parser MiniAdaParser =  new MiniAda_Parser();
-        void ParseIncomeBuffer()
+        void ParseIncomeBuffer_TCPIP()
         {
             try
             {
@@ -9759,55 +9817,9 @@ namespace SocketServer
                 if (TCPClientBuffer.Length > 0)
                 {
 
-
-                    KratosProtocolFrame Result = new KratosProtocolFrame();
-                    Result = Kratos_Protocol.DecodeKratusProtocol_Standard(TCPClientBuffer);
-                    TCPClientBuffer = new byte[0];
-
-                    textBox_RxClientPreamble.BeginInvoke(new EventHandler(delegate
-                    {
-                        if (Result != null)
-                        {
-                            textBox_RxClientPreamble.BackColor = Color.LightGreen;
-                            textBox_RxClientPreamble.Text = Result.Preamble;
-
-                            textBox_RxClientOpcode.BackColor = Color.LightGreen;
-                            textBox_RxClientOpcode.Text = Result.Opcode;
-
-                            textBox_RxClientData.BackColor = Color.LightGreen;
-                            textBox_RxClientData.Text = Result.Data;
-
-                            textBox_RxClientDataLength.BackColor = Color.LightGreen;
-                            textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
-
-                            textBox_RxClientCheckSum.BackColor = Color.LightGreen;
-                            textBox_RxClientCheckSum.Text = Result.CheckSum;
-
-                            MiniAdaParser = new MiniAda_Parser();
-                            string MiniAdaResult = MiniAdaParser.ParseKratosFrame(Result);
-
-                            SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
-                            SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
-                            SystemLogger.LogMessage(Color.Blue, Color.Azure, MiniAdaResult, true, false);
-
-
-
-
-                            richTextBox_ClientRx.Invoke(new EventHandler(delegate
-                            {
-                                byte[] Onlythe40FirstBytes = TCPClientBuffer.Skip(0).Take(200).ToArray();
-                                richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
-                            //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
-
-
-
-                        }));
-                            PClientSocket = ClientSocket;
-                        }
-
-
-                    }));
-
+                    ParseKratosIncomeFrame(TCPClientBuffer);
+                   
+                    PClientSocket = ClientSocket;
                 }
             }
             catch(Exception ex)
@@ -9848,7 +9860,7 @@ namespace SocketServer
                 button_FFTPlot.Enabled = true;
                 button_DFTPlot.Enabled = true;
 
-                ParseIncomeBuffer();
+                ParseIncomeBuffer_TCPIP();
 
 
 
@@ -10116,6 +10128,8 @@ namespace SocketServer
                 string IncomingHexMessage = ConvertByteArraytToString(buffer);
 
                 SerialPortLogger.LogMessage(Color.Blue, Color.LightGray, IncomingHexMessage, New_Line = true, Show_Time = false);
+
+                ParseKratosIncomeFrame(buffer);
             }
             else
             {
@@ -17200,8 +17214,9 @@ Note: eStatus enum 
 
                 textBox_SendSerialPort.Text = ConvertByteArraytToString(Result);
                 Thread.Sleep(500);
-                button_SendSerialPort.PerformClick();
-                    //stm.Write(Result, 0, Result.Length);
+                Button2_Click_1(null, null);
+               // button_SendSerialPort.PerformClick();
+               //stm.Write(Result, 0, Result.Length);
 
 
 

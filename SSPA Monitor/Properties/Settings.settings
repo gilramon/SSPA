@@ -9,10 +9,10 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Comport_Port" Type="System.String" Scope="User">
-      <Value Profile="(Default)">COM1</Value>
+      <Value Profile="(Default)">COM2</Value>
     </Setting>
     <Setting Name="Comport_BaudRate" Type="System.String" Scope="User">
-      <Value Profile="(Default)">115200</Value>
+      <Value Profile="(Default)">38400</Value>
     </Setting>
     <Setting Name="Comport_Parity" Type="System.String" Scope="User">
       <Value Profile="(Default)">None</Value>
