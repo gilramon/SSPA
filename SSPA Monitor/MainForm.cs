@@ -300,7 +300,7 @@ namespace SocketServer
         private TextBox textBox_Config35;
         private PictureBox pictureBox1;
         private TabPage tabPage_GenericFrame;
-        private Button button_SendProtocol;
+        private Button button_SendProtocolTCPIP;
         private TextBox textBox_data;
         private TextBox textBox_Opcode;
         private TextBox textBox_Preamble;
@@ -336,7 +336,6 @@ namespace SocketServer
         private Button button46;
         private Button button47;
         private TextBox textBox_LogLevel;
-        private Button button48;
         private Button button49;
         private Button button50;
         private TextBox textBox_SystemIdentify;
@@ -562,6 +561,12 @@ namespace SocketServer
         private Button button38;
         private Button button37;
         private ListBox listBox_SMSCommands;
+        private GroupBox groupBox42;
+        private RadioButton radioButton_TCPIP;
+        private RadioButton radioButton_SerialPort;
+        private Button button48;
+        private Button button_SendProtocolSerialPort;
+        private Button button108;
         static readonly string FRAME_HEADER = "23";
         //bool m_Exit = false;
 
@@ -688,8 +693,8 @@ namespace SocketServer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -846,7 +851,7 @@ namespace SocketServer
             this.label17 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_Preamble = new System.Windows.Forms.TextBox();
-            this.button_SendProtocol = new System.Windows.Forms.Button();
+            this.button_SendProtocolTCPIP = new System.Windows.Forms.Button();
             this.textBox_Opcode = new System.Windows.Forms.TextBox();
             this.textBox_data = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -855,6 +860,10 @@ namespace SocketServer
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.tabControl_MiniAda = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button48 = new System.Windows.Forms.Button();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
+            this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.textBox_SetPSUCard = new System.Windows.Forms.TextBox();
             this.button57 = new System.Windows.Forms.Button();
@@ -874,7 +883,6 @@ namespace SocketServer
             this.button50 = new System.Windows.Forms.Button();
             this.textBox_LogLevel = new System.Windows.Forms.TextBox();
             this.button49 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox_Erase4KsectorQSPI = new System.Windows.Forms.TextBox();
             this.button89 = new System.Windows.Forms.Button();
@@ -1200,6 +1208,8 @@ namespace SocketServer
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
+            this.button_SendProtocolSerialPort = new System.Windows.Forms.Button();
+            this.button108 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1227,6 +1237,7 @@ namespace SocketServer
             this.groupBox40.SuspendLayout();
             this.tabControl_MiniAda.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox42.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -1815,10 +1826,10 @@ namespace SocketServer
             this.tabPage_SerialPort.Controls.Add(this.groupBox_SendSerialOrMonitorCommands);
             this.tabPage_SerialPort.Controls.Add(this.gbPortSettings);
             this.tabPage_SerialPort.Controls.Add(this.groupBox5);
-            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
             this.tabPage_SerialPort.Name = "tabPage_SerialPort";
             this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_SerialPort.TabIndex = 1;
             this.tabPage_SerialPort.Text = "Serial Port";
             this.tabPage_SerialPort.UseVisualStyleBackColor = true;
@@ -1839,6 +1850,8 @@ namespace SocketServer
             // checkBox_SendHexdata
             // 
             this.checkBox_SendHexdata.AutoSize = true;
+            this.checkBox_SendHexdata.Checked = true;
+            this.checkBox_SendHexdata.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_SendHexdata.Location = new System.Drawing.Point(262, 60);
             this.checkBox_SendHexdata.Name = "checkBox_SendHexdata";
             this.checkBox_SendHexdata.Size = new System.Drawing.Size(115, 22);
@@ -1866,8 +1879,6 @@ namespace SocketServer
             // checkBox_DeleteCommand
             // 
             this.checkBox_DeleteCommand.AutoSize = true;
-            this.checkBox_DeleteCommand.Checked = true;
-            this.checkBox_DeleteCommand.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_DeleteCommand.Location = new System.Drawing.Point(126, 61);
             this.checkBox_DeleteCommand.Name = "checkBox_DeleteCommand";
             this.checkBox_DeleteCommand.Size = new System.Drawing.Size(135, 22);
@@ -2192,6 +2203,8 @@ namespace SocketServer
             // checkBox_RxHex
             // 
             this.checkBox_RxHex.AutoSize = true;
+            this.checkBox_RxHex.Checked = true;
+            this.checkBox_RxHex.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_RxHex.Location = new System.Drawing.Point(1194, 20);
             this.checkBox_RxHex.Name = "checkBox_RxHex";
             this.checkBox_RxHex.Size = new System.Drawing.Size(111, 23);
@@ -2734,9 +2747,9 @@ namespace SocketServer
             this.tabPage_GenericFrame.Controls.Add(this.button52);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
-            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
             this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_GenericFrame.TabIndex = 10;
             this.tabPage_GenericFrame.Text = "Generic Kratos frame";
             this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
@@ -2897,11 +2910,12 @@ namespace SocketServer
             // 
             // groupBox_clientTX
             // 
+            this.groupBox_clientTX.Controls.Add(this.button_SendProtocolSerialPort);
             this.groupBox_clientTX.Controls.Add(this.groupBox41);
             this.groupBox_clientTX.Controls.Add(this.label17);
             this.groupBox_clientTX.Controls.Add(this.label4);
             this.groupBox_clientTX.Controls.Add(this.textBox_Preamble);
-            this.groupBox_clientTX.Controls.Add(this.button_SendProtocol);
+            this.groupBox_clientTX.Controls.Add(this.button_SendProtocolTCPIP);
             this.groupBox_clientTX.Controls.Add(this.textBox_Opcode);
             this.groupBox_clientTX.Controls.Add(this.textBox_data);
             this.groupBox_clientTX.Controls.Add(this.label6);
@@ -3085,16 +3099,16 @@ namespace SocketServer
             this.textBox_Preamble.TextChanged += new System.EventHandler(this.textBox_Preamble_TextChanged);
             this.textBox_Preamble.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Preamble_KeyDown);
             // 
-            // button_SendProtocol
+            // button_SendProtocolTCPIP
             // 
-            this.button_SendProtocol.Location = new System.Drawing.Point(6, 126);
-            this.button_SendProtocol.Name = "button_SendProtocol";
-            this.button_SendProtocol.Size = new System.Drawing.Size(91, 23);
-            this.button_SendProtocol.TabIndex = 3;
-            this.button_SendProtocol.TabStop = false;
-            this.button_SendProtocol.Text = "Send";
-            this.button_SendProtocol.UseVisualStyleBackColor = true;
-            this.button_SendProtocol.Click += new System.EventHandler(this.button_Send_Click);
+            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 126);
+            this.button_SendProtocolTCPIP.Name = "button_SendProtocolTCPIP";
+            this.button_SendProtocolTCPIP.Size = new System.Drawing.Size(119, 23);
+            this.button_SendProtocolTCPIP.TabIndex = 3;
+            this.button_SendProtocolTCPIP.TabStop = false;
+            this.button_SendProtocolTCPIP.Text = "Send TCP/IP";
+            this.button_SendProtocolTCPIP.UseVisualStyleBackColor = true;
+            this.button_SendProtocolTCPIP.Click += new System.EventHandler(this.button_Send_Click);
             // 
             // textBox_Opcode
             // 
@@ -3176,6 +3190,9 @@ namespace SocketServer
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button108);
+            this.tabPage1.Controls.Add(this.button48);
+            this.tabPage1.Controls.Add(this.groupBox42);
             this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.textBox_SetPSUCard);
             this.tabPage1.Controls.Add(this.button57);
@@ -3195,7 +3212,6 @@ namespace SocketServer
             this.tabPage1.Controls.Add(this.button50);
             this.tabPage1.Controls.Add(this.textBox_LogLevel);
             this.tabPage1.Controls.Add(this.button49);
-            this.tabPage1.Controls.Add(this.button48);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -3204,13 +3220,57 @@ namespace SocketServer
             this.tabPage1.Text = "Standard";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button48
+            // 
+            this.button48.Location = new System.Drawing.Point(3, 6);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(244, 23);
+            this.button48.TabIndex = 34;
+            this.button48.Text = "Get ID";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click_1);
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.Controls.Add(this.radioButton_TCPIP);
+            this.groupBox42.Controls.Add(this.radioButton_SerialPort);
+            this.groupBox42.Location = new System.Drawing.Point(743, 12);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Size = new System.Drawing.Size(200, 100);
+            this.groupBox42.TabIndex = 33;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "Communication";
+            // 
+            // radioButton_TCPIP
+            // 
+            this.radioButton_TCPIP.AutoSize = true;
+            this.radioButton_TCPIP.Location = new System.Drawing.Point(20, 56);
+            this.radioButton_TCPIP.Name = "radioButton_TCPIP";
+            this.radioButton_TCPIP.Size = new System.Drawing.Size(66, 22);
+            this.radioButton_TCPIP.TabIndex = 1;
+            this.radioButton_TCPIP.TabStop = true;
+            this.radioButton_TCPIP.Text = "TCP/IP";
+            this.radioButton_TCPIP.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_SerialPort
+            // 
+            this.radioButton_SerialPort.AutoSize = true;
+            this.radioButton_SerialPort.Checked = true;
+            this.radioButton_SerialPort.Location = new System.Drawing.Point(20, 26);
+            this.radioButton_SerialPort.Name = "radioButton_SerialPort";
+            this.radioButton_SerialPort.Size = new System.Drawing.Size(90, 22);
+            this.radioButton_SerialPort.TabIndex = 0;
+            this.radioButton_SerialPort.TabStop = true;
+            this.radioButton_SerialPort.Text = "Serial Port";
+            this.radioButton_SerialPort.UseVisualStyleBackColor = true;
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Maroon;
-            this.label31.Location = new System.Drawing.Point(291, 125);
+            this.label31.Location = new System.Drawing.Point(291, 173);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(32, 21);
             this.label31.TabIndex = 32;
@@ -3292,7 +3352,7 @@ namespace SocketServer
             // 
             // button_GetSoftwareVersion
             // 
-            this.button_GetSoftwareVersion.Location = new System.Drawing.Point(6, 6);
+            this.button_GetSoftwareVersion.Location = new System.Drawing.Point(3, 67);
             this.button_GetSoftwareVersion.Name = "button_GetSoftwareVersion";
             this.button_GetSoftwareVersion.Size = new System.Drawing.Size(244, 23);
             this.button_GetSoftwareVersion.TabIndex = 10;
@@ -3312,7 +3372,7 @@ namespace SocketServer
             // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(6, 40);
+            this.button45.Location = new System.Drawing.Point(3, 101);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(244, 23);
             this.button45.TabIndex = 11;
@@ -3330,7 +3390,7 @@ namespace SocketServer
             // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(6, 83);
+            this.button46.Location = new System.Drawing.Point(3, 144);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(244, 23);
             this.button46.TabIndex = 12;
@@ -3350,7 +3410,7 @@ namespace SocketServer
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(3, 129);
+            this.button47.Location = new System.Drawing.Point(3, 177);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(244, 23);
             this.button47.TabIndex = 13;
@@ -3370,7 +3430,7 @@ namespace SocketServer
             // 
             // textBox_LogLevel
             // 
-            this.textBox_LogLevel.Location = new System.Drawing.Point(255, 123);
+            this.textBox_LogLevel.Location = new System.Drawing.Point(255, 171);
             this.textBox_LogLevel.MaxLength = 1;
             this.textBox_LogLevel.Name = "textBox_LogLevel";
             this.textBox_LogLevel.Size = new System.Drawing.Size(27, 26);
@@ -3387,16 +3447,6 @@ namespace SocketServer
             this.button49.Text = "Get system type";
             this.button49.UseVisualStyleBackColor = true;
             this.button49.Click += new System.EventHandler(this.button49_Click);
-            // 
-            // button48
-            // 
-            this.button48.Location = new System.Drawing.Point(6, 168);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(244, 23);
-            this.button48.TabIndex = 15;
-            this.button48.Text = "Is System busy?";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.Click += new System.EventHandler(this.button48_Click);
             // 
             // tabPage2
             // 
@@ -5107,17 +5157,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea6.AxisX.Title = "Freq";
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Title = "Power [dBm]";
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -6882,6 +6932,27 @@ namespace SocketServer
             this.listBox_SMSCommands.TabIndex = 6;
             this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
             // 
+            // button_SendProtocolSerialPort
+            // 
+            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(131, 126);
+            this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
+            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(121, 23);
+            this.button_SendProtocolSerialPort.TabIndex = 16;
+            this.button_SendProtocolSerialPort.TabStop = false;
+            this.button_SendProtocolSerialPort.Text = "Send SerialPort";
+            this.button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
+            this.button_SendProtocolSerialPort.Click += new System.EventHandler(this.button_SendProtocolSerialPort_Click);
+            // 
+            // button108
+            // 
+            this.button108.Location = new System.Drawing.Point(258, 6);
+            this.button108.Name = "button108";
+            this.button108.Size = new System.Drawing.Size(244, 23);
+            this.button108.TabIndex = 35;
+            this.button108.Text = "Get Simulator ID";
+            this.button108.UseVisualStyleBackColor = true;
+            this.button108.Click += new System.EventHandler(this.button108_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 19);
@@ -6949,6 +7020,8 @@ namespace SocketServer
             this.tabControl_MiniAda.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox42.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage6.ResumeLayout(false);
@@ -8219,7 +8292,7 @@ namespace SocketServer
         //{
         //    System.Windows.Forms.Application.Exit();
         //}
-        TextBox_Logger MiniAdaLogger;
+        TextBox_Logger SystemLogger;
         TextBox_Logger ServerLogger;
         TextBox_Logger SerialPortLogger;
         //   Logger LogIWatcher;
@@ -8462,7 +8535,7 @@ namespace SocketServer
                 //Gil: Generate all the loggers
                 ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
                 SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, txtS1_Clear, checkBox_S1Pause, checkBox_S1RecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
-                MiniAdaLogger = new TextBox_Logger("MiniAda", richTextBox_MiniAda, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
+                SystemLogger = new TextBox_Logger("MiniAda", richTextBox_MiniAda, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
 
 
                // LogSMS = new TextBox_Logger("Log_SMS", richTextBox_SMSConsole, button_ClearSMSConsole, checkBox_PauseSMSConsole, checkBox_RecordSMSConsole, null, null, null, null);
@@ -9713,9 +9786,9 @@ namespace SocketServer
                             MiniAdaParser = new MiniAda_Parser();
                             string MiniAdaResult = MiniAdaParser.ParseKratosFrame(Result);
 
-                            MiniAdaLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
-                            MiniAdaLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
-                            MiniAdaLogger.LogMessage(Color.Blue, Color.Azure, MiniAdaResult, true, false);
+                            SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
+                            SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
+                            SystemLogger.LogMessage(Color.Blue, Color.Azure, MiniAdaResult, true, false);
 
 
 
@@ -9739,7 +9812,7 @@ namespace SocketServer
             }
             catch(Exception ex)
             {
-                MiniAdaLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), New_Line = false, Show_Time = true);
+                SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), New_Line = false, Show_Time = true);
             }
             }
 
@@ -9864,14 +9937,6 @@ namespace SocketServer
 
             //TimerExportContactsCommandsToFile++;
 
-            if (TimerClearModemStatus % 60 == 0)
-            {
-                richTextBox_ModemStatus.Invoke(new EventHandler(delegate
-                {
-                    richTextBox_ModemStatus.BackColor = default;
-                    richTextBox_ModemStatus.Text = "";
-                }));
-            }
 
 
             if (m_Server != null)
@@ -13509,7 +13574,7 @@ namespace SocketServer
                         {
 
 
-                            MiniAdaLogger.LogMessage(Color.Black, Color.Red,"Gil: " + ex.ToString(), New_Line = true, Show_Time = true);
+                            SystemLogger.LogMessage(Color.Black, Color.Red,"Gil: " + ex.ToString(), New_Line = true, Show_Time = true);
 
 
                             return;
@@ -14011,12 +14076,12 @@ namespace SocketServer
 
                 if (!(textBox_Preamble.BackColor == Color.LightGreen && textBox_Opcode.BackColor == Color.LightGreen && textBox_data.BackColor == Color.LightGreen))
                 {
-                    button_SendProtocol.BackColor = Color.Red;
+                    button_SendProtocolTCPIP.BackColor = Color.Red;
                     return;
                 }
                 else
                 {
-                    button_SendProtocol.BackColor = Color.LightGreen;
+                    button_SendProtocolTCPIP.BackColor = Color.LightGreen;
                 }
 
                 List<byte> ListBytes = new List<byte>();
@@ -14158,20 +14223,53 @@ namespace SocketServer
             }
         }
 
-        void SendDataToSystem()
+        void SendThrouthSerialPort()
         {
-            button_Send_Click(null, null);
+            //button_Send_Click(null, null);
+            button_SendProtocolSerialPort_Click(null, null);
+            //button_SendProtocolSerialPort.PerformClick();
 
-            if (button_SendProtocol.BackColor == Color.LightGreen)
+            if (button_SendProtocolSerialPort.BackColor == Color.LightGreen)
             {
-                MiniAdaLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
-                MiniAdaLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
                 String str = String.Format("Preamble [{0}],Opcode [{1}],Data [{2}] ", textBox_Preamble.Text, textBox_Opcode.Text, textBox_data.Text);
-                MiniAdaLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
             }
             else
             {
-                MiniAdaLogger.LogMessage(Color.Orange, Color.White, "Connection Problem or bad data", true, true);
+                SystemLogger.LogMessage(Color.Orange, Color.White, "Connection Problem or bad data", true, true);
+
+            }
+        }
+
+        void SendThrouthTCPIP()
+        {
+            button_Send_Click(null, null);
+
+            if (button_SendProtocolTCPIP.BackColor == Color.LightGreen)
+            {
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
+                String str = String.Format("Preamble [{0}],Opcode [{1}],Data [{2}] ", textBox_Preamble.Text, textBox_Opcode.Text, textBox_data.Text);
+                SystemLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
+            }
+            else
+            {
+                SystemLogger.LogMessage(Color.Orange, Color.White, "Connection Problem or bad data", true, true);
+
+            }
+        }
+        void SendDataToSystem()
+        {
+            if(radioButton_SerialPort.Checked == true)
+            {
+                SendThrouthSerialPort();
+            }
+
+            if (radioButton_TCPIP.Checked == true)
+            {
+                SendThrouthTCPIP();
 
             }
 
@@ -14181,7 +14279,7 @@ namespace SocketServer
         private void button_GetSoftwareVersion_Click(object sender, EventArgs e)
         {
             textBox_Preamble.Text = FRAME_HEADER;
-            textBox_Opcode.Text = "00";
+            textBox_Opcode.Text = "01";
             textBox_data.Text = "";
 
             SendDataToSystem();
@@ -14217,7 +14315,7 @@ namespace SocketServer
             }
             else
             {
-                MiniAdaLogger.LogMessage(Color.Orange, Color.White, "Log level didn't set in the textbox near the button", New_Line = true, Show_Time = true);
+                SystemLogger.LogMessage(Color.Orange, Color.White, "Log level didn't set in the textbox near the button", New_Line = true, Show_Time = true);
             }
         }
 
@@ -14489,8 +14587,8 @@ RX frame: 	0x004D 0x0016 0x00000000 0x63
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -14507,8 +14605,8 @@ Set Tx AD936X data :
 byte – band type: 0x00 - L1, 0x01 - L2 
 2 bytes – address 
 1 bytes - data");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -14567,8 +14665,8 @@ byte – band type: 0x00 - L1, 0x01 - L2
  RX data: 	N.A
  RX frame: 0x004D 0x0028 0x00000000 0x75
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -14626,8 +14724,8 @@ TX frame: 	0x004D 0x002A 0x00000005 + TX Data + checksum
 RX data: 	N.A
 RX frame: 	0x004D 0x002A 0x00000000 0x77
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -14832,8 +14930,8 @@ RX data: 	N.A
 RX frame: 	0x0044 0x0030 0x00000000 + CRC
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -14886,8 +14984,8 @@ RX data: 	N bytes – read data content
 RX frame: 	0x0044 0x0031 + size + RX Data + CRC
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -15054,8 +15152,8 @@ Lock detect: 0x1=Locked; 0x0 = Not locked
 RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -15372,8 +15470,8 @@ Recorded samples
 RX frame: 	0x004D 0x0080 + Length + RX Data + checksum
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15397,8 +15495,8 @@ RX frame: 	0x004D 0x0056 0x00000000 0xA3
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15423,8 +15521,8 @@ Recorded samples
 RX frame: 	0x004D 0x0080 + Length + RX Data + checksum
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15446,8 +15544,8 @@ RX frame: 	0x004D 0x0058 0x00000000 0xA5
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15470,8 +15568,8 @@ RX frame: 	0x004D 0x005A 0x00000000 0xA7
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15493,8 +15591,8 @@ RX frame: 	0x004D 0x002F 0x00000000 0x7A
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15531,8 +15629,8 @@ RX data: 	N.A
 RX frame: 	0x004D 0x0081 0x00000000 0xCE
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -15553,8 +15651,8 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15843,7 +15941,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
             }
             catch(Exception ex)
             {
-                MiniAdaLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), true, true);
+                SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), true, true);
                 textBox_RecordIQDataNumbers.BackColor = Color.Red;
             }
         }
@@ -15868,8 +15966,8 @@ RX frame: 	0x004D 0x0056 0x00000004 + RX Data + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15895,8 +15993,8 @@ RX frame: 	0x004D 0x0071 0x00000000 0Xbe
 
 ");
 
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
 
 
@@ -15919,8 +16017,8 @@ RX frame: 	0x004D 0x0017 0x00000000 0x64
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15943,8 +16041,8 @@ RX frame: 	0x004D 0x0021 0x00000001 + Rx Date + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15959,8 +16057,8 @@ RX frame: 	0x004D 0x0021 0x00000001 + Rx Date + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15983,8 +16081,8 @@ RX frame: 	0x004D 0x0029 0x00000000 + RX Data + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -15999,8 +16097,8 @@ RX frame: 	0x004D 0x0029 0x00000000 + RX Data + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -16023,8 +16121,8 @@ RX frame: 	0x004D 0x002E 0x00000000 0x79
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -16039,8 +16137,8 @@ RX frame: 	0x004D 0x002E 0x00000000 0x79
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -16055,8 +16153,8 @@ RX frame: 	0x004D 0x002E 0x00000000 0x79
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -16071,8 +16169,8 @@ RX frame: 	0x004D 0x002E 0x00000000 0x79
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
 
 
             }
@@ -16092,8 +16190,8 @@ Raw4 - Catalina 4
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16174,7 +16272,7 @@ Raw4 - Catalina 4
             //}
             //catch(Exception ex)
             //{
-            //    MiniAdaLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
+            //    SystemLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
             //}
         }
 
@@ -16240,8 +16338,8 @@ Raw4 - Catalina 4
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16365,7 +16463,7 @@ Raw4 - Catalina 4
             }
             catch (Exception ex)
             {
-                MiniAdaLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
+                SystemLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
             }
         }
 
@@ -16383,8 +16481,8 @@ Raw4 - Catalina 4
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16463,8 +16561,8 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
     hex2dec('00883034') ...             %   Arie : hex2dec('0088303C') . 15dBm Required after Amplifier (34 instead 3C)
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16481,8 +16579,8 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
 % INPUT: type - '0' - ALL L1(A) , '1' - L1 & L2(B) , '2' - L1 - CAT4 & 1 ONLY(C).
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
 
 
@@ -16502,8 +16600,8 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
     hex2dec('00883034') ...             %   Arie : hex2dec('0088303C') . 15dBm Required after Amplifier (34 instead 3C)
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16682,19 +16780,19 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
         {
             button_WriteAllToFlash.BackColor = Color.Yellow;
             progressBar_WriteToFlash.Value = 0;
-            MiniAdaLogger.LogMessage(Color.Orange, Color.White, String.Format("Writing System Type to [{0}]", SYSTEM_TYPE_ADDRESS), true, true);
+            SystemLogger.LogMessage(Color.Orange, Color.White, String.Format("Writing System Type to [{0}]", SYSTEM_TYPE_ADDRESS), true, true);
             button_WriteSystemType.PerformClick();
             wait(3000);
             progressBar_WriteToFlash.Value = 20;
-            MiniAdaLogger.LogMessage(Color.Orange, Color.White, String.Format("Synthesizer L1 [{0}]", SYNTHESIZER_L1_ADDRESS), true, true);
+            SystemLogger.LogMessage(Color.Orange, Color.White, String.Format("Synthesizer L1 [{0}]", SYNTHESIZER_L1_ADDRESS), true, true);
             button_SynthL1.PerformClick();
             wait(3000);
             progressBar_WriteToFlash.Value = 40;
-            MiniAdaLogger.LogMessage(Color.Orange, Color.White, String.Format("Synthesizer L2 [{0}]", SYNTHESIZER_L2_ADDRESS), true, true);
+            SystemLogger.LogMessage(Color.Orange, Color.White, String.Format("Synthesizer L2 [{0}]", SYNTHESIZER_L2_ADDRESS), true, true);
             button_SynthL2.PerformClick();
             wait(3000);
             progressBar_WriteToFlash.Value = 60;
-            MiniAdaLogger.LogMessage(Color.Orange, Color.White, String.Format("Catalina 1-4 [{0}] [{1}] [{2}] [{3}]", CATALINA_1_ADDRESS, CATALINA_2_ADDRESS, CATALINA_3_ADDRESS, CATALINA_4_ADDRESS), true, true);
+            SystemLogger.LogMessage(Color.Orange, Color.White, String.Format("Catalina 1-4 [{0}] [{1}] [{2}] [{3}]", CATALINA_1_ADDRESS, CATALINA_2_ADDRESS, CATALINA_3_ADDRESS, CATALINA_4_ADDRESS), true, true);
             button_WriteCatalinas.PerformClick();
             wait(3000);
             progressBar_WriteToFlash.Value = 100;
@@ -16756,8 +16854,8 @@ RX frame: 	0x004D 0x008A 0x00000001 + RX Data + checksum
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16828,8 +16926,8 @@ Note: eStatus enum 
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -16880,8 +16978,8 @@ Note: eStatus enum 
 
 
 ");
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
-                MiniAdaLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "Help: ", true, true);
+                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, true, false);
             }
         }
 
@@ -17045,6 +17143,80 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9E 00";
+            textBox_data.Text = "";
+
+            SendDataToSystem();
+        }
+
+        private void button48_Click_1(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = FRAME_HEADER;
+            textBox_Opcode.Text = "00";
+            textBox_data.Text = "";
+
+            SendDataToSystem();
+        }
+
+        private void button_SendProtocolSerialPort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (serialPort.IsOpen == false)
+                {
+                    return;
+                }
+                ClearRxTextBox();
+                textBox_Preamble_TextChanged(null, null);
+                textBox_Opcode_TextChanged(null, null);
+                textBox_data_TextChanged(null, null);
+
+                if (!(textBox_Preamble.BackColor == Color.LightGreen && textBox_Opcode.BackColor == Color.LightGreen && textBox_data.BackColor == Color.LightGreen))
+                {
+                    button_SendProtocolSerialPort.BackColor = Color.Red;
+                    return;
+                }
+                else
+                {
+                    button_SendProtocolSerialPort.BackColor = Color.LightGreen;
+                }
+
+                List<byte> ListBytes = new List<byte>();
+                // Kratos_Protocol KratusP = new Kratos_Protocol();
+
+
+                    KratosProtocolFrame KratosFrame = new KratosProtocolFrame();
+                    KratosFrame.Preamble = Regex.Replace(textBox_Preamble.Text, @"\s+", "");
+                    KratosFrame.Opcode = Regex.Replace(textBox_Opcode.Text, @"\s+", "");
+                    KratosFrame.Data = Regex.Replace(textBox_data.Text, @"\s+", "");
+                    byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
+
+                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
+                    //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
+                    textBox_SentPreamble.Text = SentFrame.Preamble;
+                    textBox_SentOpcode.Text = SentFrame.Opcode;
+                    textBox_SentData.Text = SentFrame.Data;
+                    textBox_SentDataLength.Text = SentFrame.DataLength;
+                    textBox_SentChecksum.Text = SentFrame.CheckSum;
+
+                textBox_SendSerialPort.Text = ConvertByteArraytToString(Result);
+                Thread.Sleep(500);
+                button_SendSerialPort.PerformClick();
+                    //stm.Write(Result, 0, Result.Length);
+
+
+
+
+            }
+            catch
+            {
+                //MessageBox.Show (se.Message );
+            }
+        }
+
+        private void button108_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = FRAME_HEADER;
+            textBox_Opcode.Text = "80";
             textBox_data.Text = "";
 
             SendDataToSystem();

@@ -164,8 +164,8 @@ namespace Monitor
                 {
                     CheckSum ^= ListBytes[i];
                 }
-                intBytes = BitConverter.GetBytes(CheckSum);
-                ListBytes.AddRange(intBytes);
+               // intBytes = BitConverter.GetBytes(CheckSum);
+                ListBytes.Add(CheckSum);
 
                 byte[] Ret = ListBytes.ToArray();
 
@@ -186,11 +186,11 @@ namespace Monitor
             {
                 byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).ToArray();
 
-                UInt32 FrameDataLength = BitConverter.ToUInt32(DataLengthBytes, 0);
+                UInt16 FrameDataLength = BitConverter.ToUInt16(DataLengthBytes, 0);
                 int CheckSumIndex = (int)FrameDataLength + 4;
 
 
-                UInt16 CheckSumCalc = 0;
+                Byte CheckSumCalc = 0;
 
                 for (int i = 0; i < CheckSumIndex; i++)
                 {
@@ -198,7 +198,7 @@ namespace Monitor
                 }
 
                 byte[] CheckSumBytes = i_IncomingBytes.Skip(CheckSumIndex).Take(1).ToArray();
-                UInt16 CheckSumSent = BitConverter.ToUInt16(CheckSumBytes, 0);
+                Byte CheckSumSent = CheckSumBytes[0];
 
                 if (CheckSumSent == CheckSumCalc)
                 {
@@ -211,7 +211,7 @@ namespace Monitor
 
                     Ret.DataLength = FrameDataLength.ToString();
 
-                    Ret.CheckSum = CheckSumSent.ToString("X2");
+                    Ret.CheckSum = CheckSumSent.ToString("X");
                     return Ret;
 
 
