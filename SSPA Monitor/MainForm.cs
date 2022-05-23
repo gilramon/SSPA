@@ -562,7 +562,7 @@ namespace SocketServer
         private Button button38;
         private Button button37;
         private ListBox listBox_SMSCommands;
-        static readonly string MINIADA_HEADER = "53 00";
+        static readonly string FRAME_HEADER = "23";
         //bool m_Exit = false;
 
         ///// <summary> Convert a string of hex digits (ex: E4 CA B2) to a byte array. </summary>
@@ -688,8 +688,8 @@ namespace SocketServer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -702,6 +702,12 @@ namespace SocketServer
             this.button1 = new System.Windows.Forms.Button();
             this.txtDataTx = new System.Windows.Forms.TextBox();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
+            this.tabPage_SMS = new System.Windows.Forms.TabPage();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.tabPage_Configuration = new System.Windows.Forms.TabPage();
             this.tabControl_systems = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
@@ -1133,6 +1139,9 @@ namespace SocketServer
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox_SMSPhoneNumber = new System.Windows.Forms.TextBox();
+            this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
+            this.button_SendSelectedSMS = new System.Windows.Forms.Button();
+            this.button_Ring = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer_General_100ms = new System.Windows.Forms.Timer(this.components);
             this.timer_General_1Second = new System.Windows.Forms.Timer(this.components);
@@ -1158,7 +1167,6 @@ namespace SocketServer
             this.label12 = new System.Windows.Forms.Label();
             this.label_ClientTCPConnected = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
             this.button_AddContact = new System.Windows.Forms.Button();
             this.button_RemoveContact = new System.Windows.Forms.Button();
@@ -1167,10 +1175,7 @@ namespace SocketServer
             this.button33 = new System.Windows.Forms.Button();
             this.richTextBox_ContactDetails = new System.Windows.Forms.RichTextBox();
             this.button34 = new System.Windows.Forms.Button();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.richTextBox_TextSendSMS = new System.Windows.Forms.RichTextBox();
-            this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
-            this.button_SendSelectedSMS = new System.Windows.Forms.Button();
             this.label_SMSSendCharacters = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox_SendSMSAsIs = new System.Windows.Forms.CheckBox();
@@ -1180,29 +1185,25 @@ namespace SocketServer
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_CodeArrayForSMS = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button_Ring = new System.Windows.Forms.Button();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.richTextBox_ModemStatus = new System.Windows.Forms.RichTextBox();
             this.comboBox_ComportSMS = new System.Windows.Forms.ComboBox();
             this.button36 = new System.Windows.Forms.Button();
             this.checkBox_OpenPortSMS = new System.Windows.Forms.CheckBox();
             this.checkBox_DebugSMS = new System.Windows.Forms.CheckBox();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.button_ClearSMSConsole = new System.Windows.Forms.Button();
             this.checkBox_PauseSMSConsole = new System.Windows.Forms.CheckBox();
             this.checkBox_RecordSMSConsole = new System.Windows.Forms.CheckBox();
             this.richTextBox_SMSConsole = new System.Windows.Forms.RichTextBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.button41 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
-            this.tabPage_SMS = new System.Windows.Forms.TabPage();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
+            this.tabPage_SMS.SuspendLayout();
             this.tabPage_Configuration.SuspendLayout();
             this.tabControl_systems.SuspendLayout();
             this.tabPage10.SuspendLayout();
@@ -1270,7 +1271,6 @@ namespace SocketServer
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.tabPage_SMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1418,6 +1418,63 @@ namespace SocketServer
             this.tabControl_Main.TabStop = false;
             this.tabControl_Main.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TabControl1_KeyDown);
             // 
+            // tabPage_SMS
+            // 
+            this.tabPage_SMS.Controls.Add(this.groupBox39);
+            this.tabPage_SMS.Controls.Add(this.groupBox37);
+            this.tabPage_SMS.Controls.Add(this.groupBox35);
+            this.tabPage_SMS.Controls.Add(this.groupBox34);
+            this.tabPage_SMS.Controls.Add(this.groupBox33);
+            this.tabPage_SMS.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SMS.Name = "tabPage_SMS";
+            this.tabPage_SMS.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_SMS.TabIndex = 6;
+            this.tabPage_SMS.Text = "SMS";
+            this.tabPage_SMS.UseVisualStyleBackColor = true;
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Location = new System.Drawing.Point(476, 7);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(315, 429);
+            this.groupBox39.TabIndex = 6;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Enter += new System.EventHandler(this.GroupBox39_Enter);
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox37.Location = new System.Drawing.Point(797, 7);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Size = new System.Drawing.Size(463, 656);
+            this.groupBox37.TabIndex = 8;
+            this.groupBox37.TabStop = false;
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Location = new System.Drawing.Point(8, 587);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(456, 147);
+            this.groupBox35.TabIndex = 7;
+            this.groupBox35.TabStop = false;
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Location = new System.Drawing.Point(8, 436);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(783, 147);
+            this.groupBox34.TabIndex = 6;
+            this.groupBox34.TabStop = false;
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Location = new System.Drawing.Point(8, 7);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(462, 429);
+            this.groupBox33.TabIndex = 1;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Enter += new System.EventHandler(this.GroupBox33_Enter);
+            // 
             // tabPage_Configuration
             // 
             this.tabPage_Configuration.Controls.Add(this.tabControl_systems);
@@ -1425,9 +1482,9 @@ namespace SocketServer
             this.tabPage_Configuration.Controls.Add(this.groupBox38);
             this.tabPage_Configuration.Controls.Add(this.button30);
             this.tabPage_Configuration.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage_Configuration.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Configuration.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Configuration.Name = "tabPage_Configuration";
-            this.tabPage_Configuration.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_Configuration.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_Configuration.TabIndex = 5;
             this.tabPage_Configuration.Text = "Configuration";
             this.tabPage_Configuration.UseVisualStyleBackColor = true;
@@ -1758,10 +1815,10 @@ namespace SocketServer
             this.tabPage_SerialPort.Controls.Add(this.groupBox_SendSerialOrMonitorCommands);
             this.tabPage_SerialPort.Controls.Add(this.gbPortSettings);
             this.tabPage_SerialPort.Controls.Add(this.groupBox5);
-            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 22);
             this.tabPage_SerialPort.Name = "tabPage_SerialPort";
             this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_SerialPort.TabIndex = 1;
             this.tabPage_SerialPort.Text = "Serial Port";
             this.tabPage_SerialPort.UseVisualStyleBackColor = true;
@@ -2228,10 +2285,10 @@ namespace SocketServer
             this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
-            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ServerTCP.Name = "tabPage_ServerTCP";
             this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_ServerTCP.TabIndex = 0;
             this.tabPage_ServerTCP.Text = "Server TCP";
             this.tabPage_ServerTCP.UseVisualStyleBackColor = true;
@@ -2532,9 +2589,9 @@ namespace SocketServer
             this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientIP);
             this.tabPage_ClientTCP.Controls.Add(this.label8);
             this.tabPage_ClientTCP.Controls.Add(this.label7);
-            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ClientTCP.Name = "tabPage_ClientTCP";
-            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_ClientTCP.TabIndex = 9;
             this.tabPage_ClientTCP.Text = "Client TCP";
             this.tabPage_ClientTCP.UseVisualStyleBackColor = true;
@@ -2677,9 +2734,9 @@ namespace SocketServer
             this.tabPage_GenericFrame.Controls.Add(this.button52);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
-            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 22);
             this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_GenericFrame.TabIndex = 10;
             this.tabPage_GenericFrame.Text = "Generic Kratos frame";
             this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
@@ -4841,7 +4898,7 @@ namespace SocketServer
             this.groupBox32.Size = new System.Drawing.Size(558, 668);
             this.groupBox32.TabIndex = 9;
             this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "MiniAda Monitor";
+            this.groupBox32.Text = "SSPA Monitor";
             // 
             // richTextBox_MiniAda
             // 
@@ -4903,9 +4960,9 @@ namespace SocketServer
             this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
             this.tabPage_charts.Controls.Add(this.button_ScreenShot);
             this.tabPage_charts.Controls.Add(this.chart1);
-            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_charts.Location = new System.Drawing.Point(4, 22);
             this.tabPage_charts.Name = "tabPage_charts";
-            this.tabPage_charts.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_charts.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_charts.TabIndex = 7;
             this.tabPage_charts.Text = "Charts";
             this.tabPage_charts.UseVisualStyleBackColor = true;
@@ -5050,17 +5107,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -6242,6 +6299,42 @@ namespace SocketServer
             this.toolTip2.SetToolTip(this.textBox_SMSPhoneNumber, "Phone number throgh SMS");
             this.toolTip1.SetToolTip(this.textBox_SMSPhoneNumber, "Phone number throgh SMS");
             // 
+            // button_SendAllCheckedSMS
+            // 
+            this.button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
+            this.button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
+            this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
+            this.button_SendAllCheckedSMS.TabIndex = 7;
+            this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
+            this.toolTip1.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
+            this.toolTip2.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
+            this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
+            this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
+            // 
+            // button_SendSelectedSMS
+            // 
+            this.button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
+            this.button_SendSelectedSMS.Name = "button_SendSelectedSMS";
+            this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
+            this.button_SendSelectedSMS.TabIndex = 8;
+            this.button_SendSelectedSMS.Text = "Send SMS One";
+            this.toolTip1.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
+            this.toolTip2.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
+            this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
+            this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
+            // 
+            // button_Ring
+            // 
+            this.button_Ring.Location = new System.Drawing.Point(88, 112);
+            this.button_Ring.Name = "button_Ring";
+            this.button_Ring.Size = new System.Drawing.Size(141, 23);
+            this.button_Ring.TabIndex = 14;
+            this.button_Ring.Text = "Ring";
+            this.toolTip1.SetToolTip(this.button_Ring, "Ring to contact");
+            this.toolTip2.SetToolTip(this.button_Ring, "Ring to contact");
+            this.button_Ring.UseVisualStyleBackColor = true;
+            this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -6453,15 +6546,6 @@ namespace SocketServer
             this.label14.TabIndex = 108;
             this.label14.Text = "Rx";
             // 
-            // groupBox33
-            // 
-            this.groupBox33.Location = new System.Drawing.Point(8, 7);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(462, 429);
-            this.groupBox33.TabIndex = 1;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Enter += new System.EventHandler(this.GroupBox33_Enter);
-            // 
             // checkedListBox_PhoneBook
             // 
             this.checkedListBox_PhoneBook.FormattingEnabled = true;
@@ -6543,14 +6627,6 @@ namespace SocketServer
             this.button34.UseVisualStyleBackColor = true;
             this.button34.Click += new System.EventHandler(this.Button34_Click_2);
             // 
-            // groupBox34
-            // 
-            this.groupBox34.Location = new System.Drawing.Point(8, 436);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(783, 147);
-            this.groupBox34.TabIndex = 6;
-            this.groupBox34.TabStop = false;
-            // 
             // richTextBox_TextSendSMS
             // 
             this.richTextBox_TextSendSMS.AutoWordSelection = true;
@@ -6561,30 +6637,6 @@ namespace SocketServer
             this.richTextBox_TextSendSMS.TabIndex = 2;
             this.richTextBox_TextSendSMS.Text = "";
             this.richTextBox_TextSendSMS.TextChanged += new System.EventHandler(this.RichTextBox_TextSendSMS_TextChanged);
-            // 
-            // button_SendAllCheckedSMS
-            // 
-            this.button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
-            this.button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
-            this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
-            this.button_SendAllCheckedSMS.TabIndex = 7;
-            this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
-            this.toolTip1.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
-            this.toolTip2.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
-            this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
-            this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
-            // 
-            // button_SendSelectedSMS
-            // 
-            this.button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
-            this.button_SendSelectedSMS.Name = "button_SendSelectedSMS";
-            this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
-            this.button_SendSelectedSMS.TabIndex = 8;
-            this.button_SendSelectedSMS.Text = "Send SMS One";
-            this.toolTip1.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
-            this.toolTip2.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
-            this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
-            this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
             // 
             // label_SMSSendCharacters
             // 
@@ -6667,26 +6719,6 @@ namespace SocketServer
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 3;
             // 
-            // button_Ring
-            // 
-            this.button_Ring.Location = new System.Drawing.Point(88, 112);
-            this.button_Ring.Name = "button_Ring";
-            this.button_Ring.Size = new System.Drawing.Size(141, 23);
-            this.button_Ring.TabIndex = 14;
-            this.button_Ring.Text = "Ring";
-            this.toolTip1.SetToolTip(this.button_Ring, "Ring to contact");
-            this.toolTip2.SetToolTip(this.button_Ring, "Ring to contact");
-            this.button_Ring.UseVisualStyleBackColor = true;
-            this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Location = new System.Drawing.Point(8, 587);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(456, 147);
-            this.groupBox35.TabIndex = 7;
-            this.groupBox35.TabStop = false;
-            // 
             // richTextBox_ModemStatus
             // 
             this.richTextBox_ModemStatus.Location = new System.Drawing.Point(7, 19);
@@ -6746,15 +6778,6 @@ namespace SocketServer
             this.checkBox_DebugSMS.Text = "Debug";
             this.checkBox_DebugSMS.UseVisualStyleBackColor = true;
             // 
-            // groupBox37
-            // 
-            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox37.Location = new System.Drawing.Point(797, 7);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(463, 656);
-            this.groupBox37.TabIndex = 8;
-            this.groupBox37.TabStop = false;
-            // 
             // button_ClearSMSConsole
             // 
             this.button_ClearSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -6797,15 +6820,6 @@ namespace SocketServer
             this.richTextBox_SMSConsole.Size = new System.Drawing.Size(451, 607);
             this.richTextBox_SMSConsole.TabIndex = 0;
             this.richTextBox_SMSConsole.Text = "";
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Location = new System.Drawing.Point(476, 7);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(315, 429);
-            this.groupBox39.TabIndex = 6;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Enter += new System.EventHandler(this.GroupBox39_Enter);
             // 
             // button41
             // 
@@ -6868,20 +6882,6 @@ namespace SocketServer
             this.listBox_SMSCommands.TabIndex = 6;
             this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
             // 
-            // tabPage_SMS
-            // 
-            this.tabPage_SMS.Controls.Add(this.groupBox39);
-            this.tabPage_SMS.Controls.Add(this.groupBox37);
-            this.tabPage_SMS.Controls.Add(this.groupBox35);
-            this.tabPage_SMS.Controls.Add(this.groupBox34);
-            this.tabPage_SMS.Controls.Add(this.groupBox33);
-            this.tabPage_SMS.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_SMS.Name = "tabPage_SMS";
-            this.tabPage_SMS.Size = new System.Drawing.Size(1547, 682);
-            this.tabPage_SMS.TabIndex = 6;
-            this.tabPage_SMS.Text = "SMS";
-            this.tabPage_SMS.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 19);
@@ -6910,6 +6910,7 @@ namespace SocketServer
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl_Main.ResumeLayout(false);
+            this.tabPage_SMS.ResumeLayout(false);
             this.tabPage_Configuration.ResumeLayout(false);
             this.tabControl_systems.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
@@ -7023,7 +7024,6 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.tabPage_SMS.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -14180,8 +14180,8 @@ namespace SocketServer
 
         private void button_GetSoftwareVersion_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
-            textBox_Opcode.Text = "01 00";
+            textBox_Preamble.Text = FRAME_HEADER;
+            textBox_Opcode.Text = "00";
             textBox_data.Text = "";
 
             SendDataToSystem();
@@ -14189,7 +14189,7 @@ namespace SocketServer
 
         private void button45_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "02 00";
             textBox_data.Text = "";
 
@@ -14198,7 +14198,7 @@ namespace SocketServer
 
         private void button46_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "04 00";
             textBox_data.Text = "";
 
@@ -14209,7 +14209,7 @@ namespace SocketServer
         {
             if (textBox_LogLevel.BackColor == Color.LightGreen)
             {
-                textBox_Preamble.Text = MINIADA_HEADER;
+                textBox_Preamble.Text = FRAME_HEADER;
                 textBox_Opcode.Text = "06 00";
                 textBox_data.Text = "0" + textBox_LogLevel.Text;
 
@@ -14240,7 +14240,7 @@ namespace SocketServer
 
         private void button48_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "07 00";
             textBox_data.Text = "";
 
@@ -14249,7 +14249,7 @@ namespace SocketServer
 
         private void button49_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "08 00";
             textBox_data.Text = "";
 
@@ -14258,7 +14258,7 @@ namespace SocketServer
 
         private void button50_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "10 00";
             textBox_data.Text = "";
 
@@ -14267,7 +14267,7 @@ namespace SocketServer
 
         private void button51_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "11 00";
 
             byte[] ba = Encoding.Default.GetBytes(textBox_SystemIdentify.Text);
@@ -14286,7 +14286,7 @@ namespace SocketServer
 
         private void button53_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "12 00";
             textBox_data.Text = "";
 
@@ -14302,7 +14302,7 @@ namespace SocketServer
 
         private void button54_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "13 00";
 
             byte[] ba = Encoding.Default.GetBytes(textBox_SetCoreCardInformation.Text);
@@ -14315,7 +14315,7 @@ namespace SocketServer
 
         private void button56_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "14 00";
             textBox_data.Text = "";
 
@@ -14324,7 +14324,7 @@ namespace SocketServer
 
         private void button55_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "15 00";
 
             byte[] ba = Encoding.Default.GetBytes(textBox_SetRFCardInformation.Text);
@@ -14337,7 +14337,7 @@ namespace SocketServer
 
         private void button58_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "16 00";
             textBox_data.Text = "";
 
@@ -14346,7 +14346,7 @@ namespace SocketServer
 
         private void button57_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "17 00";
 
             byte[] ba = Encoding.Default.GetBytes(textBox_SetPSUCard.Text);
@@ -14359,7 +14359,7 @@ namespace SocketServer
 
         private void button59_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "1E 00";
             textBox_data.Text = textBox_SetSynthesizerL1.Text;
 
@@ -14384,7 +14384,7 @@ namespace SocketServer
         private void button60_Click(object sender, EventArgs e)
         {
             textBox_SetSynthesizerL2_TextChanged(null, null);
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "1F 00";
             textBox_data.Text = textBox_SetSynthesizerL2.Text;
 
@@ -14424,7 +14424,7 @@ namespace SocketServer
         private void button61_Click(object sender, EventArgs e)
         {
             textBox_SetTxAD936X_TextChanged(null, null);
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "20 00";
             textBox_data.Text = textBox_SetTxAD936X.Text;
 
@@ -14434,7 +14434,7 @@ namespace SocketServer
         private void button62_Click(object sender, EventArgs e)
         {
             textBox_GetTxAD936X_TextChanged(null, null);
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "21 00";
             textBox_data.Text = textBox_GetTxAD936X.Text;
 
@@ -14514,7 +14514,7 @@ byte – band type: 0x00 - L1, 0x01 - L2
 
         private void button63_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "26 00";
             textBox_data.Text = "";
 
@@ -14539,7 +14539,7 @@ byte – band type: 0x00 - L1, 0x01 - L2
         private void button64_Click(object sender, EventArgs e)
         {
             textBox_SetSyestemState_TextChanged(null, null);
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "28 00";
             textBox_data.Text = textBox_GetTxAD936X.Text;
 
@@ -14548,7 +14548,7 @@ byte – band type: 0x00 - L1, 0x01 - L2
 
         private void button65_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "29 00";
             textBox_data.Text = textBox_GetTxAD936X.Text;
 
@@ -14595,7 +14595,7 @@ byte – band type: 0x00 - L1, 0x01 - L2
         private void button66_Click(object sender, EventArgs e)
         {
             textBox_SetSystemOutputPower_TextChanged(null,null); //Gil: a trick for send event of text changed
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "2A 00";
             textBox_data.Text = textBox_SetSystemOutputPower.Text;
 
@@ -14604,7 +14604,7 @@ byte – band type: 0x00 - L1, 0x01 - L2
 
         private void button67_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "2B 00";
             textBox_data.Text = "";
 
@@ -14648,7 +14648,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
 
         private void button68_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "2E 00";
             textBox_data.Text = textBox_TCXOOnOff.Text;
 
@@ -14672,7 +14672,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
 
         private void button69_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "2F 00";
             textBox_data.Text = textBox_SetTCXOTrim.Text;
 
@@ -14696,7 +14696,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
 
         private void button71_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "70 00";
             textBox_data.Text = textBox_ReadFPGARegister.Text;
 
@@ -14735,7 +14735,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
 
         private void button70_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "71 00";
             textBox_data.Text = textBox_WriteFPGARegister.Text;
 
@@ -14839,7 +14839,7 @@ RX frame: 	0x0044 0x0030 0x00000000 + CRC
 
         private void button72_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "30 00";
             textBox_data.Text = textBox_StoreDatainFlash.Text;
 
@@ -14863,7 +14863,7 @@ RX frame: 	0x0044 0x0030 0x00000000 + CRC
 
         private void button73_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "31 00";
             textBox_data.Text = textBox_LoadDatainFlash.Text;
 
@@ -14894,7 +14894,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
         private void button77_Click(object sender, EventArgs e)
         {
             textBox_SetRXChannelGain_TextChanged(null, null); //Gil: a trick for send event of text changed
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "56 00";
             textBox_data.Text = textBox_SetRXChannelGain.Text;
 
@@ -14918,7 +14918,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
 
         private void button76_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "57 00";
             textBox_data.Text = textBox_GetRXChannelGain.Text;
 
@@ -14969,7 +14969,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
 
         private void button75_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "58 00";
             textBox_data.Text = textBox_SetDCAHex.Text;
 
@@ -14978,7 +14978,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
 
         private void button74_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "59 00";
             textBox_data.Text = "";
 
@@ -15002,7 +15002,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
 
         private void button78_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "5C 00";
             textBox_data.Text = textBox_RxRFPLL.Text;
 
@@ -15028,7 +15028,7 @@ RX frame: 	0x0044 0x0031 + size + RX Data + CRC
         {
             textBox_TxRFPLL_TextChanged(null, null);
 
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "5D 00";
             textBox_data.Text = textBox_TxRFPLL.Text;
 
@@ -15121,7 +15121,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button81_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "74 00";
             textBox_data.Text = textBox_SetGPIODir.Text;
 
@@ -15130,7 +15130,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button80_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "75 00";
             textBox_data.Text = textBox_GetGPIODir.Text;
 
@@ -15139,7 +15139,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button83_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "76 00";
             textBox_data.Text = textBox_SetGPIOVal.Text;
 
@@ -15148,7 +15148,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button82_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "77 00";
             textBox_data.Text = textBox_GetGPIOVal.Text;
 
@@ -15172,7 +15172,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button_RecordIQData_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "80 00";
             textBox_data.Text = textBox_RecordIQData.Text;
 
@@ -15213,7 +15213,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button84_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "81 00";
             textBox_data.Text = textBox_RecordIQSourceSealect.Text;
 
@@ -15222,7 +15222,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button85_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "87 00";
             textBox_data.Text = textBox_SetRxChannelState.Text;
 
@@ -15232,7 +15232,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button86_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "D0 00";
             textBox_data.Text = "";
 
@@ -15256,7 +15256,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button88_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "35 00";
             textBox_data.Text = textBox_WriteQSPIFlashData.Text;
 
@@ -15265,7 +15265,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button87_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "36 00";
             textBox_data.Text = textBox_ReadQSPIFlashData.Text;
 
@@ -15322,7 +15322,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button91_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "5A 00";
             textBox_data.Text = textBox_SetInternalLOFreq.Text;
 
@@ -15346,7 +15346,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void button90_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "5B 00";
             textBox_data.Text = textBox_GetInternalLOFreq.Text;
 
@@ -15577,7 +15577,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         private void button93_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "82 00";
             textBox_data.Text = textBox_PlayIQData.Text;
 
@@ -15604,7 +15604,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         private void button92_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "84 00";
             textBox_data.Text = textBox_RetriveIQData.Text;
 
@@ -16219,7 +16219,7 @@ Raw4 - Catalina 4
 
         private void button100_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "32 00";
             textBox_data.Text = textBox_EraseDataFromFlash.Text;
 
@@ -16310,7 +16310,7 @@ Raw4 - Catalina 4
 
         private void button98_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "31 00";
             textBox_data.Text = textBox_LoadDatainFlash.Text;
 
@@ -16319,7 +16319,7 @@ Raw4 - Catalina 4
 
         private void button100_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "30 00";
             textBox_data.Text = textBox_StoreDatainFlash.Text;
 
@@ -16328,7 +16328,7 @@ Raw4 - Catalina 4
 
         private void button98_Click_2(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "31 00";
             textBox_data.Text = textBox_LoadDatainFlash.Text;
 
@@ -16337,7 +16337,7 @@ Raw4 - Catalina 4
 
         private void button96_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "32 00";
             textBox_data.Text = textBox_EraseDataFromFlash.Text;
 
@@ -16709,7 +16709,7 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
 
         private void button72_Click_3(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "8A 00";
             textBox_data.Text = textBox_RecordingTests.Text;
 
@@ -16763,7 +16763,7 @@ RX frame: 	0x004D 0x008A 0x00000001 + RX Data + checksum
 
         private void button73_Click_2(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "90 00";
             textBox_data.Text = "";
 
@@ -16787,7 +16787,7 @@ RX frame: 	0x004D 0x008A 0x00000001 + RX Data + checksum
 
         private void button94_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "91 00";
             textBox_data.Text = textBox_GetMonitoredData.Text;
 
@@ -16835,7 +16835,7 @@ Note: eStatus enum 
 
         private void button95_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "92 00";
             textBox_data.Text = "";
 
@@ -16844,7 +16844,7 @@ Note: eStatus enum 
 
         private void button96_Click_3(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "93 00";
             textBox_data.Text = "";
 
@@ -16902,7 +16902,7 @@ Note: eStatus enum 
 
         private void button100_Click_3(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "94 00";
             textBox_data.Text = textBox_SetAlarmSimulatorBlock.Text;
 
@@ -16926,7 +16926,7 @@ Note: eStatus enum 
 
         private void button101_Click_1(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "95 00";
             textBox_data.Text = textBox_MonitorTask.Text;
 
@@ -16950,7 +16950,7 @@ Note: eStatus enum 
 
         private void button102_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "99 00";
             textBox_data.Text = textBox_SetLOFreq.Text;
 
@@ -16975,7 +16975,7 @@ Note: eStatus enum 
 
         private void button103_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9A 00";
             textBox_data.Text = textBox_SetLOFreqStep.Text;
 
@@ -16985,7 +16985,7 @@ Note: eStatus enum 
 
         private void button104_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9B 00";
             textBox_data.Text = textBox_GetLOStateFreqMode.Text;
 
@@ -17010,7 +17010,7 @@ Note: eStatus enum 
 
         private void button105_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9C 00";
             textBox_data.Text = "";
 
@@ -17034,7 +17034,7 @@ Note: eStatus enum 
 
         private void button107_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9D 00";
             textBox_data.Text = textBox_SelectLOSource.Text;
 
@@ -17043,7 +17043,7 @@ Note: eStatus enum 
 
         private void button106_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = MINIADA_HEADER;
+            textBox_Preamble.Text = FRAME_HEADER;
             textBox_Opcode.Text = "9E 00";
             textBox_data.Text = "";
 
