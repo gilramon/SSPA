@@ -322,9 +322,8 @@ namespace SocketServer
         private GroupBox groupBox_clientTX;
         private Label label_SerialPortStatus;
         private Label label_TCPClient;
-        private TabPage tabPage_MiniAda;
+        private TabPage tabPage_Commands;
         private GroupBox groupBox40;
-        private Button button_GetSoftwareVersion;
         private GroupBox groupBox32;
         private RichTextBox richTextBox_MiniAda;
         private CheckBox checkBox_RecordMiniAda;
@@ -334,24 +333,9 @@ namespace SocketServer
         private Label label18;
         private Button button45;
         private Button button46;
-        private Button button47;
-        private TextBox textBox_LogLevel;
-        private Button button49;
-        private Button button50;
-        private TextBox textBox_SystemIdentify;
-        private Button button51;
         private Button button52;
-        private Button button53;
         private TabControl tabControl_MiniAda;
         private TabPage tabPage1;
-        private TextBox textBox_SetCoreCardInformation;
-        private Button button54;
-        private TextBox textBox_SetRFCardInformation;
-        private Button button55;
-        private Button button56;
-        private TextBox textBox_SetPSUCard;
-        private Button button57;
-        private Button button58;
         private TabPage tabPage2;
         private TextBox textBox_SetSynthesizerL1;
         private Button button59;
@@ -402,7 +386,6 @@ namespace SocketServer
         private TextBox textBox_GetRXChannelGain;
         private TextBox textBox_TxRFPLL;
         private TextBox textBox_RxRFPLL;
-        private Label label31;
         private TextBox textBox_SetDCAHex;
         private TextBox textBox_GetGPIOVal;
         private Button button82;
@@ -564,9 +547,43 @@ namespace SocketServer
         private GroupBox groupBox42;
         private RadioButton radioButton_TCPIP;
         private RadioButton radioButton_SerialPort;
-        private Button button48;
         private Button button_SendProtocolSerialPort;
         private Button button108;
+        private Button button109;
+        private Button button47;
+        private Button button48;
+        private TextBox textBox16;
+        private Button button117;
+        private Button button116;
+        private TextBox textBox15;
+        private Button button115;
+        private Button button114;
+        private TextBox textBox14;
+        private Button button113;
+        private TextBox textBox13;
+        private Button button112;
+        private TextBox textBox12;
+        private Button button111;
+        private TextBox textBox11;
+        private Button button110;
+        private TextBox textBox10;
+        private Button button58;
+        private TextBox textBox9;
+        private Button button57;
+        private TextBox textBox8;
+        private Button button56;
+        private TextBox textBox7;
+        private Button button55;
+        private TextBox textBox6;
+        private Button button54;
+        private TextBox textBox5;
+        private Button button53;
+        private TextBox textBox4;
+        private Button button51;
+        private Button button50;
+        private TextBox textBox3;
+        private Button button49;
+        private TextBox textBox2;
         static readonly string FRAME_HEADER = "23";
         //bool m_Exit = false;
 
@@ -693,8 +710,8 @@ namespace SocketServer
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -835,6 +852,7 @@ namespace SocketServer
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox_clientTX = new System.Windows.Forms.GroupBox();
+            this.button_SendProtocolSerialPort = new System.Windows.Forms.Button();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.textBox_SentChecksum = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -856,33 +874,16 @@ namespace SocketServer
             this.textBox_data = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.tabPage_MiniAda = new System.Windows.Forms.TabPage();
+            this.tabPage_Commands = new System.Windows.Forms.TabPage();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.tabControl_MiniAda = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button48 = new System.Windows.Forms.Button();
+            this.button108 = new System.Windows.Forms.Button();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
             this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox_SetPSUCard = new System.Windows.Forms.TextBox();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
-            this.textBox_SetRFCardInformation = new System.Windows.Forms.TextBox();
-            this.button55 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.textBox_SetCoreCardInformation = new System.Windows.Forms.TextBox();
-            this.button54 = new System.Windows.Forms.Button();
-            this.button_GetSoftwareVersion = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
-            this.textBox_SystemIdentify = new System.Windows.Forms.TextBox();
             this.button46 = new System.Windows.Forms.Button();
-            this.button51 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.textBox_LogLevel = new System.Windows.Forms.TextBox();
-            this.button49 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox_Erase4KsectorQSPI = new System.Windows.Forms.TextBox();
             this.button89 = new System.Windows.Forms.Button();
@@ -1208,8 +1209,41 @@ namespace SocketServer
             this.button38 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
-            this.button_SendProtocolSerialPort = new System.Windows.Forms.Button();
-            this.button108 = new System.Windows.Forms.Button();
+            this.button109 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button47 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button49 = new System.Windows.Forms.Button();
+            this.button50 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button51 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button53 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button54 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button55 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button56 = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button57 = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.button58 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button110 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.button111 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.button112 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button113 = new System.Windows.Forms.Button();
+            this.button114 = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button115 = new System.Windows.Forms.Button();
+            this.button116 = new System.Windows.Forms.Button();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.button117 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1233,7 +1267,7 @@ namespace SocketServer
             this.groupBox31.SuspendLayout();
             this.groupBox_clientTX.SuspendLayout();
             this.groupBox41.SuspendLayout();
-            this.tabPage_MiniAda.SuspendLayout();
+            this.tabPage_Commands.SuspendLayout();
             this.groupBox40.SuspendLayout();
             this.tabControl_MiniAda.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1419,7 +1453,7 @@ namespace SocketServer
             this.tabControl_Main.Controls.Add(this.tabPage_ServerTCP);
             this.tabControl_Main.Controls.Add(this.tabPage_ClientTCP);
             this.tabControl_Main.Controls.Add(this.tabPage_GenericFrame);
-            this.tabControl_Main.Controls.Add(this.tabPage_MiniAda);
+            this.tabControl_Main.Controls.Add(this.tabPage_Commands);
             this.tabControl_Main.Controls.Add(this.tabPage_charts);
             this.tabControl_Main.Location = new System.Drawing.Point(4, 5);
             this.tabControl_Main.Name = "tabControl_Main";
@@ -1493,9 +1527,9 @@ namespace SocketServer
             this.tabPage_Configuration.Controls.Add(this.groupBox38);
             this.tabPage_Configuration.Controls.Add(this.button30);
             this.tabPage_Configuration.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage_Configuration.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Configuration.Location = new System.Drawing.Point(4, 27);
             this.tabPage_Configuration.Name = "tabPage_Configuration";
-            this.tabPage_Configuration.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_Configuration.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_Configuration.TabIndex = 5;
             this.tabPage_Configuration.Text = "Configuration";
             this.tabPage_Configuration.UseVisualStyleBackColor = true;
@@ -2298,10 +2332,10 @@ namespace SocketServer
             this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
-            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
             this.tabPage_ServerTCP.Name = "tabPage_ServerTCP";
             this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_ServerTCP.TabIndex = 0;
             this.tabPage_ServerTCP.Text = "Server TCP";
             this.tabPage_ServerTCP.UseVisualStyleBackColor = true;
@@ -2602,9 +2636,9 @@ namespace SocketServer
             this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientIP);
             this.tabPage_ClientTCP.Controls.Add(this.label8);
             this.tabPage_ClientTCP.Controls.Add(this.label7);
-            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
             this.tabPage_ClientTCP.Name = "tabPage_ClientTCP";
-            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_ClientTCP.TabIndex = 9;
             this.tabPage_ClientTCP.Text = "Client TCP";
             this.tabPage_ClientTCP.UseVisualStyleBackColor = true;
@@ -2928,6 +2962,17 @@ namespace SocketServer
             this.groupBox_clientTX.Text = "Send Data";
             this.groupBox_clientTX.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.groupBox_clientTX_PreviewKeyDown);
             // 
+            // button_SendProtocolSerialPort
+            // 
+            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(131, 126);
+            this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
+            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(121, 23);
+            this.button_SendProtocolSerialPort.TabIndex = 16;
+            this.button_SendProtocolSerialPort.TabStop = false;
+            this.button_SendProtocolSerialPort.Text = "Send SerialPort";
+            this.button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
+            this.button_SendProtocolSerialPort.Click += new System.EventHandler(this.button_SendProtocolSerialPort_Click);
+            // 
             // groupBox41
             // 
             this.groupBox41.Controls.Add(this.textBox_SentChecksum);
@@ -3149,16 +3194,16 @@ namespace SocketServer
             this.label11.TabIndex = 6;
             this.label11.Text = "Data";
             // 
-            // tabPage_MiniAda
+            // tabPage_Commands
             // 
-            this.tabPage_MiniAda.Controls.Add(this.groupBox40);
-            this.tabPage_MiniAda.Controls.Add(this.groupBox32);
-            this.tabPage_MiniAda.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_MiniAda.Name = "tabPage_MiniAda";
-            this.tabPage_MiniAda.Size = new System.Drawing.Size(1547, 682);
-            this.tabPage_MiniAda.TabIndex = 11;
-            this.tabPage_MiniAda.Text = "SSPA";
-            this.tabPage_MiniAda.UseVisualStyleBackColor = true;
+            this.tabPage_Commands.Controls.Add(this.groupBox40);
+            this.tabPage_Commands.Controls.Add(this.groupBox32);
+            this.tabPage_Commands.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Commands.Name = "tabPage_Commands";
+            this.tabPage_Commands.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_Commands.TabIndex = 11;
+            this.tabPage_Commands.Text = "SSPA Commands";
+            this.tabPage_Commands.UseVisualStyleBackColor = true;
             // 
             // groupBox40
             // 
@@ -3190,45 +3235,62 @@ namespace SocketServer
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button108);
-            this.tabPage1.Controls.Add(this.button48);
-            this.tabPage1.Controls.Add(this.groupBox42);
-            this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.textBox_SetPSUCard);
-            this.tabPage1.Controls.Add(this.button57);
+            this.tabPage1.Controls.Add(this.textBox16);
+            this.tabPage1.Controls.Add(this.button117);
+            this.tabPage1.Controls.Add(this.button116);
+            this.tabPage1.Controls.Add(this.textBox15);
+            this.tabPage1.Controls.Add(this.button115);
+            this.tabPage1.Controls.Add(this.button114);
+            this.tabPage1.Controls.Add(this.textBox14);
+            this.tabPage1.Controls.Add(this.button113);
+            this.tabPage1.Controls.Add(this.textBox13);
+            this.tabPage1.Controls.Add(this.button112);
+            this.tabPage1.Controls.Add(this.textBox12);
+            this.tabPage1.Controls.Add(this.button111);
+            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.button110);
+            this.tabPage1.Controls.Add(this.textBox10);
             this.tabPage1.Controls.Add(this.button58);
-            this.tabPage1.Controls.Add(this.textBox_SetRFCardInformation);
-            this.tabPage1.Controls.Add(this.button55);
+            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.button57);
+            this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.button56);
-            this.tabPage1.Controls.Add(this.textBox_SetCoreCardInformation);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.button55);
+            this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.button54);
-            this.tabPage1.Controls.Add(this.button_GetSoftwareVersion);
+            this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.button53);
-            this.tabPage1.Controls.Add(this.button45);
-            this.tabPage1.Controls.Add(this.textBox_SystemIdentify);
-            this.tabPage1.Controls.Add(this.button46);
+            this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.button51);
-            this.tabPage1.Controls.Add(this.button47);
             this.tabPage1.Controls.Add(this.button50);
-            this.tabPage1.Controls.Add(this.textBox_LogLevel);
+            this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.button49);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.button47);
+            this.tabPage1.Controls.Add(this.button48);
+            this.tabPage1.Controls.Add(this.button108);
+            this.tabPage1.Controls.Add(this.groupBox42);
+            this.tabPage1.Controls.Add(this.button109);
+            this.tabPage1.Controls.Add(this.button45);
+            this.tabPage1.Controls.Add(this.button46);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(949, 604);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Standard";
+            this.tabPage1.Text = "Simulator";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button48
+            // button108
             // 
-            this.button48.Location = new System.Drawing.Point(3, 6);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(244, 23);
-            this.button48.TabIndex = 34;
-            this.button48.Text = "Get ID";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.Click += new System.EventHandler(this.button48_Click_1);
+            this.button108.Location = new System.Drawing.Point(0, 6);
+            this.button108.Name = "button108";
+            this.button108.Size = new System.Drawing.Size(244, 23);
+            this.button108.TabIndex = 35;
+            this.button108.Text = "Get Simulator ID";
+            this.button108.UseVisualStyleBackColor = true;
+            this.button108.Click += new System.EventHandler(this.button108_Click);
             // 
             // groupBox42
             // 
@@ -3239,7 +3301,7 @@ namespace SocketServer
             this.groupBox42.Size = new System.Drawing.Size(200, 100);
             this.groupBox42.TabIndex = 33;
             this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "Communication";
+            this.groupBox42.Text = "Communication gatway";
             // 
             // radioButton_TCPIP
             // 
@@ -3264,189 +3326,25 @@ namespace SocketServer
             this.radioButton_SerialPort.Text = "Serial Port";
             this.radioButton_SerialPort.UseVisualStyleBackColor = true;
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Maroon;
-            this.label31.Location = new System.Drawing.Point(291, 173);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 21);
-            this.label31.TabIndex = 32;
-            this.label31.Text = "0-7";
-            // 
-            // textBox_SetPSUCard
-            // 
-            this.textBox_SetPSUCard.Location = new System.Drawing.Point(256, 565);
-            this.textBox_SetPSUCard.MaxLength = 121;
-            this.textBox_SetPSUCard.Name = "textBox_SetPSUCard";
-            this.textBox_SetPSUCard.Size = new System.Drawing.Size(216, 26);
-            this.textBox_SetPSUCard.TabIndex = 28;
-            // 
-            // button57
-            // 
-            this.button57.Location = new System.Drawing.Point(6, 568);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(244, 23);
-            this.button57.TabIndex = 27;
-            this.button57.Text = "Set PSU Card Information";
-            this.button57.UseVisualStyleBackColor = true;
-            this.button57.Click += new System.EventHandler(this.button57_Click);
-            // 
-            // button58
-            // 
-            this.button58.Location = new System.Drawing.Point(6, 537);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(244, 23);
-            this.button58.TabIndex = 26;
-            this.button58.Text = "Get PSU Card Information";
-            this.button58.UseVisualStyleBackColor = true;
-            this.button58.Click += new System.EventHandler(this.button58_Click);
-            // 
-            // textBox_SetRFCardInformation
-            // 
-            this.textBox_SetRFCardInformation.Location = new System.Drawing.Point(256, 470);
-            this.textBox_SetRFCardInformation.MaxLength = 121;
-            this.textBox_SetRFCardInformation.Name = "textBox_SetRFCardInformation";
-            this.textBox_SetRFCardInformation.Size = new System.Drawing.Size(216, 26);
-            this.textBox_SetRFCardInformation.TabIndex = 25;
-            // 
-            // button55
-            // 
-            this.button55.Location = new System.Drawing.Point(6, 473);
-            this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(244, 23);
-            this.button55.TabIndex = 24;
-            this.button55.Text = "Set RF Card Information";
-            this.button55.UseVisualStyleBackColor = true;
-            this.button55.Click += new System.EventHandler(this.button55_Click);
-            // 
-            // button56
-            // 
-            this.button56.Location = new System.Drawing.Point(6, 442);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(244, 23);
-            this.button56.TabIndex = 23;
-            this.button56.Text = "Get RF Card Information";
-            this.button56.UseVisualStyleBackColor = true;
-            this.button56.Click += new System.EventHandler(this.button56_Click);
-            // 
-            // textBox_SetCoreCardInformation
-            // 
-            this.textBox_SetCoreCardInformation.Location = new System.Drawing.Point(256, 366);
-            this.textBox_SetCoreCardInformation.MaxLength = 121;
-            this.textBox_SetCoreCardInformation.Name = "textBox_SetCoreCardInformation";
-            this.textBox_SetCoreCardInformation.Size = new System.Drawing.Size(216, 26);
-            this.textBox_SetCoreCardInformation.TabIndex = 22;
-            // 
-            // button54
-            // 
-            this.button54.Location = new System.Drawing.Point(6, 369);
-            this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(244, 23);
-            this.button54.TabIndex = 21;
-            this.button54.Text = "Set Core Card Information";
-            this.button54.UseVisualStyleBackColor = true;
-            this.button54.Click += new System.EventHandler(this.button54_Click);
-            // 
-            // button_GetSoftwareVersion
-            // 
-            this.button_GetSoftwareVersion.Location = new System.Drawing.Point(3, 67);
-            this.button_GetSoftwareVersion.Name = "button_GetSoftwareVersion";
-            this.button_GetSoftwareVersion.Size = new System.Drawing.Size(244, 23);
-            this.button_GetSoftwareVersion.TabIndex = 10;
-            this.button_GetSoftwareVersion.Text = "Get Software version";
-            this.button_GetSoftwareVersion.UseVisualStyleBackColor = true;
-            this.button_GetSoftwareVersion.Click += new System.EventHandler(this.button_GetSoftwareVersion_Click);
-            // 
-            // button53
-            // 
-            this.button53.Location = new System.Drawing.Point(6, 338);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(244, 23);
-            this.button53.TabIndex = 20;
-            this.button53.Text = "Get Core Card Information";
-            this.button53.UseVisualStyleBackColor = true;
-            this.button53.Click += new System.EventHandler(this.button53_Click);
-            // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(3, 101);
+            this.button45.Location = new System.Drawing.Point(2, 65);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(244, 23);
             this.button45.TabIndex = 11;
-            this.button45.Text = "Get Firmware version";
+            this.button45.Text = "Get Simulator Firmware version";
             this.button45.UseVisualStyleBackColor = true;
             this.button45.Click += new System.EventHandler(this.button45_Click);
             // 
-            // textBox_SystemIdentify
-            // 
-            this.textBox_SystemIdentify.Location = new System.Drawing.Point(258, 280);
-            this.textBox_SystemIdentify.MaxLength = 121;
-            this.textBox_SystemIdentify.Name = "textBox_SystemIdentify";
-            this.textBox_SystemIdentify.Size = new System.Drawing.Size(216, 26);
-            this.textBox_SystemIdentify.TabIndex = 19;
-            // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(3, 144);
+            this.button46.Location = new System.Drawing.Point(0, 98);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(244, 23);
             this.button46.TabIndex = 12;
-            this.button46.Text = "Get Serial Number";
+            this.button46.Text = "Get Simulator Hardware version";
             this.button46.UseVisualStyleBackColor = true;
             this.button46.Click += new System.EventHandler(this.button46_Click);
-            // 
-            // button51
-            // 
-            this.button51.Location = new System.Drawing.Point(6, 281);
-            this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(244, 23);
-            this.button51.TabIndex = 18;
-            this.button51.Text = "Set System identity Information";
-            this.button51.UseVisualStyleBackColor = true;
-            this.button51.Click += new System.EventHandler(this.button51_Click);
-            // 
-            // button47
-            // 
-            this.button47.Location = new System.Drawing.Point(3, 177);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(244, 23);
-            this.button47.TabIndex = 13;
-            this.button47.Text = "Set Log Level";
-            this.button47.UseVisualStyleBackColor = true;
-            this.button47.Click += new System.EventHandler(this.button47_Click);
-            // 
-            // button50
-            // 
-            this.button50.Location = new System.Drawing.Point(6, 251);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(244, 23);
-            this.button50.TabIndex = 17;
-            this.button50.Text = "Get System identity Information";
-            this.button50.UseVisualStyleBackColor = true;
-            this.button50.Click += new System.EventHandler(this.button50_Click);
-            // 
-            // textBox_LogLevel
-            // 
-            this.textBox_LogLevel.Location = new System.Drawing.Point(255, 171);
-            this.textBox_LogLevel.MaxLength = 1;
-            this.textBox_LogLevel.Name = "textBox_LogLevel";
-            this.textBox_LogLevel.Size = new System.Drawing.Size(27, 26);
-            this.textBox_LogLevel.TabIndex = 14;
-            this.textBox_LogLevel.Text = "7";
-            this.textBox_LogLevel.TextChanged += new System.EventHandler(this.textBox_LogLevel_TextChanged);
-            // 
-            // button49
-            // 
-            this.button49.Location = new System.Drawing.Point(3, 211);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(244, 23);
-            this.button49.TabIndex = 16;
-            this.button49.Text = "Get system type";
-            this.button49.UseVisualStyleBackColor = true;
-            this.button49.Click += new System.EventHandler(this.button49_Click);
             // 
             // tabPage2
             // 
@@ -3475,9 +3373,9 @@ namespace SocketServer
             this.tabPage2.Controls.Add(this.button60);
             this.tabPage2.Controls.Add(this.textBox_SetSynthesizerL1);
             this.tabPage2.Controls.Add(this.button59);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(949, 609);
+            this.tabPage2.Size = new System.Drawing.Size(949, 604);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Master";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3771,9 +3669,9 @@ namespace SocketServer
             this.tabPage6.Controls.Add(this.button76);
             this.tabPage6.Controls.Add(this.textBox_SetRXChannelGain);
             this.tabPage6.Controls.Add(this.button77);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(949, 609);
+            this.tabPage6.Size = new System.Drawing.Size(949, 604);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "RF";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -4003,9 +3901,9 @@ namespace SocketServer
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.textBox_ReadFPGARegister);
             this.tabPage3.Controls.Add(this.button71);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(949, 609);
+            this.tabPage3.Size = new System.Drawing.Size(949, 604);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Debug";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -4194,9 +4092,9 @@ namespace SocketServer
             this.tabPage7.Controls.Add(this.button84);
             this.tabPage7.Controls.Add(this.textBox_RecordIQData);
             this.tabPage7.Controls.Add(this.button_RecordIQData);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 27);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(949, 609);
+            this.tabPage7.Size = new System.Drawing.Size(949, 604);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "Recording";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -4468,9 +4366,9 @@ namespace SocketServer
             this.tabPage13.Controls.Add(this.button94);
             this.tabPage13.Controls.Add(this.textBox_GetMonitoredData);
             this.tabPage13.Controls.Add(this.button73);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Location = new System.Drawing.Point(4, 27);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(949, 609);
+            this.tabPage13.Size = new System.Drawing.Size(949, 604);
             this.tabPage13.TabIndex = 9;
             this.tabPage13.Text = "Monitoring";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -4669,9 +4567,9 @@ namespace SocketServer
             // 
             // tabPage8
             // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 27);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(949, 609);
+            this.tabPage8.Size = new System.Drawing.Size(949, 604);
             this.tabPage8.TabIndex = 5;
             this.tabPage8.Text = "Transmit";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -4679,9 +4577,9 @@ namespace SocketServer
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.button86);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Location = new System.Drawing.Point(4, 27);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(949, 609);
+            this.tabPage9.Size = new System.Drawing.Size(949, 604);
             this.tabPage9.TabIndex = 6;
             this.tabPage9.Text = "Extendend";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -4705,9 +4603,9 @@ namespace SocketServer
             this.tabPage14.Controls.Add(this.textBox_StoreDatainFlash);
             this.tabPage14.Controls.Add(this.button_StoreDatainFlash);
             this.tabPage14.Controls.Add(this.groupBox_FlashConfig);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Location = new System.Drawing.Point(4, 27);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(949, 609);
+            this.tabPage14.Size = new System.Drawing.Size(949, 604);
             this.tabPage14.TabIndex = 8;
             this.tabPage14.Text = "Flash";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -5010,9 +4908,9 @@ namespace SocketServer
             this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
             this.tabPage_charts.Controls.Add(this.button_ScreenShot);
             this.tabPage_charts.Controls.Add(this.chart1);
-            this.tabPage_charts.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
             this.tabPage_charts.Name = "tabPage_charts";
-            this.tabPage_charts.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_charts.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_charts.TabIndex = 7;
             this.tabPage_charts.Text = "Charts";
             this.tabPage_charts.UseVisualStyleBackColor = true;
@@ -5157,17 +5055,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea7.AxisX.Title = "Freq";
-            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea7.AxisY.Title = "Power [dBm]";
-            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend7.IsTextAutoFit = false;
-            legend7.Name = "Legend1";
-            legend7.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend7);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -6932,26 +6830,321 @@ namespace SocketServer
             this.listBox_SMSCommands.TabIndex = 6;
             this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
             // 
-            // button_SendProtocolSerialPort
+            // button109
             // 
-            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(131, 126);
-            this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
-            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(121, 23);
-            this.button_SendProtocolSerialPort.TabIndex = 16;
-            this.button_SendProtocolSerialPort.TabStop = false;
-            this.button_SendProtocolSerialPort.Text = "Send SerialPort";
-            this.button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
-            this.button_SendProtocolSerialPort.Click += new System.EventHandler(this.button_SendProtocolSerialPort_Click);
+            this.button109.Location = new System.Drawing.Point(0, 36);
+            this.button109.Name = "button109";
+            this.button109.Size = new System.Drawing.Size(244, 23);
+            this.button109.TabIndex = 10;
+            this.button109.Text = "Get Simulator Software version";
+            this.button109.UseVisualStyleBackColor = true;
+            this.button109.Click += new System.EventHandler(this.button_GetSoftwareVersion_Click);
             // 
-            // button108
+            // button48
             // 
-            this.button108.Location = new System.Drawing.Point(258, 6);
-            this.button108.Name = "button108";
-            this.button108.Size = new System.Drawing.Size(244, 23);
-            this.button108.TabIndex = 35;
-            this.button108.Text = "Get Simulator ID";
-            this.button108.UseVisualStyleBackColor = true;
-            this.button108.Click += new System.EventHandler(this.button108_Click);
+            this.button48.Location = new System.Drawing.Point(-2, 126);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(244, 23);
+            this.button48.TabIndex = 36;
+            this.button48.Text = "Get Simulator serial number";
+            this.button48.UseVisualStyleBackColor = true;
+            // 
+            // button47
+            // 
+            this.button47.Location = new System.Drawing.Point(0, 204);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(244, 23);
+            this.button47.TabIndex = 37;
+            this.button47.Text = "Set TX-INHIBIT Params ";
+            this.button47.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(253, 202);
+            this.textBox2.MaxLength = 30;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(129, 26);
+            this.textBox2.TabIndex = 55;
+            this.textBox2.Text = "0000 0000 0000";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(253, 233);
+            this.textBox3.MaxLength = 30;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(129, 26);
+            this.textBox3.TabIndex = 57;
+            this.textBox3.Text = "00";
+            // 
+            // button49
+            // 
+            this.button49.Location = new System.Drawing.Point(0, 235);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(244, 23);
+            this.button49.TabIndex = 56;
+            this.button49.Text = "Set TX-INHIBIT Enable ";
+            this.button49.UseVisualStyleBackColor = true;
+            // 
+            // button50
+            // 
+            this.button50.Location = new System.Drawing.Point(0, 265);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(244, 23);
+            this.button50.TabIndex = 58;
+            this.button50.Text = "Get Simulator Status";
+            this.button50.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(253, 291);
+            this.textBox4.MaxLength = 30;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(129, 26);
+            this.textBox4.TabIndex = 60;
+            this.textBox4.Text = "00";
+            // 
+            // button51
+            // 
+            this.button51.Location = new System.Drawing.Point(0, 293);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(244, 23);
+            this.button51.TabIndex = 59;
+            this.button51.Text = "Set Int_Set_Preserve ";
+            this.button51.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(253, 320);
+            this.textBox5.MaxLength = 30;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(129, 26);
+            this.textBox5.TabIndex = 62;
+            this.textBox5.Text = "00";
+            // 
+            // button53
+            // 
+            this.button53.Location = new System.Drawing.Point(0, 322);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(244, 23);
+            this.button53.TabIndex = 61;
+            this.button53.Text = "Set TX-STROBE ";
+            this.button53.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(253, 349);
+            this.textBox6.MaxLength = 30;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(129, 26);
+            this.textBox6.TabIndex = 64;
+            this.textBox6.Text = "00";
+            // 
+            // button54
+            // 
+            this.button54.Location = new System.Drawing.Point(0, 351);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(244, 23);
+            this.button54.TabIndex = 63;
+            this.button54.Text = "Set OUT-TUNE ";
+            this.button54.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(253, 378);
+            this.textBox7.MaxLength = 30;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(129, 26);
+            this.textBox7.TabIndex = 66;
+            this.textBox7.Text = "00";
+            // 
+            // button55
+            // 
+            this.button55.Location = new System.Drawing.Point(0, 380);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(244, 23);
+            this.button55.TabIndex = 65;
+            this.button55.Text = "Set Freq. Band ";
+            this.button55.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(253, 407);
+            this.textBox8.MaxLength = 30;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(129, 26);
+            this.textBox8.TabIndex = 68;
+            this.textBox8.Text = "00";
+            // 
+            // button56
+            // 
+            this.button56.Location = new System.Drawing.Point(0, 409);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(244, 23);
+            this.button56.TabIndex = 67;
+            this.button56.Text = "Set DCA Discretes ";
+            this.button56.UseVisualStyleBackColor = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(253, 438);
+            this.textBox9.MaxLength = 30;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(129, 26);
+            this.textBox9.TabIndex = 70;
+            this.textBox9.Text = "0000 0000 0000";
+            // 
+            // button57
+            // 
+            this.button57.Location = new System.Drawing.Point(0, 440);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(244, 23);
+            this.button57.TabIndex = 69;
+            this.button57.Text = "Set GP Parameters ";
+            this.button57.UseVisualStyleBackColor = true;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(253, 469);
+            this.textBox10.MaxLength = 30;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(129, 26);
+            this.textBox10.TabIndex = 72;
+            this.textBox10.Text = "00";
+            // 
+            // button58
+            // 
+            this.button58.Location = new System.Drawing.Point(0, 471);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(244, 23);
+            this.button58.TabIndex = 71;
+            this.button58.Text = "Set GP Enable ";
+            this.button58.UseVisualStyleBackColor = true;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(253, 502);
+            this.textBox11.MaxLength = 30;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(129, 26);
+            this.textBox11.TabIndex = 74;
+            this.textBox11.Text = "0000 0000 0000";
+            // 
+            // button110
+            // 
+            this.button110.Location = new System.Drawing.Point(0, 504);
+            this.button110.Name = "button110";
+            this.button110.Size = new System.Drawing.Size(244, 23);
+            this.button110.TabIndex = 73;
+            this.button110.Text = "Set RF Gen. Parameters ";
+            this.button110.UseVisualStyleBackColor = true;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(253, 536);
+            this.textBox12.MaxLength = 30;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(129, 26);
+            this.textBox12.TabIndex = 76;
+            this.textBox12.Text = "00";
+            // 
+            // button111
+            // 
+            this.button111.Location = new System.Drawing.Point(0, 538);
+            this.button111.Name = "button111";
+            this.button111.Size = new System.Drawing.Size(244, 23);
+            this.button111.TabIndex = 75;
+            this.button111.Text = "Set RF Gen. Enable ";
+            this.button111.UseVisualStyleBackColor = true;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(253, 567);
+            this.textBox13.MaxLength = 30;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(129, 26);
+            this.textBox13.TabIndex = 78;
+            this.textBox13.Text = "00";
+            // 
+            // button112
+            // 
+            this.button112.Location = new System.Drawing.Point(0, 569);
+            this.button112.Name = "button112";
+            this.button112.Size = new System.Drawing.Size(244, 23);
+            this.button112.TabIndex = 77;
+            this.button112.Text = "Set SEU Recover ";
+            this.button112.UseVisualStyleBackColor = true;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(655, 200);
+            this.textBox14.MaxLength = 30;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(129, 26);
+            this.textBox14.TabIndex = 80;
+            this.textBox14.Text = "00";
+            // 
+            // button113
+            // 
+            this.button113.Location = new System.Drawing.Point(402, 202);
+            this.button113.Name = "button113";
+            this.button113.Size = new System.Drawing.Size(244, 23);
+            this.button113.TabIndex = 79;
+            this.button113.Text = "Set Synchronized Tx-Strobe ";
+            this.button113.UseVisualStyleBackColor = true;
+            // 
+            // button114
+            // 
+            this.button114.Location = new System.Drawing.Point(402, 234);
+            this.button114.Name = "button114";
+            this.button114.Size = new System.Drawing.Size(244, 23);
+            this.button114.TabIndex = 81;
+            this.button114.Text = "Get Thermal Supervisor ";
+            this.button114.UseVisualStyleBackColor = true;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(655, 261);
+            this.textBox15.MaxLength = 30;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(129, 26);
+            this.textBox15.TabIndex = 83;
+            this.textBox15.Text = "00";
+            // 
+            // button115
+            // 
+            this.button115.Location = new System.Drawing.Point(402, 263);
+            this.button115.Name = "button115";
+            this.button115.Size = new System.Drawing.Size(244, 23);
+            this.button115.TabIndex = 82;
+            this.button115.Text = "Set Simulator discrete DC4 ";
+            this.button115.UseVisualStyleBackColor = true;
+            // 
+            // button116
+            // 
+            this.button116.Location = new System.Drawing.Point(402, 290);
+            this.button116.Name = "button116";
+            this.button116.Size = new System.Drawing.Size(244, 23);
+            this.button116.TabIndex = 84;
+            this.button116.Text = "Simulator discrete SEU_Recover control";
+            this.button116.UseVisualStyleBackColor = true;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(655, 319);
+            this.textBox16.MaxLength = 30;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(129, 26);
+            this.textBox16.TabIndex = 86;
+            this.textBox16.Text = "00";
+            // 
+            // button117
+            // 
+            this.button117.Location = new System.Drawing.Point(402, 320);
+            this.button117.Name = "button117";
+            this.button117.Size = new System.Drawing.Size(244, 23);
+            this.button117.TabIndex = 85;
+            this.button117.Text = "Simulator discrete Tx_OVT_Check control";
+            this.button117.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -7015,7 +7208,7 @@ namespace SocketServer
             this.groupBox_clientTX.PerformLayout();
             this.groupBox41.ResumeLayout(false);
             this.groupBox41.PerformLayout();
-            this.tabPage_MiniAda.ResumeLayout(false);
+            this.tabPage_Commands.ResumeLayout(false);
             this.groupBox40.ResumeLayout(false);
             this.tabControl_MiniAda.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -9406,7 +9599,7 @@ namespace SocketServer
 
         int WaitforBufferFull = -1;
         DSPLib.DSP.Window.Type windowToApply;
-        void CheckForMiniAdaDataFFT(MiniAda_Parser i_MiniAdaParser)
+        void CheckForMiniAdaDataFFT(SSPA_Parser i_MiniAdaParser)
         {
 
 
@@ -9613,7 +9806,7 @@ namespace SocketServer
             i_serias.LegendToolTip = String.Format(" \n{0} \n Mean [{1}] \n RMS [{2}] \n MaxAmplitude [{3}] \n MaxPosition [{4}] \n MaxFrequency [{5}] \n \n", i_serias.Name, Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.##E+0"));
         }
 
-        void CheckForMiniAdaDataDFT(MiniAda_Parser i_MiniAdaParser)
+        void CheckForMiniAdaDataDFT(SSPA_Parser i_MiniAdaParser)
         {
             //// Same Input Signal as Example 1 - Except a fractional cycle for frequency.
             //double amplitude = 1.0; double frequency = 20000.5;
@@ -9776,7 +9969,7 @@ namespace SocketServer
                         textBox_RxClientCheckSum.BackColor = Color.LightGreen;
                         textBox_RxClientCheckSum.Text = Result.CheckSum;
 
-                        MiniAdaParser = new MiniAda_Parser();
+                        MiniAdaParser = new SSPA_Parser();
                         string MiniAdaResult = MiniAdaParser.ParseKratosFrame(Result);
 
                         SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
@@ -9808,7 +10001,7 @@ namespace SocketServer
         }
 
         int ChartIndex = 0;
-        MiniAda_Parser MiniAdaParser =  new MiniAda_Parser();
+        SSPA_Parser MiniAdaParser =  new SSPA_Parser();
         void ParseIncomeBuffer_TCPIP()
         {
             try
@@ -14317,38 +14510,9 @@ namespace SocketServer
             SendDataToSystem();
         }
 
-        private void button47_Click(object sender, EventArgs e)
-        {
-            if (textBox_LogLevel.BackColor == Color.LightGreen)
-            {
-                textBox_Preamble.Text = FRAME_HEADER;
-                textBox_Opcode.Text = "06 00";
-                textBox_data.Text = "0" + textBox_LogLevel.Text;
-
-                SendDataToSystem();
-            }
-            else
-            {
-                SystemLogger.LogMessage(Color.Orange, Color.White, "Log level didn't set in the textbox near the button", New_Line = true, Show_Time = true);
-            }
-        }
-
-        private void textBox_LogLevel_TextChanged(object sender, EventArgs e)
-        {
-
-            int LogLevel = 0;
-            Int32.TryParse(textBox_LogLevel.Text, out LogLevel);
 
 
-            if (LogLevel >=0 && LogLevel <=7 && LogLevel >= 0)
-            {
-                textBox_LogLevel.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                textBox_LogLevel.BackColor = Color.Red;
-            }
-        }
+
 
         private void button48_Click(object sender, EventArgs e)
         {
@@ -14377,18 +14541,7 @@ namespace SocketServer
             SendDataToSystem();
         }
 
-        private void button51_Click(object sender, EventArgs e)
-        {
-            textBox_Preamble.Text = FRAME_HEADER;
-            textBox_Opcode.Text = "11 00";
 
-            byte[] ba = Encoding.Default.GetBytes(textBox_SystemIdentify.Text);
-            string hexString = BitConverter.ToString(ba).Replace("-", string.Empty);
-
-            textBox_data.Text = hexString;
-
-            SendDataToSystem();
-        }
 
         private void button52_Click(object sender, EventArgs e)
         {
@@ -14412,18 +14565,6 @@ namespace SocketServer
             System.GC.Collect();
         }
 
-        private void button54_Click(object sender, EventArgs e)
-        {
-            textBox_Preamble.Text = FRAME_HEADER;
-            textBox_Opcode.Text = "13 00";
-
-            byte[] ba = Encoding.Default.GetBytes(textBox_SetCoreCardInformation.Text);
-            string hexString = BitConverter.ToString(ba).Replace("-", string.Empty);
-
-            textBox_data.Text = hexString;
-
-            SendDataToSystem();
-        }
 
         private void button56_Click(object sender, EventArgs e)
         {
@@ -14434,18 +14575,6 @@ namespace SocketServer
             SendDataToSystem();
         }
 
-        private void button55_Click(object sender, EventArgs e)
-        {
-            textBox_Preamble.Text = FRAME_HEADER;
-            textBox_Opcode.Text = "15 00";
-
-            byte[] ba = Encoding.Default.GetBytes(textBox_SetRFCardInformation.Text);
-            string hexString = BitConverter.ToString(ba).Replace("-", string.Empty);
-
-            textBox_data.Text = hexString;
-
-            SendDataToSystem();
-        }
 
         private void button58_Click(object sender, EventArgs e)
         {
@@ -14456,18 +14585,7 @@ namespace SocketServer
             SendDataToSystem();
         }
 
-        private void button57_Click(object sender, EventArgs e)
-        {
-            textBox_Preamble.Text = FRAME_HEADER;
-            textBox_Opcode.Text = "17 00";
 
-            byte[] ba = Encoding.Default.GetBytes(textBox_SetPSUCard.Text);
-            string hexString = BitConverter.ToString(ba).Replace("-", string.Empty);
-
-            textBox_data.Text = hexString;
-
-            SendDataToSystem();
-        }
 
         private void button59_Click(object sender, EventArgs e)
         {

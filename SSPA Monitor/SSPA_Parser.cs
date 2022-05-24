@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Monitor
 {
-    class MiniAda_Parser
+    class SSPA_Parser
     {
         public  string ConvertHex(String hexString)
         {
@@ -369,7 +369,14 @@ namespace Monitor
                 "Version day [{2}]\n Version month [{3}]\n Version year [{4}]", 
                 UnitMajorVersion, UnitMinorVersion, VersionDay, VersionMonth, VersionYear);
         }
-         string GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
+
+        string GetSimulatorID(KratosProtocolFrame i_Parsedframe)
+        {
+
+            return string.Format("\n Simulator ID [0x{0}]\n ", i_Parsedframe.Data);
+
+        }
+        string GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
         {
         //    ICD major version – 	1 byte
         //ICD minor version – 	1 byte
@@ -406,7 +413,7 @@ namespace Monitor
                 return "frame received as null";
             }
             int intValue = int.Parse(i_Parsedframe.Preamble, System.Globalization.NumberStyles.HexNumber);
-            if (intValue != 0x5300)
+            if (intValue != 0x23)
             {
                 ret = UnHandaledPreample(i_Parsedframe);
             }
@@ -414,235 +421,241 @@ namespace Monitor
             {
                 switch(i_Parsedframe.Opcode)
                 {
-                    case "0100":
-                        ret = GetSoftwareVertion(i_Parsedframe);
+
+                    case "80":
+                        ret = GetSimulatorID(i_Parsedframe);
+
+                        break;
+
+                    //case "0100":
+                    //    ret = GetSoftwareVertion(i_Parsedframe);
                         
-                        break;
+                    //    break;
 
-                    case "0200":
-                        ret = GetFirmwareVertion(i_Parsedframe);
+                    //case "0200":
+                    //    ret = GetFirmwareVertion(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "0400":
-                        ret = GetSerialNumber(i_Parsedframe);
+                    //case "0400":
+                    //    ret = GetSerialNumber(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "0600":
-                        ret = SetLogLevel(i_Parsedframe);
+                    //case "0600":
+                    //    ret = SetLogLevel(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "0700":
-                        ret = IsSystemBusy(i_Parsedframe);
+                    //case "0700":
+                    //    ret = IsSystemBusy(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "0800":
-                        ret = GetSystemType(i_Parsedframe);
+                    //case "0800":
+                    //    ret = GetSystemType(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1000":
-                        ret = GetIdentityInformation(i_Parsedframe);
+                    //case "1000":
+                    //    ret = GetIdentityInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1100":
-                        ret = SetIdentityInformation(i_Parsedframe);
+                    //case "1100":
+                    //    ret = SetIdentityInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1200":
-                        ret = GetCoreCardInformation(i_Parsedframe);
+                    //case "1200":
+                    //    ret = GetCoreCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1300":
-                        ret = SetCoreCardInformation(i_Parsedframe);
+                    //case "1300":
+                    //    ret = SetCoreCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1400":
-                        ret = GetRFCardInformation(i_Parsedframe);
+                    //case "1400":
+                    //    ret = GetRFCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1500":
-                        ret = SetRFCardInformation(i_Parsedframe);
+                    //case "1500":
+                    //    ret = SetRFCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1600":
-                        ret = GetPSUCardInformation(i_Parsedframe);
+                    //case "1600":
+                    //    ret = GetPSUCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1700":
-                        ret = SetPSUCardInformation(i_Parsedframe);
+                    //case "1700":
+                    //    ret = SetPSUCardInformation(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1E00":
-                        ret = SetSynthesizerL1(i_Parsedframe);
+                    //case "1E00":
+                    //    ret = SetSynthesizerL1(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "1F00":
-                        ret = SetSynthesizerL2(i_Parsedframe);
+                    //case "1F00":
+                    //    ret = SetSynthesizerL2(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2000":
-                        ret = SetTxAD936X(i_Parsedframe);
+                    //case "2000":
+                    //    ret = SetTxAD936X(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2100":
-                        ret = GetTxAD936X(i_Parsedframe);
+                    //case "2100":
+                    //    ret = GetTxAD936X(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2600":
-                        ret = DoSync(i_Parsedframe);
+                    //case "2600":
+                    //    ret = DoSync(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2800":
-                        ret = SetSytemState(i_Parsedframe);
+                    //case "2800":
+                    //    ret = SetSytemState(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2900":
-                        ret = GetSytemState(i_Parsedframe);
+                    //case "2900":
+                    //    ret = GetSytemState(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "3000":
-                        ret = StoreDataInFlash(i_Parsedframe);
+                    //case "3000":
+                    //    ret = StoreDataInFlash(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "3100":
-                        ret = LoadDataInFlash(i_Parsedframe);
+                    //case "3100":
+                    //    ret = LoadDataInFlash(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "3200":
-                        ret = EraseSectorintFlash(i_Parsedframe);
+                    //case "3200":
+                    //    ret = EraseSectorintFlash(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5600":
-                        ret = SetRXChannelGain(i_Parsedframe);
+                    //case "5600":
+                    //    ret = SetRXChannelGain(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5700":
-                        ret = GetRXChannelGain(i_Parsedframe);
+                    //case "5700":
+                    //    ret = GetRXChannelGain(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5800":
-                        ret = SetDCA(i_Parsedframe);
+                    //case "5800":
+                    //    ret = SetDCA(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5900":
-                        ret = GetDCA(i_Parsedframe);
+                    //case "5900":
+                    //    ret = GetDCA(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5C00":
-                        ret = RxGetRFPLLlockDetect(i_Parsedframe);
+                    //case "5C00":
+                    //    ret = RxGetRFPLLlockDetect(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "5D00":
-                        ret = TxGetRFPLLlockDetect(i_Parsedframe);
+                    //case "5D00":
+                    //    ret = TxGetRFPLLlockDetect(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2A00":
-                        ret = SetOutputPower(i_Parsedframe);
+                    //case "2A00":
+                    //    ret = SetOutputPower(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2B00":
-                        ret = GetOutputPower(i_Parsedframe);
+                    //case "2B00":
+                    //    ret = GetOutputPower(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2E00":
-                        ret = SetTXCO_ON_OFF(i_Parsedframe);
+                    //case "2E00":
+                    //    ret = SetTXCO_ON_OFF(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "2F00":
-                        ret = SetTXCO_ON_OFF(i_Parsedframe);
+                    //case "2F00":
+                    //    ret = SetTXCO_ON_OFF(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7000":
-                        ret = Read_FPGA_Data(i_Parsedframe);
+                    //case "7000":
+                    //    ret = Read_FPGA_Data(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7100":
-                        ret = Write_FPGA_Data(i_Parsedframe);
+                    //case "7100":
+                    //    ret = Write_FPGA_Data(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7400":
-                        ret = SetGPIODirection(i_Parsedframe);
+                    //case "7400":
+                    //    ret = SetGPIODirection(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7500":
-                        ret = GetGPIODirection(i_Parsedframe);
+                    //case "7500":
+                    //    ret = GetGPIODirection(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7600":
-                        ret = SetGPIOValue(i_Parsedframe);
+                    //case "7600":
+                    //    ret = SetGPIOValue(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "7700":
-                        ret = GetGPIOValue(i_Parsedframe);
+                    //case "7700":
+                    //    ret = GetGPIOValue(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "8000":
-                        ret = RecordIQData(i_Parsedframe);
+                    //case "8000":
+                    //    ret = RecordIQData(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "8100":
-                        ret = RecordIQDaraSelectSource(i_Parsedframe);
+                    //case "8100":
+                    //    ret = RecordIQDaraSelectSource(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "8200":
-                        ret = PlayIQData(i_Parsedframe);
+                    //case "8200":
+                    //    ret = PlayIQData(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "8400":
-                        ret = RetriveIQData(i_Parsedframe);
+                    //case "8400":
+                    //    ret = RetriveIQData(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "8700":
-                        ret = SetRxChannelStateCal(i_Parsedframe);
+                    //case "8700":
+                    //    ret = SetRxChannelStateCal(i_Parsedframe);
 
-                        break;
+                    //    break;
 
-                    case "D000":
-                        ret = GetUbloxData(i_Parsedframe);
+                    //case "D000":
+                    //    ret = GetUbloxData(i_Parsedframe);
 
-                        break;
+                    //    break;
 
                     default:
                         ret = UnHandledOpcode(i_Parsedframe);
