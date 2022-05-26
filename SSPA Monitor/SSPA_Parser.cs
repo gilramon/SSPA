@@ -352,7 +352,27 @@ namespace Monitor
 
             return String.Format("\n Serial Number :[{0}] hex:[{1}]\n", SerialNumber, i_Parsedframe.Data);
         }
-         string GetFirmwareVertion(KratosProtocolFrame i_Parsedframe)
+
+        
+
+        string GetHardwareVertion(KratosProtocolFrame i_Parsedframe)
+        {
+            //    Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
+
+            int UnitMajorVersion = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            return String.Format("\nHardware version:\n Unit major version [{0}]\n  " +
+                "Version day [{1}]\n Version month [{2}]\n Version year [{3}]",
+                UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
+        }
+        string GetFirmwareVertion(KratosProtocolFrame i_Parsedframe)
         {
         //    Unit major version – 	1 byte
         //Unit minor version – 	1 byte
@@ -361,13 +381,13 @@ namespace Monitor
         //Version year –		2 bytes
 
             int UnitMajorVersion = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
-            int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
-            int VersionDay = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
-            int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
-            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(10, 2) + i_Parsedframe.Data.Substring(8, 2), System.Globalization.NumberStyles.HexNumber);  //Gil: because it is little endian so I need to reverse the bytes
-            return String.Format("\n Unit major version [{0}]\n Unit minor version [{1}]\n " +
-                "Version day [{2}]\n Version month [{3}]\n Version year [{4}]", 
-                UnitMajorVersion, UnitMinorVersion, VersionDay, VersionMonth, VersionYear);
+        //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);  
+            return String.Format("\n Unit major version [{0}]\n  " +
+                "Version day [{1}]\n Version month [{2}]\n Version year [{3}]", 
+                UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
         }
 
         string GetSimulatorID(KratosProtocolFrame i_Parsedframe)
@@ -427,20 +447,25 @@ namespace Monitor
 
                         break;
 
-                    //case "0100":
-                    //    ret = GetSoftwareVertion(i_Parsedframe);
-                        
-                    //    break;
+                    case "81":
+                        ret = GetSoftwareVertion(i_Parsedframe);
 
-                    //case "0200":
-                    //    ret = GetFirmwareVertion(i_Parsedframe);
+                        break;
 
-                    //    break;
+                    case "82":
+                        ret = GetFirmwareVertion(i_Parsedframe);
 
-                    //case "0400":
-                    //    ret = GetSerialNumber(i_Parsedframe);
+                        break;
 
-                    //    break;
+                    case "83":
+                        ret = GetHardwareVertion(i_Parsedframe);
+
+                        break;
+
+                    case "85":
+                        ret = GetSerialNumber(i_Parsedframe);
+
+                        break;
 
                     //case "0600":
                     //    ret = SetLogLevel(i_Parsedframe);
