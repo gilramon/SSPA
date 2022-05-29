@@ -363,7 +363,7 @@ namespace Monitor
             return String.Format("\n  ACK recieved, Opcode :[{0}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
         }
 
-        string ReturnACK(KratosProtocolFrame i_Parsedframe)
+        string ACK_Received(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n  ACK recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
         }
@@ -466,6 +466,41 @@ namespace Monitor
                 switch(i_Parsedframe.Opcode)
                 {
 
+                    case "26":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "27":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "33":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "35":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "36":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "38":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "39":
+                        ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
                     case "80":
                         ret = GetSimulatorID(i_Parsedframe);
 
@@ -498,67 +533,67 @@ namespace Monitor
                         break;
 
                     case "91":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "92":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "93":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "94":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "95":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "96":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "97":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "98":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "99":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9A":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9B":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9C":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9D":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
@@ -568,17 +603,17 @@ namespace Monitor
                         break;
 
                     case "9F":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "A0":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "A1":
-                        ret = ReturnACK(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
