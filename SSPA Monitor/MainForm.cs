@@ -714,8 +714,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea47 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend47 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -3752,6 +3752,7 @@ namespace SocketServer
             this.textBox22.Size = new System.Drawing.Size(130, 26);
             this.textBox22.TabIndex = 77;
             this.textBox22.Text = "00";
+            this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
             // button122
             // 
@@ -3772,6 +3773,7 @@ namespace SocketServer
             this.textBox21.TabIndex = 75;
             this.textBox21.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
+            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // button121
             // 
@@ -3791,6 +3793,7 @@ namespace SocketServer
             this.textBox20.Size = new System.Drawing.Size(130, 26);
             this.textBox20.TabIndex = 73;
             this.textBox20.Text = "0000";
+            this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
             // button120
             // 
@@ -3811,6 +3814,7 @@ namespace SocketServer
             this.textBox19.TabIndex = 71;
             this.textBox19.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
+            this.textBox19.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             // 
             // button119
             // 
@@ -3830,6 +3834,7 @@ namespace SocketServer
             this.textBox_ControlCal.Size = new System.Drawing.Size(130, 26);
             this.textBox_ControlCal.TabIndex = 69;
             this.textBox_ControlCal.Text = "00";
+            this.textBox_ControlCal.TextChanged += new System.EventHandler(this.textBox_ControlCal_TextChanged);
             // 
             // button118
             // 
@@ -3849,6 +3854,7 @@ namespace SocketServer
             this.textBox17.Size = new System.Drawing.Size(130, 26);
             this.textBox17.TabIndex = 67;
             this.textBox17.Text = "00";
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox_SetSystemMode
             // 
@@ -4277,17 +4283,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea40.AxisX.Title = "Freq";
-            chartArea40.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea40.AxisY.Title = "Power [dBm]";
-            chartArea40.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea40.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea40);
-            legend40.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend40.IsTextAutoFit = false;
-            legend40.Name = "Legend1";
-            legend40.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend40);
+            chartArea47.AxisX.Title = "Freq";
+            chartArea47.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea47.AxisY.Title = "Power [dBm]";
+            chartArea47.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea47.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea47);
+            legend47.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend47.IsTextAutoFit = false;
+            legend47.Name = "Legend1";
+            legend47.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend47);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -7194,7 +7200,7 @@ namespace SocketServer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "MainForm";
-            this.Text = "Monitor";
+            this.Text = "3038 - WB PAA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed_1);
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -8819,7 +8825,7 @@ namespace SocketServer
                 //    version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 //}
 
-                this.Text = " [ " + ", Version: " + version + ", Compiled: " + RetrieveLinkerTimestamp().ToString() + " ]";
+                this.Text = this.Text + " [ " + ", Version: " + version + ", Compiled: " + RetrieveLinkerTimestamp().ToString() + " ]";
 
 
 
@@ -14713,16 +14719,17 @@ byte – band type: 0x00 - L1, 0x01 - L2
 
         private void textBox_SetSyestemState_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetADCMode.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null && buffer.Length == 1)
+            if (buffer != null)
             {
-                textBox_SetADCMode.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetADCMode.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
@@ -14791,16 +14798,17 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
 
         private void textBox_SetTCXOTrim_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null && buffer.Length <= 4)
+            if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
@@ -15375,16 +15383,17 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void textBox_WriteQSPIFlashData_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetVVAAtt.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetVVAAtt.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetVVAAtt.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
@@ -15408,34 +15417,33 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
 
         private void textBox_ReadQSPIFlashData_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetDCAWithBusMode.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null )
+            if (buffer != null)
             {
-                if (buffer.Length == 8)
-                {
-                    textBox_SetDCAWithBusMode.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_SetDCAWithBusMode.BackColor = Color.Red;
-                }
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox_Erase4KsectorQSPI_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetSystemMode.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null & buffer.Length == 4)
+            if (buffer != null)
             {
-                textBox_SetSystemMode.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetSystemMode.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
@@ -17558,226 +17566,337 @@ Note: eStatus enum 
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox12_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox14_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
             }
         }
 
         private void textBox16_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_SetPSUOutput.Text, @"\s+", "");
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
             if (buffer != null)
             {
-                textBox_SetPSUOutput.BackColor = Color.LightGreen;
+                txtbox.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SetPSUOutput.BackColor = Color.Red;
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_ControlCal_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
             }
         }
 

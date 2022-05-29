@@ -353,15 +353,70 @@ namespace Monitor
             return String.Format("\n Serial Number :[{0}] hex:[{1}]\n", SerialNumber, i_Parsedframe.Data);
         }
 
-        string TXINHIBIT(KratosProtocolFrame i_Parsedframe)
+        string GetSystemStatus(KratosProtocolFrame i_Parsedframe)
         {
-            //2 bytes Serial number:
-            //2 bytes - Serial number, range: 0 – 65535
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
 
-            //int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            for (int i=0;i< DataLength - 2; i=i+2)
+            {
+                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+            }
 
-            return String.Format("\n  ACK recieved, Opcode :[{0}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+            return ret;
         }
+
+        string GetDiscreteStatusBusmode(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+            }
+
+            return ret;
+        }
+
+        string GetSystemTableIndexes(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+            }
+
+            return ret;
+        }
+
+        string ReadFromFlash(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+            }
+
+            return ret;
+        }
+
+        
+
+
+
+
+
+
+
 
         string ACK_Received(KratosProtocolFrame i_Parsedframe)
         {
@@ -466,6 +521,16 @@ namespace Monitor
                 switch(i_Parsedframe.Opcode)
                 {
 
+                    case "11":
+                        ret = GetSystemStatus(i_Parsedframe);
+
+                        break;
+
+                    case "25":
+                        ret = GetDiscreteStatusBusmode(i_Parsedframe);
+
+                        break;
+
                     case "26":
                         ret = ACK_Received(i_Parsedframe);
 
@@ -488,6 +553,16 @@ namespace Monitor
 
                     case "36":
                         ret = ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "37":
+                        ret = GetSystemTableIndexes(i_Parsedframe);
+
+                        break;
+
+                    case "70":
+                        ret = ReadFromFlash(i_Parsedframe);
 
                         break;
 
@@ -528,7 +603,7 @@ namespace Monitor
 
 
                     case "90":
-                        ret = TXINHIBIT(i_Parsedframe);
+                        ret = ACK_Received(i_Parsedframe);
 
                         break;
 
