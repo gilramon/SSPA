@@ -353,7 +353,31 @@ namespace Monitor
             return String.Format("\n Serial Number :[{0}] hex:[{1}]\n", SerialNumber, i_Parsedframe.Data);
         }
 
+        string TXINHIBIT(KratosProtocolFrame i_Parsedframe)
+        {
+            //2 bytes Serial number:
+            //2 bytes - Serial number, range: 0 – 65535
+
+            //int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+
+            return String.Format("\n  ACK recieved, Opcode :[{0}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+        }
+
+        string ReturnACK(KratosProtocolFrame i_Parsedframe)
+        {
+            return String.Format("\n  ACK recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+        }
+
+        string GetThermalSuperVisor(KratosProtocolFrame i_Parsedframe)
+        {
+            return String.Format("\n  ACK recieved OK, Opcode :[{0}], Thermal[{1}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+        }
+
         
+
+
+
+
 
         string GetHardwareVertion(KratosProtocolFrame i_Parsedframe)
         {
@@ -464,6 +488,97 @@ namespace Monitor
 
                     case "85":
                         ret = GetSerialNumber(i_Parsedframe);
+
+                        break;
+
+
+                    case "90":
+                        ret = TXINHIBIT(i_Parsedframe);
+
+                        break;
+
+                    case "91":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "92":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "93":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "94":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "95":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "96":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "97":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "98":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "99":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "9A":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "9B":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "9C":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "9D":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "9E":
+                        ret = GetThermalSuperVisor(i_Parsedframe);
+
+                        break;
+
+                    case "9F":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "A0":
+                        ret = ReturnACK(i_Parsedframe);
+
+                        break;
+
+                    case "A1":
+                        ret = ReturnACK(i_Parsedframe);
 
                         break;
 
