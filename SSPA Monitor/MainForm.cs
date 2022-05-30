@@ -60,7 +60,6 @@ namespace SocketServer
         bool Show_Time;
         private TabControl tabControl_Main;
         private TabPage tabPage_SerialPort;
-        private ToolTip toolTip1;
         private IContainer components;
         private GroupBox groupBox5;
         private CheckBox checkBox_S1Pause;
@@ -201,7 +200,6 @@ namespace SocketServer
         private GroupBox groupBox36;
         private TextBox textBox_SMSPhoneNumber;
         private GroupBox groupBox_PhoneNumber;
-        private ToolTip toolTip2;
         private CheckBox checkBox_EchoResponse;
         private GroupBox groupBox_FOTA;
         private Button button5;
@@ -217,7 +215,6 @@ namespace SocketServer
         private TextBox textBox_TotalFileLength;
         private Button button_StartFOTAProcess;
         private RichTextBox textBox_IDKey;
-        private SerialPort serialPort_SMS;
         private TextBox textBox_SerialPortRecognizePattern2;
         private TextBox textBox_SerialPortRecognizePattern3;
         private Button button_ReScanComPort;
@@ -592,6 +589,13 @@ namespace SocketServer
         private Label label72;
         private TextBox textBox58;
         private TabPage tabPage13;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
         static readonly string PREAMBLE = "23";
         //bool m_Exit = false;
 
@@ -717,8 +721,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1087,7 +1091,6 @@ namespace SocketServer
             this.maskedTextBox1_Subscriber1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox_SMSPhoneNumber = new System.Windows.Forms.TextBox();
             this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
             this.button_SendSelectedSMS = new System.Windows.Forms.Button();
@@ -1099,8 +1102,6 @@ namespace SocketServer
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.groupBox_PhoneNumber = new System.Windows.Forms.GroupBox();
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.serialPort_SMS = new System.IO.Ports.SerialPort(this.components);
             this.Label_SerialPortRx = new System.Windows.Forms.Label();
             this.label_SerialPortConnected = new System.Windows.Forms.Label();
             this.Label_SerialPortTx = new System.Windows.Forms.Label();
@@ -1260,6 +1261,13 @@ namespace SocketServer
             this.label74 = new System.Windows.Forms.Label();
             this.textBox60 = new System.Windows.Forms.TextBox();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1333,6 +1341,8 @@ namespace SocketServer
             this.groupBox45.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.groupBox47.SuspendLayout();
+            this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1362,7 +1372,6 @@ namespace SocketServer
             this.textBox_ServerOpen.Size = new System.Drawing.Size(89, 25);
             this.textBox_ServerOpen.TabIndex = 7;
             this.textBox_ServerOpen.Text = "Connected";
-            this.toolTip1.SetToolTip(this.textBox_ServerOpen, "Number of open connections");
             // 
             // textBox_ServerActive
             // 
@@ -1375,7 +1384,6 @@ namespace SocketServer
             this.textBox_ServerActive.Size = new System.Drawing.Size(60, 25);
             this.textBox_ServerActive.TabIndex = 6;
             this.textBox_ServerActive.Text = "Active";
-            this.toolTip1.SetToolTip(this.textBox_ServerActive, "Number of open connections");
             // 
             // txtPortNo
             // 
@@ -1394,7 +1402,6 @@ namespace SocketServer
             this.textBox_NumberOfOpenConnections.ReadOnly = true;
             this.textBox_NumberOfOpenConnections.Size = new System.Drawing.Size(25, 23);
             this.textBox_NumberOfOpenConnections.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.textBox_NumberOfOpenConnections, "Number of open connections");
             this.textBox_NumberOfOpenConnections.TextChanged += new System.EventHandler(this.TextBox_NumberOfOpenConnections_TextChanged);
             // 
             // ListenBox
@@ -1593,9 +1600,6 @@ namespace SocketServer
             this.textBox_Config4.Name = "textBox_Config4";
             this.textBox_Config4.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config4.TabIndex = 0;
-            this.toolTip2.SetToolTip(this.textBox_Config4, "Description:\r\nchange the password for the unit.\r\nValid Data:\r\nstring  Max 15");
-            this.toolTip1.SetToolTip(this.textBox_Config4, "Description:\r\nchange the password for the unit.\r\n\r\nValid Input Data:\r\nstring  Max" +
-        " 15\r\n\r\n\r\n");
             this.textBox_Config4.TextChanged += new System.EventHandler(this.TextBox_Config4_TextChanged);
             // 
             // textBox_Config6
@@ -1605,10 +1609,6 @@ namespace SocketServer
             this.textBox_Config6.Name = "textBox_Config6";
             this.textBox_Config6.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config6.TabIndex = 5;
-            this.toolTip2.SetToolTip(this.textBox_Config6, "Description:\r\nModem Port for IP2 For communicate with the Server\r\nValid data:\r\nVa" +
-        "lid Port 0-99999");
-            this.toolTip1.SetToolTip(this.textBox_Config6, "Description:\r\nModem Port for IP2 For communicate with the Server\r\nValid data:\r\nVa" +
-        "lid Port 0-99999\r\n\r\n");
             this.textBox_Config6.TextChanged += new System.EventHandler(this.TextBox_Config6_TextChanged);
             // 
             // textBox_Config8
@@ -1618,10 +1618,6 @@ namespace SocketServer
             this.textBox_Config8.Name = "textBox_Config8";
             this.textBox_Config8.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config8.TabIndex = 9;
-            this.toolTip2.SetToolTip(this.textBox_Config8, "Description:\r\nan option to set time interval of status message which will be sent" +
-        " to remote server. \r\nValid data:\r\nnumber\r\n");
-            this.toolTip1.SetToolTip(this.textBox_Config8, "Description:\r\nan option to set time interval of status message which will be sent" +
-        " to remote server. \r\nValid data:\r\nnumber\r\n");
             this.textBox_Config8.TextChanged += new System.EventHandler(this.TextBox_Config8_TextChanged);
             // 
             // textBox_Config9
@@ -1631,10 +1627,6 @@ namespace SocketServer
             this.textBox_Config9.Name = "textBox_Config9";
             this.textBox_Config9.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config9.TabIndex = 1;
-            this.toolTip2.SetToolTip(this.textBox_Config9, "Description:\r\nan option to set SIM card details according to cellular provider op" +
-        "erator. \r\nValid Data:\r\nstring");
-            this.toolTip1.SetToolTip(this.textBox_Config9, "Description:\r\nan option to set SIM card details according to cellular provider op" +
-        "erator. \r\nValid Data:\r\nstring");
             this.textBox_Config9.TextChanged += new System.EventHandler(this.TextBox_Config9_TextChanged);
             // 
             // textBox_Config10
@@ -1644,10 +1636,6 @@ namespace SocketServer
             this.textBox_Config10.Name = "textBox_Config10";
             this.textBox_Config10.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config10.TabIndex = 2;
-            this.toolTip2.SetToolTip(this.textBox_Config10, "Description:\r\nModem IP1 For communicate with the Server\r\nValid data:\r\nValid TCP/I" +
-        "P address\r\n\r\n\r\n");
-            this.toolTip1.SetToolTip(this.textBox_Config10, "Description:\r\nModem IP1 For communicate with the Server\r\nValid data:\r\nValid TCP/I" +
-        "P address\r\n\r\n");
             this.textBox_Config10.TextChanged += new System.EventHandler(this.TextBox_Config10_TextChanged);
             // 
             // textBox_Config11
@@ -1657,10 +1645,6 @@ namespace SocketServer
             this.textBox_Config11.Name = "textBox_Config11";
             this.textBox_Config11.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config11.TabIndex = 4;
-            this.toolTip2.SetToolTip(this.textBox_Config11, "Description:\r\nModem IP2 For communicate with the Server\r\nValid data:\r\nValid TCP/I" +
-        "P address");
-            this.toolTip1.SetToolTip(this.textBox_Config11, "Description:\r\nModem IP2 For communicate with the Server\r\nValid data:\r\nValid TCP/I" +
-        "P address\r\n");
             this.textBox_Config11.TextChanged += new System.EventHandler(this.TextBox_Config11_TextChanged);
             // 
             // textBox_Config12
@@ -1670,10 +1654,6 @@ namespace SocketServer
             this.textBox_Config12.Name = "textBox_Config12";
             this.textBox_Config12.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config12.TabIndex = 3;
-            this.toolTip2.SetToolTip(this.textBox_Config12, "Description:\r\nModem Port for IP1 For communicate with the Server\r\nValid data:\r\nVa" +
-        "lid Port 0-99999\r\n\r\n\r\n");
-            this.toolTip1.SetToolTip(this.textBox_Config12, "Description:\r\nModem Port for IP1 For communicate with the Server\r\nValid data:\r\nVa" +
-        "lid Port 0-99999\r\n\r\n");
             this.textBox_Config12.TextChanged += new System.EventHandler(this.TextBox_Config12_TextChanged);
             // 
             // textBox_Config20
@@ -1683,10 +1663,6 @@ namespace SocketServer
             this.textBox_Config20.Name = "textBox_Config20";
             this.textBox_Config20.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config20.TabIndex = 8;
-            this.toolTip2.SetToolTip(this.textBox_Config20, "Description:\r\nIn case of deviation from traffic lane to preconfigured degrees, un" +
-        "it will send position message. \r\nValid data:\r\n0-360\r\n");
-            this.toolTip1.SetToolTip(this.textBox_Config20, "Description:\r\nIn case of deviation from traffic lane to preconfigured degrees, un" +
-        "it will send position message. \r\nValid data:\r\n0-360");
             this.textBox_Config20.TextChanged += new System.EventHandler(this.TextBox_Config20_TextChanged);
             // 
             // textBox_Config21
@@ -1696,10 +1672,6 @@ namespace SocketServer
             this.textBox_Config21.Name = "textBox_Config21";
             this.textBox_Config21.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config21.TabIndex = 7;
-            this.toolTip2.SetToolTip(this.textBox_Config21, "Description:\r\nan option to send POS message every predefined distance value. \r\nVa" +
-        "lid data:\r\nnumber");
-            this.toolTip1.SetToolTip(this.textBox_Config21, "Description:\r\nan option to send POS message every predefined distance value. \r\nVa" +
-        "lid data:\r\nnumber");
             this.textBox_Config21.TextChanged += new System.EventHandler(this.TextBox_Config21_TextChanged);
             // 
             // textBox_Config22
@@ -1709,10 +1681,6 @@ namespace SocketServer
             this.textBox_Config22.Name = "textBox_Config22";
             this.textBox_Config22.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config22.TabIndex = 6;
-            this.toolTip2.SetToolTip(this.textBox_Config22, "Description:\r\nan option to set time interval of position message which will be se" +
-        "nt to remote server. \r\nValid data:\r\nnumber");
-            this.toolTip1.SetToolTip(this.textBox_Config22, "Description:\r\nan option to set time interval of position message which will be se" +
-        "nt to remote server. \r\nValid data:\r\nnumber\r\n");
             this.textBox_Config22.TextChanged += new System.EventHandler(this.TextBox_Config22_TextChanged);
             // 
             // textBox_Config36
@@ -1722,10 +1690,6 @@ namespace SocketServer
             this.textBox_Config36.Name = "textBox_Config36";
             this.textBox_Config36.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config36.TabIndex = 105;
-            this.toolTip2.SetToolTip(this.textBox_Config36, "Description:\r\nAPN password.\r\nan option to set SIM card details according to cellu" +
-        "lar provider operator. \r\nValid Data:\r\nstring");
-            this.toolTip1.SetToolTip(this.textBox_Config36, "Description:\r\nAPN password.\r\nan option to set SIM card details according to cellu" +
-        "lar provider operator. \r\nValid Data:\r\nstring");
             this.textBox_Config36.TextChanged += new System.EventHandler(this.TextBox_Config36_TextChanged);
             // 
             // textBox_Config35
@@ -1735,10 +1699,6 @@ namespace SocketServer
             this.textBox_Config35.Name = "textBox_Config35";
             this.textBox_Config35.Size = new System.Drawing.Size(119, 27);
             this.textBox_Config35.TabIndex = 104;
-            this.toolTip2.SetToolTip(this.textBox_Config35, "Description:\r\nAPN username.\r\nan option to set SIM card details according to cellu" +
-        "lar provider operator. \r\nValid Data:\r\nstring");
-            this.toolTip1.SetToolTip(this.textBox_Config35, "Description:\r\nAPN username.\r\nan option to set SIM card details according to cellu" +
-        "lar provider operator. \r\nValid Data:\r\nstring\r\n");
             this.textBox_Config35.TextChanged += new System.EventHandler(this.TextBox_Config35_TextChanged);
             // 
             // tabPage11
@@ -1909,7 +1869,6 @@ namespace SocketServer
             this.checkBox_SendHexdata.Size = new System.Drawing.Size(115, 22);
             this.checkBox_SendHexdata.TabIndex = 5;
             this.checkBox_SendHexdata.Text = "Send Hex data";
-            this.toolTip1.SetToolTip(this.checkBox_SendHexdata, "Example:\r\n11 22 33 44 is 0x11 0x22 0x33 0x44\r\n");
             this.checkBox_SendHexdata.UseVisualStyleBackColor = true;
             this.checkBox_SendHexdata.CheckedChanged += new System.EventHandler(this.CheckBox_SendHexdata_CheckedChanged);
             // 
@@ -1923,7 +1882,6 @@ namespace SocketServer
             this.textBox_SendSerialPort.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_SendSerialPort.Size = new System.Drawing.Size(611, 31);
             this.textBox_SendSerialPort.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.textBox_SendSerialPort, "Press help");
             this.textBox_SendSerialPort.TextChanged += new System.EventHandler(this.TextBox_SendSerialPort_TextChanged_1);
             this.textBox_SendSerialPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_SendSerialPort_KeyDown);
             this.textBox_SendSerialPort.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TextBox_SendSerialPort_PreviewKeyDown);
@@ -1936,7 +1894,6 @@ namespace SocketServer
             this.checkBox_DeleteCommand.Size = new System.Drawing.Size(135, 22);
             this.checkBox_DeleteCommand.TabIndex = 4;
             this.checkBox_DeleteCommand.Text = "Delete after Send";
-            this.toolTip1.SetToolTip(this.checkBox_DeleteCommand, "Delete after Send");
             this.checkBox_DeleteCommand.UseVisualStyleBackColor = true;
             // 
             // button_SendSerialPort
@@ -2214,8 +2171,6 @@ namespace SocketServer
             this.button_TimerLog.Size = new System.Drawing.Size(75, 37);
             this.button_TimerLog.TabIndex = 106;
             this.button_TimerLog.Text = "Log ->";
-            this.toolTip1.SetToolTip(this.button_TimerLog, "Print the elapsed time to the terminal ");
-            this.toolTip2.SetToolTip(this.button_TimerLog, "Print the elapsed time to the terminal");
             this.button_TimerLog.UseVisualStyleBackColor = true;
             this.button_TimerLog.Click += new System.EventHandler(this.Button_TimerLog_Click);
             // 
@@ -2270,8 +2225,6 @@ namespace SocketServer
             this.textBox_SerialPortRecognizePattern3.Name = "textBox_SerialPortRecognizePattern3";
             this.textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(117, 27);
             this.textBox_SerialPortRecognizePattern3.TabIndex = 75;
-            this.toolTip2.SetToolTip(this.textBox_SerialPortRecognizePattern3, "Recognize Pattern by string");
-            this.toolTip1.SetToolTip(this.textBox_SerialPortRecognizePattern3, "Recognize Pattern by string");
             // 
             // textBox_SerialPortRecognizePattern2
             // 
@@ -2279,8 +2232,6 @@ namespace SocketServer
             this.textBox_SerialPortRecognizePattern2.Name = "textBox_SerialPortRecognizePattern2";
             this.textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(117, 27);
             this.textBox_SerialPortRecognizePattern2.TabIndex = 74;
-            this.toolTip2.SetToolTip(this.textBox_SerialPortRecognizePattern2, "Recognize Pattern by string");
-            this.toolTip1.SetToolTip(this.textBox_SerialPortRecognizePattern2, "Recognize Pattern by string");
             // 
             // textBox_SerialPortRecognizePattern
             // 
@@ -2288,8 +2239,6 @@ namespace SocketServer
             this.textBox_SerialPortRecognizePattern.Name = "textBox_SerialPortRecognizePattern";
             this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(117, 27);
             this.textBox_SerialPortRecognizePattern.TabIndex = 73;
-            this.toolTip2.SetToolTip(this.textBox_SerialPortRecognizePattern, "Recognize Pattern by string");
-            this.toolTip1.SetToolTip(this.textBox_SerialPortRecognizePattern, "Recognize Pattern by string");
             // 
             // checkBox_S1RecordLog
             // 
@@ -2414,8 +2363,6 @@ namespace SocketServer
             this.textBox_TotalFileLength.ReadOnly = true;
             this.textBox_TotalFileLength.Size = new System.Drawing.Size(57, 26);
             this.textBox_TotalFileLength.TabIndex = 20;
-            this.toolTip2.SetToolTip(this.textBox_TotalFileLength, "Total file length in bytes");
-            this.toolTip1.SetToolTip(this.textBox_TotalFileLength, "Total file length in bytes");
             // 
             // textBox_MaximumNumberReceivedRequest
             // 
@@ -2454,8 +2401,6 @@ namespace SocketServer
             this.textBox_TotalFrames1280Bytes.ReadOnly = true;
             this.textBox_TotalFrames1280Bytes.Size = new System.Drawing.Size(57, 26);
             this.textBox_TotalFrames1280Bytes.TabIndex = 14;
-            this.toolTip2.SetToolTip(this.textBox_TotalFrames1280Bytes, "Total Frames 1280 Bytes");
-            this.toolTip1.SetToolTip(this.textBox_TotalFrames1280Bytes, "Total Frames 1280 Bytes");
             this.textBox_TotalFrames1280Bytes.TextChanged += new System.EventHandler(this.TextBox_TotalFrames256Bytes_TextChanged);
             // 
             // textBox_FOTA
@@ -2508,7 +2453,6 @@ namespace SocketServer
             this.textBox_CurrentTimeOut.ReadOnly = true;
             this.textBox_CurrentTimeOut.Size = new System.Drawing.Size(62, 26);
             this.textBox_CurrentTimeOut.TabIndex = 10;
-            this.toolTip1.SetToolTip(this.textBox_CurrentTimeOut, "Current Timed Out");
             // 
             // button_SetTimedOut
             // 
@@ -2517,7 +2461,6 @@ namespace SocketServer
             this.button_SetTimedOut.Size = new System.Drawing.Size(75, 23);
             this.button_SetTimedOut.TabIndex = 9;
             this.button_SetTimedOut.Text = "Set";
-            this.toolTip1.SetToolTip(this.button_SetTimedOut, "Set Timed Out");
             this.button_SetTimedOut.UseVisualStyleBackColor = true;
             this.button_SetTimedOut.Click += new System.EventHandler(this.Button_SetTimedOut_Click);
             // 
@@ -4058,7 +4001,6 @@ namespace SocketServer
             this.button59.Size = new System.Drawing.Size(244, 23);
             this.button59.TabIndex = 29;
             this.button59.Text = "Get ID";
-            this.toolTip1.SetToolTip(this.button59, "rafrefaefaefaef");
             this.button59.UseVisualStyleBackColor = true;
             this.button59.Click += new System.EventHandler(this.button59_Click);
             this.button59.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button59_MouseClick);
@@ -4285,17 +4227,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea14.AxisX.Title = "Freq";
-            chartArea14.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea14.AxisY.Title = "Power [dBm]";
-            chartArea14.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea14.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea14);
-            legend14.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend14.IsTextAutoFit = false;
-            legend14.Name = "Legend1";
-            legend14.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend14);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -4431,7 +4373,6 @@ namespace SocketServer
             this.textBox_ModemSocket.Name = "textBox_ModemSocket";
             this.textBox_ModemSocket.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemSocket.TabIndex = 80;
-            this.toolTip1.SetToolTip(this.textBox_ModemSocket, "Modem Socket");
             // 
             // textBox_ModemRetries
             // 
@@ -4439,7 +4380,6 @@ namespace SocketServer
             this.textBox_ModemRetries.Name = "textBox_ModemRetries";
             this.textBox_ModemRetries.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemRetries.TabIndex = 79;
-            this.toolTip1.SetToolTip(this.textBox_ModemRetries, "Modem retries");
             // 
             // textBox_ModemTimeOut
             // 
@@ -4447,7 +4387,6 @@ namespace SocketServer
             this.textBox_ModemTimeOut.Name = "textBox_ModemTimeOut";
             this.textBox_ModemTimeOut.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemTimeOut.TabIndex = 78;
-            this.toolTip1.SetToolTip(this.textBox_ModemTimeOut, "Modem Time Out");
             // 
             // button25
             // 
@@ -4466,7 +4405,6 @@ namespace SocketServer
             this.textBox_ModemPrimeryPort.Name = "textBox_ModemPrimeryPort";
             this.textBox_ModemPrimeryPort.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemPrimeryPort.TabIndex = 37;
-            this.toolTip1.SetToolTip(this.textBox_ModemPrimeryPort, "Primery Port");
             // 
             // textBox_ModemPrimeryHost
             // 
@@ -4474,7 +4412,6 @@ namespace SocketServer
             this.textBox_ModemPrimeryHost.Name = "textBox_ModemPrimeryHost";
             this.textBox_ModemPrimeryHost.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemPrimeryHost.TabIndex = 36;
-            this.toolTip1.SetToolTip(this.textBox_ModemPrimeryHost, "Primery Host");
             // 
             // groupBox30
             // 
@@ -4497,7 +4434,6 @@ namespace SocketServer
             this.textBox_ForginPassword.Name = "textBox_ForginPassword";
             this.textBox_ForginPassword.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginPassword.TabIndex = 35;
-            this.toolTip1.SetToolTip(this.textBox_ForginPassword, "Password");
             // 
             // button27
             // 
@@ -4516,7 +4452,6 @@ namespace SocketServer
             this.textBox_ForginAcessPoint.Name = "textBox_ForginAcessPoint";
             this.textBox_ForginAcessPoint.Size = new System.Drawing.Size(147, 22);
             this.textBox_ForginAcessPoint.TabIndex = 33;
-            this.toolTip1.SetToolTip(this.textBox_ForginAcessPoint, "Aceess point");
             // 
             // textBox_ForginSecondaryDNS
             // 
@@ -4524,7 +4459,6 @@ namespace SocketServer
             this.textBox_ForginSecondaryDNS.Name = "textBox_ForginSecondaryDNS";
             this.textBox_ForginSecondaryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginSecondaryDNS.TabIndex = 37;
-            this.toolTip1.SetToolTip(this.textBox_ForginSecondaryDNS, "Secondary DNS");
             // 
             // textBox_ForginUserName
             // 
@@ -4532,7 +4466,6 @@ namespace SocketServer
             this.textBox_ForginUserName.Name = "textBox_ForginUserName";
             this.textBox_ForginUserName.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginUserName.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.textBox_ForginUserName, "User Name");
             // 
             // textBox_ForginPrimeryDNS
             // 
@@ -4540,7 +4473,6 @@ namespace SocketServer
             this.textBox_ForginPrimeryDNS.Name = "textBox_ForginPrimeryDNS";
             this.textBox_ForginPrimeryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginPrimeryDNS.TabIndex = 36;
-            this.toolTip1.SetToolTip(this.textBox_ForginPrimeryDNS, "Primery DNS");
             // 
             // groupBox29
             // 
@@ -4618,7 +4550,6 @@ namespace SocketServer
             this.groupBox27.TabIndex = 72;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Sleep Status Duration";
-            this.toolTip1.SetToolTip(this.groupBox27, "Sleep Status Duration");
             // 
             // maskedTextBox1
             // 
@@ -4664,7 +4595,6 @@ namespace SocketServer
             this.button23.Size = new System.Drawing.Size(111, 26);
             this.button23.TabIndex = 70;
             this.button23.Text = "Set Duration";
-            this.toolTip1.SetToolTip(this.button23, "Normal Status Duration");
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.Button23_Click);
             // 
@@ -5140,7 +5070,6 @@ namespace SocketServer
             this.groupBox8.TabIndex = 54;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Vehicle Battery threshold ";
-            this.toolTip1.SetToolTip(this.groupBox8, "Set Vehicle Battery threshold ");
             // 
             // comboBox_BatThreshold
             // 
@@ -5164,7 +5093,6 @@ namespace SocketServer
             this.comboBox_BatThreshold.Name = "comboBox_BatThreshold";
             this.comboBox_BatThreshold.Size = new System.Drawing.Size(49, 21);
             this.comboBox_BatThreshold.TabIndex = 39;
-            this.toolTip1.SetToolTip(this.comboBox_BatThreshold, "Battery");
             // 
             // button9
             // 
@@ -5334,7 +5262,6 @@ namespace SocketServer
             this.textBox_NewPassword.Name = "textBox_NewPassword";
             this.textBox_NewPassword.Size = new System.Drawing.Size(120, 22);
             this.textBox_NewPassword.TabIndex = 27;
-            this.toolTip1.SetToolTip(this.textBox_NewPassword, "New Password");
             // 
             // groupBox14
             // 
@@ -5358,7 +5285,6 @@ namespace SocketServer
             this.comboBox_SMSControl.Name = "comboBox_SMSControl";
             this.comboBox_SMSControl.Size = new System.Drawing.Size(101, 21);
             this.comboBox_SMSControl.TabIndex = 25;
-            this.toolTip1.SetToolTip(this.comboBox_SMSControl, "SMS Cntl");
             // 
             // button_SMSControl
             // 
@@ -5403,7 +5329,6 @@ namespace SocketServer
             this.comboBox_InputIndex.Name = "comboBox_InputIndex";
             this.comboBox_InputIndex.Size = new System.Drawing.Size(37, 21);
             this.comboBox_InputIndex.TabIndex = 20;
-            this.toolTip1.SetToolTip(this.comboBox_InputIndex, "Input index");
             // 
             // button_SetFreeText
             // 
@@ -5474,8 +5399,6 @@ namespace SocketServer
             this.textBox_SMSPhoneNumber.Name = "textBox_SMSPhoneNumber";
             this.textBox_SMSPhoneNumber.Size = new System.Drawing.Size(156, 26);
             this.textBox_SMSPhoneNumber.TabIndex = 10;
-            this.toolTip2.SetToolTip(this.textBox_SMSPhoneNumber, "Phone number throgh SMS");
-            this.toolTip1.SetToolTip(this.textBox_SMSPhoneNumber, "Phone number throgh SMS");
             // 
             // button_SendAllCheckedSMS
             // 
@@ -5484,8 +5407,6 @@ namespace SocketServer
             this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
             this.button_SendAllCheckedSMS.TabIndex = 7;
             this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
-            this.toolTip1.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
-            this.toolTip2.SetToolTip(this.button_SendAllCheckedSMS, "Send SMS to all the checked contacts");
             this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
             this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
             // 
@@ -5496,8 +5417,6 @@ namespace SocketServer
             this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
             this.button_SendSelectedSMS.TabIndex = 8;
             this.button_SendSelectedSMS.Text = "Send SMS One";
-            this.toolTip1.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
-            this.toolTip2.SetToolTip(this.button_SendSelectedSMS, "Send SMS to the selected contact");
             this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
             this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
             // 
@@ -5508,10 +5427,8 @@ namespace SocketServer
             this.button_Ring.Size = new System.Drawing.Size(141, 23);
             this.button_Ring.TabIndex = 14;
             this.button_Ring.Text = "Ring";
-            this.toolTip1.SetToolTip(this.button_Ring, "Ring to contact");
-            this.toolTip2.SetToolTip(this.button_Ring, "Ring to contact");
             this.button_Ring.UseVisualStyleBackColor = true;
-            this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
+           // this.button_Ring.Click += new System.EventHandler(this.Button_Ring_Click);
             // 
             // comboBox_SystemType
             // 
@@ -5524,7 +5441,6 @@ namespace SocketServer
             this.comboBox_SystemType.Name = "comboBox_SystemType";
             this.comboBox_SystemType.Size = new System.Drawing.Size(78, 21);
             this.comboBox_SystemType.TabIndex = 77;
-            this.toolTip1.SetToolTip(this.comboBox_SystemType, "            % mini_ada_write_sys_type(type)");
             this.comboBox_SystemType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseDown);
             // 
             // openFileDialog1
@@ -5743,7 +5659,7 @@ namespace SocketServer
             this.checkedListBox_PhoneBook.FormattingEnabled = true;
             this.checkedListBox_PhoneBook.Location = new System.Drawing.Point(5, 19);
             this.checkedListBox_PhoneBook.Name = "checkedListBox_PhoneBook";
-            this.checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 298);
+            this.checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 289);
             this.checkedListBox_PhoneBook.TabIndex = 0;
             this.checkedListBox_PhoneBook.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox_PhoneBook_SelectedIndexChanged);
             this.checkedListBox_PhoneBook.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckedListBox_PhoneBook_KeyDown);
@@ -6066,7 +5982,6 @@ namespace SocketServer
             // listBox_SMSCommands
             // 
             this.listBox_SMSCommands.FormattingEnabled = true;
-            this.listBox_SMSCommands.ItemHeight = 18;
             this.listBox_SMSCommands.Location = new System.Drawing.Point(6, 17);
             this.listBox_SMSCommands.Name = "listBox_SMSCommands";
             this.listBox_SMSCommands.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -7157,12 +7072,58 @@ namespace SocketServer
             // 
             // tabPage13
             // 
+            this.tabPage13.Controls.Add(this.dataGridView1);
             this.tabPage13.Location = new System.Drawing.Point(4, 27);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Size = new System.Drawing.Size(1522, 613);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 9);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(648, 393);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
             // 
             // MainForm
             // 
@@ -7307,6 +7268,8 @@ namespace SocketServer
             this.groupBox46.PerformLayout();
             this.groupBox47.ResumeLayout(false);
             this.groupBox47.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7461,27 +7424,27 @@ namespace SocketServer
             }
         }
 
-        bool SerialPortSMSSendData(byte[] i_SendData)
-        {
+        //bool SerialPortSMSSendData(byte[] i_SendData)
+        //{
 
-            if (serialPort_SMS.IsOpen)
-            {
-                // Send the binary data out the port
-                serialPort_SMS.Write(i_SendData, 0, i_SendData.Length);
+        //    //if (serialPort_SMS.IsOpen)
+        //    //{
+        //    //    // Send the binary data out the port
+        //    //    serialPort_SMS.Write(i_SendData, 0, i_SendData.Length);
 
-                if (checkBox_DebugSMS.Checked == true)
-                {
-                    //LogSMS.LogMessage(Color.Black, Color.LightGray, "", New_Line = false, Show_Time = true);
-                  //  LogSMS.LogMessage(Color.DarkViolet, Color.LightGray, "Send Data: ", false, false);
-                   // LogSMS.LogMessage(Color.DarkGreen, Color.LightGray, Encoding.ASCII.GetString(i_SendData), true, false);
-                }
+        //    //    if (checkBox_DebugSMS.Checked == true)
+        //    //    {
+        //    //        //LogSMS.LogMessage(Color.Black, Color.LightGray, "", New_Line = false, Show_Time = true);
+        //    //      //  LogSMS.LogMessage(Color.DarkViolet, Color.LightGray, "Send Data: ", false, false);
+        //    //       // LogSMS.LogMessage(Color.DarkGreen, Color.LightGray, Encoding.ASCII.GetString(i_SendData), true, false);
+        //    //    }
 
-                return true;
+        //    //    return true;
 
-            }
+        //    //}
 
-            return false;
-        }
+        //    //return false;
+        //}
 
         bool SerialPortSendData(byte[] i_SendData)
         {
@@ -12543,7 +12506,7 @@ namespace SocketServer
                 if (item != null)
                 {
                     string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)item);
-                    SendSMSToContact((PhoneBookContact)item, SMSText);
+                    //SendSMSToContact((PhoneBookContact)item, SMSText);
                 }
             }
             //     AddCommandToCommands(richTextBox_TextSendSMS.Text);
@@ -12622,54 +12585,54 @@ namespace SocketServer
         /// 
         /// </summary>
       //  bool ACKSMSReceived = false;
-        void SendSMSToContact(PhoneBookContact i_Contact, string i_SMSText)
-        {
-            // AddCommandToCommands(i_SMSText);
-            int PosStr = 0;
-            if (i_Contact == null)
-            {
-                return;
-            }
+        //void SendSMSToContact(PhoneBookContact i_Contact, string i_SMSText)
+        //{
+        //    // AddCommandToCommands(i_SMSText);
+        //    int PosStr = 0;
+        //    if (i_Contact == null)
+        //    {
+        //        return;
+        //    }
 
-            //i_SMSText = i_SMSText.Replace("\n", string.Empty);
-            //i_SMSText = i_SMSText.Replace("\r", string.Empty);
-            while (PosStr < i_SMSText.Length)
-            {
+        //    //i_SMSText = i_SMSText.Replace("\n", string.Empty);
+        //    //i_SMSText = i_SMSText.Replace("\r", string.Empty);
+        //    while (PosStr < i_SMSText.Length)
+        //    {
 
-                string SMSToSend ;
-                int CharsLeft = i_SMSText.Length - PosStr;
-                //.SubString( 0, dec.Length > 240 ? 240 : dec.Length )
+        //        string SMSToSend ;
+        //        int CharsLeft = i_SMSText.Length - PosStr;
+        //        //.SubString( 0, dec.Length > 240 ? 240 : dec.Length )
 
-                if (CharsLeft > 160)
-                {
-                    SMSToSend = i_SMSText.Substring(PosStr, 160);
+        //        if (CharsLeft > 160)
+        //        {
+        //            SMSToSend = i_SMSText.Substring(PosStr, 160);
 
-                }
-                else
-                {
-                    SMSToSend = i_SMSText.Substring(PosStr, CharsLeft);
-                }
-                PosStr += 160;
+        //        }
+        //        else
+        //        {
+        //            SMSToSend = i_SMSText.Substring(PosStr, CharsLeft);
+        //        }
+        //        PosStr += 160;
 
-                string StrToSend = "{SMS_SEND}," + i_Contact.Phone + "," + SMSToSend + "\r{SMS_END}";
+        //        string StrToSend = "{SMS_SEND}," + i_Contact.Phone + "," + SMSToSend + "\r{SMS_END}";
 
-                StrToSend = ReturnSMSEncryiepted(StrToSend);
+        //        StrToSend = ReturnSMSEncryiepted(StrToSend);
 
-                byte[] buffer = Encoding.ASCII.GetBytes(StrToSend);
+        //        byte[] buffer = Encoding.ASCII.GetBytes(StrToSend);
 
-                bool IsSent = SerialPortSMSSendData(buffer);
+        //        bool IsSent = SerialPortSMSSendData(buffer);
 
-                if (IsSent == true)
-                {
+        //        if (IsSent == true)
+        //        {
 
-          //          LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                    //LogSMS.LogMessage(Color.Green, Color.White, "  SMS was Sent:\n Contact: " + i_Contact.ToString() + "\n Text:  " + SMSToSend, New_Line = true, Show_Time = false);
+        //  //          LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+        //            //LogSMS.LogMessage(Color.Green, Color.White, "  SMS was Sent:\n Contact: " + i_Contact.ToString() + "\n Text:  " + SMSToSend, New_Line = true, Show_Time = false);
 
-                    Thread.Sleep(1500);
+        //            Thread.Sleep(1500);
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         //bool ACKSMSReceived = false;
         void RingToContact(PhoneBookContact i_Contact)
@@ -12687,37 +12650,37 @@ namespace SocketServer
 
             byte[] buffer = Encoding.ASCII.GetBytes(StrToSend);
 
-            bool IsSent = SerialPortSMSSendData(buffer);
+           // bool IsSent = SerialPortSMSSendData(buffer);
 
-            if (IsSent == true)
-            {
-                //  mutexACKSMSReceived.WaitOne();
-                //ACKSMSReceived = false;
-                //   ACKSMSReceived = true;
-                //Thread.Sleep(1000);
-                //   mutexACKSMSReceived.ReleaseMutex();
+            //if (IsSent == true)
+            //{
+            //    //  mutexACKSMSReceived.WaitOne();
+            //    //ACKSMSReceived = false;
+            //    //   ACKSMSReceived = true;
+            //    //Thread.Sleep(1000);
+            //    //   mutexACKSMSReceived.ReleaseMutex();
 
-                //int cnt = 0;
-                //while (ACKSMSReceived == false && cnt < 100)
-                //{
-                //    Thread.Sleep(50);
-                //    cnt++;
-                //}
-                //if (ACKSMSReceived)
-                //{
-                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-            //    LogSMS.LogMessage(Color.Green, Color.White, "  Ring to Contact:\n Contact: " + i_Contact.ToString(), New_Line = true, Show_Time = false);
+            //    //int cnt = 0;
+            //    //while (ACKSMSReceived == false && cnt < 100)
+            //    //{
+            //    //    Thread.Sleep(50);
+            //    //    cnt++;
+            //    //}
+            //    //if (ACKSMSReceived)
+            //    //{
+            //    //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+            ////    LogSMS.LogMessage(Color.Green, Color.White, "  Ring to Contact:\n Contact: " + i_Contact.ToString(), New_Line = true, Show_Time = false);
 
-                Thread.Sleep(1500);
-                //}
-                //else
-                //{
-                //    LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                //    LogSMS.LogMessage(Color.Red, Color.White, "  SMS wasn't Sent to " + i_Contact.ToString() + "  Text:  " + SMSToSend, New_Line = true, Show_Time = false);
-                //}
+            //    Thread.Sleep(1500);
+            //    //}
+            //    //else
+            //    //{
+            //    //    LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+            //    //    LogSMS.LogMessage(Color.Red, Color.White, "  SMS wasn't Sent to " + i_Contact.ToString() + "  Text:  " + SMSToSend, New_Line = true, Show_Time = false);
+            //    //}
 
-                //return true;
-            }
+            //    //return true;
+            //}
 
         }
 
@@ -12746,7 +12709,7 @@ namespace SocketServer
                 {
 
 
-                    SendSMSToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem, SMSText);
+                    //SendSMSToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem, SMSText);
                 }
                 else
                 {
@@ -13109,18 +13072,18 @@ namespace SocketServer
                     checkBox_OpenPortSMS.BackColor = Color.Yellow;
 
 
-                    serialPort_SMS.BaudRate = 38400;
-                    serialPort_SMS.DataBits = 8;
-                    serialPort_SMS.StopBits = StopBits.One;
-                    serialPort_SMS.Parity = Parity.None;
-                    serialPort_SMS.PortName = comboBox_ComportSMS.Text;
+                    //serialPort_SMS.BaudRate = 38400;
+                    //serialPort_SMS.DataBits = 8;
+                    //serialPort_SMS.StopBits = StopBits.One;
+                    //serialPort_SMS.Parity = Parity.None;
+                    //serialPort_SMS.PortName = comboBox_ComportSMS.Text;
 
 
 
 
 
 
-                    serialPort_SMS.Open();
+                    //serialPort_SMS.Open();
 
 
 
@@ -13128,8 +13091,8 @@ namespace SocketServer
 
                     checkBox_OpenPortSMS.BackColor = Color.Green;
 
-                    serialPort_SMS.DataReceived += new SerialDataReceivedEventHandler(SerialPort_SMS_DataReceived);
-
+                   // serialPort_SMS.DataReceived += new SerialDataReceivedEventHandler(SerialPort_SMS_DataReceived);
+                
                     comboBox_ComportSMS.Enabled = false;
                 
 
@@ -13145,45 +13108,45 @@ namespace SocketServer
                 //checkBox_ComportOpen.Enabled = false;
 
 
-                serialPort_SMS.Close();
+                //serialPort_SMS.Close();
 
                 comboBox_ComportSMS.Enabled = true;
                 //groupBox_ServerSettings.Enabled = true;
             }
         }
 
-        void SerialPort_SMS_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            // If the com port has been closed, do nothing
-            if (!serialPort_SMS.IsOpen) return;
+        //void SerialPort_SMS_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        //{
+        //    // If the com port has been closed, do nothing
+        //    if (!serialPort_SMS.IsOpen) return;
 
-            // This method will be called when there is data waiting in the port's buffer
-            Thread.Sleep(300);
+        //    // This method will be called when there is data waiting in the port's buffer
+        //    Thread.Sleep(300);
 
-            if (!serialPort_SMS.IsOpen) return;
+        //    if (!serialPort_SMS.IsOpen) return;
 
-            // Obtain the number of bytes waiting in the port's buffer
-            int bytes = serialPort_SMS.BytesToRead;
+        //    // Obtain the number of bytes waiting in the port's buffer
+        //    int bytes = serialPort_SMS.BytesToRead;
 
-            // Create a byte array buffer to hold the incoming data
-            byte[] buffer = new byte[bytes];
+        //    // Create a byte array buffer to hold the incoming data
+        //    byte[] buffer = new byte[bytes];
 
-            // Read the data from the port and store it in our buffer
-            serialPort_SMS.Read(buffer, 0, bytes);
-
-
-            string IncomingString = System.Text.Encoding.Default.GetString(buffer);
-
-            if (checkBox_DebugSMS.Checked == true)
-            {
-
-                //LogSMS.LogMessage(Color.Black, Color.LightGray, "", New_Line = false, Show_Time = true);
-              //  LogSMS.LogMessage(Color.Black, Color.LightGray, IncomingString, New_Line = true, Show_Time = false);
-            }
+        //    // Read the data from the port and store it in our buffer
+        //    //serialPort_SMS.Read(buffer, 0, bytes);
 
 
-            ParseSerialPortSMSString(IncomingString);
-        }
+        //    string IncomingString = System.Text.Encoding.Default.GetString(buffer);
+
+        //    if (checkBox_DebugSMS.Checked == true)
+        //    {
+
+        //        //LogSMS.LogMessage(Color.Black, Color.LightGray, "", New_Line = false, Show_Time = true);
+        //      //  LogSMS.LogMessage(Color.Black, Color.LightGray, IncomingString, New_Line = true, Show_Time = false);
+        //    }
+
+
+        //    ParseSerialPortSMSString(IncomingString);
+        //}
 
         private void TextBox_Config35_TextChanged(object sender, EventArgs e)
         {
@@ -13334,92 +13297,92 @@ namespace SocketServer
 
         string OpcodeToCompare = "";
         int SendOneTimeFlag = 0;
-        private void Button_Ring_Click(object sender, EventArgs e)
-        {
-            if (checkedListBox_PhoneBook.SelectedItem != null
-                //           && checkBox_SMSencrypted.Checked == true 
-                && listBox_SMSCommands.SelectedItem != null
-                && listBox_SMSCommands.SelectedItem != null
-                && textBox_UnitIDForSMS.Text.Length >= 10
-                //        && textBox_CodeArrayForSMS.Text.Length == 4
-                && serialPort_SMS.IsOpen
-                && ((checkBox_SMSencrypted.Checked == false) || (textBox_CodeArrayForSMS.Text.Length == 4))
-                )
-            {
+//        private void Button_Ring_Click(object sender, EventArgs e)
+//        {
+//            if (checkedListBox_PhoneBook.SelectedItem != null
+//                //           && checkBox_SMSencrypted.Checked == true 
+//                && listBox_SMSCommands.SelectedItem != null
+//                && listBox_SMSCommands.SelectedItem != null
+//                && textBox_UnitIDForSMS.Text.Length >= 10
+//                //        && textBox_CodeArrayForSMS.Text.Length == 4
+//                && serialPort_SMS.IsOpen
+//                && ((checkBox_SMSencrypted.Checked == false) || (textBox_CodeArrayForSMS.Text.Length == 4))
+//                )
+//            {
 
 
-                groupBox34.Enabled = false;
+//                groupBox34.Enabled = false;
 
-                button_Ring.BackColor = Color.Yellow;
-                button_Ring.Text = "Ring Processing";
+//                button_Ring.BackColor = Color.Yellow;
+//                button_Ring.Text = "Ring Processing";
 
-                SendOneTimeFlag = 1;
-                TimerStatusRingWait = 300;
-                RingToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
+//                SendOneTimeFlag = 1;
+//                TimerStatusRingWait = 300;
+//                RingToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-                Thread.Sleep(1000);
-
-
-
-                if (checkBox_SMSencrypted.Checked == true)
-                {
+//                Thread.Sleep(1000);
 
 
-                    string[] temp = richTextBox_TextSendSMS.Text.Split('>', '=');
 
-                    OpcodeToCompare = temp[1];
+//                if (checkBox_SMSencrypted.Checked == true)
+//                {
 
-                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-                    //SMSText = ReturnSMSEncryiepted(SMSText);
+//                    string[] temp = richTextBox_TextSendSMS.Text.Split('>', '=');
 
-                    if (CheckValidSMS(SMSText))
-                    {
-                        PhoneBookContact Temp = new PhoneBookContact
-                        {
-                            Phone = "+00000000000"
-                        };
+//                    OpcodeToCompare = temp[1];
 
-                        SendSMSToContact(Temp, SMSText);
-                    }
-                    else
-                    {
-                        //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                   //     LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
-                    }
+//                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-                    // AddCommandToCommands(richTextBox_TextSendSMS.Text);
+//                    //SMSText = ReturnSMSEncryiepted(SMSText);
 
-                }
-                else
-                {
-                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
-                    txtDataTx.Text = SMSText;
-                }
+//                    if (CheckValidSMS(SMSText))
+//                    {
+//                        PhoneBookContact Temp = new PhoneBookContact
+//                        {
+//                            Phone = "+00000000000"
+//                        };
 
-                groupBox34.Enabled = true;
+//                        //SendSMSToContact(Temp, SMSText);
+//                    }
+//                    else
+//                    {
+//                        //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+//                   //     LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
+//                    }
 
-            }
-            else
-            {
-                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-//                string RingExplain = @"In Order to Ring you have to:
-//1. Select the contact 
-//2. Select the command
-//3. Check that the password is the right password
-//4. Check the Encripted checkbox
-//5. Check the unit ID (IMEI),it should be the same IMEI target ID (when the status received it compare the IMEI recieved vs the UnitID TextBox)
-//6. Check the Unit code it the right code
-//7. Comport must be open ";
-                //LogSMS.LogMessage(Color.Red, Color.White, RingExplain, New_Line = true, Show_Time = false);
+//                    // AddCommandToCommands(richTextBox_TextSendSMS.Text);
 
-                button_Ring.BackColor = default;
-                button_Ring.Text = "Ring";
-                SendOneTimeFlag = 0;
-                TimerStatusRingWait = 0;
+//                }
+//                else
+//                {
+//                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
+//                    txtDataTx.Text = SMSText;
+//                }
 
-            }
-        }
+//                groupBox34.Enabled = true;
+
+//            }
+//            else
+//            {
+//                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+////                string RingExplain = @"In Order to Ring you have to:
+////1. Select the contact 
+////2. Select the command
+////3. Check that the password is the right password
+////4. Check the Encripted checkbox
+////5. Check the unit ID (IMEI),it should be the same IMEI target ID (when the status received it compare the IMEI recieved vs the UnitID TextBox)
+////6. Check the Unit code it the right code
+////7. Comport must be open ";
+//                //LogSMS.LogMessage(Color.Red, Color.White, RingExplain, New_Line = true, Show_Time = false);
+
+//                button_Ring.BackColor = default;
+//                button_Ring.Text = "Ring";
+//                SendOneTimeFlag = 0;
+//                TimerStatusRingWait = 0;
+
+//            }
+//        }
 
         void ScanComports()
         {
