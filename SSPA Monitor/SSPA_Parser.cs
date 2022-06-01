@@ -420,12 +420,12 @@ namespace Monitor
 
         string ACK_Received(KratosProtocolFrame i_Parsedframe)
         {
-            return String.Format("\n  ACK recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+            return String.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
         }
 
         string GetThermalSuperVisor(KratosProtocolFrame i_Parsedframe)
         {
-            return String.Format("\n  ACK recieved OK, Opcode :[{0}], Thermal[{1}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+            return String.Format("\n recieved OK, Opcode :[{0}], Thermal[{1}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
         }
 
         
@@ -518,177 +518,178 @@ namespace Monitor
             }
             else
             {
+                ret = "[ACK]  ";
                 switch(i_Parsedframe.Opcode)
                 {
 
                     case "11":
-                        ret = GetSystemStatus(i_Parsedframe);
+                        ret += GetSystemStatus(i_Parsedframe);
 
                         break;
 
                     case "25":
-                        ret = GetDiscreteStatusBusmode(i_Parsedframe);
+                        ret += GetDiscreteStatusBusmode(i_Parsedframe);
 
                         break;
 
                     case "26":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "27":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "33":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "35":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "36":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "37":
-                        ret = GetSystemTableIndexes(i_Parsedframe);
+                        ret += GetSystemTableIndexes(i_Parsedframe);
 
                         break;
 
                     case "70":
-                        ret = ReadFromFlash(i_Parsedframe);
+                        ret += ReadFromFlash(i_Parsedframe);
 
                         break;
 
                     case "38":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "39":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "80":
-                        ret = GetSimulatorID(i_Parsedframe);
+                        ret += GetSimulatorID(i_Parsedframe);
 
                         break;
 
                     case "81":
-                        ret = GetSoftwareVertion(i_Parsedframe);
+                        ret += GetSoftwareVertion(i_Parsedframe);
 
                         break;
 
                     case "82":
-                        ret = GetFirmwareVertion(i_Parsedframe);
+                        ret += GetFirmwareVertion(i_Parsedframe);
 
                         break;
 
                     case "83":
-                        ret = GetHardwareVertion(i_Parsedframe);
+                        ret += GetHardwareVertion(i_Parsedframe);
 
                         break;
 
                     case "85":
-                        ret = GetSerialNumber(i_Parsedframe);
+                        ret += GetSerialNumber(i_Parsedframe);
 
                         break;
 
 
                     case "90":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "91":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "92":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "93":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "94":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "95":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "96":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "97":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "98":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "99":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9A":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9B":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9C":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9D":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "9E":
-                        ret = GetThermalSuperVisor(i_Parsedframe);
+                        ret += GetThermalSuperVisor(i_Parsedframe);
 
                         break;
 
                     case "9F":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "A0":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
                     case "A1":
-                        ret = ACK_Received(i_Parsedframe);
+                        ret += ACK_Received(i_Parsedframe);
 
                         break;
 
