@@ -564,7 +564,6 @@ namespace SocketServer
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private BindingSource textBoxLoggerBindingSource;
         private Label label76;
         private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -1322,7 +1321,6 @@ namespace SocketServer
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxLoggerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label90 = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1412,7 +1410,6 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxLoggerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
@@ -2651,9 +2648,9 @@ namespace SocketServer
             this.tabPage_GenericFrame.Controls.Add(this.button52);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
-            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
             this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 682);
             this.tabPage_GenericFrame.TabIndex = 10;
             this.tabPage_GenericFrame.Text = "Generic Kratos frame";
             this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
@@ -2826,7 +2823,7 @@ namespace SocketServer
             this.groupBox_clientTX.Controls.Add(this.label11);
             this.groupBox_clientTX.Location = new System.Drawing.Point(14, 12);
             this.groupBox_clientTX.Name = "groupBox_clientTX";
-            this.groupBox_clientTX.Size = new System.Drawing.Size(730, 421);
+            this.groupBox_clientTX.Size = new System.Drawing.Size(794, 421);
             this.groupBox_clientTX.TabIndex = 13;
             this.groupBox_clientTX.TabStop = false;
             this.groupBox_clientTX.Text = "Send Data";
@@ -2859,7 +2856,7 @@ namespace SocketServer
             this.groupBox41.Controls.Add(this.label47);
             this.groupBox41.Location = new System.Drawing.Point(6, 179);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(718, 230);
+            this.groupBox41.Size = new System.Drawing.Size(782, 230);
             this.groupBox41.TabIndex = 15;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Data Sent";
@@ -2957,10 +2954,11 @@ namespace SocketServer
             // 
             // textBox_SentData
             // 
+            this.textBox_SentData.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SentData.Location = new System.Drawing.Point(97, 88);
             this.textBox_SentData.Name = "textBox_SentData";
             this.textBox_SentData.ReadOnly = true;
-            this.textBox_SentData.Size = new System.Drawing.Size(615, 26);
+            this.textBox_SentData.Size = new System.Drawing.Size(679, 23);
             this.textBox_SentData.TabIndex = 2;
             this.textBox_SentData.TabStop = false;
             // 
@@ -3976,9 +3974,9 @@ namespace SocketServer
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox43);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage3.Size = new System.Drawing.Size(1547, 687);
             this.tabPage3.TabIndex = 12;
             this.tabPage3.Text = "3038 - WB PAA";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -4995,9 +4993,9 @@ namespace SocketServer
             this.tabPage8.Controls.Add(this.dataGridView2);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1294, 613);
+            this.tabPage8.Size = new System.Drawing.Size(1294, 618);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -5079,9 +5077,9 @@ namespace SocketServer
             this.tabPage9.Controls.Add(this.dataGridView9);
             this.tabPage9.Controls.Add(this.label90);
             this.tabPage9.Controls.Add(this.dataGridView8);
-            this.tabPage9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1294, 613);
+            this.tabPage9.Size = new System.Drawing.Size(1294, 618);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Page 8";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -7340,10 +7338,6 @@ namespace SocketServer
             this.Column9.Name = "Column9";
             this.Column9.Width = 47;
             // 
-            // textBoxLoggerBindingSource
-            // 
-            this.textBoxLoggerBindingSource.DataSource = typeof(SocketServer.TextBox_Logger);
-            // 
             // label90
             // 
             this.label90.AutoSize = true;
@@ -7589,7 +7583,6 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxLoggerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
