@@ -753,8 +753,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1719,17 +1719,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea5.AxisX.Title = "Freq";
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Title = "Power [dBm]";
+            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -2681,7 +2681,7 @@ namespace SocketServer
             this.groupBox31.Controls.Add(this.textBox_RxClientData);
             this.groupBox31.Controls.Add(this.label15);
             this.groupBox31.Controls.Add(this.label16);
-            this.groupBox31.Location = new System.Drawing.Point(814, 14);
+            this.groupBox31.Location = new System.Drawing.Point(1165, 16);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(372, 214);
             this.groupBox31.TabIndex = 14;
@@ -2823,7 +2823,7 @@ namespace SocketServer
             this.groupBox_clientTX.Controls.Add(this.label11);
             this.groupBox_clientTX.Location = new System.Drawing.Point(14, 12);
             this.groupBox_clientTX.Name = "groupBox_clientTX";
-            this.groupBox_clientTX.Size = new System.Drawing.Size(794, 421);
+            this.groupBox_clientTX.Size = new System.Drawing.Size(1145, 421);
             this.groupBox_clientTX.TabIndex = 13;
             this.groupBox_clientTX.TabStop = false;
             this.groupBox_clientTX.Text = "Send Data";
@@ -2856,7 +2856,7 @@ namespace SocketServer
             this.groupBox41.Controls.Add(this.label47);
             this.groupBox41.Location = new System.Drawing.Point(6, 179);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(782, 230);
+            this.groupBox41.Size = new System.Drawing.Size(1133, 230);
             this.groupBox41.TabIndex = 15;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Data Sent";
@@ -2954,11 +2954,11 @@ namespace SocketServer
             // 
             // textBox_SentData
             // 
-            this.textBox_SentData.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SentData.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_SentData.Location = new System.Drawing.Point(97, 88);
             this.textBox_SentData.Name = "textBox_SentData";
             this.textBox_SentData.ReadOnly = true;
-            this.textBox_SentData.Size = new System.Drawing.Size(679, 23);
+            this.textBox_SentData.Size = new System.Drawing.Size(1030, 26);
             this.textBox_SentData.TabIndex = 2;
             this.textBox_SentData.TabStop = false;
             // 
@@ -3974,9 +3974,9 @@ namespace SocketServer
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox43);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1547, 687);
+            this.tabPage3.Size = new System.Drawing.Size(1547, 682);
             this.tabPage3.TabIndex = 12;
             this.tabPage3.Text = "3038 - WB PAA";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -4962,9 +4962,9 @@ namespace SocketServer
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
             this.tabPage13.Controls.Add(this.textBox61);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Location = new System.Drawing.Point(4, 27);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage13.Size = new System.Drawing.Size(1294, 613);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -4993,9 +4993,9 @@ namespace SocketServer
             this.tabPage8.Controls.Add(this.dataGridView2);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView1);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 27);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage8.Size = new System.Drawing.Size(1294, 613);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -7077,7 +7077,7 @@ namespace SocketServer
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(471, 578);
+            this.label83.Location = new System.Drawing.Point(459, 577);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(115, 18);
             this.label83.TabIndex = 23;
@@ -7206,7 +7206,7 @@ namespace SocketServer
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
-            this.dataGridView7.Location = new System.Drawing.Point(683, 325);
+            this.dataGridView7.Location = new System.Drawing.Point(678, 327);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.RowHeadersWidth = 30;
             this.dataGridView7.Size = new System.Drawing.Size(419, 269);
