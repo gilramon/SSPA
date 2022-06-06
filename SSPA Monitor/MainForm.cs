@@ -412,12 +412,12 @@ namespace SocketServer
         private Button button112;
         private TextBox textBox12;
         private Button button111;
-        private TextBox textBox11;
-        private Button button110;
+        private TextBox textBox_RFGenParms;
+        private Button button_SetRFGen;
         private TextBox textBox10;
         private Button button58;
-        private TextBox textBox9;
-        private Button button57;
+        private TextBox textBox_PulseGenParms;
+        private Button button_GPparms;
         private TextBox textBox8;
         private Button button56;
         private TextBox textBox7;
@@ -431,7 +431,7 @@ namespace SocketServer
         private Button button50;
         private TextBox textBox3;
         private Button button49;
-        private TextBox textBox2;
+        private TextBox textBox_TxInhibit;
         private TextBox textBox22;
         private Button button122;
         private TextBox textBox21;
@@ -623,11 +623,11 @@ namespace SocketServer
         private TabPage tabPage10;
         private GroupBox groupBox33;
         private Button button32;
-        private TextBox textBox75;
+        private TextBox textBox_RFDelay;
         private Label label100;
-        private TextBox textBox74;
+        private TextBox textBox_RFPeriod;
         private Label label99;
-        private TextBox textBox73;
+        private TextBox textBox_RFWidth;
         private Label label98;
         private GroupBox groupBox1;
         private Label label97;
@@ -660,19 +660,19 @@ namespace SocketServer
         private Label label109;
         private GroupBox groupBox35;
         private Button button44;
-        private TextBox textBox79;
+        private TextBox textBox_PulseDelay2;
         private Label label104;
-        private TextBox textBox80;
+        private TextBox textBox_PulsePeriod2;
         private Label label105;
-        private TextBox textBox81;
+        private TextBox textBox_PulseWidth2;
         private Label label106;
         private GroupBox groupBox34;
         private Button button42;
-        private TextBox textBox76;
+        private TextBox textBox_PulseDelay;
         private Label label101;
-        private TextBox textBox77;
+        private TextBox textBox_PulsePeriod;
         private Label label102;
-        private TextBox textBox78;
+        private TextBox textBox_PulseWidth;
         private Label label103;
         private GroupBox groupBox38;
         private Button button74;
@@ -691,6 +691,9 @@ namespace SocketServer
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column11;
         private Button button75;
+        private Button button78;
+        private Button button77;
+        private Button button76;
         static readonly string PREAMBLE = "23";
         //bool m_Exit = false;
 
@@ -816,8 +819,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -979,12 +982,12 @@ namespace SocketServer
             this.button112 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.button111 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button110 = new System.Windows.Forms.Button();
+            this.textBox_RFGenParms = new System.Windows.Forms.TextBox();
+            this.button_SetRFGen = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button58 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button57 = new System.Windows.Forms.Button();
+            this.textBox_PulseGenParms = new System.Windows.Forms.TextBox();
+            this.button_GPparms = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button56 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -998,7 +1001,7 @@ namespace SocketServer
             this.button50 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button49 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_TxInhibit = new System.Windows.Forms.TextBox();
             this.button47 = new System.Windows.Forms.Button();
             this.button48 = new System.Windows.Forms.Button();
             this.button108 = new System.Windows.Forms.Button();
@@ -1170,27 +1173,27 @@ namespace SocketServer
             this.label109 = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.button44 = new System.Windows.Forms.Button();
-            this.textBox79 = new System.Windows.Forms.TextBox();
+            this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
             this.label104 = new System.Windows.Forms.Label();
-            this.textBox80 = new System.Windows.Forms.TextBox();
+            this.textBox_PulsePeriod2 = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
-            this.textBox81 = new System.Windows.Forms.TextBox();
+            this.textBox_PulseWidth2 = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.button42 = new System.Windows.Forms.Button();
-            this.textBox76 = new System.Windows.Forms.TextBox();
+            this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
-            this.textBox77 = new System.Windows.Forms.TextBox();
+            this.textBox_PulsePeriod = new System.Windows.Forms.TextBox();
             this.label102 = new System.Windows.Forms.Label();
-            this.textBox78 = new System.Windows.Forms.TextBox();
+            this.textBox_PulseWidth = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.button32 = new System.Windows.Forms.Button();
-            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
-            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.textBox_RFPeriod = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
-            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label97 = new System.Windows.Forms.Label();
@@ -1458,6 +1461,9 @@ namespace SocketServer
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.button75 = new System.Windows.Forms.Button();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
+            this.button78 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1850,17 +1856,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -3239,12 +3245,12 @@ namespace SocketServer
             this.tabPage1.Controls.Add(this.button112);
             this.tabPage1.Controls.Add(this.textBox12);
             this.tabPage1.Controls.Add(this.button111);
-            this.tabPage1.Controls.Add(this.textBox11);
-            this.tabPage1.Controls.Add(this.button110);
+            this.tabPage1.Controls.Add(this.textBox_RFGenParms);
+            this.tabPage1.Controls.Add(this.button_SetRFGen);
             this.tabPage1.Controls.Add(this.textBox10);
             this.tabPage1.Controls.Add(this.button58);
-            this.tabPage1.Controls.Add(this.textBox9);
-            this.tabPage1.Controls.Add(this.button57);
+            this.tabPage1.Controls.Add(this.textBox_PulseGenParms);
+            this.tabPage1.Controls.Add(this.button_GPparms);
             this.tabPage1.Controls.Add(this.textBox8);
             this.tabPage1.Controls.Add(this.button56);
             this.tabPage1.Controls.Add(this.textBox7);
@@ -3258,7 +3264,7 @@ namespace SocketServer
             this.tabPage1.Controls.Add(this.button50);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.button49);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBox_TxInhibit);
             this.tabPage1.Controls.Add(this.button47);
             this.tabPage1.Controls.Add(this.button48);
             this.tabPage1.Controls.Add(this.button108);
@@ -3393,25 +3399,25 @@ namespace SocketServer
             this.button111.UseVisualStyleBackColor = true;
             this.button111.Click += new System.EventHandler(this.button111_Click);
             // 
-            // textBox11
+            // textBox_RFGenParms
             // 
-            this.textBox11.Location = new System.Drawing.Point(253, 502);
-            this.textBox11.MaxLength = 30;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(129, 26);
-            this.textBox11.TabIndex = 74;
-            this.textBox11.Text = "0000 0000 0000";
-            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            this.textBox_RFGenParms.Location = new System.Drawing.Point(253, 502);
+            this.textBox_RFGenParms.MaxLength = 30;
+            this.textBox_RFGenParms.Name = "textBox_RFGenParms";
+            this.textBox_RFGenParms.Size = new System.Drawing.Size(129, 26);
+            this.textBox_RFGenParms.TabIndex = 74;
+            this.textBox_RFGenParms.Text = "0000 0000 0000";
+            this.textBox_RFGenParms.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
-            // button110
+            // button_SetRFGen
             // 
-            this.button110.Location = new System.Drawing.Point(0, 504);
-            this.button110.Name = "button110";
-            this.button110.Size = new System.Drawing.Size(244, 23);
-            this.button110.TabIndex = 73;
-            this.button110.Text = "Set RF Gen. Parameters ";
-            this.button110.UseVisualStyleBackColor = true;
-            this.button110.Click += new System.EventHandler(this.button110_Click);
+            this.button_SetRFGen.Location = new System.Drawing.Point(0, 504);
+            this.button_SetRFGen.Name = "button_SetRFGen";
+            this.button_SetRFGen.Size = new System.Drawing.Size(244, 23);
+            this.button_SetRFGen.TabIndex = 73;
+            this.button_SetRFGen.Text = "Set RF Gen. Parameters ";
+            this.button_SetRFGen.UseVisualStyleBackColor = true;
+            this.button_SetRFGen.Click += new System.EventHandler(this.button110_Click);
             // 
             // textBox10
             // 
@@ -3433,25 +3439,25 @@ namespace SocketServer
             this.button58.UseVisualStyleBackColor = true;
             this.button58.Click += new System.EventHandler(this.button58_Click_1);
             // 
-            // textBox9
+            // textBox_PulseGenParms
             // 
-            this.textBox9.Location = new System.Drawing.Point(253, 438);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(129, 26);
-            this.textBox9.TabIndex = 70;
-            this.textBox9.Text = "0000 0000 0000";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.textBox_PulseGenParms.Location = new System.Drawing.Point(253, 438);
+            this.textBox_PulseGenParms.MaxLength = 30;
+            this.textBox_PulseGenParms.Name = "textBox_PulseGenParms";
+            this.textBox_PulseGenParms.Size = new System.Drawing.Size(129, 26);
+            this.textBox_PulseGenParms.TabIndex = 70;
+            this.textBox_PulseGenParms.Text = "0000 0000 0000";
+            this.textBox_PulseGenParms.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
-            // button57
+            // button_GPparms
             // 
-            this.button57.Location = new System.Drawing.Point(0, 440);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(244, 23);
-            this.button57.TabIndex = 69;
-            this.button57.Text = "Set GP Parameters ";
-            this.button57.UseVisualStyleBackColor = true;
-            this.button57.Click += new System.EventHandler(this.button57_Click);
+            this.button_GPparms.Location = new System.Drawing.Point(0, 440);
+            this.button_GPparms.Name = "button_GPparms";
+            this.button_GPparms.Size = new System.Drawing.Size(244, 23);
+            this.button_GPparms.TabIndex = 69;
+            this.button_GPparms.Text = "Set GP Parameters ";
+            this.button_GPparms.UseVisualStyleBackColor = true;
+            this.button_GPparms.Click += new System.EventHandler(this.button57_Click);
             // 
             // textBox8
             // 
@@ -3583,15 +3589,15 @@ namespace SocketServer
             this.button49.UseVisualStyleBackColor = true;
             this.button49.Click += new System.EventHandler(this.button49_Click_1);
             // 
-            // textBox2
+            // textBox_TxInhibit
             // 
-            this.textBox2.Location = new System.Drawing.Point(253, 202);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 26);
-            this.textBox2.TabIndex = 55;
-            this.textBox2.Text = "0000 0000 0000";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            this.textBox_TxInhibit.Location = new System.Drawing.Point(253, 202);
+            this.textBox_TxInhibit.MaxLength = 30;
+            this.textBox_TxInhibit.Name = "textBox_TxInhibit";
+            this.textBox_TxInhibit.Size = new System.Drawing.Size(129, 26);
+            this.textBox_TxInhibit.TabIndex = 55;
+            this.textBox_TxInhibit.Text = "0000 0000 0000";
+            this.textBox_TxInhibit.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // button47
             // 
@@ -5280,6 +5286,7 @@ namespace SocketServer
             this.textBox85.Name = "textBox85";
             this.textBox85.Size = new System.Drawing.Size(57, 26);
             this.textBox85.TabIndex = 19;
+            this.textBox85.Text = "0";
             // 
             // label111
             // 
@@ -5314,6 +5321,7 @@ namespace SocketServer
             this.textBox82.Name = "textBox82";
             this.textBox82.Size = new System.Drawing.Size(57, 26);
             this.textBox82.TabIndex = 15;
+            this.textBox82.Text = "0";
             // 
             // label107
             // 
@@ -5330,6 +5338,7 @@ namespace SocketServer
             this.textBox83.Name = "textBox83";
             this.textBox83.Size = new System.Drawing.Size(57, 26);
             this.textBox83.TabIndex = 13;
+            this.textBox83.Text = "0";
             // 
             // label108
             // 
@@ -5346,6 +5355,7 @@ namespace SocketServer
             this.textBox84.Name = "textBox84";
             this.textBox84.Size = new System.Drawing.Size(57, 26);
             this.textBox84.TabIndex = 11;
+            this.textBox84.Text = "0";
             // 
             // label109
             // 
@@ -5358,12 +5368,13 @@ namespace SocketServer
             // 
             // groupBox35
             // 
+            this.groupBox35.Controls.Add(this.button78);
             this.groupBox35.Controls.Add(this.button44);
-            this.groupBox35.Controls.Add(this.textBox79);
+            this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
             this.groupBox35.Controls.Add(this.label104);
-            this.groupBox35.Controls.Add(this.textBox80);
+            this.groupBox35.Controls.Add(this.textBox_PulsePeriod2);
             this.groupBox35.Controls.Add(this.label105);
-            this.groupBox35.Controls.Add(this.textBox81);
+            this.groupBox35.Controls.Add(this.textBox_PulseWidth2);
             this.groupBox35.Controls.Add(this.label106);
             this.groupBox35.Location = new System.Drawing.Point(15, 339);
             this.groupBox35.Name = "groupBox35";
@@ -5380,13 +5391,15 @@ namespace SocketServer
             this.button44.TabIndex = 16;
             this.button44.Text = "Set GP parms";
             this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
-            // textBox79
+            // textBox_PulseDelay2
             // 
-            this.textBox79.Location = new System.Drawing.Point(180, 57);
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(57, 26);
-            this.textBox79.TabIndex = 15;
+            this.textBox_PulseDelay2.Location = new System.Drawing.Point(180, 57);
+            this.textBox_PulseDelay2.Name = "textBox_PulseDelay2";
+            this.textBox_PulseDelay2.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulseDelay2.TabIndex = 15;
+            this.textBox_PulseDelay2.Text = "0";
             // 
             // label104
             // 
@@ -5397,12 +5410,13 @@ namespace SocketServer
             this.label104.TabIndex = 14;
             this.label104.Text = "Delay (us)";
             // 
-            // textBox80
+            // textBox_PulsePeriod2
             // 
-            this.textBox80.Location = new System.Drawing.Point(95, 57);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(57, 26);
-            this.textBox80.TabIndex = 13;
+            this.textBox_PulsePeriod2.Location = new System.Drawing.Point(95, 57);
+            this.textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
+            this.textBox_PulsePeriod2.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulsePeriod2.TabIndex = 13;
+            this.textBox_PulsePeriod2.Text = "16";
             // 
             // label105
             // 
@@ -5413,12 +5427,13 @@ namespace SocketServer
             this.label105.TabIndex = 12;
             this.label105.Text = "Period (us)";
             // 
-            // textBox81
+            // textBox_PulseWidth2
             // 
-            this.textBox81.Location = new System.Drawing.Point(20, 57);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(57, 26);
-            this.textBox81.TabIndex = 11;
+            this.textBox_PulseWidth2.Location = new System.Drawing.Point(20, 57);
+            this.textBox_PulseWidth2.Name = "textBox_PulseWidth2";
+            this.textBox_PulseWidth2.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulseWidth2.TabIndex = 11;
+            this.textBox_PulseWidth2.Text = "2";
             // 
             // label106
             // 
@@ -5431,12 +5446,13 @@ namespace SocketServer
             // 
             // groupBox34
             // 
+            this.groupBox34.Controls.Add(this.button77);
             this.groupBox34.Controls.Add(this.button42);
-            this.groupBox34.Controls.Add(this.textBox76);
+            this.groupBox34.Controls.Add(this.textBox_PulseDelay);
             this.groupBox34.Controls.Add(this.label101);
-            this.groupBox34.Controls.Add(this.textBox77);
+            this.groupBox34.Controls.Add(this.textBox_PulsePeriod);
             this.groupBox34.Controls.Add(this.label102);
-            this.groupBox34.Controls.Add(this.textBox78);
+            this.groupBox34.Controls.Add(this.textBox_PulseWidth);
             this.groupBox34.Controls.Add(this.label103);
             this.groupBox34.Location = new System.Drawing.Point(15, 230);
             this.groupBox34.Name = "groupBox34";
@@ -5453,13 +5469,15 @@ namespace SocketServer
             this.button42.TabIndex = 16;
             this.button42.Text = "Set Tx Inhabit";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click_2);
             // 
-            // textBox76
+            // textBox_PulseDelay
             // 
-            this.textBox76.Location = new System.Drawing.Point(180, 57);
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(57, 26);
-            this.textBox76.TabIndex = 15;
+            this.textBox_PulseDelay.Location = new System.Drawing.Point(180, 57);
+            this.textBox_PulseDelay.Name = "textBox_PulseDelay";
+            this.textBox_PulseDelay.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulseDelay.TabIndex = 15;
+            this.textBox_PulseDelay.Text = "0";
             // 
             // label101
             // 
@@ -5470,12 +5488,13 @@ namespace SocketServer
             this.label101.TabIndex = 14;
             this.label101.Text = "Delay (us)";
             // 
-            // textBox77
+            // textBox_PulsePeriod
             // 
-            this.textBox77.Location = new System.Drawing.Point(95, 57);
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(57, 26);
-            this.textBox77.TabIndex = 13;
+            this.textBox_PulsePeriod.Location = new System.Drawing.Point(95, 57);
+            this.textBox_PulsePeriod.Name = "textBox_PulsePeriod";
+            this.textBox_PulsePeriod.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulsePeriod.TabIndex = 13;
+            this.textBox_PulsePeriod.Text = "16";
             // 
             // label102
             // 
@@ -5486,12 +5505,13 @@ namespace SocketServer
             this.label102.TabIndex = 12;
             this.label102.Text = "Period (us)";
             // 
-            // textBox78
+            // textBox_PulseWidth
             // 
-            this.textBox78.Location = new System.Drawing.Point(20, 57);
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(57, 26);
-            this.textBox78.TabIndex = 11;
+            this.textBox_PulseWidth.Location = new System.Drawing.Point(20, 57);
+            this.textBox_PulseWidth.Name = "textBox_PulseWidth";
+            this.textBox_PulseWidth.Size = new System.Drawing.Size(57, 26);
+            this.textBox_PulseWidth.TabIndex = 11;
+            this.textBox_PulseWidth.Text = "2";
             // 
             // label103
             // 
@@ -5504,12 +5524,13 @@ namespace SocketServer
             // 
             // groupBox33
             // 
+            this.groupBox33.Controls.Add(this.button76);
             this.groupBox33.Controls.Add(this.button32);
-            this.groupBox33.Controls.Add(this.textBox75);
+            this.groupBox33.Controls.Add(this.textBox_RFDelay);
             this.groupBox33.Controls.Add(this.label100);
-            this.groupBox33.Controls.Add(this.textBox74);
+            this.groupBox33.Controls.Add(this.textBox_RFPeriod);
             this.groupBox33.Controls.Add(this.label99);
-            this.groupBox33.Controls.Add(this.textBox73);
+            this.groupBox33.Controls.Add(this.textBox_RFWidth);
             this.groupBox33.Controls.Add(this.label98);
             this.groupBox33.Location = new System.Drawing.Point(15, 122);
             this.groupBox33.Name = "groupBox33";
@@ -5526,13 +5547,15 @@ namespace SocketServer
             this.button32.TabIndex = 16;
             this.button32.Text = "Set Tx Inhabit";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click_1);
             // 
-            // textBox75
+            // textBox_RFDelay
             // 
-            this.textBox75.Location = new System.Drawing.Point(180, 57);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(57, 26);
-            this.textBox75.TabIndex = 15;
+            this.textBox_RFDelay.Location = new System.Drawing.Point(180, 57);
+            this.textBox_RFDelay.Name = "textBox_RFDelay";
+            this.textBox_RFDelay.Size = new System.Drawing.Size(57, 26);
+            this.textBox_RFDelay.TabIndex = 15;
+            this.textBox_RFDelay.Text = "0";
             // 
             // label100
             // 
@@ -5543,12 +5566,13 @@ namespace SocketServer
             this.label100.TabIndex = 14;
             this.label100.Text = "Delay (us)";
             // 
-            // textBox74
+            // textBox_RFPeriod
             // 
-            this.textBox74.Location = new System.Drawing.Point(95, 57);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(57, 26);
-            this.textBox74.TabIndex = 13;
+            this.textBox_RFPeriod.Location = new System.Drawing.Point(95, 57);
+            this.textBox_RFPeriod.Name = "textBox_RFPeriod";
+            this.textBox_RFPeriod.Size = new System.Drawing.Size(57, 26);
+            this.textBox_RFPeriod.TabIndex = 13;
+            this.textBox_RFPeriod.Text = "16";
             // 
             // label99
             // 
@@ -5559,12 +5583,13 @@ namespace SocketServer
             this.label99.TabIndex = 12;
             this.label99.Text = "Period (us)";
             // 
-            // textBox73
+            // textBox_RFWidth
             // 
-            this.textBox73.Location = new System.Drawing.Point(20, 57);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(57, 26);
-            this.textBox73.TabIndex = 11;
+            this.textBox_RFWidth.Location = new System.Drawing.Point(20, 57);
+            this.textBox_RFWidth.Name = "textBox_RFWidth";
+            this.textBox_RFWidth.Size = new System.Drawing.Size(57, 26);
+            this.textBox_RFWidth.TabIndex = 11;
+            this.textBox_RFWidth.Text = "2";
             // 
             // label98
             // 
@@ -8179,6 +8204,33 @@ namespace SocketServer
             this.button75.Text = "Clear";
             this.button75.UseVisualStyleBackColor = true;
             this.button75.Click += new System.EventHandler(this.button75_Click_1);
+            // 
+            // button76
+            // 
+            this.button76.Location = new System.Drawing.Point(291, 29);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(75, 23);
+            this.button76.TabIndex = 17;
+            this.button76.Text = "Control";
+            this.button76.UseVisualStyleBackColor = true;
+            // 
+            // button77
+            // 
+            this.button77.Location = new System.Drawing.Point(291, 24);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(75, 23);
+            this.button77.TabIndex = 18;
+            this.button77.Text = "Control";
+            this.button77.UseVisualStyleBackColor = true;
+            // 
+            // button78
+            // 
+            this.button78.Location = new System.Drawing.Point(291, 23);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(75, 23);
+            this.button78.TabIndex = 19;
+            this.button78.Text = "Control";
+            this.button78.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -18500,7 +18552,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "90";
-            textBox_data.Text = textBox2.Text;
+            textBox_data.Text = textBox_TxInhibit.Text;
 
             SendDataToSystem();
         }
@@ -18572,7 +18624,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "98";
-            textBox_data.Text = textBox9.Text;
+            textBox_data.Text = textBox_PulseGenParms.Text;
 
             SendDataToSystem();
         }
@@ -18590,7 +18642,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9A";
-            textBox_data.Text = textBox11.Text;
+            textBox_data.Text = textBox_RFGenParms.Text;
 
             SendDataToSystem();
         }
@@ -19100,6 +19152,82 @@ Note: eStatus enum 
             textBox_SimulatorFWVersion.Text = "";
             textBox_SimulatorSN.Text = "";
             textBox_SimulatorID.Text = "";
+        }
+
+        private void button32_Click_1(object sender, EventArgs e)
+        {
+            int temp = 0;
+
+            string hexValue = "";
+            if (Int32.TryParse(textBox_RFWidth.Text, out temp))
+            {
+                 hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_RFPeriod.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_RFDelay.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            textBox_RFGenParms.Text = hexValue;
+
+            button110_Click(null, null);
+
+        }
+
+        private void button42_Click_2(object sender, EventArgs e)
+        {
+            int temp = 0;
+
+            string hexValue = "";
+            if (Int32.TryParse(textBox_PulseWidth.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_PulsePeriod.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_PulseDelay.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            textBox_TxInhibit.Text = hexValue;
+
+            button47_Click(null, null);
+        }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            int temp = 0;
+
+            string hexValue = "";
+            if (Int32.TryParse(textBox_PulseWidth2.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_PulsePeriod2.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox_PulseDelay2.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            textBox_PulseGenParms.Text = hexValue;
+
+            button57_Click(null, null);
         }
 
         private void ComboBox_SerialPortHistory_SelectedIndexChanged(object sender, EventArgs e)
