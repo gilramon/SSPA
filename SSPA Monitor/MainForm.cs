@@ -819,8 +819,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1856,17 +1856,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea5.AxisX.Title = "Freq";
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Title = "Power [dBm]";
+            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -4099,36 +4099,36 @@ namespace SocketServer
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(1313, 213);
+            this.button30.Location = new System.Drawing.Point(1369, 213);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(195, 45);
+            this.button30.Size = new System.Drawing.Size(139, 45);
             this.button30.TabIndex = 21;
             this.button30.Text = "Write to flash";
             this.button30.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(1313, 159);
+            this.button29.Location = new System.Drawing.Point(1369, 159);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(195, 45);
+            this.button29.Size = new System.Drawing.Size(139, 45);
             this.button29.TabIndex = 20;
             this.button29.Text = "Read from file";
             this.button29.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1313, 104);
+            this.button6.Location = new System.Drawing.Point(1369, 104);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(195, 45);
+            this.button6.Size = new System.Drawing.Size(139, 45);
             this.button6.TabIndex = 19;
             this.button6.Text = "Write to file";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1313, 48);
+            this.button2.Location = new System.Drawing.Point(1369, 48);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 45);
+            this.button2.Size = new System.Drawing.Size(139, 45);
             this.button2.TabIndex = 18;
             this.button2.Text = "Read from flash ";
             this.button2.UseVisualStyleBackColor = true;
@@ -4144,7 +4144,7 @@ namespace SocketServer
             this.tabControl1.Location = new System.Drawing.Point(5, 17);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1302, 644);
+            this.tabControl1.Size = new System.Drawing.Size(1358, 644);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -5084,7 +5084,7 @@ namespace SocketServer
             this.groupBox38.Controls.Add(this.textBox87);
             this.groupBox38.Controls.Add(this.textBox88);
             this.groupBox38.Controls.Add(this.label117);
-            this.groupBox38.Location = new System.Drawing.Point(421, 18);
+            this.groupBox38.Location = new System.Drawing.Point(421, 16);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Size = new System.Drawing.Size(324, 216);
             this.groupBox38.TabIndex = 84;
@@ -5728,9 +5728,9 @@ namespace SocketServer
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
             this.tabPage13.Controls.Add(this.textBox61);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Location = new System.Drawing.Point(4, 27);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage13.Size = new System.Drawing.Size(1294, 613);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -5933,9 +5933,9 @@ namespace SocketServer
             this.tabPage8.Controls.Add(this.label76);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView_DC4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 27);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage8.Size = new System.Drawing.Size(1350, 613);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -5944,7 +5944,7 @@ namespace SocketServer
             // 
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(678, 283);
+            this.label89.Location = new System.Drawing.Point(826, 295);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(100, 23);
             this.label89.TabIndex = 12;
@@ -5963,10 +5963,10 @@ namespace SocketServer
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
-            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(680, 313);
+            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(828, 325);
             this.dataGridView_VVAOffset1.Name = "dataGridView_VVAOffset1";
             this.dataGridView_VVAOffset1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(610, 292);
+            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(506, 280);
             this.dataGridView_VVAOffset1.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn10
@@ -6021,7 +6021,7 @@ namespace SocketServer
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(724, 4);
+            this.label88.Location = new System.Drawing.Point(872, 10);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(103, 23);
             this.label88.TabIndex = 10;
@@ -6041,10 +6041,10 @@ namespace SocketServer
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(680, 26);
+            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(828, 32);
             this.dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
             this.dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(610, 252);
+            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(506, 262);
             this.dataGridView_VVAOffset2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
@@ -6099,7 +6099,7 @@ namespace SocketServer
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(476, 11);
+            this.label87.Location = new System.Drawing.Point(550, 10);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(105, 23);
             this.label87.TabIndex = 8;
@@ -6112,10 +6112,10 @@ namespace SocketServer
             this.dataGridView_DCAControl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView_DCAControl.Location = new System.Drawing.Point(446, 42);
+            this.dataGridView_DCAControl.Location = new System.Drawing.Point(546, 42);
             this.dataGridView_DCAControl.Name = "dataGridView_DCAControl";
             this.dataGridView_DCAControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_DCAControl.Size = new System.Drawing.Size(226, 563);
+            this.dataGridView_DCAControl.Size = new System.Drawing.Size(274, 563);
             this.dataGridView_DCAControl.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn6
@@ -6134,7 +6134,7 @@ namespace SocketServer
             // 
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(352, 8);
+            this.label86.Location = new System.Drawing.Point(374, 9);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(118, 23);
             this.label86.TabIndex = 6;
@@ -6146,7 +6146,7 @@ namespace SocketServer
             this.dataGridView_PAVVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_PAVVA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5});
-            this.dataGridView_PAVVA.Location = new System.Drawing.Point(289, 42);
+            this.dataGridView_PAVVA.Location = new System.Drawing.Point(378, 42);
             this.dataGridView_PAVVA.Name = "dataGridView_PAVVA";
             this.dataGridView_PAVVA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_PAVVA.Size = new System.Drawing.Size(151, 563);
@@ -6190,7 +6190,7 @@ namespace SocketServer
             this.dataGridView_DC4.Location = new System.Drawing.Point(3, 45);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_DC4.Size = new System.Drawing.Size(275, 563);
+            this.dataGridView_DC4.Size = new System.Drawing.Size(369, 563);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -9956,13 +9956,14 @@ namespace SocketServer
         {
             int i = 0;
 
+            this.dataGridView_DC4.TopLeftHeaderCell.Value = "DC4 On/off";
             int RowText = -31;
             for ( i = 0; i < 32; i++)
             {
                 this.dataGridView_DC4.Rows.Add();
 
-                this.dataGridView_DC4.Rows[i].HeaderCell.Value = String.Format("{0}..{1}", RowText, RowText+3);
-                RowText += 4;
+                this.dataGridView_DC4.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText+3);
+                RowText += 3;
             }
 
             RowText = -3;
