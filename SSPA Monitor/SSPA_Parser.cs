@@ -350,7 +350,7 @@ namespace Monitor
 
             int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
 
-            return String.Format("\n Serial Number :[{0}] hex:[{1}]\n", SerialNumber, i_Parsedframe.Data);
+            return String.Format("\n Serial Number : <<{0}>>\n", SerialNumber);
         }
 
         string GetSystemStatus(KratosProtocolFrame i_Parsedframe)
@@ -447,8 +447,7 @@ namespace Monitor
             int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
-            return String.Format("\nHardware version:\n Unit major version [{0}]\n  " +
-                "Version day [{1}]\n Version month [{2}]\n Version year [{3}]",
+            return String.Format("\n Unit HW version <<{0},{1}/{2}/{3}>>\n  ",
                 UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
         }
         string GetFirmwareVertion(KratosProtocolFrame i_Parsedframe)
@@ -464,15 +463,14 @@ namespace Monitor
             int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);  
-            return String.Format("\n Unit major version [{0}]\n  " +
-                "Version day [{1}]\n Version month [{2}]\n Version year [{3}]", 
+            return String.Format("\n Unit FW version <<{0},{1}/{2}/{3}>>\n  ", 
                 UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
         }
 
         string GetSimulatorID(KratosProtocolFrame i_Parsedframe)
         {
 
-            return string.Format("\n Simulator ID [0x{0}]\n ", i_Parsedframe.Data);
+            return string.Format("\n Simulator ID <<0x{0}>>\n ", i_Parsedframe.Data);
 
         }
         string GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
