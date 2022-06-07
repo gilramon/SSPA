@@ -357,11 +357,12 @@ namespace Monitor
         {
             String ret = "";
             int DataLength = 0;
-            int.TryParse(i_Parsedframe.DataLength, out DataLength);
-
-            for (int i=0;i< DataLength - 2; i=i+2)
+            if (int.TryParse(i_Parsedframe.DataLength, out DataLength) == true)
             {
-                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+                for (int i = 0; i < DataLength - 2; i = i + 4)
+                {
+                    ret += "<<" + i_Parsedframe.Data.Substring(i, i + 4) + ">>";
+                }
             }
 
             return ret;
