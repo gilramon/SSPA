@@ -819,8 +819,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea48 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend48 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea50 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend50 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1856,17 +1856,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea48.AxisX.Title = "Freq";
-            chartArea48.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea48.AxisY.Title = "Power [dBm]";
-            chartArea48.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea48.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea48);
-            legend48.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend48.IsTextAutoFit = false;
-            legend48.Name = "Legend1";
-            legend48.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend48);
+            chartArea50.AxisX.Title = "Freq";
+            chartArea50.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea50.AxisY.Title = "Power [dBm]";
+            chartArea50.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea50.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea50);
+            legend50.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend50.IsTextAutoFit = false;
+            legend50.Name = "Legend1";
+            legend50.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend50);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -4325,7 +4325,6 @@ namespace SocketServer
             // 
             this.groupBox47.Controls.Add(this.button72);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT25);
-            this.groupBox47.Controls.Add(this.groupBox39);
             this.groupBox47.Controls.Add(this.label69);
             this.groupBox47.Controls.Add(this.label120);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT26);
@@ -4377,6 +4376,7 @@ namespace SocketServer
             this.groupBox47.Controls.Add(this.textBox_StatusUUT3);
             this.groupBox47.Controls.Add(this.label32);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT2);
+            this.groupBox47.Controls.Add(this.groupBox39);
             this.groupBox47.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox47.Location = new System.Drawing.Point(6, 216);
             this.groupBox47.Name = "groupBox47";
@@ -4405,6 +4405,7 @@ namespace SocketServer
             // 
             // groupBox39
             // 
+            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox39.Controls.Add(this.label115);
             this.groupBox39.Controls.Add(this.textBox9);
             this.groupBox39.Controls.Add(this.label71);
@@ -4546,7 +4547,7 @@ namespace SocketServer
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(261, 369);
+            this.label120.Location = new System.Drawing.Point(263, 363);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(90, 19);
             this.label120.TabIndex = 75;
@@ -11343,12 +11344,27 @@ namespace SocketServer
             }
 
         }
+
+        void CheckIfSerialPortOpen()
+        {
+            if(serialPort.IsOpen == true)
+            {
+                groupBox43.Enabled = true;
+            }
+            else
+            {
+                groupBox43.Enabled = false;
+            }
+        }
         //bool timer_General_TranssmitionPeriodicallyEnable = false;
         //uint NumbeOfTransmmitions = 0;
-         int  TimerClearModemStatus = 0;
+        int  TimerClearModemStatus = 0;
         //uint IntervalTimeBetweenTransmitions = 1;
         private void Timer_General_Tick(object sender, EventArgs e)
         {
+
+           // CheckIfSerialPortOpen();
+
 
             TCPClientConnection();
 
