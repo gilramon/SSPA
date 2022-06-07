@@ -376,7 +376,7 @@ namespace Monitor
 
             for (int i = 0; i < DataLength - 2; i = i + 2)
             {
-                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
             }
 
             return ret;
@@ -390,7 +390,7 @@ namespace Monitor
 
             for (int i = 0; i < DataLength - 2; i = i + 2)
             {
-                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
             }
 
             return ret;
@@ -404,7 +404,7 @@ namespace Monitor
 
             for (int i = 0; i < DataLength - 2; i = i + 2)
             {
-                ret += i_Parsedframe.Data.Substring(i, i + 2) + "\n";
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
             }
 
             return ret;
@@ -426,7 +426,7 @@ namespace Monitor
 
         string GetThermalSuperVisor(KratosProtocolFrame i_Parsedframe)
         {
-            return String.Format("\n recieved OK, Opcode :[{0}], Thermal[{1}] \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+            return String.Format("\n recieved OK, Opcode :[{0}], Thermal <<{1}>> \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
         }
 
         

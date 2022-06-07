@@ -812,8 +812,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea31 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend31 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1841,17 +1841,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea31.AxisX.Title = "Freq";
-            chartArea31.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea31.AxisY.Title = "Power [dBm]";
-            chartArea31.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea31.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea31);
-            legend31.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend31.IsTextAutoFit = false;
-            legend31.Name = "Legend1";
-            legend31.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend31);
+            chartArea38.AxisX.Title = "Freq";
+            chartArea38.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea38.AxisY.Title = "Power [dBm]";
+            chartArea38.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea38.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea38);
+            legend38.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend38.IsTextAutoFit = false;
+            legend38.Name = "Legend1";
+            legend38.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend38);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -4223,6 +4223,7 @@ namespace SocketServer
             this.textBox85.Size = new System.Drawing.Size(57, 26);
             this.textBox85.TabIndex = 19;
             this.textBox85.Text = "0";
+            this.textBox85.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox85_KeyDown);
             // 
             // label111
             // 
@@ -4249,6 +4250,7 @@ namespace SocketServer
             this.textBox82.Size = new System.Drawing.Size(57, 26);
             this.textBox82.TabIndex = 15;
             this.textBox82.Text = "0";
+            this.textBox82.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox82_KeyDown);
             // 
             // label107
             // 
@@ -4266,6 +4268,7 @@ namespace SocketServer
             this.textBox83.Size = new System.Drawing.Size(57, 26);
             this.textBox83.TabIndex = 13;
             this.textBox83.Text = "0";
+            this.textBox83.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox83_KeyDown);
             // 
             // label108
             // 
@@ -4283,6 +4286,7 @@ namespace SocketServer
             this.textBox84.Size = new System.Drawing.Size(57, 26);
             this.textBox84.TabIndex = 11;
             this.textBox84.Text = "0";
+            this.textBox84.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
             // 
             // label109
             // 
@@ -5125,7 +5129,7 @@ namespace SocketServer
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(128, 71);
+            this.textBox29.Location = new System.Drawing.Point(71, 71);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(54, 26);
             this.textBox29.TabIndex = 9;
@@ -5135,7 +5139,7 @@ namespace SocketServer
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(68, 71);
+            this.textBox30.Location = new System.Drawing.Point(135, 70);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(54, 26);
             this.textBox30.TabIndex = 8;
@@ -5264,6 +5268,7 @@ namespace SocketServer
             this.textBox24.TabIndex = 7;
             this.textBox24.Text = "0";
             this.toolTip1.SetToolTip(this.textBox24, "Press Enter to update");
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
             // label25
@@ -7567,7 +7572,7 @@ namespace SocketServer
             this.groupBox4.Size = new System.Drawing.Size(191, 217);
             this.groupBox4.TabIndex = 114;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Status information";
+            this.groupBox4.Text = "User information";
             // 
             // button97
             // 
@@ -18594,7 +18599,7 @@ Note: eStatus enum 
         private void button56_Click_1(object sender, EventArgs e)
         {
             textBox_Preamble.Text = PREAMBLE;
-            textBox_Opcode.Text = "96";
+            textBox_Opcode.Text = "97";
             textBox_data.Text = textBox8.Text;
 
             SendDataToSystem();
@@ -19106,7 +19111,10 @@ Note: eStatus enum 
             String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
 
 
-
+            if(TextDataRecieved.Length < 3)
+            {
+                return;
+            }
             textBox1.Text = TextDataRecieved[1];
             textBox2.Text = TextDataRecieved[3];
 
@@ -19230,42 +19238,91 @@ Note: eStatus enum 
 
         private async void button72_Click_4(object sender, EventArgs e)
         {
-            button67_Click(null, null);
-            await Task.Delay(500);
-            button68_Click(null, null);
-            await Task.Delay(500);
-            String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
-            textBox_SimulatorID.Text = TextDataRecieved[1];
+
+                GlobalSystemResultReceived = "";
+                button67_Click(null, null);
+                await Task.Delay(500);
+                button68_Click(null, null);
+                await Task.Delay(500);
+                button50_Click_1(null, null);
+                await Task.Delay(500);
+                String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+                
+                if(TextDataRecieved.Length < 50)
+                {
+                    return;
+                }
+            
+                textBox_StatusUUT1.Text = TextDataRecieved[1];
+                textBox_StatusUUT2.Text = TextDataRecieved[3];
+                textBox_StatusUUT3.Text = TextDataRecieved[5];
+                textBox_StatusUUT4.Text = TextDataRecieved[7];
+                textBox_StatusUUT5.Text = TextDataRecieved[9];
+                textBox_StatusUUT6.Text = TextDataRecieved[11];
+                textBox_StatusUUT7.Text = TextDataRecieved[13];
+                textBox_StatusUUT8.Text = TextDataRecieved[15];
+                textBox_StatusUUT9.Text = TextDataRecieved[17];
+                textBox_StatusUUT10.Text = TextDataRecieved[19];
+                textBox_StatusUUT11.Text = TextDataRecieved[21];
+                textBox_StatusUUT12.Text = TextDataRecieved[23];
+                textBox_StatusUUT13.Text = TextDataRecieved[25];
+                textBox_StatusUUT14.Text = TextDataRecieved[27];
+                textBox_StatusUUT15.Text = TextDataRecieved[29];
+                textBox_StatusUUT16.Text = TextDataRecieved[31];
+                textBox_StatusUUT17.Text = TextDataRecieved[33];
+                textBox_StatusUUT18.Text = TextDataRecieved[35];
+                textBox_StatusUUT19.Text = TextDataRecieved[37];
+                textBox_StatusUUT20.Text = TextDataRecieved[39];
+                textBox_StatusUUT21.Text = TextDataRecieved[41];
+                textBox_StatusUUT22.Text = TextDataRecieved[43];
+                textBox_StatusUUT23.Text = TextDataRecieved[45];
+                textBox_StatusUUT24.Text = TextDataRecieved[47];
+                textBox_StatusUUT25.Text = TextDataRecieved[49];
+                textBox_StatusUUT26.Text = TextDataRecieved[51];
+
+
+
 
         }
 
+
+        void SetPSUValues()
+        {
+            int temp = 0;
+
+            string hexValue = "";
+            if (Int32.TryParse(textBox24.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox25.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox26.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            if (Int32.TryParse(textBox27.Text, out temp))
+            {
+                hexValue += temp.ToString("X4");
+            }
+
+            textBox_SetPSUOutput.Text = hexValue;
+            button69_Click(null, null);
+            //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+        }
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
-             Random rnd = new Random();
+            
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
-                int temp = 0;
+                SetPSUValues();
 
-                string hexValue = "";
-                if (Int32.TryParse(textBox_RFWidth.Text, out temp))
-                {
-                    hexValue += temp.ToString("X4");
-                }
 
-                if (Int32.TryParse(textBox_RFPeriod.Text, out temp))
-                {
-                    hexValue += temp.ToString("X4");
-                }
-
-                if (Int32.TryParse(textBox_RFDelay.Text, out temp))
-                {
-                    hexValue += temp.ToString("X4");
-                }
-
-                textBox_RFGenParms.Text = hexValue;
-
-                button110_Click(null, null);
             }
         }
 
@@ -19273,7 +19330,7 @@ Note: eStatus enum 
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                SetPSUValues();
             }
         }
 
@@ -19281,7 +19338,7 @@ Note: eStatus enum 
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                SetPSUValues();
             }
         }
 
@@ -19289,7 +19346,7 @@ Note: eStatus enum 
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                SetPSUValues();
             }
         }
 
@@ -19302,15 +19359,42 @@ Note: eStatus enum 
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                int temp = 0;
+
+                string hexValue = "";
+                if (Int32.TryParse(textBox31.Text, out temp))
+                {
+                    hexValue += temp.ToString("X2");
+                }
+
+                textBox_SetVVAAtt.Text = hexValue;
+                button88_Click(null, null);
             }
         }
 
+        void SetDCAValues()
+        {
+            int temp = 0;
+
+            string hexValue = "";
+            if (Int32.TryParse(textBox29.Text, out temp))
+            {
+                hexValue += temp.ToString("X2");
+            }
+
+            if (Int32.TryParse(textBox30.Text, out temp))
+            {
+                hexValue += temp.ToString("X2");
+            }
+
+            textBox_SetDCAWithBusMode.Text = hexValue;
+            button87_Click(null, null);
+        }
         private void textBox30_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //textBox24.BackColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                SetDCAValues();
             }
         }
 
@@ -19452,6 +19536,79 @@ Note: eStatus enum 
         private void button73_Click_3(object sender, EventArgs e)
         {
             button53_Click_1(null, null);
+        }
+
+        private void textBox24_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox84_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int temp = 0;
+
+                string hexValue = "";
+                if (Int32.TryParse(textBox84.Text, out temp))
+                {
+                    hexValue += temp.ToString("X2");
+                }
+
+                textBox7.Text = hexValue;
+                button55_Click(null, null);
+            }
+        }
+
+        private void textBox83_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int temp = 0;
+
+                string hexValue = "";
+                if (Int32.TryParse(textBox83.Text, out temp))
+                {
+                    hexValue += temp.ToString("X2");
+                }
+
+                textBox6.Text = hexValue;
+                button54_Click(null, null);
+            }
+        }
+
+        private void textBox82_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int temp = 0;
+
+                string hexValue = "";
+                if (Int32.TryParse(textBox82.Text, out temp))
+                {
+                    hexValue += temp.ToString("X2");
+                }
+
+                textBox8.Text = hexValue;
+                button56_Click_1(null, null);
+            }
+        }
+
+        private void textBox85_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int temp = 0;
+
+                string hexValue = "";
+                if (Int32.TryParse(textBox85.Text, out temp))
+                {
+                    hexValue += temp.ToString("X2");
+                }
+
+                textBox8.Text = hexValue;
+                button116_Click(null, null);
+            }
         }
 
         private void ComboBox_SerialPortHistory_SelectedIndexChanged(object sender, EventArgs e)
