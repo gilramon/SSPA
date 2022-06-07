@@ -822,8 +822,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1057,22 +1057,25 @@ namespace SocketServer
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button71 = new System.Windows.Forms.Button();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.label71 = new System.Windows.Forms.Label();
+            this.textBox55 = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
             this.textBox56 = new System.Windows.Forms.TextBox();
             this.textBox57 = new System.Windows.Forms.TextBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.textBox55 = new System.Windows.Forms.TextBox();
+            this.label120 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.textBox42 = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
@@ -1175,6 +1178,7 @@ namespace SocketServer
             this.textBox84 = new System.Windows.Forms.TextBox();
             this.label109 = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.button78 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
             this.label104 = new System.Windows.Forms.Label();
@@ -1183,6 +1187,7 @@ namespace SocketServer
             this.textBox_PulseWidth2 = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.button77 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
@@ -1191,6 +1196,7 @@ namespace SocketServer
             this.textBox_PulseWidth = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.button76 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
@@ -1199,6 +1205,7 @@ namespace SocketServer
             this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button75 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.textBox_SimulatorSN = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
@@ -1463,13 +1470,6 @@ namespace SocketServer
             this.button_WriteAllToFlash = new System.Windows.Forms.Button();
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
-            this.button75 = new System.Windows.Forms.Button();
-            this.button76 = new System.Windows.Forms.Button();
-            this.button77 = new System.Windows.Forms.Button();
-            this.button78 = new System.Windows.Forms.Button();
-            this.label120 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1501,6 +1501,7 @@ namespace SocketServer
             this.tabControl1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.groupBox47.SuspendLayout();
+            this.groupBox39.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.groupBox45.SuspendLayout();
             this.groupBox44.SuspendLayout();
@@ -1556,7 +1557,6 @@ namespace SocketServer
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.groupBox39.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1863,17 +1863,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea8.AxisX.Title = "Freq";
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.AxisY.Title = "Power [dBm]";
-            chartArea8.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea8);
-            legend8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend8.IsTextAutoFit = false;
-            legend8.Name = "Legend1";
-            legend8.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend8);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -3210,9 +3210,9 @@ namespace SocketServer
             // 
             this.tabPage_Commands.Controls.Add(this.groupBox40);
             this.tabPage_Commands.Controls.Add(this.groupBox32);
-            this.tabPage_Commands.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Commands.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Commands.Name = "tabPage_Commands";
-            this.tabPage_Commands.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_Commands.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_Commands.TabIndex = 11;
             this.tabPage_Commands.Text = "SSPA Commands";
             this.tabPage_Commands.UseVisualStyleBackColor = true;
@@ -4238,6 +4238,61 @@ namespace SocketServer
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = " Status UUT";
             // 
+            // groupBox39
+            // 
+            this.groupBox39.Controls.Add(this.label71);
+            this.groupBox39.Controls.Add(this.textBox55);
+            this.groupBox39.Controls.Add(this.label69);
+            this.groupBox39.Controls.Add(this.label74);
+            this.groupBox39.Controls.Add(this.textBox54);
+            this.groupBox39.Controls.Add(this.textBox60);
+            this.groupBox39.Controls.Add(this.textBox53);
+            this.groupBox39.Controls.Add(this.label73);
+            this.groupBox39.Controls.Add(this.label67);
+            this.groupBox39.Controls.Add(this.textBox59);
+            this.groupBox39.Controls.Add(this.label70);
+            this.groupBox39.Controls.Add(this.label68);
+            this.groupBox39.Controls.Add(this.textBox58);
+            this.groupBox39.Controls.Add(this.label72);
+            this.groupBox39.Controls.Add(this.textBox56);
+            this.groupBox39.Controls.Add(this.textBox57);
+            this.groupBox39.Location = new System.Drawing.Point(787, 14);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(231, 353);
+            this.groupBox39.TabIndex = 76;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "Status Simulator";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.Black;
+            this.label71.Location = new System.Drawing.Point(19, 36);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(51, 19);
+            this.label71.TabIndex = 68;
+            this.label71.Text = "Ready";
+            this.label71.Click += new System.EventHandler(this.label71_Click);
+            // 
+            // textBox55
+            // 
+            this.textBox55.Location = new System.Drawing.Point(110, 257);
+            this.textBox55.Name = "textBox55";
+            this.textBox55.Size = new System.Drawing.Size(100, 26);
+            this.textBox55.TabIndex = 57;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.Black;
+            this.label69.Location = new System.Drawing.Point(16, 262);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(76, 19);
+            this.label69.TabIndex = 58;
+            this.label69.Text = "DC1 value";
+            // 
             // label74
             // 
             this.label74.AutoSize = true;
@@ -4250,6 +4305,13 @@ namespace SocketServer
             this.label74.Text = "SEU";
             this.label74.Click += new System.EventHandler(this.label74_Click);
             // 
+            // textBox54
+            // 
+            this.textBox54.Location = new System.Drawing.Point(110, 291);
+            this.textBox54.Name = "textBox54";
+            this.textBox54.Size = new System.Drawing.Size(100, 26);
+            this.textBox54.TabIndex = 59;
+            // 
             // textBox60
             // 
             this.textBox60.Location = new System.Drawing.Point(113, 160);
@@ -4257,6 +4319,13 @@ namespace SocketServer
             this.textBox60.Size = new System.Drawing.Size(100, 26);
             this.textBox60.TabIndex = 72;
             this.textBox60.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
+            // 
+            // textBox53
+            // 
+            this.textBox53.Location = new System.Drawing.Point(110, 227);
+            this.textBox53.Name = "textBox53";
+            this.textBox53.Size = new System.Drawing.Size(100, 26);
+            this.textBox53.TabIndex = 61;
             // 
             // label73
             // 
@@ -4270,6 +4339,17 @@ namespace SocketServer
             this.label73.Text = "Protection";
             this.label73.Click += new System.EventHandler(this.label73_Click);
             // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(16, 232);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(77, 19);
+            this.label67.TabIndex = 62;
+            this.label67.Text = "VVA value";
+            // 
             // textBox59
             // 
             this.textBox59.Location = new System.Drawing.Point(113, 130);
@@ -4277,6 +4357,17 @@ namespace SocketServer
             this.textBox59.Size = new System.Drawing.Size(100, 26);
             this.textBox59.TabIndex = 70;
             this.textBox59.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.Black;
+            this.label70.Location = new System.Drawing.Point(17, 295);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(76, 19);
+            this.label70.TabIndex = 63;
+            this.label70.Text = "DC2 value";
             // 
             // label68
             // 
@@ -4290,17 +4381,25 @@ namespace SocketServer
             this.label68.Text = "Over voltage";
             this.label68.Click += new System.EventHandler(this.label68_Click);
             // 
-            // label71
+            // textBox58
             // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ForeColor = System.Drawing.Color.Black;
-            this.label71.Location = new System.Drawing.Point(19, 36);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(51, 19);
-            this.label71.TabIndex = 68;
-            this.label71.Text = "Ready";
-            this.label71.Click += new System.EventHandler(this.label71_Click);
+            this.textBox58.Location = new System.Drawing.Point(113, 64);
+            this.textBox58.Name = "textBox58";
+            this.textBox58.Size = new System.Drawing.Size(100, 26);
+            this.textBox58.TabIndex = 64;
+            this.textBox58.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Black;
+            this.label72.Location = new System.Drawing.Point(0, 66);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(106, 19);
+            this.label72.TabIndex = 65;
+            this.label72.Text = "Under voltage";
+            this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
             // textBox56
             // 
@@ -4318,79 +4417,23 @@ namespace SocketServer
             this.textBox57.TabIndex = 66;
             this.textBox57.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
-            // label72
+            // label120
             // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(0, 66);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(106, 19);
-            this.label72.TabIndex = 65;
-            this.label72.Text = "Under voltage";
-            this.label72.Click += new System.EventHandler(this.label72_Click);
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.ForeColor = System.Drawing.Color.Black;
+            this.label120.Location = new System.Drawing.Point(470, 338);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(90, 19);
+            this.label120.TabIndex = 75;
+            this.label120.Text = "CAL SAR BIT";
             // 
-            // textBox58
+            // textBox1
             // 
-            this.textBox58.Location = new System.Drawing.Point(113, 64);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(100, 26);
-            this.textBox58.TabIndex = 64;
-            this.textBox58.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.Black;
-            this.label70.Location = new System.Drawing.Point(17, 295);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(76, 19);
-            this.label70.TabIndex = 63;
-            this.label70.Text = "DC2 value";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(16, 232);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(77, 19);
-            this.label67.TabIndex = 62;
-            this.label67.Text = "VVA value";
-            // 
-            // textBox53
-            // 
-            this.textBox53.Location = new System.Drawing.Point(110, 227);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(100, 26);
-            this.textBox53.TabIndex = 61;
-            // 
-            // textBox54
-            // 
-            this.textBox54.Location = new System.Drawing.Point(110, 291);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(100, 26);
-            this.textBox54.TabIndex = 59;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ForeColor = System.Drawing.Color.Black;
-            this.label69.Location = new System.Drawing.Point(16, 262);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(76, 19);
-            this.label69.TabIndex = 58;
-            this.label69.Text = "DC1 value";
-            // 
-            // textBox55
-            // 
-            this.textBox55.Location = new System.Drawing.Point(110, 257);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(100, 26);
-            this.textBox55.TabIndex = 57;
+            this.textBox1.Location = new System.Drawing.Point(564, 333);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 74;
             // 
             // label56
             // 
@@ -5062,7 +5105,7 @@ namespace SocketServer
             this.tabPage10.Controls.Add(this.groupBox1);
             this.tabPage10.Location = new System.Drawing.Point(4, 27);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1294, 613);
+            this.tabPage10.Size = new System.Drawing.Size(1350, 613);
             this.tabPage10.TabIndex = 5;
             this.tabPage10.Text = "Simulator";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -5379,6 +5422,15 @@ namespace SocketServer
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "GP pulse gen";
             // 
+            // button78
+            // 
+            this.button78.Location = new System.Drawing.Point(291, 23);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(75, 23);
+            this.button78.TabIndex = 19;
+            this.button78.Text = "Control";
+            this.button78.UseVisualStyleBackColor = true;
+            // 
             // button44
             // 
             this.button44.Location = new System.Drawing.Point(243, 60);
@@ -5457,6 +5509,15 @@ namespace SocketServer
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "Pulse gen";
             // 
+            // button77
+            // 
+            this.button77.Location = new System.Drawing.Point(291, 24);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(75, 23);
+            this.button77.TabIndex = 18;
+            this.button77.Text = "Control";
+            this.button77.UseVisualStyleBackColor = true;
+            // 
             // button42
             // 
             this.button42.Location = new System.Drawing.Point(243, 60);
@@ -5534,6 +5595,15 @@ namespace SocketServer
             this.groupBox33.TabIndex = 2;
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "RF gen";
+            // 
+            // button76
+            // 
+            this.button76.Location = new System.Drawing.Point(291, 29);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(75, 23);
+            this.button76.TabIndex = 17;
+            this.button76.Text = "Control";
+            this.button76.UseVisualStyleBackColor = true;
             // 
             // button32
             // 
@@ -5614,6 +5684,16 @@ namespace SocketServer
             this.groupBox1.Size = new System.Drawing.Size(387, 100);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // button75
+            // 
+            this.button75.Location = new System.Drawing.Point(7, 67);
+            this.button75.Name = "button75";
+            this.button75.Size = new System.Drawing.Size(75, 23);
+            this.button75.TabIndex = 11;
+            this.button75.Text = "Clear";
+            this.button75.UseVisualStyleBackColor = true;
+            this.button75.Click += new System.EventHandler(this.button75_Click_1);
             // 
             // label97
             // 
@@ -5724,9 +5804,9 @@ namespace SocketServer
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
             this.tabPage13.Controls.Add(this.textBox61);
-            this.tabPage13.Location = new System.Drawing.Point(4, 27);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1294, 613);
+            this.tabPage13.Size = new System.Drawing.Size(1350, 618);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -5911,7 +5991,7 @@ namespace SocketServer
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage7.Size = new System.Drawing.Size(1350, 618);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Page 1-4";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -5929,9 +6009,9 @@ namespace SocketServer
             this.tabPage8.Controls.Add(this.label76);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView_DC4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1350, 613);
+            this.tabPage8.Size = new System.Drawing.Size(1350, 618);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -6224,7 +6304,7 @@ namespace SocketServer
             this.tabPage9.Controls.Add(this.dataGridView8);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1294, 618);
+            this.tabPage9.Size = new System.Drawing.Size(1350, 618);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Page 8";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -8191,86 +8271,6 @@ namespace SocketServer
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // button75
-            // 
-            this.button75.Location = new System.Drawing.Point(7, 67);
-            this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(75, 23);
-            this.button75.TabIndex = 11;
-            this.button75.Text = "Clear";
-            this.button75.UseVisualStyleBackColor = true;
-            this.button75.Click += new System.EventHandler(this.button75_Click_1);
-            // 
-            // button76
-            // 
-            this.button76.Location = new System.Drawing.Point(291, 29);
-            this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(75, 23);
-            this.button76.TabIndex = 17;
-            this.button76.Text = "Control";
-            this.button76.UseVisualStyleBackColor = true;
-            // 
-            // button77
-            // 
-            this.button77.Location = new System.Drawing.Point(291, 24);
-            this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(75, 23);
-            this.button77.TabIndex = 18;
-            this.button77.Text = "Control";
-            this.button77.UseVisualStyleBackColor = true;
-            // 
-            // button78
-            // 
-            this.button78.Location = new System.Drawing.Point(291, 23);
-            this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(75, 23);
-            this.button78.TabIndex = 19;
-            this.button78.Text = "Control";
-            this.button78.UseVisualStyleBackColor = true;
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(470, 338);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(90, 19);
-            this.label120.TabIndex = 75;
-            this.label120.Text = "CAL SAR BIT";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(564, 333);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 74;
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Controls.Add(this.label71);
-            this.groupBox39.Controls.Add(this.textBox55);
-            this.groupBox39.Controls.Add(this.label69);
-            this.groupBox39.Controls.Add(this.label74);
-            this.groupBox39.Controls.Add(this.textBox54);
-            this.groupBox39.Controls.Add(this.textBox60);
-            this.groupBox39.Controls.Add(this.textBox53);
-            this.groupBox39.Controls.Add(this.label73);
-            this.groupBox39.Controls.Add(this.label67);
-            this.groupBox39.Controls.Add(this.textBox59);
-            this.groupBox39.Controls.Add(this.label70);
-            this.groupBox39.Controls.Add(this.label68);
-            this.groupBox39.Controls.Add(this.textBox58);
-            this.groupBox39.Controls.Add(this.label72);
-            this.groupBox39.Controls.Add(this.textBox56);
-            this.groupBox39.Controls.Add(this.textBox57);
-            this.groupBox39.Location = new System.Drawing.Point(787, 14);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(231, 353);
-            this.groupBox39.TabIndex = 76;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "Status Simulator";
-            // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 19);
@@ -8345,6 +8345,8 @@ namespace SocketServer
             this.tabPage6.ResumeLayout(false);
             this.groupBox47.ResumeLayout(false);
             this.groupBox47.PerformLayout();
+            this.groupBox39.ResumeLayout(false);
+            this.groupBox39.PerformLayout();
             this.groupBox46.ResumeLayout(false);
             this.groupBox46.PerformLayout();
             this.groupBox45.ResumeLayout(false);
@@ -8434,8 +8436,6 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox39.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9874,7 +9874,7 @@ namespace SocketServer
                 //Gil: Generate all the loggers
                 ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
                 SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, txtS1_Clear, checkBox_S1Pause, checkBox_S1RecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
-                SystemLogger = new TextBox_Logger("MiniAda", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
+                SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
 
 
                // LogSMS = new TextBox_Logger("Log_SMS", richTextBox_SMSConsole, button_ClearSMSConsole, checkBox_PauseSMSConsole, checkBox_RecordSMSConsole, null, null, null, null);
@@ -11211,7 +11211,7 @@ namespace SocketServer
                         {
                             SystemLogger.LogMessage(Color.Blue, Color.Azure, SystemResultReceived, true, false);
                         }
-
+                        GlobalSystemResultReceived = SystemResultReceived;
 
 
 
@@ -11236,6 +11236,7 @@ namespace SocketServer
             }
         }
 
+        String GlobalSystemResultReceived;
         int ChartIndex = 0;
         SSPA_Parser MiniAdaParser =  new SSPA_Parser();
         void ParseIncomeBuffer_TCPIP()
@@ -19162,29 +19163,29 @@ Note: eStatus enum 
 
         private async void button31_Click_1(object sender, EventArgs e)
         {
-            richTextBox_SSPA.Text = "";
+           // richTextBox_SSPA.Text = "";
             button108_Click(null, null);
             await Task.Delay(500);
-            String[] TextDataRecieved = richTextBox_SSPA.Text.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+            String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
             textBox_SimulatorID.Text = TextDataRecieved[1];
 
 
-            richTextBox_SSPA.Text = "";
+           // richTextBox_SSPA.Text = "";
             button48_Click_2(null, null);
             await Task.Delay(500);
-            TextDataRecieved = richTextBox_SSPA.Text.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+            TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
             textBox_SimulatorSN.Text = TextDataRecieved[1];
 
-            richTextBox_SSPA.Text = "";
+          //  richTextBox_SSPA.Text = "";
             button46_Click(null, null); 
             await Task.Delay(500);
-            TextDataRecieved = richTextBox_SSPA.Text.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+            TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
             textBox_SimulatorHWVersion.Text = TextDataRecieved[1];
 
-            richTextBox_SSPA.Text = "";
+          //  richTextBox_SSPA.Text = "";
             button45_Click(null, null);
             await Task.Delay(500);
-            TextDataRecieved = richTextBox_SSPA.Text.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+            TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
             textBox_SimulatorFWVersion.Text = TextDataRecieved[1];
         }
 
