@@ -558,22 +558,12 @@ namespace SocketServer
         private Label label75;
         private DataGridView dataGridView_DC4;
         private Label label76;
-        private Label label83;
-        private TextBox textBox67;
-        private Label label84;
-        private TextBox textBox68;
-        private Label label85;
-        private TextBox textBox69;
         private DataGridView dataGridView_OverUnder;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn Column3;
         private Label label82;
         private TextBox textBox66;
-        private Label label80;
-        private TextBox textBox64;
-        private Label label79;
-        private TextBox textBox63;
         private Label label78;
         private TextBox textBox62;
         private Label label77;
@@ -599,12 +589,8 @@ namespace SocketServer
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private Label label87;
-        private DataGridView dataGridView_DCAControl;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private Label label86;
         private DataGridView dataGridView_PAVVA;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private Label label92;
         private DataGridView dataGridView10;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
@@ -685,15 +671,31 @@ namespace SocketServer
         private CheckBox checkBox3;
         private CheckBox checkBox9;
         private CheckBox checkBox2;
-        private Button button57;
-        private Button button74;
         private Label label81;
-        private Button button76;
-        private Button button77;
-        private Button button78;
-        private Button button79;
-        private Button button80;
-        private Button button81;
+        private Label label117;
+        private Label label116;
+        private DataGridView dataGridView_Page1_4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn Column12;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridView dataGridView_ValPage0;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private DataGridViewTextBoxColumn Column14;
+        private DataGridViewTextBoxColumn Column15;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column17;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
+        private DataGridViewTextBoxColumn Column20;
+        private DataGridViewTextBoxColumn Column21;
         static readonly string PREAMBLE = "23";
         //bool m_Exit = false;
 
@@ -819,8 +821,8 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea50 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend50 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1194,22 +1196,12 @@ namespace SocketServer
             this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.label83 = new System.Windows.Forms.Label();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.textBox69 = new System.Windows.Forms.TextBox();
             this.dataGridView_OverUnder = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label82 = new System.Windows.Forms.Label();
             this.textBox66 = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.label79 = new System.Windows.Forms.Label();
-            this.textBox63 = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
             this.textBox62 = new System.Windows.Forms.TextBox();
             this.label77 = new System.Windows.Forms.Label();
@@ -1237,12 +1229,8 @@ namespace SocketServer
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label87 = new System.Windows.Forms.Label();
-            this.dataGridView_DCAControl = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label86 = new System.Windows.Forms.Label();
             this.dataGridView_PAVVA = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label76 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.dataGridView_DC4 = new System.Windows.Forms.DataGridView();
@@ -1455,15 +1443,31 @@ namespace SocketServer
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button74 = new System.Windows.Forms.Button();
             this.label81 = new System.Windows.Forms.Label();
-            this.button76 = new System.Windows.Forms.Button();
-            this.button77 = new System.Windows.Forms.Button();
-            this.button78 = new System.Windows.Forms.Button();
-            this.button79 = new System.Windows.Forms.Button();
-            this.button80 = new System.Windows.Forms.Button();
-            this.button81 = new System.Windows.Forms.Button();
+            this.dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1510,7 +1514,6 @@ namespace SocketServer
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DCAControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).BeginInit();
             this.tabPage9.SuspendLayout();
@@ -1550,6 +1553,8 @@ namespace SocketServer
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1856,17 +1861,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea50.AxisX.Title = "Freq";
-            chartArea50.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea50.AxisY.Title = "Power [dBm]";
-            chartArea50.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea50.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea50);
-            legend50.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend50.IsTextAutoFit = false;
-            legend50.Name = "Legend1";
-            legend50.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend50);
+            chartArea4.AxisX.Title = "Freq";
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.Title = "Power [dBm]";
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -4099,16 +4104,19 @@ namespace SocketServer
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(1369, 213);
+            this.button30.BackColor = System.Drawing.Color.Red;
+            this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button30.Location = new System.Drawing.Point(1369, 104);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(139, 45);
             this.button30.TabIndex = 21;
             this.button30.Text = "Write all to flash";
-            this.button30.UseVisualStyleBackColor = true;
+            this.button30.UseVisualStyleBackColor = false;
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(1369, 159);
+            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.Location = new System.Drawing.Point(1369, 349);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(139, 45);
             this.button29.TabIndex = 20;
@@ -4117,7 +4125,8 @@ namespace SocketServer
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1369, 104);
+            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1369, 294);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(139, 45);
             this.button6.TabIndex = 19;
@@ -4126,6 +4135,7 @@ namespace SocketServer
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(1369, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 45);
@@ -5641,22 +5651,11 @@ namespace SocketServer
             // 
             // tabPage13
             // 
-            this.tabPage13.Controls.Add(this.button57);
-            this.tabPage13.Controls.Add(this.button74);
+            this.tabPage13.Controls.Add(this.dataGridView_ValPage0);
             this.tabPage13.Controls.Add(this.label81);
-            this.tabPage13.Controls.Add(this.label83);
-            this.tabPage13.Controls.Add(this.textBox67);
-            this.tabPage13.Controls.Add(this.label84);
-            this.tabPage13.Controls.Add(this.textBox68);
-            this.tabPage13.Controls.Add(this.label85);
-            this.tabPage13.Controls.Add(this.textBox69);
             this.tabPage13.Controls.Add(this.dataGridView_OverUnder);
             this.tabPage13.Controls.Add(this.label82);
             this.tabPage13.Controls.Add(this.textBox66);
-            this.tabPage13.Controls.Add(this.label80);
-            this.tabPage13.Controls.Add(this.textBox64);
-            this.tabPage13.Controls.Add(this.label79);
-            this.tabPage13.Controls.Add(this.textBox63);
             this.tabPage13.Controls.Add(this.label78);
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
@@ -5668,54 +5667,6 @@ namespace SocketServer
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(1099, 586);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(115, 18);
-            this.label83.TabIndex = 23;
-            this.label83.Text = "TGA2700 DC4 Vdd";
-            // 
-            // textBox67
-            // 
-            this.textBox67.Location = new System.Drawing.Point(1227, 581);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(100, 26);
-            this.textBox67.TabIndex = 22;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(1111, 550);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(88, 18);
-            this.label84.TabIndex = 21;
-            this.label84.Text = "TGA2700 Vdd";
-            // 
-            // textBox68
-            // 
-            this.textBox68.Location = new System.Drawing.Point(1227, 544);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(100, 26);
-            this.textBox68.TabIndex = 20;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(1110, 510);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(86, 18);
-            this.label85.TabIndex = 19;
-            this.label85.Text = "TGA2700 Vgg";
-            // 
-            // textBox69
-            // 
-            this.textBox69.Location = new System.Drawing.Point(1227, 507);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(100, 26);
-            this.textBox69.TabIndex = 18;
-            // 
             // dataGridView_OverUnder
             // 
             this.dataGridView_OverUnder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -5726,7 +5677,7 @@ namespace SocketServer
             this.dataGridView_OverUnder.Location = new System.Drawing.Point(7, 241);
             this.dataGridView_OverUnder.Name = "dataGridView_OverUnder";
             this.dataGridView_OverUnder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_OverUnder.Size = new System.Drawing.Size(509, 361);
+            this.dataGridView_OverUnder.Size = new System.Drawing.Size(463, 361);
             this.dataGridView_OverUnder.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn3
@@ -5759,40 +5710,6 @@ namespace SocketServer
             this.textBox66.Name = "textBox66";
             this.textBox66.Size = new System.Drawing.Size(100, 26);
             this.textBox66.TabIndex = 15;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(1062, 445);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(152, 18);
-            this.label80.TabIndex = 12;
-            this.label80.Text = "Pulse over DC clamping";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox64
-            // 
-            this.textBox64.Location = new System.Drawing.Point(1225, 439);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(100, 26);
-            this.textBox64.TabIndex = 11;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(1110, 406);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(115, 18);
-            this.label79.TabIndex = 10;
-            this.label79.Text = "FW clamping (uS)";
-            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox63
-            // 
-            this.textBox63.Location = new System.Drawing.Point(1226, 400);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(100, 26);
-            this.textBox63.TabIndex = 9;
             // 
             // label78
             // 
@@ -5829,8 +5746,9 @@ namespace SocketServer
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.button76);
-            this.tabPage7.Controls.Add(this.button77);
+            this.tabPage7.Controls.Add(this.label117);
+            this.tabPage7.Controls.Add(this.label116);
+            this.tabPage7.Controls.Add(this.dataGridView_Page1_4);
             this.tabPage7.Location = new System.Drawing.Point(4, 27);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -5841,14 +5759,11 @@ namespace SocketServer
             // 
             // tabPage8
             // 
-            this.tabPage8.Controls.Add(this.button80);
-            this.tabPage8.Controls.Add(this.button81);
             this.tabPage8.Controls.Add(this.label89);
             this.tabPage8.Controls.Add(this.dataGridView_VVAOffset1);
             this.tabPage8.Controls.Add(this.label88);
             this.tabPage8.Controls.Add(this.dataGridView_VVAOffset2);
             this.tabPage8.Controls.Add(this.label87);
-            this.tabPage8.Controls.Add(this.dataGridView_DCAControl);
             this.tabPage8.Controls.Add(this.label86);
             this.tabPage8.Controls.Add(this.dataGridView_PAVVA);
             this.tabPage8.Controls.Add(this.label76);
@@ -5884,10 +5799,10 @@ namespace SocketServer
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
-            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(828, 345);
+            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(779, 340);
             this.dataGridView_VVAOffset1.Name = "dataGridView_VVAOffset1";
             this.dataGridView_VVAOffset1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(506, 260);
+            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(555, 265);
             this.dataGridView_VVAOffset1.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn10
@@ -5962,10 +5877,10 @@ namespace SocketServer
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(830, 42);
+            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(779, 42);
             this.dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
             this.dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(506, 270);
+            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(557, 270);
             this.dataGridView_VVAOffset2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
@@ -6020,42 +5935,17 @@ namespace SocketServer
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(596, 9);
+            this.label87.Location = new System.Drawing.Point(482, 8);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(105, 23);
             this.label87.TabIndex = 8;
             this.label87.Text = "DCA control";
             // 
-            // dataGridView_DCAControl
-            // 
-            this.dataGridView_DCAControl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView_DCAControl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_DCAControl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.dataGridView_DCAControl.Location = new System.Drawing.Point(600, 41);
-            this.dataGridView_DCAControl.Name = "dataGridView_DCAControl";
-            this.dataGridView_DCAControl.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_DCAControl.Size = new System.Drawing.Size(220, 563);
-            this.dataGridView_DCAControl.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "DCA1";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 66;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "DCA2";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 66;
-            // 
             // label86
             // 
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(374, 9);
+            this.label86.Location = new System.Drawing.Point(362, 8);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(118, 23);
             this.label86.TabIndex = 6;
@@ -6066,18 +5956,14 @@ namespace SocketServer
             this.dataGridView_PAVVA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_PAVVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_PAVVA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn5,
+            this.Column12,
+            this.Column13});
             this.dataGridView_PAVVA.Location = new System.Drawing.Point(378, 42);
             this.dataGridView_PAVVA.Name = "dataGridView_PAVVA";
             this.dataGridView_PAVVA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_PAVVA.Size = new System.Drawing.Size(214, 563);
+            this.dataGridView_PAVVA.Size = new System.Drawing.Size(395, 563);
             this.dataGridView_PAVVA.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Value";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 68;
             // 
             // label76
             // 
@@ -6141,8 +6027,6 @@ namespace SocketServer
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.button78);
-            this.tabPage9.Controls.Add(this.button79);
             this.tabPage9.Controls.Add(this.label92);
             this.tabPage9.Controls.Add(this.dataGridView10);
             this.tabPage9.Controls.Add(this.label91);
@@ -8222,24 +8106,6 @@ namespace SocketServer
             this.checkBox4.UseVisualStyleBackColor = true;
             this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
-            // button57
-            // 
-            this.button57.Location = new System.Drawing.Point(1187, 221);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(138, 45);
-            this.button57.TabIndex = 25;
-            this.button57.Text = "Write to flash Page0";
-            this.button57.UseVisualStyleBackColor = true;
-            // 
-            // button74
-            // 
-            this.button74.Location = new System.Drawing.Point(1187, 165);
-            this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(138, 45);
-            this.button74.TabIndex = 24;
-            this.button74.Text = "Read from flash Page0";
-            this.button74.UseVisualStyleBackColor = true;
-            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -8249,59 +8115,182 @@ namespace SocketServer
             this.label81.TabIndex = 26;
             this.label81.Text = "TGA2700 DC4 Vdd";
             // 
-            // button76
+            // dataGridView_Page1_4
             // 
-            this.button76.Location = new System.Drawing.Point(1193, 266);
-            this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(127, 45);
-            this.button76.TabIndex = 27;
-            this.button76.Text = "Write to flash Page 1-4";
-            this.button76.UseVisualStyleBackColor = true;
+            this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21});
+            this.dataGridView_Page1_4.Location = new System.Drawing.Point(10, 37);
+            this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
+            this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Page1_4.Size = new System.Drawing.Size(1025, 570);
+            this.dataGridView_Page1_4.TabIndex = 28;
             // 
-            // button77
+            // label116
             // 
-            this.button77.Location = new System.Drawing.Point(1193, 210);
-            this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(127, 45);
-            this.button77.TabIndex = 26;
-            this.button77.Text = "Read from flash Page 1-4";
-            this.button77.UseVisualStyleBackColor = true;
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.Location = new System.Drawing.Point(204, 9);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(70, 23);
+            this.label116.TabIndex = 30;
+            this.label116.Text = "46 dBm";
             // 
-            // button78
+            // label117
             // 
-            this.button78.Location = new System.Drawing.Point(1220, 298);
-            this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(127, 45);
-            this.button78.TabIndex = 29;
-            this.button78.Text = "Write to flash Page 8";
-            this.button78.UseVisualStyleBackColor = true;
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.Location = new System.Drawing.Point(519, 9);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(108, 23);
+            this.label117.TabIndex = 31;
+            this.label117.Text = "DC4-40 dBm";
             // 
-            // button79
+            // dataGridViewTextBoxColumn5
             // 
-            this.button79.Location = new System.Drawing.Point(1220, 242);
-            this.button79.Name = "button79";
-            this.button79.Size = new System.Drawing.Size(127, 45);
-            this.button79.TabIndex = 28;
-            this.button79.Text = "Read from flash Page 8";
-            this.button79.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn5.HeaderText = "VVA";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 59;
             // 
-            // button80
+            // Column12
             // 
-            this.button80.Location = new System.Drawing.Point(1154, 9);
-            this.button80.Name = "button80";
-            this.button80.Size = new System.Drawing.Size(182, 23);
-            this.button80.TabIndex = 29;
-            this.button80.Text = "Write to flash Page 5-7";
-            this.button80.UseVisualStyleBackColor = true;
+            this.Column12.HeaderText = "DCA1";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 66;
             // 
-            // button81
+            // Column13
             // 
-            this.button81.Location = new System.Drawing.Point(959, 9);
-            this.button81.Name = "button81";
-            this.button81.Size = new System.Drawing.Size(182, 23);
-            this.button81.TabIndex = 28;
-            this.button81.Text = "Read from flash Page 5-7";
-            this.button81.UseVisualStyleBackColor = true;
+            this.Column13.HeaderText = "DCA2";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 66;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "F0";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "F1";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "F2";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.HeaderText = "F3";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "F4";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "F5";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "F6";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.HeaderText = "F7";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 47;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "F0";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 47;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "F1";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 47;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "F2";
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 47;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "F3";
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 47;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "F4";
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 47;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "F5";
+            this.Column19.Name = "Column19";
+            this.Column19.Width = 47;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "F6";
+            this.Column20.Name = "Column20";
+            this.Column20.Width = 47;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "F7";
+            this.Column21.Name = "Column21";
+            this.Column21.Width = 47;
+            // 
+            // dataGridView_ValPage0
+            // 
+            this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29});
+            this.dataGridView_ValPage0.Location = new System.Drawing.Point(476, 241);
+            this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
+            this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_ValPage0.Size = new System.Drawing.Size(336, 361);
+            this.dataGridView_ValPage0.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             // 
             // MainForm
             // 
@@ -8399,11 +8388,11 @@ namespace SocketServer
             this.tabPage13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OverUnder)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DCAControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).EndInit();
             this.tabPage9.ResumeLayout(false);
@@ -8466,6 +8455,8 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -10032,40 +10023,47 @@ namespace SocketServer
             this.dataGridView_DC4.TopLeftHeaderCell.Value = "Temperature (C)";
             this.dataGridView8.TopLeftHeaderCell.Value = "Temperature (C)";
             this.dataGridView_PAVVA.TopLeftHeaderCell.Value = "Power (dBm)";
-            this.dataGridView_DCAControl.TopLeftHeaderCell.Value = "Power (dBm)";
+          
             this.dataGridView_VVAOffset2.TopLeftHeaderCell.Value = "Power (dBm)";
             this.dataGridView_VVAOffset1.TopLeftHeaderCell.Value = "Power (dBm)";
             this.dataGridView_OverUnder.TopLeftHeaderCell.Value = "Volts (V)";
+            this.dataGridView_Page1_4.TopLeftHeaderCell.Value = "VVA";
+
             
 
 
 
-
-
             int RowText = -31;
+            int Temperature = -31;
+
+            //this.dataGridView_Page1_4.RowTemplate.Height = 17;
+            //this.dataGridView_DC4.RowTemplate.Height = 17;
+            //this.dataGridView8.RowTemplate.Height = 17;
+
             for ( i = 0; i < 32; i++)
             {
+
+                this.dataGridView_Page1_4.Rows.Add();
+                this.dataGridView_Page1_4.Rows[i].HeaderCell.Value = String.Format("{0}C", Temperature);
+                
+
                 this.dataGridView8.Rows.Add();
                 this.dataGridView8.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText + 3);
                 
                 this.dataGridView_DC4.Rows.Add();
                 this.dataGridView_DC4.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText+3);
                 RowText += 3;
+                Temperature += 4;
             }
 
             RowText = -3;
             for ( i = 0; i < 21; i++)
             {
-
-                this.dataGridView_DCAControl.Rows.Add();
                 this.dataGridView_PAVVA.Rows.Add();
-
-                this.dataGridView_DCAControl.Rows[i].HeaderCell.Value = String.Format("{0} dBm", RowText);
                 this.dataGridView_PAVVA.Rows[i].HeaderCell.Value = String.Format("{0} dBm", RowText);
                 RowText--;
             }
-            this.dataGridView_DCAControl.Rows[0].HeaderCell.Value += " <";
-            this.dataGridView_DCAControl.Rows[20].HeaderCell.Value += " >";
+
             this.dataGridView_PAVVA.Rows[0].HeaderCell.Value += " <";
             this.dataGridView_PAVVA.Rows[20].HeaderCell.Value += " >";
 
@@ -10116,6 +10114,32 @@ namespace SocketServer
             dataGridView_OverUnder.Rows.Add();
             dataGridView_OverUnder.Rows[i].HeaderCell.Value = "48V current";
             i++;
+
+
+            i = 0;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "Pulse over DC clamping";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 Vgg";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 Vdd";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 DC4 Vdd";
+            i++;
+
+
+
         }
 
         private void FindControls(Control ctl)
