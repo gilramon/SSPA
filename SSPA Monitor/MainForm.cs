@@ -696,6 +696,7 @@ namespace SocketServer
         private DataGridViewTextBoxColumn Column19;
         private DataGridViewTextBoxColumn Column20;
         private DataGridViewTextBoxColumn Column21;
+        private Button button57;
         static readonly string PREAMBLE = "23";
         //bool m_Exit = false;
 
@@ -821,9 +822,13 @@ namespace SocketServer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -1468,6 +1473,7 @@ namespace SocketServer
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button57 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1861,17 +1867,17 @@ namespace SocketServer
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(194, 2);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(1350, 665);
@@ -5388,6 +5394,7 @@ namespace SocketServer
             // 
             // groupBox44
             // 
+            this.groupBox44.Controls.Add(this.button57);
             this.groupBox44.Controls.Add(this.textBox2);
             this.groupBox44.Controls.Add(this.textBox1);
             this.groupBox44.Controls.Add(this.button70);
@@ -5418,7 +5425,7 @@ namespace SocketServer
             // 
             // button70
             // 
-            this.button70.Location = new System.Drawing.Point(16, 58);
+            this.button70.Location = new System.Drawing.Point(6, 44);
             this.button70.Name = "button70";
             this.button70.Size = new System.Drawing.Size(75, 23);
             this.button70.TabIndex = 6;
@@ -5448,7 +5455,7 @@ namespace SocketServer
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(16, 28);
+            this.label19.Location = new System.Drawing.Point(5, 15);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(68, 23);
             this.label19.TabIndex = 0;
@@ -5997,6 +6004,9 @@ namespace SocketServer
             this.dataGridView_DC4.Location = new System.Drawing.Point(3, 45);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_DC4.Size = new System.Drawing.Size(369, 563);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8117,6 +8127,8 @@ namespace SocketServer
             // 
             // dataGridView_Page1_4
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -8138,7 +8150,18 @@ namespace SocketServer
             this.Column21});
             this.dataGridView_Page1_4.Location = new System.Drawing.Point(10, 37);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Page1_4.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(1025, 570);
             this.dataGridView_Page1_4.TabIndex = 28;
             // 
@@ -8146,7 +8169,7 @@ namespace SocketServer
             // 
             this.label116.AutoSize = true;
             this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.Location = new System.Drawing.Point(204, 9);
+            this.label116.Location = new System.Drawing.Point(189, 3);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(70, 23);
             this.label116.TabIndex = 30;
@@ -8156,7 +8179,7 @@ namespace SocketServer
             // 
             this.label117.AutoSize = true;
             this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.Location = new System.Drawing.Point(519, 9);
+            this.label117.Location = new System.Drawing.Point(519, 4);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(108, 23);
             this.label117.TabIndex = 31;
@@ -8291,6 +8314,16 @@ namespace SocketServer
             // 
             this.dataGridViewTextBoxColumn29.HeaderText = "Value";
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // button57
+            // 
+            this.button57.Location = new System.Drawing.Point(6, 76);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(75, 23);
+            this.button57.TabIndex = 12;
+            this.button57.Text = "Clear";
+            this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.button57_Click_1);
             // 
             // MainForm
             // 
@@ -10036,9 +10069,10 @@ namespace SocketServer
             int RowText = -31;
             int Temperature = -31;
 
-            //this.dataGridView_Page1_4.RowTemplate.Height = 17;
-            //this.dataGridView_DC4.RowTemplate.Height = 17;
-            //this.dataGridView8.RowTemplate.Height = 17;
+            //this.dataGridView_Page1_4.RowTemplate.Height = 20;
+            ////this.dataGridView_Page1_4.RowsDefaultCellStyle.Font = new Font("Calibri", 8);
+            //this.dataGridView_DC4.RowTemplate.Height = 20;
+            //this.dataGridView8.RowTemplate.Height = 20;
 
             for ( i = 0; i < 32; i++)
             {
@@ -19299,12 +19333,19 @@ Note: eStatus enum 
             textBox_SimulatorFWVersion.Text = TextDataRecieved[7];
         }
 
-        private void button75_Click_1(object sender, EventArgs e)
+        void ClearVersions()
         {
             textBox_SimulatorHWVersion.Text = "";
             textBox_SimulatorFWVersion.Text = "";
             textBox_SimulatorSN.Text = "";
             textBox_SimulatorID.Text = "";
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+        private void button75_Click_1(object sender, EventArgs e)
+        {
+            ClearVersions();
         }
 
         private void button32_Click_1(object sender, EventArgs e)
@@ -19756,6 +19797,11 @@ Note: eStatus enum 
                 textBox8.Text = hexValue;
                 button116_Click(null, null);
             }
+        }
+
+        private void button57_Click_1(object sender, EventArgs e)
+        {
+            ClearVersions();
         }
 
         private void ComboBox_SerialPortHistory_SelectedIndexChanged(object sender, EventArgs e)
