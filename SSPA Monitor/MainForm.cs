@@ -552,8 +552,6 @@ namespace SocketServer
         private TextBox textBox58;
         private TabPage tabPage13;
         private Button button30;
-        private Button button29;
-        private Button button6;
         private Button button2;
         private Label label75;
         private DataGridView dataGridView_DC4;
@@ -697,6 +695,10 @@ namespace SocketServer
         private DataGridViewTextBoxColumn Column20;
         private DataGridViewTextBoxColumn Column21;
         private Button button57;
+        private GroupBox groupBox48;
+        private Button button6;
+        private Button button29;
+        private GroupBox groupBox38;
         static readonly string PREAMBLE = "23";
         //bool m_Exit = false;
 
@@ -824,11 +826,10 @@ namespace SocketServer
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -1054,12 +1055,14 @@ namespace SocketServer
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
             this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button73 = new System.Windows.Forms.Button();
             this.label114 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
@@ -1077,17 +1080,6 @@ namespace SocketServer
             this.groupBox47 = new System.Windows.Forms.GroupBox();
             this.button72 = new System.Windows.Forms.Button();
             this.textBox_StatusUUT25 = new System.Windows.Forms.TextBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label120 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT26 = new System.Windows.Forms.TextBox();
@@ -1139,7 +1131,21 @@ namespace SocketServer
             this.textBox_StatusUUT3 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT2 = new System.Windows.Forms.TextBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.label115 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.textBox58 = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.textBox57 = new System.Windows.Forms.TextBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.button44 = new System.Windows.Forms.Button();
             this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
             this.label104 = new System.Windows.Forms.Label();
@@ -1166,6 +1172,7 @@ namespace SocketServer
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.button42 = new System.Windows.Forms.Button();
             this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
@@ -1174,6 +1181,7 @@ namespace SocketServer
             this.textBox_PulseWidth = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.button57 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button70 = new System.Windows.Forms.Button();
@@ -1193,6 +1201,7 @@ namespace SocketServer
             this.textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.button32 = new System.Windows.Forms.Button();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
@@ -1201,6 +1210,9 @@ namespace SocketServer
             this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label81 = new System.Windows.Forms.Label();
             this.dataGridView_OverUnder = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1212,6 +1224,25 @@ namespace SocketServer
             this.label77 = new System.Windows.Forms.Label();
             this.textBox61 = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label89 = new System.Windows.Forms.Label();
             this.dataGridView_VVAOffset1 = new System.Windows.Forms.DataGridView();
@@ -1236,6 +1267,9 @@ namespace SocketServer
             this.label87 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
             this.dataGridView_PAVVA = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label76 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.dataGridView_DC4 = new System.Windows.Forms.DataGridView();
@@ -1438,42 +1472,11 @@ namespace SocketServer
             this.button_WriteAllToFlash = new System.Windows.Forms.Button();
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.label115 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button57 = new System.Windows.Forms.Button();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1515,8 +1518,10 @@ namespace SocketServer
             this.groupBox1.SuspendLayout();
             this.groupBox33.SuspendLayout();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OverUnder)).BeginInit();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).BeginInit();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).BeginInit();
@@ -1559,8 +1564,8 @@ namespace SocketServer
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
+            this.groupBox38.SuspendLayout();
+            this.groupBox48.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -3702,9 +3707,9 @@ namespace SocketServer
             this.tabPage2.Controls.Add(this.button61);
             this.tabPage2.Controls.Add(this.button60);
             this.tabPage2.Controls.Add(this.button59);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(949, 604);
+            this.tabPage2.Size = new System.Drawing.Size(949, 609);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "WB UUT";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -4096,10 +4101,8 @@ namespace SocketServer
             // 
             // groupBox43
             // 
-            this.groupBox43.Controls.Add(this.button30);
-            this.groupBox43.Controls.Add(this.button29);
-            this.groupBox43.Controls.Add(this.button6);
-            this.groupBox43.Controls.Add(this.button2);
+            this.groupBox43.Controls.Add(this.groupBox48);
+            this.groupBox43.Controls.Add(this.groupBox38);
             this.groupBox43.Controls.Add(this.tabControl1);
             this.groupBox43.Location = new System.Drawing.Point(3, 8);
             this.groupBox43.Name = "groupBox43";
@@ -4112,37 +4115,17 @@ namespace SocketServer
             // 
             this.button30.BackColor = System.Drawing.Color.Red;
             this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(1369, 104);
+            this.button30.Location = new System.Drawing.Point(6, 79);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(139, 45);
             this.button30.TabIndex = 21;
             this.button30.Text = "Write all to flash";
             this.button30.UseVisualStyleBackColor = false;
             // 
-            // button29
-            // 
-            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(1369, 349);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(139, 45);
-            this.button29.TabIndex = 20;
-            this.button29.Text = "Read all from file";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1369, 294);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 45);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Write all to file";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1369, 48);
+            this.button2.Location = new System.Drawing.Point(6, 23);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 45);
             this.button2.TabIndex = 18;
@@ -4207,6 +4190,54 @@ namespace SocketServer
             this.groupBox37.Size = new System.Drawing.Size(616, 149);
             this.groupBox37.TabIndex = 17;
             this.groupBox37.TabStop = false;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(550, 55);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(36, 28);
+            this.checkBox4.TabIndex = 28;
+            this.checkBox4.Text = "On";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(483, 53);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(36, 28);
+            this.checkBox3.TabIndex = 27;
+            this.checkBox3.Text = "On";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(406, 52);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(36, 28);
+            this.checkBox9.TabIndex = 26;
+            this.checkBox9.Text = "On";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(254, 55);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(36, 28);
+            this.checkBox2.TabIndex = 20;
+            this.checkBox2.Text = "On";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
             // button73
             // 
@@ -4418,134 +4449,6 @@ namespace SocketServer
             this.textBox_StatusUUT25.ReadOnly = true;
             this.textBox_StatusUUT25.Size = new System.Drawing.Size(100, 26);
             this.textBox_StatusUUT25.TabIndex = 57;
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox39.Controls.Add(this.label115);
-            this.groupBox39.Controls.Add(this.textBox9);
-            this.groupBox39.Controls.Add(this.label71);
-            this.groupBox39.Controls.Add(this.label74);
-            this.groupBox39.Controls.Add(this.textBox60);
-            this.groupBox39.Controls.Add(this.label73);
-            this.groupBox39.Controls.Add(this.textBox59);
-            this.groupBox39.Controls.Add(this.label68);
-            this.groupBox39.Controls.Add(this.textBox58);
-            this.groupBox39.Controls.Add(this.label72);
-            this.groupBox39.Controls.Add(this.textBox56);
-            this.groupBox39.Controls.Add(this.textBox57);
-            this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox39.Location = new System.Drawing.Point(463, 14);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(231, 222);
-            this.groupBox39.TabIndex = 76;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "Status Simulator";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ForeColor = System.Drawing.Color.Black;
-            this.label71.Location = new System.Drawing.Point(19, 36);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(51, 19);
-            this.label71.TabIndex = 68;
-            this.label71.Text = "Ready";
-            this.label71.Click += new System.EventHandler(this.label71_Click);
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(20, 164);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(35, 19);
-            this.label74.TabIndex = 73;
-            this.label74.Text = "SEU";
-            this.label74.Click += new System.EventHandler(this.label74_Click);
-            // 
-            // textBox60
-            // 
-            this.textBox60.Location = new System.Drawing.Point(113, 160);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.ReadOnly = true;
-            this.textBox60.Size = new System.Drawing.Size(100, 26);
-            this.textBox60.TabIndex = 72;
-            this.textBox60.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ForeColor = System.Drawing.Color.Black;
-            this.label73.Location = new System.Drawing.Point(20, 134);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(81, 19);
-            this.label73.TabIndex = 71;
-            this.label73.Text = "Protection";
-            this.label73.Click += new System.EventHandler(this.label73_Click);
-            // 
-            // textBox59
-            // 
-            this.textBox59.Location = new System.Drawing.Point(113, 126);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.ReadOnly = true;
-            this.textBox59.Size = new System.Drawing.Size(100, 26);
-            this.textBox59.TabIndex = 70;
-            this.textBox59.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.Black;
-            this.label68.Location = new System.Drawing.Point(9, 99);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(97, 19);
-            this.label68.TabIndex = 69;
-            this.label68.Text = "Over voltage";
-            this.label68.Click += new System.EventHandler(this.label68_Click);
-            // 
-            // textBox58
-            // 
-            this.textBox58.Location = new System.Drawing.Point(113, 94);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.ReadOnly = true;
-            this.textBox58.Size = new System.Drawing.Size(100, 26);
-            this.textBox58.TabIndex = 64;
-            this.textBox58.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(6, 65);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(106, 19);
-            this.label72.TabIndex = 65;
-            this.label72.Text = "Under voltage";
-            this.label72.Click += new System.EventHandler(this.label72_Click);
-            // 
-            // textBox56
-            // 
-            this.textBox56.Location = new System.Drawing.Point(113, 31);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.ReadOnly = true;
-            this.textBox56.Size = new System.Drawing.Size(100, 26);
-            this.textBox56.TabIndex = 67;
-            this.textBox56.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
-            // 
-            // textBox57
-            // 
-            this.textBox57.Location = new System.Drawing.Point(113, 63);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.ReadOnly = true;
-            this.textBox57.Size = new System.Drawing.Size(100, 26);
-            this.textBox57.TabIndex = 66;
-            this.textBox57.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
             // label69
             // 
@@ -5033,6 +4936,153 @@ namespace SocketServer
             this.textBox_StatusUUT2.Size = new System.Drawing.Size(100, 26);
             this.textBox_StatusUUT2.TabIndex = 0;
             // 
+            // groupBox39
+            // 
+            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox39.Controls.Add(this.label115);
+            this.groupBox39.Controls.Add(this.textBox9);
+            this.groupBox39.Controls.Add(this.label71);
+            this.groupBox39.Controls.Add(this.label74);
+            this.groupBox39.Controls.Add(this.textBox60);
+            this.groupBox39.Controls.Add(this.label73);
+            this.groupBox39.Controls.Add(this.textBox59);
+            this.groupBox39.Controls.Add(this.label68);
+            this.groupBox39.Controls.Add(this.textBox58);
+            this.groupBox39.Controls.Add(this.label72);
+            this.groupBox39.Controls.Add(this.textBox56);
+            this.groupBox39.Controls.Add(this.textBox57);
+            this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox39.Location = new System.Drawing.Point(463, 14);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Size = new System.Drawing.Size(231, 222);
+            this.groupBox39.TabIndex = 76;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "Status Simulator";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.Black;
+            this.label115.Location = new System.Drawing.Point(2, 195);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(105, 19);
+            this.label115.TabIndex = 75;
+            this.label115.Text = "Tx OVT hazard";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(113, 191);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(100, 26);
+            this.textBox9.TabIndex = 74;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.Black;
+            this.label71.Location = new System.Drawing.Point(19, 36);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(51, 19);
+            this.label71.TabIndex = 68;
+            this.label71.Text = "Ready";
+            this.label71.Click += new System.EventHandler(this.label71_Click);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.Black;
+            this.label74.Location = new System.Drawing.Point(20, 164);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(35, 19);
+            this.label74.TabIndex = 73;
+            this.label74.Text = "SEU";
+            this.label74.Click += new System.EventHandler(this.label74_Click);
+            // 
+            // textBox60
+            // 
+            this.textBox60.Location = new System.Drawing.Point(113, 160);
+            this.textBox60.Name = "textBox60";
+            this.textBox60.ReadOnly = true;
+            this.textBox60.Size = new System.Drawing.Size(100, 26);
+            this.textBox60.TabIndex = 72;
+            this.textBox60.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.Black;
+            this.label73.Location = new System.Drawing.Point(20, 134);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(81, 19);
+            this.label73.TabIndex = 71;
+            this.label73.Text = "Protection";
+            this.label73.Click += new System.EventHandler(this.label73_Click);
+            // 
+            // textBox59
+            // 
+            this.textBox59.Location = new System.Drawing.Point(113, 126);
+            this.textBox59.Name = "textBox59";
+            this.textBox59.ReadOnly = true;
+            this.textBox59.Size = new System.Drawing.Size(100, 26);
+            this.textBox59.TabIndex = 70;
+            this.textBox59.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.Black;
+            this.label68.Location = new System.Drawing.Point(9, 99);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(97, 19);
+            this.label68.TabIndex = 69;
+            this.label68.Text = "Over voltage";
+            this.label68.Click += new System.EventHandler(this.label68_Click);
+            // 
+            // textBox58
+            // 
+            this.textBox58.Location = new System.Drawing.Point(113, 94);
+            this.textBox58.Name = "textBox58";
+            this.textBox58.ReadOnly = true;
+            this.textBox58.Size = new System.Drawing.Size(100, 26);
+            this.textBox58.TabIndex = 64;
+            this.textBox58.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Black;
+            this.label72.Location = new System.Drawing.Point(6, 65);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(106, 19);
+            this.label72.TabIndex = 65;
+            this.label72.Text = "Under voltage";
+            this.label72.Click += new System.EventHandler(this.label72_Click);
+            // 
+            // textBox56
+            // 
+            this.textBox56.Location = new System.Drawing.Point(113, 31);
+            this.textBox56.Name = "textBox56";
+            this.textBox56.ReadOnly = true;
+            this.textBox56.Size = new System.Drawing.Size(100, 26);
+            this.textBox56.TabIndex = 67;
+            this.textBox56.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
+            // 
+            // textBox57
+            // 
+            this.textBox57.Location = new System.Drawing.Point(113, 63);
+            this.textBox57.Name = "textBox57";
+            this.textBox57.ReadOnly = true;
+            this.textBox57.Size = new System.Drawing.Size(100, 26);
+            this.textBox57.TabIndex = 66;
+            this.textBox57.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
+            // 
             // groupBox35
             // 
             this.groupBox35.Controls.Add(this.checkBox8);
@@ -5049,6 +5099,18 @@ namespace SocketServer
             this.groupBox35.TabIndex = 18;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "GP pulse gen";
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(293, 21);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(64, 28);
+            this.checkBox8.TabIndex = 19;
+            this.checkBox8.Text = "Control";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // button44
             // 
@@ -5331,6 +5393,18 @@ namespace SocketServer
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "Pulse gen";
             // 
+            // checkBox7
+            // 
+            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(293, 20);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(64, 28);
+            this.checkBox7.TabIndex = 18;
+            this.checkBox7.Text = "Control";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
             // button42
             // 
             this.button42.Location = new System.Drawing.Point(243, 60);
@@ -5406,6 +5480,16 @@ namespace SocketServer
             this.groupBox44.Size = new System.Drawing.Size(322, 100);
             this.groupBox44.TabIndex = 0;
             this.groupBox44.TabStop = false;
+            // 
+            // button57
+            // 
+            this.button57.Location = new System.Drawing.Point(6, 76);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(75, 23);
+            this.button57.TabIndex = 12;
+            this.button57.Text = "Clear";
+            this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.button57_Click_1);
             // 
             // textBox2
             // 
@@ -5595,6 +5679,18 @@ namespace SocketServer
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "RF gen";
             // 
+            // checkBox6
+            // 
+            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(293, 19);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(64, 28);
+            this.checkBox6.TabIndex = 17;
+            this.checkBox6.Text = "Control";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
             // button32
             // 
             this.button32.Location = new System.Drawing.Point(243, 60);
@@ -5667,12 +5763,37 @@ namespace SocketServer
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
             this.tabPage13.Controls.Add(this.textBox61);
-            this.tabPage13.Location = new System.Drawing.Point(4, 27);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1350, 613);
+            this.tabPage13.Size = new System.Drawing.Size(1350, 618);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_ValPage0
+            // 
+            this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29});
+            this.dataGridView_ValPage0.Location = new System.Drawing.Point(476, 241);
+            this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
+            this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_ValPage0.Size = new System.Drawing.Size(336, 361);
+            this.dataGridView_ValPage0.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(529, 704);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(115, 18);
+            this.label81.TabIndex = 26;
+            this.label81.Text = "TGA2700 DC4 Vdd";
             // 
             // dataGridView_OverUnder
             // 
@@ -5764,6 +5885,154 @@ namespace SocketServer
             this.tabPage7.Text = "Page 1-4";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.Location = new System.Drawing.Point(519, 4);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(108, 23);
+            this.label117.TabIndex = 31;
+            this.label117.Text = "DC4-40 dBm";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.Location = new System.Drawing.Point(189, 3);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(70, 23);
+            this.label116.TabIndex = 30;
+            this.label116.Text = "46 dBm";
+            // 
+            // dataGridView_Page1_4
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21});
+            this.dataGridView_Page1_4.Location = new System.Drawing.Point(10, 37);
+            this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
+            this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.Size = new System.Drawing.Size(1025, 570);
+            this.dataGridView_Page1_4.TabIndex = 28;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "F0";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "F1";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.HeaderText = "F2";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.HeaderText = "F3";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "F4";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "F5";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "F6";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.HeaderText = "F7";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 47;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "F0";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 47;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "F1";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 47;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "F2";
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 47;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "F3";
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 47;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "F4";
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 47;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "F5";
+            this.Column19.Name = "Column19";
+            this.Column19.Width = 47;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "F6";
+            this.Column20.Name = "Column20";
+            this.Column20.Width = 47;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "F7";
+            this.Column21.Name = "Column21";
+            this.Column21.Width = 47;
+            // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.label89);
@@ -5776,9 +6045,9 @@ namespace SocketServer
             this.tabPage8.Controls.Add(this.label76);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView_DC4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1350, 613);
+            this.tabPage8.Size = new System.Drawing.Size(1350, 618);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -5972,6 +6241,24 @@ namespace SocketServer
             this.dataGridView_PAVVA.Size = new System.Drawing.Size(395, 563);
             this.dataGridView_PAVVA.TabIndex = 5;
             // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "VVA";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 59;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "DCA1";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 66;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "DCA2";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 66;
+            // 
             // label76
             // 
             this.label76.AutoSize = true;
@@ -6004,9 +6291,9 @@ namespace SocketServer
             this.dataGridView_DC4.Location = new System.Drawing.Point(3, 45);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(369, 563);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -6043,9 +6330,9 @@ namespace SocketServer
             this.tabPage9.Controls.Add(this.dataGridView9);
             this.tabPage9.Controls.Add(this.label90);
             this.tabPage9.Controls.Add(this.dataGridView8);
-            this.tabPage9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1350, 613);
+            this.tabPage9.Size = new System.Drawing.Size(1350, 618);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Page 8";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -8013,317 +8300,48 @@ namespace SocketServer
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // checkBox6
-            // 
-            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(293, 19);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(64, 28);
-            this.checkBox6.TabIndex = 17;
-            this.checkBox6.Text = "Control";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(293, 20);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(64, 28);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "Control";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(293, 21);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(64, 28);
-            this.checkBox8.TabIndex = 19;
-            this.checkBox8.Text = "Control";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label115.ForeColor = System.Drawing.Color.Black;
-            this.label115.Location = new System.Drawing.Point(2, 195);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(105, 19);
-            this.label115.TabIndex = 75;
-            this.label115.Text = "Tx OVT hazard";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(113, 191);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 26);
-            this.textBox9.TabIndex = 74;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(254, 55);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(36, 28);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "On";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(406, 52);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(36, 28);
-            this.checkBox9.TabIndex = 26;
-            this.checkBox9.Text = "On";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(483, 53);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(36, 28);
-            this.checkBox3.TabIndex = 27;
-            this.checkBox3.Text = "On";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(550, 55);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(36, 28);
-            this.checkBox4.TabIndex = 28;
-            this.checkBox4.Text = "On";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(529, 704);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(115, 18);
-            this.label81.TabIndex = 26;
-            this.label81.Text = "TGA2700 DC4 Vdd";
-            // 
-            // dataGridView_Page1_4
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
-            this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.Column20,
-            this.Column21});
-            this.dataGridView_Page1_4.Location = new System.Drawing.Point(10, 37);
-            this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Page1_4.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.Size = new System.Drawing.Size(1025, 570);
-            this.dataGridView_Page1_4.TabIndex = 28;
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.Location = new System.Drawing.Point(189, 3);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(70, 23);
-            this.label116.TabIndex = 30;
-            this.label116.Text = "46 dBm";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.Location = new System.Drawing.Point(519, 4);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(108, 23);
-            this.label117.TabIndex = 31;
-            this.label117.Text = "DC4-40 dBm";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "VVA";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 59;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "DCA1";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 66;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "DCA2";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 66;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "F0";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "F1";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.HeaderText = "F2";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.HeaderText = "F3";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.HeaderText = "F4";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.HeaderText = "F5";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.HeaderText = "F6";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.HeaderText = "F7";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.Width = 47;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "F0";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 47;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "F1";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 47;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "F2";
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 47;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "F3";
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 47;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "F4";
-            this.Column18.Name = "Column18";
-            this.Column18.Width = 47;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "F5";
-            this.Column19.Name = "Column19";
-            this.Column19.Width = 47;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "F6";
-            this.Column20.Name = "Column20";
-            this.Column20.Width = 47;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "F7";
-            this.Column21.Name = "Column21";
-            this.Column21.Width = 47;
-            // 
-            // dataGridView_ValPage0
-            // 
-            this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn29});
-            this.dataGridView_ValPage0.Location = new System.Drawing.Point(476, 241);
-            this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
-            this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_ValPage0.Size = new System.Drawing.Size(336, 361);
-            this.dataGridView_ValPage0.TabIndex = 27;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.HeaderText = "Value";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            // 
-            // button57
-            // 
-            this.button57.Location = new System.Drawing.Point(6, 76);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(75, 23);
-            this.button57.TabIndex = 12;
-            this.button57.Text = "Clear";
-            this.button57.UseVisualStyleBackColor = true;
-            this.button57.Click += new System.EventHandler(this.button57_Click_1);
+            // groupBox38
+            // 
+            this.groupBox38.Controls.Add(this.button2);
+            this.groupBox38.Controls.Add(this.button30);
+            this.groupBox38.Location = new System.Drawing.Point(1365, 44);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Size = new System.Drawing.Size(154, 134);
+            this.groupBox38.TabIndex = 22;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "Flash";
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.button6);
+            this.groupBox48.Controls.Add(this.button29);
+            this.groupBox48.Location = new System.Drawing.Point(1365, 190);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(154, 134);
+            this.groupBox48.TabIndex = 23;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "CSV file";
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(6, 23);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(139, 45);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Read CSV file";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.Transparent;
+            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.Location = new System.Drawing.Point(6, 79);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(139, 45);
+            this.button29.TabIndex = 21;
+            this.button29.Text = "Write CSV file";
+            this.button29.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -8419,9 +8437,11 @@ namespace SocketServer
             this.groupBox33.PerformLayout();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OverUnder)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).EndInit();
@@ -8488,8 +8508,8 @@ namespace SocketServer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
+            this.groupBox38.ResumeLayout(false);
+            this.groupBox48.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
