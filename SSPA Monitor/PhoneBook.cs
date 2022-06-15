@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-using System.Xml;
 using System.IO;
+using System.Linq;
+using System.Xml;
+using System.Xml.Serialization;
 
 
 
@@ -49,7 +48,7 @@ namespace Monitor
         /// <returns></returns>
         public override string ToString()
         {
-            return Name + " (" + Phone + ")" + "[" + Notes + "]"  ;
+            return Name + " (" + Phone + ")" + "[" + Notes + "]";
         }
     }
 
@@ -75,7 +74,7 @@ namespace Monitor
 
                 }
             }
-            catch 
+            catch
             {
 
             }
@@ -83,7 +82,7 @@ namespace Monitor
 
         public void SortPhoneBookByNotes()
         {
-           Contacts =  Contacts.OrderBy(q => q.Notes).ToList();
+            Contacts = Contacts.OrderBy(q => q.Notes).ToList();
         }
 
         public PhoneBook(List<PhoneBookContact> i_Phones)
@@ -164,14 +163,14 @@ namespace Monitor
             ImportedContacts = (List<PhoneBookContact>)deserializer.Deserialize(textReader);
             textReader.Close();
 
-            foreach(PhoneBookContact Contact in ImportedContacts)
+            foreach (PhoneBookContact Contact in ImportedContacts)
             {
                 Contacts.Add(Contact);
             }
-            
+
         }
 
-        
+
 
     }
 }

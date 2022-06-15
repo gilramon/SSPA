@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Serialization;
-using System.Xml;
-using System.Text.RegularExpressions;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Monitor
 {
@@ -35,7 +35,7 @@ namespace Monitor
         public List<OneSystemCommand> ALLCommandsList = new List<OneSystemCommand>();
         public CLI_Parser(List<String> i_InputList)
         {
-//            var commandsList = ALLCommandsList.Where(c => c.Name.Length > 4);
+            //            var commandsList = ALLCommandsList.Where(c => c.Name.Length > 4);
             ALLCommandsList = DeSerializeStringListToCommandsList(i_InputList);
 
             //Gil: Sort the list by ABC
@@ -154,7 +154,7 @@ namespace Monitor
         public List<String> SerializeCommandsToStringList()
         {
             List<String> ret = new List<String>();
-            
+
             foreach (OneSystemCommand cmd in ALLCommandsList)
             {
                 ret.Add(String.Format("{0}|||{1}", cmd.Opcode, cmd.Help));

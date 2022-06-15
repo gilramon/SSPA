@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
-using System.Text.RegularExpressions;
+using System.Linq;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace SocketServer
 {
@@ -26,7 +24,7 @@ namespace SocketServer
         readonly Button m_ClearTextBoxButton;
         readonly CheckBox m_PauseCheckBox;
         readonly CheckBox m_RecordTofile;
-        readonly CheckBox m_StopLogging ;
+        readonly CheckBox m_StopLogging;
         readonly TextBox m_RecognizePatternTextBox;
         readonly TextBox m_RecognizePatternTextBox2;
         readonly TextBox m_RecognizePatternTextBox3;
@@ -34,7 +32,7 @@ namespace SocketServer
         string m_log_file_name;
 
         bool m_PauseText = false;
-       // bool m_ExitLog = false;
+        // bool m_ExitLog = false;
 
         public TextBox_Logger(string i_LoggerName, RichTextBox i_txtBox, Button i_ClearTextBoxButton, CheckBox i_PauseCheckBox, CheckBox i_RecordTofile, TextBox i_RecognizePatternTextBox, TextBox i_RecognizePatternTextBox2, TextBox i_RecognizePatternTextBox3, CheckBox i_StopLogging)
         {
@@ -45,10 +43,10 @@ namespace SocketServer
             m_RecordTofile = i_RecordTofile;
             //m_RecognizePatternCheckbox = i_RecognizePatternCheckbox;
             m_RecognizePatternTextBox = i_RecognizePatternTextBox;
-         //   m_RecognizePatternCheckbox2 = i_RecognizePatternCheckbox2;
+            //   m_RecognizePatternCheckbox2 = i_RecognizePatternCheckbox2;
             m_RecognizePatternTextBox2 = i_RecognizePatternTextBox2;
             m_RecognizePatternTextBox3 = i_RecognizePatternTextBox3;
-            m_StopLogging =i_StopLogging;
+            m_StopLogging = i_StopLogging;
 
             if (m_ClearTextBoxButton != null)
             {
@@ -214,7 +212,7 @@ namespace SocketServer
                         m_log_file_name = "Log_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss") + "_General_Record" + ".txt";
                     }
 
-                    LogMessage(Color.Brown, m_txtBox.BackColor, "File " + m_log_file_name + " opened in directory \" " +  subPath + "\" \n\n", true, true);
+                    LogMessage(Color.Brown, m_txtBox.BackColor, "File " + m_log_file_name + " opened in directory \" " + subPath + "\" \n\n", true, true);
                 }
                 catch (Exception)
                 {
@@ -245,7 +243,7 @@ namespace SocketServer
                 }
 
                 DateTime dt = DateTime.Now;
-               
+
 
 
 
@@ -268,7 +266,7 @@ namespace SocketServer
 
                 }
 
-                if ( m_RecognizePatternTextBox != null)
+                if (m_RecognizePatternTextBox != null)
                 {
                     if (i_msg.Contains(m_RecognizePatternTextBox.Text) && m_RecognizePatternTextBox.Text != string.Empty)
                     {
@@ -276,17 +274,17 @@ namespace SocketServer
                     }
                 }
 
-                if ( m_RecognizePatternTextBox2 != null)
+                if (m_RecognizePatternTextBox2 != null)
                 {
-                    if ( i_msg.Contains(m_RecognizePatternTextBox2.Text) && m_RecognizePatternTextBox2.Text != string.Empty)
+                    if (i_msg.Contains(m_RecognizePatternTextBox2.Text) && m_RecognizePatternTextBox2.Text != string.Empty)
                     {
                         i_TextBackgroundColor = Color.Cyan;
                     }
                 }
 
-                if ( m_RecognizePatternTextBox3 != null)
+                if (m_RecognizePatternTextBox3 != null)
                 {
-                    if ( i_msg.Contains(m_RecognizePatternTextBox3.Text) && m_RecognizePatternTextBox3.Text != string.Empty)
+                    if (i_msg.Contains(m_RecognizePatternTextBox3.Text) && m_RecognizePatternTextBox3.Text != string.Empty)
                     {
                         i_TextBackgroundColor = Color.Magenta;
                     }
@@ -335,61 +333,61 @@ namespace SocketServer
 
                     m_txtBox.BeginInvoke(new EventHandler(delegate
                     {
-                            //LogClass[] LogClassArrayCopy = new LogClass[LogClassArray.Count];
-                            List<LogClass> LogClassArrayCopy = new List<LogClass>();
-                            for(int i = LogClassArray.Count - 1; i >= 0; i--)  //Gil: Trick to avoid exception list modification
-                            {
-                                LogClassArrayCopy.Add(LogClassArray[i]);
-                            }
+                        //LogClass[] LogClassArrayCopy = new LogClass[LogClassArray.Count];
+                        List<LogClass> LogClassArrayCopy = new List<LogClass>();
+                        for (int i = LogClassArray.Count - 1; i >= 0; i--)  //Gil: Trick to avoid exception list modification
+                        {
+                            LogClassArrayCopy.Add(LogClassArray[i]);
+                        }
 
 
-                            //foreach (LogClass log in LogClassArray)
-                            //{
-                            //    LogClassArrayCopy.Add(log);
-                            //}
-                           // LogClassArray.CopyTo(LogClassArrayCopy);
-                            LogClassArray.Clear();
+                        //foreach (LogClass log in LogClassArray)
+                        //{
+                        //    LogClassArrayCopy.Add(log);
+                        //}
+                        // LogClassArray.CopyTo(LogClassArrayCopy);
+                        LogClassArray.Clear();
                         // foreach (LogClass log in LogClassArrayCopy)
                         for (int i = LogClassArrayCopy.Count - 1; i >= 0; i--)
                         {
                             LogClass log = LogClassArrayCopy[i];
-                                //if (PrintMesseges)
+                            //if (PrintMesseges)
+                            {
+
+                                try
                                 {
-                            
-                                        try
-                                        {
-                                          //  m_txtBox.SelectionFont = new Font("",10,FontStyle.Regular);
-                                            m_txtBox.SelectionColor = log.Msg_Color;
-                                            m_txtBox.SelectionBackColor = log.Msg_TextBackgroundColor;
-                                            m_txtBox.AppendText(log.Msg);
-                                            m_txtBox.ScrollToCaret();
+                                    //  m_txtBox.SelectionFont = new Font("",10,FontStyle.Regular);
+                                    m_txtBox.SelectionColor = log.Msg_Color;
+                                    m_txtBox.SelectionBackColor = log.Msg_TextBackgroundColor;
+                                    m_txtBox.AppendText(log.Msg);
+                                    m_txtBox.ScrollToCaret();
 
-                                            NumOfPrints++;
-                                            if (NumOfPrints > 10000)
-                                            {
-                                                m_txtBox.Clear();
-                                                NumOfPrints = 0;
-                                            }
-                                            Thread.Sleep(10);
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            m_txtBox.Clear();
-                                            m_txtBox.AppendText(ex.ToString());
+                                    NumOfPrints++;
+                                    if (NumOfPrints > 10000)
+                                    {
+                                        m_txtBox.Clear();
+                                        NumOfPrints = 0;
+                                    }
+                                    Thread.Sleep(10);
+                                }
+                                catch (Exception ex)
+                                {
+                                    m_txtBox.Clear();
+                                    m_txtBox.AppendText(ex.ToString());
 
-                                        }
-                            
                                 }
 
                             }
+
+                        }
                     }));
 
                     //Lastindex = 0;
                     IsPrinting = false;
-                    
+
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 try
                 {

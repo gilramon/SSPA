@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Monitor
 {
     class SSPA_Parser
     {
-        public  string ConvertHex(String hexString)
+        public string ConvertHex(String hexString)
         {
             try
             {
@@ -23,7 +20,7 @@ namespace Monitor
                         char character = System.Convert.ToChar(decval);
                         ascii += character;
                     }
-                
+
                 }
                 return ascii;
             }
@@ -32,7 +29,7 @@ namespace Monitor
         }
 
 
-        public  float ConvertFloat(String hexString)
+        public float ConvertFloat(String hexString)
         {
             try
             {
@@ -47,18 +44,18 @@ namespace Monitor
             return 0;
         }
 
-         byte[] StringToByteArray(string hex)
+        byte[] StringToByteArray(string hex)
         {
 
-                return Enumerable.Range(0, hex.Length)
-                                 .Where(x => x % 2 == 0)
-                                 .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
-                                 .ToArray();
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
 
 
         }
 
-       // object ReturnValue =null;
+        // object ReturnValue =null;
         public class GetRecodIQDataClass
         {
             public Int16[] I1;
@@ -76,37 +73,37 @@ namespace Monitor
         //}
 
 
-         string UnHandaledPreample(KratosProtocolFrame i_Parsedframe)
+        string UnHandaledPreample(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Unkown Preample Unhandled: [{0}] \n", i_Parsedframe.Preamble);
         }
-         string UnHandledOpcode(KratosProtocolFrame i_Parsedframe)
+        string UnHandledOpcode(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Opcode Unhandled: [{0}] \n", i_Parsedframe.Opcode);
         }
-         string RetriveIQData(KratosProtocolFrame i_Parsedframe)
+        string RetriveIQData(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n IQ data retrive: [{0}] \n", i_Parsedframe.Data);
         }
-         string PlayIQData(KratosProtocolFrame i_Parsedframe)
+        string PlayIQData(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n IQ Data sent to play \n");
         }
-         string GetUbloxData(KratosProtocolFrame i_Parsedframe)
+        string GetUbloxData(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Ublox data: [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
 
-         string SetRxChannelStateCal(KratosProtocolFrame i_Parsedframe)
+        string SetRxChannelStateCal(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n RX channel state RX/CAL have been set \n");
         }
-         string RecordIQDaraSelectSource(KratosProtocolFrame i_Parsedframe)
+        string RecordIQDaraSelectSource(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n Record IQ data source selected \n");
         }
@@ -120,18 +117,18 @@ namespace Monitor
             NumberOfSamples /= 8;
 
             IQData = new GetRecodIQDataClass();
-            IQData.I1 = new Int16[NumberOfSamples-1];
-            IQData.Q1 = new Int16[NumberOfSamples-1];
-            IQData.I2 = new Int16[NumberOfSamples-1];
-            IQData.Q2 = new Int16[NumberOfSamples-1];
+            IQData.I1 = new Int16[NumberOfSamples - 1];
+            IQData.Q1 = new Int16[NumberOfSamples - 1];
+            IQData.I2 = new Int16[NumberOfSamples - 1];
+            IQData.Q2 = new Int16[NumberOfSamples - 1];
 
-            for (int i = 1; i < (DataBytes.Length/8)-1 ; i++)// Gil: i=1 beacuse we throw the first sample
+            for (int i = 1; i < (DataBytes.Length / 8) - 1; i++)// Gil: i=1 beacuse we throw the first sample
             {
                 int Index = i * 8;
                 IQData.I1[i] = (Int16)(DataBytes[Index] | DataBytes[Index + 1] << 8);
-                IQData.Q1[i] = (Int16)(DataBytes[Index + 2]  | DataBytes[Index + 3] << 8);
-                IQData.I2[i] = (Int16)(DataBytes[Index + 4]  | DataBytes[Index + 5] << 8);
-                IQData.Q2[i] = (Int16)(DataBytes[Index + 6]  | DataBytes[Index + 7] << 8);
+                IQData.Q1[i] = (Int16)(DataBytes[Index + 2] | DataBytes[Index + 3] << 8);
+                IQData.I2[i] = (Int16)(DataBytes[Index + 4] | DataBytes[Index + 5] << 8);
+                IQData.Q2[i] = (Int16)(DataBytes[Index + 6] | DataBytes[Index + 7] << 8);
             }
 
 
@@ -139,58 +136,58 @@ namespace Monitor
 
             return String.Format("\n IQ samples Data: [{0}]  Data Length: [{1}] Bytes\n", i_Parsedframe.Data, DataBytes.Length);
         }
-         string SetGPIOValue(KratosProtocolFrame i_Parsedframe)
+        string SetGPIOValue(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n GPIO value have been set \n");
         }
 
-         string GetGPIOValue(KratosProtocolFrame i_Parsedframe)
+        string GetGPIOValue(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n GPIO Value  [{0}]  \n", i_Parsedframe.Data);
         }
-         string SetGPIODirection(KratosProtocolFrame i_Parsedframe)
+        string SetGPIODirection(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n GPIO direction have been set \n");
         }
 
-         string GetGPIODirection(KratosProtocolFrame i_Parsedframe)
+        string GetGPIODirection(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n GPIO direction  [{0}]  \n", i_Parsedframe.Data);
         }
-         string TxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
+        string TxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n Tx Get RF PLL lock Detect [{0}]  \n", i_Parsedframe.Data);
         }
-         string RxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
+        string RxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n Rx Get RF PLL lock Detect [{0}]  \n", i_Parsedframe.Data);
         }
-         string GetDCA(KratosProtocolFrame i_Parsedframe)
+        string GetDCA(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n DCA [{0}] dBm \n", ConvertFloat(i_Parsedframe.Data));
         }
 
-         string SetDCA(KratosProtocolFrame i_Parsedframe)
+        string SetDCA(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n DCA has been set \n");
         }
-         string GetRXChannelGain(KratosProtocolFrame i_Parsedframe)
+        string GetRXChannelGain(KratosProtocolFrame i_Parsedframe)
         {
             int intValue = int.Parse(i_Parsedframe.Data, System.Globalization.NumberStyles.HexNumber);
             return String.Format("\n Rx channel Gain [{0}] \n", intValue);
         }
-         string SetRXChannelGain(KratosProtocolFrame i_Parsedframe)
+        string SetRXChannelGain(KratosProtocolFrame i_Parsedframe)
         {
             byte[] DataBytes = StringToByteArray(i_Parsedframe.Data);
             return String.Format("\n RX Channel Gain has been set\n");
         }
-         string LoadDataInFlash(KratosProtocolFrame i_Parsedframe)
+        string LoadDataInFlash(KratosProtocolFrame i_Parsedframe)
         {
             byte[] DataBytes = StringToByteArray(i_Parsedframe.Data);
             return String.Format("\n Loaded Data: [{0}]  Data Length: [{1}] Bytes\n", i_Parsedframe.Data, DataBytes.Length);
         }
 
-        
+
 
         string EraseSectorintFlash(KratosProtocolFrame i_Parsedframe)
         {
@@ -202,124 +199,124 @@ namespace Monitor
 
             return String.Format("\n Data stored in the flash \n");
         }
-         string Write_FPGA_Data(KratosProtocolFrame i_Parsedframe)
+        string Write_FPGA_Data(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n FPGA value have been set \n");
         }
 
-         string Read_FPGA_Data(KratosProtocolFrame i_Parsedframe)
+        string Read_FPGA_Data(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n FPGA value [{0}] \n", i_Parsedframe.Data);
         }
-         string SetTXCO_ON_OFF(KratosProtocolFrame i_Parsedframe)
+        string SetTXCO_ON_OFF(KratosProtocolFrame i_Parsedframe)
         {
 
 
             return String.Format("\n TCXO have been set \n");
         }
-         string GetOutputPower(KratosProtocolFrame i_Parsedframe)
+        string GetOutputPower(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Output Power [{0}] dBm \n", ConvertFloat(i_Parsedframe.Data));
         }
-         string SetOutputPower(KratosProtocolFrame i_Parsedframe)
+        string SetOutputPower(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n System Output power havs been set \n");
         }
-         string GetSytemState(KratosProtocolFrame i_Parsedframe)
+        string GetSytemState(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n System State [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
-         string SetSytemState(KratosProtocolFrame i_Parsedframe)
+        string SetSytemState(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n System state have been changed \n");
         }
-         string DoSync(KratosProtocolFrame i_Parsedframe)
+        string DoSync(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Sync received \n");
         }
-         string GetTxAD936X(KratosProtocolFrame i_Parsedframe)
+        string GetTxAD936X(KratosProtocolFrame i_Parsedframe)
         {
             return String.Format("\n Tx AD936X  [{0}] \n", i_Parsedframe.Data);
 
         }
-         string SetTxAD936X(KratosProtocolFrame i_Parsedframe)
+        string SetTxAD936X(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Tx AD936X data Has been Set [OK] \n");
         }
-         string SetSynthesizerL2(KratosProtocolFrame i_Parsedframe)
+        string SetSynthesizerL2(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Synthesizer L2 Has been Set [OK] \n");
         }
-         string SetSynthesizerL1(KratosProtocolFrame i_Parsedframe)
+        string SetSynthesizerL1(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Synthesizer L1 Has been Set [OK] \n");
 
         }
-         string GetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
+        string GetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n PSU card Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
 
-         string SetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
+        string SetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n PSU card Information Has been Set [OK] \n");
         }
 
-         string GetRFCardInformation(KratosProtocolFrame i_Parsedframe)
+        string GetRFCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n RF card Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
 
-         string SetRFCardInformation(KratosProtocolFrame i_Parsedframe)
+        string SetRFCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Core RF Information Has been Set [OK] \n");
         }
-        
-         string SetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
+
+        string SetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Core card Information Has been Set [OK] \n");
         }
 
-        
-         string GetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
+
+        string GetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Core card Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
-         string SetIdentityInformation(KratosProtocolFrame i_Parsedframe)
+        string SetIdentityInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Identity Information Has been Set [OK] \n");
         }
-         string GetIdentityInformation(KratosProtocolFrame i_Parsedframe)
+        string GetIdentityInformation(KratosProtocolFrame i_Parsedframe)
         {
 
             return String.Format("\n Identity Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
         }
-         string GetSystemType(KratosProtocolFrame i_Parsedframe)
+        string GetSystemType(KratosProtocolFrame i_Parsedframe)
         {
 
             int SystemType = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
 
-                return String.Format("\n System type [{0}] \n", SystemType);
+            return String.Format("\n System type [{0}] \n", SystemType);
         }
 
-         string IsSystemBusy(KratosProtocolFrame i_Parsedframe)
+        string IsSystemBusy(KratosProtocolFrame i_Parsedframe)
         {
             //2 bytes Serial number:
             //2 bytes - Serial number, range: 0 – 65535
@@ -334,7 +331,7 @@ namespace Monitor
                 return String.Format("\n Busy  [{0}] \n", BusyStatus);
             }
         }
-         string SetLogLevel(KratosProtocolFrame i_Parsedframe)
+        string SetLogLevel(KratosProtocolFrame i_Parsedframe)
         {
             //2 bytes Serial number:
             //2 bytes - Serial number, range: 0 – 65535
@@ -343,7 +340,7 @@ namespace Monitor
 
             return String.Format("\n Log Level has been set. \n");
         }
-         string GetSerialNumber(KratosProtocolFrame i_Parsedframe)
+        string GetSerialNumber(KratosProtocolFrame i_Parsedframe)
         {
             //2 bytes Serial number:
             //2 bytes - Serial number, range: 0 – 65535
@@ -410,7 +407,7 @@ namespace Monitor
             return ret;
         }
 
-        
+
 
 
 
@@ -429,7 +426,7 @@ namespace Monitor
             return String.Format("\n recieved OK, Opcode :[{0}], Thermal <<{1}>> \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
         }
 
-        
+
 
 
 
@@ -453,18 +450,18 @@ namespace Monitor
         }
         string GetFirmwareVertion(KratosProtocolFrame i_Parsedframe)
         {
-        //    Unit major version – 	1 byte
-        //Unit minor version – 	1 byte
-        //Version day –		1 bytes
-        //Version month –	1 bytes
-        //Version year –		2 bytes
+            //    Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
 
             int UnitMajorVersion = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
-        //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
-            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);  
-            return String.Format("\n Unit FW version <<{0},{1}/{2}/{3}>>\n  ", 
+            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            return String.Format("\n Unit FW version <<{0},{1}/{2}/{3}>>\n  ",
                 UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
         }
 
@@ -476,21 +473,21 @@ namespace Monitor
         }
         string GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
         {
-        //    ICD major version – 	1 byte
-        //ICD minor version – 	1 byte
-        //Unit major version – 	1 byte
-        //Unit minor version – 	1 byte
-        //Version day –		1 bytes
-        //Version month –	1 bytes
-        //Version year –		2 bytes
+            //    ICD major version – 	1 byte
+            //ICD minor version – 	1 byte
+            //Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
 
 
-             int ICDMajor = int.Parse(i_Parsedframe.Data.Substring(0,2), System.Globalization.NumberStyles.HexNumber);
-             int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2,2), System.Globalization.NumberStyles.HexNumber);
+            int ICDMajor = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int UnitMajorNumber = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             int UnitMinorNumber = int.Parse(i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
             string VersionDateTime = ConvertHex(i_Parsedframe.Data.Substring(8));
-            
+
 
             return string.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
     "\n Version date time  [{4}]\n ",
@@ -502,11 +499,11 @@ namespace Monitor
             //    "\n Version day  [{4}]\n Version month [{5}]\n Version year [{6}]\n",
             //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
-         public string ParseKratosFrame(KratosProtocolFrame i_Parsedframe)
+        public string ParseKratosFrame(KratosProtocolFrame i_Parsedframe)
         {
-            string ret = string.Empty ;
+            string ret = string.Empty;
 
-            if(i_Parsedframe == null )
+            if (i_Parsedframe == null)
             {
                 return "frame received as null";
             }
@@ -518,7 +515,7 @@ namespace Monitor
             else
             {
                 ret = "[ACK]  ";
-                switch(i_Parsedframe.Opcode)
+                switch (i_Parsedframe.Opcode)
                 {
 
                     case "11":
@@ -911,7 +908,7 @@ namespace Monitor
                         ret = UnHandledOpcode(i_Parsedframe);
                         break;
                 }
-            
+
             }
 
             return ret;

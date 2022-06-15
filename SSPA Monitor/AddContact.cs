@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Monitor
 {
@@ -59,7 +54,7 @@ namespace Monitor
             get { return richTextBox_Notes.Text; }
             set { richTextBox_Notes.Text = value; }
         }
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -135,46 +130,46 @@ namespace Monitor
         };
 
 
-               bool CheckSubscriberValid(string i_String,ConfigDataType i_DataType)
-       {
-           bool ret;
-           try
-           {
-               
+        bool CheckSubscriberValid(string i_String, ConfigDataType i_DataType)
+        {
+            bool ret;
+            try
+            {
 
-               switch (i_DataType)
-               {
 
-                   case ConfigDataType.Subscriber:
-                                                    if (i_String.Length < 6)
-                                                    {
-                                                        ret = false;
-                                                    }
-                                                    else
-                                                    if (i_String.Length < 20 && i_String.StartsWith("+") && Regex.IsMatch(i_String.Substring(1), @"^[0-9]+$"))
-                                                   {
-                                                       ret = true;
-                                                   }
-                                                   else
-                                                   {
-                                                       ret = false;
-                                                   }
-                                                   break;
+                switch (i_DataType)
+                {
 
-                   
+                    case ConfigDataType.Subscriber:
+                        if (i_String.Length < 6)
+                        {
+                            ret = false;
+                        }
+                        else
+                        if (i_String.Length < 20 && i_String.StartsWith("+") && Regex.IsMatch(i_String.Substring(1), @"^[0-9]+$"))
+                        {
+                            ret = true;
+                        }
+                        else
+                        {
+                            ret = false;
+                        }
+                        break;
 
-                   default:
-                       ret = false;
-                       break;
-               }
-           }
-           catch
-           {
-               ret = false;
-           }
-           
-           return ret;
-       }
+
+
+                    default:
+                        ret = false;
+                        break;
+                }
+            }
+            catch
+            {
+                ret = false;
+            }
+
+            return ret;
+        }
 
         void CheckConfigTextboxValidData(RichTextBox i_TextBox, ConfigDataType i_ConfigDataType)
         {
@@ -188,20 +183,20 @@ namespace Monitor
                 }
                 else
                     if (CheckSubscriberValid(i_TextBox.Text, i_ConfigDataType) == true)
-                    {
-                        i_TextBox.BackColor = Color.LightGreen;
-                    }
-                    else
-                    {
-                        i_TextBox.Visible = true;
-                        i_TextBox.BackColor = Color.Red;
-                    }
+                {
+                    i_TextBox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    i_TextBox.Visible = true;
+                    i_TextBox.BackColor = Color.Red;
+                }
             }));
         }
 
         private void RichTextBox_Name_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void RichTextBox_Phone_TextChanged(object sender, EventArgs e)
@@ -216,7 +211,7 @@ namespace Monitor
 
         private void RichTextBox_IMEI_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

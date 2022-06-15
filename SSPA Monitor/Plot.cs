@@ -1,6 +1,6 @@
-﻿using System;
+﻿using DSPLib;
+using System;
 using System.Windows.Forms;
-using DSPLib;
 
 /*
 * Released under the MIT License
@@ -58,7 +58,7 @@ namespace PlotWrapper
             // Add the titles
             chart1.Titles["Title"].Text = mTitle;
             this.Text = mTitle;
-            chart1.Titles["AxisX"].Text = mAxisX; 
+            chart1.Titles["AxisX"].Text = mAxisX;
             chart1.Titles["AxisY"].Text = mAxisY;
 
             // Enable zooming
@@ -76,7 +76,7 @@ namespace PlotWrapper
             chart1.Series["Series1"].Points.Clear();
 
             // Start X Data at zero! Not like the chart default of 1!
-            double[] xData = DSP.Generate.LinSpace(0, yData.Length-1, (UInt32)yData.Length);
+            double[] xData = DSP.Generate.LinSpace(0, yData.Length - 1, (UInt32)yData.Length);
             chart1.Series["Series1"].Points.DataBindXY(xData, yData);
         }
 

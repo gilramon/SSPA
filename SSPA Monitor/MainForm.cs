@@ -1,28 +1,24 @@
-﻿using System;
-using System.Drawing;
+﻿using DSPLib;
+using Monitor;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Windows.Forms;
-using System.Net.Sockets;
-using System.Threading;
-using System.Text;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.IO.Ports;
-using System.Text.RegularExpressions;
-using Monitor;
-using System.Xml.Serialization;
-using System.Diagnostics;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Net.NetworkInformation;
-using System.Globalization;
-using DSPLib;
+using System.Net.Sockets;
 using System.Numerics;
-using PlotWrapper;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Serialization;
 
 namespace SocketServer
 {
@@ -8516,8 +8512,8 @@ namespace SocketServer
 
         readonly List<String> CommandsHistoy = new List<String>();
         int HistoryIndex = -1;
-       // bool SelfMonitorCommandsMode = false;
-        
+        // bool SelfMonitorCommandsMode = false;
+
 
         private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -8635,7 +8631,7 @@ namespace SocketServer
         }
 
 
-    
+
 
 
 
@@ -8699,10 +8695,10 @@ namespace SocketServer
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 SendExceptionToTheMonitor(ex.Message.ToString());
-                
+
             }
 
 
@@ -8865,7 +8861,7 @@ namespace SocketServer
                 //    LogIWatcher.LogMessage(Color.Brown, Color.White, PositionString, New_Line = true, Show_Time = false);
                 //}
 
-              //  string ret = "";
+                //  string ret = "";
                 //if (checkBox_ShowURL.Checked)
                 //{
                 //    ret = "http://maps.google.com/maps?q=" + ParseStrings[9] + "," + ParseStrings[10] + "( " + " Current Time: " + DateTime.Now + "\r\n   S1TimeStamp: " + " )" + "&z=14&ll=" + "," + "&z=17";
@@ -9711,34 +9707,34 @@ namespace SocketServer
         //   Logger LogIWatcher;
         // TextBox_Logger LogSMS;
         PhoneBook MyPhoneBook;
-    //    readonly List<Series> List_SeriesCharts = new List<Series>();
-    //    readonly Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series
-    //    {
-    //        Name = "Raw Data",
-    //        //    Color = System.Drawing.Color.Green,
-    //        IsVisibleInLegend = true,
-    //        IsXValueIndexed = false,
-    //        ChartType = SeriesChartType.Line,
-    //        MarkerStyle = MarkerStyle.Diamond
-        
-    //};
-    //    readonly Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series
-    //    {
-    //        Name = "Moving Avarage 30",
-    //        //    Color = System.Drawing.Color.Blue,
-    //        IsVisibleInLegend = true,
-    //        IsXValueIndexed = false,
-    //        ChartType = SeriesChartType.Line
-    //    };
-    //    readonly Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series
-    //    {
-    //        Name = "0-100",
-    //        //    Color = System.Drawing.Color.Blue,
-    //        IsVisibleInLegend = true,
-    //        IsXValueIndexed = false,
-    //        ChartType = SeriesChartType.Line,
-    //        MarkerStyle = MarkerStyle.Circle
-    //    };
+        //    readonly List<Series> List_SeriesCharts = new List<Series>();
+        //    readonly Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series
+        //    {
+        //        Name = "Raw Data",
+        //        //    Color = System.Drawing.Color.Green,
+        //        IsVisibleInLegend = true,
+        //        IsXValueIndexed = false,
+        //        ChartType = SeriesChartType.Line,
+        //        MarkerStyle = MarkerStyle.Diamond
+
+        //};
+        //    readonly Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series
+        //    {
+        //        Name = "Moving Avarage 30",
+        //        //    Color = System.Drawing.Color.Blue,
+        //        IsVisibleInLegend = true,
+        //        IsXValueIndexed = false,
+        //        ChartType = SeriesChartType.Line
+        //    };
+        //    readonly Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series
+        //    {
+        //        Name = "0-100",
+        //        //    Color = System.Drawing.Color.Blue,
+        //        IsVisibleInLegend = true,
+        //        IsXValueIndexed = false,
+        //        ChartType = SeriesChartType.Line,
+        //        MarkerStyle = MarkerStyle.Circle
+        //    };
 
         Point? prevPosition = null;
         readonly ToolTip tooltip = new ToolTip();
@@ -9798,7 +9794,7 @@ namespace SocketServer
                             Math.Abs(pos.Y - pointYPixel) < 3)
                         {
                             // chart1.Series[result.Series.Name].Points[(int)prop.XValue].Label = "X=" + prop.XValue + ", Y=" + prop.YValues[0].ToString("0.00");
-                            prop.Label = "X=" + prop.XValue.ToString(".#E+0") + ", Y=" + prop.YValues[0].ToString("0.00") ;
+                            prop.Label = "X=" + prop.XValue.ToString(".#E+0") + ", Y=" + prop.YValues[0].ToString("0.00");
                         }
                     }
                 }
@@ -9838,14 +9834,14 @@ namespace SocketServer
                 }
 
                 SerialPortLogger.LogMessage(Color.Blue, Color.LightGray, "Sum CB: sum = " + sum, New_Line = true, Show_Time = true);
-            } 
+            }
         }
 
         class System1_parser : CLI_Parser
         {
 
 
-            public override void Parse(object sender,String i_InputString)
+            public override void Parse(object sender, String i_InputString)
             {
                 String[] tempStr = i_InputString.Split(' ');
 
@@ -9863,7 +9859,7 @@ namespace SocketServer
                     {
 
                         //cmd.Run_Operation(tempStr);
-                        String MethodName = this.GetType().Name+ "_" + Opcode_name + "_CB" ;
+                        String MethodName = this.GetType().Name + "_" + Opcode_name + "_CB";
 
                         //Get the method information using the method info class
                         var method = sender.GetType().GetMethod(MethodName);
@@ -9893,10 +9889,10 @@ namespace SocketServer
             {
 
                 tabControl_Main.TabPages.RemoveAt(0);
-                tabControl_Main.TabPages.RemoveAt(0); 
+                tabControl_Main.TabPages.RemoveAt(0);
                 tabControl_Main.TabPages.RemoveAt(0);
 
-                system1_Parser.AddCommand("sum" , " sum all the elements \n Format: sum 1 2 3");
+                system1_Parser.AddCommand("sum", " sum all the elements \n Format: sum 1 2 3");
                 //System1_parser.AddCommand("sum", "sum args", "sum all the numbers");
                 //List_SeriesCharts.Add(series1);
                 //List_SeriesCharts.Add(series2);
@@ -9908,8 +9904,8 @@ namespace SocketServer
                 //{
                 //    listBox_Charts.Items.Add(ser.Name);
                 //}
-               // textBox_SendSerialPort.PreviewKeyDown += TextBox_SendSerialPort_PreviewKeyDown;
-               // this.FormClosed += MainForm_FormClosed;
+                // textBox_SendSerialPort.PreviewKeyDown += TextBox_SendSerialPort_PreviewKeyDown;
+                // this.FormClosed += MainForm_FormClosed;
                 // chart1.Series.Clear();
                 // chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
                 // chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
@@ -9927,7 +9923,7 @@ namespace SocketServer
 
                 //chart1.ChartAreas[0].AxisX.IsLogarithmic = true;
                 //comboBox_WindowsDSPLib.DataSource = Enum.GetNames(typeof(DSPLib.DSP.Window.Type));
-               // chart1.MouseMove += Chart1_MouseMove;
+                // chart1.MouseMove += Chart1_MouseMove;
                 //chart1.MouseClick += Chart1_MouseClick;
                 chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.###E+0";
                 // tabControl_Main.DrawItem += TabControl1_DrawItem1;
@@ -9940,7 +9936,7 @@ namespace SocketServer
 
                 txtPortNo.Text = Monitor.Properties.Settings.Default.Start_Port;
                 txtDataTx.Text = Monitor.Properties.Settings.Default.Default_Server_Message;
-              //  richTextBox_RegisterCommands.Text = Monitor.Properties.Settings.Default.RegisterCommands;
+                //  richTextBox_RegisterCommands.Text = Monitor.Properties.Settings.Default.RegisterCommands;
 
 
                 //pictureBox_logo.BringToFront();
@@ -9951,11 +9947,11 @@ namespace SocketServer
                 SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
 
 
-               // LogSMS = new TextBox_Logger("Log_SMS", richTextBox_SMSConsole, button_ClearSMSConsole, checkBox_PauseSMSConsole, checkBox_RecordSMSConsole, null, null, null, null);
+                // LogSMS = new TextBox_Logger("Log_SMS", richTextBox_SMSConsole, button_ClearSMSConsole, checkBox_PauseSMSConsole, checkBox_RecordSMSConsole, null, null, null, null);
 
                 //Gil: Active All the recorders
-              //  checkBox_RecordGeneral.Checked = !checkBox_RecordGeneral.Checked;
-               // checkBox_S1RecordLog.Checked = !checkBox_S1RecordLog.Checked;
+                //  checkBox_RecordGeneral.Checked = !checkBox_RecordGeneral.Checked;
+                // checkBox_S1RecordLog.Checked = !checkBox_S1RecordLog.Checked;
                 //checkBox_RecordLatLong.Checked = !checkBox_RecordLatLong.Checked;
 
                 //        checkBox_RecordTrace.Checked = !checkBox_RecordTrace.Checked;
@@ -9972,16 +9968,16 @@ namespace SocketServer
 
                 //cmbDataBits.DataSource = Enum.GetValues(typeof(Data));
 
-                cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate ;
-                cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits  ;
-                cmb_StopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit ;
-                cmbParity.Text = Monitor.Properties.Settings.Default.Comport_Parity ;
-                cmb_PortName.Text = Monitor.Properties.Settings.Default.Comport_Port ;
+                cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
+                cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits;
+                cmb_StopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit;
+                cmbParity.Text = Monitor.Properties.Settings.Default.Comport_Parity;
+                cmb_PortName.Text = Monitor.Properties.Settings.Default.Comport_Port;
 
 
 
 
-                
+
 
 
                 //cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
@@ -10013,7 +10009,7 @@ namespace SocketServer
 
 
 
-                foreach(TextBox txtbx in List_ConfigurationTextBoxes)
+                foreach (TextBox txtbx in List_ConfigurationTextBoxes)
                 {
                     txtbx.GotFocus += Txtbx_GotFocus;
                 }
@@ -10050,7 +10046,7 @@ namespace SocketServer
 
                 EditDataGridForSSPAWB();
 
-                
+
 
                 SerialPortLogger.LogMessage(Color.Yellow, Color.LightGray, "Press F1 for help", New_Line = true, Show_Time = true);
 
@@ -10076,13 +10072,13 @@ namespace SocketServer
             this.dataGridView_DC4.TopLeftHeaderCell.Value = "Temperature (C)";
             this.dataGridView8.TopLeftHeaderCell.Value = "Temperature (C)";
             this.dataGridView_PAVVA.TopLeftHeaderCell.Value = "Power (dBm)";
-          
+
             this.dataGridView_VVAOffset2.TopLeftHeaderCell.Value = "Power (dBm)";
             this.dataGridView_VVAOffset1.TopLeftHeaderCell.Value = "Power (dBm)";
             this.dataGridView_OverUnder.TopLeftHeaderCell.Value = "Volts (V)";
             this.dataGridView_Page1_4.TopLeftHeaderCell.Value = "VVA";
 
-            
+
 
 
 
@@ -10094,24 +10090,24 @@ namespace SocketServer
             //this.dataGridView_DC4.RowTemplate.Height = 20;
             //this.dataGridView8.RowTemplate.Height = 20;
 
-            for ( i = 0; i < 32; i++)
+            for (i = 0; i < 32; i++)
             {
 
                 this.dataGridView_Page1_4.Rows.Add();
                 this.dataGridView_Page1_4.Rows[i].HeaderCell.Value = String.Format("{0}C", Temperature);
-                
+
 
                 this.dataGridView8.Rows.Add();
                 this.dataGridView8.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText + 3);
-                
+
                 this.dataGridView_DC4.Rows.Add();
-                this.dataGridView_DC4.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText+3);
+                this.dataGridView_DC4.Rows[i].HeaderCell.Value = String.Format("{0}..{1}C", RowText, RowText + 3);
                 RowText += 3;
                 Temperature += 4;
             }
 
             RowText = -3;
-            for ( i = 0; i < 21; i++)
+            for (i = 0; i < 21; i++)
             {
                 this.dataGridView_PAVVA.Rows.Add();
                 this.dataGridView_PAVVA.Rows[i].HeaderCell.Value = String.Format("{0} dBm", RowText);
@@ -10123,7 +10119,7 @@ namespace SocketServer
 
 
             double RowText2 = 46;
-            for ( i = 0; i < 9; i++)
+            for (i = 0; i < 9; i++)
             {
 
                 this.dataGridView_VVAOffset1.Rows.Add();
@@ -10211,13 +10207,13 @@ namespace SocketServer
             {
                 RichTextBox txt = (RichTextBox)ctl;
 
-               txt.Invoke(new EventHandler(delegate
-                {
+                txt.Invoke(new EventHandler(delegate
+                 {
 
-                    String temp = txt.Text;
-                    txt.Text = "";
-                    txt.AppendText(temp);
-                }));
+                     String temp = txt.Text;
+                     txt.Text = "";
+                     txt.AppendText(temp);
+                 }));
 
             }
 
@@ -10237,7 +10233,7 @@ namespace SocketServer
 
         private void Txtbx_GotFocus(object sender, EventArgs e)
         {
-          //  TextBox txtbx = (TextBox)sender;
+            //  TextBox txtbx = (TextBox)sender;
             // textBox_ConfigurationHelp.Text = "";
             //textBox_ConfigurationHelp.Text = txtbx.Name + "\n" + toolTip1.GetToolTip(txtbx);
 
@@ -10252,12 +10248,12 @@ namespace SocketServer
         {
             if (e.KeyData == Keys.Tab)
             {
-               // MessageBox.Show("Tab");
+                // MessageBox.Show("Tab");
                 e.IsInputKey = true;
             }
             if (e.KeyData == (Keys.Tab | Keys.Shift))
             {
-              //  MessageBox.Show("Shift + Tab");
+                //  MessageBox.Show("Shift + Tab");
                 e.IsInputKey = true;
             }
         }
@@ -10275,7 +10271,7 @@ namespace SocketServer
         {
             TabPage page = tabControl_Main.TabPages[e.Index];
             Color TabColor;
-            if(e.Index == tabControl_Main.SelectedIndex)
+            if (e.Index == tabControl_Main.SelectedIndex)
             {
                 TabColor = Color.Aqua;
             }
@@ -10360,7 +10356,7 @@ namespace SocketServer
             Monitor.Properties.Settings.Default.LastSaveSMSTime = DateTime.Now;
             Monitor.Properties.Settings.Default.Save();
 
-           // LogSMS.LogMessage(Color.Brown, Color.White, " 2 Backup files of contacts and commands Created at \n" + subPath + "\n" + filesName, New_Line = true, Show_Time = true);
+            // LogSMS.LogMessage(Color.Brown, Color.White, " 2 Backup files of contacts and commands Created at \n" + subPath + "\n" + filesName, New_Line = true, Show_Time = true);
 
 
         }
@@ -10476,7 +10472,7 @@ namespace SocketServer
 
             while (CalculateProgressDonePercentage() < 100)
             {
-        
+
 
 
 
@@ -10511,7 +10507,7 @@ namespace SocketServer
 
         //Color originColor_LatLong;
         //string log_file_S1_LatLong;
-      //  readonly List<string> KMl_text = new List<string>();
+        //  readonly List<string> KMl_text = new List<string>();
         //       int KML_Index = 0;
         //   int DrivingNumber = 0;
         private void CheckBox1_CheckedChanged_2(object sender, EventArgs e)
@@ -10634,15 +10630,15 @@ namespace SocketServer
                     button_ClientConnect.BackColor = default;
                 }
                 else
-                    
+
                     if (ClientSocket.Connected && ClientSocket.Client.Connected && ClientSocket.GetStream() != null)
-                    {
-                        button_ClientConnect.BackColor = Color.LightGreen;
-                    }
-                    else
-                    {
-                        button_ClientConnect.BackColor = default;
-                    }
+                {
+                    button_ClientConnect.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    button_ClientConnect.BackColor = default;
+                }
 
 
 
@@ -10727,7 +10723,7 @@ namespace SocketServer
             if (IsPauseGraphs == false)
             {
 
-                if (Timer_100ms % (ChartUpdateTime/100) == 0)
+                if (Timer_100ms % (ChartUpdateTime / 100) == 0)
                 {
                     //GraphPrint();
                 }
@@ -10783,7 +10779,7 @@ namespace SocketServer
 
 
 
-            }
+        }
 
         readonly List<double> ChartMem = new List<double>();
         readonly List<double> ChartMem2 = new List<double>();
@@ -10795,7 +10791,7 @@ namespace SocketServer
             try
             {
 
-                
+
 
                 if (OppositeCount == true)
                 {
@@ -10872,12 +10868,12 @@ namespace SocketServer
                 chart1.Refresh();
                 chart1.Invalidate();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 textBox_graph_XY.Text = ex.Message;
                 textBox_graph_XY.BackColor = Color.Red;
             }
-            
+
         }
 
         //static float NextFloat(Random random)
@@ -10956,7 +10952,7 @@ namespace SocketServer
 
 
 
-          //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
+            //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
             //UInt32 zeroPadding = 9000;
             double scale = 2 ^ 11 - 1;
 
@@ -10970,9 +10966,9 @@ namespace SocketServer
             }
 
 
-            for (int i =0; i < i_MiniAdaParser.IQData.I2.Length;i++)
+            for (int i = 0; i < i_MiniAdaParser.IQData.I2.Length; i++)
             {
-                IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i]/ scale /2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale /2);
+                IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale / 2);
             }
 
             int zeroPadding = FindZeroPaddingSize(IQ1Sigal.Length);
@@ -11018,8 +11014,8 @@ namespace SocketServer
             }
 
             // For plotting on an XY Scatter plot generate the X Axis frequency Span
-         //   double[] freqSpan = fft.FrequencySpan(samplingRate);
-          //  double[] freqSpan2 = fft2.FrequencySpan(samplingRate);
+            //   double[] freqSpan = fft.FrequencySpan(samplingRate);
+            //  double[] freqSpan2 = fft2.FrequencySpan(samplingRate);
             // At this point a XY Scatter plot can be generated from,
             // X axis => freqSpan
             // Y axis => lmSpectrum
@@ -11055,37 +11051,37 @@ namespace SocketServer
 
                 //  listBox_Charts.Items.Add(series4.Name);
                 // Frist parameter is X-Axis and Second is Collection of Y- Axis
-               // double[] xData = DSP.Generate.LinSpace(-(freqSpan.Length) / 2 , (freqSpan.Length) / 2, (UInt32)(freqSpan.Length));
-         //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
+                // double[] xData = DSP.Generate.LinSpace(-(freqSpan.Length) / 2 , (freqSpan.Length) / 2, (UInt32)(freqSpan.Length));
+                //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
                 for (int i = 0; i < IQ1Sigal.Length; i++)
                 {
-           //         series2.Points.AddXY(i, IQ1Sigal[i]);
+                    //         series2.Points.AddXY(i, IQ1Sigal[i]);
                 }
-           //     series2.ChartType = SeriesChartType.Line;
+                //     series2.ChartType = SeriesChartType.Line;
                 chart1.Series.Add(series1);
-           //     chart1.Series.Add(series2);
+                //     chart1.Series.Add(series2);
 
-              //  series3.Points.DataBindXY(freqSpan, lmSpectrum2);
+                //  series3.Points.DataBindXY(freqSpan, lmSpectrum2);
 
                 for (int i = 0; i < IQ1Sigal.Length; i++)
                 {
-           //         series4.Points.AddXY(i, IQ1Sigal[i]);
+                    //         series4.Points.AddXY(i, IQ1Sigal[i]);
                 }
-          //      series4.ChartType = SeriesChartType.Line;
+                //      series4.ChartType = SeriesChartType.Line;
                 chart1.Series.Add(series3);
-            //   chart1.Series.Add(series4);
+                //   chart1.Series.Add(series4);
 
                 PlotGraphTimer = -1;
                 textBox_SystemStatus.Text = "Graphs is ready;\n";
                 textBox_SystemStatus.BackColor = Color.LightGreen;
 
                 //Gil: Find the maximum and minimum points
-          //      MarkTheBiggestFreq(series1, lmSpectrum, freqSpan);
-          //      MarkTheBiggestFreq(series3, lmSpectrum2, freqSpan2);
-                
+                //      MarkTheBiggestFreq(series1, lmSpectrum, freqSpan);
+                //      MarkTheBiggestFreq(series3, lmSpectrum2, freqSpan2);
+
 
             }));
- 
+
 
         }
 
@@ -11146,7 +11142,7 @@ namespace SocketServer
 
 
             // Create a new legend called "Legend2".
-          //  chart1.Legends.Add(new Legend(i_serias.Name));
+            //  chart1.Legends.Add(new Legend(i_serias.Name));
             // Set Docking of the Legend chart to the Default Chart Area.
             //chart1.Legends[i_serias.Name].DockToChartArea = "Default";
             // Assign the legend to Series1.
@@ -11199,7 +11195,7 @@ namespace SocketServer
             //chart1.Series.Add(series);
             //chart1.Series.Add(series2);
 
-          //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
+            //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
             //UInt32 zeroPadding = 9000;
             double scale = 2 ^ 11 - 1;
 
@@ -11219,7 +11215,7 @@ namespace SocketServer
             }
 
             int zeroPadding = 0;
-         //   Int32.TryParse(TextBox_Zeropadding.Text, out zeroPadding);
+            //   Int32.TryParse(TextBox_Zeropadding.Text, out zeroPadding);
 
             double[] wCoefs = DSP.Window.Coefficients(windowToApply, (uint)IQ1Sigal.Length);
             double[] wCoefs2 = DSP.Window.Coefficients(windowToApply, (uint)IQ2Sigal.Length);
@@ -11266,7 +11262,7 @@ namespace SocketServer
                 listBox_Charts.Items.Add(series3.Name);
                 listBox_Charts.Items.Add(series4.Name);
                 // Frist parameter is X-Axis and Second is Collection of Y- Axis
-         //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
+                //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
 
                 for (int i = 0; i < IQ1Sigal.Length; i++)
                 {
@@ -11276,7 +11272,7 @@ namespace SocketServer
                 chart1.Series.Add(series1);
                 chart1.Series.Add(series2);
 
-            //    series3.Points.DataBindXY(freqSpan, lmSpectrum);
+                //    series3.Points.DataBindXY(freqSpan, lmSpectrum);
 
                 for (int i = 0; i < IQ1Sigal.Length; i++)
                 {
@@ -11345,18 +11341,18 @@ namespace SocketServer
                         {
                             byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
                             richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
-                        //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
+                            //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
 
 
 
-                    }));
+                        }));
 
                     }
 
 
                 }));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 SystemLogger.LogMessage(Color.Red, Color.White, ex.Message, true, false);
             }
@@ -11364,7 +11360,7 @@ namespace SocketServer
 
         String GlobalSystemResultReceived;
         int ChartIndex = 0;
-        SSPA_Parser MiniAdaParser =  new SSPA_Parser();
+        SSPA_Parser MiniAdaParser = new SSPA_Parser();
         void ParseIncomeBuffer_TCPIP()
         {
             try
@@ -11374,17 +11370,17 @@ namespace SocketServer
                 {
 
                     ParseKratosIncomeFrame(TCPClientBuffer);
-                   
+
                     PClientSocket = ClientSocket;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), New_Line = false, Show_Time = true);
             }
-            }
+        }
 
-            void TCPClientConnection()
+        void TCPClientConnection()
         {
             if (ClientSocket == null || ClientSocket.Client == null)
             {
@@ -11425,7 +11421,7 @@ namespace SocketServer
 
         void CheckIfSerialPortOpen()
         {
-            if(serialPort.IsOpen == true)
+            if (serialPort.IsOpen == true)
             {
                 groupBox43.Enabled = true;
             }
@@ -11436,17 +11432,17 @@ namespace SocketServer
         }
         //bool timer_General_TranssmitionPeriodicallyEnable = false;
         //uint NumbeOfTransmmitions = 0;
-        int  TimerClearModemStatus = 0;
+        int TimerClearModemStatus = 0;
         //uint IntervalTimeBetweenTransmitions = 1;
         private void Timer_General_Tick(object sender, EventArgs e)
         {
 
-           // CheckIfSerialPortOpen();
+            // CheckIfSerialPortOpen();
 
 
             TCPClientConnection();
 
-            if(PlotGraphTimer > 0)
+            if (PlotGraphTimer > 0)
             {
                 textBox_SystemStatus.Text = string.Format("Generating graph [{0}] ", PlotGraphTimer);
                 textBox_SystemStatus.BackColor = Color.AliceBlue;
@@ -11512,7 +11508,7 @@ namespace SocketServer
                 button_Ring.Text = "Ring";
             }
 
-          //  TimerCounter100ms++;
+            //  TimerCounter100ms++;
 
             TimerClearModemStatus++;
 
@@ -11693,7 +11689,7 @@ namespace SocketServer
 
             if (checkBox_RxHex.Checked == true)
             {
-                
+
                 string IncomingHexMessage = ConvertByteArraytToString(buffer);
 
                 SerialPortLogger.LogMessage(Color.Blue, Color.LightGray, IncomingHexMessage, New_Line = true, Show_Time = false);
@@ -11707,7 +11703,7 @@ namespace SocketServer
 
 
 
-                
+
                 string[] lines = Regex.Split(IncomingString, "\r\n");
 
                 foreach (string line in lines)
@@ -11733,7 +11729,7 @@ namespace SocketServer
                                  .ToArray();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 SerialPortLogger.LogMessage(Color.Red, Color.LightGray, ex.Message, New_Line = true, Show_Time = false);
                 return null;
@@ -11745,7 +11741,7 @@ namespace SocketServer
             string IncomingHexMessage = "";
             foreach (byte by in i_Buffer)
             {
-                IncomingHexMessage +=  by.ToString("X2") + " ";
+                IncomingHexMessage += by.ToString("X2") + " ";
 
             }
 
@@ -12051,8 +12047,8 @@ namespace SocketServer
                         if (checkBox_SMSencrypted.Checked == true)
                         {
                             string[] temp = CommandString.Split('[', ']');
-                         //   LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                         //   LogSMS.LogMessage(Color.Green, Color.White, "Encrypted SMS (Copy to server Tab):\n" + temp[5], New_Line = true, Show_Time = false);
+                            //   LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+                            //   LogSMS.LogMessage(Color.Green, Color.White, "Encrypted SMS (Copy to server Tab):\n" + temp[5], New_Line = true, Show_Time = false);
 
                             txtDataTx.Invoke(new EventHandler(delegate
                             {
@@ -12118,9 +12114,9 @@ namespace SocketServer
             if (ContactFound != null)
             {
                 //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-            //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n SMS Received: ", New_Line = false, Show_Time = false);
-            //    LogSMS.LogMessage(Color.DarkBlue, Color.Yellow, "\n Contact:  " + ContactFound.ToString(), New_Line = false, Show_Time = false);
-            //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
+                //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n SMS Received: ", New_Line = false, Show_Time = false);
+                //    LogSMS.LogMessage(Color.DarkBlue, Color.Yellow, "\n Contact:  " + ContactFound.ToString(), New_Line = false, Show_Time = false);
+                //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
 
                 if (ReceivedUnitID != String.Empty)
                 {
@@ -12140,7 +12136,7 @@ namespace SocketServer
             else
             {
                 //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-         //       LogSMS.LogMessage(i_ColorDisplay, Color.White, "SMS Received: " + "\n Number:  " + i_Subscriber + "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
+                //       LogSMS.LogMessage(i_ColorDisplay, Color.White, "SMS Received: " + "\n Number:  " + i_Subscriber + "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
 
 
 
@@ -12347,7 +12343,7 @@ namespace SocketServer
             //ConfigProcessExit = true;
         }
 
-       
+
         private void CheckBox_EchoResponse_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -12570,13 +12566,13 @@ namespace SocketServer
             {
                 String LastCommand = CommandsHistoy[CommandsHistoy.Count - 1];
 
-                if(LastCommand != i_SendString)
+                if (LastCommand != i_SendString)
                 {
                     CommandsHistoy.Add(i_SendString);
                 }
             }
 
-            
+
 
 
             //if (Monitor.Properties.Settings.Default.SerialPort_History != null)
@@ -12608,7 +12604,7 @@ namespace SocketServer
             bool IsSent = false;
             if (checkBox_SendHexdata.Checked == true)
             {
-                String tempStr = textBox_SendSerialPort.Text.Replace(" ", ""); 
+                String tempStr = textBox_SendSerialPort.Text.Replace(" ", "");
 
                 byte[] buffer = StringToByteArray(tempStr);
 
@@ -12625,7 +12621,7 @@ namespace SocketServer
                 {
                     UpdateSerialPortHistory(textBox_SendSerialPort.Text);
 
-                //    UpdateSerialPortComboBox();
+                    //    UpdateSerialPortComboBox();
 
                     if (checkBox_DeleteCommand.Checked == true)
                     {
@@ -12638,7 +12634,7 @@ namespace SocketServer
                     SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
                     SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, ConvertByteArraytToString(buffer), true, false);
 
-                    
+
 
                 }
 
@@ -12652,20 +12648,20 @@ namespace SocketServer
                 tempStr = tempStr.Replace("\\r", "\r");
                 byte[] buffer = Encoding.ASCII.GetBytes(tempStr);
 
-                 IsSent = SerialPortSendData(buffer);
+                IsSent = SerialPortSendData(buffer);
 
                 if (IsSent == true)
                 {
                     UpdateSerialPortHistory(textBox_SendSerialPort.Text);
 
-                //    UpdateSerialPortComboBox();
+                    //    UpdateSerialPortComboBox();
 
                     if (checkBox_DeleteCommand.Checked == true)
                     {
                         textBox_SendSerialPort.Text = "";
                     }
 
-                    
+
 
                     SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "", New_Line = false, Show_Time = true);
                     SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
@@ -12703,7 +12699,7 @@ namespace SocketServer
                 }
 
                 //  string UnitID = textBox_ConfigUnitID.Text;
-                string UnitID = "00000000000"; 
+                string UnitID = "00000000000";
                 string Config_file_name = "Config_Date-" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss") + "_UnitID-" + UnitID + ".txt";
 
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog
@@ -13076,7 +13072,7 @@ namespace SocketServer
 
                     case ConfigDataType.SpeedLimit:
 
-                            ret = false;
+                        ret = false;
 
                         break;
 
@@ -13256,7 +13252,7 @@ namespace SocketServer
                         break;
                 }
             }
-            catch 
+            catch
             {
                 //TextBox_GenerateConfigFile_Text(ex.ToString(), Color.Red);
                 ret = false;
@@ -13648,7 +13644,7 @@ namespace SocketServer
 
         void UpdateAlarmCheckBoxes()
         {
-            
+
         }
 
         private void CheckBox_config_Bit0_CheckedChanged(object sender, EventArgs e)
@@ -13659,7 +13655,7 @@ namespace SocketServer
         void UpdateTextBox13()
         {
 
-            
+
 
         }
 
@@ -13881,7 +13877,7 @@ namespace SocketServer
 
         string ReturnCommandWithPassword(string i_Command, PhoneBookContact i_Contact)
         {
-            string temp ;
+            string temp;
             string command = i_Command;
             int endindex = command.IndexOf('>');
             if (endindex >= 0 && checkBox_SendSMSAsIs.Checked == false)
@@ -13908,7 +13904,7 @@ namespace SocketServer
                 }
             }
             //     AddCommandToCommands(richTextBox_TextSendSMS.Text);
-        //    groupBox34.Enabled = true;
+            //    groupBox34.Enabled = true;
         }
 
         void RemoveSelectedContact()
@@ -14048,7 +14044,7 @@ namespace SocketServer
 
             byte[] buffer = Encoding.ASCII.GetBytes(StrToSend);
 
-           // bool IsSent = SerialPortSMSSendData(buffer);
+            // bool IsSent = SerialPortSMSSendData(buffer);
 
             //if (IsSent == true)
             //{
@@ -14112,7 +14108,7 @@ namespace SocketServer
                 else
                 {
                     //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-            //        LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
+                    //        LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
                 }
 
                 // AddCommandToCommands(richTextBox_TextSendSMS.Text);
@@ -14370,25 +14366,25 @@ namespace SocketServer
         private void Button38_Click(object sender, EventArgs e)
         {
 
-                openFileDialog1 = new OpenFileDialog();
-                DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-                if (result == DialogResult.OK) // Test result.
+            openFileDialog1 = new OpenFileDialog();
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+
+                XmlSerializer deserializer = new XmlSerializer(typeof(List<string>));
+                TextReader textReader = new StreamReader(openFileDialog1.FileName);
+                List<string> ImportedCommands;
+                ImportedCommands = (List<string>)deserializer.Deserialize(textReader);
+                textReader.Close();
+
+                Monitor.Properties.Settings.Default.SMS_Commands.Clear();
+                listBox_SMSCommands.Items.Clear();
+                foreach (string str in ImportedCommands)
                 {
-
-                    XmlSerializer deserializer = new XmlSerializer(typeof(List<string>));
-                    TextReader textReader = new StreamReader(openFileDialog1.FileName);
-                    List<string> ImportedCommands;
-                    ImportedCommands = (List<string>)deserializer.Deserialize(textReader);
-                    textReader.Close();
-
-                    Monitor.Properties.Settings.Default.SMS_Commands.Clear();
-                    listBox_SMSCommands.Items.Clear();
-                    foreach (string str in ImportedCommands)
-                    {
-                        AddCommandToCommands(str);
-                    }
-                    UpdateSMSCommands();
+                    AddCommandToCommands(str);
                 }
+                UpdateSMSCommands();
+            }
 
         }
 
@@ -14467,32 +14463,32 @@ namespace SocketServer
             if (checkBox_OpenPortSMS.Checked)
             {
 
-                    checkBox_OpenPortSMS.BackColor = Color.Yellow;
+                checkBox_OpenPortSMS.BackColor = Color.Yellow;
 
 
-                    //serialPort_SMS.BaudRate = 38400;
-                    //serialPort_SMS.DataBits = 8;
-                    //serialPort_SMS.StopBits = StopBits.One;
-                    //serialPort_SMS.Parity = Parity.None;
-                    //serialPort_SMS.PortName = comboBox_ComportSMS.Text;
-
-
-
-
-
-
-                    //serialPort_SMS.Open();
+                //serialPort_SMS.BaudRate = 38400;
+                //serialPort_SMS.DataBits = 8;
+                //serialPort_SMS.StopBits = StopBits.One;
+                //serialPort_SMS.Parity = Parity.None;
+                //serialPort_SMS.PortName = comboBox_ComportSMS.Text;
 
 
 
 
 
-                    checkBox_OpenPortSMS.BackColor = Color.Green;
 
-                   // serialPort_SMS.DataReceived += new SerialDataReceivedEventHandler(SerialPort_SMS_DataReceived);
-                
-                    comboBox_ComportSMS.Enabled = false;
-                
+                //serialPort_SMS.Open();
+
+
+
+
+
+                checkBox_OpenPortSMS.BackColor = Color.Green;
+
+                // serialPort_SMS.DataReceived += new SerialDataReceivedEventHandler(SerialPort_SMS_DataReceived);
+
+                comboBox_ComportSMS.Enabled = false;
+
 
 
 
@@ -14695,92 +14691,92 @@ namespace SocketServer
 
         string OpcodeToCompare = "";
         int SendOneTimeFlag = 0;
-//        private void Button_Ring_Click(object sender, EventArgs e)
-//        {
-//            if (checkedListBox_PhoneBook.SelectedItem != null
-//                //           && checkBox_SMSencrypted.Checked == true 
-//                && listBox_SMSCommands.SelectedItem != null
-//                && listBox_SMSCommands.SelectedItem != null
-//                && textBox_UnitIDForSMS.Text.Length >= 10
-//                //        && textBox_CodeArrayForSMS.Text.Length == 4
-//                && serialPort_SMS.IsOpen
-//                && ((checkBox_SMSencrypted.Checked == false) || (textBox_CodeArrayForSMS.Text.Length == 4))
-//                )
-//            {
+        //        private void Button_Ring_Click(object sender, EventArgs e)
+        //        {
+        //            if (checkedListBox_PhoneBook.SelectedItem != null
+        //                //           && checkBox_SMSencrypted.Checked == true 
+        //                && listBox_SMSCommands.SelectedItem != null
+        //                && listBox_SMSCommands.SelectedItem != null
+        //                && textBox_UnitIDForSMS.Text.Length >= 10
+        //                //        && textBox_CodeArrayForSMS.Text.Length == 4
+        //                && serialPort_SMS.IsOpen
+        //                && ((checkBox_SMSencrypted.Checked == false) || (textBox_CodeArrayForSMS.Text.Length == 4))
+        //                )
+        //            {
 
 
-//                groupBox34.Enabled = false;
+        //                groupBox34.Enabled = false;
 
-//                button_Ring.BackColor = Color.Yellow;
-//                button_Ring.Text = "Ring Processing";
+        //                button_Ring.BackColor = Color.Yellow;
+        //                button_Ring.Text = "Ring Processing";
 
-//                SendOneTimeFlag = 1;
-//                TimerStatusRingWait = 300;
-//                RingToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
+        //                SendOneTimeFlag = 1;
+        //                TimerStatusRingWait = 300;
+        //                RingToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-//                Thread.Sleep(1000);
-
-
-
-//                if (checkBox_SMSencrypted.Checked == true)
-//                {
+        //                Thread.Sleep(1000);
 
 
-//                    string[] temp = richTextBox_TextSendSMS.Text.Split('>', '=');
 
-//                    OpcodeToCompare = temp[1];
+        //                if (checkBox_SMSencrypted.Checked == true)
+        //                {
 
-//                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-//                    //SMSText = ReturnSMSEncryiepted(SMSText);
+        //                    string[] temp = richTextBox_TextSendSMS.Text.Split('>', '=');
 
-//                    if (CheckValidSMS(SMSText))
-//                    {
-//                        PhoneBookContact Temp = new PhoneBookContact
-//                        {
-//                            Phone = "+00000000000"
-//                        };
+        //                    OpcodeToCompare = temp[1];
 
-//                        //SendSMSToContact(Temp, SMSText);
-//                    }
-//                    else
-//                    {
-//                        //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-//                   //     LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
-//                    }
+        //                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
 
-//                    // AddCommandToCommands(richTextBox_TextSendSMS.Text);
+        //                    //SMSText = ReturnSMSEncryiepted(SMSText);
 
-//                }
-//                else
-//                {
-//                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
-//                    txtDataTx.Text = SMSText;
-//                }
+        //                    if (CheckValidSMS(SMSText))
+        //                    {
+        //                        PhoneBookContact Temp = new PhoneBookContact
+        //                        {
+        //                            Phone = "+00000000000"
+        //                        };
 
-//                groupBox34.Enabled = true;
+        //                        //SendSMSToContact(Temp, SMSText);
+        //                    }
+        //                    else
+        //                    {
+        //                        //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+        //                   //     LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
+        //                    }
 
-//            }
-//            else
-//            {
-//                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-////                string RingExplain = @"In Order to Ring you have to:
-////1. Select the contact 
-////2. Select the command
-////3. Check that the password is the right password
-////4. Check the Encripted checkbox
-////5. Check the unit ID (IMEI),it should be the same IMEI target ID (when the status received it compare the IMEI recieved vs the UnitID TextBox)
-////6. Check the Unit code it the right code
-////7. Comport must be open ";
-//                //LogSMS.LogMessage(Color.Red, Color.White, RingExplain, New_Line = true, Show_Time = false);
+        //                    // AddCommandToCommands(richTextBox_TextSendSMS.Text);
 
-//                button_Ring.BackColor = default;
-//                button_Ring.Text = "Ring";
-//                SendOneTimeFlag = 0;
-//                TimerStatusRingWait = 0;
+        //                }
+        //                else
+        //                {
+        //                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
+        //                    txtDataTx.Text = SMSText;
+        //                }
 
-//            }
-//        }
+        //                groupBox34.Enabled = true;
+
+        //            }
+        //            else
+        //            {
+        //                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+        ////                string RingExplain = @"In Order to Ring you have to:
+        ////1. Select the contact 
+        ////2. Select the command
+        ////3. Check that the password is the right password
+        ////4. Check the Encripted checkbox
+        ////5. Check the unit ID (IMEI),it should be the same IMEI target ID (when the status received it compare the IMEI recieved vs the UnitID TextBox)
+        ////6. Check the Unit code it the right code
+        ////7. Comport must be open ";
+        //                //LogSMS.LogMessage(Color.Red, Color.White, RingExplain, New_Line = true, Show_Time = false);
+
+        //                button_Ring.BackColor = default;
+        //                button_Ring.Text = "Ring";
+        //                SendOneTimeFlag = 0;
+        //                TimerStatusRingWait = 0;
+
+        //            }
+        //        }
 
         void ScanComports()
         {
@@ -14928,7 +14924,7 @@ namespace SocketServer
 
         }
 
-       // private Random rnd = new Random();
+        // private Random rnd = new Random();
 
         private void Button_ScreenShot_Click(object sender, EventArgs e)
         {
@@ -14940,12 +14936,12 @@ namespace SocketServer
 
         private void ListBox_SMSCommands_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-      //      LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
+            //      LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
             for (int i = 0; i < listBox_SMSCommands.Items.Count; i++)
             {
                 if (listBox_SMSCommands.GetSelected(i) == true)
                 {
-         //           LogSMS.LogMessage(Color.Black, Color.White, "[" + listBox_SMSCommands.Items[i].ToString() + "]", New_Line = true, Show_Time = false);
+                    //           LogSMS.LogMessage(Color.Black, Color.White, "[" + listBox_SMSCommands.Items[i].ToString() + "]", New_Line = true, Show_Time = false);
                 }
             }
             //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = true, Show_Time = false);
@@ -15038,7 +15034,7 @@ namespace SocketServer
 
         private void Button3_Click_3(object sender, EventArgs e)
         {
-           // Color randomColor ;
+            // Color randomColor ;
             //Tab0Color = randomColor;
         }
 
@@ -15046,7 +15042,7 @@ namespace SocketServer
         private void Button_GraphPause_Click(object sender, EventArgs e)
         {
 
-            if(IsPauseGraphs == false)
+            if (IsPauseGraphs == false)
             {
                 IsPauseGraphs = true;
                 button_GraphPause.BackColor = Color.Yellow;
@@ -15108,7 +15104,7 @@ namespace SocketServer
             return hex.ToString();
         }
 
-        byte[] TCPClientBuffer = new byte[0]; 
+        byte[] TCPClientBuffer = new byte[0];
         void ReceiveData()
         {
             TcpClient PClientSocket = ClientSocket;
@@ -15131,7 +15127,7 @@ namespace SocketServer
 
 
                             int NumOfReceivedBytes = stm.Read(buffer, 0, buffer.Length);
-                            if(WaitforBufferFull == 0)
+                            if (WaitforBufferFull == 0)
                             {
                                 TCPClientBuffer = new byte[NumOfReceivedBytes];
                                 Array.Copy(buffer, 0, TCPClientBuffer, 0, NumOfReceivedBytes);
@@ -15145,11 +15141,11 @@ namespace SocketServer
                                 Array.Copy(buffer, 0, temp, TCPClientBuffer.Length, NumOfReceivedBytes);
                                 //buffer.CopyTo(temp, NumOfReceivedBytes);
                                 TCPClientBuffer = temp;
-                                
+
 
                             }
 
-                           
+
 
 
 
@@ -15159,7 +15155,7 @@ namespace SocketServer
                         {
 
 
-                            SystemLogger.LogMessage(Color.Black, Color.Red,"Gil: " + ex.ToString(), New_Line = true, Show_Time = true);
+                            SystemLogger.LogMessage(Color.Black, Color.Red, "Gil: " + ex.ToString(), New_Line = true, Show_Time = true);
 
 
                             return;
@@ -15207,7 +15203,7 @@ namespace SocketServer
                 }
                 // we have connected
                 ClientSocket.EndConnect(result);
-                
+
 
                 //System.Net.IPAddress	remoteIPAddress	 = System.Net.IPAddress.Parse(szIPSelected);
                 //System.Net.IPEndPoint	remoteEndPoint = new System.Net.IPEndPoint(remoteIPAddress, alPort);
@@ -15287,7 +15283,7 @@ namespace SocketServer
                 {
                     case Keys.F1:
                         SerialTerminalPrintHelp();
-                        
+
                         break;
 
                     case Keys.F2:
@@ -15320,7 +15316,7 @@ namespace SocketServer
                         //}
                         //else
                         //{
-                            button_SendSerialPort.PerformClick();
+                        button_SendSerialPort.PerformClick();
                         //}
 
                         break;
@@ -15396,7 +15392,7 @@ namespace SocketServer
             }
         }
 
-         
+
         private void Button_OpenPort_Click(object sender, EventArgs e)
         {
             if (serialPort.IsOpen == false)
@@ -15447,7 +15443,7 @@ namespace SocketServer
                     button_OpenPort.Text = "Close";
                     button_OpenPort.BackColor = Color.LightGreen;
                     label_SerialPortConnected.BackColor = Color.LightGreen;
-                    label_SerialPortStatus.Text = cmb_PortName.Text+ "   \n" + cmbBaudRate.Text; 
+                    label_SerialPortStatus.Text = cmb_PortName.Text + "   \n" + cmbBaudRate.Text;
 
 
                     cmbBaudRate.Enabled = false;
@@ -15526,9 +15522,9 @@ namespace SocketServer
 
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                SerialPortLogger.LogMessage(Color.Black, Color.Red, ex.Message , New_Line = true, Show_Time = true);
+                SerialPortLogger.LogMessage(Color.Black, Color.Red, ex.Message, New_Line = true, Show_Time = true);
             }
 
         }
@@ -15557,19 +15553,19 @@ namespace SocketServer
 
         private void TextBox1_TextChanged_3(object sender, EventArgs e)
         {
-                //Color TextColor = Color.FromName(textBox1.Text);
-                //if(TextColor.ToArgb() == 0)
-                //{
-                //    textBox1.BackColor = default;
-                //}
-                //else
-                //{
-                //    textBox1.BackColor = TextColor;
-                //}
+            //Color TextColor = Color.FromName(textBox1.Text);
+            //if(TextColor.ToArgb() == 0)
+            //{
+            //    textBox1.BackColor = default;
+            //}
+            //else
+            //{
+            //    textBox1.BackColor = TextColor;
+            //}
 
-                
 
-                
+
+
         }
 
         private void TextBox_SendSerialPort_TextChanged_1(object sender, EventArgs e)
@@ -15648,7 +15644,7 @@ namespace SocketServer
                 {
                     return;
                 }
-                    ClearRxTextBox();
+                ClearRxTextBox();
                 textBox_Preamble_TextChanged(null, null);
                 textBox_Opcode_TextChanged(null, null);
                 textBox_data_TextChanged(null, null);
@@ -15665,8 +15661,8 @@ namespace SocketServer
 
                 List<byte> ListBytes = new List<byte>();
                 // Kratos_Protocol KratusP = new Kratos_Protocol();
-                
-                    Stream stm = ClientSocket.GetStream();
+
+                Stream stm = ClientSocket.GetStream();
 
                 if (stm != null)
                 {
@@ -15687,7 +15683,7 @@ namespace SocketServer
 
                     stm.Write(Result, 0, Result.Length);
                 }
-                
+
 
 
             }
@@ -15732,7 +15728,7 @@ namespace SocketServer
             string WithoutSpaces = Regex.Replace(textBox_data.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null )
+            if (buffer != null)
             {
                 textBox_data.BackColor = Color.LightGreen;
             }
@@ -15850,7 +15846,7 @@ namespace SocketServer
         }
         void SendDataToSystem()
         {
-            if(radioButton_SerialPort.Checked == true)
+            if (radioButton_SerialPort.Checked == true)
             {
                 SendThrouthSerialPort();
             }
@@ -15861,7 +15857,7 @@ namespace SocketServer
 
             }
 
-            
+
         }
 
         private void button_GetSoftwareVersion_Click(object sender, EventArgs e)
@@ -16225,7 +16221,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
             }));
         }
 
-       // int PingWaitTime = 0;
+        // int PingWaitTime = 0;
         private void button72_Click(object sender, EventArgs e)
         {
 
@@ -16238,12 +16234,12 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
                     button_Ping.BackColor = Color.Yellow;
 
                     Thread.CurrentThread.IsBackground = true;
-                /* run your code here */
-                Ping myPing = new Ping();
-                PingReply reply = myPing.Send(szIPSelected);
+                    /* run your code here */
+                    Ping myPing = new Ping();
+                    PingReply reply = myPing.Send(szIPSelected);
                     if (reply != null)
                     {
-                      //  PingWaitTime = 0;
+                        //  PingWaitTime = 0;
                         // richTextBox_ClientRx.AppendText(String.Format("Failed to connect to [{0}] [{1}]\n", szIPSelected, szPort));
                         richTextBox_ClientRxPrintText("\n Status :  " + reply.Status + " \n Time : " + reply.RoundtripTime.ToString() + " \n Address : " + reply.Address);
 
@@ -16257,17 +16253,17 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
                             button_Ping.BackColor = Color.Orange;
                         }
                     }
-                    }).Start();
-            
+                }).Start();
+
 
 
                 //System.Threading.Thread.Sleep(500);
 
 
                 //Console.WriteLine(reply.ToString());
-                
+
             }
-            
+
             catch
             {
                 richTextBox_ClientRx.AppendText("ERROR: You have Some TIMEOUT issue");
@@ -16606,7 +16602,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "75 00";
-     //       textBox_data.Text = textBox_GetGPIODir.Text;
+            //       textBox_data.Text = textBox_GetGPIODir.Text;
 
             SendDataToSystem();
         }
@@ -16615,7 +16611,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "76 00";
-         //   textBox_data.Text = textBox_SetGPIOVal.Text;
+            //   textBox_data.Text = textBox_SetGPIOVal.Text;
 
             SendDataToSystem();
         }
@@ -16701,7 +16697,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
             //textBox_data.Text = textBox_SetRxChannelState.Text;
 
             //SendDataToSystem();
-            
+
         }
 
         private void button86_Click(object sender, EventArgs e)
@@ -17087,40 +17083,40 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         private void button94_Click(object sender, EventArgs e)
         {
-                // Generate a test signal,
-                //  1 Vrms at 20,000 Hz
-                //  Sampling Rate = 100,000 Hz
-                //  DFT Length is 1000 Points
-                double amplitude = 1.0;
-                double frequency = 20000;
-                UInt32 length = 1000;
-                double samplingRate = 100000;
-                double[] inputSignal = DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
-                // Instantiate a new DFT
-                DFT dft = new DFT();
-                // Initialize the DFT
-                // You only need to do this once or if you change any of the DFT parameters.
-                dft.Initialize(length);
-                // Call the DFT and get the scaled spectrum back
-                Complex[] cSpectrum = dft.Execute(inputSignal);
-                // Convert the complex spectrum to magnitude
-                double[] lmSpectrum = DSP.ConvertComplex.ToMagnitude(cSpectrum);
-                // Note: At this point, lmSpectrum is a 501 byte array that 
-                // contains a properly scaled Spectrum from 0 - 50,000 Hz (1/2 the Sampling Frequency)
-                // For plotting on an XY Scatter plot, generate the X Axis frequency Span
-                double[] freqSpan = dft.FrequencySpan(samplingRate);
+            // Generate a test signal,
+            //  1 Vrms at 20,000 Hz
+            //  Sampling Rate = 100,000 Hz
+            //  DFT Length is 1000 Points
+            double amplitude = 1.0;
+            double frequency = 20000;
+            UInt32 length = 1000;
+            double samplingRate = 100000;
+            double[] inputSignal = DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
+            // Instantiate a new DFT
+            DFT dft = new DFT();
+            // Initialize the DFT
+            // You only need to do this once or if you change any of the DFT parameters.
+            dft.Initialize(length);
+            // Call the DFT and get the scaled spectrum back
+            Complex[] cSpectrum = dft.Execute(inputSignal);
+            // Convert the complex spectrum to magnitude
+            double[] lmSpectrum = DSP.ConvertComplex.ToMagnitude(cSpectrum);
+            // Note: At this point, lmSpectrum is a 501 byte array that 
+            // contains a properly scaled Spectrum from 0 - 50,000 Hz (1/2 the Sampling Frequency)
+            // For plotting on an XY Scatter plot, generate the X Axis frequency Span
+            double[] freqSpan = dft.FrequencySpan(samplingRate);
             // At this point a XY Scatter plot can be generated from,
             // X axis => freqSpan
             // Y axis => lmSpectrum
             // In this example, the maximum value of 1 Vrms is located at bin 200 (20,000 Hz)
-                var series = new Series("Freq");
-                var series2 = new Series("Time");
+            var series = new Series("Freq");
+            var series2 = new Series("Time");
             listBox_Charts.Items.Add(series.Name);
             listBox_Charts.Items.Add(series2.Name);
             // Frist parameter is X-Axis and Second is Collection of Y- Axis
             series.Points.DataBindXY(freqSpan, lmSpectrum);
 
-            for (int i = 0; i < inputSignal.Length/10; i++)
+            for (int i = 0; i < inputSignal.Length / 10; i++)
             {
                 series2.Points.AddXY(i, inputSignal[i]);
             }
@@ -17177,7 +17173,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
             long x = 0;
             if (long.TryParse(textBox_MinXAxis.Text, out x))
             {
-                if ( x < chart1.ChartAreas[0].AxisX.Maximum)
+                if (x < chart1.ChartAreas[0].AxisX.Maximum)
                 {
                     // you know that the parsing attempt
                     // was successful
@@ -17226,7 +17222,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
             new Thread(() =>
             {
                 CheckForMiniAdaDataFFT(MiniAdaParser);
-                
+
             }).Start();
 
         }
@@ -17239,8 +17235,8 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         private void comboBox_WindowsDSPLib_SelectedIndexChanged(object sender, EventArgs e)
         {
-     //       string selectedWindowName = comboBox_WindowsDSPLib.SelectedValue.ToString();
-          //  windowToApply = (DSPLib.DSP.Window.Type)Enum.Parse(typeof(DSPLib.DSP.Window.Type), selectedWindowName);
+            //       string selectedWindowName = comboBox_WindowsDSPLib.SelectedValue.ToString();
+            //  windowToApply = (DSPLib.DSP.Window.Type)Enum.Parse(typeof(DSPLib.DSP.Window.Type), selectedWindowName);
         }
 
         private void button98_Click(object sender, EventArgs e)
@@ -17285,41 +17281,41 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
                 {
                     listBox_Charts.SelectedIndex = 0;
                 }
-                
+
             }
         }
 
         private void textBox_RecordIQDataNumbers_TextChanged(object sender, EventArgs e)
         {
-           // try
-           // {
-           //     string[] words = textBox_RecordIQDataNumbers.Text.Split(',');
-           //     if (words.Length == 2)
-           //     {
-           //         byte.TryParse(words[0], out byte NumOfBlocks);
-           //         int.TryParse(words[1], out int BlockSize);
+            // try
+            // {
+            //     string[] words = textBox_RecordIQDataNumbers.Text.Split(',');
+            //     if (words.Length == 2)
+            //     {
+            //         byte.TryParse(words[0], out byte NumOfBlocks);
+            //         int.TryParse(words[1], out int BlockSize);
 
-           //         byte[] BSize = BitConverter.GetBytes(BlockSize);
+            //         byte[] BSize = BitConverter.GetBytes(BlockSize);
 
-           //         byte[] SendArray = new byte[5];
-           //         SendArray[0] = NumOfBlocks;
-           //         SendArray[1] = BSize[0];
-           //         SendArray[2] = BSize[1];
-           //         SendArray[3] = BSize[2];
-           //         SendArray[4] = BSize[3];
+            //         byte[] SendArray = new byte[5];
+            //         SendArray[0] = NumOfBlocks;
+            //         SendArray[1] = BSize[0];
+            //         SendArray[2] = BSize[1];
+            //         SendArray[3] = BSize[2];
+            //         SendArray[4] = BSize[3];
 
-           //         //textBox_RecordIQData.Text = ByteArrayToString(SendArray);
-           //      //   textBox_RecordIQDataNumbers.BackColor = Color.LightGreen;
-           //         //Array.Reverse(intBytes);
-           //         //byte[] result = intBytes;
-           //     }
+            //         //textBox_RecordIQData.Text = ByteArrayToString(SendArray);
+            //      //   textBox_RecordIQDataNumbers.BackColor = Color.LightGreen;
+            //         //Array.Reverse(intBytes);
+            //         //byte[] result = intBytes;
+            //     }
 
-           // }
-           // catch(Exception ex)
-           // {
-           //     SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), true, true);
-           ////     textBox_RecordIQDataNumbers.BackColor = Color.Red;
-           // }
+            // }
+            // catch(Exception ex)
+            // {
+            //     SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), true, true);
+            ////     textBox_RecordIQDataNumbers.BackColor = Color.Red;
+            // }
         }
 
         private void button71_MouseDown(object sender, MouseEventArgs e)
@@ -17572,7 +17568,7 @@ Raw4 - Catalina 4
         }
 
 
-        void WriteFileToFlash(String i_FilePathName,string i_AD936X_ADDR)
+        void WriteFileToFlash(String i_FilePathName, string i_AD936X_ADDR)
         {
             String DataToSend = "";
             int DataLength = 0;
@@ -17588,7 +17584,7 @@ Raw4 - Catalina 4
                 byte[] LineBytes = StringToByteArray(line);
 
                 DataLength += LineBytes.Length;
-                foreach(byte by in LineBytes)
+                foreach (byte by in LineBytes)
                 {
                     CheckSumCalc += by;
                 }
@@ -17677,7 +17673,7 @@ Raw4 - Catalina 4
         }
         private void textBox_EraseDataFromFlash_TextChanged(object sender, EventArgs e)
         {
-            
+
             //string WithoutSpaces = Regex.Replace(textBox_EraseDataFromFlash.Text, @"\s+", "");
             //byte[] buffer = StringToByteArray(WithoutSpaces);
 
@@ -17766,9 +17762,9 @@ Raw4 - Catalina 4
             //    if (freq >= 0 && freq <= 9999999999999)
             //    {
             //        string hexValue = freq.ToString("X16");
-                    
+
             //        textBox_SetInternalLOFreq.Text = textBox_SetInternalLOFreq.Text.Substring(0, 2) + " " + ReverseHexStringLittleBigEndian(hexValue);
-                    
+
             //        textBox_SetInternalLOFreqNumber.BackColor = Color.LightGreen;
             //    }
             //    else
@@ -17813,7 +17809,7 @@ Raw4 - Catalina 4
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "32 00";
-           // textBox_data.Text = textBox_EraseDataFromFlash.Text;
+            // textBox_data.Text = textBox_EraseDataFromFlash.Text;
 
             SendDataToSystem();
         }
@@ -17881,7 +17877,7 @@ Raw4 - Catalina 4
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                richTextBox_SyntisazerL2.Text = 
+                richTextBox_SyntisazerL2.Text =
 @"00618000
 08008011
 00004542
@@ -17892,7 +17888,7 @@ Raw4 - Catalina 4
             }
             else
             {
-                richTextBox_SyntisazerL2.Text = 
+                richTextBox_SyntisazerL2.Text =
 @"004B0000
 08008011
 00004542
@@ -18015,9 +18011,9 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
         {
             String DataToSend = "";
             int DataLength = 1;
-          //  byte CheckSumCalc = 0;
+            //  byte CheckSumCalc = 0;
             byte SystemType = (byte)comboBox_SystemType.SelectedIndex;
-            
+
 
             //            % mini_ada_write_sys_type(type)
             //%
@@ -18064,14 +18060,14 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
             //String DataToSend = "";
             //int DataLength = 0;
             //byte CheckSumCalc = 0;
-            
+
             //var lines = richTextBox_SyntisazerL1.Lines;
             //for (var i = 0; i < lines.Length ; i++)
             //{
             //    String line = lines[i];
             //    // Process line
 
-                 
+
             //    line = Regex.Replace(line, @"\s+", "");
 
             //    byte[] LineBytes = StringToByteArray(line);
@@ -18111,7 +18107,7 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
             String DataToSend = "";
             int DataLength = 0;
             byte CheckSumCalc = 0;
-            
+
             var lines = richTextBox_SyntisazerL2.Lines;
             for (var i = 0; i < lines.Length; i++)
             {
@@ -18141,14 +18137,14 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
             string TotalframeDataToSend = ConvertByteArraytToString(FlashHeader) + DataToSend;
             byte[] temp = StringToByteArray(Regex.Replace(TotalframeDataToSend, @"\s+", ""));
             // Erase the Sector
-      //      textBox_EraseDataFromFlash.Text = SYNTHESIZER_L2_ADDRESS;
-      //      button_EraseFlash.PerformClick();
+            //      textBox_EraseDataFromFlash.Text = SYNTHESIZER_L2_ADDRESS;
+            //      button_EraseFlash.PerformClick();
             wait(2000);
             //Store the Data in flash
             byte[] intBytes = BitConverter.GetBytes(DataLength);
             String NumOfBytesstr = ConvertByteArraytToString(intBytes);
-        //    textBox_StoreDatainFlash.Text = SYNTHESIZER_L2_ADDRESS /* + NumOfBytesstr */+ TotalframeDataToSend;
-     //       temp = StringToByteArray(Regex.Replace(textBox_StoreDatainFlash.Text, @"\s+", ""));
+            //    textBox_StoreDatainFlash.Text = SYNTHESIZER_L2_ADDRESS /* + NumOfBytesstr */+ TotalframeDataToSend;
+            //       temp = StringToByteArray(Regex.Replace(textBox_StoreDatainFlash.Text, @"\s+", ""));
             //button_StoreDatainFlash.PerformClick();
         }
 
@@ -18177,8 +18173,8 @@ synth_data_L1=[hex2dec('00618000') ...   % Frequency change  % LO_L1=2*(1575.42+
 
         private void richTextBox_RegisterCommands_TextChanged(object sender, EventArgs e)
         {
-        //    Monitor.Properties.Settings.Default.RegisterCommands = richTextBox_RegisterCommands.Text;
-        //    Monitor.Properties.Settings.Default.Save();
+            //    Monitor.Properties.Settings.Default.RegisterCommands = richTextBox_RegisterCommands.Text;
+            //    Monitor.Properties.Settings.Default.Save();
         }
 
         private void button72_Click_3(object sender, EventArgs e)
@@ -18429,7 +18425,7 @@ Note: eStatus enum 
             //textBox_data.Text = textBox_SetLOFreq.Text;
 
             //SendDataToSystem();
-            
+
         }
 
         private void textBox_SetLOFreqStep_TextChanged(object sender, EventArgs e)
@@ -18454,7 +18450,7 @@ Note: eStatus enum 
             //textBox_data.Text = textBox_SetLOFreqStep.Text;
 
             //SendDataToSystem();
-            
+
         }
 
         private void button104_Click(object sender, EventArgs e)
@@ -18464,7 +18460,7 @@ Note: eStatus enum 
             //textBox_data.Text = textBox_GetLOStateFreqMode.Text;
 
             //SendDataToSystem();
-            
+
         }
 
         private void textBox_GetLOStateFreqMode_TextChanged(object sender, EventArgs e)
@@ -18560,25 +18556,25 @@ Note: eStatus enum 
                 // Kratos_Protocol KratusP = new Kratos_Protocol();
 
 
-                    KratosProtocolFrame KratosFrame = new KratosProtocolFrame();
-                    KratosFrame.Preamble = Regex.Replace(textBox_Preamble.Text, @"\s+", "");
-                    KratosFrame.Opcode = Regex.Replace(textBox_Opcode.Text, @"\s+", "");
-                    KratosFrame.Data = Regex.Replace(textBox_data.Text, @"\s+", "");
-                    byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
+                KratosProtocolFrame KratosFrame = new KratosProtocolFrame();
+                KratosFrame.Preamble = Regex.Replace(textBox_Preamble.Text, @"\s+", "");
+                KratosFrame.Opcode = Regex.Replace(textBox_Opcode.Text, @"\s+", "");
+                KratosFrame.Data = Regex.Replace(textBox_data.Text, @"\s+", "");
+                byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
 
-                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
-                    //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
-                    textBox_SentPreamble.Text = SentFrame.Preamble;
-                    textBox_SentOpcode.Text = SentFrame.Opcode;
-                    textBox_SentData.Text = SentFrame.Data;
-                    textBox_SentDataLength.Text = SentFrame.DataLength;
-                    textBox_SentChecksum.Text = SentFrame.CheckSum;
+                KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
+                //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
+                textBox_SentPreamble.Text = SentFrame.Preamble;
+                textBox_SentOpcode.Text = SentFrame.Opcode;
+                textBox_SentData.Text = SentFrame.Data;
+                textBox_SentDataLength.Text = SentFrame.DataLength;
+                textBox_SentChecksum.Text = SentFrame.CheckSum;
 
                 textBox_SendSerialPort.Text = ConvertByteArraytToString(Result);
 
                 Button2_Click_1(null, null);
-               // button_SendSerialPort.PerformClick();
-               //stm.Write(Result, 0, Result.Length);
+                // button_SendSerialPort.PerformClick();
+                //stm.Write(Result, 0, Result.Length);
 
 
 
@@ -19296,7 +19292,7 @@ Note: eStatus enum 
         {
             return richTextBox_SSPA.Text.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
         }
-        private async void  button70_Click_1(object sender, EventArgs e)
+        private async void button70_Click_1(object sender, EventArgs e)
         {
             GlobalSystemResultReceived = "";
 
@@ -19312,7 +19308,7 @@ Note: eStatus enum 
             String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
 
 
-            if(TextDataRecieved.Length < 3)
+            if (TextDataRecieved.Length < 3)
             {
                 return;
             }
@@ -19325,7 +19321,7 @@ Note: eStatus enum 
 
 
 
-        
+
 
         private async void button31_Click_1(object sender, EventArgs e)
         {
@@ -19375,7 +19371,7 @@ Note: eStatus enum 
             string hexValue = "";
             if (Int32.TryParse(textBox_RFWidth.Text, out temp))
             {
-                 hexValue += temp.ToString("X4");
+                hexValue += temp.ToString("X4");
             }
 
             if (Int32.TryParse(textBox_RFPeriod.Text, out temp))
@@ -19447,46 +19443,46 @@ Note: eStatus enum 
         private async void button72_Click_4(object sender, EventArgs e)
         {
 
-                GlobalSystemResultReceived = "";
-                button67_Click(null, null);
-                await Task.Delay(500);
-                button68_Click(null, null);
-                await Task.Delay(500);
-                button50_Click_1(null, null);
-                await Task.Delay(500);
-                String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
-                
-                if(TextDataRecieved.Length < 50)
-                {
-                    return;
-                }
-            
-                textBox_StatusUUT1.Text = TextDataRecieved[1];
-                textBox_StatusUUT2.Text = TextDataRecieved[3];
-                textBox_StatusUUT3.Text = TextDataRecieved[5];
-                textBox_StatusUUT4.Text = TextDataRecieved[7];
-                textBox_StatusUUT5.Text = TextDataRecieved[9];
-                textBox_StatusUUT6.Text = TextDataRecieved[11];
-                textBox_StatusUUT7.Text = TextDataRecieved[13];
-                textBox_StatusUUT8.Text = TextDataRecieved[15];
-                textBox_StatusUUT9.Text = TextDataRecieved[17];
-                textBox_StatusUUT10.Text = TextDataRecieved[19];
-                textBox_StatusUUT11.Text = TextDataRecieved[21];
-                textBox_StatusUUT12.Text = TextDataRecieved[23];
-                textBox_StatusUUT13.Text = TextDataRecieved[25];
-                textBox_StatusUUT14.Text = TextDataRecieved[27];
-                textBox_StatusUUT15.Text = TextDataRecieved[29];
-                textBox_StatusUUT16.Text = TextDataRecieved[31];
-                textBox_StatusUUT17.Text = TextDataRecieved[33];
-                textBox_StatusUUT18.Text = TextDataRecieved[35];
-                textBox_StatusUUT19.Text = TextDataRecieved[37];
-                textBox_StatusUUT20.Text = TextDataRecieved[39];
-                textBox_StatusUUT21.Text = TextDataRecieved[41];
-                textBox_StatusUUT22.Text = TextDataRecieved[43];
-                textBox_StatusUUT23.Text = TextDataRecieved[45];
-                textBox_StatusUUT24.Text = TextDataRecieved[47];
-                textBox_StatusUUT25.Text = TextDataRecieved[49];
-                textBox_StatusUUT26.Text = TextDataRecieved[51];
+            GlobalSystemResultReceived = "";
+            button67_Click(null, null);
+            await Task.Delay(500);
+            button68_Click(null, null);
+            await Task.Delay(500);
+            button50_Click_1(null, null);
+            await Task.Delay(500);
+            String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (TextDataRecieved.Length < 50)
+            {
+                return;
+            }
+
+            textBox_StatusUUT1.Text = TextDataRecieved[1];
+            textBox_StatusUUT2.Text = TextDataRecieved[3];
+            textBox_StatusUUT3.Text = TextDataRecieved[5];
+            textBox_StatusUUT4.Text = TextDataRecieved[7];
+            textBox_StatusUUT5.Text = TextDataRecieved[9];
+            textBox_StatusUUT6.Text = TextDataRecieved[11];
+            textBox_StatusUUT7.Text = TextDataRecieved[13];
+            textBox_StatusUUT8.Text = TextDataRecieved[15];
+            textBox_StatusUUT9.Text = TextDataRecieved[17];
+            textBox_StatusUUT10.Text = TextDataRecieved[19];
+            textBox_StatusUUT11.Text = TextDataRecieved[21];
+            textBox_StatusUUT12.Text = TextDataRecieved[23];
+            textBox_StatusUUT13.Text = TextDataRecieved[25];
+            textBox_StatusUUT14.Text = TextDataRecieved[27];
+            textBox_StatusUUT15.Text = TextDataRecieved[29];
+            textBox_StatusUUT16.Text = TextDataRecieved[31];
+            textBox_StatusUUT17.Text = TextDataRecieved[33];
+            textBox_StatusUUT18.Text = TextDataRecieved[35];
+            textBox_StatusUUT19.Text = TextDataRecieved[37];
+            textBox_StatusUUT20.Text = TextDataRecieved[39];
+            textBox_StatusUUT21.Text = TextDataRecieved[41];
+            textBox_StatusUUT22.Text = TextDataRecieved[43];
+            textBox_StatusUUT23.Text = TextDataRecieved[45];
+            textBox_StatusUUT24.Text = TextDataRecieved[47];
+            textBox_StatusUUT25.Text = TextDataRecieved[49];
+            textBox_StatusUUT26.Text = TextDataRecieved[51];
 
 
 
@@ -19525,7 +19521,7 @@ Note: eStatus enum 
         }
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
             if (e.KeyCode == Keys.Enter)
             {
                 SetPSUValues();
@@ -19675,7 +19671,7 @@ Note: eStatus enum 
             if (Checkbx.Checked == true)
             {
                 textBox15.Text = "01";
-                
+
                 Checkbx.BackColor = Color.LightGreen;
             }
             else

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Monitor
@@ -79,7 +77,7 @@ namespace Monitor
 
                 return Ret;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -110,7 +108,7 @@ namespace Monitor
 
                 if (CheckSumSent == CheckSumCalc)
                 {
-                    
+
                     Ret.Preamble = ByteArrayToString(i_IncomingBytes.Skip(0).Take(2).ToArray());
 
                     Ret.Opcode = ByteArrayToString(i_IncomingBytes.Skip(2).Take(2).ToArray());
@@ -131,13 +129,13 @@ namespace Monitor
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-                
+
             }
 
-            
+
         }
 
         static public byte[] EncodeKratusProtocol_Standard(KratosProtocolFrame i_Frame)
@@ -164,7 +162,7 @@ namespace Monitor
                 {
                     CheckSum += ListBytes[i];
                 }
-               // intBytes = BitConverter.GetBytes(CheckSum);
+                // intBytes = BitConverter.GetBytes(CheckSum);
                 ListBytes.Add(CheckSum);
 
                 byte[] Ret = ListBytes.ToArray();
@@ -184,43 +182,43 @@ namespace Monitor
 
             //try
             //{
-                byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).ToArray();
+            byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).ToArray();
 
-                UInt16 FrameDataLength = BitConverter.ToUInt16(DataLengthBytes, 0);
-                int CheckSumIndex = (int)FrameDataLength + 4;
-
-
-                Byte CheckSumCalc = 0;
-
-                for (int i = 0; i < CheckSumIndex ; i++)
-                {
-                    CheckSumCalc += i_IncomingBytes[i];
-                }
-
-                byte[] CheckSumBytes = i_IncomingBytes.Skip(CheckSumIndex).Take(1).ToArray();
-                Byte CheckSumSent = CheckSumBytes[0];
-
-                if (CheckSumSent == CheckSumCalc)
-                {
-
-                    Ret.Preamble = ByteArrayToString(i_IncomingBytes.Skip(0).Take(1).ToArray());
-
-                    Ret.Opcode = ByteArrayToString(i_IncomingBytes.Skip(1).Take(1).ToArray());
-
-                    Ret.Data = ByteArrayToString(i_IncomingBytes.Skip(4).Take((int)FrameDataLength).ToArray());
-
-                    Ret.DataLength = FrameDataLength.ToString();
-
-                    Ret.CheckSum = CheckSumSent.ToString("X");
-                    return Ret;
+            UInt16 FrameDataLength = BitConverter.ToUInt16(DataLengthBytes, 0);
+            int CheckSumIndex = (int)FrameDataLength + 4;
 
 
-                }
-                else
-                {
-                    throw new Exception("Income Frame - Check sum failed!");
+            Byte CheckSumCalc = 0;
 
-                }
+            for (int i = 0; i < CheckSumIndex; i++)
+            {
+                CheckSumCalc += i_IncomingBytes[i];
+            }
+
+            byte[] CheckSumBytes = i_IncomingBytes.Skip(CheckSumIndex).Take(1).ToArray();
+            Byte CheckSumSent = CheckSumBytes[0];
+
+            if (CheckSumSent == CheckSumCalc)
+            {
+
+                Ret.Preamble = ByteArrayToString(i_IncomingBytes.Skip(0).Take(1).ToArray());
+
+                Ret.Opcode = ByteArrayToString(i_IncomingBytes.Skip(1).Take(1).ToArray());
+
+                Ret.Data = ByteArrayToString(i_IncomingBytes.Skip(4).Take((int)FrameDataLength).ToArray());
+
+                Ret.DataLength = FrameDataLength.ToString();
+
+                Ret.CheckSum = CheckSumSent.ToString("X");
+                return Ret;
+
+
+            }
+            else
+            {
+                throw new Exception("Income Frame - Check sum failed!");
+
+            }
 
             //}
             //catch ()
