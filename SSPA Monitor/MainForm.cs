@@ -9284,31 +9284,7 @@ namespace SocketServer
 
         void PrintFotaIDStatus()
         {
-            textBox_MaximumNumberReceivedRequest.Invoke(new EventHandler(delegate
-            {
-                textBox_MaximumNumberReceivedRequest.Text = "";
 
-
-
-                foreach (var pair in IDToFOTA_Status)
-                {
-                    PhoneBookContact ContactFound = MyPhoneBook.GetContactByUnitID(pair.Key);
-
-                    if (ContactFound != null)
-                    {
-                        textBox_MaximumNumberReceivedRequest.AppendText(ContactFound.Name + "   " + pair.Value + " \n");
-                    }
-                    else
-                    {
-                        textBox_MaximumNumberReceivedRequest.AppendText(pair.Key + "   " + pair.Value + " \n");
-                    }
-                }
-
-                //textBox_MaximumNumberReceivedRequest.Text += "," + FrameNumber.ToString();
-                //textBox_MaximumNumberReceivedRequest.SelectionStart = textBox_MaximumNumberReceivedRequest.TextLength;
-                //textBox_MaximumNumberReceivedRequest.ScrollToCaret();
-
-            }));
         }
 
         //void SendToConfigPage(string i_ConfigString, string i_Source)
@@ -9663,7 +9639,7 @@ namespace SocketServer
         TextBox_Logger SerialPortLogger;
         //   Logger LogIWatcher;
         // TextBox_Logger LogSMS;
-        PhoneBook MyPhoneBook;
+     //   PhoneBook MyPhoneBook;
         //    readonly List<Series> List_SeriesCharts = new List<Series>();
         //    readonly Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series
         //    {
@@ -10285,12 +10261,6 @@ namespace SocketServer
                 System.IO.Directory.CreateDirectory(subPath);
             }
 
-            using (Stream myStream = File.Create(subPath + m_log_file_name))
-            {
-                MyPhoneBook.ExportToXML(myStream);
-                // Code to write the stream goes here.
-                myStream.Close();
-            }
 
             m_log_file_name = DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss") + "____________Commands" + ".xml";
             filesName += "\n" + m_log_file_name;
@@ -12034,70 +12004,7 @@ namespace SocketServer
 
         void ParseSMSText(string i_Subscriber, string i_SMSText, Color i_ColorDisplay)
         {
-            i_Subscriber = i_Subscriber.Replace("\"", "");
-            PhoneBookContact ContactFound = MyPhoneBook.IsNumberExist(i_Subscriber);
-
-            string ReceivedUnitID = String.Empty;
-
-
-
-
-            if (ContactFound != null)
-            {
-                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n SMS Received: ", New_Line = false, Show_Time = false);
-                //    LogSMS.LogMessage(Color.DarkBlue, Color.Yellow, "\n Contact:  " + ContactFound.ToString(), New_Line = false, Show_Time = false);
-                //    LogSMS.LogMessage(i_ColorDisplay, Color.White, "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
-
-                if (ReceivedUnitID != String.Empty)
-                {
-                    if (IsDigitsOnly(ReceivedUnitID))
-                    {
-                        if (ContactFound.UnitID != ReceivedUnitID)
-                        {
-                            ContactFound.UnitID = ReceivedUnitID;
-
-                            UpdateDefaultsContacts();
-
-                            UpdatePhoneBook();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                //       LogSMS.LogMessage(i_ColorDisplay, Color.White, "SMS Received: " + "\n Number:  " + i_Subscriber + "\n Text:  " + i_SMSText, New_Line = true, Show_Time = false);
-
-
-
-                PhoneBookContact NewContact = new PhoneBookContact
-                {
-                    Name = "",            //values preserved after close
-                    Phone = i_Subscriber,
-                    Notes = ""
-                };
-
-                if (ReceivedUnitID != String.Empty)
-                {
-                    if (IsDigitsOnly(ReceivedUnitID))
-                    {
-                        NewContact.UnitID = ReceivedUnitID;
-                    }
-                }
-                //Do something here with these values
-
-                MyPhoneBook.AddContactToPhoneBook(NewContact);
-
-                UpdateDefaultsContacts();
-
-                UpdatePhoneBook();
-
-            }
-
-
-
-            ParseStatuPos(i_SMSText);
+           
 
 
 
@@ -13696,7 +13603,7 @@ namespace SocketServer
                     };
                     //Do something here with these values
 
-                    MyPhoneBook.AddContactToPhoneBook(NewContact);
+
 
                     UpdateDefaultsContacts();
 
@@ -13756,26 +13663,7 @@ namespace SocketServer
 
         private void Button_ExportToXML_Click(object sender, EventArgs e)
         {
-            Stream myStream;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog
-            {
-                FileName = "MyContacts",
-                Filter = "XML files (*.xml)|*.xml",
-                FilterIndex = 1,
-                RestoreDirectory = true
-            };
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                if ((myStream = saveFileDialog1.OpenFile()) != null)
-                {
-                    MyPhoneBook.ExportToXML(myStream);
-                    // Code to write the stream goes here.
-                    myStream.Close();
-                }
-            }
-
-
+           
 
 
 
