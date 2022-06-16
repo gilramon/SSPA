@@ -9629,28 +9629,13 @@ namespace SocketServer
 
         void UpdateDefaultsContacts()
         {
-            Monitor.Properties.Settings.Default.PhoneBook.Clear();
 
-            List<PhoneBookContact> ContactsList = MyPhoneBook.GetContacts();
-            foreach (PhoneBookContact PhoneBookContact in ContactsList)
-            {
-                Monitor.Properties.Settings.Default.PhoneBook.Add(PhoneBookContact.Phone + ";;;;" + PhoneBookContact.Name + ";;;;" + PhoneBookContact.Notes + ";;;;" + PhoneBookContact.Password + ";;;;" + PhoneBookContact.UnitID);
-            }
-
-            Monitor.Properties.Settings.Default.Save();
         }
 
         void UpdateDefaultsCommands()
         {
 
-            Monitor.Properties.Settings.Default.SMS_Commands.Clear();
 
-            foreach (string str in listBox_SMSCommands.Items)
-            {
-                Monitor.Properties.Settings.Default.SMS_Commands.Add(str);
-            }
-
-            Monitor.Properties.Settings.Default.Save();
         }
 
         void UpdateSMSCommands()
@@ -9658,19 +9643,6 @@ namespace SocketServer
             //string[] strArray = new string[Monitor.Properties.Settings.Default.SMS_Commands.Count];
             //Monitor.Properties.Settings.Default.PhoneBook.CopyTo(strArray, 0);
 
-            listBox_SMSCommands.Invoke(new EventHandler(delegate
-            {
-                listBox_SMSCommands.Items.Clear();
-                foreach (string str in Monitor.Properties.Settings.Default.SMS_Commands)
-                {
-                    listBox_SMSCommands.Items.Add((object)str);
-                    // comboBox_SMSCommands.Items.Add(str);
-                }
-
-                SortSMSCommands();
-
-
-            }));
 
 
 
@@ -9678,22 +9650,7 @@ namespace SocketServer
 
         void UpdatePhoneBook()
         {
-            string[] strArray = new string[Monitor.Properties.Settings.Default.PhoneBook.Count];
-            Monitor.Properties.Settings.Default.PhoneBook.CopyTo(strArray, 0);
-            MyPhoneBook = new PhoneBook(strArray);
 
-            MyPhoneBook.SortPhoneBookByNotes();
-
-            List<PhoneBookContact> ContactsList = MyPhoneBook.GetContacts();
-
-            checkedListBox_PhoneBook.Invoke(new EventHandler(delegate
-                    {
-                        checkedListBox_PhoneBook.Items.Clear();
-                        foreach (PhoneBookContact PhoneBookContact in ContactsList)
-                        {
-                            checkedListBox_PhoneBook.Items.Add(PhoneBookContact);
-                        }
-                    }));
 
         }
 
@@ -10020,7 +9977,7 @@ namespace SocketServer
                 //ShowHidePages();
 
 
-                TimeSpan TimeFromLastSave = DateTime.Now - Monitor.Properties.Settings.Default.LastSaveSMSTime;
+
 
 
                 TimeSpan TimeFromLastRunTime = DateTime.Now - Monitor.Properties.Settings.Default.LastRunTime;
@@ -10353,7 +10310,7 @@ namespace SocketServer
                 myStream.Close();
             }
 
-            Monitor.Properties.Settings.Default.LastSaveSMSTime = DateTime.Now;
+
             Monitor.Properties.Settings.Default.Save();
 
             // LogSMS.LogMessage(Color.Brown, Color.White, " 2 Backup files of contacts and commands Created at \n" + subPath + "\n" + filesName, New_Line = true, Show_Time = true);
@@ -10946,7 +10903,7 @@ namespace SocketServer
         }
 
         int WaitforBufferFull = -1;
-        DSPLib.DSP.Window.Type windowToApply;
+        //DSPLib.DSP.Window.Type windowToApply;
         void CheckForMiniAdaDataFFT(SSPA_Parser i_MiniAdaParser)
         {
 
@@ -10974,14 +10931,9 @@ namespace SocketServer
             int zeroPadding = FindZeroPaddingSize(IQ1Sigal.Length);
             int zeroPadding2 = FindZeroPaddingSize(IQ2Sigal.Length);
 
-            double[] wCoefs = DSP.Window.Coefficients(windowToApply, (uint)IQ1Sigal.Length);
-            double[] wCoefs2 = DSP.Window.Coefficients(windowToApply, (uint)IQ2Sigal.Length);
 
-            double[] wInputData = DSP.Math.Multiply(IQ1Sigal, wCoefs);
-            double[] wInputData2 = DSP.Math.Multiply(IQ2Sigal, wCoefs2);
 
-            double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
-            double wScaleFactor2 = DSP.Window.ScaleFactor.Signal(wCoefs2);
+ 
 
             // Instantiate & Initialize a new DFT
             DSPLib.FFT fft = new DSPLib.FFT();
@@ -10991,27 +10943,16 @@ namespace SocketServer
             fft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding2);
 
             // Call the DFT and get the scaled spectrum back
-            Complex[] cSpectrum = fft.Execute(wInputData);
-            Complex[] cSpectrum2 = fft2.Execute(wInputData2);
+
             // Convert the complex spectrum to note: Magnitude Format
-            double[] lmSpectrum = DSP.ConvertComplex.ToMagnitudeDBV(cSpectrum);
-            double[] lmSpectrum2 = DSP.ConvertComplex.ToMagnitudeDBV(cSpectrum2);
+
 
             //double[] lmSpectrum = DSP.ConvertMagnitude.ToMagnitudeDBV(temp);
             // double[] lmSpectrum2 = DSP.ConvertMagnitude.ToMagnitudeDBV(temp2);
             // Properly scale the spectrum for the added window
-            lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
-            lmSpectrum2 = DSP.Math.Multiply(lmSpectrum2, wScaleFactor2);
 
-            for (int i = 0; i < lmSpectrum.Length; i++)
-            {
-                lmSpectrum[i] -= 35.5;
-            }
 
-            for (int i = 0; i < lmSpectrum2.Length; i++)
-            {
-                lmSpectrum2[i] -= 35.5;
-            }
+
 
             // For plotting on an XY Scatter plot generate the X Axis frequency Span
             //   double[] freqSpan = fft.FrequencySpan(samplingRate);
@@ -11217,14 +11158,7 @@ namespace SocketServer
             int zeroPadding = 0;
             //   Int32.TryParse(TextBox_Zeropadding.Text, out zeroPadding);
 
-            double[] wCoefs = DSP.Window.Coefficients(windowToApply, (uint)IQ1Sigal.Length);
-            double[] wCoefs2 = DSP.Window.Coefficients(windowToApply, (uint)IQ2Sigal.Length);
 
-            double[] wInputData = DSP.Math.Multiply(IQ1Sigal, wCoefs);
-            double[] wInputData2 = DSP.Math.Multiply(IQ2Sigal, wCoefs2);
-
-            double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
-            double wScaleFactor2 = DSP.Window.ScaleFactor.Signal(wCoefs2);
 
             // Instantiate & Initialize a new DFT
             DSPLib.DFT dft = new DSPLib.DFT();
@@ -11234,14 +11168,11 @@ namespace SocketServer
             dft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding);
 
             // Call the DFT and get the scaled spectrum back
-            Complex[] cSpectrum = dft.Execute(wInputData);
-            Complex[] cSpectrum2 = dft2.Execute(wInputData2);
+
             // Convert the complex spectrum to note: Magnitude Format
-            double[] lmSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum);
-            double[] lmSpectrum2 = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum2);
+
             // Properly scale the spectrum for the added window
-            lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
-            lmSpectrum2 = DSP.Math.Multiply(lmSpectrum2, wScaleFactor2);
+
             // For plotting on an XY Scatter plot generate the X Axis frequency Span
             //double[] freqSpan = dft.FrequencySpan(samplingRate);
             //double[] freqSpan2 = dft2.FrequencySpan(samplingRate);
@@ -12851,7 +12782,7 @@ namespace SocketServer
 
                 return true;
             }
-            catch (Exception ex)
+            catch 
             {
                 //textBox_SourceConfig.Invoke(new EventHandler(delegate
                 //{
@@ -13339,55 +13270,11 @@ namespace SocketServer
 
             //TextBox_SourceConfig_Clear();
 
-            using (var form = new System_Password())
-            {
-                form.Load += new EventHandler(Password_form_Load);
-                var result = form.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    string val = form.Password;            //values preserved after close
-                                                           //Do something here with these values
-
-                    //      Monitor.Properties.Settings.Default.SystemPassword = val;
-
-                    Monitor.Properties.Settings.Default.Save();
-
-                    string Sendstr = string.Format("<{0}>READ?,;", val);
-
-
-                    if (form.ConnectionNumbers.Text == "None")
-                    {
-                        return;
-                    }
-                    try
-                    {
-                        string SendString = Sendstr;
-                        Object objData = SendString;
-                        byte[] byData = System.Text.Encoding.ASCII.GetBytes(objData.ToString());
-                        SendDataToServer(form.ConnectionNumbers.SelectedItem.ToString(), byData);
-
-                        //textBox_SourceConfig.Text = "Message has been sent";
-                        //textBox_SourceConfig.BackColor = Color.LightGreen;
-                    }
-                    catch (Exception ex)
-                    {
-                        //textBox_SourceConfig.Text = ex.ToString();
-                        //textBox_SourceConfig.BackColor = Color.Red;
-                    }
-
-
-
-                }
-            }
-
-
         }
 
         void Password_form_Load(object sender, EventArgs e)
         {
-            System_Password form = (System_Password)sender;
-            form.ConnectionNumbers.DataSource = comboBox_ConnectionNumber.DataSource;
-            form.PasswordText.Text = "";
+
         }
 
         string GenerateConfigCommand()
@@ -13441,47 +13328,8 @@ namespace SocketServer
 
 
 
-                using (var form = new System_Password())
-                {
-                    form.Load += new EventHandler(Password_form_Load);
-                    var result = form.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        string val = form.Password;            //values preserved after close
-                        //Do something here with these values
-
-                        string SendStr = GenerateConfigCommand();
-
-                        SendStr = SendStr.Replace(";", ",");
-
-                        SendStr = ";{CONFIG_START}," + SendStr + ",{CONFIG_END};";
-
-
-                        if (form.ConnectionNumbers.Text == "None")
-                        {
-                            return;
-                        }
-                        try
-                        {
-                            string SendString = SendStr;
-                            Object objData = SendString;
-                            byte[] byData = System.Text.Encoding.ASCII.GetBytes(objData.ToString());
-                            SendDataToServer(form.ConnectionNumbers.SelectedItem.ToString(), byData);
-
-                            //textBox_GenerateConfigFile.Text = "Message has been sent";
-                            //textBox_GenerateConfigFile.BackColor = Color.LightGreen;
-                        }
-                        catch (Exception ex)
-                        {
-                            ex.ToString(); //Gil: just remove warning.
-                            //textBox_GenerateConfigFile.Text = ex.ToString();
-                            //textBox_GenerateConfigFile.BackColor = Color.Red;
-                        }
-
-
-
-                    }
-                }
+                
+                
 
                 //string Config_file_name = "Config_Date-" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss") + "_UnitID-" + UnitID + ".txt";
 
@@ -13563,18 +13411,7 @@ namespace SocketServer
 
         private void Button30_Click(object sender, EventArgs e)
         {
-            using (var form = new System_Password())
-            {
-                var result = form.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    string val = form.Password;            //values preserved after close
-                    //Do something here with these values
 
-                    //for example
-                    //this.textBox_SourceConfig.Text = val;
-                }
-            }
         }
 
         //textBox_UnitVersion
@@ -13954,25 +13791,7 @@ namespace SocketServer
 
         void AddCommandToCommands(string i_SMSText)
         {
-            Boolean IsExist = false;
-            foreach (string str in Monitor.Properties.Settings.Default.SMS_Commands)
-            {
-                if (i_SMSText == str)
-                {
-                    IsExist = true;
-                }
-            }
 
-            if (IsExist == false)
-            {
-                if (Monitor.Properties.Settings.Default.SMS_Commands.Count >= 100)
-                {
-                    Monitor.Properties.Settings.Default.SMS_Commands.RemoveAt(Monitor.Properties.Settings.Default.SMS_Commands.Count - 40);
-                }
-
-                Monitor.Properties.Settings.Default.SMS_Commands.Add(i_SMSText);
-                Monitor.Properties.Settings.Default.Save();
-            }
         }
 
         /// <summary>
@@ -14250,44 +14069,12 @@ namespace SocketServer
 
         private void Button41_Click(object sender, EventArgs e)
         {
-            using (var form = new SMSCommand())
-            {
-                var result = form.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    AddCommandToCommands(form.Command);
 
-
-
-                }
-            }
         }
 
         private void Button37_Click(object sender, EventArgs e)
         {
-            using (var form = new SMSCommand())
-            {
-                string Command = (string)listBox_SMSCommands.SelectedItem;
-                form.Load += new EventHandler(SMSCommandForm_Load);
-
-                if (Command != null)
-                {
-                    form.Command = Command;
-
-                    var result = form.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        Command = form.Command;            //values preserved after close
-
-                        Monitor.Properties.Settings.Default.SMS_Commands.Remove((string)listBox_SMSCommands.SelectedItem);
-                        AddCommandToCommands(Command);
-
-                        SortSMSCommands();
-
-
-                    }
-                }
-            }
+           
         }
 
         void SortSMSCommands()
@@ -14308,13 +14095,7 @@ namespace SocketServer
 
         void SMSCommandForm_Load(object sender, EventArgs e)
         {
-            string Command = (string)listBox_SMSCommands.SelectedItem;
-            if (Command != null)
-            {
-                SMSCommand form = (SMSCommand)sender;
-                form.TextBoxCommand = Command;
 
-            }
         }
 
         ///
@@ -14366,25 +14147,7 @@ namespace SocketServer
         private void Button38_Click(object sender, EventArgs e)
         {
 
-            openFileDialog1 = new OpenFileDialog();
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
 
-                XmlSerializer deserializer = new XmlSerializer(typeof(List<string>));
-                TextReader textReader = new StreamReader(openFileDialog1.FileName);
-                List<string> ImportedCommands;
-                ImportedCommands = (List<string>)deserializer.Deserialize(textReader);
-                textReader.Close();
-
-                Monitor.Properties.Settings.Default.SMS_Commands.Clear();
-                listBox_SMSCommands.Items.Clear();
-                foreach (string str in ImportedCommands)
-                {
-                    AddCommandToCommands(str);
-                }
-                UpdateSMSCommands();
-            }
 
         }
 
@@ -19325,28 +19088,37 @@ Note: eStatus enum 
 
         private async void button31_Click_1(object sender, EventArgs e)
         {
-            GlobalSystemResultReceived = "";
+            try
+            {
+                GlobalSystemResultReceived = "";
 
 
 
-            button108_Click(null, null);
-            await Task.Delay(500);
-            button48_Click_2(null, null);
-            await Task.Delay(500);
-            button46_Click(null, null);
-            await Task.Delay(500);
-            button45_Click(null, null);
-            await Task.Delay(500);
+                button108_Click(null, null);
+                await Task.Delay(500);
+                button48_Click_2(null, null);
+                await Task.Delay(500);
+                button46_Click(null, null);
+                await Task.Delay(500);
+                button45_Click(null, null);
+                await Task.Delay(500);
 
 
-            String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
+                String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
 
 
 
-            textBox_SimulatorID.Text = TextDataRecieved[1];
-            textBox_SimulatorSN.Text = TextDataRecieved[3];
-            textBox_SimulatorHWVersion.Text = TextDataRecieved[5];
-            textBox_SimulatorFWVersion.Text = TextDataRecieved[7];
+                textBox_SimulatorID.Text = TextDataRecieved[1];
+                textBox_SimulatorSN.Text = TextDataRecieved[3];
+                textBox_SimulatorHWVersion.Text = TextDataRecieved[5];
+                textBox_SimulatorFWVersion.Text = TextDataRecieved[7];
+            }
+            catch(Exception ex)
+            {
+                textBox_SystemStatus.BackColor = Color.DarkOrange;
+                textBox_SystemStatus.Text = ex.Message;
+                return;
+            }
         }
 
         void ClearVersions()

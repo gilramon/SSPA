@@ -109,92 +109,12 @@ namespace Monitor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
-            }
-            set {
-                this["Setting"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime LastRunTime {
             get {
                 return ((global::System.DateTime)(this["LastRunTime"]));
             }
             set {
                 this["LastRunTime"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime LastSaveSMSTime {
-            get {
-                return ((global::System.DateTime)(this["LastSaveSMSTime"]));
-            }
-            set {
-                this["LastSaveSMSTime"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting1 {
-            get {
-                return ((string)(this["Setting1"]));
-            }
-            set {
-                this["Setting1"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" />")]
-        public global::System.Collections.Specialized.StringCollection PhoneBook {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["PhoneBook"]));
-            }
-            set {
-                this["PhoneBook"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>;&lt;S1BM&gt;BAT=,2,;</string>\r\n  <string>;&lt;S1BM&gt;SPD=,5,;</string>\r\n" +
-            "  <string>;&lt;S1BM&gt;POSDUR=,3,;</string>\r\n  <string>;&lt;S1BM&gt;CDC=,1111,;<" +
-            "/string>\r\n  <string>;&lt;S1BM&gt;ENOUT=,1,1,;</string>\r\n  <string>;&lt;S1BM&gt;S" +
-            "TATSLP=,duration value,;</string>\r\n  <string>;&lt;S1BM&gt;STAT?,;</string>\r\n  <s" +
-            "tring>;&lt;S1BM&gt;MDM=,82.80.123.56,2002,;</string>\r\n  <string>;&lt;S1BM&gt;HNA" +
-            "PN=,internetg,,,,;</string>\r\n  <string>;&lt;S1BM&gt;TOW=,2,3,4,;</string>\r\n  <st" +
-            "ring>;&lt;S1BM&gt;TILT=,2,3,4,;</string>\r\n  <string>;S1BFR=,;</string>\r\n  <strin" +
-            "g>;&lt;S1BM&gt;TD=,01/01/12,09:50:00,;</string>\r\n  <string>;&lt;S1BM&gt;NUM=,&lt" +
-            ";054111111&gt;,&lt; 054222222&gt;,&lt; 054333333&gt;,;</string>\r\n  <string>;&lt;" +
-            "S1BM&gt;SMSPASS=,4321,;</string>\r\n  <string>;&lt;S1BM&gt;RST=,;</string>\r\n  <str" +
-            "ing>;&lt;S1BM&gt;POSANGLE=,21,;</string>\r\n  <string>;&lt;S1BM&gt;POSDISTANCE=,11" +
-            ",;</string>\r\n  <string>;&lt;S1BM&gt;SETKM=,50000,;</string>\r\n  <string>;&lt;S1BM" +
-            "&gt;GETLOC?,;</string>\r\n  <string>;&lt;S1BM&gt;SMSSTAT?,;</string>\r\n  <string>;&" +
-            "lt;S1BM&gt;GETCONFIG?,;</string>\r\n  <string>;&lt;S1BM&gt;GPRSEN=,1,;</string>\r\n " +
-            " <string>;&lt;S1BM&gt;JAMEN=,1,;</string>\r\n  <string>;&lt;S1BM&gt;JAMLEVEL=,LEVE" +
-            "L,;</string>\r\n  <string>;&lt;S1BM&gt;SIRENEN=,1,;</string>\r\n  <string>;&lt;S1BM&" +
-            "gt;GARAGE=,EN,;</string>\r\n  <string>;&lt;S1BM&gt;DISARM=,1,;</string>\r\n  <string" +
-            ">;&lt;S1BM&gt;ARM=,1,;</string>\r\n  <string>;&lt;S1BM&gt;DOORIGDEL=,5,;</string>\r" +
-            "\n  <string>;&lt;S1BM&gt;AUTOARM=,3,;</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection SMS_Commands {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["SMS_Commands"]));
-            }
-            set {
-                this["SMS_Commands"] = value;
             }
         }
         
@@ -209,18 +129,6 @@ namespace Monitor.Properties {
             }
             set {
                 this["SerialPort_History"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string RegisterCommands {
-            get {
-                return ((string)(this["RegisterCommands"]));
-            }
-            set {
-                this["RegisterCommands"] = value;
             }
         }
     }
