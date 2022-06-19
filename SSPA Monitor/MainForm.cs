@@ -732,20 +732,6 @@ namespace SocketServer
         //    return sb.ToString().ToUpper();
         //}
 
-
-        class LogClass
-        {
-            public string Msg { get; set; }
-            public Color Log_Color { get; set; }
-            public Color Log_TextBackgroundColor { get; set; }
-        }
-
-
-
-
-
-
-
         /// <summary>
         /// 
         /// </summary>
@@ -1898,10 +1884,10 @@ namespace SocketServer
             this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
-            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ServerTCP.Name = "tabPage_ServerTCP";
             this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_ServerTCP.TabIndex = 0;
             this.tabPage_ServerTCP.Text = "Server TCP";
             this.tabPage_ServerTCP.UseVisualStyleBackColor = true;
@@ -2196,9 +2182,9 @@ namespace SocketServer
             this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientIP);
             this.tabPage_ClientTCP.Controls.Add(this.label8);
             this.tabPage_ClientTCP.Controls.Add(this.label7);
-            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 22);
             this.tabPage_ClientTCP.Name = "tabPage_ClientTCP";
-            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_ClientTCP.TabIndex = 9;
             this.tabPage_ClientTCP.Text = "Client TCP";
             this.tabPage_ClientTCP.UseVisualStyleBackColor = true;
@@ -2341,10 +2327,10 @@ namespace SocketServer
             this.tabPage_SerialPort.Controls.Add(this.groupBox_SendSerialOrMonitorCommands);
             this.tabPage_SerialPort.Controls.Add(this.gbPortSettings);
             this.tabPage_SerialPort.Controls.Add(this.groupBox5);
-            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 22);
             this.tabPage_SerialPort.Name = "tabPage_SerialPort";
             this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_SerialPort.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_SerialPort.TabIndex = 1;
             this.tabPage_SerialPort.Text = "Serial Port";
             this.tabPage_SerialPort.UseVisualStyleBackColor = true;
@@ -2797,9 +2783,9 @@ namespace SocketServer
             this.tabPage_GenericFrame.Controls.Add(this.button52);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
-            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 22);
             this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_GenericFrame.TabIndex = 10;
             this.tabPage_GenericFrame.Text = "Generic Kratos frame";
             this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
@@ -3215,9 +3201,9 @@ namespace SocketServer
             // 
             this.tabPage_Commands.Controls.Add(this.groupBox40);
             this.tabPage_Commands.Controls.Add(this.groupBox32);
-            this.tabPage_Commands.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Commands.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Commands.Name = "tabPage_Commands";
-            this.tabPage_Commands.Size = new System.Drawing.Size(1547, 682);
+            this.tabPage_Commands.Size = new System.Drawing.Size(1547, 687);
             this.tabPage_Commands.TabIndex = 11;
             this.tabPage_Commands.Text = "SSPA Commands";
             this.tabPage_Commands.UseVisualStyleBackColor = true;
@@ -4162,7 +4148,7 @@ namespace SocketServer
             // 
             // button30
             // 
-            this.button30.BackColor = System.Drawing.Color.Red;
+            this.button30.BackColor = System.Drawing.Color.Transparent;
             this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button30.Location = new System.Drawing.Point(6, 79);
             this.button30.Name = "button30";
@@ -4280,7 +4266,7 @@ namespace SocketServer
             // 
             // button73
             // 
-            this.button73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button73.BackColor = System.Drawing.SystemColors.Highlight;
             this.button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button73.Location = new System.Drawing.Point(274, 89);
             this.button73.Name = "button73";
@@ -5295,7 +5281,7 @@ namespace SocketServer
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.ForeColor = System.Drawing.Color.Blue;
             this.label36.Location = new System.Drawing.Point(56, 15);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(133, 23);
@@ -5408,7 +5394,7 @@ namespace SocketServer
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.ForeColor = System.Drawing.Color.Blue;
             this.label25.Location = new System.Drawing.Point(56, 15);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(134, 23);
