@@ -20,7 +20,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Serialization;
 
-namespace SocketServer
+namespace Monitor
 {
 
 

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SocketServer
+namespace Monitor
 {
     class TextBox_Logger
     {
