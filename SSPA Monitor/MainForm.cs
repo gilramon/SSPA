@@ -749,11 +749,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1502,9 +1502,11 @@ namespace Monitor
             this.groupBox_ServerSettings.Controls.Add(this.ListenBox);
             this.groupBox_ServerSettings.Controls.Add(this.label1);
             this.groupBox_ServerSettings.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_ServerSettings.Location = new System.Drawing.Point(7, 4);
+            this.groupBox_ServerSettings.Location = new System.Drawing.Point(6, 3);
+            this.groupBox_ServerSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_ServerSettings.Name = "groupBox_ServerSettings";
-            this.groupBox_ServerSettings.Size = new System.Drawing.Size(473, 70);
+            this.groupBox_ServerSettings.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_ServerSettings.Size = new System.Drawing.Size(378, 56);
             this.groupBox_ServerSettings.TabIndex = 0;
             this.groupBox_ServerSettings.TabStop = false;
             this.groupBox_ServerSettings.Text = "Server Settings";
@@ -1513,11 +1515,12 @@ namespace Monitor
             // 
             this.textBox_ServerOpen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ServerOpen.ForeColor = System.Drawing.Color.White;
-            this.textBox_ServerOpen.Location = new System.Drawing.Point(315, 21);
+            this.textBox_ServerOpen.Location = new System.Drawing.Point(252, 17);
+            this.textBox_ServerOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ServerOpen.Multiline = true;
             this.textBox_ServerOpen.Name = "textBox_ServerOpen";
             this.textBox_ServerOpen.ReadOnly = true;
-            this.textBox_ServerOpen.Size = new System.Drawing.Size(102, 30);
+            this.textBox_ServerOpen.Size = new System.Drawing.Size(82, 25);
             this.textBox_ServerOpen.TabIndex = 7;
             this.textBox_ServerOpen.Text = "Connected";
             // 
@@ -1525,19 +1528,21 @@ namespace Monitor
             // 
             this.textBox_ServerActive.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ServerActive.ForeColor = System.Drawing.Color.White;
-            this.textBox_ServerActive.Location = new System.Drawing.Point(240, 21);
+            this.textBox_ServerActive.Location = new System.Drawing.Point(192, 17);
+            this.textBox_ServerActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ServerActive.Multiline = true;
             this.textBox_ServerActive.Name = "textBox_ServerActive";
             this.textBox_ServerActive.ReadOnly = true;
-            this.textBox_ServerActive.Size = new System.Drawing.Size(69, 30);
+            this.textBox_ServerActive.Size = new System.Drawing.Size(56, 25);
             this.textBox_ServerActive.TabIndex = 6;
             this.textBox_ServerActive.Text = "Active";
             // 
             // txtPortNo
             // 
-            this.txtPortNo.Location = new System.Drawing.Point(98, 19);
+            this.txtPortNo.Location = new System.Drawing.Point(78, 15);
+            this.txtPortNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPortNo.Name = "txtPortNo";
-            this.txtPortNo.Size = new System.Drawing.Size(46, 27);
+            this.txtPortNo.Size = new System.Drawing.Size(38, 23);
             this.txtPortNo.TabIndex = 1;
             this.txtPortNo.Text = "7000";
             this.txtPortNo.TextChanged += new System.EventHandler(this.TxtPortNo_TextChanged);
@@ -1545,10 +1550,11 @@ namespace Monitor
             // textBox_NumberOfOpenConnections
             // 
             this.textBox_NumberOfOpenConnections.ForeColor = System.Drawing.Color.White;
-            this.textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(424, 21);
+            this.textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(339, 17);
+            this.textBox_NumberOfOpenConnections.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_NumberOfOpenConnections.Name = "textBox_NumberOfOpenConnections";
             this.textBox_NumberOfOpenConnections.ReadOnly = true;
-            this.textBox_NumberOfOpenConnections.Size = new System.Drawing.Size(29, 27);
+            this.textBox_NumberOfOpenConnections.Size = new System.Drawing.Size(24, 23);
             this.textBox_NumberOfOpenConnections.TabIndex = 5;
             this.textBox_NumberOfOpenConnections.TextChanged += new System.EventHandler(this.TextBox_NumberOfOpenConnections_TextChanged);
             // 
@@ -1557,9 +1563,10 @@ namespace Monitor
             this.ListenBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.ListenBox.AutoSize = true;
             this.ListenBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListenBox.Location = new System.Drawing.Point(151, 18);
+            this.ListenBox.Location = new System.Drawing.Point(121, 14);
+            this.ListenBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListenBox.Name = "ListenBox";
-            this.ListenBox.Size = new System.Drawing.Size(88, 33);
+            this.ListenBox.Size = new System.Drawing.Size(74, 28);
             this.ListenBox.TabIndex = 4;
             this.ListenBox.Text = "Listening";
             this.ListenBox.UseVisualStyleBackColor = true;
@@ -1568,9 +1575,10 @@ namespace Monitor
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 23);
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Port Number:";
             // 
@@ -1579,9 +1587,11 @@ namespace Monitor
             this.groupBox2.Controls.Add(this.comboBox_ConnectionNumber);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.txtDataTx);
-            this.groupBox2.Location = new System.Drawing.Point(3, 79);
+            this.groupBox2.Location = new System.Drawing.Point(2, 63);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(312, 262);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(250, 210);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Send Data";
@@ -1589,18 +1599,20 @@ namespace Monitor
             // comboBox_ConnectionNumber
             // 
             this.comboBox_ConnectionNumber.FormattingEnabled = true;
-            this.comboBox_ConnectionNumber.Location = new System.Drawing.Point(96, 228);
+            this.comboBox_ConnectionNumber.Location = new System.Drawing.Point(77, 182);
+            this.comboBox_ConnectionNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_ConnectionNumber.Name = "comboBox_ConnectionNumber";
-            this.comboBox_ConnectionNumber.Size = new System.Drawing.Size(194, 31);
+            this.comboBox_ConnectionNumber.Size = new System.Drawing.Size(156, 26);
             this.comboBox_ConnectionNumber.TabIndex = 2;
             this.comboBox_ConnectionNumber.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 226);
+            this.button1.Location = new System.Drawing.Point(13, 181);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 29);
+            this.button1.Size = new System.Drawing.Size(58, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -1609,11 +1621,12 @@ namespace Monitor
             // 
             this.txtDataTx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDataTx.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataTx.Location = new System.Drawing.Point(16, 23);
+            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
+            this.txtDataTx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDataTx.Multiline = true;
             this.txtDataTx.Name = "txtDataTx";
             this.txtDataTx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDataTx.Size = new System.Drawing.Size(294, 196);
+            this.txtDataTx.Size = new System.Drawing.Size(236, 158);
             this.txtDataTx.TabIndex = 0;
             this.txtDataTx.TextChanged += new System.EventHandler(this.TxtDataTx_TextChanged);
             // 
@@ -1626,10 +1639,11 @@ namespace Monitor
             this.tabControl_Main.Controls.Add(this.tabPage_GenericFrame);
             this.tabControl_Main.Controls.Add(this.tabPage_Commands);
             this.tabControl_Main.Controls.Add(this.tabPage3038WBPAA);
-            this.tabControl_Main.Location = new System.Drawing.Point(5, 6);
+            this.tabControl_Main.Location = new System.Drawing.Point(4, 5);
+            this.tabControl_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl_Main.Name = "tabControl_Main";
             this.tabControl_Main.SelectedIndex = 0;
-            this.tabControl_Main.Size = new System.Drawing.Size(1777, 863);
+            this.tabControl_Main.Size = new System.Drawing.Size(1422, 690);
             this.tabControl_Main.TabIndex = 8;
             this.tabControl_Main.TabStop = false;
             // 
@@ -1649,18 +1663,20 @@ namespace Monitor
             this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
             this.tabPage_charts.Controls.Add(this.button_ScreenShot);
             this.tabPage_charts.Controls.Add(this.chart1);
-            this.tabPage_charts.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_charts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_charts.Name = "tabPage_charts";
-            this.tabPage_charts.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_charts.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_charts.TabIndex = 7;
             this.tabPage_charts.Text = "Charts";
             this.tabPage_charts.UseVisualStyleBackColor = true;
             // 
             // button99
             // 
-            this.button99.Location = new System.Drawing.Point(151, 459);
+            this.button99.Location = new System.Drawing.Point(121, 367);
+            this.button99.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button99.Name = "button99";
-            this.button99.Size = new System.Drawing.Size(51, 28);
+            this.button99.Size = new System.Drawing.Size(41, 22);
             this.button99.TabIndex = 84;
             this.button99.Text = "auto";
             this.button99.UseVisualStyleBackColor = true;
@@ -1669,25 +1685,28 @@ namespace Monitor
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(2, 429);
+            this.label37.Location = new System.Drawing.Point(2, 343);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(127, 23);
+            this.label37.Size = new System.Drawing.Size(102, 18);
             this.label37.TabIndex = 83;
             this.label37.Text = "Min/Max X axis";
             // 
             // textBox_MaxXAxis
             // 
-            this.textBox_MaxXAxis.Location = new System.Drawing.Point(70, 458);
+            this.textBox_MaxXAxis.Location = new System.Drawing.Point(56, 366);
+            this.textBox_MaxXAxis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_MaxXAxis.Name = "textBox_MaxXAxis";
-            this.textBox_MaxXAxis.Size = new System.Drawing.Size(73, 30);
+            this.textBox_MaxXAxis.Size = new System.Drawing.Size(59, 26);
             this.textBox_MaxXAxis.TabIndex = 82;
             this.textBox_MaxXAxis.TextChanged += new System.EventHandler(this.textBox_MaxXAxis_TextChanged);
             // 
             // textBox_MinXAxis
             // 
-            this.textBox_MinXAxis.Location = new System.Drawing.Point(3, 458);
+            this.textBox_MinXAxis.Location = new System.Drawing.Point(2, 366);
+            this.textBox_MinXAxis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_MinXAxis.Name = "textBox_MinXAxis";
-            this.textBox_MinXAxis.Size = new System.Drawing.Size(54, 30);
+            this.textBox_MinXAxis.Size = new System.Drawing.Size(44, 26);
             this.textBox_MinXAxis.TabIndex = 81;
             this.textBox_MinXAxis.TextChanged += new System.EventHandler(this.textBox_MinXAxis_TextChanged);
             // 
@@ -1702,18 +1721,20 @@ namespace Monitor
             "2000",
             "5000",
             "10000"});
-            this.comboBox_ChartUpdateTime.Location = new System.Drawing.Point(6, 741);
+            this.comboBox_ChartUpdateTime.Location = new System.Drawing.Point(5, 593);
+            this.comboBox_ChartUpdateTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox_ChartUpdateTime.Name = "comboBox_ChartUpdateTime";
-            this.comboBox_ChartUpdateTime.Size = new System.Drawing.Size(210, 31);
+            this.comboBox_ChartUpdateTime.Size = new System.Drawing.Size(169, 26);
             this.comboBox_ChartUpdateTime.TabIndex = 80;
             this.comboBox_ChartUpdateTime.Text = "Update time ms";
             this.comboBox_ChartUpdateTime.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChartUpdateTime_SelectedIndexChanged);
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(3, 672);
+            this.button28.Location = new System.Drawing.Point(2, 538);
+            this.button28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(213, 28);
+            this.button28.Size = new System.Drawing.Size(170, 22);
             this.button28.TabIndex = 79;
             this.button28.Text = "Reset X point";
             this.button28.UseVisualStyleBackColor = true;
@@ -1722,11 +1743,12 @@ namespace Monitor
             // listBox_Charts
             // 
             this.listBox_Charts.FormattingEnabled = true;
-            this.listBox_Charts.ItemHeight = 23;
-            this.listBox_Charts.Location = new System.Drawing.Point(3, 202);
+            this.listBox_Charts.ItemHeight = 18;
+            this.listBox_Charts.Location = new System.Drawing.Point(2, 162);
+            this.listBox_Charts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox_Charts.Name = "listBox_Charts";
             this.listBox_Charts.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_Charts.Size = new System.Drawing.Size(211, 188);
+            this.listBox_Charts.Size = new System.Drawing.Size(170, 148);
             this.listBox_Charts.TabIndex = 78;
             this.listBox_Charts.SelectedIndexChanged += new System.EventHandler(this.ListBox_Charts_SelectedIndexChanged);
             this.listBox_Charts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_Charts_KeyDown);
@@ -1734,9 +1756,10 @@ namespace Monitor
             // 
             // button_OpenFolder2
             // 
-            this.button_OpenFolder2.Location = new System.Drawing.Point(5, 525);
+            this.button_OpenFolder2.Location = new System.Drawing.Point(4, 420);
+            this.button_OpenFolder2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_OpenFolder2.Name = "button_OpenFolder2";
-            this.button_OpenFolder2.Size = new System.Drawing.Size(211, 32);
+            this.button_OpenFolder2.Size = new System.Drawing.Size(169, 26);
             this.button_OpenFolder2.TabIndex = 77;
             this.button_OpenFolder2.Text = "Open Local Folder";
             this.button_OpenFolder2.UseVisualStyleBackColor = true;
@@ -1744,9 +1767,10 @@ namespace Monitor
             // 
             // button_GraphPause
             // 
-            this.button_GraphPause.Location = new System.Drawing.Point(3, 706);
+            this.button_GraphPause.Location = new System.Drawing.Point(2, 565);
+            this.button_GraphPause.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_GraphPause.Name = "button_GraphPause";
-            this.button_GraphPause.Size = new System.Drawing.Size(213, 28);
+            this.button_GraphPause.Size = new System.Drawing.Size(170, 22);
             this.button_GraphPause.TabIndex = 8;
             this.button_GraphPause.Text = "Pause";
             this.button_GraphPause.UseVisualStyleBackColor = true;
@@ -1754,9 +1778,10 @@ namespace Monitor
             // 
             // Button_Export_excel
             // 
-            this.Button_Export_excel.Location = new System.Drawing.Point(3, 564);
+            this.Button_Export_excel.Location = new System.Drawing.Point(2, 451);
+            this.Button_Export_excel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Button_Export_excel.Name = "Button_Export_excel";
-            this.Button_Export_excel.Size = new System.Drawing.Size(213, 28);
+            this.Button_Export_excel.Size = new System.Drawing.Size(170, 22);
             this.Button_Export_excel.TabIndex = 7;
             this.Button_Export_excel.Text = "Export to excel";
             this.Button_Export_excel.UseVisualStyleBackColor = true;
@@ -1764,9 +1789,10 @@ namespace Monitor
             // 
             // button_ResetGraphs
             // 
-            this.button_ResetGraphs.Location = new System.Drawing.Point(3, 636);
+            this.button_ResetGraphs.Location = new System.Drawing.Point(2, 509);
+            this.button_ResetGraphs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ResetGraphs.Name = "button_ResetGraphs";
-            this.button_ResetGraphs.Size = new System.Drawing.Size(213, 27);
+            this.button_ResetGraphs.Size = new System.Drawing.Size(170, 22);
             this.button_ResetGraphs.TabIndex = 6;
             this.button_ResetGraphs.Text = "Reset chart data";
             this.button_ResetGraphs.UseVisualStyleBackColor = true;
@@ -1775,20 +1801,22 @@ namespace Monitor
             // textBox_graph_XY
             // 
             this.textBox_graph_XY.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_graph_XY.Location = new System.Drawing.Point(5, 10);
+            this.textBox_graph_XY.Location = new System.Drawing.Point(4, 8);
+            this.textBox_graph_XY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_graph_XY.Multiline = true;
             this.textBox_graph_XY.Name = "textBox_graph_XY";
             this.textBox_graph_XY.ReadOnly = true;
-            this.textBox_graph_XY.Size = new System.Drawing.Size(211, 185);
+            this.textBox_graph_XY.Size = new System.Drawing.Size(170, 149);
             this.textBox_graph_XY.TabIndex = 4;
             this.textBox_graph_XY.Text = "Message box ";
             this.textBox_graph_XY.TextChanged += new System.EventHandler(this.TextBox_graph_XY_TextChanged);
             // 
             // button_ScreenShot
             // 
-            this.button_ScreenShot.Location = new System.Drawing.Point(3, 598);
+            this.button_ScreenShot.Location = new System.Drawing.Point(2, 478);
+            this.button_ScreenShot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ScreenShot.Name = "button_ScreenShot";
-            this.button_ScreenShot.Size = new System.Drawing.Size(213, 28);
+            this.button_ScreenShot.Size = new System.Drawing.Size(170, 22);
             this.button_ScreenShot.TabIndex = 1;
             this.button_ScreenShot.Text = "Take screen shot";
             this.button_ScreenShot.UseVisualStyleBackColor = true;
@@ -1796,20 +1824,21 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea10.AxisX.Title = "Freq";
-            chartArea10.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea10.AxisY.Title = "Power [dBm]";
-            chartArea10.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend10.IsTextAutoFit = false;
-            legend10.Name = "Legend1";
-            legend10.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend10);
-            this.chart1.Location = new System.Drawing.Point(222, 2);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(178, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(1543, 805);
+            this.chart1.Size = new System.Drawing.Size(1234, 644);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -1826,10 +1855,11 @@ namespace Monitor
             this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
-            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ServerTCP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_ServerTCP.Name = "tabPage_ServerTCP";
-            this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_ServerTCP.TabIndex = 0;
             this.tabPage_ServerTCP.Text = "Server TCP";
             this.tabPage_ServerTCP.UseVisualStyleBackColor = true;
@@ -1837,9 +1867,10 @@ namespace Monitor
             // checkBox_ParseMessages
             // 
             this.checkBox_ParseMessages.AutoSize = true;
-            this.checkBox_ParseMessages.Location = new System.Drawing.Point(133, 415);
+            this.checkBox_ParseMessages.Location = new System.Drawing.Point(106, 332);
+            this.checkBox_ParseMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_ParseMessages.Name = "checkBox_ParseMessages";
-            this.checkBox_ParseMessages.Size = new System.Drawing.Size(154, 27);
+            this.checkBox_ParseMessages.Size = new System.Drawing.Size(124, 22);
             this.checkBox_ParseMessages.TabIndex = 103;
             this.checkBox_ParseMessages.Text = "Parse messages";
             this.checkBox_ParseMessages.UseVisualStyleBackColor = true;
@@ -1847,9 +1878,10 @@ namespace Monitor
             // 
             // textBox_IDKey
             // 
-            this.textBox_IDKey.Location = new System.Drawing.Point(1399, 94);
+            this.textBox_IDKey.Location = new System.Drawing.Point(1119, 75);
+            this.textBox_IDKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_IDKey.Name = "textBox_IDKey";
-            this.textBox_IDKey.Size = new System.Drawing.Size(362, 184);
+            this.textBox_IDKey.Size = new System.Drawing.Size(290, 148);
             this.textBox_IDKey.TabIndex = 102;
             this.textBox_IDKey.Text = "";
             this.textBox_IDKey.Visible = false;
@@ -1864,9 +1896,11 @@ namespace Monitor
             this.groupBox_FOTA.Controls.Add(this.textBox_TotalFrames1280Bytes);
             this.groupBox_FOTA.Controls.Add(this.textBox_FOTA);
             this.groupBox_FOTA.Controls.Add(this.button5);
-            this.groupBox_FOTA.Location = new System.Drawing.Point(3, 441);
+            this.groupBox_FOTA.Location = new System.Drawing.Point(2, 353);
+            this.groupBox_FOTA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_FOTA.Name = "groupBox_FOTA";
-            this.groupBox_FOTA.Size = new System.Drawing.Size(307, 257);
+            this.groupBox_FOTA.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_FOTA.Size = new System.Drawing.Size(246, 206);
             this.groupBox_FOTA.TabIndex = 12;
             this.groupBox_FOTA.TabStop = false;
             this.groupBox_FOTA.Text = "FOTA";
@@ -1875,9 +1909,10 @@ namespace Monitor
             // button_StartFOTAProcess
             // 
             this.button_StartFOTAProcess.Enabled = false;
-            this.button_StartFOTAProcess.Location = new System.Drawing.Point(235, 130);
+            this.button_StartFOTAProcess.Location = new System.Drawing.Point(188, 104);
+            this.button_StartFOTAProcess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_StartFOTAProcess.Name = "button_StartFOTAProcess";
-            this.button_StartFOTAProcess.Size = new System.Drawing.Size(66, 53);
+            this.button_StartFOTAProcess.Size = new System.Drawing.Size(53, 42);
             this.button_StartFOTAProcess.TabIndex = 21;
             this.button_StartFOTAProcess.Text = "Start FOTA";
             this.button_StartFOTAProcess.UseVisualStyleBackColor = true;
@@ -1885,26 +1920,29 @@ namespace Monitor
             // 
             // textBox_TotalFileLength
             // 
-            this.textBox_TotalFileLength.Location = new System.Drawing.Point(235, 94);
+            this.textBox_TotalFileLength.Location = new System.Drawing.Point(188, 75);
+            this.textBox_TotalFileLength.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_TotalFileLength.Name = "textBox_TotalFileLength";
             this.textBox_TotalFileLength.ReadOnly = true;
-            this.textBox_TotalFileLength.Size = new System.Drawing.Size(66, 30);
+            this.textBox_TotalFileLength.Size = new System.Drawing.Size(54, 26);
             this.textBox_TotalFileLength.TabIndex = 20;
             // 
             // textBox_MaximumNumberReceivedRequest
             // 
             this.textBox_MaximumNumberReceivedRequest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_MaximumNumberReceivedRequest.Location = new System.Drawing.Point(5, 128);
+            this.textBox_MaximumNumberReceivedRequest.Location = new System.Drawing.Point(4, 102);
+            this.textBox_MaximumNumberReceivedRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_MaximumNumberReceivedRequest.Name = "textBox_MaximumNumberReceivedRequest";
-            this.textBox_MaximumNumberReceivedRequest.Size = new System.Drawing.Size(224, 108);
+            this.textBox_MaximumNumberReceivedRequest.Size = new System.Drawing.Size(180, 87);
             this.textBox_MaximumNumberReceivedRequest.TabIndex = 19;
             this.textBox_MaximumNumberReceivedRequest.Text = "";
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(235, 363);
+            this.button35.Location = new System.Drawing.Point(188, 290);
+            this.button35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(66, 28);
+            this.button35.Size = new System.Drawing.Size(53, 22);
             this.button35.TabIndex = 18;
             this.button35.Text = "Clear";
             this.button35.UseVisualStyleBackColor = true;
@@ -1913,9 +1951,10 @@ namespace Monitor
             // button_StartFOTA
             // 
             this.button_StartFOTA.Enabled = false;
-            this.button_StartFOTA.Location = new System.Drawing.Point(235, 330);
+            this.button_StartFOTA.Location = new System.Drawing.Point(188, 264);
+            this.button_StartFOTA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_StartFOTA.Name = "button_StartFOTA";
-            this.button_StartFOTA.Size = new System.Drawing.Size(66, 28);
+            this.button_StartFOTA.Size = new System.Drawing.Size(53, 22);
             this.button_StartFOTA.TabIndex = 16;
             this.button_StartFOTA.Text = "--->";
             this.button_StartFOTA.UseVisualStyleBackColor = true;
@@ -1923,27 +1962,30 @@ namespace Monitor
             // 
             // textBox_TotalFrames1280Bytes
             // 
-            this.textBox_TotalFrames1280Bytes.Location = new System.Drawing.Point(235, 59);
+            this.textBox_TotalFrames1280Bytes.Location = new System.Drawing.Point(188, 47);
+            this.textBox_TotalFrames1280Bytes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_TotalFrames1280Bytes.Name = "textBox_TotalFrames1280Bytes";
             this.textBox_TotalFrames1280Bytes.ReadOnly = true;
-            this.textBox_TotalFrames1280Bytes.Size = new System.Drawing.Size(66, 30);
+            this.textBox_TotalFrames1280Bytes.Size = new System.Drawing.Size(54, 26);
             this.textBox_TotalFrames1280Bytes.TabIndex = 14;
             this.textBox_TotalFrames1280Bytes.TextChanged += new System.EventHandler(this.TextBox_TotalFrames256Bytes_TextChanged);
             // 
             // textBox_FOTA
             // 
-            this.textBox_FOTA.Location = new System.Drawing.Point(8, 59);
+            this.textBox_FOTA.Location = new System.Drawing.Point(6, 47);
+            this.textBox_FOTA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_FOTA.Multiline = true;
             this.textBox_FOTA.Name = "textBox_FOTA";
-            this.textBox_FOTA.Size = new System.Drawing.Size(221, 63);
+            this.textBox_FOTA.Size = new System.Drawing.Size(178, 51);
             this.textBox_FOTA.TabIndex = 13;
             this.textBox_FOTA.TextChanged += new System.EventHandler(this.TextBox_FOTA_TextChanged);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(8, 24);
+            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(112, 28);
+            this.button5.Size = new System.Drawing.Size(90, 22);
             this.button5.TabIndex = 0;
             this.button5.Text = "Choose File";
             this.button5.UseVisualStyleBackColor = true;
@@ -1952,9 +1994,10 @@ namespace Monitor
             // checkBox_EchoResponse
             // 
             this.checkBox_EchoResponse.AutoSize = true;
-            this.checkBox_EchoResponse.Location = new System.Drawing.Point(6, 415);
+            this.checkBox_EchoResponse.Location = new System.Drawing.Point(5, 332);
+            this.checkBox_EchoResponse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_EchoResponse.Name = "checkBox_EchoResponse";
-            this.checkBox_EchoResponse.Size = new System.Drawing.Size(145, 27);
+            this.checkBox_EchoResponse.Size = new System.Drawing.Size(117, 22);
             this.checkBox_EchoResponse.TabIndex = 10;
             this.checkBox_EchoResponse.Text = "Send ACK Back";
             this.checkBox_EchoResponse.UseVisualStyleBackColor = true;
@@ -1965,9 +2008,11 @@ namespace Monitor
             this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_CurrentTimeOut);
             this.groupBox_ConnectionTimedOut.Controls.Add(this.button_SetTimedOut);
             this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_ConnectionTimedOut);
-            this.groupBox_ConnectionTimedOut.Location = new System.Drawing.Point(3, 349);
+            this.groupBox_ConnectionTimedOut.Location = new System.Drawing.Point(2, 279);
+            this.groupBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_ConnectionTimedOut.Name = "groupBox_ConnectionTimedOut";
-            this.groupBox_ConnectionTimedOut.Size = new System.Drawing.Size(312, 64);
+            this.groupBox_ConnectionTimedOut.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_ConnectionTimedOut.Size = new System.Drawing.Size(250, 51);
             this.groupBox_ConnectionTimedOut.TabIndex = 9;
             this.groupBox_ConnectionTimedOut.TabStop = false;
             this.groupBox_ConnectionTimedOut.Text = "Server Connection Timed Out (seconds)";
@@ -1975,17 +2020,19 @@ namespace Monitor
             // 
             // textBox_CurrentTimeOut
             // 
-            this.textBox_CurrentTimeOut.Location = new System.Drawing.Point(167, 25);
+            this.textBox_CurrentTimeOut.Location = new System.Drawing.Point(134, 20);
+            this.textBox_CurrentTimeOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_CurrentTimeOut.Name = "textBox_CurrentTimeOut";
             this.textBox_CurrentTimeOut.ReadOnly = true;
-            this.textBox_CurrentTimeOut.Size = new System.Drawing.Size(71, 30);
+            this.textBox_CurrentTimeOut.Size = new System.Drawing.Size(58, 26);
             this.textBox_CurrentTimeOut.TabIndex = 10;
             // 
             // button_SetTimedOut
             // 
-            this.button_SetTimedOut.Location = new System.Drawing.Point(74, 25);
+            this.button_SetTimedOut.Location = new System.Drawing.Point(59, 20);
+            this.button_SetTimedOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_SetTimedOut.Name = "button_SetTimedOut";
-            this.button_SetTimedOut.Size = new System.Drawing.Size(86, 28);
+            this.button_SetTimedOut.Size = new System.Drawing.Size(69, 22);
             this.button_SetTimedOut.TabIndex = 9;
             this.button_SetTimedOut.Text = "Set";
             this.button_SetTimedOut.UseVisualStyleBackColor = true;
@@ -1993,9 +2040,10 @@ namespace Monitor
             // 
             // textBox_ConnectionTimedOut
             // 
-            this.textBox_ConnectionTimedOut.Location = new System.Drawing.Point(7, 27);
+            this.textBox_ConnectionTimedOut.Location = new System.Drawing.Point(6, 22);
+            this.textBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ConnectionTimedOut.Name = "textBox_ConnectionTimedOut";
-            this.textBox_ConnectionTimedOut.Size = new System.Drawing.Size(60, 30);
+            this.textBox_ConnectionTimedOut.Size = new System.Drawing.Size(49, 26);
             this.textBox_ConnectionTimedOut.TabIndex = 8;
             this.textBox_ConnectionTimedOut.Text = "300";
             // 
@@ -2010,9 +2058,11 @@ namespace Monitor
             this.groupBox3.Controls.Add(this.PauseCheck);
             this.groupBox3.Controls.Add(this.Clear_btn);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(322, 79);
+            this.groupBox3.Location = new System.Drawing.Point(258, 63);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1070, 739);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(856, 591);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Server Console";
@@ -2022,9 +2072,10 @@ namespace Monitor
             this.checkBox_ServerRecord.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_ServerRecord.AutoSize = true;
             this.checkBox_ServerRecord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_ServerRecord.Location = new System.Drawing.Point(174, 700);
+            this.checkBox_ServerRecord.Location = new System.Drawing.Point(139, 560);
+            this.checkBox_ServerRecord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_ServerRecord.Name = "checkBox_ServerRecord";
-            this.checkBox_ServerRecord.Size = new System.Drawing.Size(78, 34);
+            this.checkBox_ServerRecord.Size = new System.Drawing.Size(64, 29);
             this.checkBox_ServerRecord.TabIndex = 108;
             this.checkBox_ServerRecord.Text = "Record";
             this.checkBox_ServerRecord.UseVisualStyleBackColor = true;
@@ -2034,18 +2085,20 @@ namespace Monitor
             this.checkBox_ServerPause.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_ServerPause.AutoSize = true;
             this.checkBox_ServerPause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_ServerPause.Location = new System.Drawing.Point(101, 700);
+            this.checkBox_ServerPause.Location = new System.Drawing.Point(81, 560);
+            this.checkBox_ServerPause.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_ServerPause.Name = "checkBox_ServerPause";
-            this.checkBox_ServerPause.Size = new System.Drawing.Size(69, 34);
+            this.checkBox_ServerPause.Size = new System.Drawing.Size(58, 29);
             this.checkBox_ServerPause.TabIndex = 107;
             this.checkBox_ServerPause.Text = "Pause";
             this.checkBox_ServerPause.UseVisualStyleBackColor = true;
             // 
             // button_ClearServer
             // 
-            this.button_ClearServer.Location = new System.Drawing.Point(7, 700);
+            this.button_ClearServer.Location = new System.Drawing.Point(6, 560);
+            this.button_ClearServer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ClearServer.Name = "button_ClearServer";
-            this.button_ClearServer.Size = new System.Drawing.Size(86, 28);
+            this.button_ClearServer.Size = new System.Drawing.Size(69, 22);
             this.button_ClearServer.TabIndex = 104;
             this.button_ClearServer.Text = "Clear";
             this.button_ClearServer.UseVisualStyleBackColor = true;
@@ -2055,9 +2108,10 @@ namespace Monitor
             this.checkBox_StopLogging.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_StopLogging.AutoSize = true;
             this.checkBox_StopLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_StopLogging.Location = new System.Drawing.Point(349, 761);
+            this.checkBox_StopLogging.Location = new System.Drawing.Point(279, 609);
+            this.checkBox_StopLogging.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_StopLogging.Name = "checkBox_StopLogging";
-            this.checkBox_StopLogging.Size = new System.Drawing.Size(128, 30);
+            this.checkBox_StopLogging.Size = new System.Drawing.Size(106, 26);
             this.checkBox_StopLogging.TabIndex = 8;
             this.checkBox_StopLogging.Text = "Stop Printing";
             this.checkBox_StopLogging.UseVisualStyleBackColor = true;
@@ -2066,9 +2120,10 @@ namespace Monitor
             // 
             this.TextBox_Server.BackColor = System.Drawing.Color.LightGray;
             this.TextBox_Server.EnableAutoDragDrop = true;
-            this.TextBox_Server.Location = new System.Drawing.Point(8, 24);
+            this.TextBox_Server.Location = new System.Drawing.Point(6, 19);
+            this.TextBox_Server.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextBox_Server.Name = "TextBox_Server";
-            this.TextBox_Server.Size = new System.Drawing.Size(1055, 668);
+            this.TextBox_Server.Size = new System.Drawing.Size(845, 535);
             this.TextBox_Server.TabIndex = 0;
             this.TextBox_Server.Text = "";
             this.TextBox_Server.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
@@ -2078,9 +2133,10 @@ namespace Monitor
             this.checkBox_RecordGeneral.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_RecordGeneral.AutoSize = true;
             this.checkBox_RecordGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_RecordGeneral.Location = new System.Drawing.Point(477, 761);
+            this.checkBox_RecordGeneral.Location = new System.Drawing.Point(382, 609);
+            this.checkBox_RecordGeneral.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_RecordGeneral.Name = "checkBox_RecordGeneral";
-            this.checkBox_RecordGeneral.Size = new System.Drawing.Size(116, 30);
+            this.checkBox_RecordGeneral.Size = new System.Drawing.Size(99, 26);
             this.checkBox_RecordGeneral.TabIndex = 7;
             this.checkBox_RecordGeneral.Text = "Record Log";
             this.checkBox_RecordGeneral.UseVisualStyleBackColor = true;
@@ -2091,9 +2147,10 @@ namespace Monitor
             this.PauseCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.PauseCheck.AutoSize = true;
             this.PauseCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PauseCheck.Location = new System.Drawing.Point(597, 761);
+            this.PauseCheck.Location = new System.Drawing.Point(478, 609);
+            this.PauseCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PauseCheck.Name = "PauseCheck";
-            this.PauseCheck.Size = new System.Drawing.Size(71, 30);
+            this.PauseCheck.Size = new System.Drawing.Size(62, 26);
             this.PauseCheck.TabIndex = 5;
             this.PauseCheck.Text = "Pause";
             this.PauseCheck.UseVisualStyleBackColor = true;
@@ -2101,9 +2158,10 @@ namespace Monitor
             // Clear_btn
             // 
             this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_btn.Location = new System.Drawing.Point(674, 761);
+            this.Clear_btn.Location = new System.Drawing.Point(539, 609);
+            this.Clear_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Clear_btn.Name = "Clear_btn";
-            this.Clear_btn.Size = new System.Drawing.Size(71, 32);
+            this.Clear_btn.Size = new System.Drawing.Size(57, 26);
             this.Clear_btn.TabIndex = 6;
             this.Clear_btn.Text = "Clear";
             this.Clear_btn.UseVisualStyleBackColor = true;
@@ -2124,18 +2182,20 @@ namespace Monitor
             this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientIP);
             this.tabPage_ClientTCP.Controls.Add(this.label8);
             this.tabPage_ClientTCP.Controls.Add(this.label7);
-            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ClientTCP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_ClientTCP.Name = "tabPage_ClientTCP";
-            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_ClientTCP.TabIndex = 9;
             this.tabPage_ClientTCP.Text = "Client TCP";
             this.tabPage_ClientTCP.UseVisualStyleBackColor = true;
             // 
             // button_Ping
             // 
-            this.button_Ping.Location = new System.Drawing.Point(223, 94);
+            this.button_Ping.Location = new System.Drawing.Point(178, 75);
+            this.button_Ping.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Ping.Name = "button_Ping";
-            this.button_Ping.Size = new System.Drawing.Size(114, 28);
+            this.button_Ping.Size = new System.Drawing.Size(91, 22);
             this.button_Ping.TabIndex = 14;
             this.button_Ping.Text = "Ping";
             this.button_Ping.UseVisualStyleBackColor = true;
@@ -2145,9 +2205,10 @@ namespace Monitor
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(685, 367);
+            this.label10.Location = new System.Drawing.Point(548, 294);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(194, 29);
+            this.label10.Size = new System.Drawing.Size(150, 23);
             this.label10.TabIndex = 13;
             this.label10.Text = "Rx - Data Received";
             // 
@@ -2155,17 +2216,19 @@ namespace Monitor
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(685, 107);
+            this.label9.Location = new System.Drawing.Point(548, 86);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 29);
+            this.label9.Size = new System.Drawing.Size(118, 23);
             this.label9.TabIndex = 12;
             this.label9.Text = "Tx - Data Send";
             // 
             // button_ClearRx
             // 
-            this.button_ClearRx.Location = new System.Drawing.Point(1355, 403);
+            this.button_ClearRx.Location = new System.Drawing.Point(1084, 322);
+            this.button_ClearRx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ClearRx.Name = "button_ClearRx";
-            this.button_ClearRx.Size = new System.Drawing.Size(86, 28);
+            this.button_ClearRx.Size = new System.Drawing.Size(69, 22);
             this.button_ClearRx.TabIndex = 11;
             this.button_ClearRx.Text = "Clear Rx";
             this.button_ClearRx.UseVisualStyleBackColor = true;
@@ -2173,18 +2236,20 @@ namespace Monitor
             // 
             // richTextBox_ClientRx
             // 
-            this.richTextBox_ClientRx.Location = new System.Drawing.Point(39, 404);
+            this.richTextBox_ClientRx.Location = new System.Drawing.Point(31, 323);
+            this.richTextBox_ClientRx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox_ClientRx.Name = "richTextBox_ClientRx";
             this.richTextBox_ClientRx.ReadOnly = true;
-            this.richTextBox_ClientRx.Size = new System.Drawing.Size(1310, 202);
+            this.richTextBox_ClientRx.Size = new System.Drawing.Size(1049, 162);
             this.richTextBox_ClientRx.TabIndex = 9;
             this.richTextBox_ClientRx.Text = "";
             // 
             // button43
             // 
-            this.button43.Location = new System.Drawing.Point(1357, 176);
+            this.button43.Location = new System.Drawing.Point(1086, 141);
+            this.button43.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(85, 29);
+            this.button43.Size = new System.Drawing.Size(68, 23);
             this.button43.TabIndex = 8;
             this.button43.Text = "Clear Tx";
             this.button43.UseVisualStyleBackColor = true;
@@ -2192,9 +2257,10 @@ namespace Monitor
             // 
             // button_ClientClose
             // 
-            this.button_ClientClose.Location = new System.Drawing.Point(131, 96);
+            this.button_ClientClose.Location = new System.Drawing.Point(105, 77);
+            this.button_ClientClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ClientClose.Name = "button_ClientClose";
-            this.button_ClientClose.Size = new System.Drawing.Size(86, 27);
+            this.button_ClientClose.Size = new System.Drawing.Size(69, 22);
             this.button_ClientClose.TabIndex = 7;
             this.button_ClientClose.Text = "Close";
             this.button_ClientClose.UseVisualStyleBackColor = true;
@@ -2202,9 +2268,10 @@ namespace Monitor
             // 
             // button_ClientConnect
             // 
-            this.button_ClientConnect.Location = new System.Drawing.Point(39, 97);
+            this.button_ClientConnect.Location = new System.Drawing.Point(31, 78);
+            this.button_ClientConnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ClientConnect.Name = "button_ClientConnect";
-            this.button_ClientConnect.Size = new System.Drawing.Size(86, 28);
+            this.button_ClientConnect.Size = new System.Drawing.Size(69, 22);
             this.button_ClientConnect.TabIndex = 6;
             this.button_ClientConnect.Text = "Connect";
             this.button_ClientConnect.UseVisualStyleBackColor = true;
@@ -2212,9 +2279,10 @@ namespace Monitor
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1357, 140);
+            this.button3.Location = new System.Drawing.Point(1086, 112);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
+            this.button3.Size = new System.Drawing.Size(68, 22);
             this.button3.TabIndex = 5;
             this.button3.Text = "Send";
             this.button3.UseVisualStyleBackColor = true;
@@ -2222,25 +2290,28 @@ namespace Monitor
             // 
             // richTextBox_ClientTx
             // 
-            this.richTextBox_ClientTx.Location = new System.Drawing.Point(39, 142);
+            this.richTextBox_ClientTx.Location = new System.Drawing.Point(31, 114);
+            this.richTextBox_ClientTx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox_ClientTx.Name = "richTextBox_ClientTx";
-            this.richTextBox_ClientTx.Size = new System.Drawing.Size(1312, 202);
+            this.richTextBox_ClientTx.Size = new System.Drawing.Size(1050, 162);
             this.richTextBox_ClientTx.TabIndex = 4;
             this.richTextBox_ClientTx.Text = "Send Data to Server";
             // 
             // textBox_ClientPort
             // 
-            this.textBox_ClientPort.Location = new System.Drawing.Point(142, 57);
+            this.textBox_ClientPort.Location = new System.Drawing.Point(114, 46);
+            this.textBox_ClientPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ClientPort.Name = "textBox_ClientPort";
-            this.textBox_ClientPort.Size = new System.Drawing.Size(114, 30);
+            this.textBox_ClientPort.Size = new System.Drawing.Size(92, 26);
             this.textBox_ClientPort.TabIndex = 3;
             this.textBox_ClientPort.Text = "7000";
             // 
             // textBox_ClientIP
             // 
-            this.textBox_ClientIP.Location = new System.Drawing.Point(142, 21);
+            this.textBox_ClientIP.Location = new System.Drawing.Point(114, 17);
+            this.textBox_ClientIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ClientIP.Name = "textBox_ClientIP";
-            this.textBox_ClientIP.Size = new System.Drawing.Size(114, 30);
+            this.textBox_ClientIP.Size = new System.Drawing.Size(92, 26);
             this.textBox_ClientIP.TabIndex = 2;
             this.textBox_ClientIP.Text = "10.0.1.10";
             // 
@@ -2248,9 +2319,10 @@ namespace Monitor
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 57);
+            this.label8.Location = new System.Drawing.Point(27, 46);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 29);
+            this.label8.Size = new System.Drawing.Size(43, 23);
             this.label8.TabIndex = 1;
             this.label8.Text = "Port";
             // 
@@ -2258,9 +2330,10 @@ namespace Monitor
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 18);
+            this.label7.Location = new System.Drawing.Point(27, 14);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 29);
+            this.label7.Size = new System.Drawing.Size(87, 23);
             this.label7.TabIndex = 0;
             this.label7.Text = "Host or IP";
             // 
@@ -2269,10 +2342,11 @@ namespace Monitor
             this.tabPage_SerialPort.Controls.Add(this.groupBox_SendSerialOrMonitorCommands);
             this.tabPage_SerialPort.Controls.Add(this.gbPortSettings);
             this.tabPage_SerialPort.Controls.Add(this.groupBox5);
-            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_SerialPort.Name = "tabPage_SerialPort";
-            this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SerialPort.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage_SerialPort.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_SerialPort.TabIndex = 1;
             this.tabPage_SerialPort.Text = "Serial Port";
             this.tabPage_SerialPort.UseVisualStyleBackColor = true;
@@ -2283,9 +2357,11 @@ namespace Monitor
             this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.textBox_SendSerialPort);
             this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.checkBox_DeleteCommand);
             this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.button_SendSerialPort);
-            this.groupBox_SendSerialOrMonitorCommands.Location = new System.Drawing.Point(5, 7);
+            this.groupBox_SendSerialOrMonitorCommands.Location = new System.Drawing.Point(4, 6);
+            this.groupBox_SendSerialOrMonitorCommands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_SendSerialOrMonitorCommands.Name = "groupBox_SendSerialOrMonitorCommands";
-            this.groupBox_SendSerialOrMonitorCommands.Size = new System.Drawing.Size(715, 113);
+            this.groupBox_SendSerialOrMonitorCommands.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_SendSerialOrMonitorCommands.Size = new System.Drawing.Size(572, 90);
             this.groupBox_SendSerialOrMonitorCommands.TabIndex = 69;
             this.groupBox_SendSerialOrMonitorCommands.TabStop = false;
             this.groupBox_SendSerialOrMonitorCommands.Text = "Send Data to Serial Port";
@@ -2295,9 +2371,10 @@ namespace Monitor
             this.checkBox_SendHexdata.AutoSize = true;
             this.checkBox_SendHexdata.Checked = true;
             this.checkBox_SendHexdata.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_SendHexdata.Location = new System.Drawing.Point(299, 73);
+            this.checkBox_SendHexdata.Location = new System.Drawing.Point(239, 58);
+            this.checkBox_SendHexdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_SendHexdata.Name = "checkBox_SendHexdata";
-            this.checkBox_SendHexdata.Size = new System.Drawing.Size(141, 27);
+            this.checkBox_SendHexdata.Size = new System.Drawing.Size(115, 22);
             this.checkBox_SendHexdata.TabIndex = 5;
             this.checkBox_SendHexdata.Text = "Send Hex data";
             this.checkBox_SendHexdata.UseVisualStyleBackColor = true;
@@ -2308,10 +2385,11 @@ namespace Monitor
             this.textBox_SendSerialPort.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox_SendSerialPort.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBox_SendSerialPort.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SendSerialPort.Location = new System.Drawing.Point(10, 25);
+            this.textBox_SendSerialPort.Location = new System.Drawing.Point(8, 20);
+            this.textBox_SendSerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SendSerialPort.Name = "textBox_SendSerialPort";
             this.textBox_SendSerialPort.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_SendSerialPort.Size = new System.Drawing.Size(699, 36);
+            this.textBox_SendSerialPort.Size = new System.Drawing.Size(560, 31);
             this.textBox_SendSerialPort.TabIndex = 0;
             this.textBox_SendSerialPort.TextChanged += new System.EventHandler(this.TextBox_SendSerialPort_TextChanged_1);
             this.textBox_SendSerialPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_SendSerialPort_KeyDown);
@@ -2320,9 +2398,10 @@ namespace Monitor
             // checkBox_DeleteCommand
             // 
             this.checkBox_DeleteCommand.AutoSize = true;
-            this.checkBox_DeleteCommand.Location = new System.Drawing.Point(144, 74);
+            this.checkBox_DeleteCommand.Location = new System.Drawing.Point(115, 59);
+            this.checkBox_DeleteCommand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_DeleteCommand.Name = "checkBox_DeleteCommand";
-            this.checkBox_DeleteCommand.Size = new System.Drawing.Size(164, 27);
+            this.checkBox_DeleteCommand.Size = new System.Drawing.Size(135, 22);
             this.checkBox_DeleteCommand.TabIndex = 4;
             this.checkBox_DeleteCommand.Text = "Delete after Send";
             this.checkBox_DeleteCommand.UseVisualStyleBackColor = true;
@@ -2330,9 +2409,10 @@ namespace Monitor
             // button_SendSerialPort
             // 
             this.button_SendSerialPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_SendSerialPort.Location = new System.Drawing.Point(10, 70);
+            this.button_SendSerialPort.Location = new System.Drawing.Point(8, 56);
+            this.button_SendSerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_SendSerialPort.Name = "button_SendSerialPort";
-            this.button_SendSerialPort.Size = new System.Drawing.Size(120, 29);
+            this.button_SendSerialPort.Size = new System.Drawing.Size(96, 23);
             this.button_SendSerialPort.TabIndex = 1;
             this.button_SendSerialPort.Text = "Send";
             this.button_SendSerialPort.Click += new System.EventHandler(this.Button2_Click_1);
@@ -2351,18 +2431,21 @@ namespace Monitor
             this.gbPortSettings.Controls.Add(this.lblBaudRate);
             this.gbPortSettings.Controls.Add(this.lblDataBits);
             this.gbPortSettings.Controls.Add(this.label3);
-            this.gbPortSettings.Location = new System.Drawing.Point(727, 7);
+            this.gbPortSettings.Location = new System.Drawing.Point(582, 6);
+            this.gbPortSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbPortSettings.Name = "gbPortSettings";
-            this.gbPortSettings.Size = new System.Drawing.Size(1034, 112);
+            this.gbPortSettings.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbPortSettings.Size = new System.Drawing.Size(827, 90);
             this.gbPortSettings.TabIndex = 10;
             this.gbPortSettings.TabStop = false;
             this.gbPortSettings.Text = "COM Serial Port Settings";
             // 
             // button_OpenPort
             // 
-            this.button_OpenPort.Location = new System.Drawing.Point(579, 41);
+            this.button_OpenPort.Location = new System.Drawing.Point(463, 33);
+            this.button_OpenPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_OpenPort.Name = "button_OpenPort";
-            this.button_OpenPort.Size = new System.Drawing.Size(104, 40);
+            this.button_OpenPort.Size = new System.Drawing.Size(83, 32);
             this.button_OpenPort.TabIndex = 11;
             this.button_OpenPort.Text = "Open ";
             this.button_OpenPort.UseVisualStyleBackColor = true;
@@ -2372,9 +2455,10 @@ namespace Monitor
             // 
             this.button_ReScanComPort.AutoSize = true;
             this.button_ReScanComPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ReScanComPort.Location = new System.Drawing.Point(473, 41);
+            this.button_ReScanComPort.Location = new System.Drawing.Point(378, 33);
+            this.button_ReScanComPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ReScanComPort.Name = "button_ReScanComPort";
-            this.button_ReScanComPort.Size = new System.Drawing.Size(100, 41);
+            this.button_ReScanComPort.Size = new System.Drawing.Size(80, 33);
             this.button_ReScanComPort.TabIndex = 10;
             this.button_ReScanComPort.Text = "ReScan";
             this.button_ReScanComPort.UseVisualStyleBackColor = true;
@@ -2391,9 +2475,10 @@ namespace Monitor
             "COM4",
             "COM5",
             "COM6"});
-            this.cmb_PortName.Location = new System.Drawing.Point(9, 46);
+            this.cmb_PortName.Location = new System.Drawing.Point(7, 37);
+            this.cmb_PortName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_PortName.Name = "cmb_PortName";
-            this.cmb_PortName.Size = new System.Drawing.Size(77, 31);
+            this.cmb_PortName.Size = new System.Drawing.Size(62, 26);
             this.cmb_PortName.TabIndex = 1;
             this.cmb_PortName.Tag = "1";
             this.cmb_PortName.SelectedIndexChanged += new System.EventHandler(this.CmbPortName_SelectedIndexChanged);
@@ -2410,9 +2495,10 @@ namespace Monitor
             "38400",
             "57600",
             "115200"});
-            this.cmbBaudRate.Location = new System.Drawing.Point(93, 46);
+            this.cmbBaudRate.Location = new System.Drawing.Point(74, 37);
+            this.cmbBaudRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbBaudRate.Name = "cmbBaudRate";
-            this.cmbBaudRate.Size = new System.Drawing.Size(101, 31);
+            this.cmbBaudRate.Size = new System.Drawing.Size(82, 26);
             this.cmbBaudRate.TabIndex = 3;
             this.cmbBaudRate.Text = "38400";
             this.cmbBaudRate.SelectedIndexChanged += new System.EventHandler(this.CmbBaudRate_SelectedIndexChanged);
@@ -2425,9 +2511,10 @@ namespace Monitor
             "1",
             "2",
             "3"});
-            this.cmb_StopBits.Location = new System.Drawing.Point(352, 45);
+            this.cmb_StopBits.Location = new System.Drawing.Point(282, 36);
+            this.cmb_StopBits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_StopBits.Name = "cmb_StopBits";
-            this.cmb_StopBits.Size = new System.Drawing.Size(101, 31);
+            this.cmb_StopBits.Size = new System.Drawing.Size(82, 26);
             this.cmb_StopBits.TabIndex = 9;
             // 
             // cmbParity
@@ -2439,9 +2526,10 @@ namespace Monitor
             "None",
             "Even",
             "Odd"});
-            this.cmbParity.Location = new System.Drawing.Point(201, 45);
+            this.cmbParity.Location = new System.Drawing.Point(161, 36);
+            this.cmbParity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbParity.Name = "cmbParity";
-            this.cmbParity.Size = new System.Drawing.Size(69, 31);
+            this.cmbParity.Size = new System.Drawing.Size(56, 26);
             this.cmbParity.TabIndex = 5;
             this.cmbParity.Tag = "1";
             // 
@@ -2453,54 +2541,60 @@ namespace Monitor
             "6",
             "7",
             "8"});
-            this.cmbDataBits.Location = new System.Drawing.Point(275, 45);
+            this.cmbDataBits.Location = new System.Drawing.Point(220, 36);
+            this.cmbDataBits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDataBits.Name = "cmbDataBits";
-            this.cmbDataBits.Size = new System.Drawing.Size(69, 31);
+            this.cmbDataBits.Size = new System.Drawing.Size(56, 26);
             this.cmbDataBits.TabIndex = 7;
             this.cmbDataBits.Text = "8";
             // 
             // lblComPort
             // 
             this.lblComPort.AutoSize = true;
-            this.lblComPort.Location = new System.Drawing.Point(8, 27);
+            this.lblComPort.Location = new System.Drawing.Point(6, 22);
+            this.lblComPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblComPort.Name = "lblComPort";
-            this.lblComPort.Size = new System.Drawing.Size(91, 23);
+            this.lblComPort.Size = new System.Drawing.Size(71, 18);
             this.lblComPort.TabIndex = 0;
             this.lblComPort.Text = "COM Port:";
             // 
             // lblStopBits
             // 
             this.lblStopBits.AutoSize = true;
-            this.lblStopBits.Location = new System.Drawing.Point(354, 25);
+            this.lblStopBits.Location = new System.Drawing.Point(283, 20);
+            this.lblStopBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStopBits.Name = "lblStopBits";
-            this.lblStopBits.Size = new System.Drawing.Size(82, 23);
+            this.lblStopBits.Size = new System.Drawing.Size(66, 18);
             this.lblStopBits.TabIndex = 8;
             this.lblStopBits.Text = "Stop Bits:";
             // 
             // lblBaudRate
             // 
             this.lblBaudRate.AutoSize = true;
-            this.lblBaudRate.Location = new System.Drawing.Point(91, 27);
+            this.lblBaudRate.Location = new System.Drawing.Point(73, 22);
+            this.lblBaudRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBaudRate.Name = "lblBaudRate";
-            this.lblBaudRate.Size = new System.Drawing.Size(92, 23);
+            this.lblBaudRate.Size = new System.Drawing.Size(74, 18);
             this.lblBaudRate.TabIndex = 2;
             this.lblBaudRate.Text = "Baud Rate:";
             // 
             // lblDataBits
             // 
             this.lblDataBits.AutoSize = true;
-            this.lblDataBits.Location = new System.Drawing.Point(279, 25);
+            this.lblDataBits.Location = new System.Drawing.Point(223, 20);
+            this.lblDataBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDataBits.Name = "lblDataBits";
-            this.lblDataBits.Size = new System.Drawing.Size(83, 23);
+            this.lblDataBits.Size = new System.Drawing.Size(66, 18);
             this.lblDataBits.TabIndex = 6;
             this.lblDataBits.Text = "Data Bits:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 25);
+            this.label3.Location = new System.Drawing.Point(162, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 23);
+            this.label3.Size = new System.Drawing.Size(48, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Parity:";
             // 
@@ -2517,9 +2611,11 @@ namespace Monitor
             this.groupBox5.Controls.Add(this.txtS1_Clear);
             this.groupBox5.Controls.Add(this.SerialPortLogger_TextBox);
             this.groupBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(5, 127);
+            this.groupBox5.Location = new System.Drawing.Point(4, 102);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1756, 691);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(1405, 553);
             this.groupBox5.TabIndex = 68;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Serial Port Console";
@@ -2531,9 +2627,11 @@ namespace Monitor
             this.groupBox_Timer.Controls.Add(this.button_StartStopTimer);
             this.groupBox_Timer.Controls.Add(this.button_ResetTimer);
             this.groupBox_Timer.Controls.Add(this.textBox_SetTimerTime);
-            this.groupBox_Timer.Location = new System.Drawing.Point(47, 880);
+            this.groupBox_Timer.Location = new System.Drawing.Point(38, 704);
+            this.groupBox_Timer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_Timer.Name = "groupBox_Timer";
-            this.groupBox_Timer.Size = new System.Drawing.Size(308, 134);
+            this.groupBox_Timer.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_Timer.Size = new System.Drawing.Size(246, 107);
             this.groupBox_Timer.TabIndex = 107;
             this.groupBox_Timer.TabStop = false;
             this.groupBox_Timer.Text = "Timer";
@@ -2542,19 +2640,21 @@ namespace Monitor
             // textBox_TimerTime
             // 
             this.textBox_TimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_TimerTime.Location = new System.Drawing.Point(136, 80);
+            this.textBox_TimerTime.Location = new System.Drawing.Point(109, 64);
+            this.textBox_TimerTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_TimerTime.Name = "textBox_TimerTime";
             this.textBox_TimerTime.ReadOnly = true;
-            this.textBox_TimerTime.Size = new System.Drawing.Size(80, 37);
+            this.textBox_TimerTime.Size = new System.Drawing.Size(65, 31);
             this.textBox_TimerTime.TabIndex = 106;
             this.textBox_TimerTime.Text = "0";
             // 
             // button_StartStopTimer
             // 
             this.button_StartStopTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_StartStopTimer.Location = new System.Drawing.Point(10, 28);
+            this.button_StartStopTimer.Location = new System.Drawing.Point(8, 22);
+            this.button_StartStopTimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_StartStopTimer.Name = "button_StartStopTimer";
-            this.button_StartStopTimer.Size = new System.Drawing.Size(126, 45);
+            this.button_StartStopTimer.Size = new System.Drawing.Size(101, 36);
             this.button_StartStopTimer.TabIndex = 104;
             this.button_StartStopTimer.Text = "Start/Stop";
             this.button_StartStopTimer.UseVisualStyleBackColor = true;
@@ -2563,9 +2663,10 @@ namespace Monitor
             // button_ResetTimer
             // 
             this.button_ResetTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ResetTimer.Location = new System.Drawing.Point(136, 28);
+            this.button_ResetTimer.Location = new System.Drawing.Point(109, 22);
+            this.button_ResetTimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ResetTimer.Name = "button_ResetTimer";
-            this.button_ResetTimer.Size = new System.Drawing.Size(126, 45);
+            this.button_ResetTimer.Size = new System.Drawing.Size(101, 36);
             this.button_ResetTimer.TabIndex = 105;
             this.button_ResetTimer.Text = "Reset (0)";
             this.button_ResetTimer.UseVisualStyleBackColor = true;
@@ -2574,9 +2675,10 @@ namespace Monitor
             // textBox_SetTimerTime
             // 
             this.textBox_SetTimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SetTimerTime.Location = new System.Drawing.Point(10, 80);
+            this.textBox_SetTimerTime.Location = new System.Drawing.Point(8, 64);
+            this.textBox_SetTimerTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetTimerTime.Name = "textBox_SetTimerTime";
-            this.textBox_SetTimerTime.Size = new System.Drawing.Size(119, 37);
+            this.textBox_SetTimerTime.Size = new System.Drawing.Size(96, 31);
             this.textBox_SetTimerTime.TabIndex = 103;
             this.textBox_SetTimerTime.Text = "0";
             // 
@@ -2586,9 +2688,11 @@ namespace Monitor
             this.groupBox_Stopwatch.Controls.Add(this.button_Stopwatch_Start_Stop);
             this.groupBox_Stopwatch.Controls.Add(this.button_StopwatchReset);
             this.groupBox_Stopwatch.Controls.Add(this.textBox_StopWatch);
-            this.groupBox_Stopwatch.Location = new System.Drawing.Point(47, 737);
+            this.groupBox_Stopwatch.Location = new System.Drawing.Point(38, 590);
+            this.groupBox_Stopwatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_Stopwatch.Name = "groupBox_Stopwatch";
-            this.groupBox_Stopwatch.Size = new System.Drawing.Size(308, 135);
+            this.groupBox_Stopwatch.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_Stopwatch.Size = new System.Drawing.Size(246, 108);
             this.groupBox_Stopwatch.TabIndex = 106;
             this.groupBox_Stopwatch.TabStop = false;
             this.groupBox_Stopwatch.Text = "Stopwatch";
@@ -2597,9 +2701,10 @@ namespace Monitor
             // button_TimerLog
             // 
             this.button_TimerLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_TimerLog.Location = new System.Drawing.Point(216, 28);
+            this.button_TimerLog.Location = new System.Drawing.Point(173, 22);
+            this.button_TimerLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_TimerLog.Name = "button_TimerLog";
-            this.button_TimerLog.Size = new System.Drawing.Size(86, 45);
+            this.button_TimerLog.Size = new System.Drawing.Size(69, 36);
             this.button_TimerLog.TabIndex = 106;
             this.button_TimerLog.Text = "Log ->";
             this.button_TimerLog.UseVisualStyleBackColor = true;
@@ -2608,9 +2713,10 @@ namespace Monitor
             // button_Stopwatch_Start_Stop
             // 
             this.button_Stopwatch_Start_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Stopwatch_Start_Stop.Location = new System.Drawing.Point(10, 28);
+            this.button_Stopwatch_Start_Stop.Location = new System.Drawing.Point(8, 22);
+            this.button_Stopwatch_Start_Stop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_Stopwatch_Start_Stop.Name = "button_Stopwatch_Start_Stop";
-            this.button_Stopwatch_Start_Stop.Size = new System.Drawing.Size(126, 45);
+            this.button_Stopwatch_Start_Stop.Size = new System.Drawing.Size(101, 36);
             this.button_Stopwatch_Start_Stop.TabIndex = 104;
             this.button_Stopwatch_Start_Stop.Text = "Start/Stop";
             this.button_Stopwatch_Start_Stop.UseVisualStyleBackColor = true;
@@ -2619,9 +2725,10 @@ namespace Monitor
             // button_StopwatchReset
             // 
             this.button_StopwatchReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_StopwatchReset.Location = new System.Drawing.Point(136, 28);
+            this.button_StopwatchReset.Location = new System.Drawing.Point(109, 22);
+            this.button_StopwatchReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_StopwatchReset.Name = "button_StopwatchReset";
-            this.button_StopwatchReset.Size = new System.Drawing.Size(80, 45);
+            this.button_StopwatchReset.Size = new System.Drawing.Size(64, 36);
             this.button_StopwatchReset.TabIndex = 105;
             this.button_StopwatchReset.Text = "Reset";
             this.button_StopwatchReset.UseVisualStyleBackColor = true;
@@ -2630,10 +2737,11 @@ namespace Monitor
             // textBox_StopWatch
             // 
             this.textBox_StopWatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_StopWatch.Location = new System.Drawing.Point(10, 80);
+            this.textBox_StopWatch.Location = new System.Drawing.Point(8, 64);
+            this.textBox_StopWatch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StopWatch.Name = "textBox_StopWatch";
             this.textBox_StopWatch.ReadOnly = true;
-            this.textBox_StopWatch.Size = new System.Drawing.Size(229, 37);
+            this.textBox_StopWatch.Size = new System.Drawing.Size(184, 31);
             this.textBox_StopWatch.TabIndex = 103;
             this.textBox_StopWatch.Text = "0";
             this.textBox_StopWatch.TextChanged += new System.EventHandler(this.TextBox_StopWatch_TextChanged);
@@ -2643,32 +2751,36 @@ namespace Monitor
             this.checkBox_RxHex.AutoSize = true;
             this.checkBox_RxHex.Checked = true;
             this.checkBox_RxHex.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_RxHex.Location = new System.Drawing.Point(1365, 24);
+            this.checkBox_RxHex.Location = new System.Drawing.Point(1092, 19);
+            this.checkBox_RxHex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_RxHex.Name = "checkBox_RxHex";
-            this.checkBox_RxHex.Size = new System.Drawing.Size(138, 28);
+            this.checkBox_RxHex.Size = new System.Drawing.Size(111, 23);
             this.checkBox_RxHex.TabIndex = 6;
             this.checkBox_RxHex.Text = "Show Rx Hex";
             this.checkBox_RxHex.UseVisualStyleBackColor = true;
             // 
             // textBox_SerialPortRecognizePattern3
             // 
-            this.textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(288, 21);
+            this.textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(230, 17);
+            this.textBox_SerialPortRecognizePattern3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SerialPortRecognizePattern3.Name = "textBox_SerialPortRecognizePattern3";
-            this.textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(134, 32);
+            this.textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(108, 27);
             this.textBox_SerialPortRecognizePattern3.TabIndex = 75;
             // 
             // textBox_SerialPortRecognizePattern2
             // 
-            this.textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(147, 22);
+            this.textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(118, 18);
+            this.textBox_SerialPortRecognizePattern2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SerialPortRecognizePattern2.Name = "textBox_SerialPortRecognizePattern2";
-            this.textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(134, 32);
+            this.textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(108, 27);
             this.textBox_SerialPortRecognizePattern2.TabIndex = 74;
             // 
             // textBox_SerialPortRecognizePattern
             // 
-            this.textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(7, 22);
+            this.textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(6, 18);
+            this.textBox_SerialPortRecognizePattern.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SerialPortRecognizePattern.Name = "textBox_SerialPortRecognizePattern";
-            this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(134, 32);
+            this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(108, 27);
             this.textBox_SerialPortRecognizePattern.TabIndex = 73;
             // 
             // checkBox_S1RecordLog
@@ -2676,9 +2788,10 @@ namespace Monitor
             this.checkBox_S1RecordLog.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_S1RecordLog.AutoSize = true;
             this.checkBox_S1RecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(1498, 21);
+            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(1198, 17);
+            this.checkBox_S1RecordLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_S1RecordLog.Name = "checkBox_S1RecordLog";
-            this.checkBox_S1RecordLog.Size = new System.Drawing.Size(102, 34);
+            this.checkBox_S1RecordLog.Size = new System.Drawing.Size(83, 29);
             this.checkBox_S1RecordLog.TabIndex = 69;
             this.checkBox_S1RecordLog.Text = "Log to file";
             this.checkBox_S1RecordLog.UseVisualStyleBackColor = true;
@@ -2689,9 +2802,10 @@ namespace Monitor
             this.checkBox_S1Pause.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_S1Pause.AutoSize = true;
             this.checkBox_S1Pause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1Pause.Location = new System.Drawing.Point(1603, 21);
+            this.checkBox_S1Pause.Location = new System.Drawing.Point(1282, 17);
+            this.checkBox_S1Pause.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_S1Pause.Name = "checkBox_S1Pause";
-            this.checkBox_S1Pause.Size = new System.Drawing.Size(69, 34);
+            this.checkBox_S1Pause.Size = new System.Drawing.Size(58, 29);
             this.checkBox_S1Pause.TabIndex = 70;
             this.checkBox_S1Pause.Text = "Pause";
             this.checkBox_S1Pause.UseVisualStyleBackColor = true;
@@ -2700,9 +2814,10 @@ namespace Monitor
             // txtS1_Clear
             // 
             this.txtS1_Clear.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtS1_Clear.Location = new System.Drawing.Point(1678, 21);
+            this.txtS1_Clear.Location = new System.Drawing.Point(1342, 17);
+            this.txtS1_Clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtS1_Clear.Name = "txtS1_Clear";
-            this.txtS1_Clear.Size = new System.Drawing.Size(71, 31);
+            this.txtS1_Clear.Size = new System.Drawing.Size(57, 25);
             this.txtS1_Clear.TabIndex = 69;
             this.txtS1_Clear.Text = "Clear";
             this.txtS1_Clear.UseVisualStyleBackColor = true;
@@ -2713,9 +2828,10 @@ namespace Monitor
             this.SerialPortLogger_TextBox.BackColor = System.Drawing.Color.LightGray;
             this.SerialPortLogger_TextBox.EnableAutoDragDrop = true;
             this.SerialPortLogger_TextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SerialPortLogger_TextBox.Location = new System.Drawing.Point(5, 59);
+            this.SerialPortLogger_TextBox.Location = new System.Drawing.Point(4, 47);
+            this.SerialPortLogger_TextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SerialPortLogger_TextBox.Name = "SerialPortLogger_TextBox";
-            this.SerialPortLogger_TextBox.Size = new System.Drawing.Size(1755, 625);
+            this.SerialPortLogger_TextBox.Size = new System.Drawing.Size(1405, 501);
             this.SerialPortLogger_TextBox.TabIndex = 0;
             this.SerialPortLogger_TextBox.Text = "";
             this.SerialPortLogger_TextBox.TextChanged += new System.EventHandler(this.SerialPortLogger_TextBox_TextChanged);
@@ -2725,9 +2841,10 @@ namespace Monitor
             this.tabPage_GenericFrame.Controls.Add(this.button52);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
             this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
-            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_GenericFrame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_GenericFrame.TabIndex = 10;
             this.tabPage_GenericFrame.Text = "Generic Kratos frame";
             this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
@@ -2736,9 +2853,10 @@ namespace Monitor
             // 
             // button52
             // 
-            this.button52.Location = new System.Drawing.Point(23, 531);
+            this.button52.Location = new System.Drawing.Point(18, 425);
+            this.button52.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(86, 28);
+            this.button52.Size = new System.Drawing.Size(69, 22);
             this.button52.TabIndex = 15;
             this.button52.Text = "Clear";
             this.button52.UseVisualStyleBackColor = true;
@@ -2758,20 +2876,23 @@ namespace Monitor
             this.groupBox31.Controls.Add(this.textBox_RxClientData);
             this.groupBox31.Controls.Add(this.label15);
             this.groupBox31.Controls.Add(this.label16);
-            this.groupBox31.Location = new System.Drawing.Point(1331, 19);
+            this.groupBox31.Location = new System.Drawing.Point(1065, 15);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(426, 259);
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox31.Size = new System.Drawing.Size(341, 207);
             this.groupBox31.TabIndex = 14;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Data received";
             // 
             // textBox_RxClientCheckSum
             // 
-            this.textBox_RxClientCheckSum.Location = new System.Drawing.Point(111, 194);
+            this.textBox_RxClientCheckSum.Location = new System.Drawing.Point(89, 155);
+            this.textBox_RxClientCheckSum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RxClientCheckSum.MaxLength = 4;
             this.textBox_RxClientCheckSum.Name = "textBox_RxClientCheckSum";
             this.textBox_RxClientCheckSum.ReadOnly = true;
-            this.textBox_RxClientCheckSum.Size = new System.Drawing.Size(114, 30);
+            this.textBox_RxClientCheckSum.Size = new System.Drawing.Size(92, 26);
             this.textBox_RxClientCheckSum.TabIndex = 15;
             this.textBox_RxClientCheckSum.TabStop = false;
             // 
@@ -2781,37 +2902,41 @@ namespace Monitor
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Maroon;
-            this.label24.Location = new System.Drawing.Point(232, 153);
+            this.label24.Location = new System.Drawing.Point(186, 122);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(79, 26);
+            this.label24.Size = new System.Drawing.Size(65, 21);
             this.label24.TabIndex = 11;
             this.label24.Text = "Decimal";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(11, 199);
+            this.label41.Location = new System.Drawing.Point(9, 159);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(94, 23);
+            this.label41.Size = new System.Drawing.Size(75, 18);
             this.label41.TabIndex = 14;
             this.label41.Text = "Check Sum";
             // 
             // textBox_RxClientDataLength
             // 
-            this.textBox_RxClientDataLength.Location = new System.Drawing.Point(111, 151);
+            this.textBox_RxClientDataLength.Location = new System.Drawing.Point(89, 121);
+            this.textBox_RxClientDataLength.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RxClientDataLength.MaxLength = 4;
             this.textBox_RxClientDataLength.Name = "textBox_RxClientDataLength";
             this.textBox_RxClientDataLength.ReadOnly = true;
-            this.textBox_RxClientDataLength.Size = new System.Drawing.Size(114, 30);
+            this.textBox_RxClientDataLength.Size = new System.Drawing.Size(92, 26);
             this.textBox_RxClientDataLength.TabIndex = 10;
             this.textBox_RxClientDataLength.TabStop = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(11, 156);
+            this.label23.Location = new System.Drawing.Point(9, 125);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(102, 23);
+            this.label23.Size = new System.Drawing.Size(81, 18);
             this.label23.TabIndex = 9;
             this.label23.Text = "Data Length";
             // 
@@ -2821,48 +2946,53 @@ namespace Monitor
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Maroon;
-            this.label18.Location = new System.Drawing.Point(307, 19);
+            this.label18.Location = new System.Drawing.Point(246, 15);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 26);
+            this.label18.Size = new System.Drawing.Size(97, 21);
             this.label18.TabIndex = 8;
             this.label18.Text = "Hexadecimal";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 25);
+            this.label13.Location = new System.Drawing.Point(9, 20);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 23);
+            this.label13.Size = new System.Drawing.Size(68, 18);
             this.label13.TabIndex = 4;
             this.label13.Text = "Preamble";
             // 
             // textBox_RxClientPreamble
             // 
-            this.textBox_RxClientPreamble.Location = new System.Drawing.Point(111, 22);
+            this.textBox_RxClientPreamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_RxClientPreamble.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RxClientPreamble.MaxLength = 4;
             this.textBox_RxClientPreamble.Name = "textBox_RxClientPreamble";
             this.textBox_RxClientPreamble.ReadOnly = true;
-            this.textBox_RxClientPreamble.Size = new System.Drawing.Size(114, 30);
+            this.textBox_RxClientPreamble.Size = new System.Drawing.Size(92, 26);
             this.textBox_RxClientPreamble.TabIndex = 0;
             this.textBox_RxClientPreamble.TabStop = false;
             this.textBox_RxClientPreamble.TextChanged += new System.EventHandler(this.textBox_RxClientPreamble_TextChanged);
             // 
             // textBox_RxClientOpcode
             // 
-            this.textBox_RxClientOpcode.Location = new System.Drawing.Point(111, 65);
+            this.textBox_RxClientOpcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_RxClientOpcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RxClientOpcode.MaxLength = 4;
             this.textBox_RxClientOpcode.Name = "textBox_RxClientOpcode";
             this.textBox_RxClientOpcode.ReadOnly = true;
-            this.textBox_RxClientOpcode.Size = new System.Drawing.Size(114, 30);
+            this.textBox_RxClientOpcode.Size = new System.Drawing.Size(92, 26);
             this.textBox_RxClientOpcode.TabIndex = 1;
             this.textBox_RxClientOpcode.TabStop = false;
             // 
             // textBox_RxClientData
             // 
-            this.textBox_RxClientData.Location = new System.Drawing.Point(111, 107);
+            this.textBox_RxClientData.Location = new System.Drawing.Point(89, 86);
+            this.textBox_RxClientData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RxClientData.Name = "textBox_RxClientData";
             this.textBox_RxClientData.ReadOnly = true;
-            this.textBox_RxClientData.Size = new System.Drawing.Size(257, 30);
+            this.textBox_RxClientData.Size = new System.Drawing.Size(206, 26);
             this.textBox_RxClientData.TabIndex = 2;
             this.textBox_RxClientData.TabStop = false;
             this.textBox_RxClientData.TextChanged += new System.EventHandler(this.textBox_RxClientData_TextChanged);
@@ -2870,18 +3000,20 @@ namespace Monitor
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 73);
+            this.label15.Location = new System.Drawing.Point(9, 58);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 23);
+            this.label15.Size = new System.Drawing.Size(56, 18);
             this.label15.TabIndex = 5;
             this.label15.Text = "Opcode";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(11, 110);
+            this.label16.Location = new System.Drawing.Point(9, 88);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 23);
+            this.label16.Size = new System.Drawing.Size(36, 18);
             this.label16.TabIndex = 6;
             this.label16.Text = "Data";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -2898,9 +3030,11 @@ namespace Monitor
             this.groupBox_clientTX.Controls.Add(this.textBox_data);
             this.groupBox_clientTX.Controls.Add(this.label6);
             this.groupBox_clientTX.Controls.Add(this.label11);
-            this.groupBox_clientTX.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_clientTX.Location = new System.Drawing.Point(13, 12);
+            this.groupBox_clientTX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_clientTX.Name = "groupBox_clientTX";
-            this.groupBox_clientTX.Size = new System.Drawing.Size(1309, 509);
+            this.groupBox_clientTX.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_clientTX.Size = new System.Drawing.Size(1047, 407);
             this.groupBox_clientTX.TabIndex = 13;
             this.groupBox_clientTX.TabStop = false;
             this.groupBox_clientTX.Text = "Send Data";
@@ -2908,9 +3042,10 @@ namespace Monitor
             // 
             // button_SendProtocolSerialPort
             // 
-            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(150, 153);
+            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(120, 122);
+            this.button_SendProtocolSerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
-            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(138, 27);
+            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(110, 22);
             this.button_SendProtocolSerialPort.TabIndex = 16;
             this.button_SendProtocolSerialPort.TabStop = false;
             this.button_SendProtocolSerialPort.Text = "Send SerialPort";
@@ -2931,29 +3066,33 @@ namespace Monitor
             this.groupBox41.Controls.Add(this.textBox_SentData);
             this.groupBox41.Controls.Add(this.label46);
             this.groupBox41.Controls.Add(this.label47);
-            this.groupBox41.Location = new System.Drawing.Point(7, 217);
+            this.groupBox41.Location = new System.Drawing.Point(6, 174);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Size = new System.Drawing.Size(1295, 278);
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox41.Size = new System.Drawing.Size(1036, 222);
             this.groupBox41.TabIndex = 15;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Data Sent";
             // 
             // textBox_SentChecksum
             // 
-            this.textBox_SentChecksum.Location = new System.Drawing.Point(111, 196);
+            this.textBox_SentChecksum.Location = new System.Drawing.Point(89, 157);
+            this.textBox_SentChecksum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SentChecksum.MaxLength = 4;
             this.textBox_SentChecksum.Name = "textBox_SentChecksum";
             this.textBox_SentChecksum.ReadOnly = true;
-            this.textBox_SentChecksum.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SentChecksum.Size = new System.Drawing.Size(92, 26);
             this.textBox_SentChecksum.TabIndex = 13;
             this.textBox_SentChecksum.TabStop = false;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(11, 201);
+            this.label48.Location = new System.Drawing.Point(9, 161);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(94, 23);
+            this.label48.Size = new System.Drawing.Size(75, 18);
             this.label48.TabIndex = 12;
             this.label48.Text = "Check Sum";
             // 
@@ -2963,28 +3102,31 @@ namespace Monitor
             this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Maroon;
-            this.label42.Location = new System.Drawing.Point(232, 153);
+            this.label42.Location = new System.Drawing.Point(186, 122);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(79, 26);
+            this.label42.Size = new System.Drawing.Size(65, 21);
             this.label42.TabIndex = 11;
             this.label42.Text = "Decimal";
             // 
             // textBox_SentDataLength
             // 
-            this.textBox_SentDataLength.Location = new System.Drawing.Point(111, 151);
+            this.textBox_SentDataLength.Location = new System.Drawing.Point(89, 121);
+            this.textBox_SentDataLength.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SentDataLength.MaxLength = 4;
             this.textBox_SentDataLength.Name = "textBox_SentDataLength";
             this.textBox_SentDataLength.ReadOnly = true;
-            this.textBox_SentDataLength.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SentDataLength.Size = new System.Drawing.Size(92, 26);
             this.textBox_SentDataLength.TabIndex = 10;
             this.textBox_SentDataLength.TabStop = false;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(11, 156);
+            this.label43.Location = new System.Drawing.Point(9, 125);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(102, 23);
+            this.label43.Size = new System.Drawing.Size(81, 18);
             this.label43.TabIndex = 9;
             this.label43.Text = "Data Length";
             // 
@@ -2994,66 +3136,73 @@ namespace Monitor
             this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Maroon;
-            this.label44.Location = new System.Drawing.Point(307, 19);
+            this.label44.Location = new System.Drawing.Point(246, 15);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(119, 26);
+            this.label44.Size = new System.Drawing.Size(97, 21);
             this.label44.TabIndex = 8;
             this.label44.Text = "Hexadecimal";
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(11, 25);
+            this.label45.Location = new System.Drawing.Point(9, 20);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(83, 23);
+            this.label45.Size = new System.Drawing.Size(68, 18);
             this.label45.TabIndex = 4;
             this.label45.Text = "Preamble";
             // 
             // textBox_SentPreamble
             // 
-            this.textBox_SentPreamble.Location = new System.Drawing.Point(111, 22);
+            this.textBox_SentPreamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_SentPreamble.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SentPreamble.MaxLength = 4;
             this.textBox_SentPreamble.Name = "textBox_SentPreamble";
             this.textBox_SentPreamble.ReadOnly = true;
-            this.textBox_SentPreamble.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SentPreamble.Size = new System.Drawing.Size(92, 26);
             this.textBox_SentPreamble.TabIndex = 0;
             this.textBox_SentPreamble.TabStop = false;
             // 
             // textBox_SentOpcode
             // 
-            this.textBox_SentOpcode.Location = new System.Drawing.Point(111, 65);
+            this.textBox_SentOpcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_SentOpcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SentOpcode.MaxLength = 4;
             this.textBox_SentOpcode.Name = "textBox_SentOpcode";
             this.textBox_SentOpcode.ReadOnly = true;
-            this.textBox_SentOpcode.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SentOpcode.Size = new System.Drawing.Size(92, 26);
             this.textBox_SentOpcode.TabIndex = 1;
             this.textBox_SentOpcode.TabStop = false;
             // 
             // textBox_SentData
             // 
             this.textBox_SentData.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_SentData.Location = new System.Drawing.Point(111, 107);
+            this.textBox_SentData.Location = new System.Drawing.Point(89, 86);
+            this.textBox_SentData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SentData.Name = "textBox_SentData";
             this.textBox_SentData.ReadOnly = true;
-            this.textBox_SentData.Size = new System.Drawing.Size(1177, 30);
+            this.textBox_SentData.Size = new System.Drawing.Size(942, 26);
             this.textBox_SentData.TabIndex = 2;
             this.textBox_SentData.TabStop = false;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(11, 73);
+            this.label46.Location = new System.Drawing.Point(9, 58);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(70, 23);
+            this.label46.Size = new System.Drawing.Size(56, 18);
             this.label46.TabIndex = 5;
             this.label46.Text = "Opcode";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(11, 110);
+            this.label47.Location = new System.Drawing.Point(9, 88);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(46, 23);
+            this.label47.Size = new System.Drawing.Size(36, 18);
             this.label47.TabIndex = 6;
             this.label47.Text = "Data";
             // 
@@ -3063,27 +3212,30 @@ namespace Monitor
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Maroon;
-            this.label17.Location = new System.Drawing.Point(717, 19);
+            this.label17.Location = new System.Drawing.Point(574, 15);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 26);
+            this.label17.Size = new System.Drawing.Size(97, 21);
             this.label17.TabIndex = 7;
             this.label17.Text = "Hexadecimal";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 25);
+            this.label4.Location = new System.Drawing.Point(17, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 23);
+            this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "Preamble";
             // 
             // textBox_Preamble
             // 
-            this.textBox_Preamble.Location = new System.Drawing.Point(111, 22);
+            this.textBox_Preamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_Preamble.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Preamble.MaxLength = 5;
             this.textBox_Preamble.Name = "textBox_Preamble";
-            this.textBox_Preamble.Size = new System.Drawing.Size(114, 30);
+            this.textBox_Preamble.Size = new System.Drawing.Size(92, 26);
             this.textBox_Preamble.TabIndex = 0;
             this.textBox_Preamble.Text = "23";
             this.textBox_Preamble.TextChanged += new System.EventHandler(this.textBox_Preamble_TextChanged);
@@ -3091,9 +3243,10 @@ namespace Monitor
             // 
             // button_SendProtocolTCPIP
             // 
-            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(7, 153);
+            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 122);
+            this.button_SendProtocolTCPIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_SendProtocolTCPIP.Name = "button_SendProtocolTCPIP";
-            this.button_SendProtocolTCPIP.Size = new System.Drawing.Size(136, 27);
+            this.button_SendProtocolTCPIP.Size = new System.Drawing.Size(109, 22);
             this.button_SendProtocolTCPIP.TabIndex = 3;
             this.button_SendProtocolTCPIP.TabStop = false;
             this.button_SendProtocolTCPIP.Text = "Send TCP/IP";
@@ -3102,10 +3255,11 @@ namespace Monitor
             // 
             // textBox_Opcode
             // 
-            this.textBox_Opcode.Location = new System.Drawing.Point(111, 65);
+            this.textBox_Opcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_Opcode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_Opcode.MaxLength = 5;
             this.textBox_Opcode.Name = "textBox_Opcode";
-            this.textBox_Opcode.Size = new System.Drawing.Size(114, 30);
+            this.textBox_Opcode.Size = new System.Drawing.Size(92, 26);
             this.textBox_Opcode.TabIndex = 1;
             this.textBox_Opcode.Text = "70 00";
             this.textBox_Opcode.TextChanged += new System.EventHandler(this.textBox_Opcode_TextChanged);
@@ -3113,9 +3267,10 @@ namespace Monitor
             // 
             // textBox_data
             // 
-            this.textBox_data.Location = new System.Drawing.Point(111, 107);
+            this.textBox_data.Location = new System.Drawing.Point(89, 86);
+            this.textBox_data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_data.Name = "textBox_data";
-            this.textBox_data.Size = new System.Drawing.Size(257, 30);
+            this.textBox_data.Size = new System.Drawing.Size(206, 26);
             this.textBox_data.TabIndex = 2;
             this.textBox_data.Text = "04 00 00 00";
             this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
@@ -3124,18 +3279,20 @@ namespace Monitor
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 69);
+            this.label6.Location = new System.Drawing.Point(17, 55);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 23);
+            this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Opcode";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 110);
+            this.label11.Location = new System.Drawing.Point(14, 88);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 23);
+            this.label11.Size = new System.Drawing.Size(36, 18);
             this.label11.TabIndex = 6;
             this.label11.Text = "Data";
             // 
@@ -3143,9 +3300,10 @@ namespace Monitor
             // 
             this.tabPage_Commands.Controls.Add(this.groupBox40);
             this.tabPage_Commands.Controls.Add(this.groupBox32);
-            this.tabPage_Commands.Location = new System.Drawing.Point(4, 32);
+            this.tabPage_Commands.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Commands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage_Commands.Name = "tabPage_Commands";
-            this.tabPage_Commands.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage_Commands.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_Commands.TabIndex = 11;
             this.tabPage_Commands.Text = "SSPA Commands";
             this.tabPage_Commands.UseVisualStyleBackColor = true;
@@ -3153,9 +3311,11 @@ namespace Monitor
             // groupBox40
             // 
             this.groupBox40.Controls.Add(this.tabControl_System);
-            this.groupBox40.Location = new System.Drawing.Point(11, 10);
+            this.groupBox40.Location = new System.Drawing.Point(9, 8);
+            this.groupBox40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Size = new System.Drawing.Size(1108, 802);
+            this.groupBox40.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox40.Size = new System.Drawing.Size(886, 642);
             this.groupBox40.TabIndex = 11;
             this.groupBox40.TabStop = false;
             this.groupBox40.Text = "Commands for SSPA (press right click on mouse for help)";
@@ -3164,10 +3324,11 @@ namespace Monitor
             // 
             this.tabControl_System.Controls.Add(this.tabPage1);
             this.tabControl_System.Controls.Add(this.tabPage2);
-            this.tabControl_System.Location = new System.Drawing.Point(7, 28);
+            this.tabControl_System.Location = new System.Drawing.Point(6, 22);
+            this.tabControl_System.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl_System.Name = "tabControl_System";
             this.tabControl_System.SelectedIndex = 0;
-            this.tabControl_System.Size = new System.Drawing.Size(1094, 769);
+            this.tabControl_System.Size = new System.Drawing.Size(875, 615);
             this.tabControl_System.TabIndex = 21;
             this.tabControl_System.SelectedIndexChanged += new System.EventHandler(this.tabControl_MiniAda_SelectedIndexChanged);
             // 
@@ -3211,29 +3372,32 @@ namespace Monitor
             this.tabPage1.Controls.Add(this.button109);
             this.tabPage1.Controls.Add(this.button45);
             this.tabPage1.Controls.Add(this.button46);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1086, 733);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(867, 584);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Simulator";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(749, 386);
+            this.textBox16.Location = new System.Drawing.Point(599, 309);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox16.MaxLength = 30;
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(147, 30);
+            this.textBox16.Size = new System.Drawing.Size(118, 26);
             this.textBox16.TabIndex = 86;
             this.textBox16.Text = "00";
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // button117
             // 
-            this.button117.Location = new System.Drawing.Point(459, 387);
+            this.button117.Location = new System.Drawing.Point(367, 310);
+            this.button117.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button117.Name = "button117";
-            this.button117.Size = new System.Drawing.Size(279, 28);
+            this.button117.Size = new System.Drawing.Size(223, 22);
             this.button117.TabIndex = 85;
             this.button117.Text = "Simulator discrete Tx_OVT_Check control";
             this.button117.UseVisualStyleBackColor = true;
@@ -3241,9 +3405,10 @@ namespace Monitor
             // 
             // button116
             // 
-            this.button116.Location = new System.Drawing.Point(459, 351);
+            this.button116.Location = new System.Drawing.Point(367, 281);
+            this.button116.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button116.Name = "button116";
-            this.button116.Size = new System.Drawing.Size(279, 28);
+            this.button116.Size = new System.Drawing.Size(223, 22);
             this.button116.TabIndex = 84;
             this.button116.Text = "Simulator discrete SEU_Recover control";
             this.button116.UseVisualStyleBackColor = true;
@@ -3251,19 +3416,21 @@ namespace Monitor
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(749, 316);
+            this.textBox15.Location = new System.Drawing.Point(599, 253);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox15.MaxLength = 30;
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(147, 30);
+            this.textBox15.Size = new System.Drawing.Size(118, 26);
             this.textBox15.TabIndex = 83;
             this.textBox15.Text = "00";
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // button115
             // 
-            this.button115.Location = new System.Drawing.Point(459, 318);
+            this.button115.Location = new System.Drawing.Point(367, 254);
+            this.button115.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button115.Name = "button115";
-            this.button115.Size = new System.Drawing.Size(279, 28);
+            this.button115.Size = new System.Drawing.Size(223, 22);
             this.button115.TabIndex = 82;
             this.button115.Text = "Set Simulator discrete DC4 ";
             this.button115.UseVisualStyleBackColor = true;
@@ -3271,9 +3438,10 @@ namespace Monitor
             // 
             // button114
             // 
-            this.button114.Location = new System.Drawing.Point(459, 283);
+            this.button114.Location = new System.Drawing.Point(367, 226);
+            this.button114.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button114.Name = "button114";
-            this.button114.Size = new System.Drawing.Size(279, 28);
+            this.button114.Size = new System.Drawing.Size(223, 22);
             this.button114.TabIndex = 81;
             this.button114.Text = "Get Thermal Supervisor ";
             this.button114.UseVisualStyleBackColor = true;
@@ -3281,19 +3449,21 @@ namespace Monitor
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(749, 242);
+            this.textBox14.Location = new System.Drawing.Point(599, 194);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox14.MaxLength = 30;
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(147, 30);
+            this.textBox14.Size = new System.Drawing.Size(118, 26);
             this.textBox14.TabIndex = 80;
             this.textBox14.Text = "00";
             this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // button113
             // 
-            this.button113.Location = new System.Drawing.Point(459, 245);
+            this.button113.Location = new System.Drawing.Point(367, 196);
+            this.button113.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button113.Name = "button113";
-            this.button113.Size = new System.Drawing.Size(279, 27);
+            this.button113.Size = new System.Drawing.Size(223, 22);
             this.button113.TabIndex = 79;
             this.button113.Text = "Set Synchronized Tx-Strobe ";
             this.button113.UseVisualStyleBackColor = true;
@@ -3301,19 +3471,21 @@ namespace Monitor
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(289, 686);
+            this.textBox13.Location = new System.Drawing.Point(231, 549);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox13.MaxLength = 30;
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(148, 30);
+            this.textBox13.Size = new System.Drawing.Size(119, 26);
             this.textBox13.TabIndex = 78;
             this.textBox13.Text = "00";
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // button112
             // 
-            this.button112.Location = new System.Drawing.Point(0, 689);
+            this.button112.Location = new System.Drawing.Point(0, 551);
+            this.button112.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button112.Name = "button112";
-            this.button112.Size = new System.Drawing.Size(279, 28);
+            this.button112.Size = new System.Drawing.Size(223, 22);
             this.button112.TabIndex = 77;
             this.button112.Text = "Set SEU Recover ";
             this.button112.UseVisualStyleBackColor = true;
@@ -3321,19 +3493,21 @@ namespace Monitor
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(289, 649);
+            this.textBox12.Location = new System.Drawing.Point(231, 519);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox12.MaxLength = 30;
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(148, 30);
+            this.textBox12.Size = new System.Drawing.Size(119, 26);
             this.textBox12.TabIndex = 76;
             this.textBox12.Text = "00";
             this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // button111
             // 
-            this.button111.Location = new System.Drawing.Point(0, 651);
+            this.button111.Location = new System.Drawing.Point(0, 521);
+            this.button111.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button111.Name = "button111";
-            this.button111.Size = new System.Drawing.Size(279, 28);
+            this.button111.Size = new System.Drawing.Size(223, 22);
             this.button111.TabIndex = 75;
             this.button111.Text = "Set RF Gen. Enable ";
             this.button111.UseVisualStyleBackColor = true;
@@ -3341,19 +3515,21 @@ namespace Monitor
             // 
             // textBox_RFGenParms
             // 
-            this.textBox_RFGenParms.Location = new System.Drawing.Point(289, 608);
+            this.textBox_RFGenParms.Location = new System.Drawing.Point(231, 486);
+            this.textBox_RFGenParms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RFGenParms.MaxLength = 30;
             this.textBox_RFGenParms.Name = "textBox_RFGenParms";
-            this.textBox_RFGenParms.Size = new System.Drawing.Size(148, 30);
+            this.textBox_RFGenParms.Size = new System.Drawing.Size(119, 26);
             this.textBox_RFGenParms.TabIndex = 74;
             this.textBox_RFGenParms.Text = "0000 0000 0000";
             this.textBox_RFGenParms.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // button_SetRFGen
             // 
-            this.button_SetRFGen.Location = new System.Drawing.Point(0, 610);
+            this.button_SetRFGen.Location = new System.Drawing.Point(0, 488);
+            this.button_SetRFGen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_SetRFGen.Name = "button_SetRFGen";
-            this.button_SetRFGen.Size = new System.Drawing.Size(279, 28);
+            this.button_SetRFGen.Size = new System.Drawing.Size(223, 22);
             this.button_SetRFGen.TabIndex = 73;
             this.button_SetRFGen.Text = "Set RF Gen. Parameters ";
             this.button_SetRFGen.UseVisualStyleBackColor = true;
@@ -3361,19 +3537,21 @@ namespace Monitor
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(289, 568);
+            this.textBox10.Location = new System.Drawing.Point(231, 454);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox10.MaxLength = 30;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(148, 30);
+            this.textBox10.Size = new System.Drawing.Size(119, 26);
             this.textBox10.TabIndex = 72;
             this.textBox10.Text = "00";
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // button58
             // 
-            this.button58.Location = new System.Drawing.Point(0, 570);
+            this.button58.Location = new System.Drawing.Point(0, 456);
+            this.button58.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(279, 28);
+            this.button58.Size = new System.Drawing.Size(223, 22);
             this.button58.TabIndex = 71;
             this.button58.Text = "Set GP Enable ";
             this.button58.UseVisualStyleBackColor = true;
@@ -3381,19 +3559,21 @@ namespace Monitor
             // 
             // textBox_PulseGenParms
             // 
-            this.textBox_PulseGenParms.Location = new System.Drawing.Point(289, 530);
+            this.textBox_PulseGenParms.Location = new System.Drawing.Point(231, 424);
+            this.textBox_PulseGenParms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulseGenParms.MaxLength = 30;
             this.textBox_PulseGenParms.Name = "textBox_PulseGenParms";
-            this.textBox_PulseGenParms.Size = new System.Drawing.Size(148, 30);
+            this.textBox_PulseGenParms.Size = new System.Drawing.Size(119, 26);
             this.textBox_PulseGenParms.TabIndex = 70;
             this.textBox_PulseGenParms.Text = "0000 0000 0000";
             this.textBox_PulseGenParms.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // button_GPparms
             // 
-            this.button_GPparms.Location = new System.Drawing.Point(0, 533);
+            this.button_GPparms.Location = new System.Drawing.Point(0, 426);
+            this.button_GPparms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_GPparms.Name = "button_GPparms";
-            this.button_GPparms.Size = new System.Drawing.Size(279, 27);
+            this.button_GPparms.Size = new System.Drawing.Size(223, 22);
             this.button_GPparms.TabIndex = 69;
             this.button_GPparms.Text = "Set GP Parameters ";
             this.button_GPparms.UseVisualStyleBackColor = true;
@@ -3401,19 +3581,21 @@ namespace Monitor
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(289, 493);
+            this.textBox8.Location = new System.Drawing.Point(231, 394);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox8.MaxLength = 30;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(148, 30);
+            this.textBox8.Size = new System.Drawing.Size(119, 26);
             this.textBox8.TabIndex = 68;
             this.textBox8.Text = "00";
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button56
             // 
-            this.button56.Location = new System.Drawing.Point(0, 495);
+            this.button56.Location = new System.Drawing.Point(0, 396);
+            this.button56.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(279, 28);
+            this.button56.Size = new System.Drawing.Size(223, 22);
             this.button56.TabIndex = 67;
             this.button56.Text = "Set DCA Discretes ";
             this.button56.UseVisualStyleBackColor = true;
@@ -3421,19 +3603,21 @@ namespace Monitor
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(289, 458);
+            this.textBox7.Location = new System.Drawing.Point(231, 366);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox7.MaxLength = 30;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 30);
+            this.textBox7.Size = new System.Drawing.Size(119, 26);
             this.textBox7.TabIndex = 66;
             this.textBox7.Text = "00";
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button55
             // 
-            this.button55.Location = new System.Drawing.Point(0, 460);
+            this.button55.Location = new System.Drawing.Point(0, 368);
+            this.button55.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button55.Name = "button55";
-            this.button55.Size = new System.Drawing.Size(279, 28);
+            this.button55.Size = new System.Drawing.Size(223, 22);
             this.button55.TabIndex = 65;
             this.button55.Text = "Set Freq. Band ";
             this.button55.UseVisualStyleBackColor = true;
@@ -3441,19 +3625,21 @@ namespace Monitor
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(289, 422);
+            this.textBox6.Location = new System.Drawing.Point(231, 338);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.MaxLength = 30;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(148, 30);
+            this.textBox6.Size = new System.Drawing.Size(119, 26);
             this.textBox6.TabIndex = 64;
             this.textBox6.Text = "00";
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button54
             // 
-            this.button54.Location = new System.Drawing.Point(0, 425);
+            this.button54.Location = new System.Drawing.Point(0, 340);
+            this.button54.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button54.Name = "button54";
-            this.button54.Size = new System.Drawing.Size(279, 28);
+            this.button54.Size = new System.Drawing.Size(223, 22);
             this.button54.TabIndex = 63;
             this.button54.Text = "Set OUT-TUNE ";
             this.button54.UseVisualStyleBackColor = true;
@@ -3461,19 +3647,21 @@ namespace Monitor
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(289, 387);
+            this.textBox5.Location = new System.Drawing.Point(231, 310);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.MaxLength = 30;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 30);
+            this.textBox5.Size = new System.Drawing.Size(119, 26);
             this.textBox5.TabIndex = 62;
             this.textBox5.Text = "00";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button53
             // 
-            this.button53.Location = new System.Drawing.Point(0, 390);
+            this.button53.Location = new System.Drawing.Point(0, 312);
+            this.button53.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(279, 28);
+            this.button53.Size = new System.Drawing.Size(223, 22);
             this.button53.TabIndex = 61;
             this.button53.Text = "Set TX-STROBE ";
             this.button53.UseVisualStyleBackColor = true;
@@ -3481,19 +3669,21 @@ namespace Monitor
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(289, 352);
+            this.textBox4.Location = new System.Drawing.Point(231, 282);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.MaxLength = 30;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 30);
+            this.textBox4.Size = new System.Drawing.Size(119, 26);
             this.textBox4.TabIndex = 60;
             this.textBox4.Text = "00";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // button51
             // 
-            this.button51.Location = new System.Drawing.Point(0, 355);
+            this.button51.Location = new System.Drawing.Point(0, 284);
+            this.button51.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(279, 28);
+            this.button51.Size = new System.Drawing.Size(223, 22);
             this.button51.TabIndex = 59;
             this.button51.Text = "Set Int_Set_Preserve ";
             this.button51.UseVisualStyleBackColor = true;
@@ -3501,9 +3691,10 @@ namespace Monitor
             // 
             // button50
             // 
-            this.button50.Location = new System.Drawing.Point(0, 321);
+            this.button50.Location = new System.Drawing.Point(0, 257);
+            this.button50.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(279, 28);
+            this.button50.Size = new System.Drawing.Size(223, 22);
             this.button50.TabIndex = 58;
             this.button50.Text = "Get Simulator Status";
             this.button50.UseVisualStyleBackColor = true;
@@ -3511,19 +3702,21 @@ namespace Monitor
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(289, 282);
+            this.textBox3.Location = new System.Drawing.Point(231, 226);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.MaxLength = 30;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 30);
+            this.textBox3.Size = new System.Drawing.Size(119, 26);
             this.textBox3.TabIndex = 57;
             this.textBox3.Text = "00";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button49
             // 
-            this.button49.Location = new System.Drawing.Point(0, 284);
+            this.button49.Location = new System.Drawing.Point(0, 227);
+            this.button49.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(279, 28);
+            this.button49.Size = new System.Drawing.Size(223, 22);
             this.button49.TabIndex = 56;
             this.button49.Text = "Set TX-INHIBIT Enable ";
             this.button49.UseVisualStyleBackColor = true;
@@ -3531,19 +3724,21 @@ namespace Monitor
             // 
             // textBox_TxInhibit
             // 
-            this.textBox_TxInhibit.Location = new System.Drawing.Point(289, 245);
+            this.textBox_TxInhibit.Location = new System.Drawing.Point(231, 196);
+            this.textBox_TxInhibit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_TxInhibit.MaxLength = 30;
             this.textBox_TxInhibit.Name = "textBox_TxInhibit";
-            this.textBox_TxInhibit.Size = new System.Drawing.Size(148, 30);
+            this.textBox_TxInhibit.Size = new System.Drawing.Size(119, 26);
             this.textBox_TxInhibit.TabIndex = 55;
             this.textBox_TxInhibit.Text = "0000 0000 0000";
             this.textBox_TxInhibit.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(0, 247);
+            this.button47.Location = new System.Drawing.Point(0, 198);
+            this.button47.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(279, 28);
+            this.button47.Size = new System.Drawing.Size(223, 22);
             this.button47.TabIndex = 37;
             this.button47.Text = "Set TX-INHIBIT Params ";
             this.button47.UseVisualStyleBackColor = true;
@@ -3551,9 +3746,10 @@ namespace Monitor
             // 
             // button48
             // 
-            this.button48.Location = new System.Drawing.Point(-2, 153);
+            this.button48.Location = new System.Drawing.Point(-2, 122);
+            this.button48.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(279, 27);
+            this.button48.Size = new System.Drawing.Size(223, 22);
             this.button48.TabIndex = 36;
             this.button48.Text = "Get Simulator serial number";
             this.button48.UseVisualStyleBackColor = true;
@@ -3561,9 +3757,10 @@ namespace Monitor
             // 
             // button108
             // 
-            this.button108.Location = new System.Drawing.Point(0, 7);
+            this.button108.Location = new System.Drawing.Point(0, 6);
+            this.button108.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button108.Name = "button108";
-            this.button108.Size = new System.Drawing.Size(279, 28);
+            this.button108.Size = new System.Drawing.Size(223, 22);
             this.button108.TabIndex = 35;
             this.button108.Text = "Get Simulator ID";
             this.button108.UseVisualStyleBackColor = true;
@@ -3571,9 +3768,10 @@ namespace Monitor
             // 
             // button109
             // 
-            this.button109.Location = new System.Drawing.Point(0, 44);
+            this.button109.Location = new System.Drawing.Point(0, 35);
+            this.button109.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button109.Name = "button109";
-            this.button109.Size = new System.Drawing.Size(279, 27);
+            this.button109.Size = new System.Drawing.Size(223, 22);
             this.button109.TabIndex = 10;
             this.button109.Text = "Get Simulator Software version";
             this.button109.UseVisualStyleBackColor = true;
@@ -3581,9 +3779,10 @@ namespace Monitor
             // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(2, 79);
+            this.button45.Location = new System.Drawing.Point(2, 63);
+            this.button45.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(279, 28);
+            this.button45.Size = new System.Drawing.Size(223, 22);
             this.button45.TabIndex = 11;
             this.button45.Text = "Get Simulator Firmware version";
             this.button45.UseVisualStyleBackColor = true;
@@ -3591,9 +3790,10 @@ namespace Monitor
             // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(0, 119);
+            this.button46.Location = new System.Drawing.Point(0, 95);
+            this.button46.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(279, 27);
+            this.button46.Size = new System.Drawing.Size(223, 22);
             this.button46.TabIndex = 12;
             this.button46.Text = "Get Simulator Hardware version";
             this.button46.UseVisualStyleBackColor = true;
@@ -3631,28 +3831,31 @@ namespace Monitor
             this.tabPage2.Controls.Add(this.button61);
             this.tabPage2.Controls.Add(this.button60);
             this.tabPage2.Controls.Add(this.button59);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1086, 733);
+            this.tabPage2.Size = new System.Drawing.Size(867, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "WB UUT";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(287, 707);
+            this.textBox22.Location = new System.Drawing.Point(230, 566);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox22.MaxLength = 30;
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(148, 30);
+            this.textBox22.Size = new System.Drawing.Size(119, 26);
             this.textBox22.TabIndex = 77;
             this.textBox22.Text = "00";
             this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
             // button122
             // 
-            this.button122.Location = new System.Drawing.Point(5, 708);
+            this.button122.Location = new System.Drawing.Point(4, 566);
+            this.button122.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button122.Name = "button122";
-            this.button122.Size = new System.Drawing.Size(278, 28);
+            this.button122.Size = new System.Drawing.Size(222, 22);
             this.button122.TabIndex = 76;
             this.button122.Text = "Erase flash";
             this.button122.UseVisualStyleBackColor = true;
@@ -3660,10 +3863,11 @@ namespace Monitor
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(289, 671);
+            this.textBox21.Location = new System.Drawing.Point(231, 537);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox21.MaxLength = 30;
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(792, 30);
+            this.textBox21.Size = new System.Drawing.Size(634, 26);
             this.textBox21.TabIndex = 75;
             this.textBox21.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
@@ -3671,9 +3875,10 @@ namespace Monitor
             // 
             // button121
             // 
-            this.button121.Location = new System.Drawing.Point(5, 674);
+            this.button121.Location = new System.Drawing.Point(4, 539);
+            this.button121.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button121.Name = "button121";
-            this.button121.Size = new System.Drawing.Size(278, 28);
+            this.button121.Size = new System.Drawing.Size(222, 22);
             this.button121.TabIndex = 74;
             this.button121.Text = "Write Flash";
             this.button121.UseVisualStyleBackColor = true;
@@ -3681,19 +3886,21 @@ namespace Monitor
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(290, 636);
+            this.textBox20.Location = new System.Drawing.Point(232, 509);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox20.MaxLength = 30;
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(149, 30);
+            this.textBox20.Size = new System.Drawing.Size(120, 26);
             this.textBox20.TabIndex = 73;
             this.textBox20.Text = "0000";
             this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
             // button120
             // 
-            this.button120.Location = new System.Drawing.Point(5, 637);
+            this.button120.Location = new System.Drawing.Point(4, 510);
+            this.button120.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button120.Name = "button120";
-            this.button120.Size = new System.Drawing.Size(278, 28);
+            this.button120.Size = new System.Drawing.Size(222, 22);
             this.button120.TabIndex = 72;
             this.button120.Text = "Read Flash ";
             this.button120.UseVisualStyleBackColor = true;
@@ -3701,10 +3908,11 @@ namespace Monitor
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(289, 598);
+            this.textBox19.Location = new System.Drawing.Point(231, 478);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox19.MaxLength = 30;
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(792, 30);
+            this.textBox19.Size = new System.Drawing.Size(634, 26);
             this.textBox19.TabIndex = 71;
             this.textBox19.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
@@ -3712,9 +3920,10 @@ namespace Monitor
             // 
             // button119
             // 
-            this.button119.Location = new System.Drawing.Point(5, 602);
+            this.button119.Location = new System.Drawing.Point(4, 482);
+            this.button119.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button119.Name = "button119";
-            this.button119.Size = new System.Drawing.Size(278, 27);
+            this.button119.Size = new System.Drawing.Size(222, 22);
             this.button119.TabIndex = 70;
             this.button119.Text = "Set ADC value in debug mode";
             this.button119.UseVisualStyleBackColor = true;
@@ -3722,19 +3931,21 @@ namespace Monitor
             // 
             // textBox_ControlCal
             // 
-            this.textBox_ControlCal.Location = new System.Drawing.Point(287, 563);
+            this.textBox_ControlCal.Location = new System.Drawing.Point(230, 450);
+            this.textBox_ControlCal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_ControlCal.MaxLength = 30;
             this.textBox_ControlCal.Name = "textBox_ControlCal";
-            this.textBox_ControlCal.Size = new System.Drawing.Size(148, 30);
+            this.textBox_ControlCal.Size = new System.Drawing.Size(119, 26);
             this.textBox_ControlCal.TabIndex = 69;
             this.textBox_ControlCal.Text = "00";
             this.textBox_ControlCal.TextChanged += new System.EventHandler(this.textBox_ControlCal_TextChanged);
             // 
             // button118
             // 
-            this.button118.Location = new System.Drawing.Point(5, 564);
+            this.button118.Location = new System.Drawing.Point(4, 451);
+            this.button118.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button118.Name = "button118";
-            this.button118.Size = new System.Drawing.Size(278, 28);
+            this.button118.Size = new System.Drawing.Size(222, 22);
             this.button118.TabIndex = 68;
             this.button118.Text = "Control CAL_SAR switches ";
             this.button118.UseVisualStyleBackColor = true;
@@ -3742,29 +3953,32 @@ namespace Monitor
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(287, 528);
+            this.textBox17.Location = new System.Drawing.Point(230, 422);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox17.MaxLength = 30;
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(148, 30);
+            this.textBox17.Size = new System.Drawing.Size(119, 26);
             this.textBox17.TabIndex = 67;
             this.textBox17.Text = "00";
             this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox_SetSystemMode
             // 
-            this.textBox_SetSystemMode.Location = new System.Drawing.Point(288, 406);
+            this.textBox_SetSystemMode.Location = new System.Drawing.Point(230, 325);
+            this.textBox_SetSystemMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetSystemMode.MaxLength = 30;
             this.textBox_SetSystemMode.Name = "textBox_SetSystemMode";
-            this.textBox_SetSystemMode.Size = new System.Drawing.Size(178, 30);
+            this.textBox_SetSystemMode.Size = new System.Drawing.Size(143, 26);
             this.textBox_SetSystemMode.TabIndex = 66;
             this.textBox_SetSystemMode.Text = "0000";
             this.textBox_SetSystemMode.TextChanged += new System.EventHandler(this.textBox_Erase4KsectorQSPI_TextChanged);
             // 
             // button89
             // 
-            this.button89.Location = new System.Drawing.Point(3, 409);
+            this.button89.Location = new System.Drawing.Point(2, 327);
+            this.button89.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button89.Name = "button89";
-            this.button89.Size = new System.Drawing.Size(279, 28);
+            this.button89.Size = new System.Drawing.Size(223, 22);
             this.button89.TabIndex = 65;
             this.button89.Text = "Set System Mode";
             this.button89.UseVisualStyleBackColor = true;
@@ -3773,19 +3987,21 @@ namespace Monitor
             // 
             // textBox_SetDCAWithBusMode
             // 
-            this.textBox_SetDCAWithBusMode.Location = new System.Drawing.Point(288, 357);
+            this.textBox_SetDCAWithBusMode.Location = new System.Drawing.Point(230, 286);
+            this.textBox_SetDCAWithBusMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetDCAWithBusMode.MaxLength = 30;
             this.textBox_SetDCAWithBusMode.Name = "textBox_SetDCAWithBusMode";
-            this.textBox_SetDCAWithBusMode.Size = new System.Drawing.Size(178, 30);
+            this.textBox_SetDCAWithBusMode.Size = new System.Drawing.Size(143, 26);
             this.textBox_SetDCAWithBusMode.TabIndex = 64;
             this.textBox_SetDCAWithBusMode.Text = "0000";
             this.textBox_SetDCAWithBusMode.TextChanged += new System.EventHandler(this.textBox_ReadQSPIFlashData_TextChanged);
             // 
             // button87
             // 
-            this.button87.Location = new System.Drawing.Point(3, 361);
+            this.button87.Location = new System.Drawing.Point(2, 289);
+            this.button87.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button87.Name = "button87";
-            this.button87.Size = new System.Drawing.Size(279, 28);
+            this.button87.Size = new System.Drawing.Size(223, 22);
             this.button87.TabIndex = 63;
             this.button87.Text = "Set DCA with Bus Mode";
             this.button87.UseVisualStyleBackColor = true;
@@ -3794,19 +4010,21 @@ namespace Monitor
             // 
             // textBox_SetVVAAtt
             // 
-            this.textBox_SetVVAAtt.Location = new System.Drawing.Point(288, 317);
+            this.textBox_SetVVAAtt.Location = new System.Drawing.Point(230, 254);
+            this.textBox_SetVVAAtt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetVVAAtt.MaxLength = 30;
             this.textBox_SetVVAAtt.Name = "textBox_SetVVAAtt";
-            this.textBox_SetVVAAtt.Size = new System.Drawing.Size(178, 30);
+            this.textBox_SetVVAAtt.Size = new System.Drawing.Size(143, 26);
             this.textBox_SetVVAAtt.TabIndex = 62;
             this.textBox_SetVVAAtt.Text = "0000";
             this.textBox_SetVVAAtt.TextChanged += new System.EventHandler(this.textBox_WriteQSPIFlashData_TextChanged);
             // 
             // button88
             // 
-            this.button88.Location = new System.Drawing.Point(3, 321);
+            this.button88.Location = new System.Drawing.Point(2, 257);
+            this.button88.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button88.Name = "button88";
-            this.button88.Size = new System.Drawing.Size(279, 28);
+            this.button88.Size = new System.Drawing.Size(223, 22);
             this.button88.TabIndex = 61;
             this.button88.Text = "Set VVA Attenuation";
             this.button88.UseVisualStyleBackColor = true;
@@ -3815,19 +4033,21 @@ namespace Monitor
             // 
             // textBox_SetPSUOutput
             // 
-            this.textBox_SetPSUOutput.Location = new System.Drawing.Point(288, 280);
+            this.textBox_SetPSUOutput.Location = new System.Drawing.Point(230, 224);
+            this.textBox_SetPSUOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetPSUOutput.MaxLength = 30;
             this.textBox_SetPSUOutput.Name = "textBox_SetPSUOutput";
-            this.textBox_SetPSUOutput.Size = new System.Drawing.Size(147, 30);
+            this.textBox_SetPSUOutput.Size = new System.Drawing.Size(118, 26);
             this.textBox_SetPSUOutput.TabIndex = 54;
             this.textBox_SetPSUOutput.Text = "0000 0000 0000 0000";
             this.textBox_SetPSUOutput.TextChanged += new System.EventHandler(this.textBox_SetTCXOTrim_TextChanged);
             // 
             // button69
             // 
-            this.button69.Location = new System.Drawing.Point(3, 283);
+            this.button69.Location = new System.Drawing.Point(2, 226);
+            this.button69.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button69.Name = "button69";
-            this.button69.Size = new System.Drawing.Size(279, 28);
+            this.button69.Size = new System.Drawing.Size(223, 22);
             this.button69.TabIndex = 53;
             this.button69.Text = "Set PSU Output Voltage";
             this.button69.UseVisualStyleBackColor = true;
@@ -3836,9 +4056,10 @@ namespace Monitor
             // 
             // button68
             // 
-            this.button68.Location = new System.Drawing.Point(3, 243);
+            this.button68.Location = new System.Drawing.Point(2, 194);
+            this.button68.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button68.Name = "button68";
-            this.button68.Size = new System.Drawing.Size(279, 28);
+            this.button68.Size = new System.Drawing.Size(223, 22);
             this.button68.TabIndex = 50;
             this.button68.Text = "Get Discrete Status – Bus mode";
             this.button68.UseVisualStyleBackColor = true;
@@ -3847,9 +4068,10 @@ namespace Monitor
             // 
             // button67
             // 
-            this.button67.Location = new System.Drawing.Point(2, 201);
+            this.button67.Location = new System.Drawing.Point(2, 161);
+            this.button67.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button67.Name = "button67";
-            this.button67.Size = new System.Drawing.Size(279, 28);
+            this.button67.Size = new System.Drawing.Size(223, 22);
             this.button67.TabIndex = 49;
             this.button67.Text = "Get Status";
             this.button67.UseVisualStyleBackColor = true;
@@ -3858,9 +4080,10 @@ namespace Monitor
             // 
             // button66
             // 
-            this.button66.Location = new System.Drawing.Point(3, 163);
+            this.button66.Location = new System.Drawing.Point(2, 130);
+            this.button66.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button66.Name = "button66";
-            this.button66.Size = new System.Drawing.Size(279, 28);
+            this.button66.Size = new System.Drawing.Size(223, 22);
             this.button66.TabIndex = 46;
             this.button66.Text = "Get Serial Number";
             this.button66.UseVisualStyleBackColor = true;
@@ -3869,9 +4092,10 @@ namespace Monitor
             // 
             // button65
             // 
-            this.button65.Location = new System.Drawing.Point(5, 529);
+            this.button65.Location = new System.Drawing.Point(4, 423);
+            this.button65.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button65.Name = "button65";
-            this.button65.Size = new System.Drawing.Size(278, 28);
+            this.button65.Size = new System.Drawing.Size(222, 22);
             this.button65.TabIndex = 45;
             this.button65.Text = "Set DC4 ON and OFF";
             this.button65.UseVisualStyleBackColor = true;
@@ -3880,19 +4104,21 @@ namespace Monitor
             // 
             // textBox_SetADCMode
             // 
-            this.textBox_SetADCMode.Location = new System.Drawing.Point(290, 456);
+            this.textBox_SetADCMode.Location = new System.Drawing.Point(232, 365);
+            this.textBox_SetADCMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SetADCMode.MaxLength = 30;
             this.textBox_SetADCMode.Name = "textBox_SetADCMode";
-            this.textBox_SetADCMode.Size = new System.Drawing.Size(149, 30);
+            this.textBox_SetADCMode.Size = new System.Drawing.Size(120, 26);
             this.textBox_SetADCMode.TabIndex = 43;
             this.textBox_SetADCMode.Text = "0000";
             this.textBox_SetADCMode.TextChanged += new System.EventHandler(this.textBox_SetSyestemState_TextChanged);
             // 
             // button64
             // 
-            this.button64.Location = new System.Drawing.Point(5, 458);
+            this.button64.Location = new System.Drawing.Point(4, 366);
+            this.button64.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button64.Name = "button64";
-            this.button64.Size = new System.Drawing.Size(278, 27);
+            this.button64.Size = new System.Drawing.Size(222, 22);
             this.button64.TabIndex = 42;
             this.button64.Text = "Set ADC System Mode";
             this.button64.UseVisualStyleBackColor = true;
@@ -3901,9 +4127,10 @@ namespace Monitor
             // 
             // button63
             // 
-            this.button63.Location = new System.Drawing.Point(5, 494);
+            this.button63.Location = new System.Drawing.Point(4, 395);
+            this.button63.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(278, 28);
+            this.button63.Size = new System.Drawing.Size(222, 22);
             this.button63.TabIndex = 41;
             this.button63.Text = "Get System Table Indexes";
             this.button63.UseVisualStyleBackColor = true;
@@ -3912,9 +4139,10 @@ namespace Monitor
             // 
             // button62
             // 
-            this.button62.Location = new System.Drawing.Point(3, 125);
+            this.button62.Location = new System.Drawing.Point(2, 100);
+            this.button62.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button62.Name = "button62";
-            this.button62.Size = new System.Drawing.Size(279, 28);
+            this.button62.Size = new System.Drawing.Size(223, 22);
             this.button62.TabIndex = 38;
             this.button62.Text = "Get Hardware Version";
             this.button62.UseVisualStyleBackColor = true;
@@ -3923,9 +4151,10 @@ namespace Monitor
             // 
             // button61
             // 
-            this.button61.Location = new System.Drawing.Point(3, 87);
+            this.button61.Location = new System.Drawing.Point(2, 70);
+            this.button61.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(279, 28);
+            this.button61.Size = new System.Drawing.Size(223, 22);
             this.button61.TabIndex = 35;
             this.button61.Text = "Get Firmware Version";
             this.button61.UseVisualStyleBackColor = true;
@@ -3934,9 +4163,10 @@ namespace Monitor
             // 
             // button60
             // 
-            this.button60.Location = new System.Drawing.Point(2, 51);
+            this.button60.Location = new System.Drawing.Point(2, 41);
+            this.button60.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(279, 28);
+            this.button60.Size = new System.Drawing.Size(223, 22);
             this.button60.TabIndex = 32;
             this.button60.Text = "Get Software Version";
             this.button60.UseVisualStyleBackColor = true;
@@ -3945,9 +4175,10 @@ namespace Monitor
             // 
             // button59
             // 
-            this.button59.Location = new System.Drawing.Point(3, 13);
+            this.button59.Location = new System.Drawing.Point(2, 10);
+            this.button59.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(279, 28);
+            this.button59.Size = new System.Drawing.Size(223, 22);
             this.button59.TabIndex = 29;
             this.button59.Text = "Get ID";
             this.button59.UseVisualStyleBackColor = true;
@@ -3962,9 +4193,11 @@ namespace Monitor
             this.groupBox32.Controls.Add(this.checkBox_PauseMiniAda);
             this.groupBox32.Controls.Add(this.button_ClearMiniAda);
             this.groupBox32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox32.Location = new System.Drawing.Point(1126, 4);
+            this.groupBox32.Location = new System.Drawing.Point(901, 3);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(637, 808);
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox32.Size = new System.Drawing.Size(510, 646);
             this.groupBox32.TabIndex = 9;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "SSPA Monitor";
@@ -3973,9 +4206,10 @@ namespace Monitor
             // 
             this.richTextBox_SSPA.BackColor = System.Drawing.Color.LightGray;
             this.richTextBox_SSPA.EnableAutoDragDrop = true;
-            this.richTextBox_SSPA.Location = new System.Drawing.Point(7, 21);
+            this.richTextBox_SSPA.Location = new System.Drawing.Point(6, 17);
+            this.richTextBox_SSPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox_SSPA.Name = "richTextBox_SSPA";
-            this.richTextBox_SSPA.Size = new System.Drawing.Size(632, 734);
+            this.richTextBox_SSPA.Size = new System.Drawing.Size(506, 588);
             this.richTextBox_SSPA.TabIndex = 0;
             this.richTextBox_SSPA.Text = "";
             // 
@@ -3984,9 +4218,10 @@ namespace Monitor
             this.checkBox_RecordMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_RecordMiniAda.AutoSize = true;
             this.checkBox_RecordMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_RecordMiniAda.Location = new System.Drawing.Point(8, 763);
+            this.checkBox_RecordMiniAda.Location = new System.Drawing.Point(6, 610);
+            this.checkBox_RecordMiniAda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_RecordMiniAda.Name = "checkBox_RecordMiniAda";
-            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(116, 30);
+            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(99, 26);
             this.checkBox_RecordMiniAda.TabIndex = 7;
             this.checkBox_RecordMiniAda.Text = "Record Log";
             this.checkBox_RecordMiniAda.UseVisualStyleBackColor = true;
@@ -3996,9 +4231,10 @@ namespace Monitor
             this.checkBox_PauseMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_PauseMiniAda.AutoSize = true;
             this.checkBox_PauseMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(128, 763);
+            this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(102, 610);
+            this.checkBox_PauseMiniAda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox_PauseMiniAda.Name = "checkBox_PauseMiniAda";
-            this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(71, 30);
+            this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(62, 26);
             this.checkBox_PauseMiniAda.TabIndex = 5;
             this.checkBox_PauseMiniAda.Text = "Pause";
             this.checkBox_PauseMiniAda.UseVisualStyleBackColor = true;
@@ -4006,9 +4242,10 @@ namespace Monitor
             // button_ClearMiniAda
             // 
             this.button_ClearMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ClearMiniAda.Location = new System.Drawing.Point(206, 763);
+            this.button_ClearMiniAda.Location = new System.Drawing.Point(165, 610);
+            this.button_ClearMiniAda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ClearMiniAda.Name = "button_ClearMiniAda";
-            this.button_ClearMiniAda.Size = new System.Drawing.Size(71, 31);
+            this.button_ClearMiniAda.Size = new System.Drawing.Size(57, 25);
             this.button_ClearMiniAda.TabIndex = 6;
             this.button_ClearMiniAda.Text = "Clear";
             this.button_ClearMiniAda.UseVisualStyleBackColor = true;
@@ -4016,9 +4253,10 @@ namespace Monitor
             // tabPage3038WBPAA
             // 
             this.tabPage3038WBPAA.Controls.Add(this.groupBox43);
-            this.tabPage3038WBPAA.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3038WBPAA.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3038WBPAA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3038WBPAA.Name = "tabPage3038WBPAA";
-            this.tabPage3038WBPAA.Size = new System.Drawing.Size(1769, 827);
+            this.tabPage3038WBPAA.Size = new System.Drawing.Size(1414, 659);
             this.tabPage3038WBPAA.TabIndex = 12;
             this.tabPage3038WBPAA.Text = "3038 - WB PAA";
             this.tabPage3038WBPAA.UseVisualStyleBackColor = true;
@@ -4028,9 +4266,11 @@ namespace Monitor
             this.groupBox43.Controls.Add(this.groupBox48);
             this.groupBox43.Controls.Add(this.groupBox38);
             this.groupBox43.Controls.Add(this.tabControl1);
-            this.groupBox43.Location = new System.Drawing.Point(3, 10);
+            this.groupBox43.Location = new System.Drawing.Point(2, 8);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Size = new System.Drawing.Size(1762, 807);
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox43.Size = new System.Drawing.Size(1410, 646);
             this.groupBox43.TabIndex = 0;
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "3038 - WB PAA";
@@ -4039,9 +4279,11 @@ namespace Monitor
             // 
             this.groupBox48.Controls.Add(this.button6);
             this.groupBox48.Controls.Add(this.button29);
-            this.groupBox48.Location = new System.Drawing.Point(1560, 230);
+            this.groupBox48.Location = new System.Drawing.Point(1248, 184);
+            this.groupBox48.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Size = new System.Drawing.Size(176, 162);
+            this.groupBox48.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox48.Size = new System.Drawing.Size(141, 130);
             this.groupBox48.TabIndex = 23;
             this.groupBox48.TabStop = false;
             this.groupBox48.Text = "CSV file";
@@ -4049,9 +4291,10 @@ namespace Monitor
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(7, 28);
+            this.button6.Location = new System.Drawing.Point(6, 22);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 54);
+            this.button6.Size = new System.Drawing.Size(127, 43);
             this.button6.TabIndex = 18;
             this.button6.Text = "Read CSV file";
             this.button6.UseVisualStyleBackColor = true;
@@ -4060,9 +4303,10 @@ namespace Monitor
             // 
             this.button29.BackColor = System.Drawing.Color.Transparent;
             this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(7, 96);
+            this.button29.Location = new System.Drawing.Point(6, 77);
+            this.button29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(159, 54);
+            this.button29.Size = new System.Drawing.Size(127, 43);
             this.button29.TabIndex = 21;
             this.button29.Text = "Write CSV file";
             this.button29.UseVisualStyleBackColor = false;
@@ -4071,9 +4315,11 @@ namespace Monitor
             // 
             this.groupBox38.Controls.Add(this.button2);
             this.groupBox38.Controls.Add(this.button30);
-            this.groupBox38.Location = new System.Drawing.Point(1560, 53);
+            this.groupBox38.Location = new System.Drawing.Point(1248, 42);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Size = new System.Drawing.Size(176, 162);
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox38.Size = new System.Drawing.Size(141, 130);
             this.groupBox38.TabIndex = 22;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Flash";
@@ -4081,9 +4327,10 @@ namespace Monitor
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(7, 28);
+            this.button2.Location = new System.Drawing.Point(6, 22);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 54);
+            this.button2.Size = new System.Drawing.Size(127, 43);
             this.button2.TabIndex = 18;
             this.button2.Text = "Read all from flash ";
             this.button2.UseVisualStyleBackColor = true;
@@ -4092,9 +4339,10 @@ namespace Monitor
             // 
             this.button30.BackColor = System.Drawing.Color.Transparent;
             this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(7, 96);
+            this.button30.Location = new System.Drawing.Point(6, 77);
+            this.button30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(159, 54);
+            this.button30.Size = new System.Drawing.Size(127, 43);
             this.button30.TabIndex = 21;
             this.button30.Text = "Write all to flash";
             this.button30.UseVisualStyleBackColor = false;
@@ -4106,10 +4354,11 @@ namespace Monitor
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Location = new System.Drawing.Point(6, 21);
+            this.tabControl1.Location = new System.Drawing.Point(5, 17);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1552, 779);
+            this.tabControl1.Size = new System.Drawing.Size(1242, 623);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -4125,10 +4374,11 @@ namespace Monitor
             this.tabPage6.Controls.Add(this.groupBox44);
             this.tabPage6.Controls.Add(this.groupBox1);
             this.tabPage6.Controls.Add(this.groupBox33);
-            this.tabPage6.Location = new System.Drawing.Point(4, 32);
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1544, 743);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Size = new System.Drawing.Size(1234, 592);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Main";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -4152,9 +4402,11 @@ namespace Monitor
             this.groupBox37.Controls.Add(this.label108);
             this.groupBox37.Controls.Add(this.textBox84);
             this.groupBox37.Controls.Add(this.label109);
-            this.groupBox37.Location = new System.Drawing.Point(832, 402);
+            this.groupBox37.Location = new System.Drawing.Point(666, 322);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(704, 180);
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox37.Size = new System.Drawing.Size(563, 144);
             this.groupBox37.TabIndex = 17;
             this.groupBox37.TabStop = false;
             // 
@@ -4162,9 +4414,10 @@ namespace Monitor
             // 
             this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(629, 67);
+            this.checkBox4.Location = new System.Drawing.Point(503, 54);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(43, 33);
+            this.checkBox4.Size = new System.Drawing.Size(36, 28);
             this.checkBox4.TabIndex = 28;
             this.checkBox4.Text = "On";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -4174,9 +4427,10 @@ namespace Monitor
             // 
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(552, 64);
+            this.checkBox3.Location = new System.Drawing.Point(442, 51);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(43, 33);
+            this.checkBox3.Size = new System.Drawing.Size(36, 28);
             this.checkBox3.TabIndex = 27;
             this.checkBox3.Text = "On";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -4186,9 +4440,10 @@ namespace Monitor
             // 
             this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(464, 63);
+            this.checkBox9.Location = new System.Drawing.Point(371, 50);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(43, 33);
+            this.checkBox9.Size = new System.Drawing.Size(36, 28);
             this.checkBox9.TabIndex = 26;
             this.checkBox9.Text = "On";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -4198,9 +4453,10 @@ namespace Monitor
             // 
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(290, 67);
+            this.checkBox2.Location = new System.Drawing.Point(232, 54);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(43, 33);
+            this.checkBox2.Size = new System.Drawing.Size(36, 28);
             this.checkBox2.TabIndex = 20;
             this.checkBox2.Text = "On";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -4210,9 +4466,10 @@ namespace Monitor
             // 
             this.button73.BackColor = System.Drawing.SystemColors.Highlight;
             this.button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button73.Location = new System.Drawing.Point(313, 108);
+            this.button73.Location = new System.Drawing.Point(250, 86);
+            this.button73.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(173, 49);
+            this.button73.Size = new System.Drawing.Size(138, 39);
             this.button73.TabIndex = 17;
             this.button73.Text = "Strobe";
             this.button73.UseVisualStyleBackColor = false;
@@ -4221,35 +4478,39 @@ namespace Monitor
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(625, 35);
+            this.label114.Location = new System.Drawing.Point(500, 28);
+            this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(78, 23);
+            this.label114.Size = new System.Drawing.Size(63, 18);
             this.label114.TabIndex = 24;
             this.label114.Text = "Preserve";
             // 
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(536, 39);
+            this.label113.Location = new System.Drawing.Point(429, 31);
+            this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(91, 23);
+            this.label113.Size = new System.Drawing.Size(72, 18);
             this.label113.TabIndex = 22;
             this.label113.Text = "OVT check";
             // 
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(437, 36);
+            this.label112.Location = new System.Drawing.Point(350, 29);
+            this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(103, 23);
+            this.label112.Size = new System.Drawing.Size(81, 18);
             this.label112.TabIndex = 20;
             this.label112.Text = "SEU recover";
             // 
             // textBox85
             // 
-            this.textBox85.Location = new System.Drawing.Point(357, 69);
+            this.textBox85.Location = new System.Drawing.Point(286, 55);
+            this.textBox85.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(65, 30);
+            this.textBox85.Size = new System.Drawing.Size(53, 26);
             this.textBox85.TabIndex = 19;
             this.textBox85.Text = "0";
             this.textBox85.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox85_KeyDown);
@@ -4257,26 +4518,29 @@ namespace Monitor
             // label111
             // 
             this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(353, 38);
+            this.label111.Location = new System.Drawing.Point(282, 30);
+            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(73, 23);
+            this.label111.Size = new System.Drawing.Size(58, 18);
             this.label111.TabIndex = 18;
             this.label111.Text = "CAL SAR";
             // 
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(291, 38);
+            this.label110.Location = new System.Drawing.Point(233, 30);
+            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(42, 23);
+            this.label110.Size = new System.Drawing.Size(32, 18);
             this.label110.TabIndex = 16;
             this.label110.Text = "DC4";
             // 
             // textBox82
             // 
-            this.textBox82.Location = new System.Drawing.Point(206, 69);
+            this.textBox82.Location = new System.Drawing.Point(165, 55);
+            this.textBox82.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(65, 30);
+            this.textBox82.Size = new System.Drawing.Size(53, 26);
             this.textBox82.TabIndex = 15;
             this.textBox82.Text = "0";
             this.textBox82.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox82_KeyDown);
@@ -4284,17 +4548,19 @@ namespace Monitor
             // label107
             // 
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(202, 38);
+            this.label107.Location = new System.Drawing.Point(162, 30);
+            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(62, 23);
+            this.label107.Size = new System.Drawing.Size(50, 18);
             this.label107.TabIndex = 14;
             this.label107.Text = "ATT bit";
             // 
             // textBox83
             // 
-            this.textBox83.Location = new System.Drawing.Point(109, 69);
+            this.textBox83.Location = new System.Drawing.Point(87, 55);
+            this.textBox83.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(65, 30);
+            this.textBox83.Size = new System.Drawing.Size(53, 26);
             this.textBox83.TabIndex = 13;
             this.textBox83.Text = "0";
             this.textBox83.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox83_KeyDown);
@@ -4302,17 +4568,19 @@ namespace Monitor
             // label108
             // 
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(111, 36);
+            this.label108.Location = new System.Drawing.Point(89, 29);
+            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(52, 23);
+            this.label108.Size = new System.Drawing.Size(42, 18);
             this.label108.TabIndex = 12;
             this.label108.Text = "FT bit";
             // 
             // textBox84
             // 
-            this.textBox84.Location = new System.Drawing.Point(23, 69);
+            this.textBox84.Location = new System.Drawing.Point(18, 55);
+            this.textBox84.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(65, 30);
+            this.textBox84.Size = new System.Drawing.Size(53, 26);
             this.textBox84.TabIndex = 11;
             this.textBox84.Text = "0";
             this.textBox84.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
@@ -4320,17 +4588,19 @@ namespace Monitor
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(15, 38);
+            this.label109.Location = new System.Drawing.Point(12, 30);
+            this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(69, 23);
+            this.label109.Size = new System.Drawing.Size(56, 18);
             this.label109.TabIndex = 1;
             this.label109.Text = "Freq bit";
             // 
             // button71
             // 
-            this.button71.Location = new System.Drawing.Point(690, 230);
+            this.button71.Location = new System.Drawing.Point(552, 184);
+            this.button71.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(86, 28);
+            this.button71.Size = new System.Drawing.Size(69, 22);
             this.button71.TabIndex = 16;
             this.button71.Text = "Save CSV";
             this.button71.UseVisualStyleBackColor = true;
@@ -4393,18 +4663,21 @@ namespace Monitor
             this.groupBox47.Controls.Add(this.textBox_StatusUUT2);
             this.groupBox47.Controls.Add(this.groupBox39);
             this.groupBox47.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox47.Location = new System.Drawing.Point(7, 261);
+            this.groupBox47.Location = new System.Drawing.Point(6, 209);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(804, 474);
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox47.Size = new System.Drawing.Size(643, 379);
             this.groupBox47.TabIndex = 15;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = " Status UUT";
             // 
             // button72
             // 
-            this.button72.Location = new System.Drawing.Point(557, 407);
+            this.button72.Location = new System.Drawing.Point(446, 326);
+            this.button72.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(222, 54);
+            this.button72.Size = new System.Drawing.Size(178, 43);
             this.button72.TabIndex = 17;
             this.button72.Text = "Get Status";
             this.button72.UseVisualStyleBackColor = true;
@@ -4412,10 +4685,11 @@ namespace Monitor
             // 
             // textBox_StatusUUT25
             // 
-            this.textBox_StatusUUT25.Location = new System.Drawing.Point(664, 329);
+            this.textBox_StatusUUT25.Location = new System.Drawing.Point(538, 262);
+            this.textBox_StatusUUT25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT25.Name = "textBox_StatusUUT25";
             this.textBox_StatusUUT25.ReadOnly = true;
-            this.textBox_StatusUUT25.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT25.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT25.TabIndex = 57;
             // 
             // label69
@@ -4423,9 +4697,10 @@ namespace Monitor
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.Black;
-            this.label69.Location = new System.Drawing.Point(557, 335);
+            this.label69.Location = new System.Drawing.Point(446, 268);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(94, 24);
+            this.label69.Size = new System.Drawing.Size(76, 19);
             this.label69.TabIndex = 58;
             this.label69.Text = "DC1 value";
             // 
@@ -4434,26 +4709,29 @@ namespace Monitor
             this.label120.AutoSize = true;
             this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
-            this.label120.Location = new System.Drawing.Point(301, 439);
+            this.label120.Location = new System.Drawing.Point(241, 351);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(109, 24);
+            this.label120.Size = new System.Drawing.Size(90, 19);
             this.label120.TabIndex = 75;
             this.label120.Text = "CAL SAR BIT";
             // 
             // textBox_StatusUUT26
             // 
-            this.textBox_StatusUUT26.Location = new System.Drawing.Point(664, 370);
+            this.textBox_StatusUUT26.Location = new System.Drawing.Point(538, 295);
+            this.textBox_StatusUUT26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT26.Name = "textBox_StatusUUT26";
             this.textBox_StatusUUT26.ReadOnly = true;
-            this.textBox_StatusUUT26.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT26.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT26.TabIndex = 59;
             // 
             // textBox_StatusUUT23
             // 
-            this.textBox_StatusUUT23.Location = new System.Drawing.Point(408, 439);
+            this.textBox_StatusUUT23.Location = new System.Drawing.Point(332, 351);
+            this.textBox_StatusUUT23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT23.Name = "textBox_StatusUUT23";
             this.textBox_StatusUUT23.ReadOnly = true;
-            this.textBox_StatusUUT23.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT23.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT23.TabIndex = 74;
             // 
             // label56
@@ -4461,26 +4739,29 @@ namespace Monitor
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
-            this.label56.Location = new System.Drawing.Point(299, 17);
+            this.label56.Location = new System.Drawing.Point(239, 14);
+            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(103, 24);
+            this.label56.Size = new System.Drawing.Size(85, 19);
             this.label56.TabIndex = 56;
             this.label56.Text = "PRM_temp";
             // 
             // textBox_StatusUUT24
             // 
-            this.textBox_StatusUUT24.Location = new System.Drawing.Point(664, 293);
+            this.textBox_StatusUUT24.Location = new System.Drawing.Point(538, 233);
+            this.textBox_StatusUUT24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT24.Name = "textBox_StatusUUT24";
             this.textBox_StatusUUT24.ReadOnly = true;
-            this.textBox_StatusUUT24.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT24.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT24.TabIndex = 61;
             // 
             // textBox_StatusUUT12
             // 
-            this.textBox_StatusUUT12.Location = new System.Drawing.Point(407, 11);
+            this.textBox_StatusUUT12.Location = new System.Drawing.Point(332, 9);
+            this.textBox_StatusUUT12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT12.Name = "textBox_StatusUUT12";
             this.textBox_StatusUUT12.ReadOnly = true;
-            this.textBox_StatusUUT12.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT12.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT12.TabIndex = 55;
             // 
             // label57
@@ -4488,9 +4769,10 @@ namespace Monitor
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(301, 409);
+            this.label57.Location = new System.Drawing.Point(241, 327);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(74, 24);
+            this.label57.Size = new System.Drawing.Size(60, 19);
             this.label57.TabIndex = 54;
             this.label57.Text = "DCA bit";
             // 
@@ -4499,18 +4781,20 @@ namespace Monitor
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(557, 299);
+            this.label67.Location = new System.Drawing.Point(446, 239);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(95, 24);
+            this.label67.Size = new System.Drawing.Size(77, 19);
             this.label67.TabIndex = 62;
             this.label67.Text = "VVA value";
             // 
             // textBox_StatusUUT22
             // 
-            this.textBox_StatusUUT22.Location = new System.Drawing.Point(408, 403);
+            this.textBox_StatusUUT22.Location = new System.Drawing.Point(332, 322);
+            this.textBox_StatusUUT22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT22.Name = "textBox_StatusUUT22";
             this.textBox_StatusUUT22.ReadOnly = true;
-            this.textBox_StatusUUT22.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT22.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT22.TabIndex = 53;
             // 
             // label58
@@ -4518,9 +4802,10 @@ namespace Monitor
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(301, 370);
+            this.label58.Location = new System.Drawing.Point(241, 296);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(57, 24);
+            this.label58.Size = new System.Drawing.Size(47, 19);
             this.label58.TabIndex = 52;
             this.label58.Text = "FT bit";
             // 
@@ -4529,18 +4814,20 @@ namespace Monitor
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Black;
-            this.label70.Location = new System.Drawing.Point(558, 375);
+            this.label70.Location = new System.Drawing.Point(446, 300);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(94, 24);
+            this.label70.Size = new System.Drawing.Size(76, 19);
             this.label70.TabIndex = 63;
             this.label70.Text = "DC2 value";
             // 
             // textBox_StatusUUT21
             // 
-            this.textBox_StatusUUT21.Location = new System.Drawing.Point(408, 364);
+            this.textBox_StatusUUT21.Location = new System.Drawing.Point(332, 291);
+            this.textBox_StatusUUT21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT21.Name = "textBox_StatusUUT21";
             this.textBox_StatusUUT21.ReadOnly = true;
-            this.textBox_StatusUUT21.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT21.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT21.TabIndex = 51;
             // 
             // label59
@@ -4548,18 +4835,20 @@ namespace Monitor
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(301, 330);
+            this.label59.Location = new System.Drawing.Point(241, 264);
+            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(72, 24);
+            this.label59.Size = new System.Drawing.Size(60, 19);
             this.label59.TabIndex = 50;
             this.label59.Text = "freq bit";
             // 
             // textBox_StatusUUT20
             // 
-            this.textBox_StatusUUT20.Location = new System.Drawing.Point(408, 324);
+            this.textBox_StatusUUT20.Location = new System.Drawing.Point(332, 259);
+            this.textBox_StatusUUT20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT20.Name = "textBox_StatusUUT20";
             this.textBox_StatusUUT20.ReadOnly = true;
-            this.textBox_StatusUUT20.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT20.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT20.TabIndex = 49;
             // 
             // label60
@@ -4567,18 +4856,20 @@ namespace Monitor
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.Black;
-            this.label60.Location = new System.Drawing.Point(301, 292);
+            this.label60.Location = new System.Drawing.Point(241, 234);
+            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(115, 24);
+            this.label60.Size = new System.Drawing.Size(94, 19);
             this.label60.TabIndex = 48;
             this.label60.Text = "Pulse period";
             // 
             // textBox_StatusUUT19
             // 
-            this.textBox_StatusUUT19.Location = new System.Drawing.Point(408, 286);
+            this.textBox_StatusUUT19.Location = new System.Drawing.Point(332, 229);
+            this.textBox_StatusUUT19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT19.Name = "textBox_StatusUUT19";
             this.textBox_StatusUUT19.ReadOnly = true;
-            this.textBox_StatusUUT19.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT19.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT19.TabIndex = 47;
             // 
             // label61
@@ -4586,18 +4877,20 @@ namespace Monitor
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
-            this.label61.Location = new System.Drawing.Point(299, 253);
+            this.label61.Location = new System.Drawing.Point(239, 202);
+            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(109, 24);
+            this.label61.Size = new System.Drawing.Size(89, 19);
             this.label61.TabIndex = 46;
             this.label61.Text = "Pulse width";
             // 
             // textBox_StatusUUT18
             // 
-            this.textBox_StatusUUT18.Location = new System.Drawing.Point(407, 247);
+            this.textBox_StatusUUT18.Location = new System.Drawing.Point(332, 198);
+            this.textBox_StatusUUT18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT18.Name = "textBox_StatusUUT18";
             this.textBox_StatusUUT18.ReadOnly = true;
-            this.textBox_StatusUUT18.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT18.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT18.TabIndex = 45;
             // 
             // label62
@@ -4605,18 +4898,20 @@ namespace Monitor
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Black;
-            this.label62.Location = new System.Drawing.Point(299, 214);
+            this.label62.Location = new System.Drawing.Point(239, 171);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(92, 24);
+            this.label62.Size = new System.Drawing.Size(76, 19);
             this.label62.TabIndex = 44;
             this.label62.Text = "PSU temp";
             // 
             // textBox_StatusUUT17
             // 
-            this.textBox_StatusUUT17.Location = new System.Drawing.Point(407, 208);
+            this.textBox_StatusUUT17.Location = new System.Drawing.Point(332, 166);
+            this.textBox_StatusUUT17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT17.Name = "textBox_StatusUUT17";
             this.textBox_StatusUUT17.ReadOnly = true;
-            this.textBox_StatusUUT17.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT17.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT17.TabIndex = 43;
             // 
             // label63
@@ -4624,18 +4919,20 @@ namespace Monitor
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.Black;
-            this.label63.Location = new System.Drawing.Point(299, 172);
+            this.label63.Location = new System.Drawing.Point(239, 138);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(98, 24);
+            this.label63.Size = new System.Drawing.Size(80, 19);
             this.label63.TabIndex = 42;
             this.label63.Text = "VTM temp";
             // 
             // textBox_StatusUUT16
             // 
-            this.textBox_StatusUUT16.Location = new System.Drawing.Point(407, 166);
+            this.textBox_StatusUUT16.Location = new System.Drawing.Point(332, 133);
+            this.textBox_StatusUUT16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT16.Name = "textBox_StatusUUT16";
             this.textBox_StatusUUT16.ReadOnly = true;
-            this.textBox_StatusUUT16.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT16.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT16.TabIndex = 41;
             // 
             // label64
@@ -4643,18 +4940,20 @@ namespace Monitor
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.Color.Black;
-            this.label64.Location = new System.Drawing.Point(299, 133);
+            this.label64.Location = new System.Drawing.Point(239, 106);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(105, 24);
+            this.label64.Size = new System.Drawing.Size(85, 19);
             this.label64.TabIndex = 40;
             this.label64.Text = "48V in rush";
             // 
             // textBox_StatusUUT15
             // 
-            this.textBox_StatusUUT15.Location = new System.Drawing.Point(407, 127);
+            this.textBox_StatusUUT15.Location = new System.Drawing.Point(332, 102);
+            this.textBox_StatusUUT15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT15.Name = "textBox_StatusUUT15";
             this.textBox_StatusUUT15.ReadOnly = true;
-            this.textBox_StatusUUT15.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT15.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT15.TabIndex = 39;
             // 
             // label65
@@ -4662,18 +4961,20 @@ namespace Monitor
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.Black;
-            this.label65.Location = new System.Drawing.Point(299, 94);
+            this.label65.Location = new System.Drawing.Point(239, 75);
+            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(87, 24);
+            this.label65.Size = new System.Drawing.Size(71, 19);
             this.label65.TabIndex = 38;
             this.label65.Text = "48V filter";
             // 
             // textBox_StatusUUT14
             // 
-            this.textBox_StatusUUT14.Location = new System.Drawing.Point(407, 88);
+            this.textBox_StatusUUT14.Location = new System.Drawing.Point(332, 70);
+            this.textBox_StatusUUT14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT14.Name = "textBox_StatusUUT14";
             this.textBox_StatusUUT14.ReadOnly = true;
-            this.textBox_StatusUUT14.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT14.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT14.TabIndex = 37;
             // 
             // label66
@@ -4681,18 +4982,20 @@ namespace Monitor
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.Black;
-            this.label66.Location = new System.Drawing.Point(299, 53);
+            this.label66.Location = new System.Drawing.Point(239, 42);
+            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(108, 24);
+            this.label66.Size = new System.Drawing.Size(89, 19);
             this.label66.TabIndex = 36;
             this.label66.Text = "48V current";
             // 
             // textBox_StatusUUT13
             // 
-            this.textBox_StatusUUT13.Location = new System.Drawing.Point(407, 47);
+            this.textBox_StatusUUT13.Location = new System.Drawing.Point(332, 38);
+            this.textBox_StatusUUT13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT13.Name = "textBox_StatusUUT13";
             this.textBox_StatusUUT13.ReadOnly = true;
-            this.textBox_StatusUUT13.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT13.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT13.TabIndex = 35;
             // 
             // label55
@@ -4700,18 +5003,20 @@ namespace Monitor
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Black;
-            this.label55.Location = new System.Drawing.Point(7, 19);
+            this.label55.Location = new System.Drawing.Point(6, 15);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(165, 24);
+            this.label55.Size = new System.Drawing.Size(136, 19);
             this.label55.TabIndex = 34;
             this.label55.Text = "Main Temperature";
             // 
             // textBox_StatusUUT1
             // 
-            this.textBox_StatusUUT1.Location = new System.Drawing.Point(169, 15);
+            this.textBox_StatusUUT1.Location = new System.Drawing.Point(147, 10);
+            this.textBox_StatusUUT1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT1.Name = "textBox_StatusUUT1";
             this.textBox_StatusUUT1.ReadOnly = true;
-            this.textBox_StatusUUT1.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT1.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT1.TabIndex = 33;
             // 
             // label54
@@ -4719,18 +5024,20 @@ namespace Monitor
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
-            this.label54.Location = new System.Drawing.Point(8, 412);
+            this.label54.Location = new System.Drawing.Point(6, 330);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(65, 24);
+            this.label54.Size = new System.Drawing.Size(54, 19);
             this.label54.TabIndex = 32;
             this.label54.Text = "Detect";
             // 
             // textBox_StatusUUT11
             // 
-            this.textBox_StatusUUT11.Location = new System.Drawing.Point(170, 407);
+            this.textBox_StatusUUT11.Location = new System.Drawing.Point(148, 324);
+            this.textBox_StatusUUT11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT11.Name = "textBox_StatusUUT11";
             this.textBox_StatusUUT11.ReadOnly = true;
-            this.textBox_StatusUUT11.Size = new System.Drawing.Size(115, 30);
+            this.textBox_StatusUUT11.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT11.TabIndex = 31;
             // 
             // label53
@@ -4738,18 +5045,20 @@ namespace Monitor
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Black;
-            this.label53.Location = new System.Drawing.Point(8, 373);
+            this.label53.Location = new System.Drawing.Point(6, 298);
+            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(79, 24);
+            this.label53.Size = new System.Drawing.Size(65, 19);
             this.label53.TabIndex = 30;
             this.label53.Text = "Vgg N5V";
             // 
             // textBox_StatusUUT10
             // 
-            this.textBox_StatusUUT10.Location = new System.Drawing.Point(170, 368);
+            this.textBox_StatusUUT10.Location = new System.Drawing.Point(148, 292);
+            this.textBox_StatusUUT10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT10.Name = "textBox_StatusUUT10";
             this.textBox_StatusUUT10.ReadOnly = true;
-            this.textBox_StatusUUT10.Size = new System.Drawing.Size(115, 30);
+            this.textBox_StatusUUT10.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT10.TabIndex = 29;
             // 
             // label52
@@ -4757,18 +5066,20 @@ namespace Monitor
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.Black;
-            this.label52.Location = new System.Drawing.Point(8, 333);
+            this.label52.Location = new System.Drawing.Point(6, 266);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(75, 24);
+            this.label52.Size = new System.Drawing.Size(60, 19);
             this.label52.TabIndex = 28;
             this.label52.Text = "Vdd_4V";
             // 
             // textBox_StatusUUT9
             // 
-            this.textBox_StatusUUT9.Location = new System.Drawing.Point(170, 328);
+            this.textBox_StatusUUT9.Location = new System.Drawing.Point(148, 260);
+            this.textBox_StatusUUT9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT9.Name = "textBox_StatusUUT9";
             this.textBox_StatusUUT9.ReadOnly = true;
-            this.textBox_StatusUUT9.Size = new System.Drawing.Size(115, 30);
+            this.textBox_StatusUUT9.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT9.TabIndex = 27;
             // 
             // label51
@@ -4776,18 +5087,20 @@ namespace Monitor
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Location = new System.Drawing.Point(8, 294);
+            this.label51.Location = new System.Drawing.Point(6, 235);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(75, 24);
+            this.label51.Size = new System.Drawing.Size(60, 19);
             this.label51.TabIndex = 26;
             this.label51.Text = "Vdd_5V";
             // 
             // textBox_StatusUUT8
             // 
-            this.textBox_StatusUUT8.Location = new System.Drawing.Point(170, 289);
+            this.textBox_StatusUUT8.Location = new System.Drawing.Point(148, 229);
+            this.textBox_StatusUUT8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT8.Name = "textBox_StatusUUT8";
             this.textBox_StatusUUT8.ReadOnly = true;
-            this.textBox_StatusUUT8.Size = new System.Drawing.Size(115, 30);
+            this.textBox_StatusUUT8.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT8.TabIndex = 25;
             // 
             // label50
@@ -4795,18 +5108,20 @@ namespace Monitor
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Black;
-            this.label50.Location = new System.Drawing.Point(7, 255);
+            this.label50.Location = new System.Drawing.Point(6, 204);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(75, 24);
+            this.label50.Size = new System.Drawing.Size(60, 19);
             this.label50.TabIndex = 24;
             this.label50.Text = "Vdd_9V";
             // 
             // textBox_StatusUUT7
             // 
-            this.textBox_StatusUUT7.Location = new System.Drawing.Point(169, 251);
+            this.textBox_StatusUUT7.Location = new System.Drawing.Point(147, 199);
+            this.textBox_StatusUUT7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT7.Name = "textBox_StatusUUT7";
             this.textBox_StatusUUT7.ReadOnly = true;
-            this.textBox_StatusUUT7.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT7.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT7.TabIndex = 23;
             // 
             // label49
@@ -4814,18 +5129,20 @@ namespace Monitor
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(7, 217);
+            this.label49.Location = new System.Drawing.Point(6, 174);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(85, 24);
+            this.label49.Size = new System.Drawing.Size(68, 19);
             this.label49.TabIndex = 22;
             this.label49.Text = "Vdd_28V";
             // 
             // textBox_StatusUUT6
             // 
-            this.textBox_StatusUUT6.Location = new System.Drawing.Point(169, 212);
+            this.textBox_StatusUUT6.Location = new System.Drawing.Point(147, 168);
+            this.textBox_StatusUUT6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT6.Name = "textBox_StatusUUT6";
             this.textBox_StatusUUT6.ReadOnly = true;
-            this.textBox_StatusUUT6.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT6.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT6.TabIndex = 21;
             // 
             // label40
@@ -4833,18 +5150,20 @@ namespace Monitor
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(7, 174);
+            this.label40.Location = new System.Drawing.Point(6, 139);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(98, 24);
+            this.label40.Size = new System.Drawing.Size(81, 19);
             this.label40.TabIndex = 20;
             this.label40.Text = "9V current";
             // 
             // textBox_StatusUUT5
             // 
-            this.textBox_StatusUUT5.Location = new System.Drawing.Point(169, 169);
+            this.textBox_StatusUUT5.Location = new System.Drawing.Point(147, 133);
+            this.textBox_StatusUUT5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT5.Name = "textBox_StatusUUT5";
             this.textBox_StatusUUT5.ReadOnly = true;
-            this.textBox_StatusUUT5.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT5.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT5.TabIndex = 19;
             // 
             // label39
@@ -4852,18 +5171,20 @@ namespace Monitor
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(7, 136);
+            this.label39.Location = new System.Drawing.Point(6, 109);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(108, 24);
+            this.label39.Size = new System.Drawing.Size(89, 19);
             this.label39.TabIndex = 18;
             this.label39.Text = "28V current";
             // 
             // textBox_StatusUUT4
             // 
-            this.textBox_StatusUUT4.Location = new System.Drawing.Point(169, 131);
+            this.textBox_StatusUUT4.Location = new System.Drawing.Point(147, 103);
+            this.textBox_StatusUUT4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT4.Name = "textBox_StatusUUT4";
             this.textBox_StatusUUT4.ReadOnly = true;
-            this.textBox_StatusUUT4.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT4.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT4.TabIndex = 17;
             // 
             // label33
@@ -4871,18 +5192,20 @@ namespace Monitor
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(7, 97);
+            this.label33.Location = new System.Drawing.Point(6, 78);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(98, 24);
+            this.label33.Size = new System.Drawing.Size(81, 19);
             this.label33.TabIndex = 16;
             this.label33.Text = "5V current";
             // 
             // textBox_StatusUUT3
             // 
-            this.textBox_StatusUUT3.Location = new System.Drawing.Point(169, 92);
+            this.textBox_StatusUUT3.Location = new System.Drawing.Point(147, 72);
+            this.textBox_StatusUUT3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT3.Name = "textBox_StatusUUT3";
             this.textBox_StatusUUT3.ReadOnly = true;
-            this.textBox_StatusUUT3.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT3.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT3.TabIndex = 15;
             // 
             // label32
@@ -4890,18 +5213,20 @@ namespace Monitor
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(7, 56);
+            this.label32.Location = new System.Drawing.Point(6, 45);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(104, 24);
+            this.label32.Size = new System.Drawing.Size(85, 19);
             this.label32.TabIndex = 14;
             this.label32.Text = "Main Index";
             // 
             // textBox_StatusUUT2
             // 
-            this.textBox_StatusUUT2.Location = new System.Drawing.Point(169, 51);
+            this.textBox_StatusUUT2.Location = new System.Drawing.Point(147, 39);
+            this.textBox_StatusUUT2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_StatusUUT2.Name = "textBox_StatusUUT2";
             this.textBox_StatusUUT2.ReadOnly = true;
-            this.textBox_StatusUUT2.Size = new System.Drawing.Size(114, 30);
+            this.textBox_StatusUUT2.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT2.TabIndex = 0;
             // 
             // groupBox39
@@ -4920,9 +5245,11 @@ namespace Monitor
             this.groupBox39.Controls.Add(this.textBox56);
             this.groupBox39.Controls.Add(this.textBox57);
             this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox39.Location = new System.Drawing.Point(529, 17);
+            this.groupBox39.Location = new System.Drawing.Point(423, 14);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Size = new System.Drawing.Size(264, 269);
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox39.Size = new System.Drawing.Size(211, 215);
             this.groupBox39.TabIndex = 76;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Status Simulator";
@@ -4932,18 +5259,20 @@ namespace Monitor
             this.label115.AutoSize = true;
             this.label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label115.ForeColor = System.Drawing.Color.Black;
-            this.label115.Location = new System.Drawing.Point(2, 236);
+            this.label115.Location = new System.Drawing.Point(2, 189);
+            this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(131, 24);
+            this.label115.Size = new System.Drawing.Size(105, 19);
             this.label115.TabIndex = 75;
             this.label115.Text = "Tx OVT hazard";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(129, 231);
+            this.textBox9.Location = new System.Drawing.Point(115, 186);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(114, 30);
+            this.textBox9.Size = new System.Drawing.Size(92, 26);
             this.textBox9.TabIndex = 74;
             // 
             // label71
@@ -4951,9 +5280,10 @@ namespace Monitor
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.Black;
-            this.label71.Location = new System.Drawing.Point(22, 44);
+            this.label71.Location = new System.Drawing.Point(18, 35);
+            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(61, 24);
+            this.label71.Size = new System.Drawing.Size(51, 19);
             this.label71.TabIndex = 68;
             this.label71.Text = "Ready";
             this.label71.Click += new System.EventHandler(this.label71_Click);
@@ -4963,19 +5293,21 @@ namespace Monitor
             this.label74.AutoSize = true;
             this.label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.Black;
-            this.label74.Location = new System.Drawing.Point(23, 199);
+            this.label74.Location = new System.Drawing.Point(18, 159);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(42, 24);
+            this.label74.Size = new System.Drawing.Size(35, 19);
             this.label74.TabIndex = 73;
             this.label74.Text = "SEU";
             this.label74.Click += new System.EventHandler(this.label74_Click);
             // 
             // textBox60
             // 
-            this.textBox60.Location = new System.Drawing.Point(129, 194);
+            this.textBox60.Location = new System.Drawing.Point(115, 156);
+            this.textBox60.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox60.Name = "textBox60";
             this.textBox60.ReadOnly = true;
-            this.textBox60.Size = new System.Drawing.Size(114, 30);
+            this.textBox60.Size = new System.Drawing.Size(92, 26);
             this.textBox60.TabIndex = 72;
             this.textBox60.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
             // 
@@ -4984,19 +5316,21 @@ namespace Monitor
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.Black;
-            this.label73.Location = new System.Drawing.Point(23, 162);
+            this.label73.Location = new System.Drawing.Point(18, 130);
+            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(98, 24);
+            this.label73.Size = new System.Drawing.Size(81, 19);
             this.label73.TabIndex = 71;
             this.label73.Text = "Protection";
             this.label73.Click += new System.EventHandler(this.label73_Click);
             // 
             // textBox59
             // 
-            this.textBox59.Location = new System.Drawing.Point(129, 153);
+            this.textBox59.Location = new System.Drawing.Point(115, 123);
+            this.textBox59.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox59.Name = "textBox59";
             this.textBox59.ReadOnly = true;
-            this.textBox59.Size = new System.Drawing.Size(114, 30);
+            this.textBox59.Size = new System.Drawing.Size(92, 26);
             this.textBox59.TabIndex = 70;
             this.textBox59.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
             // 
@@ -5005,19 +5339,21 @@ namespace Monitor
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.Black;
-            this.label68.Location = new System.Drawing.Point(10, 120);
+            this.label68.Location = new System.Drawing.Point(8, 96);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(116, 24);
+            this.label68.Size = new System.Drawing.Size(97, 19);
             this.label68.TabIndex = 69;
             this.label68.Text = "Over voltage";
             this.label68.Click += new System.EventHandler(this.label68_Click);
             // 
             // textBox58
             // 
-            this.textBox58.Location = new System.Drawing.Point(129, 114);
+            this.textBox58.Location = new System.Drawing.Point(115, 92);
+            this.textBox58.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox58.Name = "textBox58";
             this.textBox58.ReadOnly = true;
-            this.textBox58.Size = new System.Drawing.Size(114, 30);
+            this.textBox58.Size = new System.Drawing.Size(92, 26);
             this.textBox58.TabIndex = 64;
             this.textBox58.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
             // 
@@ -5026,28 +5362,31 @@ namespace Monitor
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.Black;
-            this.label72.Location = new System.Drawing.Point(7, 79);
+            this.label72.Location = new System.Drawing.Point(6, 63);
+            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(128, 24);
+            this.label72.Size = new System.Drawing.Size(106, 19);
             this.label72.TabIndex = 65;
             this.label72.Text = "Under voltage";
             this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
             // textBox56
             // 
-            this.textBox56.Location = new System.Drawing.Point(129, 38);
+            this.textBox56.Location = new System.Drawing.Point(115, 31);
+            this.textBox56.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox56.Name = "textBox56";
             this.textBox56.ReadOnly = true;
-            this.textBox56.Size = new System.Drawing.Size(114, 30);
+            this.textBox56.Size = new System.Drawing.Size(92, 26);
             this.textBox56.TabIndex = 67;
             this.textBox56.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
             // 
             // textBox57
             // 
-            this.textBox57.Location = new System.Drawing.Point(129, 76);
+            this.textBox57.Location = new System.Drawing.Point(115, 62);
+            this.textBox57.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox57.Name = "textBox57";
             this.textBox57.ReadOnly = true;
-            this.textBox57.Size = new System.Drawing.Size(114, 30);
+            this.textBox57.Size = new System.Drawing.Size(92, 26);
             this.textBox57.TabIndex = 66;
             this.textBox57.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
@@ -5061,9 +5400,11 @@ namespace Monitor
             this.groupBox35.Controls.Add(this.label105);
             this.groupBox35.Controls.Add(this.textBox_PulseWidth2);
             this.groupBox35.Controls.Add(this.label106);
-            this.groupBox35.Location = new System.Drawing.Point(832, 274);
+            this.groupBox35.Location = new System.Drawing.Point(666, 219);
+            this.groupBox35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(442, 121);
+            this.groupBox35.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox35.Size = new System.Drawing.Size(354, 97);
             this.groupBox35.TabIndex = 18;
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "GP pulse gen";
@@ -5072,9 +5413,10 @@ namespace Monitor
             // 
             this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(335, 25);
+            this.checkBox8.Location = new System.Drawing.Point(268, 20);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(77, 33);
+            this.checkBox8.Size = new System.Drawing.Size(64, 28);
             this.checkBox8.TabIndex = 19;
             this.checkBox8.Text = "Control";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -5082,9 +5424,10 @@ namespace Monitor
             // 
             // button44
             // 
-            this.button44.Location = new System.Drawing.Point(278, 73);
+            this.button44.Location = new System.Drawing.Point(222, 58);
+            this.button44.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(140, 27);
+            this.button44.Size = new System.Drawing.Size(112, 22);
             this.button44.TabIndex = 16;
             this.button44.Text = "Set GP parms";
             this.button44.UseVisualStyleBackColor = true;
@@ -5092,52 +5435,58 @@ namespace Monitor
             // 
             // textBox_PulseDelay2
             // 
-            this.textBox_PulseDelay2.Location = new System.Drawing.Point(206, 69);
+            this.textBox_PulseDelay2.Location = new System.Drawing.Point(165, 55);
+            this.textBox_PulseDelay2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulseDelay2.Name = "textBox_PulseDelay2";
-            this.textBox_PulseDelay2.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulseDelay2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseDelay2.TabIndex = 15;
             this.textBox_PulseDelay2.Text = "0";
             // 
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(202, 38);
+            this.label104.Location = new System.Drawing.Point(162, 30);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(87, 23);
+            this.label104.Size = new System.Drawing.Size(70, 18);
             this.label104.TabIndex = 14;
             this.label104.Text = "Delay (us)";
             // 
             // textBox_PulsePeriod2
             // 
-            this.textBox_PulsePeriod2.Location = new System.Drawing.Point(109, 69);
+            this.textBox_PulsePeriod2.Location = new System.Drawing.Point(87, 55);
+            this.textBox_PulsePeriod2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
-            this.textBox_PulsePeriod2.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod2.TabIndex = 13;
             this.textBox_PulsePeriod2.Text = "16";
             // 
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(105, 38);
+            this.label105.Location = new System.Drawing.Point(84, 30);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(94, 23);
+            this.label105.Size = new System.Drawing.Size(76, 18);
             this.label105.TabIndex = 12;
             this.label105.Text = "Period (us)";
             // 
             // textBox_PulseWidth2
             // 
-            this.textBox_PulseWidth2.Location = new System.Drawing.Point(23, 69);
+            this.textBox_PulseWidth2.Location = new System.Drawing.Point(18, 55);
+            this.textBox_PulseWidth2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulseWidth2.Name = "textBox_PulseWidth2";
-            this.textBox_PulseWidth2.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulseWidth2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseWidth2.TabIndex = 11;
             this.textBox_PulseWidth2.Text = "2";
             // 
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(15, 38);
+            this.label106.Location = new System.Drawing.Point(12, 30);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(91, 23);
+            this.label106.Size = new System.Drawing.Size(73, 18);
             this.label106.TabIndex = 1;
             this.label106.Text = "Width (us)";
             // 
@@ -5150,9 +5499,11 @@ namespace Monitor
             this.groupBox46.Controls.Add(this.textBox30);
             this.groupBox46.Controls.Add(this.textBox31);
             this.groupBox46.Controls.Add(this.label36);
-            this.groupBox46.Location = new System.Drawing.Point(387, 133);
+            this.groupBox46.Location = new System.Drawing.Point(310, 106);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Size = new System.Drawing.Size(290, 130);
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox46.Size = new System.Drawing.Size(232, 104);
             this.groupBox46.TabIndex = 14;
             this.groupBox46.TabStop = false;
             // 
@@ -5161,9 +5512,10 @@ namespace Monitor
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(150, 56);
+            this.label38.Location = new System.Drawing.Point(121, 43);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(56, 24);
+            this.label38.Size = new System.Drawing.Size(45, 19);
             this.label38.TabIndex = 14;
             this.label38.Text = "DCA2";
             // 
@@ -5172,9 +5524,10 @@ namespace Monitor
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(91, 56);
+            this.label34.Location = new System.Drawing.Point(62, 43);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(56, 24);
+            this.label34.Size = new System.Drawing.Size(45, 19);
             this.label34.TabIndex = 11;
             this.label34.Text = "DCA1";
             // 
@@ -5183,17 +5536,19 @@ namespace Monitor
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(18, 57);
+            this.label35.Location = new System.Drawing.Point(7, 43);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(45, 24);
+            this.label35.Size = new System.Drawing.Size(36, 19);
             this.label35.TabIndex = 7;
             this.label35.Text = "VVA";
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(81, 86);
+            this.textBox29.Location = new System.Drawing.Point(65, 69);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(62, 30);
+            this.textBox29.Size = new System.Drawing.Size(50, 26);
             this.textBox29.TabIndex = 9;
             this.textBox29.Text = "0";
             this.toolTip1.SetToolTip(this.textBox29, "Press Enter to update");
@@ -5201,9 +5556,10 @@ namespace Monitor
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(154, 85);
+            this.textBox30.Location = new System.Drawing.Point(123, 68);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(62, 30);
+            this.textBox30.Size = new System.Drawing.Size(50, 26);
             this.textBox30.TabIndex = 8;
             this.textBox30.Text = "0";
             this.toolTip1.SetToolTip(this.textBox30, "Press Enter to update");
@@ -5211,9 +5567,10 @@ namespace Monitor
             // 
             // textBox31
             // 
-            this.textBox31.Location = new System.Drawing.Point(9, 86);
+            this.textBox31.Location = new System.Drawing.Point(7, 69);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(62, 30);
+            this.textBox31.Size = new System.Drawing.Size(50, 26);
             this.textBox31.TabIndex = 7;
             this.textBox31.Text = "0";
             this.toolTip1.SetToolTip(this.textBox31, "Press Enter to update");
@@ -5225,9 +5582,10 @@ namespace Monitor
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Blue;
-            this.label36.Location = new System.Drawing.Point(64, 18);
+            this.label36.Location = new System.Drawing.Point(51, 14);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(169, 29);
+            this.label36.Size = new System.Drawing.Size(133, 23);
             this.label36.TabIndex = 7;
             this.label36.Text = "Set Attenuation";
             // 
@@ -5242,9 +5600,11 @@ namespace Monitor
             this.groupBox45.Controls.Add(this.textBox25);
             this.groupBox45.Controls.Add(this.textBox24);
             this.groupBox45.Controls.Add(this.label25);
-            this.groupBox45.Location = new System.Drawing.Point(7, 128);
+            this.groupBox45.Location = new System.Drawing.Point(6, 102);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Size = new System.Drawing.Size(369, 131);
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox45.Size = new System.Drawing.Size(295, 105);
             this.groupBox45.TabIndex = 1;
             this.groupBox45.TabStop = false;
             // 
@@ -5253,9 +5613,10 @@ namespace Monitor
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(226, 57);
+            this.label31.Location = new System.Drawing.Point(180, 41);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 24);
+            this.label31.Size = new System.Drawing.Size(26, 19);
             this.label31.TabIndex = 13;
             this.label31.Text = "4V";
             // 
@@ -5264,39 +5625,45 @@ namespace Monitor
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(166, 56);
+            this.label30.Location = new System.Drawing.Point(124, 42);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 24);
+            this.label30.Size = new System.Drawing.Size(26, 19);
             this.label30.TabIndex = 12;
             this.label30.Text = "5V";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(90, 56);
+            this.label29.Location = new System.Drawing.Point(63, 42);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(32, 24);
+            this.label29.Size = new System.Drawing.Size(26, 19);
             this.label29.TabIndex = 11;
             this.label29.Text = "9V";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(17, 57);
+            this.label28.Location = new System.Drawing.Point(13, 41);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(42, 24);
+            this.label28.Size = new System.Drawing.Size(34, 19);
             this.label28.TabIndex = 7;
             this.label28.Text = "28V";
             // 
             // textBox27
             // 
-            this.textBox27.Location = new System.Drawing.Point(214, 86);
+            this.textBox27.Location = new System.Drawing.Point(171, 69);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(61, 30);
+            this.textBox27.Size = new System.Drawing.Size(50, 26);
             this.textBox27.TabIndex = 10;
             this.textBox27.Text = "0";
             this.toolTip1.SetToolTip(this.textBox27, "Press Enter to update");
@@ -5304,9 +5671,10 @@ namespace Monitor
             // 
             // textBox26
             // 
-            this.textBox26.Location = new System.Drawing.Point(145, 86);
+            this.textBox26.Location = new System.Drawing.Point(116, 69);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(62, 30);
+            this.textBox26.Size = new System.Drawing.Size(50, 26);
             this.textBox26.TabIndex = 9;
             this.textBox26.Text = "0";
             this.toolTip1.SetToolTip(this.textBox26, "Press Enter to update");
@@ -5314,9 +5682,10 @@ namespace Monitor
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(77, 86);
+            this.textBox25.Location = new System.Drawing.Point(62, 69);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(61, 30);
+            this.textBox25.Size = new System.Drawing.Size(50, 26);
             this.textBox25.TabIndex = 8;
             this.textBox25.Text = "0";
             this.toolTip1.SetToolTip(this.textBox25, "Press Enter to update");
@@ -5324,9 +5693,10 @@ namespace Monitor
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(8, 86);
+            this.textBox24.Location = new System.Drawing.Point(6, 69);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(62, 30);
+            this.textBox24.Size = new System.Drawing.Size(50, 26);
             this.textBox24.TabIndex = 7;
             this.textBox24.Text = "0";
             this.toolTip1.SetToolTip(this.textBox24, "Press Enter to update");
@@ -5338,9 +5708,10 @@ namespace Monitor
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Blue;
-            this.label25.Location = new System.Drawing.Point(64, 18);
+            this.label25.Location = new System.Drawing.Point(51, 14);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(167, 29);
+            this.label25.Size = new System.Drawing.Size(134, 23);
             this.label25.TabIndex = 7;
             this.label25.Text = "Set PSU voltage";
             // 
@@ -5354,9 +5725,11 @@ namespace Monitor
             this.groupBox34.Controls.Add(this.label102);
             this.groupBox34.Controls.Add(this.textBox_PulseWidth);
             this.groupBox34.Controls.Add(this.label103);
-            this.groupBox34.Location = new System.Drawing.Point(832, 142);
+            this.groupBox34.Location = new System.Drawing.Point(666, 114);
+            this.groupBox34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(442, 121);
+            this.groupBox34.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox34.Size = new System.Drawing.Size(354, 97);
             this.groupBox34.TabIndex = 17;
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "Pulse gen";
@@ -5365,9 +5738,10 @@ namespace Monitor
             // 
             this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(335, 24);
+            this.checkBox7.Location = new System.Drawing.Point(268, 19);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(77, 33);
+            this.checkBox7.Size = new System.Drawing.Size(64, 28);
             this.checkBox7.TabIndex = 18;
             this.checkBox7.Text = "Control";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -5375,9 +5749,10 @@ namespace Monitor
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(278, 73);
+            this.button42.Location = new System.Drawing.Point(222, 58);
+            this.button42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(140, 27);
+            this.button42.Size = new System.Drawing.Size(112, 22);
             this.button42.TabIndex = 16;
             this.button42.Text = "Set Tx Inhabit";
             this.button42.UseVisualStyleBackColor = true;
@@ -5385,52 +5760,58 @@ namespace Monitor
             // 
             // textBox_PulseDelay
             // 
-            this.textBox_PulseDelay.Location = new System.Drawing.Point(206, 69);
+            this.textBox_PulseDelay.Location = new System.Drawing.Point(165, 55);
+            this.textBox_PulseDelay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulseDelay.Name = "textBox_PulseDelay";
-            this.textBox_PulseDelay.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulseDelay.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseDelay.TabIndex = 15;
             this.textBox_PulseDelay.Text = "0";
             // 
             // label101
             // 
             this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(202, 38);
+            this.label101.Location = new System.Drawing.Point(162, 30);
+            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(87, 23);
+            this.label101.Size = new System.Drawing.Size(70, 18);
             this.label101.TabIndex = 14;
             this.label101.Text = "Delay (us)";
             // 
             // textBox_PulsePeriod
             // 
-            this.textBox_PulsePeriod.Location = new System.Drawing.Point(109, 69);
+            this.textBox_PulsePeriod.Location = new System.Drawing.Point(87, 55);
+            this.textBox_PulsePeriod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulsePeriod.Name = "textBox_PulsePeriod";
-            this.textBox_PulsePeriod.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulsePeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod.TabIndex = 13;
             this.textBox_PulsePeriod.Text = "16";
             // 
             // label102
             // 
             this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(105, 38);
+            this.label102.Location = new System.Drawing.Point(84, 30);
+            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(94, 23);
+            this.label102.Size = new System.Drawing.Size(76, 18);
             this.label102.TabIndex = 12;
             this.label102.Text = "Period (us)";
             // 
             // textBox_PulseWidth
             // 
-            this.textBox_PulseWidth.Location = new System.Drawing.Point(23, 69);
+            this.textBox_PulseWidth.Location = new System.Drawing.Point(18, 55);
+            this.textBox_PulseWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_PulseWidth.Name = "textBox_PulseWidth";
-            this.textBox_PulseWidth.Size = new System.Drawing.Size(65, 30);
+            this.textBox_PulseWidth.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseWidth.TabIndex = 11;
             this.textBox_PulseWidth.Text = "2";
             // 
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(15, 38);
+            this.label103.Location = new System.Drawing.Point(12, 30);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(91, 23);
+            this.label103.Size = new System.Drawing.Size(73, 18);
             this.label103.TabIndex = 1;
             this.label103.Text = "Width (us)";
             // 
@@ -5443,17 +5824,20 @@ namespace Monitor
             this.groupBox44.Controls.Add(this.label27);
             this.groupBox44.Controls.Add(this.label26);
             this.groupBox44.Controls.Add(this.label19);
-            this.groupBox44.Location = new System.Drawing.Point(8, 5);
+            this.groupBox44.Location = new System.Drawing.Point(6, 4);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(368, 121);
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox44.Size = new System.Drawing.Size(294, 97);
             this.groupBox44.TabIndex = 0;
             this.groupBox44.TabStop = false;
             // 
             // button57
             // 
-            this.button57.Location = new System.Drawing.Point(7, 92);
+            this.button57.Location = new System.Drawing.Point(6, 74);
+            this.button57.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(86, 28);
+            this.button57.Size = new System.Drawing.Size(69, 22);
             this.button57.TabIndex = 12;
             this.button57.Text = "Clear";
             this.button57.UseVisualStyleBackColor = true;
@@ -5461,25 +5845,28 @@ namespace Monitor
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 62);
+            this.textBox2.Location = new System.Drawing.Point(198, 50);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(114, 30);
+            this.textBox2.Size = new System.Drawing.Size(92, 26);
             this.textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(247, 23);
+            this.textBox1.Location = new System.Drawing.Point(198, 18);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(114, 30);
+            this.textBox1.Size = new System.Drawing.Size(92, 26);
             this.textBox1.TabIndex = 12;
             // 
             // button70
             // 
-            this.button70.Location = new System.Drawing.Point(7, 53);
+            this.button70.Location = new System.Drawing.Point(6, 42);
+            this.button70.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button70.Name = "button70";
-            this.button70.Size = new System.Drawing.Size(86, 28);
+            this.button70.Size = new System.Drawing.Size(69, 22);
             this.button70.TabIndex = 6;
             this.button70.Text = "Get";
             this.button70.UseVisualStyleBackColor = true;
@@ -5488,18 +5875,20 @@ namespace Monitor
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(149, 65);
+            this.label27.Location = new System.Drawing.Point(119, 52);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(102, 23);
+            this.label27.Size = new System.Drawing.Size(81, 18);
             this.label27.TabIndex = 5;
             this.label27.Text = "FW version:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(145, 27);
+            this.label26.Location = new System.Drawing.Point(116, 22);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(105, 23);
+            this.label26.Size = new System.Drawing.Size(83, 18);
             this.label26.TabIndex = 4;
             this.label26.Text = "HW version:";
             // 
@@ -5507,9 +5896,10 @@ namespace Monitor
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 18);
+            this.label19.Location = new System.Drawing.Point(5, 14);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 29);
+            this.label19.Size = new System.Drawing.Size(68, 23);
             this.label19.TabIndex = 0;
             this.label19.Text = "System";
             // 
@@ -5526,17 +5916,20 @@ namespace Monitor
             this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
             this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
             this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Location = new System.Drawing.Point(382, 5);
+            this.groupBox1.Location = new System.Drawing.Point(306, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(442, 121);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(354, 97);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // button75
             // 
-            this.button75.Location = new System.Drawing.Point(8, 81);
+            this.button75.Location = new System.Drawing.Point(6, 65);
+            this.button75.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button75.Name = "button75";
-            this.button75.Size = new System.Drawing.Size(86, 28);
+            this.button75.Size = new System.Drawing.Size(69, 22);
             this.button75.TabIndex = 11;
             this.button75.Text = "Clear";
             this.button75.UseVisualStyleBackColor = true;
@@ -5545,42 +5938,47 @@ namespace Monitor
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(329, 67);
+            this.label97.Location = new System.Drawing.Point(263, 54);
+            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(36, 23);
+            this.label97.Size = new System.Drawing.Size(29, 18);
             this.label97.TabIndex = 10;
             this.label97.Text = "SN:";
             // 
             // textBox_SimulatorSN
             // 
-            this.textBox_SimulatorSN.Location = new System.Drawing.Point(365, 58);
+            this.textBox_SimulatorSN.Location = new System.Drawing.Point(292, 46);
+            this.textBox_SimulatorSN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SimulatorSN.Name = "textBox_SimulatorSN";
             this.textBox_SimulatorSN.ReadOnly = true;
-            this.textBox_SimulatorSN.Size = new System.Drawing.Size(57, 30);
+            this.textBox_SimulatorSN.Size = new System.Drawing.Size(46, 26);
             this.textBox_SimulatorSN.TabIndex = 9;
             // 
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(329, 28);
+            this.label96.Location = new System.Drawing.Point(263, 22);
+            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(33, 23);
+            this.label96.Size = new System.Drawing.Size(25, 18);
             this.label96.TabIndex = 8;
             this.label96.Text = "ID:";
             // 
             // textBox_SimulatorID
             // 
-            this.textBox_SimulatorID.Location = new System.Drawing.Point(365, 19);
+            this.textBox_SimulatorID.Location = new System.Drawing.Point(292, 15);
+            this.textBox_SimulatorID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SimulatorID.Name = "textBox_SimulatorID";
             this.textBox_SimulatorID.ReadOnly = true;
-            this.textBox_SimulatorID.Size = new System.Drawing.Size(57, 30);
+            this.textBox_SimulatorID.Size = new System.Drawing.Size(46, 26);
             this.textBox_SimulatorID.TabIndex = 7;
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(7, 48);
+            this.button31.Location = new System.Drawing.Point(6, 38);
+            this.button31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(86, 28);
+            this.button31.Size = new System.Drawing.Size(69, 22);
             this.button31.TabIndex = 6;
             this.button31.Text = "Get";
             this.button31.UseVisualStyleBackColor = true;
@@ -5589,44 +5987,49 @@ namespace Monitor
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(109, 62);
+            this.label93.Location = new System.Drawing.Point(87, 50);
+            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(102, 23);
+            this.label93.Size = new System.Drawing.Size(81, 18);
             this.label93.TabIndex = 5;
             this.label93.Text = "FW version:";
             // 
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(105, 23);
+            this.label94.Location = new System.Drawing.Point(84, 18);
+            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(105, 23);
+            this.label94.Size = new System.Drawing.Size(83, 18);
             this.label94.TabIndex = 4;
             this.label94.Text = "HW version:";
             // 
             // textBox_SimulatorFWVersion
             // 
-            this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(207, 58);
+            this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(166, 46);
+            this.textBox_SimulatorFWVersion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SimulatorFWVersion.Name = "textBox_SimulatorFWVersion";
             this.textBox_SimulatorFWVersion.ReadOnly = true;
-            this.textBox_SimulatorFWVersion.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SimulatorFWVersion.Size = new System.Drawing.Size(92, 26);
             this.textBox_SimulatorFWVersion.TabIndex = 3;
             // 
             // textBox_SimulatorHWVersion
             // 
-            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(207, 21);
+            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(166, 17);
+            this.textBox_SimulatorHWVersion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SimulatorHWVersion.Name = "textBox_SimulatorHWVersion";
             this.textBox_SimulatorHWVersion.ReadOnly = true;
-            this.textBox_SimulatorHWVersion.Size = new System.Drawing.Size(114, 30);
+            this.textBox_SimulatorHWVersion.Size = new System.Drawing.Size(92, 26);
             this.textBox_SimulatorHWVersion.TabIndex = 1;
             // 
             // label95
             // 
             this.label95.AutoSize = true;
             this.label95.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(5, 17);
+            this.label95.Location = new System.Drawing.Point(4, 14);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(111, 29);
+            this.label95.Size = new System.Drawing.Size(87, 23);
             this.label95.TabIndex = 0;
             this.label95.Text = "Simulator";
             // 
@@ -5640,9 +6043,11 @@ namespace Monitor
             this.groupBox33.Controls.Add(this.label99);
             this.groupBox33.Controls.Add(this.textBox_RFWidth);
             this.groupBox33.Controls.Add(this.label98);
-            this.groupBox33.Location = new System.Drawing.Point(832, 11);
+            this.groupBox33.Location = new System.Drawing.Point(666, 9);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(442, 121);
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox33.Size = new System.Drawing.Size(354, 97);
             this.groupBox33.TabIndex = 2;
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "RF gen";
@@ -5651,9 +6056,10 @@ namespace Monitor
             // 
             this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(335, 23);
+            this.checkBox6.Location = new System.Drawing.Point(268, 18);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(77, 33);
+            this.checkBox6.Size = new System.Drawing.Size(64, 28);
             this.checkBox6.TabIndex = 17;
             this.checkBox6.Text = "Control";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -5661,9 +6067,10 @@ namespace Monitor
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(278, 73);
+            this.button32.Location = new System.Drawing.Point(222, 58);
+            this.button32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(140, 27);
+            this.button32.Size = new System.Drawing.Size(112, 22);
             this.button32.TabIndex = 16;
             this.button32.Text = "Set Tx Inhabit";
             this.button32.UseVisualStyleBackColor = true;
@@ -5671,52 +6078,58 @@ namespace Monitor
             // 
             // textBox_RFDelay
             // 
-            this.textBox_RFDelay.Location = new System.Drawing.Point(206, 69);
+            this.textBox_RFDelay.Location = new System.Drawing.Point(165, 55);
+            this.textBox_RFDelay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RFDelay.Name = "textBox_RFDelay";
-            this.textBox_RFDelay.Size = new System.Drawing.Size(65, 30);
+            this.textBox_RFDelay.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFDelay.TabIndex = 15;
             this.textBox_RFDelay.Text = "0";
             // 
             // label100
             // 
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(202, 38);
+            this.label100.Location = new System.Drawing.Point(162, 30);
+            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(87, 23);
+            this.label100.Size = new System.Drawing.Size(70, 18);
             this.label100.TabIndex = 14;
             this.label100.Text = "Delay (us)";
             // 
             // textBox_RFPeriod
             // 
-            this.textBox_RFPeriod.Location = new System.Drawing.Point(109, 69);
+            this.textBox_RFPeriod.Location = new System.Drawing.Point(87, 55);
+            this.textBox_RFPeriod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RFPeriod.Name = "textBox_RFPeriod";
-            this.textBox_RFPeriod.Size = new System.Drawing.Size(65, 30);
+            this.textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFPeriod.TabIndex = 13;
             this.textBox_RFPeriod.Text = "16";
             // 
             // label99
             // 
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(105, 38);
+            this.label99.Location = new System.Drawing.Point(84, 30);
+            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(94, 23);
+            this.label99.Size = new System.Drawing.Size(76, 18);
             this.label99.TabIndex = 12;
             this.label99.Text = "Period (us)";
             // 
             // textBox_RFWidth
             // 
-            this.textBox_RFWidth.Location = new System.Drawing.Point(23, 69);
+            this.textBox_RFWidth.Location = new System.Drawing.Point(18, 55);
+            this.textBox_RFWidth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_RFWidth.Name = "textBox_RFWidth";
-            this.textBox_RFWidth.Size = new System.Drawing.Size(65, 30);
+            this.textBox_RFWidth.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFWidth.TabIndex = 11;
             this.textBox_RFWidth.Text = "2";
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(15, 38);
+            this.label98.Location = new System.Drawing.Point(12, 30);
+            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(91, 23);
+            this.label98.Size = new System.Drawing.Size(73, 18);
             this.label98.TabIndex = 1;
             this.label98.Text = "Width (us)";
             // 
@@ -5731,9 +6144,10 @@ namespace Monitor
             this.tabPage13.Controls.Add(this.textBox62);
             this.tabPage13.Controls.Add(this.label77);
             this.tabPage13.Controls.Add(this.textBox61);
-            this.tabPage13.Location = new System.Drawing.Point(4, 32);
+            this.tabPage13.Location = new System.Drawing.Point(4, 27);
+            this.tabPage13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1544, 743);
+            this.tabPage13.Size = new System.Drawing.Size(1234, 592);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "Page 0";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -5743,10 +6157,11 @@ namespace Monitor
             this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn29});
-            this.dataGridView_ValPage0.Location = new System.Drawing.Point(544, 292);
+            this.dataGridView_ValPage0.Location = new System.Drawing.Point(435, 234);
+            this.dataGridView_ValPage0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
             this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_ValPage0.Size = new System.Drawing.Size(384, 437);
+            this.dataGridView_ValPage0.Size = new System.Drawing.Size(307, 350);
             this.dataGridView_ValPage0.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn29
@@ -5759,9 +6174,10 @@ namespace Monitor
             // label81
             // 
             this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(605, 852);
+            this.label81.Location = new System.Drawing.Point(484, 682);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(151, 23);
+            this.label81.Size = new System.Drawing.Size(115, 18);
             this.label81.TabIndex = 26;
             this.label81.Text = "TGA2700 DC4 Vdd";
             // 
@@ -5772,10 +6188,11 @@ namespace Monitor
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Column3});
-            this.dataGridView_OverUnder.Location = new System.Drawing.Point(8, 292);
+            this.dataGridView_OverUnder.Location = new System.Drawing.Point(6, 234);
+            this.dataGridView_OverUnder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_OverUnder.Name = "dataGridView_OverUnder";
             this.dataGridView_OverUnder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_OverUnder.Size = new System.Drawing.Size(529, 437);
+            this.dataGridView_OverUnder.Size = new System.Drawing.Size(423, 350);
             this.dataGridView_OverUnder.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn3
@@ -5802,50 +6219,56 @@ namespace Monitor
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(23, 230);
+            this.label82.Location = new System.Drawing.Point(18, 184);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(132, 23);
+            this.label82.Size = new System.Drawing.Size(106, 18);
             this.label82.TabIndex = 16;
             this.label82.Text = "Calibration date";
             // 
             // textBox66
             // 
-            this.textBox66.Location = new System.Drawing.Point(155, 223);
+            this.textBox66.Location = new System.Drawing.Point(124, 178);
+            this.textBox66.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(115, 30);
+            this.textBox66.Size = new System.Drawing.Size(93, 26);
             this.textBox66.TabIndex = 15;
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(347, 53);
+            this.label78.Location = new System.Drawing.Point(278, 42);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(105, 23);
+            this.label78.Size = new System.Drawing.Size(83, 18);
             this.label78.TabIndex = 8;
             this.label78.Text = "HW version:";
             // 
             // textBox62
             // 
-            this.textBox62.Location = new System.Drawing.Point(503, 52);
+            this.textBox62.Location = new System.Drawing.Point(402, 42);
+            this.textBox62.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(114, 30);
+            this.textBox62.Size = new System.Drawing.Size(92, 26);
             this.textBox62.TabIndex = 7;
             // 
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(22, 54);
+            this.label77.Location = new System.Drawing.Point(18, 43);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(122, 23);
+            this.label77.Size = new System.Drawing.Size(99, 18);
             this.label77.TabIndex = 6;
             this.label77.Text = "Serial number:";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox61
             // 
-            this.textBox61.Location = new System.Drawing.Point(155, 51);
+            this.textBox61.Location = new System.Drawing.Point(124, 41);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(115, 30);
+            this.textBox61.Size = new System.Drawing.Size(93, 26);
             this.textBox61.TabIndex = 5;
             // 
             // tabPage7
@@ -5853,10 +6276,11 @@ namespace Monitor
             this.tabPage7.Controls.Add(this.label117);
             this.tabPage7.Controls.Add(this.label116);
             this.tabPage7.Controls.Add(this.dataGridView_Page1_4);
-            this.tabPage7.Location = new System.Drawing.Point(4, 32);
+            this.tabPage7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1544, 743);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Size = new System.Drawing.Size(1234, 592);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Page 1-4";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -5865,9 +6289,10 @@ namespace Monitor
             // 
             this.label117.AutoSize = true;
             this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.Location = new System.Drawing.Point(593, 5);
+            this.label117.Location = new System.Drawing.Point(474, 4);
+            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(135, 29);
+            this.label117.Size = new System.Drawing.Size(108, 23);
             this.label117.TabIndex = 31;
             this.label117.Text = "DC4-40 dBm";
             // 
@@ -5875,16 +6300,17 @@ namespace Monitor
             // 
             this.label116.AutoSize = true;
             this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.Location = new System.Drawing.Point(216, 4);
+            this.label116.Location = new System.Drawing.Point(173, 3);
+            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(88, 29);
+            this.label116.Size = new System.Drawing.Size(70, 23);
             this.label116.TabIndex = 30;
             this.label116.Text = "46 dBm";
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -5905,13 +6331,14 @@ namespace Monitor
             this.Column19,
             this.Column20,
             this.Column21});
-            this.dataGridView_Page1_4.Location = new System.Drawing.Point(11, 45);
+            this.dataGridView_Page1_4.Location = new System.Drawing.Point(9, 36);
+            this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.Size = new System.Drawing.Size(1172, 690);
+            this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn1
@@ -5919,112 +6346,112 @@ namespace Monitor
             this.dataGridViewTextBoxColumn1.HeaderText = "F0";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 58;
+            this.dataGridViewTextBoxColumn1.Width = 47;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "F1";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 58;
+            this.dataGridViewTextBoxColumn2.Width = 47;
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.HeaderText = "F2";
             this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Width = 58;
+            this.dataGridViewTextBoxColumn23.Width = 47;
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.HeaderText = "F3";
             this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 58;
+            this.dataGridViewTextBoxColumn24.Width = 47;
             // 
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.HeaderText = "F4";
             this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 58;
+            this.dataGridViewTextBoxColumn25.Width = 47;
             // 
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.HeaderText = "F5";
             this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.Width = 58;
+            this.dataGridViewTextBoxColumn26.Width = 47;
             // 
             // dataGridViewTextBoxColumn27
             // 
             this.dataGridViewTextBoxColumn27.HeaderText = "F6";
             this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.Width = 58;
+            this.dataGridViewTextBoxColumn27.Width = 47;
             // 
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.HeaderText = "F7";
             this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.Width = 58;
+            this.dataGridViewTextBoxColumn28.Width = 47;
             // 
             // Column14
             // 
             this.Column14.HeaderText = "F0";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
-            this.Column14.Width = 58;
+            this.Column14.Width = 47;
             // 
             // Column15
             // 
             this.Column15.HeaderText = "F1";
             this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
-            this.Column15.Width = 58;
+            this.Column15.Width = 47;
             // 
             // Column16
             // 
             this.Column16.HeaderText = "F2";
             this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
-            this.Column16.Width = 58;
+            this.Column16.Width = 47;
             // 
             // Column17
             // 
             this.Column17.HeaderText = "F3";
             this.Column17.MinimumWidth = 6;
             this.Column17.Name = "Column17";
-            this.Column17.Width = 58;
+            this.Column17.Width = 47;
             // 
             // Column18
             // 
             this.Column18.HeaderText = "F4";
             this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
-            this.Column18.Width = 58;
+            this.Column18.Width = 47;
             // 
             // Column19
             // 
             this.Column19.HeaderText = "F5";
             this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
-            this.Column19.Width = 58;
+            this.Column19.Width = 47;
             // 
             // Column20
             // 
             this.Column20.HeaderText = "F6";
             this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
-            this.Column20.Width = 58;
+            this.Column20.Width = 47;
             // 
             // Column21
             // 
             this.Column21.HeaderText = "F7";
             this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
-            this.Column21.Width = 58;
+            this.Column21.Width = 47;
             // 
             // tabPage8
             // 
@@ -6038,9 +6465,10 @@ namespace Monitor
             this.tabPage8.Controls.Add(this.label76);
             this.tabPage8.Controls.Add(this.label75);
             this.tabPage8.Controls.Add(this.dataGridView_DC4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 32);
+            this.tabPage8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1544, 743);
+            this.tabPage8.Size = new System.Drawing.Size(1234, 592);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Page 5-7";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -6049,9 +6477,10 @@ namespace Monitor
             // 
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(944, 380);
+            this.label89.Location = new System.Drawing.Point(755, 304);
+            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(126, 29);
+            this.label89.Size = new System.Drawing.Size(100, 23);
             this.label89.TabIndex = 12;
             this.label89.Text = "Vdd offset1";
             // 
@@ -6068,10 +6497,11 @@ namespace Monitor
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
-            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(890, 412);
+            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(712, 330);
+            this.dataGridView_VVAOffset1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_VVAOffset1.Name = "dataGridView_VVAOffset1";
             this.dataGridView_VVAOffset1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(635, 320);
+            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(508, 256);
             this.dataGridView_VVAOffset1.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn10
@@ -6079,64 +6509,65 @@ namespace Monitor
             this.dataGridViewTextBoxColumn10.HeaderText = "F0";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 58;
+            this.dataGridViewTextBoxColumn10.Width = 47;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.HeaderText = "F1";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 58;
+            this.dataGridViewTextBoxColumn11.Width = 47;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.HeaderText = "F2";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 58;
+            this.dataGridViewTextBoxColumn12.Width = 47;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.HeaderText = "F3";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 58;
+            this.dataGridViewTextBoxColumn13.Width = 47;
             // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.HeaderText = "F4";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 58;
+            this.dataGridViewTextBoxColumn14.Width = 47;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.HeaderText = "F5";
             this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 58;
+            this.dataGridViewTextBoxColumn15.Width = 47;
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.HeaderText = "F6";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 58;
+            this.dataGridViewTextBoxColumn16.Width = 47;
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.HeaderText = "F7";
             this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 58;
+            this.dataGridViewTextBoxColumn17.Width = 47;
             // 
             // label88
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(944, 12);
+            this.label88.Location = new System.Drawing.Point(755, 10);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(129, 29);
+            this.label88.Size = new System.Drawing.Size(103, 23);
             this.label88.TabIndex = 10;
             this.label88.Text = "VVA offset2";
             // 
@@ -6154,10 +6585,11 @@ namespace Monitor
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(890, 51);
+            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(712, 41);
+            this.dataGridView_VVAOffset2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
             this.dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(637, 327);
+            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(510, 262);
             this.dataGridView_VVAOffset2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
@@ -6165,64 +6597,65 @@ namespace Monitor
             this.dataGridViewTextBoxColumn8.HeaderText = "F0";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 58;
+            this.dataGridViewTextBoxColumn8.Width = 47;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.HeaderText = "F1";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 58;
+            this.dataGridViewTextBoxColumn9.Width = 47;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "F2";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 58;
+            this.Column4.Width = 47;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "F3";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 58;
+            this.Column5.Width = 47;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "F4";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 58;
+            this.Column6.Width = 47;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "F5";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 58;
+            this.Column7.Width = 47;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "F6";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 58;
+            this.Column8.Width = 47;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "F7";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            this.Column9.Width = 58;
+            this.Column9.Width = 47;
             // 
             // label87
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(551, 10);
+            this.label87.Location = new System.Drawing.Point(441, 8);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(133, 29);
+            this.label87.Size = new System.Drawing.Size(105, 23);
             this.label87.TabIndex = 8;
             this.label87.Text = "DCA control";
             // 
@@ -6230,9 +6663,10 @@ namespace Monitor
             // 
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label86.Location = new System.Drawing.Point(414, 10);
+            this.label86.Location = new System.Drawing.Point(331, 8);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(148, 29);
+            this.label86.Size = new System.Drawing.Size(118, 23);
             this.label86.TabIndex = 6;
             this.label86.Text = "PA VVA offset";
             // 
@@ -6244,10 +6678,11 @@ namespace Monitor
             this.dataGridViewTextBoxColumn5,
             this.Column12,
             this.Column13});
-            this.dataGridView_PAVVA.Location = new System.Drawing.Point(432, 51);
+            this.dataGridView_PAVVA.Location = new System.Drawing.Point(346, 41);
+            this.dataGridView_PAVVA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_PAVVA.Name = "dataGridView_PAVVA";
             this.dataGridView_PAVVA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_PAVVA.Size = new System.Drawing.Size(451, 681);
+            this.dataGridView_PAVVA.Size = new System.Drawing.Size(361, 545);
             this.dataGridView_PAVVA.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn5
@@ -6255,29 +6690,30 @@ namespace Monitor
             this.dataGridViewTextBoxColumn5.HeaderText = "VVA";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 71;
+            this.dataGridViewTextBoxColumn5.Width = 59;
             // 
             // Column12
             // 
             this.Column12.HeaderText = "DCA1";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
-            this.Column12.Width = 82;
+            this.Column12.Width = 66;
             // 
             // Column13
             // 
             this.Column13.HeaderText = "DCA2";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
-            this.Column13.Width = 82;
+            this.Column13.Width = 66;
             // 
             // label76
             // 
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(323, 15);
+            this.label76.Location = new System.Drawing.Point(258, 12);
+            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(84, 29);
+            this.label76.Size = new System.Drawing.Size(66, 23);
             this.label76.TabIndex = 4;
             this.label76.Text = "DC4 on";
             // 
@@ -6285,9 +6721,10 @@ namespace Monitor
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(202, 12);
+            this.label75.Location = new System.Drawing.Point(162, 10);
+            this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(85, 29);
+            this.label75.Size = new System.Drawing.Size(67, 23);
             this.label75.TabIndex = 2;
             this.label75.Text = "DC4 off";
             // 
@@ -6300,13 +6737,14 @@ namespace Monitor
             this.Column2,
             this.Column10,
             this.Column11});
-            this.dataGridView_DC4.Location = new System.Drawing.Point(3, 54);
+            this.dataGridView_DC4.Location = new System.Drawing.Point(2, 43);
+            this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridView_DC4.Size = new System.Drawing.Size(422, 682);
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -6315,28 +6753,28 @@ namespace Monitor
             this.Column1.HeaderText = "28V";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 70;
+            this.Column1.Width = 56;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Vgg";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 67;
+            this.Column2.Width = 55;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "28V";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
-            this.Column10.Width = 70;
+            this.Column10.Width = 56;
             // 
             // Column11
             // 
             this.Column11.HeaderText = "Vgg";
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
-            this.Column11.Width = 67;
+            this.Column11.Width = 55;
             // 
             // tabPage9
             // 
@@ -6346,9 +6784,10 @@ namespace Monitor
             this.tabPage9.Controls.Add(this.dataGridView9);
             this.tabPage9.Controls.Add(this.label90);
             this.tabPage9.Controls.Add(this.dataGridView8);
-            this.tabPage9.Location = new System.Drawing.Point(4, 32);
+            this.tabPage9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1544, 743);
+            this.tabPage9.Size = new System.Drawing.Size(1234, 592);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "Page 8";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -6357,9 +6796,10 @@ namespace Monitor
             // 
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(611, 16);
+            this.label92.Location = new System.Drawing.Point(489, 13);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(214, 29);
+            this.label92.Size = new System.Drawing.Size(169, 23);
             this.label92.TabIndex = 12;
             this.label92.Text = "Pulse fall time delay";
             // 
@@ -6370,10 +6810,11 @@ namespace Monitor
             this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22});
-            this.dataGridView10.Location = new System.Drawing.Point(608, 53);
+            this.dataGridView10.Location = new System.Drawing.Point(486, 42);
+            this.dataGridView10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.RowHeadersWidth = 51;
-            this.dataGridView10.Size = new System.Drawing.Size(189, 682);
+            this.dataGridView10.Size = new System.Drawing.Size(151, 546);
             this.dataGridView10.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn21
@@ -6381,22 +6822,23 @@ namespace Monitor
             this.dataGridViewTextBoxColumn21.HeaderText = "MPA";
             this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 75;
+            this.dataGridViewTextBoxColumn21.Width = 61;
             // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.HeaderText = "SPA";
             this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Width = 68;
+            this.dataGridViewTextBoxColumn22.Width = 56;
             // 
             // label91
             // 
             this.label91.AutoSize = true;
             this.label91.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(327, 16);
+            this.label91.Location = new System.Drawing.Point(262, 13);
+            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(228, 29);
+            this.label91.Size = new System.Drawing.Size(181, 23);
             this.label91.TabIndex = 10;
             this.label91.Text = "Pulse Rise Time delay";
             // 
@@ -6407,10 +6849,11 @@ namespace Monitor
             this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
-            this.dataGridView9.Location = new System.Drawing.Point(323, 53);
+            this.dataGridView9.Location = new System.Drawing.Point(258, 42);
+            this.dataGridView9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.RowHeadersWidth = 51;
-            this.dataGridView9.Size = new System.Drawing.Size(189, 682);
+            this.dataGridView9.Size = new System.Drawing.Size(151, 546);
             this.dataGridView9.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn19
@@ -6418,22 +6861,23 @@ namespace Monitor
             this.dataGridViewTextBoxColumn19.HeaderText = "MPA";
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Width = 75;
+            this.dataGridViewTextBoxColumn19.Width = 61;
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.HeaderText = "SPA";
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 68;
+            this.dataGridViewTextBoxColumn20.Width = 56;
             // 
             // label90
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(14, 16);
+            this.label90.Location = new System.Drawing.Point(11, 13);
+            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(96, 29);
+            this.label90.Size = new System.Drawing.Size(77, 23);
             this.label90.TabIndex = 8;
             this.label90.Text = "SAR-SAT";
             // 
@@ -6443,10 +6887,11 @@ namespace Monitor
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn18});
-            this.dataGridView8.Location = new System.Drawing.Point(15, 57);
+            this.dataGridView8.Location = new System.Drawing.Point(12, 46);
+            this.dataGridView8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView8.Size = new System.Drawing.Size(275, 681);
+            this.dataGridView8.Size = new System.Drawing.Size(220, 545);
             this.dataGridView8.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn18
@@ -6454,15 +6899,17 @@ namespace Monitor
             this.dataGridViewTextBoxColumn18.HeaderText = "Value";
             this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 81;
+            this.dataGridViewTextBoxColumn18.Width = 68;
             // 
             // groupBox42
             // 
             this.groupBox42.Controls.Add(this.radioButton_TCPIP);
             this.groupBox42.Controls.Add(this.radioButton_SerialPort);
-            this.groupBox42.Location = new System.Drawing.Point(1784, 415);
+            this.groupBox42.Location = new System.Drawing.Point(1427, 332);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Size = new System.Drawing.Size(229, 121);
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox42.Size = new System.Drawing.Size(183, 97);
             this.groupBox42.TabIndex = 33;
             this.groupBox42.TabStop = false;
             this.groupBox42.Text = "Communication gatway";
@@ -6470,9 +6917,10 @@ namespace Monitor
             // radioButton_TCPIP
             // 
             this.radioButton_TCPIP.AutoSize = true;
-            this.radioButton_TCPIP.Location = new System.Drawing.Point(23, 68);
+            this.radioButton_TCPIP.Location = new System.Drawing.Point(18, 54);
+            this.radioButton_TCPIP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_TCPIP.Name = "radioButton_TCPIP";
-            this.radioButton_TCPIP.Size = new System.Drawing.Size(82, 27);
+            this.radioButton_TCPIP.Size = new System.Drawing.Size(66, 22);
             this.radioButton_TCPIP.TabIndex = 1;
             this.radioButton_TCPIP.TabStop = true;
             this.radioButton_TCPIP.Text = "TCP/IP";
@@ -6482,9 +6930,10 @@ namespace Monitor
             // 
             this.radioButton_SerialPort.AutoSize = true;
             this.radioButton_SerialPort.Checked = true;
-            this.radioButton_SerialPort.Location = new System.Drawing.Point(23, 31);
+            this.radioButton_SerialPort.Location = new System.Drawing.Point(18, 25);
+            this.radioButton_SerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButton_SerialPort.Name = "radioButton_SerialPort";
-            this.radioButton_SerialPort.Size = new System.Drawing.Size(110, 27);
+            this.radioButton_SerialPort.Size = new System.Drawing.Size(90, 22);
             this.radioButton_SerialPort.TabIndex = 0;
             this.radioButton_SerialPort.TabStop = true;
             this.radioButton_SerialPort.Text = "Serial Port";
@@ -6492,9 +6941,10 @@ namespace Monitor
             // 
             // button_OpenFolder
             // 
-            this.button_OpenFolder.Location = new System.Drawing.Point(1784, 368);
+            this.button_OpenFolder.Location = new System.Drawing.Point(1427, 294);
+            this.button_OpenFolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_OpenFolder.Name = "button_OpenFolder";
-            this.button_OpenFolder.Size = new System.Drawing.Size(218, 31);
+            this.button_OpenFolder.Size = new System.Drawing.Size(174, 25);
             this.button_OpenFolder.TabIndex = 76;
             this.button_OpenFolder.Text = "Open Folder";
             this.button_OpenFolder.UseVisualStyleBackColor = true;
@@ -6581,7 +7031,7 @@ namespace Monitor
             // 
             this.TextBox_Odometer.Location = new System.Drawing.Point(6, 23);
             this.TextBox_Odometer.Name = "TextBox_Odometer";
-            this.TextBox_Odometer.Size = new System.Drawing.Size(100, 26);
+            this.TextBox_Odometer.Size = new System.Drawing.Size(100, 22);
             this.TextBox_Odometer.TabIndex = 64;
             // 
             // button19
@@ -6614,21 +7064,21 @@ namespace Monitor
             // 
             this.textBox_ModemSocket.Location = new System.Drawing.Point(8, 77);
             this.textBox_ModemSocket.Name = "textBox_ModemSocket";
-            this.textBox_ModemSocket.Size = new System.Drawing.Size(132, 26);
+            this.textBox_ModemSocket.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemSocket.TabIndex = 80;
             // 
             // textBox_ModemRetries
             // 
             this.textBox_ModemRetries.Location = new System.Drawing.Point(8, 50);
             this.textBox_ModemRetries.Name = "textBox_ModemRetries";
-            this.textBox_ModemRetries.Size = new System.Drawing.Size(132, 26);
+            this.textBox_ModemRetries.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemRetries.TabIndex = 79;
             // 
             // textBox_ModemTimeOut
             // 
             this.textBox_ModemTimeOut.Location = new System.Drawing.Point(8, 23);
             this.textBox_ModemTimeOut.Name = "textBox_ModemTimeOut";
-            this.textBox_ModemTimeOut.Size = new System.Drawing.Size(132, 26);
+            this.textBox_ModemTimeOut.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemTimeOut.TabIndex = 78;
             // 
             // button25
@@ -6646,14 +7096,14 @@ namespace Monitor
             // 
             this.textBox_ModemPrimeryPort.Location = new System.Drawing.Point(8, 129);
             this.textBox_ModemPrimeryPort.Name = "textBox_ModemPrimeryPort";
-            this.textBox_ModemPrimeryPort.Size = new System.Drawing.Size(132, 26);
+            this.textBox_ModemPrimeryPort.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemPrimeryPort.TabIndex = 37;
             // 
             // textBox_ModemPrimeryHost
             // 
             this.textBox_ModemPrimeryHost.Location = new System.Drawing.Point(8, 101);
             this.textBox_ModemPrimeryHost.Name = "textBox_ModemPrimeryHost";
-            this.textBox_ModemPrimeryHost.Size = new System.Drawing.Size(132, 26);
+            this.textBox_ModemPrimeryHost.Size = new System.Drawing.Size(132, 22);
             this.textBox_ModemPrimeryHost.TabIndex = 36;
             // 
             // groupBox30
@@ -6675,7 +7125,7 @@ namespace Monitor
             // 
             this.textBox_ForginPassword.Location = new System.Drawing.Point(8, 77);
             this.textBox_ForginPassword.Name = "textBox_ForginPassword";
-            this.textBox_ForginPassword.Size = new System.Drawing.Size(146, 26);
+            this.textBox_ForginPassword.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginPassword.TabIndex = 35;
             // 
             // button27
@@ -6693,28 +7143,28 @@ namespace Monitor
             // 
             this.textBox_ForginAcessPoint.Location = new System.Drawing.Point(7, 23);
             this.textBox_ForginAcessPoint.Name = "textBox_ForginAcessPoint";
-            this.textBox_ForginAcessPoint.Size = new System.Drawing.Size(147, 26);
+            this.textBox_ForginAcessPoint.Size = new System.Drawing.Size(147, 22);
             this.textBox_ForginAcessPoint.TabIndex = 33;
             // 
             // textBox_ForginSecondaryDNS
             // 
             this.textBox_ForginSecondaryDNS.Location = new System.Drawing.Point(8, 129);
             this.textBox_ForginSecondaryDNS.Name = "textBox_ForginSecondaryDNS";
-            this.textBox_ForginSecondaryDNS.Size = new System.Drawing.Size(146, 26);
+            this.textBox_ForginSecondaryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginSecondaryDNS.TabIndex = 37;
             // 
             // textBox_ForginUserName
             // 
             this.textBox_ForginUserName.Location = new System.Drawing.Point(8, 51);
             this.textBox_ForginUserName.Name = "textBox_ForginUserName";
-            this.textBox_ForginUserName.Size = new System.Drawing.Size(146, 26);
+            this.textBox_ForginUserName.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginUserName.TabIndex = 34;
             // 
             // textBox_ForginPrimeryDNS
             // 
             this.textBox_ForginPrimeryDNS.Location = new System.Drawing.Point(8, 101);
             this.textBox_ForginPrimeryDNS.Name = "textBox_ForginPrimeryDNS";
-            this.textBox_ForginPrimeryDNS.Size = new System.Drawing.Size(146, 26);
+            this.textBox_ForginPrimeryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_ForginPrimeryDNS.TabIndex = 36;
             // 
             // groupBox29
@@ -6736,7 +7186,7 @@ namespace Monitor
             // 
             this.textBox_HomePassword.Location = new System.Drawing.Point(8, 77);
             this.textBox_HomePassword.Name = "textBox_HomePassword";
-            this.textBox_HomePassword.Size = new System.Drawing.Size(146, 26);
+            this.textBox_HomePassword.Size = new System.Drawing.Size(146, 22);
             this.textBox_HomePassword.TabIndex = 35;
             this.textBox_HomePassword.Text = "Password";
             // 
@@ -6755,7 +7205,7 @@ namespace Monitor
             // 
             this.textBox_HomeAcessPoint.Location = new System.Drawing.Point(7, 23);
             this.textBox_HomeAcessPoint.Name = "textBox_HomeAcessPoint";
-            this.textBox_HomeAcessPoint.Size = new System.Drawing.Size(147, 26);
+            this.textBox_HomeAcessPoint.Size = new System.Drawing.Size(147, 22);
             this.textBox_HomeAcessPoint.TabIndex = 33;
             this.textBox_HomeAcessPoint.Text = "Aceess point";
             // 
@@ -6763,7 +7213,7 @@ namespace Monitor
             // 
             this.textBox_HomeSecondaryDNS.Location = new System.Drawing.Point(8, 129);
             this.textBox_HomeSecondaryDNS.Name = "textBox_HomeSecondaryDNS";
-            this.textBox_HomeSecondaryDNS.Size = new System.Drawing.Size(146, 26);
+            this.textBox_HomeSecondaryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_HomeSecondaryDNS.TabIndex = 37;
             this.textBox_HomeSecondaryDNS.Text = "Secondary DNS";
             // 
@@ -6771,7 +7221,7 @@ namespace Monitor
             // 
             this.textBox_HomeUserName.Location = new System.Drawing.Point(8, 51);
             this.textBox_HomeUserName.Name = "textBox_HomeUserName";
-            this.textBox_HomeUserName.Size = new System.Drawing.Size(146, 26);
+            this.textBox_HomeUserName.Size = new System.Drawing.Size(146, 22);
             this.textBox_HomeUserName.TabIndex = 34;
             this.textBox_HomeUserName.Text = "User Name";
             // 
@@ -6779,7 +7229,7 @@ namespace Monitor
             // 
             this.textBox_HomePrimeryDNS.Location = new System.Drawing.Point(8, 101);
             this.textBox_HomePrimeryDNS.Name = "textBox_HomePrimeryDNS";
-            this.textBox_HomePrimeryDNS.Size = new System.Drawing.Size(146, 26);
+            this.textBox_HomePrimeryDNS.Size = new System.Drawing.Size(146, 22);
             this.textBox_HomePrimeryDNS.TabIndex = 36;
             this.textBox_HomePrimeryDNS.Text = "Primery DNS";
             // 
@@ -6798,7 +7248,7 @@ namespace Monitor
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(6, 18);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox1.TabIndex = 71;
             // 
             // button24
@@ -6827,7 +7277,7 @@ namespace Monitor
             // 
             this.TextBox_NormalStatusDuration.Location = new System.Drawing.Point(6, 17);
             this.TextBox_NormalStatusDuration.Name = "TextBox_NormalStatusDuration";
-            this.TextBox_NormalStatusDuration.Size = new System.Drawing.Size(100, 26);
+            this.TextBox_NormalStatusDuration.Size = new System.Drawing.Size(100, 22);
             this.TextBox_NormalStatusDuration.TabIndex = 71;
             // 
             // button23
@@ -6858,21 +7308,21 @@ namespace Monitor
             // 
             this.maskedTextBox_SpeedLimit2.Location = new System.Drawing.Point(53, 20);
             this.maskedTextBox_SpeedLimit2.Name = "maskedTextBox_SpeedLimit2";
-            this.maskedTextBox_SpeedLimit2.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_SpeedLimit2.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_SpeedLimit2.TabIndex = 80;
             // 
             // maskedTextBox_SpeedLimit3
             // 
             this.maskedTextBox_SpeedLimit3.Location = new System.Drawing.Point(101, 19);
             this.maskedTextBox_SpeedLimit3.Name = "maskedTextBox_SpeedLimit3";
-            this.maskedTextBox_SpeedLimit3.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_SpeedLimit3.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_SpeedLimit3.TabIndex = 79;
             // 
             // maskedTextBox_SpeedLimit1
             // 
             this.maskedTextBox_SpeedLimit1.Location = new System.Drawing.Point(6, 20);
             this.maskedTextBox_SpeedLimit1.Name = "maskedTextBox_SpeedLimit1";
-            this.maskedTextBox_SpeedLimit1.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_SpeedLimit1.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_SpeedLimit1.TabIndex = 78;
             // 
             // button22
@@ -6906,7 +7356,7 @@ namespace Monitor
             "1"});
             this.comboBox_DispatchSpeed.Location = new System.Drawing.Point(8, 44);
             this.comboBox_DispatchSpeed.Name = "comboBox_DispatchSpeed";
-            this.comboBox_DispatchSpeed.Size = new System.Drawing.Size(94, 25);
+            this.comboBox_DispatchSpeed.Size = new System.Drawing.Size(94, 21);
             this.comboBox_DispatchSpeed.TabIndex = 63;
             this.comboBox_DispatchSpeed.Text = "Speed";
             // 
@@ -6941,7 +7391,7 @@ namespace Monitor
             "1"});
             this.comboBox_KillEngine.Location = new System.Drawing.Point(6, 20);
             this.comboBox_KillEngine.Name = "comboBox_KillEngine";
-            this.comboBox_KillEngine.Size = new System.Drawing.Size(58, 25);
+            this.comboBox_KillEngine.Size = new System.Drawing.Size(58, 21);
             this.comboBox_KillEngine.TabIndex = 63;
             this.comboBox_KillEngine.Text = "Engine";
             // 
@@ -6972,7 +7422,7 @@ namespace Monitor
             // 
             this.maskedTextBox_TiltTowSens.Location = new System.Drawing.Point(81, 32);
             this.maskedTextBox_TiltTowSens.Name = "maskedTextBox_TiltTowSens";
-            this.maskedTextBox_TiltTowSens.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox_TiltTowSens.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox_TiltTowSens.TabIndex = 83;
             // 
             // comboBox_TiltTowSensState
@@ -6984,7 +7434,7 @@ namespace Monitor
             "1"});
             this.comboBox_TiltTowSensState.Location = new System.Drawing.Point(17, 32);
             this.comboBox_TiltTowSensState.Name = "comboBox_TiltTowSensState";
-            this.comboBox_TiltTowSensState.Size = new System.Drawing.Size(58, 25);
+            this.comboBox_TiltTowSensState.Size = new System.Drawing.Size(58, 21);
             this.comboBox_TiltTowSensState.TabIndex = 82;
             this.comboBox_TiltTowSensState.Text = "State";
             // 
@@ -7015,7 +7465,7 @@ namespace Monitor
             // 
             this.maskedTextBox_HitSensitivity.Location = new System.Drawing.Point(81, 32);
             this.maskedTextBox_HitSensitivity.Name = "maskedTextBox_HitSensitivity";
-            this.maskedTextBox_HitSensitivity.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox_HitSensitivity.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox_HitSensitivity.TabIndex = 82;
             // 
             // comboBox_HitState
@@ -7027,7 +7477,7 @@ namespace Monitor
             "1"});
             this.comboBox_HitState.Location = new System.Drawing.Point(17, 32);
             this.comboBox_HitState.Name = "comboBox_HitState";
-            this.comboBox_HitState.Size = new System.Drawing.Size(58, 25);
+            this.comboBox_HitState.Size = new System.Drawing.Size(58, 21);
             this.comboBox_HitState.TabIndex = 62;
             this.comboBox_HitState.Text = "State";
             // 
@@ -7059,14 +7509,14 @@ namespace Monitor
             // 
             this.maskedTextBox_ShockDetectNum.Location = new System.Drawing.Point(111, 24);
             this.maskedTextBox_ShockDetectNum.Name = "maskedTextBox_ShockDetectNum";
-            this.maskedTextBox_ShockDetectNum.Size = new System.Drawing.Size(46, 26);
+            this.maskedTextBox_ShockDetectNum.Size = new System.Drawing.Size(46, 22);
             this.maskedTextBox_ShockDetectNum.TabIndex = 82;
             // 
             // maskedTextBox_ShockWindow
             // 
             this.maskedTextBox_ShockWindow.Location = new System.Drawing.Point(59, 24);
             this.maskedTextBox_ShockWindow.Name = "maskedTextBox_ShockWindow";
-            this.maskedTextBox_ShockWindow.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_ShockWindow.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_ShockWindow.TabIndex = 81;
             // 
             // comboBox_ShockState
@@ -7078,7 +7528,7 @@ namespace Monitor
             "1"});
             this.comboBox_ShockState.Location = new System.Drawing.Point(1, 24);
             this.comboBox_ShockState.Name = "comboBox_ShockState";
-            this.comboBox_ShockState.Size = new System.Drawing.Size(48, 25);
+            this.comboBox_ShockState.Size = new System.Drawing.Size(48, 21);
             this.comboBox_ShockState.TabIndex = 61;
             this.comboBox_ShockState.Text = "State";
             // 
@@ -7111,21 +7561,21 @@ namespace Monitor
             // 
             this.maskedTextBox_TiltDetectNum.Location = new System.Drawing.Point(100, 29);
             this.maskedTextBox_TiltDetectNum.Name = "maskedTextBox_TiltDetectNum";
-            this.maskedTextBox_TiltDetectNum.Size = new System.Drawing.Size(42, 26);
+            this.maskedTextBox_TiltDetectNum.Size = new System.Drawing.Size(42, 22);
             this.maskedTextBox_TiltDetectNum.TabIndex = 83;
             // 
             // maskedTextBox_TiltWindow
             // 
             this.maskedTextBox_TiltWindow.Location = new System.Drawing.Point(53, 29);
             this.maskedTextBox_TiltWindow.Name = "maskedTextBox_TiltWindow";
-            this.maskedTextBox_TiltWindow.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_TiltWindow.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_TiltWindow.TabIndex = 82;
             // 
             // maskedTextBox_TiltAngle
             // 
             this.maskedTextBox_TiltAngle.Location = new System.Drawing.Point(10, 29);
             this.maskedTextBox_TiltAngle.Name = "maskedTextBox_TiltAngle";
-            this.maskedTextBox_TiltAngle.Size = new System.Drawing.Size(37, 26);
+            this.maskedTextBox_TiltAngle.Size = new System.Drawing.Size(37, 22);
             this.maskedTextBox_TiltAngle.TabIndex = 81;
             // 
             // comboBox1_TiltState
@@ -7137,7 +7587,7 @@ namespace Monitor
             "1"});
             this.comboBox1_TiltState.Location = new System.Drawing.Point(152, 29);
             this.comboBox1_TiltState.Name = "comboBox1_TiltState";
-            this.comboBox1_TiltState.Size = new System.Drawing.Size(42, 25);
+            this.comboBox1_TiltState.Size = new System.Drawing.Size(42, 21);
             this.comboBox1_TiltState.TabIndex = 38;
             this.comboBox1_TiltState.Text = "State";
             // 
@@ -7169,21 +7619,21 @@ namespace Monitor
             // 
             this.maskedTextBox_TowDetectNum.Location = new System.Drawing.Point(100, 24);
             this.maskedTextBox_TowDetectNum.Name = "maskedTextBox_TowDetectNum";
-            this.maskedTextBox_TowDetectNum.Size = new System.Drawing.Size(42, 26);
+            this.maskedTextBox_TowDetectNum.Size = new System.Drawing.Size(42, 22);
             this.maskedTextBox_TowDetectNum.TabIndex = 80;
             // 
             // maskedTextBox_TowWindow
             // 
             this.maskedTextBox_TowWindow.Location = new System.Drawing.Point(53, 24);
             this.maskedTextBox_TowWindow.Name = "maskedTextBox_TowWindow";
-            this.maskedTextBox_TowWindow.Size = new System.Drawing.Size(41, 26);
+            this.maskedTextBox_TowWindow.Size = new System.Drawing.Size(41, 22);
             this.maskedTextBox_TowWindow.TabIndex = 79;
             // 
             // maskedTextBox_TowAngle
             // 
             this.maskedTextBox_TowAngle.Location = new System.Drawing.Point(10, 24);
             this.maskedTextBox_TowAngle.Name = "maskedTextBox_TowAngle";
-            this.maskedTextBox_TowAngle.Size = new System.Drawing.Size(37, 26);
+            this.maskedTextBox_TowAngle.Size = new System.Drawing.Size(37, 22);
             this.maskedTextBox_TowAngle.TabIndex = 78;
             // 
             // button14
@@ -7219,7 +7669,7 @@ namespace Monitor
             "3"});
             this.comboBox_SleepPolicy.Location = new System.Drawing.Point(6, 27);
             this.comboBox_SleepPolicy.Name = "comboBox_SleepPolicy";
-            this.comboBox_SleepPolicy.Size = new System.Drawing.Size(80, 25);
+            this.comboBox_SleepPolicy.Size = new System.Drawing.Size(80, 21);
             this.comboBox_SleepPolicy.TabIndex = 47;
             this.comboBox_SleepPolicy.Text = "Sleep Policy";
             // 
@@ -7256,7 +7706,7 @@ namespace Monitor
             "3"});
             this.comboBox_AlarmPilicy.Location = new System.Drawing.Point(8, 28);
             this.comboBox_AlarmPilicy.Name = "comboBox_AlarmPilicy";
-            this.comboBox_AlarmPilicy.Size = new System.Drawing.Size(80, 25);
+            this.comboBox_AlarmPilicy.Size = new System.Drawing.Size(80, 21);
             this.comboBox_AlarmPilicy.TabIndex = 42;
             this.comboBox_AlarmPilicy.Text = "Alarm Policy";
             // 
@@ -7289,7 +7739,7 @@ namespace Monitor
             this.dateTimePicker_SetTimeDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_SetTimeDate.Location = new System.Drawing.Point(6, 20);
             this.dateTimePicker_SetTimeDate.Name = "dateTimePicker_SetTimeDate";
-            this.dateTimePicker_SetTimeDate.Size = new System.Drawing.Size(179, 24);
+            this.dateTimePicker_SetTimeDate.Size = new System.Drawing.Size(179, 21);
             this.dateTimePicker_SetTimeDate.TabIndex = 41;
             // 
             // button10
@@ -7334,7 +7784,7 @@ namespace Monitor
             "12"});
             this.comboBox_BatThreshold.Location = new System.Drawing.Point(6, 20);
             this.comboBox_BatThreshold.Name = "comboBox_BatThreshold";
-            this.comboBox_BatThreshold.Size = new System.Drawing.Size(49, 25);
+            this.comboBox_BatThreshold.Size = new System.Drawing.Size(49, 21);
             this.comboBox_BatThreshold.TabIndex = 39;
             // 
             // button9
@@ -7366,7 +7816,7 @@ namespace Monitor
             // 
             this.maskedTextBox_OutputDuration.Location = new System.Drawing.Point(164, 48);
             this.maskedTextBox_OutputDuration.Name = "maskedTextBox_OutputDuration";
-            this.maskedTextBox_OutputDuration.Size = new System.Drawing.Size(39, 26);
+            this.maskedTextBox_OutputDuration.Size = new System.Drawing.Size(39, 22);
             this.maskedTextBox_OutputDuration.TabIndex = 38;
             // 
             // comboBox_OutputNum
@@ -7380,7 +7830,7 @@ namespace Monitor
             "4"});
             this.comboBox_OutputNum.Location = new System.Drawing.Point(6, 20);
             this.comboBox_OutputNum.Name = "comboBox_OutputNum";
-            this.comboBox_OutputNum.Size = new System.Drawing.Size(71, 25);
+            this.comboBox_OutputNum.Size = new System.Drawing.Size(71, 21);
             this.comboBox_OutputNum.TabIndex = 33;
             this.comboBox_OutputNum.Text = "Output Num";
             // 
@@ -7393,7 +7843,7 @@ namespace Monitor
             "1"});
             this.comboBox_OutputControl.Location = new System.Drawing.Point(83, 20);
             this.comboBox_OutputControl.Name = "comboBox_OutputControl";
-            this.comboBox_OutputControl.Size = new System.Drawing.Size(71, 25);
+            this.comboBox_OutputControl.Size = new System.Drawing.Size(71, 21);
             this.comboBox_OutputControl.TabIndex = 34;
             this.comboBox_OutputControl.Text = "Cntl";
             // 
@@ -7417,7 +7867,7 @@ namespace Monitor
             "1"});
             this.comboBox_OutputPulseLevel.Location = new System.Drawing.Point(160, 20);
             this.comboBox_OutputPulseLevel.Name = "comboBox_OutputPulseLevel";
-            this.comboBox_OutputPulseLevel.Size = new System.Drawing.Size(43, 25);
+            this.comboBox_OutputPulseLevel.Size = new System.Drawing.Size(43, 21);
             this.comboBox_OutputPulseLevel.TabIndex = 37;
             this.comboBox_OutputPulseLevel.Text = "Pulse\\Level";
             // 
@@ -7438,7 +7888,7 @@ namespace Monitor
             // 
             this.maskedTextBox_InputDuration.Location = new System.Drawing.Point(157, 31);
             this.maskedTextBox_InputDuration.Name = "maskedTextBox_InputDuration";
-            this.maskedTextBox_InputDuration.Size = new System.Drawing.Size(46, 26);
+            this.maskedTextBox_InputDuration.Size = new System.Drawing.Size(46, 22);
             this.maskedTextBox_InputDuration.TabIndex = 33;
             // 
             // comboBox_InputNum1
@@ -7450,7 +7900,7 @@ namespace Monitor
             "1"});
             this.comboBox_InputNum1.Location = new System.Drawing.Point(6, 31);
             this.comboBox_InputNum1.Name = "comboBox_InputNum1";
-            this.comboBox_InputNum1.Size = new System.Drawing.Size(71, 25);
+            this.comboBox_InputNum1.Size = new System.Drawing.Size(71, 21);
             this.comboBox_InputNum1.TabIndex = 29;
             this.comboBox_InputNum1.Text = "Input Num";
             // 
@@ -7463,7 +7913,7 @@ namespace Monitor
             "1"});
             this.comboBox_Interupt.Location = new System.Drawing.Point(83, 31);
             this.comboBox_Interupt.Name = "comboBox_Interupt";
-            this.comboBox_Interupt.Size = new System.Drawing.Size(71, 25);
+            this.comboBox_Interupt.Size = new System.Drawing.Size(71, 21);
             this.comboBox_Interupt.TabIndex = 30;
             this.comboBox_Interupt.Text = "Interrupt";
             // 
@@ -7503,7 +7953,7 @@ namespace Monitor
             // 
             this.textBox_NewPassword.Location = new System.Drawing.Point(6, 19);
             this.textBox_NewPassword.Name = "textBox_NewPassword";
-            this.textBox_NewPassword.Size = new System.Drawing.Size(120, 26);
+            this.textBox_NewPassword.Size = new System.Drawing.Size(120, 22);
             this.textBox_NewPassword.TabIndex = 27;
             // 
             // groupBox14
@@ -7526,7 +7976,7 @@ namespace Monitor
             "1"});
             this.comboBox_SMSControl.Location = new System.Drawing.Point(6, 20);
             this.comboBox_SMSControl.Name = "comboBox_SMSControl";
-            this.comboBox_SMSControl.Size = new System.Drawing.Size(101, 25);
+            this.comboBox_SMSControl.Size = new System.Drawing.Size(101, 21);
             this.comboBox_SMSControl.TabIndex = 25;
             // 
             // button_SMSControl
@@ -7556,7 +8006,7 @@ namespace Monitor
             // 
             this.textBox_FreeText.Location = new System.Drawing.Point(52, 16);
             this.textBox_FreeText.Name = "textBox_FreeText";
-            this.textBox_FreeText.Size = new System.Drawing.Size(67, 26);
+            this.textBox_FreeText.Size = new System.Drawing.Size(67, 22);
             this.textBox_FreeText.TabIndex = 25;
             // 
             // comboBox_InputIndex
@@ -7570,7 +8020,7 @@ namespace Monitor
             "4"});
             this.comboBox_InputIndex.Location = new System.Drawing.Point(8, 17);
             this.comboBox_InputIndex.Name = "comboBox_InputIndex";
-            this.comboBox_InputIndex.Size = new System.Drawing.Size(37, 25);
+            this.comboBox_InputIndex.Size = new System.Drawing.Size(37, 21);
             this.comboBox_InputIndex.TabIndex = 20;
             // 
             // button_SetFreeText
@@ -7600,21 +8050,21 @@ namespace Monitor
             // 
             this.maskedTextBox3_Subscriber3.Location = new System.Drawing.Point(8, 76);
             this.maskedTextBox3_Subscriber3.Name = "maskedTextBox3_Subscriber3";
-            this.maskedTextBox3_Subscriber3.Size = new System.Drawing.Size(153, 26);
+            this.maskedTextBox3_Subscriber3.Size = new System.Drawing.Size(153, 22);
             this.maskedTextBox3_Subscriber3.TabIndex = 28;
             // 
             // maskedTextBox2_Subscriber2
             // 
             this.maskedTextBox2_Subscriber2.Location = new System.Drawing.Point(8, 49);
             this.maskedTextBox2_Subscriber2.Name = "maskedTextBox2_Subscriber2";
-            this.maskedTextBox2_Subscriber2.Size = new System.Drawing.Size(153, 26);
+            this.maskedTextBox2_Subscriber2.Size = new System.Drawing.Size(153, 22);
             this.maskedTextBox2_Subscriber2.TabIndex = 27;
             // 
             // maskedTextBox1_Subscriber1
             // 
             this.maskedTextBox1_Subscriber1.Location = new System.Drawing.Point(8, 24);
             this.maskedTextBox1_Subscriber1.Name = "maskedTextBox1_Subscriber1";
-            this.maskedTextBox1_Subscriber1.Size = new System.Drawing.Size(153, 26);
+            this.maskedTextBox1_Subscriber1.Size = new System.Drawing.Size(153, 22);
             this.maskedTextBox1_Subscriber1.TabIndex = 26;
             // 
             // button4
@@ -7638,9 +8088,10 @@ namespace Monitor
             // 
             // textBox_SMSPhoneNumber
             // 
-            this.textBox_SMSPhoneNumber.Location = new System.Drawing.Point(7, 27);
+            this.textBox_SMSPhoneNumber.Location = new System.Drawing.Point(6, 22);
+            this.textBox_SMSPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SMSPhoneNumber.Name = "textBox_SMSPhoneNumber";
-            this.textBox_SMSPhoneNumber.Size = new System.Drawing.Size(178, 30);
+            this.textBox_SMSPhoneNumber.Size = new System.Drawing.Size(143, 26);
             this.textBox_SMSPhoneNumber.TabIndex = 10;
             // 
             // button_SendAllCheckedSMS
@@ -7681,7 +8132,7 @@ namespace Monitor
             "C"});
             this.comboBox_SystemType.Location = new System.Drawing.Point(5, 45);
             this.comboBox_SystemType.Name = "comboBox_SystemType";
-            this.comboBox_SystemType.Size = new System.Drawing.Size(78, 25);
+            this.comboBox_SystemType.Size = new System.Drawing.Size(78, 21);
             this.comboBox_SystemType.TabIndex = 77;
             this.comboBox_SystemType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseDown);
             // 
@@ -7706,9 +8157,11 @@ namespace Monitor
             // 
             // groupBox36
             // 
-            this.groupBox36.Location = new System.Drawing.Point(0, -73);
+            this.groupBox36.Location = new System.Drawing.Point(0, -58);
+            this.groupBox36.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Size = new System.Drawing.Size(158, 69);
+            this.groupBox36.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox36.Size = new System.Drawing.Size(126, 55);
             this.groupBox36.TabIndex = 11;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Comm Interface";
@@ -7716,9 +8169,11 @@ namespace Monitor
             // groupBox_PhoneNumber
             // 
             this.groupBox_PhoneNumber.Controls.Add(this.textBox_SMSPhoneNumber);
-            this.groupBox_PhoneNumber.Location = new System.Drawing.Point(1112, 6);
+            this.groupBox_PhoneNumber.Location = new System.Drawing.Point(890, 5);
+            this.groupBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_PhoneNumber.Name = "groupBox_PhoneNumber";
-            this.groupBox_PhoneNumber.Size = new System.Drawing.Size(197, 67);
+            this.groupBox_PhoneNumber.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_PhoneNumber.Size = new System.Drawing.Size(158, 54);
             this.groupBox_PhoneNumber.TabIndex = 12;
             this.groupBox_PhoneNumber.TabStop = false;
             this.groupBox_PhoneNumber.Text = "Phone Number";
@@ -7727,9 +8182,10 @@ namespace Monitor
             // Label_SerialPortRx
             // 
             this.Label_SerialPortRx.AutoSize = true;
-            this.Label_SerialPortRx.Location = new System.Drawing.Point(24, 65);
+            this.Label_SerialPortRx.Location = new System.Drawing.Point(19, 52);
+            this.Label_SerialPortRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_SerialPortRx.Name = "Label_SerialPortRx";
-            this.Label_SerialPortRx.Size = new System.Drawing.Size(28, 23);
+            this.Label_SerialPortRx.Size = new System.Drawing.Size(23, 18);
             this.Label_SerialPortRx.TabIndex = 108;
             this.Label_SerialPortRx.Text = "Rx";
             // 
@@ -7737,18 +8193,20 @@ namespace Monitor
             // 
             this.label_SerialPortConnected.AutoSize = true;
             this.label_SerialPortConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SerialPortConnected.Location = new System.Drawing.Point(19, 35);
+            this.label_SerialPortConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_SerialPortConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SerialPortConnected.Name = "label_SerialPortConnected";
-            this.label_SerialPortConnected.Size = new System.Drawing.Size(84, 23);
+            this.label_SerialPortConnected.Size = new System.Drawing.Size(69, 18);
             this.label_SerialPortConnected.TabIndex = 109;
             this.label_SerialPortConnected.Text = "Conneted";
             // 
             // Label_SerialPortTx
             // 
             this.Label_SerialPortTx.AutoSize = true;
-            this.Label_SerialPortTx.Location = new System.Drawing.Point(74, 65);
+            this.Label_SerialPortTx.Location = new System.Drawing.Point(59, 52);
+            this.Label_SerialPortTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_SerialPortTx.Name = "Label_SerialPortTx";
-            this.Label_SerialPortTx.Size = new System.Drawing.Size(26, 23);
+            this.Label_SerialPortTx.Size = new System.Drawing.Size(21, 18);
             this.Label_SerialPortTx.TabIndex = 110;
             this.Label_SerialPortTx.Text = "Tx";
             // 
@@ -7758,9 +8216,11 @@ namespace Monitor
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
             this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
-            this.groupBox_SerialPort.Location = new System.Drawing.Point(1784, 93);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 74);
+            this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_SerialPort.Name = "groupBox_SerialPort";
-            this.groupBox_SerialPort.Size = new System.Drawing.Size(218, 129);
+            this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 103);
             this.groupBox_SerialPort.TabIndex = 111;
             this.groupBox_SerialPort.TabStop = false;
             this.groupBox_SerialPort.Text = "Serial port";
@@ -7769,9 +8229,10 @@ namespace Monitor
             // label_SerialPortStatus
             // 
             this.label_SerialPortStatus.AutoSize = true;
-            this.label_SerialPortStatus.Location = new System.Drawing.Point(109, 35);
+            this.label_SerialPortStatus.Location = new System.Drawing.Point(87, 28);
+            this.label_SerialPortStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SerialPortStatus.Name = "label_SerialPortStatus";
-            this.label_SerialPortStatus.Size = new System.Drawing.Size(51, 23);
+            this.label_SerialPortStatus.Size = new System.Drawing.Size(42, 18);
             this.label_SerialPortStatus.TabIndex = 111;
             this.label_SerialPortStatus.Text = "None";
             // 
@@ -7779,18 +8240,21 @@ namespace Monitor
             // 
             this.groupBox4.Controls.Add(this.button97);
             this.groupBox4.Controls.Add(this.textBox_SystemStatus);
-            this.groupBox4.Location = new System.Drawing.Point(1784, 554);
+            this.groupBox4.Location = new System.Drawing.Point(1427, 443);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(218, 263);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(174, 210);
             this.groupBox4.TabIndex = 114;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "User information";
             // 
             // button97
             // 
-            this.button97.Location = new System.Drawing.Point(6, 228);
+            this.button97.Location = new System.Drawing.Point(5, 182);
+            this.button97.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button97.Name = "button97";
-            this.button97.Size = new System.Drawing.Size(66, 27);
+            this.button97.Size = new System.Drawing.Size(53, 22);
             this.button97.TabIndex = 114;
             this.button97.Text = "Clear";
             this.button97.UseVisualStyleBackColor = true;
@@ -7798,20 +8262,22 @@ namespace Monitor
             // 
             // textBox_SystemStatus
             // 
-            this.textBox_SystemStatus.Location = new System.Drawing.Point(7, 21);
+            this.textBox_SystemStatus.Location = new System.Drawing.Point(6, 17);
+            this.textBox_SystemStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_SystemStatus.Multiline = true;
             this.textBox_SystemStatus.Name = "textBox_SystemStatus";
             this.textBox_SystemStatus.ReadOnly = true;
-            this.textBox_SystemStatus.Size = new System.Drawing.Size(206, 203);
+            this.textBox_SystemStatus.Size = new System.Drawing.Size(166, 163);
             this.textBox_SystemStatus.TabIndex = 113;
             this.textBox_SystemStatus.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1784, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(1427, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(218, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 37);
             this.pictureBox1.TabIndex = 115;
             this.pictureBox1.TabStop = false;
             // 
@@ -7821,9 +8287,11 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.Controls.Add(this.label12);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label14);
-            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1784, 232);
+            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 186);
+            this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
-            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(218, 129);
+            this.groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 103);
             this.groupBox_ClentTCPStatus.TabIndex = 112;
             this.groupBox_ClentTCPStatus.TabStop = false;
             this.groupBox_ClentTCPStatus.Text = "Client TCP";
@@ -7831,18 +8299,20 @@ namespace Monitor
             // label_TCPClient
             // 
             this.label_TCPClient.AutoSize = true;
-            this.label_TCPClient.Location = new System.Drawing.Point(105, 35);
+            this.label_TCPClient.Location = new System.Drawing.Point(84, 28);
+            this.label_TCPClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_TCPClient.Name = "label_TCPClient";
-            this.label_TCPClient.Size = new System.Drawing.Size(55, 23);
+            this.label_TCPClient.Size = new System.Drawing.Size(45, 18);
             this.label_TCPClient.TabIndex = 111;
             this.label_TCPClient.Text = " None";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(74, 65);
+            this.label12.Location = new System.Drawing.Point(59, 52);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 23);
+            this.label12.Size = new System.Drawing.Size(21, 18);
             this.label12.TabIndex = 110;
             this.label12.Text = "Tx";
             // 
@@ -7850,18 +8320,20 @@ namespace Monitor
             // 
             this.label_ClientTCPConnected.AutoSize = true;
             this.label_ClientTCPConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ClientTCPConnected.Location = new System.Drawing.Point(19, 35);
+            this.label_ClientTCPConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_ClientTCPConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ClientTCPConnected.Name = "label_ClientTCPConnected";
-            this.label_ClientTCPConnected.Size = new System.Drawing.Size(84, 23);
+            this.label_ClientTCPConnected.Size = new System.Drawing.Size(69, 18);
             this.label_ClientTCPConnected.TabIndex = 109;
             this.label_ClientTCPConnected.Text = "Conneted";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 65);
+            this.label14.Location = new System.Drawing.Point(19, 52);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 23);
+            this.label14.Size = new System.Drawing.Size(23, 18);
             this.label14.TabIndex = 108;
             this.label14.Text = "Rx";
             // 
@@ -8011,7 +8483,7 @@ namespace Monitor
             this.textBox_UnitIDForSMS.Location = new System.Drawing.Point(54, 17);
             this.textBox_UnitIDForSMS.MaxLength = 16;
             this.textBox_UnitIDForSMS.Name = "textBox_UnitIDForSMS";
-            this.textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 22);
+            this.textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 20);
             this.textBox_UnitIDForSMS.TabIndex = 0;
             // 
             // label2
@@ -8027,7 +8499,7 @@ namespace Monitor
             this.textBox_CodeArrayForSMS.Location = new System.Drawing.Point(54, 46);
             this.textBox_CodeArrayForSMS.MaxLength = 4;
             this.textBox_CodeArrayForSMS.Name = "textBox_CodeArrayForSMS";
-            this.textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 22);
+            this.textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 20);
             this.textBox_CodeArrayForSMS.TabIndex = 2;
             // 
             // label5
@@ -8059,7 +8531,7 @@ namespace Monitor
             "COM6"});
             this.comboBox_ComportSMS.Location = new System.Drawing.Point(290, 22);
             this.comboBox_ComportSMS.Name = "comboBox_ComportSMS";
-            this.comboBox_ComportSMS.Size = new System.Drawing.Size(67, 25);
+            this.comboBox_ComportSMS.Size = new System.Drawing.Size(67, 21);
             this.comboBox_ComportSMS.TabIndex = 9;
             this.comboBox_ComportSMS.Tag = "1";
             this.comboBox_ComportSMS.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_2);
@@ -8247,7 +8719,7 @@ namespace Monitor
             "B"});
             this.comboBox1.Location = new System.Drawing.Point(371, 76);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(37, 25);
+            this.comboBox1.Size = new System.Drawing.Size(37, 21);
             this.comboBox1.TabIndex = 73;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_3);
             // 
@@ -8325,11 +8797,11 @@ namespace Monitor
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1822, 782);
+            this.ClientSize = new System.Drawing.Size(1458, 626);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -8342,6 +8814,7 @@ namespace Monitor
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "3038 - WB PAA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -8612,6 +9085,16 @@ namespace Monitor
 
             Application.Run(new MainForm());
 
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
 
         }
 
