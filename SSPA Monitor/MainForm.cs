@@ -749,11 +749,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1824,17 +1824,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea9.AxisX.Title = "Freq";
+            chartArea9.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.AxisY.Title = "Power [dBm]";
+            chartArea9.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea9);
+            legend9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend9.IsTextAutoFit = false;
+            legend9.Name = "Legend1";
+            legend9.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend9);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -2853,7 +2853,7 @@ namespace Monitor
             // 
             // button52
             // 
-            this.button52.Location = new System.Drawing.Point(18, 425);
+            this.button52.Location = new System.Drawing.Point(13, 506);
             this.button52.Margin = new System.Windows.Forms.Padding(2);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(69, 22);
@@ -2876,11 +2876,11 @@ namespace Monitor
             this.groupBox31.Controls.Add(this.textBox_RxClientData);
             this.groupBox31.Controls.Add(this.label15);
             this.groupBox31.Controls.Add(this.label16);
-            this.groupBox31.Location = new System.Drawing.Point(1065, 15);
+            this.groupBox31.Location = new System.Drawing.Point(577, 15);
             this.groupBox31.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox31.Size = new System.Drawing.Size(341, 207);
+            this.groupBox31.Size = new System.Drawing.Size(829, 197);
             this.groupBox31.TabIndex = 14;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Data received";
@@ -2946,7 +2946,7 @@ namespace Monitor
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Maroon;
-            this.label18.Location = new System.Drawing.Point(246, 15);
+            this.label18.Location = new System.Drawing.Point(186, 17);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(97, 21);
@@ -2992,7 +2992,7 @@ namespace Monitor
             this.textBox_RxClientData.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RxClientData.Name = "textBox_RxClientData";
             this.textBox_RxClientData.ReadOnly = true;
-            this.textBox_RxClientData.Size = new System.Drawing.Size(206, 26);
+            this.textBox_RxClientData.Size = new System.Drawing.Size(608, 26);
             this.textBox_RxClientData.TabIndex = 2;
             this.textBox_RxClientData.TabStop = false;
             this.textBox_RxClientData.TextChanged += new System.EventHandler(this.textBox_RxClientData_TextChanged);
@@ -3034,7 +3034,7 @@ namespace Monitor
             this.groupBox_clientTX.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_clientTX.Name = "groupBox_clientTX";
             this.groupBox_clientTX.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_clientTX.Size = new System.Drawing.Size(1047, 407);
+            this.groupBox_clientTX.Size = new System.Drawing.Size(560, 490);
             this.groupBox_clientTX.TabIndex = 13;
             this.groupBox_clientTX.TabStop = false;
             this.groupBox_clientTX.Text = "Send Data";
@@ -3070,7 +3070,7 @@ namespace Monitor
             this.groupBox41.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox41.Size = new System.Drawing.Size(1036, 222);
+            this.groupBox41.Size = new System.Drawing.Size(544, 312);
             this.groupBox41.TabIndex = 15;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Data Sent";
@@ -3136,7 +3136,7 @@ namespace Monitor
             this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Maroon;
-            this.label44.Location = new System.Drawing.Point(246, 15);
+            this.label44.Location = new System.Drawing.Point(192, 22);
             this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(97, 21);
@@ -3182,7 +3182,7 @@ namespace Monitor
             this.textBox_SentData.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SentData.Name = "textBox_SentData";
             this.textBox_SentData.ReadOnly = true;
-            this.textBox_SentData.Size = new System.Drawing.Size(942, 26);
+            this.textBox_SentData.Size = new System.Drawing.Size(449, 26);
             this.textBox_SentData.TabIndex = 2;
             this.textBox_SentData.TabStop = false;
             // 
@@ -3212,7 +3212,7 @@ namespace Monitor
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Maroon;
-            this.label17.Location = new System.Drawing.Point(574, 15);
+            this.label17.Location = new System.Drawing.Point(192, 22);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(97, 21);
@@ -5450,6 +5450,7 @@ namespace Monitor
             this.textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod2.TabIndex = 13;
             this.textBox_PulsePeriod2.Text = "16";
+            this.textBox_PulsePeriod2.TextChanged += new System.EventHandler(this.textBox_PulsePeriod2_TextChanged);
             // 
             // textBox_PulseWidth2
             // 
@@ -5459,6 +5460,7 @@ namespace Monitor
             this.textBox_PulseWidth2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseWidth2.TabIndex = 11;
             this.textBox_PulseWidth2.Text = "2";
+            this.textBox_PulseWidth2.TextChanged += new System.EventHandler(this.textBox_PulseWidth2_TextChanged);
             // 
             // groupBox46
             // 
@@ -5747,6 +5749,7 @@ namespace Monitor
             this.textBox_PulsePeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod.TabIndex = 13;
             this.textBox_PulsePeriod.Text = "16";
+            this.textBox_PulsePeriod.TextChanged += new System.EventHandler(this.textBox_PulsePeriod_TextChanged);
             // 
             // textBox_PulseWidth
             // 
@@ -5756,6 +5759,7 @@ namespace Monitor
             this.textBox_PulseWidth.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseWidth.TabIndex = 11;
             this.textBox_PulseWidth.Text = "2";
+            this.textBox_PulseWidth.TextChanged += new System.EventHandler(this.textBox_PulseWidth_TextChanged);
             // 
             // groupBox44
             // 
@@ -6046,6 +6050,7 @@ namespace Monitor
             this.textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFPeriod.TabIndex = 13;
             this.textBox_RFPeriod.Text = "16";
+            this.textBox_RFPeriod.TextChanged += new System.EventHandler(this.textBox_RFPeriod_TextChanged);
             // 
             // label99
             // 
@@ -6066,6 +6071,7 @@ namespace Monitor
             this.textBox_RFWidth.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFWidth.TabIndex = 11;
             this.textBox_RFWidth.Text = "2";
+            this.textBox_RFWidth.TextChanged += new System.EventHandler(this.textBox_RFWidth_TextChanged);
             // 
             // label98
             // 
@@ -6254,8 +6260,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6280,8 +6286,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6686,9 +6692,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -11611,7 +11617,7 @@ namespace Monitor
                         textBox_RxClientOpcode.Text = Result.Opcode;
 
                         textBox_RxClientData.BackColor = Color.LightGreen;
-                        textBox_RxClientData.Text = Result.Data;
+                        textBox_RxClientData.Text = Regex.Replace(Result.Data, ".{2}", "$0 "); 
 
                         textBox_RxClientDataLength.BackColor = Color.LightGreen;
                         textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
@@ -19868,6 +19874,156 @@ Note: eStatus enum 
         private void groupBox46_Enter(object sender, EventArgs e)
         {
 
+        }
+
+
+        bool CheckPeriodAndWidth(Int32 i_Period, Int32 i_Width)
+        {
+            if(i_Period >= i_Width)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private void textBox_RFPeriod_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_RFPeriod.Text, out Period) && Int32.TryParse(textBox_RFWidth.Text, out Width))
+            {
+                if(CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_RFPeriod.BackColor = Color.LightGreen;
+                    textBox_RFWidth.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_RFPeriod.BackColor = Color.Red;
+                    textBox_RFWidth.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_RFPeriod.BackColor = Color.Red;
+                textBox_RFWidth.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_RFWidth_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_RFPeriod.Text, out Period) && Int32.TryParse(textBox_RFWidth.Text, out Width))
+            {
+                if (CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_RFPeriod.BackColor = Color.LightGreen;
+                    textBox_RFWidth.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_RFPeriod.BackColor = Color.Red;
+                    textBox_RFWidth.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_RFPeriod.BackColor = Color.Red;
+                textBox_RFWidth.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_PulseWidth_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_PulsePeriod.Text, out Period) && Int32.TryParse(textBox_PulseWidth.Text, out Width))
+            {
+                if (CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_PulsePeriod.BackColor = Color.LightGreen;
+                    textBox_PulseWidth.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_PulsePeriod.BackColor = Color.Red;
+                    textBox_PulseWidth.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_PulsePeriod.BackColor = Color.Red;
+                textBox_PulseWidth.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_PulsePeriod_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_PulsePeriod.Text, out Period) && Int32.TryParse(textBox_PulseWidth.Text, out Width))
+            {
+                if (CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_PulsePeriod.BackColor = Color.LightGreen;
+                    textBox_PulseWidth.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_PulsePeriod.BackColor = Color.Red;
+                    textBox_PulseWidth.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_PulsePeriod.BackColor = Color.Red;
+                textBox_PulseWidth.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_PulseWidth2_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_PulsePeriod2.Text, out Period) && Int32.TryParse(textBox_PulseWidth2.Text, out Width))
+            {
+                if (CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_PulsePeriod2.BackColor = Color.LightGreen;
+                    textBox_PulseWidth2.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_PulsePeriod2.BackColor = Color.Red;
+                    textBox_PulseWidth2.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_PulsePeriod2.BackColor = Color.Red;
+                textBox_PulseWidth2.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_PulsePeriod2_TextChanged(object sender, EventArgs e)
+        {
+            Int32 Period = 0, Width = 0;
+            if (Int32.TryParse(textBox_PulsePeriod2.Text, out Period) && Int32.TryParse(textBox_PulseWidth2.Text, out Width))
+            {
+                if (CheckPeriodAndWidth(Period, Width) == true)
+                {
+                    textBox_PulsePeriod2.BackColor = Color.LightGreen;
+                    textBox_PulseWidth2.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    textBox_PulsePeriod2.BackColor = Color.Red;
+                    textBox_PulseWidth2.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                textBox_PulsePeriod2.BackColor = Color.Red;
+                textBox_PulseWidth2.BackColor = Color.Red;
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
