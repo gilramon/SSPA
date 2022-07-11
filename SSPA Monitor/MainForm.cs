@@ -11281,127 +11281,127 @@ namespace Monitor
 
         int WaitforBufferFull = -1;
         //DSPLib.DSP.Window.Type windowToApply;
-        void CheckForMiniAdaDataFFT(SSPA_Parser i_MiniAdaParser)
-        {
+        //void CheckForMiniAdaDataFFT(SSPA_Parser i_MiniAdaParser)
+        //{
 
 
 
-            //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
-            //UInt32 zeroPadding = 9000;
-            double scale = 2 ^ 11 - 1;
+        //    //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
+        //    //UInt32 zeroPadding = 9000;
+        //    double scale = 2 ^ 11 - 1;
 
 
-            double[] IQ1Sigal = new double[i_MiniAdaParser.IQData.I1.Length];
-            double[] IQ2Sigal = new double[i_MiniAdaParser.IQData.I2.Length];
+        //    double[] IQ1Sigal = new double[i_MiniAdaParser.IQData.I1.Length];
+        //    double[] IQ2Sigal = new double[i_MiniAdaParser.IQData.I2.Length];
 
-            for (int i = 0; i < i_MiniAdaParser.IQData.I1.Length; i++)
-            {
-                IQ1Sigal[i] = (double)(i_MiniAdaParser.IQData.I1[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q1[i] / scale / 2);
-            }
-
-
-            for (int i = 0; i < i_MiniAdaParser.IQData.I2.Length; i++)
-            {
-                IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale / 2);
-            }
-
-            int zeroPadding = FindZeroPaddingSize(IQ1Sigal.Length);
-            int zeroPadding2 = FindZeroPaddingSize(IQ2Sigal.Length);
+        //    for (int i = 0; i < i_MiniAdaParser.IQData.I1.Length; i++)
+        //    {
+        //        IQ1Sigal[i] = (double)(i_MiniAdaParser.IQData.I1[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q1[i] / scale / 2);
+        //    }
 
 
+        //    for (int i = 0; i < i_MiniAdaParser.IQData.I2.Length; i++)
+        //    {
+        //        IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale / 2);
+        //    }
 
-
-
-            // Instantiate & Initialize a new DFT
-            DSPLib.FFT fft = new DSPLib.FFT();
-            DSPLib.FFT fft2 = new DSPLib.FFT();
-            //DSPLib.DFT dft = new DSPLib.DFT();
-            fft.Initialize((uint)IQ1Sigal.Length, (uint)zeroPadding); // NOTE: Zero Padding
-            fft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding2);
-
-            // Call the DFT and get the scaled spectrum back
-
-            // Convert the complex spectrum to note: Magnitude Format
-
-
-            //double[] lmSpectrum = DSP.ConvertMagnitude.ToMagnitudeDBV(temp);
-            // double[] lmSpectrum2 = DSP.ConvertMagnitude.ToMagnitudeDBV(temp2);
-            // Properly scale the spectrum for the added window
+        //    int zeroPadding = FindZeroPaddingSize(IQ1Sigal.Length);
+        //    int zeroPadding2 = FindZeroPaddingSize(IQ2Sigal.Length);
 
 
 
 
-            // For plotting on an XY Scatter plot generate the X Axis frequency Span
-            //   double[] freqSpan = fft.FrequencySpan(samplingRate);
-            //  double[] freqSpan2 = fft2.FrequencySpan(samplingRate);
-            // At this point a XY Scatter plot can be generated from,
-            // X axis => freqSpan
-            // Y axis => lmSpectrum
-            //double Mean = DSP.Analyze.FindMean(IQ1Sigal);
-            //double Mean2 = DSP.Analyze.FindMean(IQ2Sigal);
 
-            //double RMS = DSP.Analyze.FindRms(IQ1Sigal);
-            //double RMS2 = DSP.Analyze.FindRms(IQ2Sigal);
+        //    // Instantiate & Initialize a new DFT
+        //    DSPLib.FFT fft = new DSPLib.FFT();
+        //    DSPLib.FFT fft2 = new DSPLib.FFT();
+        //    //DSPLib.DFT dft = new DSPLib.DFT();
+        //    fft.Initialize((uint)IQ1Sigal.Length, (uint)zeroPadding); // NOTE: Zero Padding
+        //    fft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding2);
 
-            //double MaxAmplitude = DSP.Analyze.FindMaxAmplitude(lmSpectrum);
-            //double MaxPosition = DSP.Analyze.FindMaxPosition(lmSpectrum);
-            //double MaxFrequency = DSP.Analyze.FindMaxFrequency(lmSpectrum, freqSpan);
+        //    // Call the DFT and get the scaled spectrum back
 
-            //textBox_graph_XY.BeginInvoke(new EventHandler(delegate
-            //{
-            //    textBox_graph_XY.Text = String.Format(" \n CH1 : Mean [{0}] RMS [{1}] \n", Mean.ToString("0.00"),RMS.ToString("0.00"));
-            //    textBox_graph_XY.Text += String.Format(" \n CH2 : Mean [{0}] RMS [{1}]  \n ", Mean2.ToString("0.00"), RMS2.ToString("0.00"));
-            //    textBox_graph_XY.Text += String.Format(" \n CH1 : MaxAmplitude [{0}] MaxPosition [{1}] MaxFrequency [{2}] \n ", MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.00"));
-
-            //}));
-
-            listBox_Charts.BeginInvoke(new EventHandler(delegate
-            {
-                var series1 = new Series("CH1 " + ChartIndex.ToString());
-                //var series2 = new Series("IQ1 Time " + ChartIndex.ToString());
-                var series3 = new Series("CH2 " + ChartIndex.ToString());
-                //  var series4 = new Series("IQ2 Time " + ChartIndex.ToString());
-
-                series1.ChartType = SeriesChartType.Line;
-                series3.ChartType = SeriesChartType.Line;
-
-                ChartIndex++;
-
-                //  listBox_Charts.Items.Add(series4.Name);
-                // Frist parameter is X-Axis and Second is Collection of Y- Axis
-                // double[] xData = DSP.Generate.LinSpace(-(freqSpan.Length) / 2 , (freqSpan.Length) / 2, (UInt32)(freqSpan.Length));
-                //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
-                for (int i = 0; i < IQ1Sigal.Length; i++)
-                {
-                    //         series2.Points.AddXY(i, IQ1Sigal[i]);
-                }
-                //     series2.ChartType = SeriesChartType.Line;
-                chart1.Series.Add(series1);
-                //     chart1.Series.Add(series2);
-
-                //  series3.Points.DataBindXY(freqSpan, lmSpectrum2);
-
-                for (int i = 0; i < IQ1Sigal.Length; i++)
-                {
-                    //         series4.Points.AddXY(i, IQ1Sigal[i]);
-                }
-                //      series4.ChartType = SeriesChartType.Line;
-                chart1.Series.Add(series3);
-                //   chart1.Series.Add(series4);
-
-                PlotGraphTimer = -1;
-                textBox_SystemStatus.Text = "Graphs is ready;\n";
-                textBox_SystemStatus.BackColor = Color.LightGreen;
-
-                //Gil: Find the maximum and minimum points
-                //      MarkTheBiggestFreq(series1, lmSpectrum, freqSpan);
-                //      MarkTheBiggestFreq(series3, lmSpectrum2, freqSpan2);
+        //    // Convert the complex spectrum to note: Magnitude Format
 
 
-            }));
+        //    //double[] lmSpectrum = DSP.ConvertMagnitude.ToMagnitudeDBV(temp);
+        //    // double[] lmSpectrum2 = DSP.ConvertMagnitude.ToMagnitudeDBV(temp2);
+        //    // Properly scale the spectrum for the added window
 
 
-        }
+
+
+        //    // For plotting on an XY Scatter plot generate the X Axis frequency Span
+        //    //   double[] freqSpan = fft.FrequencySpan(samplingRate);
+        //    //  double[] freqSpan2 = fft2.FrequencySpan(samplingRate);
+        //    // At this point a XY Scatter plot can be generated from,
+        //    // X axis => freqSpan
+        //    // Y axis => lmSpectrum
+        //    //double Mean = DSP.Analyze.FindMean(IQ1Sigal);
+        //    //double Mean2 = DSP.Analyze.FindMean(IQ2Sigal);
+
+        //    //double RMS = DSP.Analyze.FindRms(IQ1Sigal);
+        //    //double RMS2 = DSP.Analyze.FindRms(IQ2Sigal);
+
+        //    //double MaxAmplitude = DSP.Analyze.FindMaxAmplitude(lmSpectrum);
+        //    //double MaxPosition = DSP.Analyze.FindMaxPosition(lmSpectrum);
+        //    //double MaxFrequency = DSP.Analyze.FindMaxFrequency(lmSpectrum, freqSpan);
+
+        //    //textBox_graph_XY.BeginInvoke(new EventHandler(delegate
+        //    //{
+        //    //    textBox_graph_XY.Text = String.Format(" \n CH1 : Mean [{0}] RMS [{1}] \n", Mean.ToString("0.00"),RMS.ToString("0.00"));
+        //    //    textBox_graph_XY.Text += String.Format(" \n CH2 : Mean [{0}] RMS [{1}]  \n ", Mean2.ToString("0.00"), RMS2.ToString("0.00"));
+        //    //    textBox_graph_XY.Text += String.Format(" \n CH1 : MaxAmplitude [{0}] MaxPosition [{1}] MaxFrequency [{2}] \n ", MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.00"));
+
+        //    //}));
+
+        //    listBox_Charts.BeginInvoke(new EventHandler(delegate
+        //    {
+        //        var series1 = new Series("CH1 " + ChartIndex.ToString());
+        //        //var series2 = new Series("IQ1 Time " + ChartIndex.ToString());
+        //        var series3 = new Series("CH2 " + ChartIndex.ToString());
+        //        //  var series4 = new Series("IQ2 Time " + ChartIndex.ToString());
+
+        //        series1.ChartType = SeriesChartType.Line;
+        //        series3.ChartType = SeriesChartType.Line;
+
+        //        ChartIndex++;
+
+        //        //  listBox_Charts.Items.Add(series4.Name);
+        //        // Frist parameter is X-Axis and Second is Collection of Y- Axis
+        //        // double[] xData = DSP.Generate.LinSpace(-(freqSpan.Length) / 2 , (freqSpan.Length) / 2, (UInt32)(freqSpan.Length));
+        //        //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
+        //        for (int i = 0; i < IQ1Sigal.Length; i++)
+        //        {
+        //            //         series2.Points.AddXY(i, IQ1Sigal[i]);
+        //        }
+        //        //     series2.ChartType = SeriesChartType.Line;
+        //        chart1.Series.Add(series1);
+        //        //     chart1.Series.Add(series2);
+
+        //        //  series3.Points.DataBindXY(freqSpan, lmSpectrum2);
+
+        //        for (int i = 0; i < IQ1Sigal.Length; i++)
+        //        {
+        //            //         series4.Points.AddXY(i, IQ1Sigal[i]);
+        //        }
+        //        //      series4.ChartType = SeriesChartType.Line;
+        //        chart1.Series.Add(series3);
+        //        //   chart1.Series.Add(series4);
+
+        //        PlotGraphTimer = -1;
+        //        textBox_SystemStatus.Text = "Graphs is ready;\n";
+        //        textBox_SystemStatus.BackColor = Color.LightGreen;
+
+        //        //Gil: Find the maximum and minimum points
+        //        //      MarkTheBiggestFreq(series1, lmSpectrum, freqSpan);
+        //        //      MarkTheBiggestFreq(series3, lmSpectrum2, freqSpan2);
+
+
+        //    }));
+
+
+        //}
 
         void MarkTheBiggestFreq(Series i_serias, double[] i_lmSpectrum, double[] i_freqSpan)
         {
@@ -11472,132 +11472,845 @@ namespace Monitor
             i_serias.LegendToolTip = String.Format(" \n{0} \n Mean [{1}] \n RMS [{2}] \n MaxAmplitude [{3}] \n MaxPosition [{4}] \n MaxFrequency [{5}] \n \n", i_serias.Name, Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.##E+0"));
         }
 
-        void CheckForMiniAdaDataDFT(SSPA_Parser i_MiniAdaParser)
+        //void CheckForMiniAdaDataDFT(SSPA_Parser i_MiniAdaParser)
+        //{
+        //    //// Same Input Signal as Example 1 - Except a fractional cycle for frequency.
+        //    //double amplitude = 1.0; double frequency = 20000.5;
+        //    //UInt32 length = 1000; UInt32 zeroPadding = 9000; // NOTE: Zero Padding
+        //    //double samplingRate = 100000;
+        //    //double[] inputSignal = DSPLib.DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
+        //    //// Apply window to the Input Data & calculate Scale Factor
+        //    //double[] wCoefs = DSP.Window.Coefficients(DSP.Window.Type.FTNI, length);
+        //    //double[] wInputData = DSP.Math.Multiply(inputSignal, wCoefs);
+        //    //double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
+        //    //// Instantiate & Initialize a new DFT
+        //    //DSPLib.DFT dft = new DSPLib.DFT();
+        //    //dft.Initialize(length, zeroPadding); // NOTE: Zero Padding
+        //    //                                     // Call the DFT and get the scaled spectrum back
+        //    //Complex[] cSpectrum = dft.Execute(wInputData);
+        //    //// Convert the complex spectrum to note: Magnitude Format
+        //    //double[] lmSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum);
+        //    //// Properly scale the spectrum for the added window
+        //    //lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
+        //    //// For plotting on an XY Scatter plot generate the X Axis frequency Span
+        //    //double[] freqSpan = dft.FrequencySpan(samplingRate);
+        //    //// At this point a XY Scatter plot can be generated from,
+        //    //// X axis => freqSpan
+        //    //// Y axis => lmSpectrum
+
+        //    //var series = new Series("Freq 2");
+        //    //var series2 = new Series("Time 2");
+        //    //listBox_Charts.Items.Add(series.Name);
+        //    //listBox_Charts.Items.Add(series2.Name);
+        //    //// Frist parameter is X-Axis and Second is Collection of Y- Axis
+        //    //series.Points.DataBindXY(freqSpan, lmSpectrum);
+
+        //    //for (int i = 0; i < inputSignal.Length / 10; i++)
+        //    //{
+        //    //    series2.Points.AddXY(i, inputSignal[i]);
+        //    //}
+        //    //series2.ChartType = SeriesChartType.Line;
+        //    //chart1.Series.Add(series);
+        //    //chart1.Series.Add(series2);
+
+        //    //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
+        //    //UInt32 zeroPadding = 9000;
+        //    double scale = 2 ^ 11 - 1;
+
+
+        //    double[] IQ1Sigal = new double[i_MiniAdaParser.IQData.I1.Length];
+        //    double[] IQ2Sigal = new double[i_MiniAdaParser.IQData.I2.Length];
+
+        //    for (int i = 0; i < i_MiniAdaParser.IQData.I1.Length; i++)
+        //    {
+        //        IQ1Sigal[i] = (double)(i_MiniAdaParser.IQData.I1[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q1[i] / scale / 2);
+        //    }
+
+
+        //    for (int i = 0; i < i_MiniAdaParser.IQData.I2.Length; i++)
+        //    {
+        //        IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale / 2);
+        //    }
+
+        //    int zeroPadding = 0;
+        //    //   Int32.TryParse(TextBox_Zeropadding.Text, out zeroPadding);
+
+
+
+        //    // Instantiate & Initialize a new DFT
+        //    DSPLib.DFT dft = new DSPLib.DFT();
+        //    DSPLib.DFT dft2 = new DSPLib.DFT();
+        //    //DSPLib.DFT dft = new DSPLib.DFT();
+        //    dft.Initialize((uint)IQ1Sigal.Length, (uint)zeroPadding); // NOTE: Zero Padding
+        //    dft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding);
+
+        //    // Call the DFT and get the scaled spectrum back
+
+        //    // Convert the complex spectrum to note: Magnitude Format
+
+        //    // Properly scale the spectrum for the added window
+
+        //    // For plotting on an XY Scatter plot generate the X Axis frequency Span
+        //    //double[] freqSpan = dft.FrequencySpan(samplingRate);
+        //    //double[] freqSpan2 = dft2.FrequencySpan(samplingRate);
+        //    // At this point a XY Scatter plot can be generated from,
+        //    // X axis => freqSpan
+        //    // Y axis => lmSpectrum
+
+        //    listBox_Charts.BeginInvoke(new EventHandler(delegate
+        //    {
+        //        var series1 = new Series("IQ1 Freq " + ChartIndex.ToString());
+        //        var series2 = new Series("IQ1 Time " + ChartIndex.ToString());
+        //        var series3 = new Series("IQ2 Freq " + ChartIndex.ToString());
+        //        var series4 = new Series("IQ2 Time " + ChartIndex.ToString());
+
+        //        ChartIndex++;
+        //        listBox_Charts.Items.Add(series1.Name);
+        //        listBox_Charts.Items.Add(series2.Name);
+        //        listBox_Charts.Items.Add(series3.Name);
+        //        listBox_Charts.Items.Add(series4.Name);
+        //        // Frist parameter is X-Axis and Second is Collection of Y- Axis
+        //        //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
+
+        //        for (int i = 0; i < IQ1Sigal.Length; i++)
+        //        {
+        //            series2.Points.AddXY(i, IQ1Sigal[i]);
+        //        }
+        //        series2.ChartType = SeriesChartType.Line;
+        //        chart1.Series.Add(series1);
+        //        chart1.Series.Add(series2);
+
+        //        //    series3.Points.DataBindXY(freqSpan, lmSpectrum);
+
+        //        for (int i = 0; i < IQ1Sigal.Length; i++)
+        //        {
+        //            series4.Points.AddXY(i, IQ1Sigal[i]);
+        //        }
+        //        series4.ChartType = SeriesChartType.Line;
+        //        chart1.Series.Add(series3);
+        //        chart1.Series.Add(series4);
+
+        //        PlotGraphTimer = -1;
+        //        textBox_SystemStatus.Text = "Graphs is ready;";
+        //        textBox_SystemStatus.BackColor = Color.LightGreen;
+        //    }));
+
+
+        //}
+
+        public string ConvertHex(String hexString)
         {
-            //// Same Input Signal as Example 1 - Except a fractional cycle for frequency.
-            //double amplitude = 1.0; double frequency = 20000.5;
-            //UInt32 length = 1000; UInt32 zeroPadding = 9000; // NOTE: Zero Padding
-            //double samplingRate = 100000;
-            //double[] inputSignal = DSPLib.DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
-            //// Apply window to the Input Data & calculate Scale Factor
-            //double[] wCoefs = DSP.Window.Coefficients(DSP.Window.Type.FTNI, length);
-            //double[] wInputData = DSP.Math.Multiply(inputSignal, wCoefs);
-            //double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
-            //// Instantiate & Initialize a new DFT
-            //DSPLib.DFT dft = new DSPLib.DFT();
-            //dft.Initialize(length, zeroPadding); // NOTE: Zero Padding
-            //                                     // Call the DFT and get the scaled spectrum back
-            //Complex[] cSpectrum = dft.Execute(wInputData);
-            //// Convert the complex spectrum to note: Magnitude Format
-            //double[] lmSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum);
-            //// Properly scale the spectrum for the added window
-            //lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
-            //// For plotting on an XY Scatter plot generate the X Axis frequency Span
-            //double[] freqSpan = dft.FrequencySpan(samplingRate);
-            //// At this point a XY Scatter plot can be generated from,
-            //// X axis => freqSpan
-            //// Y axis => lmSpectrum
-
-            //var series = new Series("Freq 2");
-            //var series2 = new Series("Time 2");
-            //listBox_Charts.Items.Add(series.Name);
-            //listBox_Charts.Items.Add(series2.Name);
-            //// Frist parameter is X-Axis and Second is Collection of Y- Axis
-            //series.Points.DataBindXY(freqSpan, lmSpectrum);
-
-            //for (int i = 0; i < inputSignal.Length / 10; i++)
-            //{
-            //    series2.Points.AddXY(i, inputSignal[i]);
-            //}
-            //series2.ChartType = SeriesChartType.Line;
-            //chart1.Series.Add(series);
-            //chart1.Series.Add(series2);
-
-            //  double samplingRate = Convert.ToDouble(TextBoxFsSamplingRate.Text); ;
-            //UInt32 zeroPadding = 9000;
-            double scale = 2 ^ 11 - 1;
-
-
-            double[] IQ1Sigal = new double[i_MiniAdaParser.IQData.I1.Length];
-            double[] IQ2Sigal = new double[i_MiniAdaParser.IQData.I2.Length];
-
-            for (int i = 0; i < i_MiniAdaParser.IQData.I1.Length; i++)
+            try
             {
-                IQ1Sigal[i] = (double)(i_MiniAdaParser.IQData.I1[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q1[i] / scale / 2);
-            }
-
-
-            for (int i = 0; i < i_MiniAdaParser.IQData.I2.Length; i++)
-            {
-                IQ2Sigal[i] = (double)(i_MiniAdaParser.IQData.I2[i] / scale / 2) + (double)(i_MiniAdaParser.IQData.Q2[i] / scale / 2);
-            }
-
-            int zeroPadding = 0;
-            //   Int32.TryParse(TextBox_Zeropadding.Text, out zeroPadding);
-
-
-
-            // Instantiate & Initialize a new DFT
-            DSPLib.DFT dft = new DSPLib.DFT();
-            DSPLib.DFT dft2 = new DSPLib.DFT();
-            //DSPLib.DFT dft = new DSPLib.DFT();
-            dft.Initialize((uint)IQ1Sigal.Length, (uint)zeroPadding); // NOTE: Zero Padding
-            dft2.Initialize((uint)IQ2Sigal.Length, (uint)zeroPadding);
-
-            // Call the DFT and get the scaled spectrum back
-
-            // Convert the complex spectrum to note: Magnitude Format
-
-            // Properly scale the spectrum for the added window
-
-            // For plotting on an XY Scatter plot generate the X Axis frequency Span
-            //double[] freqSpan = dft.FrequencySpan(samplingRate);
-            //double[] freqSpan2 = dft2.FrequencySpan(samplingRate);
-            // At this point a XY Scatter plot can be generated from,
-            // X axis => freqSpan
-            // Y axis => lmSpectrum
-
-            listBox_Charts.BeginInvoke(new EventHandler(delegate
-            {
-                var series1 = new Series("IQ1 Freq " + ChartIndex.ToString());
-                var series2 = new Series("IQ1 Time " + ChartIndex.ToString());
-                var series3 = new Series("IQ2 Freq " + ChartIndex.ToString());
-                var series4 = new Series("IQ2 Time " + ChartIndex.ToString());
-
-                ChartIndex++;
-                listBox_Charts.Items.Add(series1.Name);
-                listBox_Charts.Items.Add(series2.Name);
-                listBox_Charts.Items.Add(series3.Name);
-                listBox_Charts.Items.Add(series4.Name);
-                // Frist parameter is X-Axis and Second is Collection of Y- Axis
-                //       series1.Points.DataBindXY(freqSpan, lmSpectrum);
-
-                for (int i = 0; i < IQ1Sigal.Length; i++)
+                string ascii = string.Empty;
+                for (int i = 0; i < hexString.Length; i += 2)
                 {
-                    series2.Points.AddXY(i, IQ1Sigal[i]);
+                    String hs = string.Empty;
+                    hs = hexString.Substring(i, 2);
+                    if (hs != "00")
+                    {
+                        uint decval = System.Convert.ToUInt32(hs, 16);
+                        char character = System.Convert.ToChar(decval);
+                        ascii += character;
+                    }
+
                 }
-                series2.ChartType = SeriesChartType.Line;
-                chart1.Series.Add(series1);
-                chart1.Series.Add(series2);
+                return ascii;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return string.Empty;
+        }
 
-                //    series3.Points.DataBindXY(freqSpan, lmSpectrum);
 
-                for (int i = 0; i < IQ1Sigal.Length; i++)
-                {
-                    series4.Points.AddXY(i, IQ1Sigal[i]);
-                }
-                series4.ChartType = SeriesChartType.Line;
-                chart1.Series.Add(series3);
-                chart1.Series.Add(series4);
+        public float ConvertFloat(String hexString)
+        {
+            try
+            {
+                //string hexString = "43480170";
+                uint num = uint.Parse(hexString, System.Globalization.NumberStyles.AllowHexSpecifier);
+                byte[] floatVals = BitConverter.GetBytes(num).Reverse().ToArray();
 
-                PlotGraphTimer = -1;
-                textBox_SystemStatus.Text = "Graphs is ready;";
-                textBox_SystemStatus.BackColor = Color.LightGreen;
-            }));
+                float f = BitConverter.ToSingle(floatVals, 0);
+                return f;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            return 0;
+        }
+
+        byte[] StringToByteArray(string hex)
+        {
+
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
 
 
         }
 
+        // object ReturnValue =null;
+        public class GetRecodIQDataClass
+        {
+            public Int16[] I1;
+            public Int16[] Q1;
+            public Int16[] I2;
+            public Int16[] Q2;
+        }
+        public GetRecodIQDataClass IQData = new GetRecodIQDataClass();
+
+        //public object GetDataFromParser()
+        //{
+        //    object ret = ReturnValue;
+        //    ReturnValue = null;
+        //    return ret;
+        //}
+
+
+        string UnHandaledPreample(KratosProtocolFrame i_Parsedframe)
+        {
+            string ret = String.Format("\n Unkown Preample Unhandled: [{0}] \n", i_Parsedframe.Preamble);
+            textBox_SystemStatus.Text = ret;
+
+            return ret;
+        }
+        string UnHandledOpcode(KratosProtocolFrame i_Parsedframe)
+        {
+
+            string ret = String.Format("\n Opcode Unhandled: [{0}] \n", i_Parsedframe.Opcode);
+            textBox_SystemStatus.Text = ret;
+
+            return ret;
+
+        }
+        //string RetriveIQData(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n IQ data retrive: [{0}] \n", i_Parsedframe.Data);
+        //}
+        //string PlayIQData(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n IQ Data sent to play \n");
+        //}
+        //string GetUbloxData(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Ublox data: [{0}] \n", ConvertHex(i_Parsedframe.Data));
+        //}
+
+        //string SetRxChannelStateCal(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n RX channel state RX/CAL have been set \n");
+        //}
+        //string RecordIQDaraSelectSource(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n Record IQ data source selected \n");
+        //}
+        //string RecordIQData(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    byte[] DataBytes = StringToByteArray(i_Parsedframe.Data);
+
+
+
+        //    int NumberOfSamples = DataBytes.Length;
+        //    NumberOfSamples /= 8;
+
+        //    IQData = new GetRecodIQDataClass();
+        //    IQData.I1 = new Int16[NumberOfSamples - 1];
+        //    IQData.Q1 = new Int16[NumberOfSamples - 1];
+        //    IQData.I2 = new Int16[NumberOfSamples - 1];
+        //    IQData.Q2 = new Int16[NumberOfSamples - 1];
+
+        //    for (int i = 1; i < (DataBytes.Length / 8) - 1; i++)// Gil: i=1 beacuse we throw the first sample
+        //    {
+        //        int Index = i * 8;
+        //        IQData.I1[i] = (Int16)(DataBytes[Index] | DataBytes[Index + 1] << 8);
+        //        IQData.Q1[i] = (Int16)(DataBytes[Index + 2] | DataBytes[Index + 3] << 8);
+        //        IQData.I2[i] = (Int16)(DataBytes[Index + 4] | DataBytes[Index + 5] << 8);
+        //        IQData.Q2[i] = (Int16)(DataBytes[Index + 6] | DataBytes[Index + 7] << 8);
+        //    }
+
+
+
+
+        //    return String.Format("\n IQ samples Data: [{0}]  Data Length: [{1}] Bytes\n", i_Parsedframe.Data, DataBytes.Length);
+        //}
+        //string SetGPIOValue(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n GPIO value have been set \n");
+        //}
+
+        //string GetGPIOValue(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n GPIO Value  [{0}]  \n", i_Parsedframe.Data);
+        //}
+        //string SetGPIODirection(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n GPIO direction have been set \n");
+        //}
+
+        //string GetGPIODirection(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n GPIO direction  [{0}]  \n", i_Parsedframe.Data);
+        //}
+        //string TxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n Tx Get RF PLL lock Detect [{0}]  \n", i_Parsedframe.Data);
+        //}
+        //string RxGetRFPLLlockDetect(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n Rx Get RF PLL lock Detect [{0}]  \n", i_Parsedframe.Data);
+        //}
+        //string GetDCA(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n DCA [{0}] dBm \n", ConvertFloat(i_Parsedframe.Data));
+        //}
+
+        //string SetDCA(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n DCA has been set \n");
+        //}
+        //string GetRXChannelGain(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    int intValue = int.Parse(i_Parsedframe.Data, System.Globalization.NumberStyles.HexNumber);
+        //    return String.Format("\n Rx channel Gain [{0}] \n", intValue);
+        //}
+        //string SetRXChannelGain(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    byte[] DataBytes = StringToByteArray(i_Parsedframe.Data);
+        //    return String.Format("\n RX Channel Gain has been set\n");
+        //}
+        //string LoadDataInFlash(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    byte[] DataBytes = StringToByteArray(i_Parsedframe.Data);
+        //    return String.Format("\n Loaded Data: [{0}]  Data Length: [{1}] Bytes\n", i_Parsedframe.Data, DataBytes.Length);
+        //}
+
+
+
+        //string EraseSectorintFlash(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Sector has been erased \n");
+        //}
+        //string StoreDataInFlash(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Data stored in the flash \n");
+        //}
+        //string Write_FPGA_Data(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n FPGA value have been set \n");
+        //}
+
+        //string Read_FPGA_Data(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n FPGA value [{0}] \n", i_Parsedframe.Data);
+        //}
+        //string SetTXCO_ON_OFF(KratosProtocolFrame i_Parsedframe)
+        //{
+
+
+        //    return String.Format("\n TCXO have been set \n");
+        //}
+        //string GetOutputPower(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Output Power [{0}] dBm \n", ConvertFloat(i_Parsedframe.Data));
+        //}
+        //string SetOutputPower(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n System Output power havs been set \n");
+        //}
+        //string GetSytemState(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n System State [{0}] \n", ConvertHex(i_Parsedframe.Data));
+        //}
+        //string SetSytemState(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n System state have been changed \n");
+        //}
+        //string DoSync(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Sync received \n");
+        //}
+        //string GetTxAD936X(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    return String.Format("\n Tx AD936X  [{0}] \n", i_Parsedframe.Data);
+
+        //}
+        //string SetTxAD936X(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Tx AD936X data Has been Set [OK] \n");
+        //}
+        //string SetSynthesizerL2(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Synthesizer L2 Has been Set [OK] \n");
+        //}
+        //string SetSynthesizerL1(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Synthesizer L1 Has been Set [OK] \n");
+
+        //}
+        //string GetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n PSU card Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
+        //}
+
+        //string SetPSUCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n PSU card Information Has been Set [OK] \n");
+        //}
+
+        //string GetRFCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n RF card Information [{0}] \n", ConvertHex(i_Parsedframe.Data));
+        //}
+
+        //string SetRFCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Core RF Information Has been Set [OK] \n");
+        //}
+
+        //string SetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    return String.Format("\n Core card Information Has been Set [OK] \n");
+        //}
+
+
+        //void GetCoreCardInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    SendMessageToSystemLogger(String.Format("\n Core card Information [{0}] \n", ConvertHex(i_Parsedframe.Data)));
+        //}
+        //void SetIdentityInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    SendMessageToSystemLogger(String.Format("\n Identity Information Has been Set [OK] \n"));
+        //}
+        //void GetIdentityInformation(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    SendMessageToSystemLogger(String.Format("\n Identity Information [{0}] \n", ConvertHex(i_Parsedframe.Data)));
+        //}
+        //void GetSystemType(KratosProtocolFrame i_Parsedframe)
+        //{
+
+        //    int SystemType = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+
+        //    SendMessageToSystemLogger(String.Format("\n System type [{0}] \n", SystemType));
+        //}
+
+        //void IsSystemBusy(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    //2 bytes Serial number:
+        //    //2 bytes - Serial number, range: 0 – 65535
+        //    int BusyStatus = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        //    //int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        //    if (BusyStatus == 0)
+        //    {
+        //        SendMessageToSystemLogger( String.Format("\n Ready [OK] [{0}] \n", BusyStatus));
+        //    }
+        //    else
+        //    {
+        //        SendMessageToSystemLogger(String.Format("\n Busy  [{0}] \n", BusyStatus));
+        //    }
+        //}
+        //void SetLogLevel(KratosProtocolFrame i_Parsedframe)
+        //{
+        //    //2 bytes Serial number:
+        //    //2 bytes - Serial number, range: 0 – 65535
+
+        //    //int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+
+        //    SendMessageToSystemLogger( String.Format("\n Log Level has been set. \n"));
+        //}
+        void GetSerialNumber(KratosProtocolFrame i_Parsedframe)
+        {
+            //2 bytes Serial number:
+            //2 bytes - Serial number, range: 0 – 65535
+
+            int SerialNumber = int.Parse(i_Parsedframe.Data.Substring(2, 2) + i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+
+            SendMessageToSystemLogger( String.Format("\n Serial Number : <<{0}>>\n", SerialNumber));
+        }
+
+        void GetSystemStatus(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            if (int.TryParse(i_Parsedframe.DataLength, out DataLength) == true)
+            {
+                for (int i = 0; i < DataLength - 2; i = i + 4)
+                {
+                    ret += "<<" + i_Parsedframe.Data.Substring(i, i + 4) + ">>";
+                }
+            }
+
+            SendMessageToSystemLogger(ret);
+        }
+
+        void GetDiscreteStatusBusmode(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
+            }
+
+            SendMessageToSystemLogger(ret);
+        }
+
+        void GetSystemTableIndexes(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
+            }
+
+            SendMessageToSystemLogger(ret);
+        }
+
+        void ReadFromFlash(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = "";
+            int DataLength = 0;
+            int.TryParse(i_Parsedframe.DataLength, out DataLength);
+
+            for (int i = 0; i < DataLength - 2; i = i + 2)
+            {
+                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
+            }
+
+            SendMessageToSystemLogger(ret);
+        }
+
+
+
+        void ACK_Received(KratosProtocolFrame i_Parsedframe)
+        {
+            String ret = String.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+            SendMessageToSystemLogger(ret);
+        }
+
+        void GetThermalSuperVisor(KratosProtocolFrame i_Parsedframe)
+        {
+
+
+            String ret = String.Format("\n recieved OK, Opcode :[{0}], Thermal <<{1}>> \n", i_Parsedframe.Opcode, i_Parsedframe.Data);
+            SendMessageToSystemLogger(ret);
+        }
+    
+
+
+
+
+
+
+
+        void GetHardwareVertion(KratosProtocolFrame i_Parsedframe)
+        {
+            //    Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
+
+            int UnitMajorVersion = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            SendMessageToSystemLogger( String.Format("\n Unit HW version <<{0},{1}/{2}/{3}>>\n  ",
+                UnitMajorVersion, VersionDay, VersionMonth, VersionYear));
+        }
+        void GetFirmwareVertion(KratosProtocolFrame i_Parsedframe)
+        {
+            //    Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
+
+            int UnitMajorVersion = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            //    int UnitMinorVersion = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            SendMessageToSystemLogger(String.Format("\n Unit FW version <<{0},{1}/{2}/{3}>>\n  ",
+                UnitMajorVersion, VersionDay, VersionMonth, VersionYear));
+        }
+
+        void GetSimulatorID(KratosProtocolFrame i_Parsedframe)
+        {
+
+            SendMessageToSystemLogger(String.Format("\n Simulator ID <<0x{0}>>\n ", i_Parsedframe.Data));
+
+        }
+        void GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
+        {
+            //    ICD major version – 	1 byte
+            //ICD minor version – 	1 byte
+            //Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
+
+
+            int ICDMajor = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+            int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            int UnitMajorNumber = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int UnitMinorNumber = int.Parse(i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            string VersionDateTime = ConvertHex(i_Parsedframe.Data.Substring(8));
+
+
+            SendMessageToSystemLogger(String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
+    "\n Version date time  [{4}]\n ",
+    ICDMajor, ICDMinor, UnitMajorNumber, UnitMinorNumber, VersionDateTime));
+            //int VersionDay = int.Parse(i_Parsedframe.Data.Substring(8, 2), System.Globalization.NumberStyles.HexNumber);
+            //int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(10, 2), System.Globalization.NumberStyles.HexNumber);
+            //int VersionYear = int.Parse(i_Parsedframe.Data.Substring(14, 2) + i_Parsedframe.Data.Substring(12, 2), System.Globalization.NumberStyles.HexNumber);  //Gil: because it is little endian so I need to reverse the bytes
+            //return String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
+            //    "\n Version day  [{4}]\n Version month [{5}]\n Version year [{6}]\n",
+            //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
+        }
+
+        void ParseSystemFrame(KratosProtocolFrame i_Parsedframe)
+        {
+            if (i_Parsedframe == null)
+            {
+                textBox_SystemStatus.Text = "frame received as null";
+            }
+            int intValue = int.Parse(i_Parsedframe.Preamble, System.Globalization.NumberStyles.HexNumber);
+            if (intValue != 0x23)
+            {
+                UnHandaledPreample(i_Parsedframe);
+            }
+            else
+            {
+                //ret = "[ACK]  ";
+                switch (i_Parsedframe.Opcode)
+                {
+
+                    case "11":
+                        GetSystemStatus(i_Parsedframe);
+
+                        break;
+
+                    case "25":
+                        GetDiscreteStatusBusmode(i_Parsedframe);
+
+                        break;
+
+                    case "26":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "27":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "33":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "35":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "36":
+                         ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "37":
+                        GetSystemTableIndexes(i_Parsedframe);
+
+                        break;
+
+                    case "70":
+                        ReadFromFlash(i_Parsedframe);
+
+                        break;
+
+                    case "38":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "39":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "80":
+                        GetSimulatorID(i_Parsedframe);
+
+                        break;
+
+                    case "81":
+                        GetSoftwareVertion(i_Parsedframe);
+
+                        break;
+
+                    case "82":
+                        GetFirmwareVertion(i_Parsedframe);
+
+                        break;
+
+                    case "83":
+                        GetHardwareVertion(i_Parsedframe);
+
+                        break;
+
+                    case "85":
+                        GetSerialNumber(i_Parsedframe);
+
+                        break;
+
+
+                    case "90":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "91":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "92":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "93":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "94":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "95":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "96":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "97":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "98":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "99":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "9A":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "9B":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "9C":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "9D":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "9E":
+                         GetThermalSuperVisor(i_Parsedframe);
+
+                        break;
+
+                    case "9F":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "A0":
+                         ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "A1":
+                        ACK_Received(i_Parsedframe);
+
+                        break;
+
+
+                    default:
+                        UnHandledOpcode(i_Parsedframe);
+                        break;
+                }
+
+            }
+        }
+
+        void SendMessageToSystemLogger(String i_msg)
+        {
+
+            SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
+            SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
+
+            if (i_msg.Contains("ACK") == true)
+            {
+                SystemLogger.LogMessage(Color.DarkGreen, Color.White, i_msg, true, false);
+            }
+            else
+            {
+                SystemLogger.LogMessage(Color.Blue, Color.Azure, i_msg, true, false);
+            }
+
+            GlobalSystemResultReceived += i_msg;
+        }
         void ParseKratosIncomeFrame(byte[] i_IncomeBuffer)
         {
             try
@@ -11625,23 +12338,14 @@ namespace Monitor
                         textBox_RxClientCheckSum.BackColor = Color.LightGreen;
                         textBox_RxClientCheckSum.Text = Result.CheckSum;
 
-                        MiniAdaParser = new SSPA_Parser();
-                        string SystemResultReceived = MiniAdaParser.ParseKratosFrame(Result);
 
-                        SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
-                        SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
-
-                        if (SystemResultReceived.Contains("ACK") == true)
-                        {
-                            SystemLogger.LogMessage(Color.DarkGreen, Color.White, SystemResultReceived, true, false);
-                        }
-                        else
-                        {
-                            SystemLogger.LogMessage(Color.Blue, Color.Azure, SystemResultReceived, true, false);
-                        }
+                        ParseSystemFrame(Result);
+                        //MiniAdaParser = new SSPA_Parser();
+                        //string SystemResultReceived = MiniAdaParser.ParseKratosFrame(Result);
 
 
-                        GlobalSystemResultReceived += SystemResultReceived;
+
+                        
 
 
 
@@ -11650,8 +12354,6 @@ namespace Monitor
                             byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
                             richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
                             //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
-
-
 
                         }));
 
@@ -11668,7 +12370,7 @@ namespace Monitor
 
         String GlobalSystemResultReceived;
         int ChartIndex = 0;
-        SSPA_Parser MiniAdaParser = new SSPA_Parser();
+        //SSPA_Parser MiniAdaParser = new SSPA_Parser();
         void ParseIncomeBuffer_TCPIP()
         {
             try
@@ -12027,22 +12729,7 @@ namespace Monitor
 
         }
 
-        private byte[] StringToByteArray(string hex)
-        {
-            try
-            {
-                return Enumerable.Range(0, hex.Length)
-                                 .Where(x => x % 2 == 0)
-                                 .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
-                                 .ToArray();
 
-            }
-            catch (Exception ex)
-            {
-                SerialPortLogger.LogMessage(Color.Red, Color.LightGray, ex.Message, New_Line = true, Show_Time = false);
-                return null;
-            }
-        }
 
         String ConvertByteArraytToString(byte[] i_Buffer)
         {
@@ -17250,16 +17937,16 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         }
         int PlotGraphTimer = 0;
-        private void button96_Click(object sender, EventArgs e)
-        {
-            PlotGraphTimer = 60;
-            new Thread(() =>
-            {
-                CheckForMiniAdaDataFFT(MiniAdaParser);
+        //private void button96_Click(object sender, EventArgs e)
+        //{
+        //    PlotGraphTimer = 60;
+        //    new Thread(() =>
+        //    {
+        //        CheckForMiniAdaDataFFT(MiniAdaParser);
 
-            }).Start();
+        //    }).Start();
 
-        }
+        //}
 
         private void button97_Click(object sender, EventArgs e)
         {
@@ -17273,17 +17960,17 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
             //  windowToApply = (DSPLib.DSP.Window.Type)Enum.Parse(typeof(DSPLib.DSP.Window.Type), selectedWindowName);
         }
 
-        private void button98_Click(object sender, EventArgs e)
-        {
-            PlotGraphTimer = 120;
-            new Thread(() =>
-            {
+        //private void button98_Click(object sender, EventArgs e)
+        //{
+        //    PlotGraphTimer = 120;
+        //    new Thread(() =>
+        //    {
 
 
-                CheckForMiniAdaDataDFT(MiniAdaParser);
+        //        CheckForMiniAdaDataDFT(MiniAdaParser);
 
-            }).Start();
-        }
+        //    }).Start();
+        //}
 
         private void button99_Click(object sender, EventArgs e)
         {

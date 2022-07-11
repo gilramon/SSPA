@@ -148,7 +148,6 @@
     <Compile Include="MainForm_Logic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSPA_Parser.cs" />
     <Compile Include="Plot.cs">
       <SubType>Form</SubType>
     </Compile>
