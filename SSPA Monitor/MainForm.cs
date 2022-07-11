@@ -696,6 +696,7 @@ namespace Monitor
         private Label label80;
         private Label label83;
         private Button button74;
+        private Label label102;
         static readonly string PREAMBLE = "23";
 
 
@@ -750,11 +751,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1404,6 +1405,7 @@ namespace Monitor
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button74 = new System.Windows.Forms.Button();
+            this.label102 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1826,17 +1828,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea6.AxisX.Title = "Freq";
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Title = "Power [dBm]";
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4602,7 +4604,7 @@ namespace Monitor
             this.button71.Location = new System.Drawing.Point(552, 184);
             this.button71.Margin = new System.Windows.Forms.Padding(2);
             this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(69, 22);
+            this.button71.Size = new System.Drawing.Size(97, 22);
             this.button71.TabIndex = 16;
             this.button71.Text = "Save CSV";
             this.button71.UseVisualStyleBackColor = true;
@@ -5573,6 +5575,7 @@ namespace Monitor
             this.textBox30.TabIndex = 8;
             this.textBox30.Text = "0";
             this.toolTip1.SetToolTip(this.textBox30, "Press Enter to update");
+            this.textBox30.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
             this.textBox30.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox30_KeyDown);
             // 
             // textBox31
@@ -5601,6 +5604,7 @@ namespace Monitor
             // 
             // groupBox45
             // 
+            this.groupBox45.Controls.Add(this.label102);
             this.groupBox45.Controls.Add(this.label31);
             this.groupBox45.Controls.Add(this.label30);
             this.groupBox45.Controls.Add(this.label29);
@@ -5677,6 +5681,7 @@ namespace Monitor
             this.textBox27.TabIndex = 10;
             this.textBox27.Text = "0";
             this.toolTip1.SetToolTip(this.textBox27, "Press Enter to update");
+            this.textBox27.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
             this.textBox27.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
             // 
             // textBox26
@@ -5688,6 +5693,7 @@ namespace Monitor
             this.textBox26.TabIndex = 9;
             this.textBox26.Text = "0";
             this.toolTip1.SetToolTip(this.textBox26, "Press Enter to update");
+            this.textBox26.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
             this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
             // textBox25
@@ -5699,6 +5705,7 @@ namespace Monitor
             this.textBox25.TabIndex = 8;
             this.textBox25.Text = "0";
             this.toolTip1.SetToolTip(this.textBox25, "Press Enter to update");
+            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
             this.textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
             // 
             // textBox24
@@ -5849,7 +5856,7 @@ namespace Monitor
             // 
             // button57
             // 
-            this.button57.Location = new System.Drawing.Point(6, 74);
+            this.button57.Location = new System.Drawing.Point(6, 68);
             this.button57.Margin = new System.Windows.Forms.Padding(2);
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(69, 22);
@@ -5860,7 +5867,7 @@ namespace Monitor
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(198, 50);
+            this.textBox2.Location = new System.Drawing.Point(195, 63);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -5869,7 +5876,7 @@ namespace Monitor
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 18);
+            this.textBox1.Location = new System.Drawing.Point(195, 31);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -5890,7 +5897,7 @@ namespace Monitor
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(119, 52);
+            this.label27.Location = new System.Drawing.Point(116, 65);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(81, 18);
@@ -5900,7 +5907,7 @@ namespace Monitor
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(116, 22);
+            this.label26.Location = new System.Drawing.Point(113, 35);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(83, 18);
@@ -5953,7 +5960,7 @@ namespace Monitor
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(263, 54);
+            this.label97.Location = new System.Drawing.Point(274, 71);
             this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(29, 18);
@@ -5962,7 +5969,7 @@ namespace Monitor
             // 
             // textBox_SimulatorSN
             // 
-            this.textBox_SimulatorSN.Location = new System.Drawing.Point(292, 46);
+            this.textBox_SimulatorSN.Location = new System.Drawing.Point(303, 63);
             this.textBox_SimulatorSN.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorSN.Name = "textBox_SimulatorSN";
             this.textBox_SimulatorSN.ReadOnly = true;
@@ -5972,7 +5979,7 @@ namespace Monitor
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(263, 22);
+            this.label96.Location = new System.Drawing.Point(274, 39);
             this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(25, 18);
@@ -5981,7 +5988,7 @@ namespace Monitor
             // 
             // textBox_SimulatorID
             // 
-            this.textBox_SimulatorID.Location = new System.Drawing.Point(292, 15);
+            this.textBox_SimulatorID.Location = new System.Drawing.Point(303, 32);
             this.textBox_SimulatorID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorID.Name = "textBox_SimulatorID";
             this.textBox_SimulatorID.ReadOnly = true;
@@ -6002,7 +6009,7 @@ namespace Monitor
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(87, 50);
+            this.label93.Location = new System.Drawing.Point(95, 67);
             this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(81, 18);
@@ -6012,7 +6019,7 @@ namespace Monitor
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(84, 18);
+            this.label94.Location = new System.Drawing.Point(90, 35);
             this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(83, 18);
@@ -6021,7 +6028,7 @@ namespace Monitor
             // 
             // textBox_SimulatorFWVersion
             // 
-            this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(166, 46);
+            this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(177, 63);
             this.textBox_SimulatorFWVersion.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorFWVersion.Name = "textBox_SimulatorFWVersion";
             this.textBox_SimulatorFWVersion.ReadOnly = true;
@@ -6030,7 +6037,7 @@ namespace Monitor
             // 
             // textBox_SimulatorHWVersion
             // 
-            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(166, 17);
+            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(177, 34);
             this.textBox_SimulatorHWVersion.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorHWVersion.Name = "textBox_SimulatorHWVersion";
             this.textBox_SimulatorHWVersion.ReadOnly = true;
@@ -6329,8 +6336,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6355,8 +6362,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6761,9 +6768,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8825,6 +8832,15 @@ namespace Monitor
             this.button74.Text = "Clear";
             this.button74.UseVisualStyleBackColor = true;
             this.button74.Click += new System.EventHandler(this.button74_Click_1);
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(198, 13);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(90, 18);
+            this.label102.TabIndex = 14;
+            this.label102.Text = "Enter to send";
             // 
             // MainForm
             // 
@@ -20127,7 +20143,16 @@ Note: eStatus enum 
 
         private void button75_Click_1(object sender, EventArgs e)
         {
-            ClearVersions();
+            foreach (Control ctr in groupBox1.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                }
+            }
+
+
+
         }
 
         private void button32_Click_1(object sender, EventArgs e)
@@ -20331,7 +20356,17 @@ Note: eStatus enum 
 
         private void textBox31_TextChanged(object sender, EventArgs e)
         {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
 
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
         }
 
         private void textBox31_KeyDown(object sender, KeyEventArgs e)
@@ -20516,9 +20551,21 @@ Note: eStatus enum 
             button53_Click_1(null, null);
         }
 
+
         private void textBox24_TextChanged(object sender, EventArgs e)
         {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            
 
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
         }
 
         private void textBox84_KeyDown(object sender, KeyEventArgs e)
@@ -20591,7 +20638,17 @@ Note: eStatus enum 
 
         private void textBox29_TextChanged(object sender, EventArgs e)
         {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
 
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
         }
 
         private void groupBox46_Enter(object sender, EventArgs e)
@@ -20770,9 +20827,75 @@ Note: eStatus enum 
             
         }
 
+        private void textBox25_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox26_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox27_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+
+            if (IsDigitsOnly(WithoutSpaces) == true)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
         private void button57_Click_1(object sender, EventArgs e)
         {
-            ClearVersions();
+            foreach (Control ctr in groupBox44.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                }
+            }
         }
 
         private void ComboBox_SerialPortHistory_SelectedIndexChanged(object sender, EventArgs e)
