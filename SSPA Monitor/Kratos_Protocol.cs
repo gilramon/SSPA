@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Monitor
@@ -16,7 +17,7 @@ namespace Monitor
         public override string ToString()
         {
             return String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",
-                Preamble, Opcode, Data, DataLength, CheckSum);
+                Preamble, Opcode, Regex.Replace(Data, ".{2}", "$0 "), DataLength, CheckSum);
         }
     }
 
