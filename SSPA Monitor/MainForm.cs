@@ -697,6 +697,7 @@ namespace Monitor
         private Label label83;
         private Button button74;
         private Label label102;
+        private CheckBox checkBox_ParseRxTCPBuffer;
         static readonly string PREAMBLE = "23";
 
 
@@ -751,11 +752,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1009,6 +1010,7 @@ namespace Monitor
             this.label109 = new System.Windows.Forms.Label();
             this.button71 = new System.Windows.Forms.Button();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.button74 = new System.Windows.Forms.Button();
             this.button72 = new System.Windows.Forms.Button();
             this.textBox_StatusUUT25 = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
@@ -1093,6 +1095,7 @@ namespace Monitor
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.label102 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -1404,8 +1407,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button74 = new System.Windows.Forms.Button();
-            this.label102 = new System.Windows.Forms.Label();
+            this.checkBox_ParseRxTCPBuffer = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1828,17 +1830,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea6.AxisX.Title = "Freq";
-            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisY.Title = "Power [dBm]";
-            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.IsTextAutoFit = false;
-            legend6.Name = "Legend1";
-            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend6);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -2172,6 +2174,7 @@ namespace Monitor
             // 
             // tabPage_ClientTCP
             // 
+            this.tabPage_ClientTCP.Controls.Add(this.checkBox_ParseRxTCPBuffer);
             this.tabPage_ClientTCP.Controls.Add(this.button_Ping);
             this.tabPage_ClientTCP.Controls.Add(this.label10);
             this.tabPage_ClientTCP.Controls.Add(this.label9);
@@ -2308,7 +2311,7 @@ namespace Monitor
             this.textBox_ClientPort.Name = "textBox_ClientPort";
             this.textBox_ClientPort.Size = new System.Drawing.Size(92, 26);
             this.textBox_ClientPort.TabIndex = 3;
-            this.textBox_ClientPort.Text = "7000";
+            this.textBox_ClientPort.Text = "7";
             // 
             // textBox_ClientIP
             // 
@@ -2317,7 +2320,7 @@ namespace Monitor
             this.textBox_ClientIP.Name = "textBox_ClientIP";
             this.textBox_ClientIP.Size = new System.Drawing.Size(92, 26);
             this.textBox_ClientIP.TabIndex = 2;
-            this.textBox_ClientIP.Text = "10.0.1.10";
+            this.textBox_ClientIP.Text = "192.168.1.10";
             // 
             // label8
             // 
@@ -4677,6 +4680,17 @@ namespace Monitor
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = " Status UUT";
             // 
+            // button74
+            // 
+            this.button74.Location = new System.Drawing.Point(538, 327);
+            this.button74.Margin = new System.Windows.Forms.Padding(2);
+            this.button74.Name = "button74";
+            this.button74.Size = new System.Drawing.Size(97, 43);
+            this.button74.TabIndex = 77;
+            this.button74.Text = "Clear";
+            this.button74.UseVisualStyleBackColor = true;
+            this.button74.Click += new System.EventHandler(this.button74_Click_1);
+            // 
             // button72
             // 
             this.button72.Location = new System.Drawing.Point(433, 327);
@@ -5622,6 +5636,15 @@ namespace Monitor
             this.groupBox45.TabIndex = 1;
             this.groupBox45.TabStop = false;
             // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(198, 13);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(90, 18);
+            this.label102.TabIndex = 14;
+            this.label102.Text = "Enter to send";
+            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -6336,8 +6359,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6362,8 +6385,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6768,9 +6791,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8822,25 +8845,15 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // button74
+            // checkBox_ParseRxTCPBuffer
             // 
-            this.button74.Location = new System.Drawing.Point(538, 327);
-            this.button74.Margin = new System.Windows.Forms.Padding(2);
-            this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(97, 43);
-            this.button74.TabIndex = 77;
-            this.button74.Text = "Clear";
-            this.button74.UseVisualStyleBackColor = true;
-            this.button74.Click += new System.EventHandler(this.button74_Click_1);
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(198, 13);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(90, 18);
-            this.label102.TabIndex = 14;
-            this.label102.Text = "Enter to send";
+            this.checkBox_ParseRxTCPBuffer.AutoSize = true;
+            this.checkBox_ParseRxTCPBuffer.Location = new System.Drawing.Point(1084, 349);
+            this.checkBox_ParseRxTCPBuffer.Name = "checkBox_ParseRxTCPBuffer";
+            this.checkBox_ParseRxTCPBuffer.Size = new System.Drawing.Size(146, 22);
+            this.checkBox_ParseRxTCPBuffer.TabIndex = 15;
+            this.checkBox_ParseRxTCPBuffer.Text = "Parse Rx TCP Buffer";
+            this.checkBox_ParseRxTCPBuffer.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -9265,7 +9278,7 @@ namespace Monitor
             ASCIIEncoding encoder = new ASCIIEncoding();
 
             // string IncomingString = System.Text.Encoding.Default.GetString(mye.BytesData);
-            string IncomingString = ByteArrayToString(mye.BytesData.Take(40).ToArray());
+            string IncomingString = ByteArrayToString(mye.BytesData.ToArray());
             //IncomingString = IncomingString.Replace("\0", "");
 
             ServerLogger.LogMessage(Color.Black, Color.White, "\n\nData Received: ", New_Line = false, Show_Time = true);
@@ -12470,10 +12483,47 @@ namespace Monitor
             }
             else
             {
+                if(checkBox_ParseRxTCPBuffer.Checked == true)
+                {
+
+                    try
+                    {
+                        TcpClient PClientSocket = ClientSocket;
+                        if (TCPClientBuffer.Length > 0)
+                        {
+
+                            ParseKratosIncomeFrame(TCPClientBuffer);
+
+                            PClientSocket = ClientSocket;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), New_Line = false, Show_Time = true);
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        TcpClient PClientSocket = ClientSocket;
+                        if (TCPClientBuffer.Length > 0)
+                        {
+
+                            String str = System.Text.Encoding.Default.GetString(TCPClientBuffer);
+                            richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + str + "\n \n");
+                            TCPClientBuffer = new byte[0];
+                            PClientSocket = ClientSocket;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        SystemLogger.LogMessage(Color.Red, Color.LightGray, ex.ToString(), New_Line = false, Show_Time = true);
+                    }
 
 
-                ParseIncomeBuffer_TCPIP();
 
+                }
 
 
 
@@ -16010,6 +16060,8 @@ namespace Monitor
                 // Console.WriteLine("Sending...");
 
                 stm.Write(ba, 0, ba.Length);
+
+                //WaitforBufferFull = 1;
 
                 ClentSendData++;
                 richTextBox_ClientTx.Text = "Send Data to Server " + ClentSendData;
