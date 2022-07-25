@@ -754,11 +754,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1834,17 +1834,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -2391,10 +2391,10 @@ namespace Monitor
             // 
             // textBox_SendSerialPortPeriod
             // 
-            this.textBox_SendSerialPortPeriod.Location = new System.Drawing.Point(418, 55);
+            this.textBox_SendSerialPortPeriod.Location = new System.Drawing.Point(378, 55);
             this.textBox_SendSerialPortPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SendSerialPortPeriod.Name = "textBox_SendSerialPortPeriod";
-            this.textBox_SendSerialPortPeriod.Size = new System.Drawing.Size(108, 26);
+            this.textBox_SendSerialPortPeriod.Size = new System.Drawing.Size(46, 26);
             this.textBox_SendSerialPortPeriod.TabIndex = 108;
             this.textBox_SendSerialPortPeriod.Text = "10";
             this.textBox_SendSerialPortPeriod.TextChanged += new System.EventHandler(this.textBox_SendSerialPortPeriod_TextChanged);
@@ -2402,7 +2402,7 @@ namespace Monitor
             // checkBox_SendEveryOneSecond
             // 
             this.checkBox_SendEveryOneSecond.AutoSize = true;
-            this.checkBox_SendEveryOneSecond.Location = new System.Drawing.Point(530, 57);
+            this.checkBox_SendEveryOneSecond.Location = new System.Drawing.Point(439, 57);
             this.checkBox_SendEveryOneSecond.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_SendEveryOneSecond.Name = "checkBox_SendEveryOneSecond";
             this.checkBox_SendEveryOneSecond.Size = new System.Drawing.Size(189, 22);
@@ -2796,7 +2796,7 @@ namespace Monitor
             this.checkBox_RxHex.AutoSize = true;
             this.checkBox_RxHex.Checked = true;
             this.checkBox_RxHex.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_RxHex.Location = new System.Drawing.Point(1092, 19);
+            this.checkBox_RxHex.Location = new System.Drawing.Point(1084, 525);
             this.checkBox_RxHex.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RxHex.Name = "checkBox_RxHex";
             this.checkBox_RxHex.Size = new System.Drawing.Size(111, 23);
@@ -2806,7 +2806,7 @@ namespace Monitor
             // 
             // textBox_SerialPortRecognizePattern3
             // 
-            this.textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(230, 17);
+            this.textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(232, 521);
             this.textBox_SerialPortRecognizePattern3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SerialPortRecognizePattern3.Name = "textBox_SerialPortRecognizePattern3";
             this.textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(108, 27);
@@ -2814,7 +2814,7 @@ namespace Monitor
             // 
             // textBox_SerialPortRecognizePattern2
             // 
-            this.textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(118, 18);
+            this.textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(120, 522);
             this.textBox_SerialPortRecognizePattern2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SerialPortRecognizePattern2.Name = "textBox_SerialPortRecognizePattern2";
             this.textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(108, 27);
@@ -2822,7 +2822,7 @@ namespace Monitor
             // 
             // textBox_SerialPortRecognizePattern
             // 
-            this.textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(6, 18);
+            this.textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(8, 522);
             this.textBox_SerialPortRecognizePattern.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SerialPortRecognizePattern.Name = "textBox_SerialPortRecognizePattern";
             this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(108, 27);
@@ -2833,7 +2833,7 @@ namespace Monitor
             this.checkBox_S1RecordLog.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_S1RecordLog.AutoSize = true;
             this.checkBox_S1RecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(1198, 17);
+            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(345, 520);
             this.checkBox_S1RecordLog.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_S1RecordLog.Name = "checkBox_S1RecordLog";
             this.checkBox_S1RecordLog.Size = new System.Drawing.Size(83, 29);
@@ -2847,7 +2847,7 @@ namespace Monitor
             this.checkBox_S1Pause.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_S1Pause.AutoSize = true;
             this.checkBox_S1Pause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1Pause.Location = new System.Drawing.Point(1282, 17);
+            this.checkBox_S1Pause.Location = new System.Drawing.Point(429, 520);
             this.checkBox_S1Pause.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_S1Pause.Name = "checkBox_S1Pause";
             this.checkBox_S1Pause.Size = new System.Drawing.Size(58, 29);
@@ -2859,10 +2859,10 @@ namespace Monitor
             // txtS1_Clear
             // 
             this.txtS1_Clear.Font = new System.Drawing.Font("Calibri", 12F);
-            this.txtS1_Clear.Location = new System.Drawing.Point(1342, 17);
+            this.txtS1_Clear.Location = new System.Drawing.Point(489, 520);
             this.txtS1_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.txtS1_Clear.Name = "txtS1_Clear";
-            this.txtS1_Clear.Size = new System.Drawing.Size(57, 25);
+            this.txtS1_Clear.Size = new System.Drawing.Size(62, 29);
             this.txtS1_Clear.TabIndex = 69;
             this.txtS1_Clear.Text = "Clear";
             this.txtS1_Clear.UseVisualStyleBackColor = true;
@@ -2873,10 +2873,10 @@ namespace Monitor
             this.SerialPortLogger_TextBox.BackColor = System.Drawing.Color.LightGray;
             this.SerialPortLogger_TextBox.EnableAutoDragDrop = true;
             this.SerialPortLogger_TextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SerialPortLogger_TextBox.Location = new System.Drawing.Point(4, 47);
+            this.SerialPortLogger_TextBox.Location = new System.Drawing.Point(4, 22);
             this.SerialPortLogger_TextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SerialPortLogger_TextBox.Name = "SerialPortLogger_TextBox";
-            this.SerialPortLogger_TextBox.Size = new System.Drawing.Size(1405, 501);
+            this.SerialPortLogger_TextBox.Size = new System.Drawing.Size(1405, 497);
             this.SerialPortLogger_TextBox.TabIndex = 0;
             this.SerialPortLogger_TextBox.Text = "";
             this.SerialPortLogger_TextBox.TextChanged += new System.EventHandler(this.SerialPortLogger_TextBox_TextChanged);
@@ -6397,8 +6397,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6423,8 +6423,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6829,9 +6829,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -11150,6 +11150,21 @@ namespace Monitor
                 }
             }
 
+            if (serialPort.IsOpen == true)
+            {
+                SerialTerminalRxTxLights();
+            }
+
+
+ 
+
+
+
+
+        }
+
+        void SerialTerminalRxTxLights()
+        {
             if (RxLabelTimerBlink > 0)
             {
                 RxLabelTimerBlink--;
@@ -11193,18 +11208,6 @@ namespace Monitor
             {
                 Label_SerialPortTx.BackColor = default;
             }
-
- 
-
-
-
-
-        }
-
-
-        void OneSecondTimer()
-        {
-
         }
         readonly List<double> ChartMem = new List<double>();
         readonly List<double> ChartMem2 = new List<double>();
