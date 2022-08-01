@@ -768,11 +768,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea33 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend33 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1862,17 +1862,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea33.AxisX.Title = "Freq";
+            chartArea33.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea33.AxisY.Title = "Power [dBm]";
+            chartArea33.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea33.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea33);
+            legend33.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend33.IsTextAutoFit = false;
+            legend33.Name = "Legend1";
+            legend33.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend33);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4659,6 +4659,7 @@ namespace Monitor
             this.textBox84.Size = new System.Drawing.Size(53, 26);
             this.textBox84.TabIndex = 11;
             this.textBox84.Text = "0";
+            this.textBox84.TextChanged += new System.EventHandler(this.textBox84_TextChanged);
             this.textBox84.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
             // 
             // label109
@@ -4791,6 +4792,7 @@ namespace Monitor
             this.textBox_StatusUUT25.ReadOnly = true;
             this.textBox_StatusUUT25.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT25.TabIndex = 57;
+            this.textBox_StatusUUT25.TextChanged += new System.EventHandler(this.textBox_StatusUUT25_TextChanged);
             // 
             // label69
             // 
@@ -4824,6 +4826,7 @@ namespace Monitor
             this.textBox_StatusUUT26.ReadOnly = true;
             this.textBox_StatusUUT26.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT26.TabIndex = 59;
+            this.textBox_StatusUUT26.TextChanged += new System.EventHandler(this.textBox_StatusUUT26_TextChanged);
             // 
             // textBox_StatusUUT23
             // 
@@ -4833,6 +4836,7 @@ namespace Monitor
             this.textBox_StatusUUT23.ReadOnly = true;
             this.textBox_StatusUUT23.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT23.TabIndex = 74;
+            this.textBox_StatusUUT23.TextChanged += new System.EventHandler(this.textBox_StatusUUT23_TextChanged);
             // 
             // label56
             // 
@@ -4854,6 +4858,7 @@ namespace Monitor
             this.textBox_StatusUUT24.ReadOnly = true;
             this.textBox_StatusUUT24.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT24.TabIndex = 61;
+            this.textBox_StatusUUT24.TextChanged += new System.EventHandler(this.textBox_StatusUUT24_TextChanged);
             // 
             // textBox_StatusUUT12
             // 
@@ -4863,6 +4868,7 @@ namespace Monitor
             this.textBox_StatusUUT12.ReadOnly = true;
             this.textBox_StatusUUT12.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT12.TabIndex = 55;
+            this.textBox_StatusUUT12.TextChanged += new System.EventHandler(this.textBox_StatusUUT12_TextChanged);
             // 
             // label57
             // 
@@ -4896,6 +4902,7 @@ namespace Monitor
             this.textBox_StatusUUT22.ReadOnly = true;
             this.textBox_StatusUUT22.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT22.TabIndex = 53;
+            this.textBox_StatusUUT22.TextChanged += new System.EventHandler(this.textBox_StatusUUT22_TextChanged);
             // 
             // label58
             // 
@@ -4929,6 +4936,7 @@ namespace Monitor
             this.textBox_StatusUUT21.ReadOnly = true;
             this.textBox_StatusUUT21.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT21.TabIndex = 51;
+            this.textBox_StatusUUT21.TextChanged += new System.EventHandler(this.textBox_StatusUUT21_TextChanged);
             // 
             // label59
             // 
@@ -4950,6 +4958,7 @@ namespace Monitor
             this.textBox_StatusUUT20.ReadOnly = true;
             this.textBox_StatusUUT20.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT20.TabIndex = 49;
+            this.textBox_StatusUUT20.TextChanged += new System.EventHandler(this.textBox_StatusUUT20_TextChanged);
             // 
             // label60
             // 
@@ -4971,6 +4980,7 @@ namespace Monitor
             this.textBox_StatusUUT19.ReadOnly = true;
             this.textBox_StatusUUT19.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT19.TabIndex = 47;
+            this.textBox_StatusUUT19.TextChanged += new System.EventHandler(this.textBox_StatusUUT19_TextChanged);
             // 
             // label61
             // 
@@ -4992,6 +5002,7 @@ namespace Monitor
             this.textBox_StatusUUT18.ReadOnly = true;
             this.textBox_StatusUUT18.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT18.TabIndex = 45;
+            this.textBox_StatusUUT18.TextChanged += new System.EventHandler(this.textBox_StatusUUT18_TextChanged);
             // 
             // label62
             // 
@@ -5013,6 +5024,7 @@ namespace Monitor
             this.textBox_StatusUUT17.ReadOnly = true;
             this.textBox_StatusUUT17.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT17.TabIndex = 43;
+            this.textBox_StatusUUT17.TextChanged += new System.EventHandler(this.textBox_StatusUUT17_TextChanged);
             // 
             // label63
             // 
@@ -5034,6 +5046,7 @@ namespace Monitor
             this.textBox_StatusUUT16.ReadOnly = true;
             this.textBox_StatusUUT16.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT16.TabIndex = 41;
+            this.textBox_StatusUUT16.TextChanged += new System.EventHandler(this.textBox_StatusUUT16_TextChanged);
             // 
             // label64
             // 
@@ -5055,6 +5068,7 @@ namespace Monitor
             this.textBox_StatusUUT15.ReadOnly = true;
             this.textBox_StatusUUT15.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT15.TabIndex = 39;
+            this.textBox_StatusUUT15.TextChanged += new System.EventHandler(this.textBox_StatusUUT15_TextChanged);
             // 
             // label65
             // 
@@ -5076,6 +5090,7 @@ namespace Monitor
             this.textBox_StatusUUT14.ReadOnly = true;
             this.textBox_StatusUUT14.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT14.TabIndex = 37;
+            this.textBox_StatusUUT14.TextChanged += new System.EventHandler(this.textBox_StatusUUT14_TextChanged);
             // 
             // label66
             // 
@@ -5097,6 +5112,7 @@ namespace Monitor
             this.textBox_StatusUUT13.ReadOnly = true;
             this.textBox_StatusUUT13.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT13.TabIndex = 35;
+            this.textBox_StatusUUT13.TextChanged += new System.EventHandler(this.textBox_StatusUUT13_TextChanged);
             // 
             // label55
             // 
@@ -5118,6 +5134,7 @@ namespace Monitor
             this.textBox_StatusUUT1.ReadOnly = true;
             this.textBox_StatusUUT1.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT1.TabIndex = 33;
+            this.textBox_StatusUUT1.TextChanged += new System.EventHandler(this.textBox_StatusUUT1_TextChanged);
             // 
             // label54
             // 
@@ -5139,6 +5156,7 @@ namespace Monitor
             this.textBox_StatusUUT11.ReadOnly = true;
             this.textBox_StatusUUT11.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT11.TabIndex = 31;
+            this.textBox_StatusUUT11.TextChanged += new System.EventHandler(this.textBox_StatusUUT11_TextChanged);
             // 
             // label53
             // 
@@ -5160,6 +5178,7 @@ namespace Monitor
             this.textBox_StatusUUT10.ReadOnly = true;
             this.textBox_StatusUUT10.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT10.TabIndex = 29;
+            this.textBox_StatusUUT10.TextChanged += new System.EventHandler(this.textBox_StatusUUT10_TextChanged);
             // 
             // label52
             // 
@@ -5181,6 +5200,7 @@ namespace Monitor
             this.textBox_StatusUUT9.ReadOnly = true;
             this.textBox_StatusUUT9.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT9.TabIndex = 27;
+            this.textBox_StatusUUT9.TextChanged += new System.EventHandler(this.textBox_StatusUUT9_TextChanged);
             // 
             // label51
             // 
@@ -5202,6 +5222,7 @@ namespace Monitor
             this.textBox_StatusUUT8.ReadOnly = true;
             this.textBox_StatusUUT8.Size = new System.Drawing.Size(93, 26);
             this.textBox_StatusUUT8.TabIndex = 25;
+            this.textBox_StatusUUT8.TextChanged += new System.EventHandler(this.textBox_StatusUUT8_TextChanged);
             // 
             // label50
             // 
@@ -5223,6 +5244,7 @@ namespace Monitor
             this.textBox_StatusUUT7.ReadOnly = true;
             this.textBox_StatusUUT7.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT7.TabIndex = 23;
+            this.textBox_StatusUUT7.TextChanged += new System.EventHandler(this.textBox_StatusUUT7_TextChanged);
             // 
             // label49
             // 
@@ -5244,6 +5266,7 @@ namespace Monitor
             this.textBox_StatusUUT6.ReadOnly = true;
             this.textBox_StatusUUT6.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT6.TabIndex = 21;
+            this.textBox_StatusUUT6.TextChanged += new System.EventHandler(this.textBox_StatusUUT6_TextChanged);
             // 
             // label40
             // 
@@ -5265,6 +5288,7 @@ namespace Monitor
             this.textBox_StatusUUT5.ReadOnly = true;
             this.textBox_StatusUUT5.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT5.TabIndex = 19;
+            this.textBox_StatusUUT5.TextChanged += new System.EventHandler(this.textBox_StatusUUT5_TextChanged);
             // 
             // label39
             // 
@@ -5286,6 +5310,7 @@ namespace Monitor
             this.textBox_StatusUUT4.ReadOnly = true;
             this.textBox_StatusUUT4.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT4.TabIndex = 17;
+            this.textBox_StatusUUT4.TextChanged += new System.EventHandler(this.textBox_StatusUUT4_TextChanged);
             // 
             // label33
             // 
@@ -5307,6 +5332,7 @@ namespace Monitor
             this.textBox_StatusUUT3.ReadOnly = true;
             this.textBox_StatusUUT3.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT3.TabIndex = 15;
+            this.textBox_StatusUUT3.TextChanged += new System.EventHandler(this.textBox_StatusUUT3_TextChanged);
             // 
             // label32
             // 
@@ -5328,6 +5354,7 @@ namespace Monitor
             this.textBox_StatusUUT2.ReadOnly = true;
             this.textBox_StatusUUT2.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT2.TabIndex = 0;
+            this.textBox_StatusUUT2.TextChanged += new System.EventHandler(this.textBox_StatusUUT2_TextChanged);
             // 
             // groupBox39
             // 
@@ -6440,8 +6467,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle97.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle97;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6466,8 +6493,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle98.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle98;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6872,9 +6899,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle99.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle99.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle99;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8957,6 +8984,7 @@ namespace Monitor
             this.textBox_StatusUUT32.ReadOnly = true;
             this.textBox_StatusUUT32.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT32.TabIndex = 86;
+            this.textBox_StatusUUT32.TextChanged += new System.EventHandler(this.textBox_StatusUUT32_TextChanged);
             // 
             // label104
             // 
@@ -8990,6 +9018,7 @@ namespace Monitor
             this.textBox_StatusUUT31.ReadOnly = true;
             this.textBox_StatusUUT31.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT31.TabIndex = 84;
+            this.textBox_StatusUUT31.TextChanged += new System.EventHandler(this.textBox_StatusUUT31_TextChanged);
             // 
             // label106
             // 
@@ -9011,6 +9040,7 @@ namespace Monitor
             this.textBox_StatusUUT30.ReadOnly = true;
             this.textBox_StatusUUT30.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT30.TabIndex = 82;
+            this.textBox_StatusUUT30.TextChanged += new System.EventHandler(this.textBox_StatusUUT30_TextChanged);
             // 
             // label118
             // 
@@ -9032,6 +9062,7 @@ namespace Monitor
             this.textBox_StatusUUT29.ReadOnly = true;
             this.textBox_StatusUUT29.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT29.TabIndex = 76;
+            this.textBox_StatusUUT29.TextChanged += new System.EventHandler(this.textBox_StatusUUT29_TextChanged);
             // 
             // label119
             // 
@@ -9053,6 +9084,7 @@ namespace Monitor
             this.textBox_StatusUUT27.ReadOnly = true;
             this.textBox_StatusUUT27.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT27.TabIndex = 79;
+            this.textBox_StatusUUT27.TextChanged += new System.EventHandler(this.textBox_StatusUUT27_TextChanged);
             // 
             // textBox_StatusUUT28
             // 
@@ -9062,6 +9094,7 @@ namespace Monitor
             this.textBox_StatusUUT28.ReadOnly = true;
             this.textBox_StatusUUT28.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT28.TabIndex = 78;
+            this.textBox_StatusUUT28.TextChanged += new System.EventHandler(this.textBox_StatusUUT28_TextChanged);
             // 
             // checkBox_DebugMode
             // 
@@ -20739,6 +20772,7 @@ Note: eStatus enum 
                 if (ctr is TextBox)
                 {
                     ctr.Text = "";
+                   ctr.BackColor = default;
                 }
             }
 
@@ -20747,10 +20781,16 @@ Note: eStatus enum 
                 if (ctr is TextBox)
                 {
                     ctr.Text = "";
+                    ctr.BackColor = default;
                 }
             }
 
 
+        }
+
+        private void Ctr_TextChanged(object sender, EventArgs e)
+        {
+            textBox_StatusUUT1_TextChanged(sender, e);
         }
 
         private void textBox25_TextChanged(object sender, EventArgs e)
@@ -20913,6 +20953,190 @@ Note: eStatus enum 
             }
 
             button51_Click(null, null);
+        }
+
+        private void textBox84_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        Color clr = default;
+        void SetTextBoxTextChangedColor(TextBox i_textbox)
+        {
+            
+            // if(i_textbox.BackColor == clr)
+            //{
+            //    i_textbox.BackColor = Color.LightYellow;
+
+            //}
+            //else
+            //{
+            //    i_textbox.BackColor = default;
+            //    clr = i_textbox.BackColor;
+            //}
+        }
+
+        private void textBox_StatusUUT1_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox) sender);
+
+
+
+
+        }
+
+        private void textBox_StatusUUT2_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT3_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT4_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT5_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT6_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT7_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT18_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT19_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT29_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT17_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT8_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT9_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT10_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT11_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT23_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT22_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT21_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT20_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT16_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT15_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT14_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT13_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT12_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT26_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT25_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT24_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT32_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT31_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT30_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT28_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT27_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
