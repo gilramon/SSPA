@@ -398,7 +398,7 @@ namespace Monitor
         private Button button48;
         private TextBox textBox16;
         private Button button117;
-        private Button button116;
+        private Button button_SimulatorDiscreteCALSARcontrol;
         private TextBox textBox15;
         private Button button115;
         private Button button114;
@@ -620,7 +620,7 @@ namespace Monitor
         private Label label114;
         private Label label113;
         private Label label112;
-        private TextBox textBox85;
+        private TextBox textBox_CALSAR;
         private Label label111;
         private Label label110;
         private TextBox textBox82;
@@ -700,6 +700,20 @@ namespace Monitor
         private CheckBox checkBox_ParseRxTCPBuffer;
         private CheckBox checkBox_SendEveryOneSecond;
         private TextBox textBox_SendSerialPortPeriod;
+        private TextBox textBox_SimulatorDiscreteCALSARcontrol;
+        private Label label103;
+        private TextBox textBox_StatusUUT32;
+        private Label label104;
+        private Label label105;
+        private TextBox textBox_StatusUUT31;
+        private Label label106;
+        private TextBox textBox_StatusUUT30;
+        private Label label118;
+        private TextBox textBox_StatusUUT29;
+        private Label label119;
+        private TextBox textBox_StatusUUT27;
+        private TextBox textBox_StatusUUT28;
+        private CheckBox checkBox_DebugMode;
         private static readonly string PREAMBLE = "23";
 
 
@@ -754,11 +768,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -913,7 +927,7 @@ namespace Monitor
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.button117 = new System.Windows.Forms.Button();
-            this.button116 = new System.Windows.Forms.Button();
+            this.button_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.Button();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.button115 = new System.Windows.Forms.Button();
             this.button114 = new System.Windows.Forms.Button();
@@ -1004,7 +1018,7 @@ namespace Monitor
             this.label114 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
-            this.textBox85 = new System.Windows.Forms.TextBox();
+            this.textBox_CALSAR = new System.Windows.Forms.TextBox();
             this.label111 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.textBox82 = new System.Windows.Forms.TextBox();
@@ -1412,6 +1426,20 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT32 = new System.Windows.Forms.TextBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT31 = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT30 = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT29 = new System.Windows.Forms.TextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT27 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT28 = new System.Windows.Forms.TextBox();
+            this.checkBox_DebugMode = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1834,17 +1862,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -3379,9 +3407,10 @@ namespace Monitor
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox_SimulatorDiscreteCALSARcontrol);
             this.tabPage1.Controls.Add(this.textBox16);
             this.tabPage1.Controls.Add(this.button117);
-            this.tabPage1.Controls.Add(this.button116);
+            this.tabPage1.Controls.Add(this.button_SimulatorDiscreteCALSARcontrol);
             this.tabPage1.Controls.Add(this.textBox15);
             this.tabPage1.Controls.Add(this.button115);
             this.tabPage1.Controls.Add(this.button114);
@@ -3448,16 +3477,16 @@ namespace Monitor
             this.button117.UseVisualStyleBackColor = true;
             this.button117.Click += new System.EventHandler(this.button117_Click);
             // 
-            // button116
+            // button_SimulatorDiscreteCALSARcontrol
             // 
-            this.button116.Location = new System.Drawing.Point(367, 281);
-            this.button116.Margin = new System.Windows.Forms.Padding(2);
-            this.button116.Name = "button116";
-            this.button116.Size = new System.Drawing.Size(223, 22);
-            this.button116.TabIndex = 84;
-            this.button116.Text = "Simulator discrete SEU_Recover control";
-            this.button116.UseVisualStyleBackColor = true;
-            this.button116.Click += new System.EventHandler(this.button116_Click);
+            this.button_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(367, 281);
+            this.button_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SimulatorDiscreteCALSARcontrol.Name = "button_SimulatorDiscreteCALSARcontrol";
+            this.button_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(223, 22);
+            this.button_SimulatorDiscreteCALSARcontrol.TabIndex = 84;
+            this.button_SimulatorDiscreteCALSARcontrol.Text = "Simulator Discrete CAL SAR";
+            this.button_SimulatorDiscreteCALSARcontrol.UseVisualStyleBackColor = true;
+            this.button_SimulatorDiscreteCALSARcontrol.Click += new System.EventHandler(this.button_SimulatorDiscreteCALSARcontrol_Click);
             // 
             // textBox15
             // 
@@ -3698,7 +3727,7 @@ namespace Monitor
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(119, 26);
             this.textBox5.TabIndex = 62;
-            this.textBox5.Text = "00";
+            this.textBox5.Text = "01";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button53
@@ -4409,6 +4438,7 @@ namespace Monitor
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.checkBox_DebugMode);
             this.tabPage6.Controls.Add(this.groupBox37);
             this.tabPage6.Controls.Add(this.button71);
             this.tabPage6.Controls.Add(this.groupBox47);
@@ -4438,7 +4468,7 @@ namespace Monitor
             this.groupBox37.Controls.Add(this.label114);
             this.groupBox37.Controls.Add(this.label113);
             this.groupBox37.Controls.Add(this.label112);
-            this.groupBox37.Controls.Add(this.textBox85);
+            this.groupBox37.Controls.Add(this.textBox_CALSAR);
             this.groupBox37.Controls.Add(this.label111);
             this.groupBox37.Controls.Add(this.label110);
             this.groupBox37.Controls.Add(this.textBox82);
@@ -4447,11 +4477,11 @@ namespace Monitor
             this.groupBox37.Controls.Add(this.label108);
             this.groupBox37.Controls.Add(this.textBox84);
             this.groupBox37.Controls.Add(this.label109);
-            this.groupBox37.Location = new System.Drawing.Point(666, 322);
+            this.groupBox37.Location = new System.Drawing.Point(876, 330);
             this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Size = new System.Drawing.Size(563, 144);
+            this.groupBox37.Size = new System.Drawing.Size(354, 192);
             this.groupBox37.TabIndex = 17;
             this.groupBox37.TabStop = false;
             // 
@@ -4459,7 +4489,7 @@ namespace Monitor
             // 
             this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(503, 54);
+            this.checkBox4.Location = new System.Drawing.Point(174, 113);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(36, 28);
@@ -4472,7 +4502,7 @@ namespace Monitor
             // 
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(442, 51);
+            this.checkBox3.Location = new System.Drawing.Point(96, 112);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(36, 28);
@@ -4485,7 +4515,7 @@ namespace Monitor
             // 
             this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(371, 50);
+            this.checkBox9.Location = new System.Drawing.Point(18, 112);
             this.checkBox9.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(36, 28);
@@ -4511,10 +4541,10 @@ namespace Monitor
             // 
             this.button73.BackColor = System.Drawing.SystemColors.Highlight;
             this.button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button73.Location = new System.Drawing.Point(250, 86);
+            this.button73.Location = new System.Drawing.Point(233, 98);
             this.button73.Margin = new System.Windows.Forms.Padding(2);
             this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(138, 39);
+            this.button73.Size = new System.Drawing.Size(107, 39);
             this.button73.TabIndex = 17;
             this.button73.Text = "Strobe";
             this.button73.UseVisualStyleBackColor = false;
@@ -4523,7 +4553,7 @@ namespace Monitor
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(500, 28);
+            this.label114.Location = new System.Drawing.Point(158, 90);
             this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(63, 18);
@@ -4533,7 +4563,7 @@ namespace Monitor
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(429, 31);
+            this.label113.Location = new System.Drawing.Point(82, 90);
             this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(72, 18);
@@ -4543,22 +4573,23 @@ namespace Monitor
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(350, 29);
+            this.label112.Location = new System.Drawing.Point(4, 90);
             this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(81, 18);
             this.label112.TabIndex = 20;
             this.label112.Text = "SEU recover";
             // 
-            // textBox85
+            // textBox_CALSAR
             // 
-            this.textBox85.Location = new System.Drawing.Point(286, 55);
-            this.textBox85.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(53, 26);
-            this.textBox85.TabIndex = 19;
-            this.textBox85.Text = "0";
-            this.textBox85.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox85_KeyDown);
+            this.textBox_CALSAR.Location = new System.Drawing.Point(286, 55);
+            this.textBox_CALSAR.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CALSAR.Name = "textBox_CALSAR";
+            this.textBox_CALSAR.Size = new System.Drawing.Size(53, 26);
+            this.textBox_CALSAR.TabIndex = 19;
+            this.textBox_CALSAR.Text = "0";
+            this.textBox_CALSAR.TextChanged += new System.EventHandler(this.textBox_CALSAR_TextChanged);
+            this.textBox_CALSAR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CALSAR_KeyDown);
             // 
             // label111
             // 
@@ -4653,16 +4684,28 @@ namespace Monitor
             // 
             // groupBox47
             // 
+            this.groupBox47.Controls.Add(this.label103);
             this.groupBox47.Controls.Add(this.button74);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT32);
             this.groupBox47.Controls.Add(this.button72);
+            this.groupBox47.Controls.Add(this.label104);
+            this.groupBox47.Controls.Add(this.label105);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT25);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT31);
             this.groupBox47.Controls.Add(this.label69);
+            this.groupBox47.Controls.Add(this.label106);
             this.groupBox47.Controls.Add(this.label120);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT30);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT26);
+            this.groupBox47.Controls.Add(this.label118);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT23);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT29);
             this.groupBox47.Controls.Add(this.label56);
+            this.groupBox47.Controls.Add(this.label119);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT24);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT27);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT12);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT28);
             this.groupBox47.Controls.Add(this.label57);
             this.groupBox47.Controls.Add(this.label67);
             this.groupBox47.Controls.Add(this.textBox_StatusUUT22);
@@ -4713,14 +4756,14 @@ namespace Monitor
             this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox47.Name = "groupBox47";
             this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox47.Size = new System.Drawing.Size(643, 379);
+            this.groupBox47.Size = new System.Drawing.Size(857, 379);
             this.groupBox47.TabIndex = 15;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = " Status UUT";
             // 
             // button74
             // 
-            this.button74.Location = new System.Drawing.Point(538, 327);
+            this.button74.Location = new System.Drawing.Point(757, 330);
             this.button74.Margin = new System.Windows.Forms.Padding(2);
             this.button74.Name = "button74";
             this.button74.Size = new System.Drawing.Size(97, 43);
@@ -4731,7 +4774,7 @@ namespace Monitor
             // 
             // button72
             // 
-            this.button72.Location = new System.Drawing.Point(433, 327);
+            this.button72.Location = new System.Drawing.Point(652, 330);
             this.button72.Margin = new System.Windows.Forms.Padding(2);
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(97, 43);
@@ -5302,7 +5345,7 @@ namespace Monitor
             this.groupBox39.Controls.Add(this.textBox90);
             this.groupBox39.Controls.Add(this.textBox91);
             this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox39.Location = new System.Drawing.Point(423, 14);
+            this.groupBox39.Location = new System.Drawing.Point(642, 14);
             this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(2);
@@ -5457,7 +5500,7 @@ namespace Monitor
             this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
             this.groupBox35.Controls.Add(this.textBox_PulsePeriod2);
             this.groupBox35.Controls.Add(this.textBox_PulseWidth2);
-            this.groupBox35.Location = new System.Drawing.Point(666, 219);
+            this.groupBox35.Location = new System.Drawing.Point(876, 233);
             this.groupBox35.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Padding = new System.Windows.Forms.Padding(2);
@@ -5803,7 +5846,7 @@ namespace Monitor
             this.groupBox34.Controls.Add(this.textBox_PulseDelay);
             this.groupBox34.Controls.Add(this.textBox_PulsePeriod);
             this.groupBox34.Controls.Add(this.textBox_PulseWidth);
-            this.groupBox34.Location = new System.Drawing.Point(666, 114);
+            this.groupBox34.Location = new System.Drawing.Point(876, 128);
             this.groupBox34.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Padding = new System.Windows.Forms.Padding(2);
@@ -6126,7 +6169,7 @@ namespace Monitor
             this.groupBox33.Controls.Add(this.label99);
             this.groupBox33.Controls.Add(this.textBox_RFWidth);
             this.groupBox33.Controls.Add(this.label98);
-            this.groupBox33.Location = new System.Drawing.Point(666, 9);
+            this.groupBox33.Location = new System.Drawing.Point(876, 23);
             this.groupBox33.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Padding = new System.Windows.Forms.Padding(2);
@@ -6397,8 +6440,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6423,8 +6466,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -6829,9 +6872,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8883,6 +8926,157 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // textBox_SimulatorDiscreteCALSARcontrol
+            // 
+            this.textBox_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(599, 282);
+            this.textBox_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorDiscreteCALSARcontrol.MaxLength = 30;
+            this.textBox_SimulatorDiscreteCALSARcontrol.Name = "textBox_SimulatorDiscreteCALSARcontrol";
+            this.textBox_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(118, 26);
+            this.textBox_SimulatorDiscreteCALSARcontrol.TabIndex = 87;
+            this.textBox_SimulatorDiscreteCALSARcontrol.Text = "00";
+            this.textBox_SimulatorDiscreteCALSARcontrol.TextChanged += new System.EventHandler(this.textBox1_TextChanged_4);
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.Black;
+            this.label103.Location = new System.Drawing.Point(425, 172);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(105, 19);
+            this.label103.TabIndex = 87;
+            this.label103.Text = "Tx OVT hazard";
+            // 
+            // textBox_StatusUUT32
+            // 
+            this.textBox_StatusUUT32.Location = new System.Drawing.Point(538, 169);
+            this.textBox_StatusUUT32.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT32.Name = "textBox_StatusUUT32";
+            this.textBox_StatusUUT32.ReadOnly = true;
+            this.textBox_StatusUUT32.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT32.TabIndex = 86;
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.Black;
+            this.label104.Location = new System.Drawing.Point(441, 18);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(51, 19);
+            this.label104.TabIndex = 80;
+            this.label104.Text = "Ready";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.Black;
+            this.label105.Location = new System.Drawing.Point(441, 142);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(35, 19);
+            this.label105.TabIndex = 85;
+            this.label105.Text = "SEU";
+            // 
+            // textBox_StatusUUT31
+            // 
+            this.textBox_StatusUUT31.Location = new System.Drawing.Point(538, 139);
+            this.textBox_StatusUUT31.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT31.Name = "textBox_StatusUUT31";
+            this.textBox_StatusUUT31.ReadOnly = true;
+            this.textBox_StatusUUT31.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT31.TabIndex = 84;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.ForeColor = System.Drawing.Color.Black;
+            this.label106.Location = new System.Drawing.Point(441, 113);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(81, 19);
+            this.label106.TabIndex = 83;
+            this.label106.Text = "Protection";
+            // 
+            // textBox_StatusUUT30
+            // 
+            this.textBox_StatusUUT30.Location = new System.Drawing.Point(538, 106);
+            this.textBox_StatusUUT30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT30.Name = "textBox_StatusUUT30";
+            this.textBox_StatusUUT30.ReadOnly = true;
+            this.textBox_StatusUUT30.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT30.TabIndex = 82;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.ForeColor = System.Drawing.Color.Black;
+            this.label118.Location = new System.Drawing.Point(431, 79);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(97, 19);
+            this.label118.TabIndex = 81;
+            this.label118.Text = "Over voltage";
+            // 
+            // textBox_StatusUUT29
+            // 
+            this.textBox_StatusUUT29.Location = new System.Drawing.Point(538, 75);
+            this.textBox_StatusUUT29.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT29.Name = "textBox_StatusUUT29";
+            this.textBox_StatusUUT29.ReadOnly = true;
+            this.textBox_StatusUUT29.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT29.TabIndex = 76;
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.ForeColor = System.Drawing.Color.Black;
+            this.label119.Location = new System.Drawing.Point(429, 46);
+            this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(106, 19);
+            this.label119.TabIndex = 77;
+            this.label119.Text = "Under voltage";
+            // 
+            // textBox_StatusUUT27
+            // 
+            this.textBox_StatusUUT27.Location = new System.Drawing.Point(538, 14);
+            this.textBox_StatusUUT27.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT27.Name = "textBox_StatusUUT27";
+            this.textBox_StatusUUT27.ReadOnly = true;
+            this.textBox_StatusUUT27.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT27.TabIndex = 79;
+            // 
+            // textBox_StatusUUT28
+            // 
+            this.textBox_StatusUUT28.Location = new System.Drawing.Point(538, 45);
+            this.textBox_StatusUUT28.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT28.Name = "textBox_StatusUUT28";
+            this.textBox_StatusUUT28.ReadOnly = true;
+            this.textBox_StatusUUT28.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT28.TabIndex = 78;
+            // 
+            // checkBox_DebugMode
+            // 
+            this.checkBox_DebugMode.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_DebugMode.AutoSize = true;
+            this.checkBox_DebugMode.Location = new System.Drawing.Point(766, 182);
+            this.checkBox_DebugMode.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_DebugMode.Name = "checkBox_DebugMode";
+            this.checkBox_DebugMode.Size = new System.Drawing.Size(97, 28);
+            this.checkBox_DebugMode.TabIndex = 30;
+            this.checkBox_DebugMode.Text = "Debug mode";
+            this.checkBox_DebugMode.UseVisualStyleBackColor = true;
+            this.checkBox_DebugMode.Visible = false;
+            this.checkBox_DebugMode.CheckedChanged += new System.EventHandler(this.checkBox_DebugMode_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -8959,6 +9153,7 @@ namespace Monitor
             this.groupBox38.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.groupBox37.ResumeLayout(false);
             this.groupBox37.PerformLayout();
             this.groupBox47.ResumeLayout(false);
@@ -12009,45 +12204,88 @@ namespace Monitor
             textBox_SimulatorSN.Text = SerialNumber.ToString();
             // SendMessageToSystemLogger( String.Format("\n Serial Number : <<{0}>>\n", SerialNumber));
         }
+        String GetBytesFromData(String i_data,int i_ByteStartIndex,int i_NumOfBytes)
+        {
+            int StartIndex = i_ByteStartIndex * 2 ;
+            int MaxIndex = (StartIndex + i_NumOfBytes * 2);
+            if (i_data.Length < MaxIndex)
+            {
+                
+                    return String.Format("Out of range [{0}] - [{1}]", i_data.Length, MaxIndex);
+                }
+                else
+                {
+                    return ReverseHexStringLittleBigEndian(i_data.Substring(StartIndex,  i_NumOfBytes*2));
 
+                }
+            
+        }
         private void GetSystemStatus(KratosProtocolFrame i_Parsedframe)
         {
-            string ret = "";
             if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
             {
-                for (int i = 0; i < DataLength - 2; i = i + 4)
-                {
-                    ret += "<<" + i_Parsedframe.Data.Substring(i, i + 4) + ">>";
-                }
+
+                textBox_StatusUUT1.Text = GetBytesFromData(i_Parsedframe.Data, 0, 2);
+                textBox_StatusUUT2.Text = GetBytesFromData(i_Parsedframe.Data, 2, 2);
+                textBox_StatusUUT3.Text = GetBytesFromData(i_Parsedframe.Data, 4, 2);
+                textBox_StatusUUT4.Text = GetBytesFromData(i_Parsedframe.Data, 6, 2);
+                textBox_StatusUUT5.Text = GetBytesFromData(i_Parsedframe.Data, 8, 2);
+                textBox_StatusUUT6.Text = GetBytesFromData(i_Parsedframe.Data, 10, 2);
+                textBox_StatusUUT7.Text = GetBytesFromData(i_Parsedframe.Data, 12, 2);
+                textBox_StatusUUT8.Text = GetBytesFromData(i_Parsedframe.Data, 14, 2);
+                textBox_StatusUUT9.Text = GetBytesFromData(i_Parsedframe.Data, 16, 2);
+                textBox_StatusUUT10.Text = GetBytesFromData(i_Parsedframe.Data, 18, 2);
+                textBox_StatusUUT11.Text = GetBytesFromData(i_Parsedframe.Data, 20, 2);
+                textBox_StatusUUT12.Text = GetBytesFromData(i_Parsedframe.Data, 22, 2);
+                textBox_StatusUUT13.Text = GetBytesFromData(i_Parsedframe.Data, 24, 2);
+                textBox_StatusUUT14.Text = GetBytesFromData(i_Parsedframe.Data, 26, 2);
+                textBox_StatusUUT15.Text = GetBytesFromData(i_Parsedframe.Data, 28, 2);
+                textBox_StatusUUT16.Text = GetBytesFromData(i_Parsedframe.Data, 30, 2);
+                textBox_StatusUUT17.Text = GetBytesFromData(i_Parsedframe.Data, 32, 2);
+                textBox_StatusUUT18.Text = GetBytesFromData(i_Parsedframe.Data, 34, 2);
+                textBox_StatusUUT19.Text = GetBytesFromData(i_Parsedframe.Data, 36, 2);
+                textBox_StatusUUT20.Text = GetBytesFromData(i_Parsedframe.Data, 38, 2);
+                textBox_StatusUUT21.Text = GetBytesFromData(i_Parsedframe.Data, 40, 2);
+                textBox_StatusUUT22.Text = GetBytesFromData(i_Parsedframe.Data, 42, 2);
+                textBox_StatusUUT23.Text = GetBytesFromData(i_Parsedframe.Data, 44, 2);
             }
 
             //  SendMessageToSystemLogger(ret);
         }
 
+        private String GetBit(byte b, int bitNumber)
+        {
+            return (b & (1 << bitNumber)).ToString() ;
+        }
+
         private void GetDiscreteStatusBusmode(KratosProtocolFrame i_Parsedframe)
         {
-            string ret = "";
-            int.TryParse(i_Parsedframe.DataLength, out int DataLength);
-
-            for (int i = 0; i < DataLength - 2; i = i + 2)
+            if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
             {
-                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
+               // byte Data = byte.Parse(GetBytesFromData(i_Parsedframe.Data, 0, 2), System.Globalization.NumberStyles.HexNumber);
+
+                textBox_StatusUUT27.Text = GetBytesFromData(i_Parsedframe.Data, 0, 1);
+                textBox_StatusUUT28.Text = GetBytesFromData(i_Parsedframe.Data, 1, 1);
+                textBox_StatusUUT29.Text = GetBytesFromData(i_Parsedframe.Data, 2, 1);
+                textBox_StatusUUT30.Text = GetBytesFromData(i_Parsedframe.Data, 3, 1);
+                textBox_StatusUUT31.Text = GetBytesFromData(i_Parsedframe.Data, 4, 1);
+                textBox_StatusUUT32.Text = GetBytesFromData(i_Parsedframe.Data, 5, 1);
             }
 
-            //   SendMessageToSystemLogger(ret);
+                //   SendMessageToSystemLogger(ret);
         }
 
         private void GetSystemTableIndexes(KratosProtocolFrame i_Parsedframe)
         {
-            string ret = "";
-            int.TryParse(i_Parsedframe.DataLength, out int DataLength);
-
-            for (int i = 0; i < DataLength - 2; i = i + 2)
+            if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
             {
-                ret += "<<" + i_Parsedframe.Data.Substring(i, i + 2) + ">>";
-            }
+                // byte Data = byte.Parse(GetBytesFromData(i_Parsedframe.Data, 0, 2), System.Globalization.NumberStyles.HexNumber);
 
-            //    SendMessageToSystemLogger(ret);
+                textBox_StatusUUT24.Text = GetBytesFromData(i_Parsedframe.Data, 12, 2);
+                textBox_StatusUUT25.Text = GetBytesFromData(i_Parsedframe.Data, 21, 1);
+                textBox_StatusUUT26.Text = GetBytesFromData(i_Parsedframe.Data, 22, 1);
+
+            }
         }
 
         private void ReadFromFlash(KratosProtocolFrame i_Parsedframe)
@@ -19951,6 +20189,8 @@ Note: eStatus enum 
             await Task.Delay(500);
             button50_Click_1(null, null);
             await Task.Delay(500);
+            button63_Click(null, null);
+            await Task.Delay(500);
             string[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
 
             if (TextDataRecieved.Length < 50)
@@ -20319,13 +20559,13 @@ Note: eStatus enum 
             {
 
                 string hexValue = "";
-                if (int.TryParse(textBox85.Text, out int temp))
+                if (int.TryParse(textBox_CALSAR.Text, out int temp))
                 {
                     hexValue += temp.ToString("X2");
                 }
 
-                textBox8.Text = hexValue;
-                button116_Click(null, null);
+                textBox_SimulatorDiscreteCALSARcontrol.Text = hexValue;
+                button_SimulatorDiscreteCALSARcontrol_Click(null, null);
             }
         }
 
@@ -20588,6 +20828,91 @@ Note: eStatus enum 
             {
                 textBox_SendSerialPortPeriod.BackColor = Color.Red;
             }
+        }
+
+        private void textBox1_TextChanged_4(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null )
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void button_SimulatorDiscreteCALSARcontrol_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "A0";
+            textBox_data.Text = textBox_SimulatorDiscreteCALSARcontrol.Text;
+
+            SendDataToSystem();
+        }
+
+        private void textBox_CALSAR_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (textBox_CALSAR.BackColor == Color.LightGreen)
+                {
+                    string hexValue = "";
+                    if (int.TryParse(textBox_CALSAR.Text, out int temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+                    textBox_SimulatorDiscreteCALSARcontrol.Text = hexValue;
+                    button_SimulatorDiscreteCALSARcontrol_Click(null, null);
+                }
+
+
+            }
+        }
+
+        private void textBox_CALSAR_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox_CALSAR.Text, out int temp))
+            {
+                if (temp>=0 && temp <=3)
+                {
+                    textBox_CALSAR.BackColor = Color.LightGreen;
+
+                }
+                else
+                {
+                    textBox_CALSAR.BackColor = Color.Red;
+
+                }
+            }
+            else
+            {
+                textBox_CALSAR.BackColor = Color.Red;
+            }
+        }
+
+        private void checkBox_DebugMode_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox Checkbx = (CheckBox)sender;
+            if (Checkbx.Checked == true)
+            {
+                textBox4.Text = "01";
+
+                Checkbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBox4.Text = "00";
+                Checkbx.BackColor = default;
+            }
+
+            button51_Click(null, null);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
