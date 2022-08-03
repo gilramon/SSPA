@@ -20044,11 +20044,11 @@ Note: eStatus enum 
         {
             GlobalSystemResultReceived = "";
 
-
-            button61_Click(null, null);
-            await Task.Delay(500);
             button62_Click(null, null);
             await Task.Delay(500);
+            button61_Click(null, null);
+            await Task.Delay(500);
+
 
 
 
