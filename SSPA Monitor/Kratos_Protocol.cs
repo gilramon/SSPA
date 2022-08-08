@@ -16,7 +16,7 @@ namespace Monitor
 
         public override string ToString()
         {
-            return String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",
+            return String.Format("Preamble: [{0}] Opcode: [{1}] Data length: [{3}] Data : [{2}]  CheckSum: [{4}]",
                 Preamble, Opcode, Regex.Replace(Data, ".{2}", "$0 "), DataLength, CheckSum);
         }
     }

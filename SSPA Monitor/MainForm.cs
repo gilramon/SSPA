@@ -300,7 +300,7 @@ namespace Monitor
         private TabControl tabControl_System;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Button button59;
+        private Button button_GetSystemID;
         private Button button60;
         private Button button61;
         private Button button62;
@@ -714,6 +714,10 @@ namespace Monitor
         private TextBox textBox_StatusUUT27;
         private TextBox textBox_StatusUUT28;
         private CheckBox checkBox_DebugMode;
+        private Label label121;
+        private TextBox textBox_SystemSN;
+        private Label label122;
+        private TextBox textBox_SystemID;
         private static readonly string PREAMBLE = "23";
 
 
@@ -768,11 +772,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -994,7 +998,7 @@ namespace Monitor
             this.button62 = new System.Windows.Forms.Button();
             this.button61 = new System.Windows.Forms.Button();
             this.button60 = new System.Windows.Forms.Button();
-            this.button59 = new System.Windows.Forms.Button();
+            this.button_GetSystemID = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
             this.checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
@@ -1440,6 +1444,10 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label121 = new System.Windows.Forms.Label();
+            this.textBox_SystemSN = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.textBox_SystemID = new System.Windows.Forms.TextBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1862,17 +1870,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -3915,7 +3923,7 @@ namespace Monitor
             this.tabPage2.Controls.Add(this.button62);
             this.tabPage2.Controls.Add(this.button61);
             this.tabPage2.Controls.Add(this.button60);
-            this.tabPage2.Controls.Add(this.button59);
+            this.tabPage2.Controls.Add(this.button_GetSystemID);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
@@ -4182,7 +4190,7 @@ namespace Monitor
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(222, 22);
             this.button65.TabIndex = 45;
-            this.button65.Text = "Set DC4 ON and OFF";
+            this.button65.Text = "Set DC4 mode ON and OFF";
             this.button65.UseVisualStyleBackColor = true;
             this.button65.Click += new System.EventHandler(this.button65_Click);
             this.button65.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button65_MouseDown);
@@ -4258,18 +4266,18 @@ namespace Monitor
             this.button60.Click += new System.EventHandler(this.button60_Click);
             this.button60.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button60_MouseDown);
             // 
-            // button59
+            // button_GetSystemID
             // 
-            this.button59.Location = new System.Drawing.Point(2, 10);
-            this.button59.Margin = new System.Windows.Forms.Padding(2);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(223, 22);
-            this.button59.TabIndex = 29;
-            this.button59.Text = "Get ID";
-            this.button59.UseVisualStyleBackColor = true;
-            this.button59.Click += new System.EventHandler(this.button59_Click);
-            this.button59.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button59_MouseClick);
-            this.button59.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button59_MouseDown);
+            this.button_GetSystemID.Location = new System.Drawing.Point(2, 10);
+            this.button_GetSystemID.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GetSystemID.Name = "button_GetSystemID";
+            this.button_GetSystemID.Size = new System.Drawing.Size(223, 22);
+            this.button_GetSystemID.TabIndex = 29;
+            this.button_GetSystemID.Text = "Get ID";
+            this.button_GetSystemID.UseVisualStyleBackColor = true;
+            this.button_GetSystemID.Click += new System.EventHandler(this.button59_Click);
+            this.button_GetSystemID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button59_MouseClick);
+            this.button_GetSystemID.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button59_MouseDown);
             // 
             // groupBox32
             // 
@@ -6127,9 +6135,13 @@ namespace Monitor
             // 
             // groupBox44
             // 
+            this.groupBox44.Controls.Add(this.label121);
             this.groupBox44.Controls.Add(this.button57);
+            this.groupBox44.Controls.Add(this.textBox_SystemSN);
             this.groupBox44.Controls.Add(this.textBox_SystemFWVersion);
+            this.groupBox44.Controls.Add(this.label122);
             this.groupBox44.Controls.Add(this.textBox_SystemHWVersion);
+            this.groupBox44.Controls.Add(this.textBox_SystemID);
             this.groupBox44.Controls.Add(this.button70);
             this.groupBox44.Controls.Add(this.label27);
             this.groupBox44.Controls.Add(this.label26);
@@ -6138,7 +6150,7 @@ namespace Monitor
             this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Size = new System.Drawing.Size(294, 97);
+            this.groupBox44.Size = new System.Drawing.Size(399, 97);
             this.groupBox44.TabIndex = 0;
             this.groupBox44.TabStop = false;
             // 
@@ -6226,7 +6238,7 @@ namespace Monitor
             this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
             this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
             this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Location = new System.Drawing.Point(306, 4);
+            this.groupBox1.Location = new System.Drawing.Point(411, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -6624,8 +6636,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -6650,8 +6662,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7056,9 +7068,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9109,6 +9121,44 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(310, 70);
+            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(29, 18);
+            this.label121.TabIndex = 15;
+            this.label121.Text = "SN:";
+            // 
+            // textBox_SystemSN
+            // 
+            this.textBox_SystemSN.Location = new System.Drawing.Point(339, 62);
+            this.textBox_SystemSN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemSN.Name = "textBox_SystemSN";
+            this.textBox_SystemSN.ReadOnly = true;
+            this.textBox_SystemSN.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SystemSN.TabIndex = 14;
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(310, 38);
+            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(25, 18);
+            this.label122.TabIndex = 13;
+            this.label122.Text = "ID:";
+            // 
+            // textBox_SystemID
+            // 
+            this.textBox_SystemID.Location = new System.Drawing.Point(339, 31);
+            this.textBox_SystemID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemID.Name = "textBox_SystemID";
+            this.textBox_SystemID.ReadOnly = true;
+            this.textBox_SystemID.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SystemID.TabIndex = 12;
             // 
             // MainForm
             // 
@@ -11925,11 +11975,17 @@ namespace Monitor
 
         private byte[] StringToByteArray(string hex)
         {
-
-            return Enumerable.Range(0, hex.Length)
-                             .Where(x => x % 2 == 0)
-                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
-                             .ToArray();
+            try
+            {
+                return Enumerable.Range(0, hex.Length)
+                                 .Where(x => x % 2 == 0)
+                                 .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                                 .ToArray();
+            }
+            catch
+            {
+                return null;
+            }
 
 
         }
@@ -12429,6 +12485,22 @@ namespace Monitor
                UnitMajorVersion, VersionDay, VersionMonth, VersionYear));
         }
 
+        
+
+        private void GetSystemID(KratosProtocolFrame i_Parsedframe)
+        {
+            textBox_SystemID.Text = i_Parsedframe.Data;
+
+
+        }
+
+        private void GetSystemSN(KratosProtocolFrame i_Parsedframe)
+        {
+            textBox_SystemSN.Text = i_Parsedframe.Data;
+
+
+        }
+
         private void GetSoftwareVertion(KratosProtocolFrame i_Parsedframe)
         {
             //    ICD major version – 	1 byte
@@ -12475,6 +12547,11 @@ namespace Monitor
                 switch (i_Parsedframe.Opcode)
                 {
 
+                    case "00":
+                        GetSystemID(i_Parsedframe);
+
+                        break;
+
                     case "02":
                         GetSystemFirmwareVersion(i_Parsedframe);
 
@@ -12482,6 +12559,11 @@ namespace Monitor
 
                     case "03":
                         GetSystemHardwareVersion(i_Parsedframe);
+
+                        break;
+
+                    case "04":
+                        GetSystemSN(i_Parsedframe);
 
                         break;
 
@@ -16965,8 +17047,7 @@ namespace Monitor
                 {
                     SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
                     SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
-                    string str = string.Format("Preamble [{0}],Opcode [{1}],Data [{2}] ", textBox_Preamble.Text, textBox_Opcode.Text, textBox_data.Text);
-                    SystemLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
+                    SystemLogger.LogMessage(Color.Purple, Color.LightYellow, SentFrameGlobal.ToString(), true, false);
                 }
                 else
                 {
@@ -19275,13 +19356,15 @@ Note: eStatus enum 
             SendDataToSystem();
         }
 
+        KratosProtocolFrame SentFrameGlobal = null;
         private void button_SendProtocolSerialPort_Click(object sender, EventArgs e)
         {
+            SentFrameGlobal = null;
             try
             {
                 if (serialPort.IsOpen == false)
                 {
-                    return;
+                    return ;
                 }
                 ClearRxTextBox();
                 textBox_Preamble_TextChanged(null, null);
@@ -19291,7 +19374,7 @@ Note: eStatus enum 
                 if (!(textBox_Preamble.BackColor == Color.LightGreen && textBox_Opcode.BackColor == Color.LightGreen && textBox_data.BackColor == Color.LightGreen))
                 {
                     button_SendProtocolSerialPort.BackColor = Color.Red;
-                    return;
+                    return ;
                 }
                 else
                 {
@@ -19309,8 +19392,10 @@ Note: eStatus enum 
                     Data = Regex.Replace(textBox_data.Text, @"\s+", "")
                 };
                 byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
-
+                
                 KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
+
+                SentFrameGlobal = SentFrame;
                 //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
                 textBox_SentPreamble.Text = SentFrame.Preamble;
                 textBox_SentOpcode.Text = SentFrame.Opcode;
@@ -19331,6 +19416,7 @@ Note: eStatus enum 
             catch
             {
                 //MessageBox.Show (se.Message );
+
             }
         }
 
@@ -20048,20 +20134,14 @@ Note: eStatus enum 
             await Task.Delay(500);
             button61_Click(null, null);
             await Task.Delay(500);
+            button59_Click(null, null);
+            await Task.Delay(500);
+            button66_Click(null, null);
+            await Task.Delay(500);
 
 
 
 
-
-            string[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
-
-
-            if (TextDataRecieved.Length < 3)
-            {
-                return;
-            }
-            textBox_SystemHWVersion.Text = TextDataRecieved[1];
-            textBox_SystemFWVersion.Text = TextDataRecieved[3];
 
         }
 
