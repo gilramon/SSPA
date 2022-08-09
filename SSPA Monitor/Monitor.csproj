@@ -145,15 +145,7 @@
     </Compile>
     <Compile Include="DSPLib.cs" />
     <Compile Include="Kratos_Protocol.cs" />
-    <Compile Include="MainForm_Logic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plot.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plot.designer.cs" />
     <Compile Include="TextBox_Logger.cs" />
-    <Compile Include="PhoneBook.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -181,13 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="SocketServer_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

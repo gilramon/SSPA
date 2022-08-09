@@ -15190,14 +15190,7 @@ namespace Monitor
                 if (result == DialogResult.OK)
                 {
 
-                    PhoneBookContact NewContact = new PhoneBookContact
-                    {
-                        Name = form.ContactName,            //values preserved after close
-                        Phone = form.ContactPhone,
-                        Notes = form.ContactNotes,
-                        Password = form.ContactPassword,
-                        UnitID = form.ContactIMEI
-                    };
+
                     //Do something here with these values
 
 
@@ -15216,22 +15209,7 @@ namespace Monitor
             return true;
         }
 
-        private string ReturnCommandWithPassword(string i_Command, PhoneBookContact i_Contact)
-        {
-            string temp;
-            string command = i_Command;
-            int endindex = command.IndexOf('>');
-            if (endindex >= 0 && checkBox_SendSMSAsIs.Checked == false)
-            {
-                temp = ";<" + i_Contact.Password + ">" + command.Substring(endindex + 1);
-            }
-            else
-            {
-                temp = command;
-            }
 
-            return temp;
-        }
 
         private void Button39_Click(object sender, EventArgs e)
         {
@@ -15240,7 +15218,7 @@ namespace Monitor
             {
                 if (item != null)
                 {
-                    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)item);
+                //    string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)item);
                     //SendSMSToContact((PhoneBookContact)item, SMSText);
                 }
             }
@@ -15333,54 +15311,7 @@ namespace Monitor
         //}
 
         //bool ACKSMSReceived = false;
-        private void RingToContact(PhoneBookContact i_Contact)
-        {
-            // AddCommandToCommands(i_SMSText);
-            //  int PosStr = 0;
-            if (i_Contact == null)
-            {
-                return;
-            }
 
-
-
-            string StrToSend = "{RING," + i_Contact.Phone + ",}";
-
-            byte[] buffer = Encoding.ASCII.GetBytes(StrToSend);
-
-            // bool IsSent = SerialPortSMSSendData(buffer);
-
-            //if (IsSent == true)
-            //{
-            //    //  mutexACKSMSReceived.WaitOne();
-            //    //ACKSMSReceived = false;
-            //    //   ACKSMSReceived = true;
-            //    //Thread.Sleep(1000);
-            //    //   mutexACKSMSReceived.ReleaseMutex();
-
-            //    //int cnt = 0;
-            //    //while (ACKSMSReceived == false && cnt < 100)
-            //    //{
-            //    //    Thread.Sleep(50);
-            //    //    cnt++;
-            //    //}
-            //    //if (ACKSMSReceived)
-            //    //{
-            //    //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-            ////    LogSMS.LogMessage(Color.Green, Color.White, "  Ring to Contact:\n Contact: " + i_Contact.ToString(), New_Line = true, Show_Time = false);
-
-            //    Thread.Sleep(1500);
-            //    //}
-            //    //else
-            //    //{
-            //    //    LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-            //    //    LogSMS.LogMessage(Color.Red, Color.White, "  SMS wasn't Sent to " + i_Contact.ToString() + "  Text:  " + SMSToSend, New_Line = true, Show_Time = false);
-            //    //}
-
-            //    //return true;
-            //}
-
-        }
 
         private string ReturnSMSEncryiepted(string i_SMSText)
         {
@@ -15397,78 +15328,16 @@ namespace Monitor
         private void Button_SendSelectedSMS_Click(object sender, EventArgs e)
         {
 
-            if (checkedListBox_PhoneBook.SelectedItem != null)
-            {
-                //groupBox34.Enabled = false;
-
-                string SMSText = ReturnCommandWithPassword(richTextBox_TextSendSMS.Text, (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem);
-
-                if (CheckValidSMS(SMSText))
-                {
-
-
-                    //SendSMSToContact((PhoneBookContact)checkedListBox_PhoneBook.SelectedItem, SMSText);
-                }
-                else
-                {
-                    //LogSMS.LogMessage(Color.Black, Color.White, "", New_Line = false, Show_Time = true);
-                    //        LogSMS.LogMessage(Color.Red, Color.White, "SMS Not Valid", New_Line = true, Show_Time = false);
-                }
-
-                // AddCommandToCommands(richTextBox_TextSendSMS.Text);
-                //groupBox34.Enabled = true;
-            }
         }
 
         private void Button33_Click_2(object sender, EventArgs e)
         {
-            using (AddContact form = new AddContact())
-            {
-                PhoneBookContact Contact = (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem;
-                form.Load += new EventHandler(Form_Load);
-
-                if (Contact != null)
-                {
-                    form.ContactName = Contact.Name;
-                    form.ContactName = Contact.Phone;
-                    form.ContactNotes = Contact.Notes;
-                    form.ContactPassword = Contact.Password;
-                    form.ContactIMEI = Contact.UnitID;
-
-                    DialogResult result = form.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        Contact.Name = form.ContactName;            //values preserved after close
-                        Contact.Phone = form.ContactPhone;
-                        Contact.Notes = form.ContactNotes;
-                        Contact.Password = form.ContactPassword;
-                        Contact.UnitID = form.ContactIMEI;
-                        //Do something here with these values
-
-                        //MyPhoneBook.AddContactToPhoneBook(NewContact);
-
-                        //UpdateDefaultsContacts();
-
-                        UpdatePhoneBook();
-
-
-                    }
-                }
-            }
+           
         }
 
         private void Form_Load(object sender, EventArgs e)
         {
-            PhoneBookContact Contact = (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem;
-            if (Contact != null)
-            {
-                AddContact form = (AddContact)sender;
-                form.TextBoxName = Contact.Name;
-                form.TextBoxPhone = Contact.Phone;
-                form.TextBoxNotes = Contact.Notes;
-                form.TextBoxPassword = Contact.Password;
-                form.TextBoxIMEI = Contact.UnitID;
-            }
+
         }
 
         private void Button36_Click(object sender, EventArgs e)
@@ -15642,15 +15511,7 @@ namespace Monitor
 
         private void CheckedListBox_PhoneBook_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkedListBox_PhoneBook.SelectedItem != null)
-            {
-                PhoneBookContact contact = (PhoneBookContact)checkedListBox_PhoneBook.SelectedItem;
 
-                richTextBox_ContactDetails.Text = string.Format("Name: \n{0}\n\nPhone: \n{1}\n\nPassword: \n{3}\n\nUnit ID: \n{4}\n\nNotes: \n{2}\n ", contact.Name, contact.Phone, contact.Notes, contact.Password, contact.UnitID);
-
-                textBox_UnitIDForSMS.Text = contact.UnitID;
-
-            }
 
         }
 
