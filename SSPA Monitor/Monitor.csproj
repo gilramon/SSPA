@@ -134,15 +134,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddContact.Designer.cs">
-      <DependentUpon>AddContact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="DSPLib.cs" />
     <Compile Include="Kratos_Protocol.cs" />
     <Compile Include="TextBox_Logger.cs" />
@@ -159,9 +150,6 @@
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="AddContact.resx">
-      <DependentUpon>AddContact.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

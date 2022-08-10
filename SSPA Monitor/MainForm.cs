@@ -8747,7 +8747,7 @@ namespace Monitor
             this.button_AddContact.TabIndex = 1;
             this.button_AddContact.Text = "Add";
             this.button_AddContact.UseVisualStyleBackColor = true;
-            this.button_AddContact.Click += new System.EventHandler(this.Button33_Click_1);
+           // this.button_AddContact.Click += new System.EventHandler(this.Button33_Click_1);
             // 
             // button_RemoveContact
             // 
@@ -15195,32 +15195,9 @@ namespace Monitor
             Monitor.Properties.Settings.Default.Save();
         }
 
-        private void Button33_Click_1(object sender, EventArgs e)
-        {
-            using (AddContact form = new AddContact())
-            {
-                DialogResult result = form.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-
-
-                    //Do something here with these values
 
 
 
-                    //UpdateDefaultsContacts();
-
-                    UpdatePhoneBook();
-
-
-                }
-            }
-        }
-
-        private bool CheckValidSMS(string i_SMS)
-        {
-            return true;
-        }
 
 
 
