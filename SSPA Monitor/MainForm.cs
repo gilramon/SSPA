@@ -720,6 +720,7 @@ namespace Monitor
         private GroupBox groupBox49;
         private TextBox textBox_SystemMode;
         private Button button_SystemMode;
+        private Label label123;
         private static readonly string PREAMBLE = "23";
 
 
@@ -773,998 +774,999 @@ namespace Monitor
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
-            textBox_ServerOpen = new System.Windows.Forms.TextBox();
-            textBox_ServerActive = new System.Windows.Forms.TextBox();
-            txtPortNo = new System.Windows.Forms.TextBox();
-            textBox_NumberOfOpenConnections = new System.Windows.Forms.TextBox();
-            ListenBox = new System.Windows.Forms.CheckBox();
-            label1 = new System.Windows.Forms.Label();
-            groupBox2 = new System.Windows.Forms.GroupBox();
-            comboBox_ConnectionNumber = new System.Windows.Forms.ComboBox();
-            button1 = new System.Windows.Forms.Button();
-            txtDataTx = new System.Windows.Forms.TextBox();
-            tabControl_Main = new System.Windows.Forms.TabControl();
-            tabPage_charts = new System.Windows.Forms.TabPage();
-            button99 = new System.Windows.Forms.Button();
-            label37 = new System.Windows.Forms.Label();
-            textBox_MaxXAxis = new System.Windows.Forms.TextBox();
-            textBox_MinXAxis = new System.Windows.Forms.TextBox();
-            comboBox_ChartUpdateTime = new System.Windows.Forms.ComboBox();
-            button28 = new System.Windows.Forms.Button();
-            listBox_Charts = new System.Windows.Forms.ListBox();
-            button_OpenFolder2 = new System.Windows.Forms.Button();
-            button_GraphPause = new System.Windows.Forms.Button();
-            Button_Export_excel = new System.Windows.Forms.Button();
-            button_ResetGraphs = new System.Windows.Forms.Button();
-            textBox_graph_XY = new System.Windows.Forms.TextBox();
-            button_ScreenShot = new System.Windows.Forms.Button();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            tabPage_ServerTCP = new System.Windows.Forms.TabPage();
-            checkBox_ParseMessages = new System.Windows.Forms.CheckBox();
-            textBox_IDKey = new System.Windows.Forms.RichTextBox();
-            groupBox_FOTA = new System.Windows.Forms.GroupBox();
-            button_StartFOTAProcess = new System.Windows.Forms.Button();
-            textBox_TotalFileLength = new System.Windows.Forms.TextBox();
-            textBox_MaximumNumberReceivedRequest = new System.Windows.Forms.RichTextBox();
-            button35 = new System.Windows.Forms.Button();
-            button_StartFOTA = new System.Windows.Forms.Button();
-            textBox_TotalFrames1280Bytes = new System.Windows.Forms.TextBox();
-            textBox_FOTA = new System.Windows.Forms.TextBox();
-            button5 = new System.Windows.Forms.Button();
-            checkBox_EchoResponse = new System.Windows.Forms.CheckBox();
-            groupBox_ConnectionTimedOut = new System.Windows.Forms.GroupBox();
-            textBox_CurrentTimeOut = new System.Windows.Forms.TextBox();
-            button_SetTimedOut = new System.Windows.Forms.Button();
-            textBox_ConnectionTimedOut = new System.Windows.Forms.TextBox();
-            groupBox3 = new System.Windows.Forms.GroupBox();
-            checkBox_ServerRecord = new System.Windows.Forms.CheckBox();
-            checkBox_ServerPause = new System.Windows.Forms.CheckBox();
-            button_ClearServer = new System.Windows.Forms.Button();
-            checkBox_StopLogging = new System.Windows.Forms.CheckBox();
-            TextBox_Server = new System.Windows.Forms.RichTextBox();
-            checkBox_RecordGeneral = new System.Windows.Forms.CheckBox();
-            PauseCheck = new System.Windows.Forms.CheckBox();
-            Clear_btn = new System.Windows.Forms.Button();
-            tabPage_ClientTCP = new System.Windows.Forms.TabPage();
-            checkBox_ParseRxTCPBuffer = new System.Windows.Forms.CheckBox();
-            button_Ping = new System.Windows.Forms.Button();
-            label10 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
-            button_ClearRx = new System.Windows.Forms.Button();
-            richTextBox_ClientRx = new System.Windows.Forms.RichTextBox();
-            button43 = new System.Windows.Forms.Button();
-            button_ClientClose = new System.Windows.Forms.Button();
-            button_ClientConnect = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
-            richTextBox_ClientTx = new System.Windows.Forms.RichTextBox();
-            textBox_ClientPort = new System.Windows.Forms.TextBox();
-            textBox_ClientIP = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
-            tabPage_SerialPort = new System.Windows.Forms.TabPage();
-            groupBox_SendSerialOrMonitorCommands = new System.Windows.Forms.GroupBox();
-            textBox_SendSerialPortPeriod = new System.Windows.Forms.TextBox();
-            checkBox_SendEveryOneSecond = new System.Windows.Forms.CheckBox();
-            checkBox_SendHexdata = new System.Windows.Forms.CheckBox();
-            textBox_SendSerialPort = new System.Windows.Forms.TextBox();
-            checkBox_DeleteCommand = new System.Windows.Forms.CheckBox();
-            button_SendSerialPort = new System.Windows.Forms.Button();
-            gbPortSettings = new System.Windows.Forms.GroupBox();
-            button_OpenPort = new System.Windows.Forms.Button();
-            button_ReScanComPort = new System.Windows.Forms.Button();
-            cmb_PortName = new System.Windows.Forms.ComboBox();
-            cmbBaudRate = new System.Windows.Forms.ComboBox();
-            cmb_StopBits = new System.Windows.Forms.ComboBox();
-            cmbParity = new System.Windows.Forms.ComboBox();
-            cmbDataBits = new System.Windows.Forms.ComboBox();
-            lblComPort = new System.Windows.Forms.Label();
-            lblStopBits = new System.Windows.Forms.Label();
-            lblBaudRate = new System.Windows.Forms.Label();
-            lblDataBits = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
-            groupBox5 = new System.Windows.Forms.GroupBox();
-            groupBox_Timer = new System.Windows.Forms.GroupBox();
-            textBox_TimerTime = new System.Windows.Forms.TextBox();
-            button_StartStopTimer = new System.Windows.Forms.Button();
-            button_ResetTimer = new System.Windows.Forms.Button();
-            textBox_SetTimerTime = new System.Windows.Forms.TextBox();
-            groupBox_Stopwatch = new System.Windows.Forms.GroupBox();
-            button_TimerLog = new System.Windows.Forms.Button();
-            button_Stopwatch_Start_Stop = new System.Windows.Forms.Button();
-            button_StopwatchReset = new System.Windows.Forms.Button();
-            textBox_StopWatch = new System.Windows.Forms.TextBox();
-            checkBox_RxHex = new System.Windows.Forms.CheckBox();
-            textBox_SerialPortRecognizePattern3 = new System.Windows.Forms.TextBox();
-            textBox_SerialPortRecognizePattern2 = new System.Windows.Forms.TextBox();
-            textBox_SerialPortRecognizePattern = new System.Windows.Forms.TextBox();
-            checkBox_S1RecordLog = new System.Windows.Forms.CheckBox();
-            checkBox_S1Pause = new System.Windows.Forms.CheckBox();
-            txtS1_Clear = new System.Windows.Forms.Button();
-            SerialPortLogger_TextBox = new System.Windows.Forms.RichTextBox();
-            tabPage_GenericFrame = new System.Windows.Forms.TabPage();
-            button52 = new System.Windows.Forms.Button();
-            groupBox31 = new System.Windows.Forms.GroupBox();
-            textBox_RxClientCheckSum = new System.Windows.Forms.TextBox();
-            label24 = new System.Windows.Forms.Label();
-            label41 = new System.Windows.Forms.Label();
-            textBox_RxClientDataLength = new System.Windows.Forms.TextBox();
-            label23 = new System.Windows.Forms.Label();
-            label18 = new System.Windows.Forms.Label();
-            label13 = new System.Windows.Forms.Label();
-            textBox_RxClientPreamble = new System.Windows.Forms.TextBox();
-            textBox_RxClientOpcode = new System.Windows.Forms.TextBox();
-            textBox_RxClientData = new System.Windows.Forms.TextBox();
-            label15 = new System.Windows.Forms.Label();
-            label16 = new System.Windows.Forms.Label();
-            groupBox_clientTX = new System.Windows.Forms.GroupBox();
-            button_SendProtocolSerialPort = new System.Windows.Forms.Button();
-            groupBox41 = new System.Windows.Forms.GroupBox();
-            textBox_SentChecksum = new System.Windows.Forms.TextBox();
-            label48 = new System.Windows.Forms.Label();
-            label42 = new System.Windows.Forms.Label();
-            textBox_SentDataLength = new System.Windows.Forms.TextBox();
-            label43 = new System.Windows.Forms.Label();
-            label44 = new System.Windows.Forms.Label();
-            label45 = new System.Windows.Forms.Label();
-            textBox_SentPreamble = new System.Windows.Forms.TextBox();
-            textBox_SentOpcode = new System.Windows.Forms.TextBox();
-            textBox_SentData = new System.Windows.Forms.TextBox();
-            label46 = new System.Windows.Forms.Label();
-            label47 = new System.Windows.Forms.Label();
-            label17 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            textBox_Preamble = new System.Windows.Forms.TextBox();
-            button_SendProtocolTCPIP = new System.Windows.Forms.Button();
-            textBox_Opcode = new System.Windows.Forms.TextBox();
-            textBox_data = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
-            label11 = new System.Windows.Forms.Label();
-            tabPage_Commands = new System.Windows.Forms.TabPage();
-            groupBox40 = new System.Windows.Forms.GroupBox();
-            tabControl_System = new System.Windows.Forms.TabControl();
-            tabPage1 = new System.Windows.Forms.TabPage();
-            textBox_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.TextBox();
-            textBox16 = new System.Windows.Forms.TextBox();
-            button117 = new System.Windows.Forms.Button();
-            button_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.Button();
-            textBox15 = new System.Windows.Forms.TextBox();
-            button115 = new System.Windows.Forms.Button();
-            button114 = new System.Windows.Forms.Button();
-            textBox14 = new System.Windows.Forms.TextBox();
-            button113 = new System.Windows.Forms.Button();
-            textBox13 = new System.Windows.Forms.TextBox();
-            button112 = new System.Windows.Forms.Button();
-            textBox12 = new System.Windows.Forms.TextBox();
-            button111 = new System.Windows.Forms.Button();
-            textBox_RFGenParms = new System.Windows.Forms.TextBox();
-            button_SetRFGen = new System.Windows.Forms.Button();
-            textBox10 = new System.Windows.Forms.TextBox();
-            button58 = new System.Windows.Forms.Button();
-            textBox_PulseGenParms = new System.Windows.Forms.TextBox();
-            button_GPparms = new System.Windows.Forms.Button();
-            textBox8 = new System.Windows.Forms.TextBox();
-            button56 = new System.Windows.Forms.Button();
-            textBox7 = new System.Windows.Forms.TextBox();
-            button55 = new System.Windows.Forms.Button();
-            textBox6 = new System.Windows.Forms.TextBox();
-            button54 = new System.Windows.Forms.Button();
-            textBox5 = new System.Windows.Forms.TextBox();
-            button53 = new System.Windows.Forms.Button();
-            textBox4 = new System.Windows.Forms.TextBox();
-            button51 = new System.Windows.Forms.Button();
-            button50 = new System.Windows.Forms.Button();
-            textBox3 = new System.Windows.Forms.TextBox();
-            button49 = new System.Windows.Forms.Button();
-            textBox_TxInhibit = new System.Windows.Forms.TextBox();
-            button47 = new System.Windows.Forms.Button();
-            button48 = new System.Windows.Forms.Button();
-            button108 = new System.Windows.Forms.Button();
-            button109 = new System.Windows.Forms.Button();
-            button45 = new System.Windows.Forms.Button();
-            button46 = new System.Windows.Forms.Button();
-            tabPage2 = new System.Windows.Forms.TabPage();
-            textBox22 = new System.Windows.Forms.TextBox();
-            button122 = new System.Windows.Forms.Button();
-            textBox21 = new System.Windows.Forms.TextBox();
-            button121 = new System.Windows.Forms.Button();
-            textBox20 = new System.Windows.Forms.TextBox();
-            button120 = new System.Windows.Forms.Button();
-            textBox19 = new System.Windows.Forms.TextBox();
-            button119 = new System.Windows.Forms.Button();
-            textBox_ControlCal = new System.Windows.Forms.TextBox();
-            button118 = new System.Windows.Forms.Button();
-            textBox17 = new System.Windows.Forms.TextBox();
-            textBox_SetSystemMode = new System.Windows.Forms.TextBox();
-            button_SetSystemMode = new System.Windows.Forms.Button();
-            textBox_SetDCAWithBusMode = new System.Windows.Forms.TextBox();
-            button87 = new System.Windows.Forms.Button();
-            textBox_SetVVAAtt = new System.Windows.Forms.TextBox();
-            button88 = new System.Windows.Forms.Button();
-            textBox_SetPSUOutput = new System.Windows.Forms.TextBox();
-            button69 = new System.Windows.Forms.Button();
-            button68 = new System.Windows.Forms.Button();
-            button67 = new System.Windows.Forms.Button();
-            button66 = new System.Windows.Forms.Button();
-            button65 = new System.Windows.Forms.Button();
-            textBox_SetADCMode = new System.Windows.Forms.TextBox();
-            button64 = new System.Windows.Forms.Button();
-            button63 = new System.Windows.Forms.Button();
-            button62 = new System.Windows.Forms.Button();
-            button61 = new System.Windows.Forms.Button();
-            button60 = new System.Windows.Forms.Button();
-            button_GetSystemID = new System.Windows.Forms.Button();
-            groupBox32 = new System.Windows.Forms.GroupBox();
-            richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
-            checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
-            checkBox_PauseMiniAda = new System.Windows.Forms.CheckBox();
-            button_ClearMiniAda = new System.Windows.Forms.Button();
-            tabPage3038WBPAA = new System.Windows.Forms.TabPage();
-            groupBox43 = new System.Windows.Forms.GroupBox();
-            groupBox48 = new System.Windows.Forms.GroupBox();
-            button6 = new System.Windows.Forms.Button();
-            button29 = new System.Windows.Forms.Button();
-            groupBox38 = new System.Windows.Forms.GroupBox();
-            button2 = new System.Windows.Forms.Button();
-            button30 = new System.Windows.Forms.Button();
-            tabControl1 = new System.Windows.Forms.TabControl();
-            tabPage6 = new System.Windows.Forms.TabPage();
-            groupBox37 = new System.Windows.Forms.GroupBox();
-            checkBox4 = new System.Windows.Forms.CheckBox();
-            checkBox3 = new System.Windows.Forms.CheckBox();
-            checkBox9 = new System.Windows.Forms.CheckBox();
-            checkBox2 = new System.Windows.Forms.CheckBox();
-            button73 = new System.Windows.Forms.Button();
-            label114 = new System.Windows.Forms.Label();
-            label113 = new System.Windows.Forms.Label();
-            label112 = new System.Windows.Forms.Label();
-            textBox_CALSAR = new System.Windows.Forms.TextBox();
-            label111 = new System.Windows.Forms.Label();
-            label110 = new System.Windows.Forms.Label();
-            textBox82 = new System.Windows.Forms.TextBox();
-            label107 = new System.Windows.Forms.Label();
-            textBox83 = new System.Windows.Forms.TextBox();
-            label108 = new System.Windows.Forms.Label();
-            textBox84 = new System.Windows.Forms.TextBox();
-            label109 = new System.Windows.Forms.Label();
-            button71 = new System.Windows.Forms.Button();
-            groupBox47 = new System.Windows.Forms.GroupBox();
-            label103 = new System.Windows.Forms.Label();
-            button74 = new System.Windows.Forms.Button();
-            textBox_StatusUUT32 = new System.Windows.Forms.TextBox();
-            button_GetStatus = new System.Windows.Forms.Button();
-            label104 = new System.Windows.Forms.Label();
-            label105 = new System.Windows.Forms.Label();
-            textBox_StatusUUT25 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT31 = new System.Windows.Forms.TextBox();
-            label69 = new System.Windows.Forms.Label();
-            label106 = new System.Windows.Forms.Label();
-            label120 = new System.Windows.Forms.Label();
-            textBox_StatusUUT30 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT26 = new System.Windows.Forms.TextBox();
-            label118 = new System.Windows.Forms.Label();
-            textBox_StatusUUT23 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT29 = new System.Windows.Forms.TextBox();
-            label56 = new System.Windows.Forms.Label();
-            label119 = new System.Windows.Forms.Label();
-            textBox_StatusUUT24 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT27 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT12 = new System.Windows.Forms.TextBox();
-            textBox_StatusUUT28 = new System.Windows.Forms.TextBox();
-            label57 = new System.Windows.Forms.Label();
-            label67 = new System.Windows.Forms.Label();
-            textBox_StatusUUT22 = new System.Windows.Forms.TextBox();
-            label58 = new System.Windows.Forms.Label();
-            label70 = new System.Windows.Forms.Label();
-            textBox_StatusUUT21 = new System.Windows.Forms.TextBox();
-            label59 = new System.Windows.Forms.Label();
-            textBox_StatusUUT20 = new System.Windows.Forms.TextBox();
-            label60 = new System.Windows.Forms.Label();
-            textBox_StatusUUT19 = new System.Windows.Forms.TextBox();
-            label61 = new System.Windows.Forms.Label();
-            textBox_StatusUUT18 = new System.Windows.Forms.TextBox();
-            label62 = new System.Windows.Forms.Label();
-            textBox_StatusUUT17 = new System.Windows.Forms.TextBox();
-            label63 = new System.Windows.Forms.Label();
-            textBox_StatusUUT16 = new System.Windows.Forms.TextBox();
-            label64 = new System.Windows.Forms.Label();
-            textBox_StatusUUT15 = new System.Windows.Forms.TextBox();
-            label65 = new System.Windows.Forms.Label();
-            textBox_StatusUUT14 = new System.Windows.Forms.TextBox();
-            label66 = new System.Windows.Forms.Label();
-            textBox_StatusUUT13 = new System.Windows.Forms.TextBox();
-            label55 = new System.Windows.Forms.Label();
-            textBox_StatusUUT1 = new System.Windows.Forms.TextBox();
-            label54 = new System.Windows.Forms.Label();
-            textBox_StatusUUT11 = new System.Windows.Forms.TextBox();
-            label53 = new System.Windows.Forms.Label();
-            textBox_StatusUUT10 = new System.Windows.Forms.TextBox();
-            label52 = new System.Windows.Forms.Label();
-            textBox_StatusUUT9 = new System.Windows.Forms.TextBox();
-            label51 = new System.Windows.Forms.Label();
-            textBox_StatusUUT8 = new System.Windows.Forms.TextBox();
-            label50 = new System.Windows.Forms.Label();
-            textBox_StatusUUT7 = new System.Windows.Forms.TextBox();
-            label49 = new System.Windows.Forms.Label();
-            textBox_StatusUUT6 = new System.Windows.Forms.TextBox();
-            label40 = new System.Windows.Forms.Label();
-            textBox_StatusUUT5 = new System.Windows.Forms.TextBox();
-            label39 = new System.Windows.Forms.Label();
-            textBox_StatusUUT4 = new System.Windows.Forms.TextBox();
-            label33 = new System.Windows.Forms.Label();
-            textBox_StatusUUT3 = new System.Windows.Forms.TextBox();
-            label32 = new System.Windows.Forms.Label();
-            textBox_StatusUUT2 = new System.Windows.Forms.TextBox();
-            groupBox39 = new System.Windows.Forms.GroupBox();
-            label115 = new System.Windows.Forms.Label();
-            textBox95 = new System.Windows.Forms.TextBox();
-            label71 = new System.Windows.Forms.Label();
-            label74 = new System.Windows.Forms.Label();
-            textBox94 = new System.Windows.Forms.TextBox();
-            label73 = new System.Windows.Forms.Label();
-            textBox93 = new System.Windows.Forms.TextBox();
-            label68 = new System.Windows.Forms.Label();
-            textBox92 = new System.Windows.Forms.TextBox();
-            label72 = new System.Windows.Forms.Label();
-            textBox90 = new System.Windows.Forms.TextBox();
-            textBox91 = new System.Windows.Forms.TextBox();
-            groupBox35 = new System.Windows.Forms.GroupBox();
-            label84 = new System.Windows.Forms.Label();
-            checkBox8 = new System.Windows.Forms.CheckBox();
-            label85 = new System.Windows.Forms.Label();
-            button44 = new System.Windows.Forms.Button();
-            label101 = new System.Windows.Forms.Label();
-            textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
-            textBox_PulsePeriod2 = new System.Windows.Forms.TextBox();
-            textBox_PulseWidth2 = new System.Windows.Forms.TextBox();
-            groupBox46 = new System.Windows.Forms.GroupBox();
-            label38 = new System.Windows.Forms.Label();
-            label34 = new System.Windows.Forms.Label();
-            label35 = new System.Windows.Forms.Label();
-            textBox29 = new System.Windows.Forms.TextBox();
-            textBox30 = new System.Windows.Forms.TextBox();
-            textBox31 = new System.Windows.Forms.TextBox();
-            label36 = new System.Windows.Forms.Label();
-            groupBox45 = new System.Windows.Forms.GroupBox();
-            label102 = new System.Windows.Forms.Label();
-            label31 = new System.Windows.Forms.Label();
-            label30 = new System.Windows.Forms.Label();
-            label29 = new System.Windows.Forms.Label();
-            label28 = new System.Windows.Forms.Label();
-            textBox27 = new System.Windows.Forms.TextBox();
-            textBox26 = new System.Windows.Forms.TextBox();
-            textBox25 = new System.Windows.Forms.TextBox();
-            textBox24 = new System.Windows.Forms.TextBox();
-            label25 = new System.Windows.Forms.Label();
-            groupBox34 = new System.Windows.Forms.GroupBox();
-            label79 = new System.Windows.Forms.Label();
-            checkBox7 = new System.Windows.Forms.CheckBox();
-            label80 = new System.Windows.Forms.Label();
-            button42 = new System.Windows.Forms.Button();
-            label83 = new System.Windows.Forms.Label();
-            textBox_PulseDelay = new System.Windows.Forms.TextBox();
-            textBox_PulsePeriod = new System.Windows.Forms.TextBox();
-            textBox_PulseWidth = new System.Windows.Forms.TextBox();
-            groupBox44 = new System.Windows.Forms.GroupBox();
-            button57 = new System.Windows.Forms.Button();
-            textBox_SystemFWVersion = new System.Windows.Forms.TextBox();
-            textBox_SystemHWVersion = new System.Windows.Forms.TextBox();
-            button70 = new System.Windows.Forms.Button();
-            label27 = new System.Windows.Forms.Label();
-            label26 = new System.Windows.Forms.Label();
-            label19 = new System.Windows.Forms.Label();
-            groupBox1 = new System.Windows.Forms.GroupBox();
-            button75 = new System.Windows.Forms.Button();
-            label97 = new System.Windows.Forms.Label();
-            textBox_SimulatorSN = new System.Windows.Forms.TextBox();
-            label96 = new System.Windows.Forms.Label();
-            textBox_SimulatorID = new System.Windows.Forms.TextBox();
-            button31 = new System.Windows.Forms.Button();
-            label93 = new System.Windows.Forms.Label();
-            label94 = new System.Windows.Forms.Label();
-            textBox_SimulatorFWVersion = new System.Windows.Forms.TextBox();
-            textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
-            label95 = new System.Windows.Forms.Label();
-            groupBox33 = new System.Windows.Forms.GroupBox();
-            checkBox6 = new System.Windows.Forms.CheckBox();
-            button32 = new System.Windows.Forms.Button();
-            textBox_RFDelay = new System.Windows.Forms.TextBox();
-            label100 = new System.Windows.Forms.Label();
-            textBox_RFPeriod = new System.Windows.Forms.TextBox();
-            label99 = new System.Windows.Forms.Label();
-            textBox_RFWidth = new System.Windows.Forms.TextBox();
-            label98 = new System.Windows.Forms.Label();
-            tabPage13 = new System.Windows.Forms.TabPage();
-            dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label81 = new System.Windows.Forms.Label();
-            dataGridView_OverUnder = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label82 = new System.Windows.Forms.Label();
-            textBox66 = new System.Windows.Forms.TextBox();
-            label78 = new System.Windows.Forms.Label();
-            textBox62 = new System.Windows.Forms.TextBox();
-            label77 = new System.Windows.Forms.Label();
-            textBox61 = new System.Windows.Forms.TextBox();
-            tabPage7 = new System.Windows.Forms.TabPage();
-            label117 = new System.Windows.Forms.Label();
-            label116 = new System.Windows.Forms.Label();
-            dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tabPage8 = new System.Windows.Forms.TabPage();
-            label89 = new System.Windows.Forms.Label();
-            dataGridView_VVAOffset1 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label88 = new System.Windows.Forms.Label();
-            dataGridView_VVAOffset2 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label87 = new System.Windows.Forms.Label();
-            label86 = new System.Windows.Forms.Label();
-            dataGridView_PAVVA = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label76 = new System.Windows.Forms.Label();
-            label75 = new System.Windows.Forms.Label();
-            dataGridView_DC4 = new System.Windows.Forms.DataGridView();
-            Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tabPage9 = new System.Windows.Forms.TabPage();
-            label92 = new System.Windows.Forms.Label();
-            dataGridView10 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label91 = new System.Windows.Forms.Label();
-            dataGridView9 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            label90 = new System.Windows.Forms.Label();
-            dataGridView8 = new System.Windows.Forms.DataGridView();
-            dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            groupBox42 = new System.Windows.Forms.GroupBox();
-            radioButton_TCPIP = new System.Windows.Forms.RadioButton();
-            radioButton_SerialPort = new System.Windows.Forms.RadioButton();
-            button_OpenFolder = new System.Windows.Forms.Button();
-            tabPage4 = new System.Windows.Forms.TabPage();
-            S1_Configuration = new System.Windows.Forms.GroupBox();
-            groupBox12 = new System.Windows.Forms.GroupBox();
-            button13 = new System.Windows.Forms.Button();
-            groupBox22 = new System.Windows.Forms.GroupBox();
-            TextBox_Odometer = new System.Windows.Forms.TextBox();
-            button19 = new System.Windows.Forms.Button();
-            groupBox28 = new System.Windows.Forms.GroupBox();
-            textBox_ModemSocket = new System.Windows.Forms.TextBox();
-            textBox_ModemRetries = new System.Windows.Forms.TextBox();
-            textBox_ModemTimeOut = new System.Windows.Forms.TextBox();
-            button25 = new System.Windows.Forms.Button();
-            textBox_ModemPrimeryPort = new System.Windows.Forms.TextBox();
-            textBox_ModemPrimeryHost = new System.Windows.Forms.TextBox();
-            groupBox30 = new System.Windows.Forms.GroupBox();
-            textBox_ForginPassword = new System.Windows.Forms.TextBox();
-            button27 = new System.Windows.Forms.Button();
-            textBox_ForginAcessPoint = new System.Windows.Forms.TextBox();
-            textBox_ForginSecondaryDNS = new System.Windows.Forms.TextBox();
-            textBox_ForginUserName = new System.Windows.Forms.TextBox();
-            textBox_ForginPrimeryDNS = new System.Windows.Forms.TextBox();
-            groupBox29 = new System.Windows.Forms.GroupBox();
-            textBox_HomePassword = new System.Windows.Forms.TextBox();
-            button26 = new System.Windows.Forms.Button();
-            textBox_HomeAcessPoint = new System.Windows.Forms.TextBox();
-            textBox_HomeSecondaryDNS = new System.Windows.Forms.TextBox();
-            textBox_HomeUserName = new System.Windows.Forms.TextBox();
-            textBox_HomePrimeryDNS = new System.Windows.Forms.TextBox();
-            groupBox27 = new System.Windows.Forms.GroupBox();
-            maskedTextBox1 = new System.Windows.Forms.TextBox();
-            button24 = new System.Windows.Forms.Button();
-            groupBox26 = new System.Windows.Forms.GroupBox();
-            TextBox_NormalStatusDuration = new System.Windows.Forms.TextBox();
-            button23 = new System.Windows.Forms.Button();
-            groupBox25 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_SpeedLimit2 = new System.Windows.Forms.TextBox();
-            maskedTextBox_SpeedLimit3 = new System.Windows.Forms.TextBox();
-            maskedTextBox_SpeedLimit1 = new System.Windows.Forms.TextBox();
-            button22 = new System.Windows.Forms.Button();
-            groupBox24 = new System.Windows.Forms.GroupBox();
-            comboBox_DispatchSpeed = new System.Windows.Forms.ComboBox();
-            button21 = new System.Windows.Forms.Button();
-            groupBox23 = new System.Windows.Forms.GroupBox();
-            comboBox_KillEngine = new System.Windows.Forms.ComboBox();
-            button20 = new System.Windows.Forms.Button();
-            groupBox21 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_TiltTowSens = new System.Windows.Forms.TextBox();
-            comboBox_TiltTowSensState = new System.Windows.Forms.ComboBox();
-            button18 = new System.Windows.Forms.Button();
-            groupBox20 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_HitSensitivity = new System.Windows.Forms.TextBox();
-            comboBox_HitState = new System.Windows.Forms.ComboBox();
-            button17 = new System.Windows.Forms.Button();
-            groupBox19 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_ShockDetectNum = new System.Windows.Forms.TextBox();
-            maskedTextBox_ShockWindow = new System.Windows.Forms.TextBox();
-            comboBox_ShockState = new System.Windows.Forms.ComboBox();
-            button16 = new System.Windows.Forms.Button();
-            groupBox18 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_TiltDetectNum = new System.Windows.Forms.TextBox();
-            maskedTextBox_TiltWindow = new System.Windows.Forms.TextBox();
-            maskedTextBox_TiltAngle = new System.Windows.Forms.TextBox();
-            comboBox1_TiltState = new System.Windows.Forms.ComboBox();
-            button15 = new System.Windows.Forms.Button();
-            groupBox17 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_TowDetectNum = new System.Windows.Forms.TextBox();
-            maskedTextBox_TowWindow = new System.Windows.Forms.TextBox();
-            maskedTextBox_TowAngle = new System.Windows.Forms.TextBox();
-            button14 = new System.Windows.Forms.Button();
-            groupBox11 = new System.Windows.Forms.GroupBox();
-            comboBox_SleepPolicy = new System.Windows.Forms.ComboBox();
-            button12 = new System.Windows.Forms.Button();
-            groupBox10 = new System.Windows.Forms.GroupBox();
-            comboBox_AlarmPilicy = new System.Windows.Forms.ComboBox();
-            button11 = new System.Windows.Forms.Button();
-            groupBox9 = new System.Windows.Forms.GroupBox();
-            dateTimePicker_SetTimeDate = new System.Windows.Forms.DateTimePicker();
-            button10 = new System.Windows.Forms.Button();
-            groupBox8 = new System.Windows.Forms.GroupBox();
-            comboBox_BatThreshold = new System.Windows.Forms.ComboBox();
-            button9 = new System.Windows.Forms.Button();
-            groupBox7 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_OutputDuration = new System.Windows.Forms.TextBox();
-            comboBox_OutputNum = new System.Windows.Forms.ComboBox();
-            comboBox_OutputControl = new System.Windows.Forms.ComboBox();
-            button8 = new System.Windows.Forms.Button();
-            comboBox_OutputPulseLevel = new System.Windows.Forms.ComboBox();
-            groupBox6 = new System.Windows.Forms.GroupBox();
-            maskedTextBox_InputDuration = new System.Windows.Forms.TextBox();
-            comboBox_InputNum1 = new System.Windows.Forms.ComboBox();
-            comboBox_Interupt = new System.Windows.Forms.ComboBox();
-            button7 = new System.Windows.Forms.Button();
-            groupBox13 = new System.Windows.Forms.GroupBox();
-            btn_ChangePassword = new System.Windows.Forms.Button();
-            textBox_NewPassword = new System.Windows.Forms.TextBox();
-            groupBox14 = new System.Windows.Forms.GroupBox();
-            comboBox_SMSControl = new System.Windows.Forms.ComboBox();
-            button_SMSControl = new System.Windows.Forms.Button();
-            groupBox15 = new System.Windows.Forms.GroupBox();
-            textBox_FreeText = new System.Windows.Forms.TextBox();
-            comboBox_InputIndex = new System.Windows.Forms.ComboBox();
-            button_SetFreeText = new System.Windows.Forms.Button();
-            groupBox16 = new System.Windows.Forms.GroupBox();
-            maskedTextBox3_Subscriber3 = new System.Windows.Forms.TextBox();
-            maskedTextBox2_Subscriber2 = new System.Windows.Forms.TextBox();
-            maskedTextBox1_Subscriber1 = new System.Windows.Forms.TextBox();
-            button4 = new System.Windows.Forms.Button();
-            tabPage5 = new System.Windows.Forms.TabPage();
-            textBox_SMSPhoneNumber = new System.Windows.Forms.TextBox();
-            button_SendAllCheckedSMS = new System.Windows.Forms.Button();
-            button_SendSelectedSMS = new System.Windows.Forms.Button();
-            button_Ring = new System.Windows.Forms.Button();
-            comboBox_SystemType = new System.Windows.Forms.ComboBox();
-            openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            timer_General_100ms = new System.Windows.Forms.Timer(components);
-            timer_General_1Second = new System.Windows.Forms.Timer(components);
-            serialPort = new System.IO.Ports.SerialPort(components);
-            groupBox36 = new System.Windows.Forms.GroupBox();
-            groupBox_PhoneNumber = new System.Windows.Forms.GroupBox();
-            Label_SerialPortRx = new System.Windows.Forms.Label();
-            label_SerialPortConnected = new System.Windows.Forms.Label();
-            Label_SerialPortTx = new System.Windows.Forms.Label();
-            groupBox_SerialPort = new System.Windows.Forms.GroupBox();
-            label_SerialPortStatus = new System.Windows.Forms.Label();
-            groupBox4 = new System.Windows.Forms.GroupBox();
-            button97 = new System.Windows.Forms.Button();
-            textBox_SystemStatus = new System.Windows.Forms.TextBox();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-            groupBox_ClentTCPStatus = new System.Windows.Forms.GroupBox();
-            label_TCPClient = new System.Windows.Forms.Label();
-            label12 = new System.Windows.Forms.Label();
-            label_ClientTCPConnected = new System.Windows.Forms.Label();
-            label14 = new System.Windows.Forms.Label();
-            checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
-            button_AddContact = new System.Windows.Forms.Button();
-            button_RemoveContact = new System.Windows.Forms.Button();
-            button_ExportToXML = new System.Windows.Forms.Button();
-            button_ImportToXML = new System.Windows.Forms.Button();
-            button33 = new System.Windows.Forms.Button();
-            richTextBox_ContactDetails = new System.Windows.Forms.RichTextBox();
-            button34 = new System.Windows.Forms.Button();
-            richTextBox_TextSendSMS = new System.Windows.Forms.RichTextBox();
-            label_SMSSendCharacters = new System.Windows.Forms.Label();
-            checkBox1 = new System.Windows.Forms.CheckBox();
-            checkBox_SendSMSAsIs = new System.Windows.Forms.CheckBox();
-            checkBox_SMSencrypted = new System.Windows.Forms.CheckBox();
-            GrooupBox_Encryption = new System.Windows.Forms.GroupBox();
-            textBox_UnitIDForSMS = new System.Windows.Forms.TextBox();
-            label2 = new System.Windows.Forms.Label();
-            textBox_CodeArrayForSMS = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
-            richTextBox_ModemStatus = new System.Windows.Forms.RichTextBox();
-            comboBox_ComportSMS = new System.Windows.Forms.ComboBox();
-            button36 = new System.Windows.Forms.Button();
-            checkBox_OpenPortSMS = new System.Windows.Forms.CheckBox();
-            checkBox_DebugSMS = new System.Windows.Forms.CheckBox();
-            button_ClearSMSConsole = new System.Windows.Forms.Button();
-            checkBox_PauseSMSConsole = new System.Windows.Forms.CheckBox();
-            checkBox_RecordSMSConsole = new System.Windows.Forms.CheckBox();
-            richTextBox_SMSConsole = new System.Windows.Forms.RichTextBox();
-            button41 = new System.Windows.Forms.Button();
-            button40 = new System.Windows.Forms.Button();
-            button39 = new System.Windows.Forms.Button();
-            button38 = new System.Windows.Forms.Button();
-            button37 = new System.Windows.Forms.Button();
-            listBox_SMSCommands = new System.Windows.Forms.ListBox();
-            button_WriteCatalinas = new System.Windows.Forms.Button();
-            textBox_FilesToWriteForTheCatalinas = new System.Windows.Forms.RichTextBox();
-            richTextBox_SyntisazerL1 = new System.Windows.Forms.RichTextBox();
-            richTextBox_SyntisazerL2 = new System.Windows.Forms.RichTextBox();
-            comboBox1 = new System.Windows.Forms.ComboBox();
-            label20 = new System.Windows.Forms.Label();
-            label21 = new System.Windows.Forms.Label();
-            label22 = new System.Windows.Forms.Label();
-            button_WriteSystemType = new System.Windows.Forms.Button();
-            button_SynthL1 = new System.Windows.Forms.Button();
-            button_WriteAllToFlash = new System.Windows.Forms.Button();
-            button_SynthL2 = new System.Windows.Forms.Button();
-            progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
-            toolTip1 = new System.Windows.Forms.ToolTip(components);
-            label121 = new System.Windows.Forms.Label();
-            textBox_SystemSN = new System.Windows.Forms.TextBox();
-            label122 = new System.Windows.Forms.Label();
-            textBox_SystemID = new System.Windows.Forms.TextBox();
-            groupBox49 = new System.Windows.Forms.GroupBox();
-            textBox_SystemMode = new System.Windows.Forms.TextBox();
-            button_SystemMode = new System.Windows.Forms.Button();
-            groupBox_ServerSettings.SuspendLayout();
-            groupBox2.SuspendLayout();
-            tabControl_Main.SuspendLayout();
-            tabPage_charts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(chart1)).BeginInit();
-            tabPage_ServerTCP.SuspendLayout();
-            groupBox_FOTA.SuspendLayout();
-            groupBox_ConnectionTimedOut.SuspendLayout();
-            groupBox3.SuspendLayout();
-            tabPage_ClientTCP.SuspendLayout();
-            tabPage_SerialPort.SuspendLayout();
-            groupBox_SendSerialOrMonitorCommands.SuspendLayout();
-            gbPortSettings.SuspendLayout();
-            groupBox5.SuspendLayout();
-            groupBox_Timer.SuspendLayout();
-            groupBox_Stopwatch.SuspendLayout();
-            tabPage_GenericFrame.SuspendLayout();
-            groupBox31.SuspendLayout();
-            groupBox_clientTX.SuspendLayout();
-            groupBox41.SuspendLayout();
-            tabPage_Commands.SuspendLayout();
-            groupBox40.SuspendLayout();
-            tabControl_System.SuspendLayout();
-            tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            groupBox32.SuspendLayout();
-            tabPage3038WBPAA.SuspendLayout();
-            groupBox43.SuspendLayout();
-            groupBox48.SuspendLayout();
-            groupBox38.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tabPage6.SuspendLayout();
-            groupBox37.SuspendLayout();
-            groupBox47.SuspendLayout();
-            groupBox39.SuspendLayout();
-            groupBox35.SuspendLayout();
-            groupBox46.SuspendLayout();
-            groupBox45.SuspendLayout();
-            groupBox34.SuspendLayout();
-            groupBox44.SuspendLayout();
-            groupBox1.SuspendLayout();
-            groupBox33.SuspendLayout();
-            tabPage13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_ValPage0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_OverUnder)).BeginInit();
-            tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_Page1_4)).BeginInit();
-            tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_VVAOffset1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_VVAOffset2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_PAVVA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_DC4)).BeginInit();
-            tabPage9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView8)).BeginInit();
-            groupBox42.SuspendLayout();
-            tabPage4.SuspendLayout();
-            S1_Configuration.SuspendLayout();
-            groupBox12.SuspendLayout();
-            groupBox22.SuspendLayout();
-            groupBox28.SuspendLayout();
-            groupBox30.SuspendLayout();
-            groupBox29.SuspendLayout();
-            groupBox27.SuspendLayout();
-            groupBox26.SuspendLayout();
-            groupBox25.SuspendLayout();
-            groupBox24.SuspendLayout();
-            groupBox23.SuspendLayout();
-            groupBox21.SuspendLayout();
-            groupBox20.SuspendLayout();
-            groupBox19.SuspendLayout();
-            groupBox18.SuspendLayout();
-            groupBox17.SuspendLayout();
-            groupBox11.SuspendLayout();
-            groupBox10.SuspendLayout();
-            groupBox9.SuspendLayout();
-            groupBox8.SuspendLayout();
-            groupBox7.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox13.SuspendLayout();
-            groupBox14.SuspendLayout();
-            groupBox15.SuspendLayout();
-            groupBox16.SuspendLayout();
-            groupBox_PhoneNumber.SuspendLayout();
-            groupBox_SerialPort.SuspendLayout();
-            groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).BeginInit();
-            groupBox_ClentTCPStatus.SuspendLayout();
-            groupBox49.SuspendLayout();
-            SuspendLayout();
+            this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
+            this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
+            this.textBox_ServerActive = new System.Windows.Forms.TextBox();
+            this.txtPortNo = new System.Windows.Forms.TextBox();
+            this.textBox_NumberOfOpenConnections = new System.Windows.Forms.TextBox();
+            this.ListenBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_ConnectionNumber = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtDataTx = new System.Windows.Forms.TextBox();
+            this.tabControl_Main = new System.Windows.Forms.TabControl();
+            this.tabPage_charts = new System.Windows.Forms.TabPage();
+            this.button99 = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox_MaxXAxis = new System.Windows.Forms.TextBox();
+            this.textBox_MinXAxis = new System.Windows.Forms.TextBox();
+            this.comboBox_ChartUpdateTime = new System.Windows.Forms.ComboBox();
+            this.button28 = new System.Windows.Forms.Button();
+            this.listBox_Charts = new System.Windows.Forms.ListBox();
+            this.button_OpenFolder2 = new System.Windows.Forms.Button();
+            this.button_GraphPause = new System.Windows.Forms.Button();
+            this.Button_Export_excel = new System.Windows.Forms.Button();
+            this.button_ResetGraphs = new System.Windows.Forms.Button();
+            this.textBox_graph_XY = new System.Windows.Forms.TextBox();
+            this.button_ScreenShot = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage_ServerTCP = new System.Windows.Forms.TabPage();
+            this.checkBox_ParseMessages = new System.Windows.Forms.CheckBox();
+            this.textBox_IDKey = new System.Windows.Forms.RichTextBox();
+            this.groupBox_FOTA = new System.Windows.Forms.GroupBox();
+            this.button_StartFOTAProcess = new System.Windows.Forms.Button();
+            this.textBox_TotalFileLength = new System.Windows.Forms.TextBox();
+            this.textBox_MaximumNumberReceivedRequest = new System.Windows.Forms.RichTextBox();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button_StartFOTA = new System.Windows.Forms.Button();
+            this.textBox_TotalFrames1280Bytes = new System.Windows.Forms.TextBox();
+            this.textBox_FOTA = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.checkBox_EchoResponse = new System.Windows.Forms.CheckBox();
+            this.groupBox_ConnectionTimedOut = new System.Windows.Forms.GroupBox();
+            this.textBox_CurrentTimeOut = new System.Windows.Forms.TextBox();
+            this.button_SetTimedOut = new System.Windows.Forms.Button();
+            this.textBox_ConnectionTimedOut = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox_ServerRecord = new System.Windows.Forms.CheckBox();
+            this.checkBox_ServerPause = new System.Windows.Forms.CheckBox();
+            this.button_ClearServer = new System.Windows.Forms.Button();
+            this.checkBox_StopLogging = new System.Windows.Forms.CheckBox();
+            this.TextBox_Server = new System.Windows.Forms.RichTextBox();
+            this.checkBox_RecordGeneral = new System.Windows.Forms.CheckBox();
+            this.PauseCheck = new System.Windows.Forms.CheckBox();
+            this.Clear_btn = new System.Windows.Forms.Button();
+            this.tabPage_ClientTCP = new System.Windows.Forms.TabPage();
+            this.checkBox_ParseRxTCPBuffer = new System.Windows.Forms.CheckBox();
+            this.button_Ping = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button_ClearRx = new System.Windows.Forms.Button();
+            this.richTextBox_ClientRx = new System.Windows.Forms.RichTextBox();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button_ClientClose = new System.Windows.Forms.Button();
+            this.button_ClientConnect = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.richTextBox_ClientTx = new System.Windows.Forms.RichTextBox();
+            this.textBox_ClientPort = new System.Windows.Forms.TextBox();
+            this.textBox_ClientIP = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tabPage_SerialPort = new System.Windows.Forms.TabPage();
+            this.groupBox_SendSerialOrMonitorCommands = new System.Windows.Forms.GroupBox();
+            this.textBox_SendSerialPortPeriod = new System.Windows.Forms.TextBox();
+            this.checkBox_SendEveryOneSecond = new System.Windows.Forms.CheckBox();
+            this.checkBox_SendHexdata = new System.Windows.Forms.CheckBox();
+            this.textBox_SendSerialPort = new System.Windows.Forms.TextBox();
+            this.checkBox_DeleteCommand = new System.Windows.Forms.CheckBox();
+            this.button_SendSerialPort = new System.Windows.Forms.Button();
+            this.gbPortSettings = new System.Windows.Forms.GroupBox();
+            this.button_OpenPort = new System.Windows.Forms.Button();
+            this.button_ReScanComPort = new System.Windows.Forms.Button();
+            this.cmb_PortName = new System.Windows.Forms.ComboBox();
+            this.cmbBaudRate = new System.Windows.Forms.ComboBox();
+            this.cmb_StopBits = new System.Windows.Forms.ComboBox();
+            this.cmbParity = new System.Windows.Forms.ComboBox();
+            this.cmbDataBits = new System.Windows.Forms.ComboBox();
+            this.lblComPort = new System.Windows.Forms.Label();
+            this.lblStopBits = new System.Windows.Forms.Label();
+            this.lblBaudRate = new System.Windows.Forms.Label();
+            this.lblDataBits = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox_Timer = new System.Windows.Forms.GroupBox();
+            this.textBox_TimerTime = new System.Windows.Forms.TextBox();
+            this.button_StartStopTimer = new System.Windows.Forms.Button();
+            this.button_ResetTimer = new System.Windows.Forms.Button();
+            this.textBox_SetTimerTime = new System.Windows.Forms.TextBox();
+            this.groupBox_Stopwatch = new System.Windows.Forms.GroupBox();
+            this.button_TimerLog = new System.Windows.Forms.Button();
+            this.button_Stopwatch_Start_Stop = new System.Windows.Forms.Button();
+            this.button_StopwatchReset = new System.Windows.Forms.Button();
+            this.textBox_StopWatch = new System.Windows.Forms.TextBox();
+            this.checkBox_RxHex = new System.Windows.Forms.CheckBox();
+            this.textBox_SerialPortRecognizePattern3 = new System.Windows.Forms.TextBox();
+            this.textBox_SerialPortRecognizePattern2 = new System.Windows.Forms.TextBox();
+            this.textBox_SerialPortRecognizePattern = new System.Windows.Forms.TextBox();
+            this.checkBox_S1RecordLog = new System.Windows.Forms.CheckBox();
+            this.checkBox_S1Pause = new System.Windows.Forms.CheckBox();
+            this.txtS1_Clear = new System.Windows.Forms.Button();
+            this.SerialPortLogger_TextBox = new System.Windows.Forms.RichTextBox();
+            this.tabPage_GenericFrame = new System.Windows.Forms.TabPage();
+            this.button52 = new System.Windows.Forms.Button();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.textBox_RxClientCheckSum = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox_RxClientDataLength = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox_RxClientPreamble = new System.Windows.Forms.TextBox();
+            this.textBox_RxClientOpcode = new System.Windows.Forms.TextBox();
+            this.textBox_RxClientData = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox_clientTX = new System.Windows.Forms.GroupBox();
+            this.button_SendProtocolSerialPort = new System.Windows.Forms.Button();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.textBox_SentChecksum = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox_SentDataLength = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.textBox_SentPreamble = new System.Windows.Forms.TextBox();
+            this.textBox_SentOpcode = new System.Windows.Forms.TextBox();
+            this.textBox_SentData = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_Preamble = new System.Windows.Forms.TextBox();
+            this.button_SendProtocolTCPIP = new System.Windows.Forms.Button();
+            this.textBox_Opcode = new System.Windows.Forms.TextBox();
+            this.textBox_data = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage_Commands = new System.Windows.Forms.TabPage();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.tabControl_System = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.button117 = new System.Windows.Forms.Button();
+            this.button_SimulatorDiscreteCALSARcontrol = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button115 = new System.Windows.Forms.Button();
+            this.button114 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button113 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.button112 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.button111 = new System.Windows.Forms.Button();
+            this.textBox_RFGenParms = new System.Windows.Forms.TextBox();
+            this.button_SetRFGen = new System.Windows.Forms.Button();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.button58 = new System.Windows.Forms.Button();
+            this.textBox_PulseGenParms = new System.Windows.Forms.TextBox();
+            this.button_GPparms = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button56 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button55 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button54 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button53 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button51 = new System.Windows.Forms.Button();
+            this.button50 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button49 = new System.Windows.Forms.Button();
+            this.textBox_TxInhibit = new System.Windows.Forms.TextBox();
+            this.button47 = new System.Windows.Forms.Button();
+            this.button48 = new System.Windows.Forms.Button();
+            this.button108 = new System.Windows.Forms.Button();
+            this.button109 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.button122 = new System.Windows.Forms.Button();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.button121 = new System.Windows.Forms.Button();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.button120 = new System.Windows.Forms.Button();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.button119 = new System.Windows.Forms.Button();
+            this.textBox_ControlCal = new System.Windows.Forms.TextBox();
+            this.button118 = new System.Windows.Forms.Button();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox_SetSystemMode = new System.Windows.Forms.TextBox();
+            this.button_SetSystemMode = new System.Windows.Forms.Button();
+            this.textBox_SetDCAWithBusMode = new System.Windows.Forms.TextBox();
+            this.button87 = new System.Windows.Forms.Button();
+            this.textBox_SetVVAAtt = new System.Windows.Forms.TextBox();
+            this.button88 = new System.Windows.Forms.Button();
+            this.textBox_SetPSUOutput = new System.Windows.Forms.TextBox();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button67 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.textBox_SetADCMode = new System.Windows.Forms.TextBox();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.button62 = new System.Windows.Forms.Button();
+            this.button61 = new System.Windows.Forms.Button();
+            this.button60 = new System.Windows.Forms.Button();
+            this.button_GetSystemID = new System.Windows.Forms.Button();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
+            this.checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
+            this.checkBox_PauseMiniAda = new System.Windows.Forms.CheckBox();
+            this.button_ClearMiniAda = new System.Windows.Forms.Button();
+            this.tabPage3038WBPAA = new System.Windows.Forms.TabPage();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.button_SystemMode = new System.Windows.Forms.Button();
+            this.textBox_SystemMode = new System.Windows.Forms.TextBox();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.button73 = new System.Windows.Forms.Button();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.textBox_CALSAR = new System.Windows.Forms.TextBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.textBox83 = new System.Windows.Forms.TextBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.button71 = new System.Windows.Forms.Button();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.button74 = new System.Windows.Forms.Button();
+            this.textBox_StatusUUT32 = new System.Windows.Forms.TextBox();
+            this.button_GetStatus = new System.Windows.Forms.Button();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT25 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT31 = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT30 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT26 = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT23 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT29 = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT24 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT27 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT12 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT28 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT22 = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT21 = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT20 = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT19 = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT18 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT17 = new System.Windows.Forms.TextBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT16 = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT15 = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT14 = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT13 = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT1 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT11 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT10 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT9 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT8 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT7 = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT6 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT5 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT4 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT3 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT2 = new System.Windows.Forms.TextBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.label115 = new System.Windows.Forms.Label();
+            this.textBox95 = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.textBox90 = new System.Windows.Forms.TextBox();
+            this.textBox91 = new System.Windows.Forms.TextBox();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.button44 = new System.Windows.Forms.Button();
+            this.label101 = new System.Windows.Forms.Label();
+            this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
+            this.textBox_PulsePeriod2 = new System.Windows.Forms.TextBox();
+            this.textBox_PulseWidth2 = new System.Windows.Forms.TextBox();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.button42 = new System.Windows.Forms.Button();
+            this.label83 = new System.Windows.Forms.Label();
+            this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
+            this.textBox_PulsePeriod = new System.Windows.Forms.TextBox();
+            this.textBox_PulseWidth = new System.Windows.Forms.TextBox();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.button57 = new System.Windows.Forms.Button();
+            this.textBox_SystemSN = new System.Windows.Forms.TextBox();
+            this.textBox_SystemFWVersion = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.textBox_SystemHWVersion = new System.Windows.Forms.TextBox();
+            this.textBox_SystemID = new System.Windows.Forms.TextBox();
+            this.button70 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button75 = new System.Windows.Forms.Button();
+            this.label97 = new System.Windows.Forms.Label();
+            this.textBox_SimulatorSN = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.textBox_SimulatorID = new System.Windows.Forms.TextBox();
+            this.button31 = new System.Windows.Forms.Button();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.textBox_SimulatorFWVersion = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.button32 = new System.Windows.Forms.Button();
+            this.textBox_RFDelay = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.textBox_RFPeriod = new System.Windows.Forms.TextBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.textBox_RFWidth = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label81 = new System.Windows.Forms.Label();
+            this.dataGridView_OverUnder = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label82 = new System.Windows.Forms.Label();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label89 = new System.Windows.Forms.Label();
+            this.dataGridView_VVAOffset1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label88 = new System.Windows.Forms.Label();
+            this.dataGridView_VVAOffset2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.dataGridView_PAVVA = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.dataGridView_DC4 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label92 = new System.Windows.Forms.Label();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label91 = new System.Windows.Forms.Label();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label90 = new System.Windows.Forms.Label();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
+            this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
+            this.button_OpenFolder = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.S1_Configuration = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.TextBox_Odometer = new System.Windows.Forms.TextBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.textBox_ModemSocket = new System.Windows.Forms.TextBox();
+            this.textBox_ModemRetries = new System.Windows.Forms.TextBox();
+            this.textBox_ModemTimeOut = new System.Windows.Forms.TextBox();
+            this.button25 = new System.Windows.Forms.Button();
+            this.textBox_ModemPrimeryPort = new System.Windows.Forms.TextBox();
+            this.textBox_ModemPrimeryHost = new System.Windows.Forms.TextBox();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.textBox_ForginPassword = new System.Windows.Forms.TextBox();
+            this.button27 = new System.Windows.Forms.Button();
+            this.textBox_ForginAcessPoint = new System.Windows.Forms.TextBox();
+            this.textBox_ForginSecondaryDNS = new System.Windows.Forms.TextBox();
+            this.textBox_ForginUserName = new System.Windows.Forms.TextBox();
+            this.textBox_ForginPrimeryDNS = new System.Windows.Forms.TextBox();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.textBox_HomePassword = new System.Windows.Forms.TextBox();
+            this.button26 = new System.Windows.Forms.Button();
+            this.textBox_HomeAcessPoint = new System.Windows.Forms.TextBox();
+            this.textBox_HomeSecondaryDNS = new System.Windows.Forms.TextBox();
+            this.textBox_HomeUserName = new System.Windows.Forms.TextBox();
+            this.textBox_HomePrimeryDNS = new System.Windows.Forms.TextBox();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.TextBox();
+            this.button24 = new System.Windows.Forms.Button();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.TextBox_NormalStatusDuration = new System.Windows.Forms.TextBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_SpeedLimit2 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_SpeedLimit3 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_SpeedLimit1 = new System.Windows.Forms.TextBox();
+            this.button22 = new System.Windows.Forms.Button();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.comboBox_DispatchSpeed = new System.Windows.Forms.ComboBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.comboBox_KillEngine = new System.Windows.Forms.ComboBox();
+            this.button20 = new System.Windows.Forms.Button();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_TiltTowSens = new System.Windows.Forms.TextBox();
+            this.comboBox_TiltTowSensState = new System.Windows.Forms.ComboBox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_HitSensitivity = new System.Windows.Forms.TextBox();
+            this.comboBox_HitState = new System.Windows.Forms.ComboBox();
+            this.button17 = new System.Windows.Forms.Button();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_ShockDetectNum = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_ShockWindow = new System.Windows.Forms.TextBox();
+            this.comboBox_ShockState = new System.Windows.Forms.ComboBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_TiltDetectNum = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_TiltWindow = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_TiltAngle = new System.Windows.Forms.TextBox();
+            this.comboBox1_TiltState = new System.Windows.Forms.ComboBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_TowDetectNum = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_TowWindow = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_TowAngle = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.comboBox_SleepPolicy = new System.Windows.Forms.ComboBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.comboBox_AlarmPilicy = new System.Windows.Forms.ComboBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_SetTimeDate = new System.Windows.Forms.DateTimePicker();
+            this.button10 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.comboBox_BatThreshold = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_OutputDuration = new System.Windows.Forms.TextBox();
+            this.comboBox_OutputNum = new System.Windows.Forms.ComboBox();
+            this.comboBox_OutputControl = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.comboBox_OutputPulseLevel = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox_InputDuration = new System.Windows.Forms.TextBox();
+            this.comboBox_InputNum1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Interupt = new System.Windows.Forms.ComboBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.btn_ChangePassword = new System.Windows.Forms.Button();
+            this.textBox_NewPassword = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.comboBox_SMSControl = new System.Windows.Forms.ComboBox();
+            this.button_SMSControl = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.textBox_FreeText = new System.Windows.Forms.TextBox();
+            this.comboBox_InputIndex = new System.Windows.Forms.ComboBox();
+            this.button_SetFreeText = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox3_Subscriber3 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox2_Subscriber2 = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1_Subscriber1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.textBox_SMSPhoneNumber = new System.Windows.Forms.TextBox();
+            this.button_SendAllCheckedSMS = new System.Windows.Forms.Button();
+            this.button_SendSelectedSMS = new System.Windows.Forms.Button();
+            this.button_Ring = new System.Windows.Forms.Button();
+            this.comboBox_SystemType = new System.Windows.Forms.ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer_General_100ms = new System.Windows.Forms.Timer(this.components);
+            this.timer_General_1Second = new System.Windows.Forms.Timer(this.components);
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
+            this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.groupBox_PhoneNumber = new System.Windows.Forms.GroupBox();
+            this.Label_SerialPortRx = new System.Windows.Forms.Label();
+            this.label_SerialPortConnected = new System.Windows.Forms.Label();
+            this.Label_SerialPortTx = new System.Windows.Forms.Label();
+            this.groupBox_SerialPort = new System.Windows.Forms.GroupBox();
+            this.label_SerialPortStatus = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button97 = new System.Windows.Forms.Button();
+            this.textBox_SystemStatus = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox_ClentTCPStatus = new System.Windows.Forms.GroupBox();
+            this.label_TCPClient = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label_ClientTCPConnected = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
+            this.button_AddContact = new System.Windows.Forms.Button();
+            this.button_RemoveContact = new System.Windows.Forms.Button();
+            this.button_ExportToXML = new System.Windows.Forms.Button();
+            this.button_ImportToXML = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.richTextBox_ContactDetails = new System.Windows.Forms.RichTextBox();
+            this.button34 = new System.Windows.Forms.Button();
+            this.richTextBox_TextSendSMS = new System.Windows.Forms.RichTextBox();
+            this.label_SMSSendCharacters = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox_SendSMSAsIs = new System.Windows.Forms.CheckBox();
+            this.checkBox_SMSencrypted = new System.Windows.Forms.CheckBox();
+            this.GrooupBox_Encryption = new System.Windows.Forms.GroupBox();
+            this.textBox_UnitIDForSMS = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_CodeArrayForSMS = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox_ModemStatus = new System.Windows.Forms.RichTextBox();
+            this.comboBox_ComportSMS = new System.Windows.Forms.ComboBox();
+            this.button36 = new System.Windows.Forms.Button();
+            this.checkBox_OpenPortSMS = new System.Windows.Forms.CheckBox();
+            this.checkBox_DebugSMS = new System.Windows.Forms.CheckBox();
+            this.button_ClearSMSConsole = new System.Windows.Forms.Button();
+            this.checkBox_PauseSMSConsole = new System.Windows.Forms.CheckBox();
+            this.checkBox_RecordSMSConsole = new System.Windows.Forms.CheckBox();
+            this.richTextBox_SMSConsole = new System.Windows.Forms.RichTextBox();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.listBox_SMSCommands = new System.Windows.Forms.ListBox();
+            this.button_WriteCatalinas = new System.Windows.Forms.Button();
+            this.textBox_FilesToWriteForTheCatalinas = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_SyntisazerL1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox_SyntisazerL2 = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button_WriteSystemType = new System.Windows.Forms.Button();
+            this.button_SynthL1 = new System.Windows.Forms.Button();
+            this.button_WriteAllToFlash = new System.Windows.Forms.Button();
+            this.button_SynthL2 = new System.Windows.Forms.Button();
+            this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label123 = new System.Windows.Forms.Label();
+            this.groupBox_ServerSettings.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabControl_Main.SuspendLayout();
+            this.tabPage_charts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.tabPage_ServerTCP.SuspendLayout();
+            this.groupBox_FOTA.SuspendLayout();
+            this.groupBox_ConnectionTimedOut.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabPage_ClientTCP.SuspendLayout();
+            this.tabPage_SerialPort.SuspendLayout();
+            this.groupBox_SendSerialOrMonitorCommands.SuspendLayout();
+            this.gbPortSettings.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox_Timer.SuspendLayout();
+            this.groupBox_Stopwatch.SuspendLayout();
+            this.tabPage_GenericFrame.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.groupBox_clientTX.SuspendLayout();
+            this.groupBox41.SuspendLayout();
+            this.tabPage_Commands.SuspendLayout();
+            this.groupBox40.SuspendLayout();
+            this.tabControl_System.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox32.SuspendLayout();
+            this.tabPage3038WBPAA.SuspendLayout();
+            this.groupBox43.SuspendLayout();
+            this.groupBox48.SuspendLayout();
+            this.groupBox38.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox37.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.groupBox39.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.groupBox45.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OverUnder)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.groupBox42.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.S1_Configuration.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox_PhoneNumber.SuspendLayout();
+            this.groupBox_SerialPort.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.SuspendLayout();
             // 
             // groupBox_ServerSettings
             // 
-            groupBox_ServerSettings.Controls.Add(textBox_ServerOpen);
-            groupBox_ServerSettings.Controls.Add(textBox_ServerActive);
-            groupBox_ServerSettings.Controls.Add(txtPortNo);
-            groupBox_ServerSettings.Controls.Add(textBox_NumberOfOpenConnections);
-            groupBox_ServerSettings.Controls.Add(ListenBox);
-            groupBox_ServerSettings.Controls.Add(label1);
-            groupBox_ServerSettings.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            groupBox_ServerSettings.Location = new System.Drawing.Point(6, 3);
-            groupBox_ServerSettings.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_ServerSettings.Name = "groupBox_ServerSettings";
-            groupBox_ServerSettings.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_ServerSettings.Size = new System.Drawing.Size(378, 56);
-            groupBox_ServerSettings.TabIndex = 0;
-            groupBox_ServerSettings.TabStop = false;
-            groupBox_ServerSettings.Text = "Server Settings";
+            this.groupBox_ServerSettings.Controls.Add(this.textBox_ServerOpen);
+            this.groupBox_ServerSettings.Controls.Add(this.textBox_ServerActive);
+            this.groupBox_ServerSettings.Controls.Add(this.txtPortNo);
+            this.groupBox_ServerSettings.Controls.Add(this.textBox_NumberOfOpenConnections);
+            this.groupBox_ServerSettings.Controls.Add(this.ListenBox);
+            this.groupBox_ServerSettings.Controls.Add(this.label1);
+            this.groupBox_ServerSettings.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_ServerSettings.Location = new System.Drawing.Point(6, 3);
+            this.groupBox_ServerSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_ServerSettings.Name = "groupBox_ServerSettings";
+            this.groupBox_ServerSettings.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_ServerSettings.Size = new System.Drawing.Size(378, 56);
+            this.groupBox_ServerSettings.TabIndex = 0;
+            this.groupBox_ServerSettings.TabStop = false;
+            this.groupBox_ServerSettings.Text = "Server Settings";
             // 
             // textBox_ServerOpen
             // 
-            textBox_ServerOpen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_ServerOpen.ForeColor = System.Drawing.Color.White;
-            textBox_ServerOpen.Location = new System.Drawing.Point(252, 17);
-            textBox_ServerOpen.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ServerOpen.Multiline = true;
-            textBox_ServerOpen.Name = "textBox_ServerOpen";
-            textBox_ServerOpen.ReadOnly = true;
-            textBox_ServerOpen.Size = new System.Drawing.Size(82, 25);
-            textBox_ServerOpen.TabIndex = 7;
-            textBox_ServerOpen.Text = "Connected";
+            this.textBox_ServerOpen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ServerOpen.ForeColor = System.Drawing.Color.White;
+            this.textBox_ServerOpen.Location = new System.Drawing.Point(252, 17);
+            this.textBox_ServerOpen.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ServerOpen.Multiline = true;
+            this.textBox_ServerOpen.Name = "textBox_ServerOpen";
+            this.textBox_ServerOpen.ReadOnly = true;
+            this.textBox_ServerOpen.Size = new System.Drawing.Size(82, 25);
+            this.textBox_ServerOpen.TabIndex = 7;
+            this.textBox_ServerOpen.Text = "Connected";
             // 
             // textBox_ServerActive
             // 
-            textBox_ServerActive.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_ServerActive.ForeColor = System.Drawing.Color.White;
-            textBox_ServerActive.Location = new System.Drawing.Point(192, 17);
-            textBox_ServerActive.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ServerActive.Multiline = true;
-            textBox_ServerActive.Name = "textBox_ServerActive";
-            textBox_ServerActive.ReadOnly = true;
-            textBox_ServerActive.Size = new System.Drawing.Size(56, 25);
-            textBox_ServerActive.TabIndex = 6;
-            textBox_ServerActive.Text = "Active";
+            this.textBox_ServerActive.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ServerActive.ForeColor = System.Drawing.Color.White;
+            this.textBox_ServerActive.Location = new System.Drawing.Point(192, 17);
+            this.textBox_ServerActive.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ServerActive.Multiline = true;
+            this.textBox_ServerActive.Name = "textBox_ServerActive";
+            this.textBox_ServerActive.ReadOnly = true;
+            this.textBox_ServerActive.Size = new System.Drawing.Size(56, 25);
+            this.textBox_ServerActive.TabIndex = 6;
+            this.textBox_ServerActive.Text = "Active";
             // 
             // txtPortNo
             // 
-            txtPortNo.Location = new System.Drawing.Point(78, 15);
-            txtPortNo.Margin = new System.Windows.Forms.Padding(2);
-            txtPortNo.Name = "txtPortNo";
-            txtPortNo.Size = new System.Drawing.Size(38, 23);
-            txtPortNo.TabIndex = 1;
-            txtPortNo.Text = "7000";
-            txtPortNo.TextChanged += new System.EventHandler(TxtPortNo_TextChanged);
+            this.txtPortNo.Location = new System.Drawing.Point(78, 15);
+            this.txtPortNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPortNo.Name = "txtPortNo";
+            this.txtPortNo.Size = new System.Drawing.Size(38, 23);
+            this.txtPortNo.TabIndex = 1;
+            this.txtPortNo.Text = "7000";
+            this.txtPortNo.TextChanged += new System.EventHandler(this.TxtPortNo_TextChanged);
             // 
             // textBox_NumberOfOpenConnections
             // 
-            textBox_NumberOfOpenConnections.ForeColor = System.Drawing.Color.White;
-            textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(339, 17);
-            textBox_NumberOfOpenConnections.Margin = new System.Windows.Forms.Padding(2);
-            textBox_NumberOfOpenConnections.Name = "textBox_NumberOfOpenConnections";
-            textBox_NumberOfOpenConnections.ReadOnly = true;
-            textBox_NumberOfOpenConnections.Size = new System.Drawing.Size(24, 23);
-            textBox_NumberOfOpenConnections.TabIndex = 5;
-            textBox_NumberOfOpenConnections.TextChanged += new System.EventHandler(TextBox_NumberOfOpenConnections_TextChanged);
+            this.textBox_NumberOfOpenConnections.ForeColor = System.Drawing.Color.White;
+            this.textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(339, 17);
+            this.textBox_NumberOfOpenConnections.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_NumberOfOpenConnections.Name = "textBox_NumberOfOpenConnections";
+            this.textBox_NumberOfOpenConnections.ReadOnly = true;
+            this.textBox_NumberOfOpenConnections.Size = new System.Drawing.Size(24, 23);
+            this.textBox_NumberOfOpenConnections.TabIndex = 5;
+            this.textBox_NumberOfOpenConnections.TextChanged += new System.EventHandler(this.TextBox_NumberOfOpenConnections_TextChanged);
             // 
             // ListenBox
             // 
-            ListenBox.Appearance = System.Windows.Forms.Appearance.Button;
-            ListenBox.AutoSize = true;
-            ListenBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            ListenBox.Location = new System.Drawing.Point(121, 14);
-            ListenBox.Margin = new System.Windows.Forms.Padding(2);
-            ListenBox.Name = "ListenBox";
-            ListenBox.Size = new System.Drawing.Size(74, 28);
-            ListenBox.TabIndex = 4;
-            ListenBox.Text = "Listening";
-            ListenBox.UseVisualStyleBackColor = true;
-            ListenBox.CheckedChanged += new System.EventHandler(ListenBox_CheckedChanged);
+            this.ListenBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ListenBox.AutoSize = true;
+            this.ListenBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListenBox.Location = new System.Drawing.Point(121, 14);
+            this.ListenBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ListenBox.Name = "ListenBox";
+            this.ListenBox.Size = new System.Drawing.Size(74, 28);
+            this.ListenBox.TabIndex = 4;
+            this.ListenBox.Text = "Listening";
+            this.ListenBox.UseVisualStyleBackColor = true;
+            this.ListenBox.CheckedChanged += new System.EventHandler(this.ListenBox_CheckedChanged);
             // 
             // label1
             // 
-            label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(6, 18);
-            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(85, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Port Number:";
+            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Port Number:";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboBox_ConnectionNumber);
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(txtDataTx);
-            groupBox2.Location = new System.Drawing.Point(2, 63);
-            groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            groupBox2.Size = new System.Drawing.Size(250, 210);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Send Data";
+            this.groupBox2.Controls.Add(this.comboBox_ConnectionNumber);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.txtDataTx);
+            this.groupBox2.Location = new System.Drawing.Point(2, 63);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(250, 210);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Send Data";
             // 
             // comboBox_ConnectionNumber
             // 
-            comboBox_ConnectionNumber.FormattingEnabled = true;
-            comboBox_ConnectionNumber.Location = new System.Drawing.Point(77, 182);
-            comboBox_ConnectionNumber.Margin = new System.Windows.Forms.Padding(2);
-            comboBox_ConnectionNumber.Name = "comboBox_ConnectionNumber";
-            comboBox_ConnectionNumber.Size = new System.Drawing.Size(156, 26);
-            comboBox_ConnectionNumber.TabIndex = 2;
-            comboBox_ConnectionNumber.SelectedIndexChanged += new System.EventHandler(ComboBox1_SelectedIndexChanged);
+            this.comboBox_ConnectionNumber.FormattingEnabled = true;
+            this.comboBox_ConnectionNumber.Location = new System.Drawing.Point(77, 182);
+            this.comboBox_ConnectionNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_ConnectionNumber.Name = "comboBox_ConnectionNumber";
+            this.comboBox_ConnectionNumber.Size = new System.Drawing.Size(156, 26);
+            this.comboBox_ConnectionNumber.TabIndex = 2;
+            this.comboBox_ConnectionNumber.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button1.Location = new System.Drawing.Point(13, 181);
-            button1.Margin = new System.Windows.Forms.Padding(2);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(58, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Send";
-            button1.Click += new System.EventHandler(Button1_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(13, 181);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Send";
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txtDataTx
             // 
-            txtDataTx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtDataTx.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtDataTx.Location = new System.Drawing.Point(13, 18);
-            txtDataTx.Margin = new System.Windows.Forms.Padding(2);
-            txtDataTx.Multiline = true;
-            txtDataTx.Name = "txtDataTx";
-            txtDataTx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            txtDataTx.Size = new System.Drawing.Size(236, 158);
-            txtDataTx.TabIndex = 0;
-            txtDataTx.TextChanged += new System.EventHandler(TxtDataTx_TextChanged);
+            this.txtDataTx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDataTx.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
+            this.txtDataTx.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDataTx.Multiline = true;
+            this.txtDataTx.Name = "txtDataTx";
+            this.txtDataTx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDataTx.Size = new System.Drawing.Size(236, 158);
+            this.txtDataTx.TabIndex = 0;
+            this.txtDataTx.TextChanged += new System.EventHandler(this.TxtDataTx_TextChanged);
             // 
             // tabControl_Main
             // 
-            tabControl_Main.Controls.Add(tabPage_charts);
-            tabControl_Main.Controls.Add(tabPage_ServerTCP);
-            tabControl_Main.Controls.Add(tabPage_ClientTCP);
-            tabControl_Main.Controls.Add(tabPage_SerialPort);
-            tabControl_Main.Controls.Add(tabPage_GenericFrame);
-            tabControl_Main.Controls.Add(tabPage_Commands);
-            tabControl_Main.Controls.Add(tabPage3038WBPAA);
-            tabControl_Main.Location = new System.Drawing.Point(4, 5);
-            tabControl_Main.Margin = new System.Windows.Forms.Padding(2);
-            tabControl_Main.Name = "tabControl_Main";
-            tabControl_Main.SelectedIndex = 0;
-            tabControl_Main.Size = new System.Drawing.Size(1422, 690);
-            tabControl_Main.TabIndex = 8;
-            tabControl_Main.TabStop = false;
+            this.tabControl_Main.Controls.Add(this.tabPage_charts);
+            this.tabControl_Main.Controls.Add(this.tabPage_ServerTCP);
+            this.tabControl_Main.Controls.Add(this.tabPage_ClientTCP);
+            this.tabControl_Main.Controls.Add(this.tabPage_SerialPort);
+            this.tabControl_Main.Controls.Add(this.tabPage_GenericFrame);
+            this.tabControl_Main.Controls.Add(this.tabPage_Commands);
+            this.tabControl_Main.Controls.Add(this.tabPage3038WBPAA);
+            this.tabControl_Main.Location = new System.Drawing.Point(4, 5);
+            this.tabControl_Main.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl_Main.Name = "tabControl_Main";
+            this.tabControl_Main.SelectedIndex = 0;
+            this.tabControl_Main.Size = new System.Drawing.Size(1422, 690);
+            this.tabControl_Main.TabIndex = 8;
+            this.tabControl_Main.TabStop = false;
             // 
             // tabPage_charts
             // 
-            tabPage_charts.Controls.Add(button99);
-            tabPage_charts.Controls.Add(label37);
-            tabPage_charts.Controls.Add(textBox_MaxXAxis);
-            tabPage_charts.Controls.Add(textBox_MinXAxis);
-            tabPage_charts.Controls.Add(comboBox_ChartUpdateTime);
-            tabPage_charts.Controls.Add(button28);
-            tabPage_charts.Controls.Add(listBox_Charts);
-            tabPage_charts.Controls.Add(button_OpenFolder2);
-            tabPage_charts.Controls.Add(button_GraphPause);
-            tabPage_charts.Controls.Add(Button_Export_excel);
-            tabPage_charts.Controls.Add(button_ResetGraphs);
-            tabPage_charts.Controls.Add(textBox_graph_XY);
-            tabPage_charts.Controls.Add(button_ScreenShot);
-            tabPage_charts.Controls.Add(chart1);
-            tabPage_charts.Location = new System.Drawing.Point(4, 27);
-            tabPage_charts.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_charts.Name = "tabPage_charts";
-            tabPage_charts.Size = new System.Drawing.Size(1414, 659);
-            tabPage_charts.TabIndex = 7;
-            tabPage_charts.Text = "Charts";
-            tabPage_charts.UseVisualStyleBackColor = true;
+            this.tabPage_charts.Controls.Add(this.button99);
+            this.tabPage_charts.Controls.Add(this.label37);
+            this.tabPage_charts.Controls.Add(this.textBox_MaxXAxis);
+            this.tabPage_charts.Controls.Add(this.textBox_MinXAxis);
+            this.tabPage_charts.Controls.Add(this.comboBox_ChartUpdateTime);
+            this.tabPage_charts.Controls.Add(this.button28);
+            this.tabPage_charts.Controls.Add(this.listBox_Charts);
+            this.tabPage_charts.Controls.Add(this.button_OpenFolder2);
+            this.tabPage_charts.Controls.Add(this.button_GraphPause);
+            this.tabPage_charts.Controls.Add(this.Button_Export_excel);
+            this.tabPage_charts.Controls.Add(this.button_ResetGraphs);
+            this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
+            this.tabPage_charts.Controls.Add(this.button_ScreenShot);
+            this.tabPage_charts.Controls.Add(this.chart1);
+            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_charts.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_charts.Name = "tabPage_charts";
+            this.tabPage_charts.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_charts.TabIndex = 7;
+            this.tabPage_charts.Text = "Charts";
+            this.tabPage_charts.UseVisualStyleBackColor = true;
             // 
             // button99
             // 
-            button99.Location = new System.Drawing.Point(121, 367);
-            button99.Margin = new System.Windows.Forms.Padding(2);
-            button99.Name = "button99";
-            button99.Size = new System.Drawing.Size(53, 22);
-            button99.TabIndex = 84;
-            button99.Text = "auto";
-            button99.UseVisualStyleBackColor = true;
-            button99.Click += new System.EventHandler(button99_Click);
+            this.button99.Location = new System.Drawing.Point(121, 367);
+            this.button99.Margin = new System.Windows.Forms.Padding(2);
+            this.button99.Name = "button99";
+            this.button99.Size = new System.Drawing.Size(53, 22);
+            this.button99.TabIndex = 84;
+            this.button99.Text = "auto";
+            this.button99.UseVisualStyleBackColor = true;
+            this.button99.Click += new System.EventHandler(this.button99_Click);
             // 
             // label37
             // 
-            label37.AutoSize = true;
-            label37.Location = new System.Drawing.Point(2, 343);
-            label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label37.Name = "label37";
-            label37.Size = new System.Drawing.Size(102, 18);
-            label37.TabIndex = 83;
-            label37.Text = "Min/Max X axis";
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(2, 343);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(102, 18);
+            this.label37.TabIndex = 83;
+            this.label37.Text = "Min/Max X axis";
             // 
             // textBox_MaxXAxis
             // 
-            textBox_MaxXAxis.Location = new System.Drawing.Point(56, 366);
-            textBox_MaxXAxis.Margin = new System.Windows.Forms.Padding(2);
-            textBox_MaxXAxis.Name = "textBox_MaxXAxis";
-            textBox_MaxXAxis.Size = new System.Drawing.Size(59, 26);
-            textBox_MaxXAxis.TabIndex = 82;
-            textBox_MaxXAxis.TextChanged += new System.EventHandler(textBox_MaxXAxis_TextChanged);
+            this.textBox_MaxXAxis.Location = new System.Drawing.Point(56, 366);
+            this.textBox_MaxXAxis.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MaxXAxis.Name = "textBox_MaxXAxis";
+            this.textBox_MaxXAxis.Size = new System.Drawing.Size(59, 26);
+            this.textBox_MaxXAxis.TabIndex = 82;
+            this.textBox_MaxXAxis.TextChanged += new System.EventHandler(this.textBox_MaxXAxis_TextChanged);
             // 
             // textBox_MinXAxis
             // 
-            textBox_MinXAxis.Location = new System.Drawing.Point(2, 366);
-            textBox_MinXAxis.Margin = new System.Windows.Forms.Padding(2);
-            textBox_MinXAxis.Name = "textBox_MinXAxis";
-            textBox_MinXAxis.Size = new System.Drawing.Size(44, 26);
-            textBox_MinXAxis.TabIndex = 81;
-            textBox_MinXAxis.TextChanged += new System.EventHandler(textBox_MinXAxis_TextChanged);
+            this.textBox_MinXAxis.Location = new System.Drawing.Point(2, 366);
+            this.textBox_MinXAxis.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinXAxis.Name = "textBox_MinXAxis";
+            this.textBox_MinXAxis.Size = new System.Drawing.Size(44, 26);
+            this.textBox_MinXAxis.TabIndex = 81;
+            this.textBox_MinXAxis.TextChanged += new System.EventHandler(this.textBox_MinXAxis_TextChanged);
             // 
             // comboBox_ChartUpdateTime
             // 
-            comboBox_ChartUpdateTime.FormattingEnabled = true;
-            comboBox_ChartUpdateTime.Items.AddRange(new object[] {
+            this.comboBox_ChartUpdateTime.FormattingEnabled = true;
+            this.comboBox_ChartUpdateTime.Items.AddRange(new object[] {
             "100",
             "200",
             "500",
@@ -1772,807 +1774,807 @@ namespace Monitor
             "2000",
             "5000",
             "10000"});
-            comboBox_ChartUpdateTime.Location = new System.Drawing.Point(5, 593);
-            comboBox_ChartUpdateTime.Margin = new System.Windows.Forms.Padding(2);
-            comboBox_ChartUpdateTime.Name = "comboBox_ChartUpdateTime";
-            comboBox_ChartUpdateTime.Size = new System.Drawing.Size(169, 26);
-            comboBox_ChartUpdateTime.TabIndex = 80;
-            comboBox_ChartUpdateTime.Text = "Update time ms";
-            comboBox_ChartUpdateTime.SelectedIndexChanged += new System.EventHandler(ComboBox_ChartUpdateTime_SelectedIndexChanged);
+            this.comboBox_ChartUpdateTime.Location = new System.Drawing.Point(5, 593);
+            this.comboBox_ChartUpdateTime.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_ChartUpdateTime.Name = "comboBox_ChartUpdateTime";
+            this.comboBox_ChartUpdateTime.Size = new System.Drawing.Size(169, 26);
+            this.comboBox_ChartUpdateTime.TabIndex = 80;
+            this.comboBox_ChartUpdateTime.Text = "Update time ms";
+            this.comboBox_ChartUpdateTime.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChartUpdateTime_SelectedIndexChanged);
             // 
             // button28
             // 
-            button28.Location = new System.Drawing.Point(2, 538);
-            button28.Margin = new System.Windows.Forms.Padding(2);
-            button28.Name = "button28";
-            button28.Size = new System.Drawing.Size(170, 22);
-            button28.TabIndex = 79;
-            button28.Text = "Reset X point";
-            button28.UseVisualStyleBackColor = true;
-            button28.Click += new System.EventHandler(Button28_Click_2);
+            this.button28.Location = new System.Drawing.Point(2, 538);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(170, 22);
+            this.button28.TabIndex = 79;
+            this.button28.Text = "Reset X point";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.Button28_Click_2);
             // 
             // listBox_Charts
             // 
-            listBox_Charts.FormattingEnabled = true;
-            listBox_Charts.ItemHeight = 18;
-            listBox_Charts.Location = new System.Drawing.Point(2, 162);
-            listBox_Charts.Margin = new System.Windows.Forms.Padding(2);
-            listBox_Charts.Name = "listBox_Charts";
-            listBox_Charts.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            listBox_Charts.Size = new System.Drawing.Size(170, 148);
-            listBox_Charts.TabIndex = 78;
-            listBox_Charts.SelectedIndexChanged += new System.EventHandler(ListBox_Charts_SelectedIndexChanged);
-            listBox_Charts.KeyDown += new System.Windows.Forms.KeyEventHandler(listBox_Charts_KeyDown);
-            listBox_Charts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(listBox_Charts_KeyPress);
+            this.listBox_Charts.FormattingEnabled = true;
+            this.listBox_Charts.ItemHeight = 18;
+            this.listBox_Charts.Location = new System.Drawing.Point(2, 162);
+            this.listBox_Charts.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox_Charts.Name = "listBox_Charts";
+            this.listBox_Charts.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_Charts.Size = new System.Drawing.Size(170, 148);
+            this.listBox_Charts.TabIndex = 78;
+            this.listBox_Charts.SelectedIndexChanged += new System.EventHandler(this.ListBox_Charts_SelectedIndexChanged);
+            this.listBox_Charts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_Charts_KeyDown);
+            this.listBox_Charts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listBox_Charts_KeyPress);
             // 
             // button_OpenFolder2
             // 
-            button_OpenFolder2.Location = new System.Drawing.Point(4, 420);
-            button_OpenFolder2.Margin = new System.Windows.Forms.Padding(2);
-            button_OpenFolder2.Name = "button_OpenFolder2";
-            button_OpenFolder2.Size = new System.Drawing.Size(169, 26);
-            button_OpenFolder2.TabIndex = 77;
-            button_OpenFolder2.Text = "Open Local Folder";
-            button_OpenFolder2.UseVisualStyleBackColor = true;
-            button_OpenFolder2.Click += new System.EventHandler(Button_OpenFolder2_Click);
+            this.button_OpenFolder2.Location = new System.Drawing.Point(4, 420);
+            this.button_OpenFolder2.Margin = new System.Windows.Forms.Padding(2);
+            this.button_OpenFolder2.Name = "button_OpenFolder2";
+            this.button_OpenFolder2.Size = new System.Drawing.Size(169, 26);
+            this.button_OpenFolder2.TabIndex = 77;
+            this.button_OpenFolder2.Text = "Open Local Folder";
+            this.button_OpenFolder2.UseVisualStyleBackColor = true;
+            this.button_OpenFolder2.Click += new System.EventHandler(this.Button_OpenFolder2_Click);
             // 
             // button_GraphPause
             // 
-            button_GraphPause.Location = new System.Drawing.Point(2, 565);
-            button_GraphPause.Margin = new System.Windows.Forms.Padding(2);
-            button_GraphPause.Name = "button_GraphPause";
-            button_GraphPause.Size = new System.Drawing.Size(170, 22);
-            button_GraphPause.TabIndex = 8;
-            button_GraphPause.Text = "Pause";
-            button_GraphPause.UseVisualStyleBackColor = true;
-            button_GraphPause.Click += new System.EventHandler(Button_GraphPause_Click);
+            this.button_GraphPause.Location = new System.Drawing.Point(2, 565);
+            this.button_GraphPause.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GraphPause.Name = "button_GraphPause";
+            this.button_GraphPause.Size = new System.Drawing.Size(170, 22);
+            this.button_GraphPause.TabIndex = 8;
+            this.button_GraphPause.Text = "Pause";
+            this.button_GraphPause.UseVisualStyleBackColor = true;
+            this.button_GraphPause.Click += new System.EventHandler(this.Button_GraphPause_Click);
             // 
             // Button_Export_excel
             // 
-            Button_Export_excel.Location = new System.Drawing.Point(2, 451);
-            Button_Export_excel.Margin = new System.Windows.Forms.Padding(2);
-            Button_Export_excel.Name = "Button_Export_excel";
-            Button_Export_excel.Size = new System.Drawing.Size(170, 22);
-            Button_Export_excel.TabIndex = 7;
-            Button_Export_excel.Text = "Export to excel";
-            Button_Export_excel.UseVisualStyleBackColor = true;
-            Button_Export_excel.Click += new System.EventHandler(Button_Export_excel_Click);
+            this.Button_Export_excel.Location = new System.Drawing.Point(2, 451);
+            this.Button_Export_excel.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_Export_excel.Name = "Button_Export_excel";
+            this.Button_Export_excel.Size = new System.Drawing.Size(170, 22);
+            this.Button_Export_excel.TabIndex = 7;
+            this.Button_Export_excel.Text = "Export to excel";
+            this.Button_Export_excel.UseVisualStyleBackColor = true;
+            this.Button_Export_excel.Click += new System.EventHandler(this.Button_Export_excel_Click);
             // 
             // button_ResetGraphs
             // 
-            button_ResetGraphs.Location = new System.Drawing.Point(2, 509);
-            button_ResetGraphs.Margin = new System.Windows.Forms.Padding(2);
-            button_ResetGraphs.Name = "button_ResetGraphs";
-            button_ResetGraphs.Size = new System.Drawing.Size(170, 22);
-            button_ResetGraphs.TabIndex = 6;
-            button_ResetGraphs.Text = "Reset chart data";
-            button_ResetGraphs.UseVisualStyleBackColor = true;
-            button_ResetGraphs.Click += new System.EventHandler(Button_ResetGraphs_Click);
+            this.button_ResetGraphs.Location = new System.Drawing.Point(2, 509);
+            this.button_ResetGraphs.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ResetGraphs.Name = "button_ResetGraphs";
+            this.button_ResetGraphs.Size = new System.Drawing.Size(170, 22);
+            this.button_ResetGraphs.TabIndex = 6;
+            this.button_ResetGraphs.Text = "Reset chart data";
+            this.button_ResetGraphs.UseVisualStyleBackColor = true;
+            this.button_ResetGraphs.Click += new System.EventHandler(this.Button_ResetGraphs_Click);
             // 
             // textBox_graph_XY
             // 
-            textBox_graph_XY.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_graph_XY.Location = new System.Drawing.Point(4, 8);
-            textBox_graph_XY.Margin = new System.Windows.Forms.Padding(2);
-            textBox_graph_XY.Multiline = true;
-            textBox_graph_XY.Name = "textBox_graph_XY";
-            textBox_graph_XY.ReadOnly = true;
-            textBox_graph_XY.Size = new System.Drawing.Size(170, 149);
-            textBox_graph_XY.TabIndex = 4;
-            textBox_graph_XY.Text = "Message box ";
-            textBox_graph_XY.TextChanged += new System.EventHandler(TextBox_graph_XY_TextChanged);
+            this.textBox_graph_XY.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_graph_XY.Location = new System.Drawing.Point(4, 8);
+            this.textBox_graph_XY.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_graph_XY.Multiline = true;
+            this.textBox_graph_XY.Name = "textBox_graph_XY";
+            this.textBox_graph_XY.ReadOnly = true;
+            this.textBox_graph_XY.Size = new System.Drawing.Size(170, 149);
+            this.textBox_graph_XY.TabIndex = 4;
+            this.textBox_graph_XY.Text = "Message box ";
+            this.textBox_graph_XY.TextChanged += new System.EventHandler(this.TextBox_graph_XY_TextChanged);
             // 
             // button_ScreenShot
             // 
-            button_ScreenShot.Location = new System.Drawing.Point(2, 478);
-            button_ScreenShot.Margin = new System.Windows.Forms.Padding(2);
-            button_ScreenShot.Name = "button_ScreenShot";
-            button_ScreenShot.Size = new System.Drawing.Size(170, 22);
-            button_ScreenShot.TabIndex = 1;
-            button_ScreenShot.Text = "Take screen shot";
-            button_ScreenShot.UseVisualStyleBackColor = true;
-            button_ScreenShot.Click += new System.EventHandler(Button_ScreenShot_Click);
+            this.button_ScreenShot.Location = new System.Drawing.Point(2, 478);
+            this.button_ScreenShot.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ScreenShot.Name = "button_ScreenShot";
+            this.button_ScreenShot.Size = new System.Drawing.Size(170, 22);
+            this.button_ScreenShot.TabIndex = 1;
+            this.button_ScreenShot.Text = "Take screen shot";
+            this.button_ScreenShot.UseVisualStyleBackColor = true;
+            this.button_ScreenShot.Click += new System.EventHandler(this.Button_ScreenShot_Click);
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            chart1.Legends.Add(legend1);
-            chart1.Location = new System.Drawing.Point(178, 2);
-            chart1.Margin = new System.Windows.Forms.Padding(2);
-            chart1.Name = "chart1";
-            chart1.Size = new System.Drawing.Size(1234, 644);
-            chart1.TabIndex = 0;
-            chart1.Text = "chart1";
-            chart1.Click += new System.EventHandler(chart1_Click);
-            chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(Chart1_MouseClick);
-            chart1.MouseMove += new System.Windows.Forms.MouseEventHandler(Chart1_MouseMove);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(178, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(1234, 644);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseClick);
+            this.chart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseMove);
             // 
             // tabPage_ServerTCP
             // 
-            tabPage_ServerTCP.Controls.Add(checkBox_ParseMessages);
-            tabPage_ServerTCP.Controls.Add(textBox_IDKey);
-            tabPage_ServerTCP.Controls.Add(groupBox_FOTA);
-            tabPage_ServerTCP.Controls.Add(checkBox_EchoResponse);
-            tabPage_ServerTCP.Controls.Add(groupBox_ServerSettings);
-            tabPage_ServerTCP.Controls.Add(groupBox_ConnectionTimedOut);
-            tabPage_ServerTCP.Controls.Add(groupBox2);
-            tabPage_ServerTCP.Controls.Add(groupBox3);
-            tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
-            tabPage_ServerTCP.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_ServerTCP.Name = "tabPage_ServerTCP";
-            tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(2);
-            tabPage_ServerTCP.Size = new System.Drawing.Size(1414, 659);
-            tabPage_ServerTCP.TabIndex = 0;
-            tabPage_ServerTCP.Text = "Server TCP";
-            tabPage_ServerTCP.UseVisualStyleBackColor = true;
+            this.tabPage_ServerTCP.Controls.Add(this.checkBox_ParseMessages);
+            this.tabPage_ServerTCP.Controls.Add(this.textBox_IDKey);
+            this.tabPage_ServerTCP.Controls.Add(this.groupBox_FOTA);
+            this.tabPage_ServerTCP.Controls.Add(this.checkBox_EchoResponse);
+            this.tabPage_ServerTCP.Controls.Add(this.groupBox_ServerSettings);
+            this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
+            this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
+            this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
+            this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ServerTCP.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_ServerTCP.Name = "tabPage_ServerTCP";
+            this.tabPage_ServerTCP.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_ServerTCP.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_ServerTCP.TabIndex = 0;
+            this.tabPage_ServerTCP.Text = "Server TCP";
+            this.tabPage_ServerTCP.UseVisualStyleBackColor = true;
             // 
             // checkBox_ParseMessages
             // 
-            checkBox_ParseMessages.AutoSize = true;
-            checkBox_ParseMessages.Location = new System.Drawing.Point(106, 332);
-            checkBox_ParseMessages.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_ParseMessages.Name = "checkBox_ParseMessages";
-            checkBox_ParseMessages.Size = new System.Drawing.Size(124, 22);
-            checkBox_ParseMessages.TabIndex = 103;
-            checkBox_ParseMessages.Text = "Parse messages";
-            checkBox_ParseMessages.UseVisualStyleBackColor = true;
-            checkBox_ParseMessages.CheckedChanged += new System.EventHandler(CheckBox_ParseMessages_CheckedChanged);
+            this.checkBox_ParseMessages.AutoSize = true;
+            this.checkBox_ParseMessages.Location = new System.Drawing.Point(106, 332);
+            this.checkBox_ParseMessages.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_ParseMessages.Name = "checkBox_ParseMessages";
+            this.checkBox_ParseMessages.Size = new System.Drawing.Size(124, 22);
+            this.checkBox_ParseMessages.TabIndex = 103;
+            this.checkBox_ParseMessages.Text = "Parse messages";
+            this.checkBox_ParseMessages.UseVisualStyleBackColor = true;
+            this.checkBox_ParseMessages.CheckedChanged += new System.EventHandler(this.CheckBox_ParseMessages_CheckedChanged);
             // 
             // textBox_IDKey
             // 
-            textBox_IDKey.Location = new System.Drawing.Point(1119, 75);
-            textBox_IDKey.Margin = new System.Windows.Forms.Padding(2);
-            textBox_IDKey.Name = "textBox_IDKey";
-            textBox_IDKey.Size = new System.Drawing.Size(290, 148);
-            textBox_IDKey.TabIndex = 102;
-            textBox_IDKey.Text = "";
-            textBox_IDKey.Visible = false;
+            this.textBox_IDKey.Location = new System.Drawing.Point(1119, 75);
+            this.textBox_IDKey.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_IDKey.Name = "textBox_IDKey";
+            this.textBox_IDKey.Size = new System.Drawing.Size(290, 148);
+            this.textBox_IDKey.TabIndex = 102;
+            this.textBox_IDKey.Text = "";
+            this.textBox_IDKey.Visible = false;
             // 
             // groupBox_FOTA
             // 
-            groupBox_FOTA.Controls.Add(button_StartFOTAProcess);
-            groupBox_FOTA.Controls.Add(textBox_TotalFileLength);
-            groupBox_FOTA.Controls.Add(textBox_MaximumNumberReceivedRequest);
-            groupBox_FOTA.Controls.Add(button35);
-            groupBox_FOTA.Controls.Add(button_StartFOTA);
-            groupBox_FOTA.Controls.Add(textBox_TotalFrames1280Bytes);
-            groupBox_FOTA.Controls.Add(textBox_FOTA);
-            groupBox_FOTA.Controls.Add(button5);
-            groupBox_FOTA.Location = new System.Drawing.Point(2, 353);
-            groupBox_FOTA.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_FOTA.Name = "groupBox_FOTA";
-            groupBox_FOTA.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_FOTA.Size = new System.Drawing.Size(246, 206);
-            groupBox_FOTA.TabIndex = 12;
-            groupBox_FOTA.TabStop = false;
-            groupBox_FOTA.Text = "FOTA";
-            groupBox_FOTA.Visible = false;
+            this.groupBox_FOTA.Controls.Add(this.button_StartFOTAProcess);
+            this.groupBox_FOTA.Controls.Add(this.textBox_TotalFileLength);
+            this.groupBox_FOTA.Controls.Add(this.textBox_MaximumNumberReceivedRequest);
+            this.groupBox_FOTA.Controls.Add(this.button35);
+            this.groupBox_FOTA.Controls.Add(this.button_StartFOTA);
+            this.groupBox_FOTA.Controls.Add(this.textBox_TotalFrames1280Bytes);
+            this.groupBox_FOTA.Controls.Add(this.textBox_FOTA);
+            this.groupBox_FOTA.Controls.Add(this.button5);
+            this.groupBox_FOTA.Location = new System.Drawing.Point(2, 353);
+            this.groupBox_FOTA.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_FOTA.Name = "groupBox_FOTA";
+            this.groupBox_FOTA.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_FOTA.Size = new System.Drawing.Size(246, 206);
+            this.groupBox_FOTA.TabIndex = 12;
+            this.groupBox_FOTA.TabStop = false;
+            this.groupBox_FOTA.Text = "FOTA";
+            this.groupBox_FOTA.Visible = false;
             // 
             // button_StartFOTAProcess
             // 
-            button_StartFOTAProcess.Enabled = false;
-            button_StartFOTAProcess.Location = new System.Drawing.Point(188, 104);
-            button_StartFOTAProcess.Margin = new System.Windows.Forms.Padding(2);
-            button_StartFOTAProcess.Name = "button_StartFOTAProcess";
-            button_StartFOTAProcess.Size = new System.Drawing.Size(53, 42);
-            button_StartFOTAProcess.TabIndex = 21;
-            button_StartFOTAProcess.Text = "Start FOTA";
-            button_StartFOTAProcess.UseVisualStyleBackColor = true;
-            button_StartFOTAProcess.Click += new System.EventHandler(Button34_Click_1);
+            this.button_StartFOTAProcess.Enabled = false;
+            this.button_StartFOTAProcess.Location = new System.Drawing.Point(188, 104);
+            this.button_StartFOTAProcess.Margin = new System.Windows.Forms.Padding(2);
+            this.button_StartFOTAProcess.Name = "button_StartFOTAProcess";
+            this.button_StartFOTAProcess.Size = new System.Drawing.Size(53, 42);
+            this.button_StartFOTAProcess.TabIndex = 21;
+            this.button_StartFOTAProcess.Text = "Start FOTA";
+            this.button_StartFOTAProcess.UseVisualStyleBackColor = true;
+            this.button_StartFOTAProcess.Click += new System.EventHandler(this.Button34_Click_1);
             // 
             // textBox_TotalFileLength
             // 
-            textBox_TotalFileLength.Location = new System.Drawing.Point(188, 75);
-            textBox_TotalFileLength.Margin = new System.Windows.Forms.Padding(2);
-            textBox_TotalFileLength.Name = "textBox_TotalFileLength";
-            textBox_TotalFileLength.ReadOnly = true;
-            textBox_TotalFileLength.Size = new System.Drawing.Size(54, 26);
-            textBox_TotalFileLength.TabIndex = 20;
+            this.textBox_TotalFileLength.Location = new System.Drawing.Point(188, 75);
+            this.textBox_TotalFileLength.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalFileLength.Name = "textBox_TotalFileLength";
+            this.textBox_TotalFileLength.ReadOnly = true;
+            this.textBox_TotalFileLength.Size = new System.Drawing.Size(54, 26);
+            this.textBox_TotalFileLength.TabIndex = 20;
             // 
             // textBox_MaximumNumberReceivedRequest
             // 
-            textBox_MaximumNumberReceivedRequest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_MaximumNumberReceivedRequest.Location = new System.Drawing.Point(4, 102);
-            textBox_MaximumNumberReceivedRequest.Margin = new System.Windows.Forms.Padding(2);
-            textBox_MaximumNumberReceivedRequest.Name = "textBox_MaximumNumberReceivedRequest";
-            textBox_MaximumNumberReceivedRequest.Size = new System.Drawing.Size(180, 87);
-            textBox_MaximumNumberReceivedRequest.TabIndex = 19;
-            textBox_MaximumNumberReceivedRequest.Text = "";
+            this.textBox_MaximumNumberReceivedRequest.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_MaximumNumberReceivedRequest.Location = new System.Drawing.Point(4, 102);
+            this.textBox_MaximumNumberReceivedRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MaximumNumberReceivedRequest.Name = "textBox_MaximumNumberReceivedRequest";
+            this.textBox_MaximumNumberReceivedRequest.Size = new System.Drawing.Size(180, 87);
+            this.textBox_MaximumNumberReceivedRequest.TabIndex = 19;
+            this.textBox_MaximumNumberReceivedRequest.Text = "";
             // 
             // button35
             // 
-            button35.Location = new System.Drawing.Point(188, 290);
-            button35.Margin = new System.Windows.Forms.Padding(2);
-            button35.Name = "button35";
-            button35.Size = new System.Drawing.Size(53, 22);
-            button35.TabIndex = 18;
-            button35.Text = "Clear";
-            button35.UseVisualStyleBackColor = true;
-            button35.Click += new System.EventHandler(Button35_Click);
+            this.button35.Location = new System.Drawing.Point(188, 290);
+            this.button35.Margin = new System.Windows.Forms.Padding(2);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(53, 22);
+            this.button35.TabIndex = 18;
+            this.button35.Text = "Clear";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.Button35_Click);
             // 
             // button_StartFOTA
             // 
-            button_StartFOTA.Enabled = false;
-            button_StartFOTA.Location = new System.Drawing.Point(188, 264);
-            button_StartFOTA.Margin = new System.Windows.Forms.Padding(2);
-            button_StartFOTA.Name = "button_StartFOTA";
-            button_StartFOTA.Size = new System.Drawing.Size(53, 22);
-            button_StartFOTA.TabIndex = 16;
-            button_StartFOTA.Text = "--->";
-            button_StartFOTA.UseVisualStyleBackColor = true;
-            button_StartFOTA.Click += new System.EventHandler(Button33_Click);
+            this.button_StartFOTA.Enabled = false;
+            this.button_StartFOTA.Location = new System.Drawing.Point(188, 264);
+            this.button_StartFOTA.Margin = new System.Windows.Forms.Padding(2);
+            this.button_StartFOTA.Name = "button_StartFOTA";
+            this.button_StartFOTA.Size = new System.Drawing.Size(53, 22);
+            this.button_StartFOTA.TabIndex = 16;
+            this.button_StartFOTA.Text = "--->";
+            this.button_StartFOTA.UseVisualStyleBackColor = true;
+            this.button_StartFOTA.Click += new System.EventHandler(this.Button33_Click);
             // 
             // textBox_TotalFrames1280Bytes
             // 
-            textBox_TotalFrames1280Bytes.Location = new System.Drawing.Point(188, 47);
-            textBox_TotalFrames1280Bytes.Margin = new System.Windows.Forms.Padding(2);
-            textBox_TotalFrames1280Bytes.Name = "textBox_TotalFrames1280Bytes";
-            textBox_TotalFrames1280Bytes.ReadOnly = true;
-            textBox_TotalFrames1280Bytes.Size = new System.Drawing.Size(54, 26);
-            textBox_TotalFrames1280Bytes.TabIndex = 14;
-            textBox_TotalFrames1280Bytes.TextChanged += new System.EventHandler(TextBox_TotalFrames256Bytes_TextChanged);
+            this.textBox_TotalFrames1280Bytes.Location = new System.Drawing.Point(188, 47);
+            this.textBox_TotalFrames1280Bytes.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TotalFrames1280Bytes.Name = "textBox_TotalFrames1280Bytes";
+            this.textBox_TotalFrames1280Bytes.ReadOnly = true;
+            this.textBox_TotalFrames1280Bytes.Size = new System.Drawing.Size(54, 26);
+            this.textBox_TotalFrames1280Bytes.TabIndex = 14;
+            this.textBox_TotalFrames1280Bytes.TextChanged += new System.EventHandler(this.TextBox_TotalFrames256Bytes_TextChanged);
             // 
             // textBox_FOTA
             // 
-            textBox_FOTA.Location = new System.Drawing.Point(6, 47);
-            textBox_FOTA.Margin = new System.Windows.Forms.Padding(2);
-            textBox_FOTA.Multiline = true;
-            textBox_FOTA.Name = "textBox_FOTA";
-            textBox_FOTA.Size = new System.Drawing.Size(178, 51);
-            textBox_FOTA.TabIndex = 13;
-            textBox_FOTA.TextChanged += new System.EventHandler(TextBox_FOTA_TextChanged);
+            this.textBox_FOTA.Location = new System.Drawing.Point(6, 47);
+            this.textBox_FOTA.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_FOTA.Multiline = true;
+            this.textBox_FOTA.Name = "textBox_FOTA";
+            this.textBox_FOTA.Size = new System.Drawing.Size(178, 51);
+            this.textBox_FOTA.TabIndex = 13;
+            this.textBox_FOTA.TextChanged += new System.EventHandler(this.TextBox_FOTA_TextChanged);
             // 
             // button5
             // 
-            button5.Location = new System.Drawing.Point(6, 19);
-            button5.Margin = new System.Windows.Forms.Padding(2);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(90, 22);
-            button5.TabIndex = 0;
-            button5.Text = "Choose File";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += new System.EventHandler(Button5_Click);
+            this.button5.Location = new System.Drawing.Point(6, 19);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 22);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Choose File";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // checkBox_EchoResponse
             // 
-            checkBox_EchoResponse.AutoSize = true;
-            checkBox_EchoResponse.Location = new System.Drawing.Point(5, 332);
-            checkBox_EchoResponse.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_EchoResponse.Name = "checkBox_EchoResponse";
-            checkBox_EchoResponse.Size = new System.Drawing.Size(117, 22);
-            checkBox_EchoResponse.TabIndex = 10;
-            checkBox_EchoResponse.Text = "Send ACK Back";
-            checkBox_EchoResponse.UseVisualStyleBackColor = true;
-            checkBox_EchoResponse.CheckedChanged += new System.EventHandler(CheckBox_EchoResponse_CheckedChanged);
+            this.checkBox_EchoResponse.AutoSize = true;
+            this.checkBox_EchoResponse.Location = new System.Drawing.Point(5, 332);
+            this.checkBox_EchoResponse.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_EchoResponse.Name = "checkBox_EchoResponse";
+            this.checkBox_EchoResponse.Size = new System.Drawing.Size(117, 22);
+            this.checkBox_EchoResponse.TabIndex = 10;
+            this.checkBox_EchoResponse.Text = "Send ACK Back";
+            this.checkBox_EchoResponse.UseVisualStyleBackColor = true;
+            this.checkBox_EchoResponse.CheckedChanged += new System.EventHandler(this.CheckBox_EchoResponse_CheckedChanged);
             // 
             // groupBox_ConnectionTimedOut
             // 
-            groupBox_ConnectionTimedOut.Controls.Add(textBox_CurrentTimeOut);
-            groupBox_ConnectionTimedOut.Controls.Add(button_SetTimedOut);
-            groupBox_ConnectionTimedOut.Controls.Add(textBox_ConnectionTimedOut);
-            groupBox_ConnectionTimedOut.Location = new System.Drawing.Point(2, 279);
-            groupBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_ConnectionTimedOut.Name = "groupBox_ConnectionTimedOut";
-            groupBox_ConnectionTimedOut.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_ConnectionTimedOut.Size = new System.Drawing.Size(250, 51);
-            groupBox_ConnectionTimedOut.TabIndex = 9;
-            groupBox_ConnectionTimedOut.TabStop = false;
-            groupBox_ConnectionTimedOut.Text = "Server Connection Timed Out (seconds)";
-            groupBox_ConnectionTimedOut.Visible = false;
+            this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_CurrentTimeOut);
+            this.groupBox_ConnectionTimedOut.Controls.Add(this.button_SetTimedOut);
+            this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_ConnectionTimedOut);
+            this.groupBox_ConnectionTimedOut.Location = new System.Drawing.Point(2, 279);
+            this.groupBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_ConnectionTimedOut.Name = "groupBox_ConnectionTimedOut";
+            this.groupBox_ConnectionTimedOut.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_ConnectionTimedOut.Size = new System.Drawing.Size(250, 51);
+            this.groupBox_ConnectionTimedOut.TabIndex = 9;
+            this.groupBox_ConnectionTimedOut.TabStop = false;
+            this.groupBox_ConnectionTimedOut.Text = "Server Connection Timed Out (seconds)";
+            this.groupBox_ConnectionTimedOut.Visible = false;
             // 
             // textBox_CurrentTimeOut
             // 
-            textBox_CurrentTimeOut.Location = new System.Drawing.Point(134, 20);
-            textBox_CurrentTimeOut.Margin = new System.Windows.Forms.Padding(2);
-            textBox_CurrentTimeOut.Name = "textBox_CurrentTimeOut";
-            textBox_CurrentTimeOut.ReadOnly = true;
-            textBox_CurrentTimeOut.Size = new System.Drawing.Size(58, 26);
-            textBox_CurrentTimeOut.TabIndex = 10;
+            this.textBox_CurrentTimeOut.Location = new System.Drawing.Point(134, 20);
+            this.textBox_CurrentTimeOut.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CurrentTimeOut.Name = "textBox_CurrentTimeOut";
+            this.textBox_CurrentTimeOut.ReadOnly = true;
+            this.textBox_CurrentTimeOut.Size = new System.Drawing.Size(58, 26);
+            this.textBox_CurrentTimeOut.TabIndex = 10;
             // 
             // button_SetTimedOut
             // 
-            button_SetTimedOut.Location = new System.Drawing.Point(59, 20);
-            button_SetTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            button_SetTimedOut.Name = "button_SetTimedOut";
-            button_SetTimedOut.Size = new System.Drawing.Size(69, 22);
-            button_SetTimedOut.TabIndex = 9;
-            button_SetTimedOut.Text = "Set";
-            button_SetTimedOut.UseVisualStyleBackColor = true;
-            button_SetTimedOut.Click += new System.EventHandler(Button_SetTimedOut_Click);
+            this.button_SetTimedOut.Location = new System.Drawing.Point(59, 20);
+            this.button_SetTimedOut.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SetTimedOut.Name = "button_SetTimedOut";
+            this.button_SetTimedOut.Size = new System.Drawing.Size(69, 22);
+            this.button_SetTimedOut.TabIndex = 9;
+            this.button_SetTimedOut.Text = "Set";
+            this.button_SetTimedOut.UseVisualStyleBackColor = true;
+            this.button_SetTimedOut.Click += new System.EventHandler(this.Button_SetTimedOut_Click);
             // 
             // textBox_ConnectionTimedOut
             // 
-            textBox_ConnectionTimedOut.Location = new System.Drawing.Point(6, 22);
-            textBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ConnectionTimedOut.Name = "textBox_ConnectionTimedOut";
-            textBox_ConnectionTimedOut.Size = new System.Drawing.Size(49, 26);
-            textBox_ConnectionTimedOut.TabIndex = 8;
-            textBox_ConnectionTimedOut.Text = "300";
+            this.textBox_ConnectionTimedOut.Location = new System.Drawing.Point(6, 22);
+            this.textBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ConnectionTimedOut.Name = "textBox_ConnectionTimedOut";
+            this.textBox_ConnectionTimedOut.Size = new System.Drawing.Size(49, 26);
+            this.textBox_ConnectionTimedOut.TabIndex = 8;
+            this.textBox_ConnectionTimedOut.Text = "300";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(checkBox_ServerRecord);
-            groupBox3.Controls.Add(checkBox_ServerPause);
-            groupBox3.Controls.Add(button_ClearServer);
-            groupBox3.Controls.Add(checkBox_StopLogging);
-            groupBox3.Controls.Add(TextBox_Server);
-            groupBox3.Controls.Add(checkBox_RecordGeneral);
-            groupBox3.Controls.Add(PauseCheck);
-            groupBox3.Controls.Add(Clear_btn);
-            groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            groupBox3.Location = new System.Drawing.Point(258, 63);
-            groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            groupBox3.Size = new System.Drawing.Size(856, 591);
-            groupBox3.TabIndex = 3;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Server Console";
+            this.groupBox3.Controls.Add(this.checkBox_ServerRecord);
+            this.groupBox3.Controls.Add(this.checkBox_ServerPause);
+            this.groupBox3.Controls.Add(this.button_ClearServer);
+            this.groupBox3.Controls.Add(this.checkBox_StopLogging);
+            this.groupBox3.Controls.Add(this.TextBox_Server);
+            this.groupBox3.Controls.Add(this.checkBox_RecordGeneral);
+            this.groupBox3.Controls.Add(this.PauseCheck);
+            this.groupBox3.Controls.Add(this.Clear_btn);
+            this.groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(258, 63);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(856, 591);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Server Console";
             // 
             // checkBox_ServerRecord
             // 
-            checkBox_ServerRecord.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_ServerRecord.AutoSize = true;
-            checkBox_ServerRecord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_ServerRecord.Location = new System.Drawing.Point(139, 560);
-            checkBox_ServerRecord.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_ServerRecord.Name = "checkBox_ServerRecord";
-            checkBox_ServerRecord.Size = new System.Drawing.Size(64, 29);
-            checkBox_ServerRecord.TabIndex = 108;
-            checkBox_ServerRecord.Text = "Record";
-            checkBox_ServerRecord.UseVisualStyleBackColor = true;
+            this.checkBox_ServerRecord.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_ServerRecord.AutoSize = true;
+            this.checkBox_ServerRecord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_ServerRecord.Location = new System.Drawing.Point(139, 560);
+            this.checkBox_ServerRecord.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_ServerRecord.Name = "checkBox_ServerRecord";
+            this.checkBox_ServerRecord.Size = new System.Drawing.Size(64, 29);
+            this.checkBox_ServerRecord.TabIndex = 108;
+            this.checkBox_ServerRecord.Text = "Record";
+            this.checkBox_ServerRecord.UseVisualStyleBackColor = true;
             // 
             // checkBox_ServerPause
             // 
-            checkBox_ServerPause.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_ServerPause.AutoSize = true;
-            checkBox_ServerPause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_ServerPause.Location = new System.Drawing.Point(81, 560);
-            checkBox_ServerPause.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_ServerPause.Name = "checkBox_ServerPause";
-            checkBox_ServerPause.Size = new System.Drawing.Size(58, 29);
-            checkBox_ServerPause.TabIndex = 107;
-            checkBox_ServerPause.Text = "Pause";
-            checkBox_ServerPause.UseVisualStyleBackColor = true;
+            this.checkBox_ServerPause.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_ServerPause.AutoSize = true;
+            this.checkBox_ServerPause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_ServerPause.Location = new System.Drawing.Point(81, 560);
+            this.checkBox_ServerPause.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_ServerPause.Name = "checkBox_ServerPause";
+            this.checkBox_ServerPause.Size = new System.Drawing.Size(58, 29);
+            this.checkBox_ServerPause.TabIndex = 107;
+            this.checkBox_ServerPause.Text = "Pause";
+            this.checkBox_ServerPause.UseVisualStyleBackColor = true;
             // 
             // button_ClearServer
             // 
-            button_ClearServer.Location = new System.Drawing.Point(6, 560);
-            button_ClearServer.Margin = new System.Windows.Forms.Padding(2);
-            button_ClearServer.Name = "button_ClearServer";
-            button_ClearServer.Size = new System.Drawing.Size(69, 22);
-            button_ClearServer.TabIndex = 104;
-            button_ClearServer.Text = "Clear";
-            button_ClearServer.UseVisualStyleBackColor = true;
+            this.button_ClearServer.Location = new System.Drawing.Point(6, 560);
+            this.button_ClearServer.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearServer.Name = "button_ClearServer";
+            this.button_ClearServer.Size = new System.Drawing.Size(69, 22);
+            this.button_ClearServer.TabIndex = 104;
+            this.button_ClearServer.Text = "Clear";
+            this.button_ClearServer.UseVisualStyleBackColor = true;
             // 
             // checkBox_StopLogging
             // 
-            checkBox_StopLogging.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_StopLogging.AutoSize = true;
-            checkBox_StopLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_StopLogging.Location = new System.Drawing.Point(279, 609);
-            checkBox_StopLogging.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_StopLogging.Name = "checkBox_StopLogging";
-            checkBox_StopLogging.Size = new System.Drawing.Size(106, 26);
-            checkBox_StopLogging.TabIndex = 8;
-            checkBox_StopLogging.Text = "Stop Printing";
-            checkBox_StopLogging.UseVisualStyleBackColor = true;
+            this.checkBox_StopLogging.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_StopLogging.AutoSize = true;
+            this.checkBox_StopLogging.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_StopLogging.Location = new System.Drawing.Point(279, 609);
+            this.checkBox_StopLogging.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_StopLogging.Name = "checkBox_StopLogging";
+            this.checkBox_StopLogging.Size = new System.Drawing.Size(106, 26);
+            this.checkBox_StopLogging.TabIndex = 8;
+            this.checkBox_StopLogging.Text = "Stop Printing";
+            this.checkBox_StopLogging.UseVisualStyleBackColor = true;
             // 
             // TextBox_Server
             // 
-            TextBox_Server.BackColor = System.Drawing.Color.LightGray;
-            TextBox_Server.EnableAutoDragDrop = true;
-            TextBox_Server.Location = new System.Drawing.Point(6, 19);
-            TextBox_Server.Margin = new System.Windows.Forms.Padding(2);
-            TextBox_Server.Name = "TextBox_Server";
-            TextBox_Server.Size = new System.Drawing.Size(845, 535);
-            TextBox_Server.TabIndex = 0;
-            TextBox_Server.Text = "";
-            TextBox_Server.TextChanged += new System.EventHandler(RichTextBox1_TextChanged);
+            this.TextBox_Server.BackColor = System.Drawing.Color.LightGray;
+            this.TextBox_Server.EnableAutoDragDrop = true;
+            this.TextBox_Server.Location = new System.Drawing.Point(6, 19);
+            this.TextBox_Server.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBox_Server.Name = "TextBox_Server";
+            this.TextBox_Server.Size = new System.Drawing.Size(845, 535);
+            this.TextBox_Server.TabIndex = 0;
+            this.TextBox_Server.Text = "";
+            this.TextBox_Server.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
             // 
             // checkBox_RecordGeneral
             // 
-            checkBox_RecordGeneral.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_RecordGeneral.AutoSize = true;
-            checkBox_RecordGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_RecordGeneral.Location = new System.Drawing.Point(382, 609);
-            checkBox_RecordGeneral.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_RecordGeneral.Name = "checkBox_RecordGeneral";
-            checkBox_RecordGeneral.Size = new System.Drawing.Size(99, 26);
-            checkBox_RecordGeneral.TabIndex = 7;
-            checkBox_RecordGeneral.Text = "Record Log";
-            checkBox_RecordGeneral.UseVisualStyleBackColor = true;
-            checkBox_RecordGeneral.CheckedChanged += new System.EventHandler(CheckBox_RecordGeneral_CheckedChanged);
+            this.checkBox_RecordGeneral.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RecordGeneral.AutoSize = true;
+            this.checkBox_RecordGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_RecordGeneral.Location = new System.Drawing.Point(382, 609);
+            this.checkBox_RecordGeneral.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_RecordGeneral.Name = "checkBox_RecordGeneral";
+            this.checkBox_RecordGeneral.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordGeneral.TabIndex = 7;
+            this.checkBox_RecordGeneral.Text = "Record Log";
+            this.checkBox_RecordGeneral.UseVisualStyleBackColor = true;
+            this.checkBox_RecordGeneral.CheckedChanged += new System.EventHandler(this.CheckBox_RecordGeneral_CheckedChanged);
             // 
             // PauseCheck
             // 
-            PauseCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            PauseCheck.AutoSize = true;
-            PauseCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            PauseCheck.Location = new System.Drawing.Point(478, 609);
-            PauseCheck.Margin = new System.Windows.Forms.Padding(2);
-            PauseCheck.Name = "PauseCheck";
-            PauseCheck.Size = new System.Drawing.Size(62, 26);
-            PauseCheck.TabIndex = 5;
-            PauseCheck.Text = "Pause";
-            PauseCheck.UseVisualStyleBackColor = true;
+            this.PauseCheck.Appearance = System.Windows.Forms.Appearance.Button;
+            this.PauseCheck.AutoSize = true;
+            this.PauseCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PauseCheck.Location = new System.Drawing.Point(478, 609);
+            this.PauseCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.PauseCheck.Name = "PauseCheck";
+            this.PauseCheck.Size = new System.Drawing.Size(62, 26);
+            this.PauseCheck.TabIndex = 5;
+            this.PauseCheck.Text = "Pause";
+            this.PauseCheck.UseVisualStyleBackColor = true;
             // 
             // Clear_btn
             // 
-            Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            Clear_btn.Location = new System.Drawing.Point(539, 609);
-            Clear_btn.Margin = new System.Windows.Forms.Padding(2);
-            Clear_btn.Name = "Clear_btn";
-            Clear_btn.Size = new System.Drawing.Size(57, 26);
-            Clear_btn.TabIndex = 6;
-            Clear_btn.Text = "Clear";
-            Clear_btn.UseVisualStyleBackColor = true;
+            this.Clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_btn.Location = new System.Drawing.Point(539, 609);
+            this.Clear_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.Clear_btn.Name = "Clear_btn";
+            this.Clear_btn.Size = new System.Drawing.Size(57, 26);
+            this.Clear_btn.TabIndex = 6;
+            this.Clear_btn.Text = "Clear";
+            this.Clear_btn.UseVisualStyleBackColor = true;
             // 
             // tabPage_ClientTCP
             // 
-            tabPage_ClientTCP.Controls.Add(checkBox_ParseRxTCPBuffer);
-            tabPage_ClientTCP.Controls.Add(button_Ping);
-            tabPage_ClientTCP.Controls.Add(label10);
-            tabPage_ClientTCP.Controls.Add(label9);
-            tabPage_ClientTCP.Controls.Add(button_ClearRx);
-            tabPage_ClientTCP.Controls.Add(richTextBox_ClientRx);
-            tabPage_ClientTCP.Controls.Add(button43);
-            tabPage_ClientTCP.Controls.Add(button_ClientClose);
-            tabPage_ClientTCP.Controls.Add(button_ClientConnect);
-            tabPage_ClientTCP.Controls.Add(button3);
-            tabPage_ClientTCP.Controls.Add(richTextBox_ClientTx);
-            tabPage_ClientTCP.Controls.Add(textBox_ClientPort);
-            tabPage_ClientTCP.Controls.Add(textBox_ClientIP);
-            tabPage_ClientTCP.Controls.Add(label8);
-            tabPage_ClientTCP.Controls.Add(label7);
-            tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
-            tabPage_ClientTCP.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_ClientTCP.Name = "tabPage_ClientTCP";
-            tabPage_ClientTCP.Size = new System.Drawing.Size(1414, 659);
-            tabPage_ClientTCP.TabIndex = 9;
-            tabPage_ClientTCP.Text = "Client TCP";
-            tabPage_ClientTCP.UseVisualStyleBackColor = true;
+            this.tabPage_ClientTCP.Controls.Add(this.checkBox_ParseRxTCPBuffer);
+            this.tabPage_ClientTCP.Controls.Add(this.button_Ping);
+            this.tabPage_ClientTCP.Controls.Add(this.label10);
+            this.tabPage_ClientTCP.Controls.Add(this.label9);
+            this.tabPage_ClientTCP.Controls.Add(this.button_ClearRx);
+            this.tabPage_ClientTCP.Controls.Add(this.richTextBox_ClientRx);
+            this.tabPage_ClientTCP.Controls.Add(this.button43);
+            this.tabPage_ClientTCP.Controls.Add(this.button_ClientClose);
+            this.tabPage_ClientTCP.Controls.Add(this.button_ClientConnect);
+            this.tabPage_ClientTCP.Controls.Add(this.button3);
+            this.tabPage_ClientTCP.Controls.Add(this.richTextBox_ClientTx);
+            this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientPort);
+            this.tabPage_ClientTCP.Controls.Add(this.textBox_ClientIP);
+            this.tabPage_ClientTCP.Controls.Add(this.label8);
+            this.tabPage_ClientTCP.Controls.Add(this.label7);
+            this.tabPage_ClientTCP.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_ClientTCP.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_ClientTCP.Name = "tabPage_ClientTCP";
+            this.tabPage_ClientTCP.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_ClientTCP.TabIndex = 9;
+            this.tabPage_ClientTCP.Text = "Client TCP";
+            this.tabPage_ClientTCP.UseVisualStyleBackColor = true;
             // 
             // checkBox_ParseRxTCPBuffer
             // 
-            checkBox_ParseRxTCPBuffer.AutoSize = true;
-            checkBox_ParseRxTCPBuffer.Location = new System.Drawing.Point(1084, 349);
-            checkBox_ParseRxTCPBuffer.Name = "checkBox_ParseRxTCPBuffer";
-            checkBox_ParseRxTCPBuffer.Size = new System.Drawing.Size(146, 22);
-            checkBox_ParseRxTCPBuffer.TabIndex = 15;
-            checkBox_ParseRxTCPBuffer.Text = "Parse Rx TCP Buffer";
-            checkBox_ParseRxTCPBuffer.UseVisualStyleBackColor = true;
+            this.checkBox_ParseRxTCPBuffer.AutoSize = true;
+            this.checkBox_ParseRxTCPBuffer.Location = new System.Drawing.Point(1084, 349);
+            this.checkBox_ParseRxTCPBuffer.Name = "checkBox_ParseRxTCPBuffer";
+            this.checkBox_ParseRxTCPBuffer.Size = new System.Drawing.Size(146, 22);
+            this.checkBox_ParseRxTCPBuffer.TabIndex = 15;
+            this.checkBox_ParseRxTCPBuffer.Text = "Parse Rx TCP Buffer";
+            this.checkBox_ParseRxTCPBuffer.UseVisualStyleBackColor = true;
             // 
             // button_Ping
             // 
-            button_Ping.Location = new System.Drawing.Point(178, 75);
-            button_Ping.Margin = new System.Windows.Forms.Padding(2);
-            button_Ping.Name = "button_Ping";
-            button_Ping.Size = new System.Drawing.Size(91, 22);
-            button_Ping.TabIndex = 14;
-            button_Ping.Text = "Ping";
-            button_Ping.UseVisualStyleBackColor = true;
-            button_Ping.Click += new System.EventHandler(button72_Click);
+            this.button_Ping.Location = new System.Drawing.Point(178, 75);
+            this.button_Ping.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Ping.Name = "button_Ping";
+            this.button_Ping.Size = new System.Drawing.Size(91, 22);
+            this.button_Ping.TabIndex = 14;
+            this.button_Ping.Text = "Ping";
+            this.button_Ping.UseVisualStyleBackColor = true;
+            this.button_Ping.Click += new System.EventHandler(this.button72_Click);
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label10.Location = new System.Drawing.Point(548, 294);
-            label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(150, 23);
-            label10.TabIndex = 13;
-            label10.Text = "Rx - Data Received";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(548, 294);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 23);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Rx - Data Received";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label9.Location = new System.Drawing.Point(548, 86);
-            label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(118, 23);
-            label9.TabIndex = 12;
-            label9.Text = "Tx - Data Send";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(548, 86);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 23);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Tx - Data Send";
             // 
             // button_ClearRx
             // 
-            button_ClearRx.Location = new System.Drawing.Point(1084, 322);
-            button_ClearRx.Margin = new System.Windows.Forms.Padding(2);
-            button_ClearRx.Name = "button_ClearRx";
-            button_ClearRx.Size = new System.Drawing.Size(69, 22);
-            button_ClearRx.TabIndex = 11;
-            button_ClearRx.Text = "Clear Rx";
-            button_ClearRx.UseVisualStyleBackColor = true;
-            button_ClearRx.Click += new System.EventHandler(Button_ClearRx_Click);
+            this.button_ClearRx.Location = new System.Drawing.Point(1084, 322);
+            this.button_ClearRx.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearRx.Name = "button_ClearRx";
+            this.button_ClearRx.Size = new System.Drawing.Size(69, 22);
+            this.button_ClearRx.TabIndex = 11;
+            this.button_ClearRx.Text = "Clear Rx";
+            this.button_ClearRx.UseVisualStyleBackColor = true;
+            this.button_ClearRx.Click += new System.EventHandler(this.Button_ClearRx_Click);
             // 
             // richTextBox_ClientRx
             // 
-            richTextBox_ClientRx.Location = new System.Drawing.Point(31, 323);
-            richTextBox_ClientRx.Margin = new System.Windows.Forms.Padding(2);
-            richTextBox_ClientRx.Name = "richTextBox_ClientRx";
-            richTextBox_ClientRx.ReadOnly = true;
-            richTextBox_ClientRx.Size = new System.Drawing.Size(1049, 162);
-            richTextBox_ClientRx.TabIndex = 9;
-            richTextBox_ClientRx.Text = "";
+            this.richTextBox_ClientRx.Location = new System.Drawing.Point(31, 323);
+            this.richTextBox_ClientRx.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_ClientRx.Name = "richTextBox_ClientRx";
+            this.richTextBox_ClientRx.ReadOnly = true;
+            this.richTextBox_ClientRx.Size = new System.Drawing.Size(1049, 162);
+            this.richTextBox_ClientRx.TabIndex = 9;
+            this.richTextBox_ClientRx.Text = "";
             // 
             // button43
             // 
-            button43.Location = new System.Drawing.Point(1086, 141);
-            button43.Margin = new System.Windows.Forms.Padding(2);
-            button43.Name = "button43";
-            button43.Size = new System.Drawing.Size(68, 23);
-            button43.TabIndex = 8;
-            button43.Text = "Clear Tx";
-            button43.UseVisualStyleBackColor = true;
-            button43.Click += new System.EventHandler(Button43_Click_1);
+            this.button43.Location = new System.Drawing.Point(1086, 141);
+            this.button43.Margin = new System.Windows.Forms.Padding(2);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(68, 23);
+            this.button43.TabIndex = 8;
+            this.button43.Text = "Clear Tx";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.Button43_Click_1);
             // 
             // button_ClientClose
             // 
-            button_ClientClose.Location = new System.Drawing.Point(105, 77);
-            button_ClientClose.Margin = new System.Windows.Forms.Padding(2);
-            button_ClientClose.Name = "button_ClientClose";
-            button_ClientClose.Size = new System.Drawing.Size(69, 22);
-            button_ClientClose.TabIndex = 7;
-            button_ClientClose.Text = "Close";
-            button_ClientClose.UseVisualStyleBackColor = true;
-            button_ClientClose.Click += new System.EventHandler(Button42_Click_1);
+            this.button_ClientClose.Location = new System.Drawing.Point(105, 77);
+            this.button_ClientClose.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClientClose.Name = "button_ClientClose";
+            this.button_ClientClose.Size = new System.Drawing.Size(69, 22);
+            this.button_ClientClose.TabIndex = 7;
+            this.button_ClientClose.Text = "Close";
+            this.button_ClientClose.UseVisualStyleBackColor = true;
+            this.button_ClientClose.Click += new System.EventHandler(this.Button42_Click_1);
             // 
             // button_ClientConnect
             // 
-            button_ClientConnect.Location = new System.Drawing.Point(31, 78);
-            button_ClientConnect.Margin = new System.Windows.Forms.Padding(2);
-            button_ClientConnect.Name = "button_ClientConnect";
-            button_ClientConnect.Size = new System.Drawing.Size(69, 22);
-            button_ClientConnect.TabIndex = 6;
-            button_ClientConnect.Text = "Connect";
-            button_ClientConnect.UseVisualStyleBackColor = true;
-            button_ClientConnect.Click += new System.EventHandler(Button_ClientConnect_Click);
+            this.button_ClientConnect.Location = new System.Drawing.Point(31, 78);
+            this.button_ClientConnect.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClientConnect.Name = "button_ClientConnect";
+            this.button_ClientConnect.Size = new System.Drawing.Size(69, 22);
+            this.button_ClientConnect.TabIndex = 6;
+            this.button_ClientConnect.Text = "Connect";
+            this.button_ClientConnect.UseVisualStyleBackColor = true;
+            this.button_ClientConnect.Click += new System.EventHandler(this.Button_ClientConnect_Click);
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(1086, 112);
-            button3.Margin = new System.Windows.Forms.Padding(2);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(68, 22);
-            button3.TabIndex = 5;
-            button3.Text = "Send";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += new System.EventHandler(Button3_Click_4);
+            this.button3.Location = new System.Drawing.Point(1086, 112);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(68, 22);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Send";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click_4);
             // 
             // richTextBox_ClientTx
             // 
-            richTextBox_ClientTx.Location = new System.Drawing.Point(31, 114);
-            richTextBox_ClientTx.Margin = new System.Windows.Forms.Padding(2);
-            richTextBox_ClientTx.Name = "richTextBox_ClientTx";
-            richTextBox_ClientTx.Size = new System.Drawing.Size(1050, 162);
-            richTextBox_ClientTx.TabIndex = 4;
-            richTextBox_ClientTx.Text = "Send Data to Server";
+            this.richTextBox_ClientTx.Location = new System.Drawing.Point(31, 114);
+            this.richTextBox_ClientTx.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_ClientTx.Name = "richTextBox_ClientTx";
+            this.richTextBox_ClientTx.Size = new System.Drawing.Size(1050, 162);
+            this.richTextBox_ClientTx.TabIndex = 4;
+            this.richTextBox_ClientTx.Text = "Send Data to Server";
             // 
             // textBox_ClientPort
             // 
-            textBox_ClientPort.Location = new System.Drawing.Point(114, 46);
-            textBox_ClientPort.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ClientPort.Name = "textBox_ClientPort";
-            textBox_ClientPort.Size = new System.Drawing.Size(92, 26);
-            textBox_ClientPort.TabIndex = 3;
-            textBox_ClientPort.Text = "7";
+            this.textBox_ClientPort.Location = new System.Drawing.Point(114, 46);
+            this.textBox_ClientPort.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ClientPort.Name = "textBox_ClientPort";
+            this.textBox_ClientPort.Size = new System.Drawing.Size(92, 26);
+            this.textBox_ClientPort.TabIndex = 3;
+            this.textBox_ClientPort.Text = "7";
             // 
             // textBox_ClientIP
             // 
-            textBox_ClientIP.Location = new System.Drawing.Point(114, 17);
-            textBox_ClientIP.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ClientIP.Name = "textBox_ClientIP";
-            textBox_ClientIP.Size = new System.Drawing.Size(92, 26);
-            textBox_ClientIP.TabIndex = 2;
-            textBox_ClientIP.Text = "192.168.1.10";
+            this.textBox_ClientIP.Location = new System.Drawing.Point(114, 17);
+            this.textBox_ClientIP.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ClientIP.Name = "textBox_ClientIP";
+            this.textBox_ClientIP.Size = new System.Drawing.Size(92, 26);
+            this.textBox_ClientIP.TabIndex = 2;
+            this.textBox_ClientIP.Text = "192.168.1.10";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label8.Location = new System.Drawing.Point(27, 46);
-            label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(43, 23);
-            label8.TabIndex = 1;
-            label8.Text = "Port";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(27, 46);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 23);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Port";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label7.Location = new System.Drawing.Point(27, 14);
-            label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(87, 23);
-            label7.TabIndex = 0;
-            label7.Text = "Host or IP";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(27, 14);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 23);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Host or IP";
             // 
             // tabPage_SerialPort
             // 
-            tabPage_SerialPort.Controls.Add(groupBox_SendSerialOrMonitorCommands);
-            tabPage_SerialPort.Controls.Add(gbPortSettings);
-            tabPage_SerialPort.Controls.Add(groupBox5);
-            tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
-            tabPage_SerialPort.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_SerialPort.Name = "tabPage_SerialPort";
-            tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(2);
-            tabPage_SerialPort.Size = new System.Drawing.Size(1414, 659);
-            tabPage_SerialPort.TabIndex = 1;
-            tabPage_SerialPort.Text = "Serial Port";
-            tabPage_SerialPort.UseVisualStyleBackColor = true;
+            this.tabPage_SerialPort.Controls.Add(this.groupBox_SendSerialOrMonitorCommands);
+            this.tabPage_SerialPort.Controls.Add(this.gbPortSettings);
+            this.tabPage_SerialPort.Controls.Add(this.groupBox5);
+            this.tabPage_SerialPort.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_SerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_SerialPort.Name = "tabPage_SerialPort";
+            this.tabPage_SerialPort.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_SerialPort.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_SerialPort.TabIndex = 1;
+            this.tabPage_SerialPort.Text = "Serial Port";
+            this.tabPage_SerialPort.UseVisualStyleBackColor = true;
             // 
             // groupBox_SendSerialOrMonitorCommands
             // 
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(textBox_SendSerialPortPeriod);
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(checkBox_SendEveryOneSecond);
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(checkBox_SendHexdata);
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(textBox_SendSerialPort);
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(checkBox_DeleteCommand);
-            groupBox_SendSerialOrMonitorCommands.Controls.Add(button_SendSerialPort);
-            groupBox_SendSerialOrMonitorCommands.Location = new System.Drawing.Point(4, 6);
-            groupBox_SendSerialOrMonitorCommands.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_SendSerialOrMonitorCommands.Name = "groupBox_SendSerialOrMonitorCommands";
-            groupBox_SendSerialOrMonitorCommands.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_SendSerialOrMonitorCommands.Size = new System.Drawing.Size(841, 90);
-            groupBox_SendSerialOrMonitorCommands.TabIndex = 69;
-            groupBox_SendSerialOrMonitorCommands.TabStop = false;
-            groupBox_SendSerialOrMonitorCommands.Text = "Send Data to Serial Port";
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.textBox_SendSerialPortPeriod);
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.checkBox_SendEveryOneSecond);
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.checkBox_SendHexdata);
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.textBox_SendSerialPort);
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.checkBox_DeleteCommand);
+            this.groupBox_SendSerialOrMonitorCommands.Controls.Add(this.button_SendSerialPort);
+            this.groupBox_SendSerialOrMonitorCommands.Location = new System.Drawing.Point(4, 6);
+            this.groupBox_SendSerialOrMonitorCommands.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_SendSerialOrMonitorCommands.Name = "groupBox_SendSerialOrMonitorCommands";
+            this.groupBox_SendSerialOrMonitorCommands.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_SendSerialOrMonitorCommands.Size = new System.Drawing.Size(841, 90);
+            this.groupBox_SendSerialOrMonitorCommands.TabIndex = 69;
+            this.groupBox_SendSerialOrMonitorCommands.TabStop = false;
+            this.groupBox_SendSerialOrMonitorCommands.Text = "Send Data to Serial Port";
             // 
             // textBox_SendSerialPortPeriod
             // 
-            textBox_SendSerialPortPeriod.Location = new System.Drawing.Point(378, 55);
-            textBox_SendSerialPortPeriod.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SendSerialPortPeriod.Name = "textBox_SendSerialPortPeriod";
-            textBox_SendSerialPortPeriod.Size = new System.Drawing.Size(46, 26);
-            textBox_SendSerialPortPeriod.TabIndex = 108;
-            textBox_SendSerialPortPeriod.Text = "10";
-            textBox_SendSerialPortPeriod.TextChanged += new System.EventHandler(textBox_SendSerialPortPeriod_TextChanged);
+            this.textBox_SendSerialPortPeriod.Location = new System.Drawing.Point(378, 55);
+            this.textBox_SendSerialPortPeriod.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SendSerialPortPeriod.Name = "textBox_SendSerialPortPeriod";
+            this.textBox_SendSerialPortPeriod.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SendSerialPortPeriod.TabIndex = 108;
+            this.textBox_SendSerialPortPeriod.Text = "10";
+            this.textBox_SendSerialPortPeriod.TextChanged += new System.EventHandler(this.textBox_SendSerialPortPeriod_TextChanged);
             // 
             // checkBox_SendEveryOneSecond
             // 
-            checkBox_SendEveryOneSecond.AutoSize = true;
-            checkBox_SendEveryOneSecond.Location = new System.Drawing.Point(439, 57);
-            checkBox_SendEveryOneSecond.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_SendEveryOneSecond.Name = "checkBox_SendEveryOneSecond";
-            checkBox_SendEveryOneSecond.Size = new System.Drawing.Size(189, 22);
-            checkBox_SendEveryOneSecond.TabIndex = 6;
-            checkBox_SendEveryOneSecond.Text = "Send Periodically (100 ms)";
-            checkBox_SendEveryOneSecond.UseVisualStyleBackColor = true;
-            checkBox_SendEveryOneSecond.CheckedChanged += new System.EventHandler(checkBox_SendEveryOneSecond_CheckedChanged);
+            this.checkBox_SendEveryOneSecond.AutoSize = true;
+            this.checkBox_SendEveryOneSecond.Location = new System.Drawing.Point(439, 57);
+            this.checkBox_SendEveryOneSecond.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_SendEveryOneSecond.Name = "checkBox_SendEveryOneSecond";
+            this.checkBox_SendEveryOneSecond.Size = new System.Drawing.Size(189, 22);
+            this.checkBox_SendEveryOneSecond.TabIndex = 6;
+            this.checkBox_SendEveryOneSecond.Text = "Send Periodically (100 ms)";
+            this.checkBox_SendEveryOneSecond.UseVisualStyleBackColor = true;
+            this.checkBox_SendEveryOneSecond.CheckedChanged += new System.EventHandler(this.checkBox_SendEveryOneSecond_CheckedChanged);
             // 
             // checkBox_SendHexdata
             // 
-            checkBox_SendHexdata.AutoSize = true;
-            checkBox_SendHexdata.Checked = true;
-            checkBox_SendHexdata.CheckState = System.Windows.Forms.CheckState.Checked;
-            checkBox_SendHexdata.Location = new System.Drawing.Point(252, 58);
-            checkBox_SendHexdata.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_SendHexdata.Name = "checkBox_SendHexdata";
-            checkBox_SendHexdata.Size = new System.Drawing.Size(115, 22);
-            checkBox_SendHexdata.TabIndex = 5;
-            checkBox_SendHexdata.Text = "Send Hex data";
-            checkBox_SendHexdata.UseVisualStyleBackColor = true;
-            checkBox_SendHexdata.CheckedChanged += new System.EventHandler(CheckBox_SendHexdata_CheckedChanged);
+            this.checkBox_SendHexdata.AutoSize = true;
+            this.checkBox_SendHexdata.Checked = true;
+            this.checkBox_SendHexdata.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_SendHexdata.Location = new System.Drawing.Point(252, 58);
+            this.checkBox_SendHexdata.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_SendHexdata.Name = "checkBox_SendHexdata";
+            this.checkBox_SendHexdata.Size = new System.Drawing.Size(115, 22);
+            this.checkBox_SendHexdata.TabIndex = 5;
+            this.checkBox_SendHexdata.Text = "Send Hex data";
+            this.checkBox_SendHexdata.UseVisualStyleBackColor = true;
+            this.checkBox_SendHexdata.CheckedChanged += new System.EventHandler(this.CheckBox_SendHexdata_CheckedChanged);
             // 
             // textBox_SendSerialPort
             // 
-            textBox_SendSerialPort.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            textBox_SendSerialPort.Cursor = System.Windows.Forms.Cursors.IBeam;
-            textBox_SendSerialPort.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_SendSerialPort.Location = new System.Drawing.Point(8, 20);
-            textBox_SendSerialPort.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SendSerialPort.Name = "textBox_SendSerialPort";
-            textBox_SendSerialPort.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            textBox_SendSerialPort.Size = new System.Drawing.Size(630, 31);
-            textBox_SendSerialPort.TabIndex = 0;
-            textBox_SendSerialPort.TextChanged += new System.EventHandler(TextBox_SendSerialPort_TextChanged_1);
-            textBox_SendSerialPort.KeyDown += new System.Windows.Forms.KeyEventHandler(TextBox_SendSerialPort_KeyDown);
-            textBox_SendSerialPort.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(TextBox_SendSerialPort_PreviewKeyDown);
+            this.textBox_SendSerialPort.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox_SendSerialPort.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_SendSerialPort.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SendSerialPort.Location = new System.Drawing.Point(8, 20);
+            this.textBox_SendSerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SendSerialPort.Name = "textBox_SendSerialPort";
+            this.textBox_SendSerialPort.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_SendSerialPort.Size = new System.Drawing.Size(630, 31);
+            this.textBox_SendSerialPort.TabIndex = 0;
+            this.textBox_SendSerialPort.TextChanged += new System.EventHandler(this.TextBox_SendSerialPort_TextChanged_1);
+            this.textBox_SendSerialPort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_SendSerialPort_KeyDown);
+            this.textBox_SendSerialPort.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TextBox_SendSerialPort_PreviewKeyDown);
             // 
             // checkBox_DeleteCommand
             // 
-            checkBox_DeleteCommand.AutoSize = true;
-            checkBox_DeleteCommand.Location = new System.Drawing.Point(115, 59);
-            checkBox_DeleteCommand.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_DeleteCommand.Name = "checkBox_DeleteCommand";
-            checkBox_DeleteCommand.Size = new System.Drawing.Size(135, 22);
-            checkBox_DeleteCommand.TabIndex = 4;
-            checkBox_DeleteCommand.Text = "Delete after Send";
-            checkBox_DeleteCommand.UseVisualStyleBackColor = true;
+            this.checkBox_DeleteCommand.AutoSize = true;
+            this.checkBox_DeleteCommand.Location = new System.Drawing.Point(115, 59);
+            this.checkBox_DeleteCommand.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_DeleteCommand.Name = "checkBox_DeleteCommand";
+            this.checkBox_DeleteCommand.Size = new System.Drawing.Size(135, 22);
+            this.checkBox_DeleteCommand.TabIndex = 4;
+            this.checkBox_DeleteCommand.Text = "Delete after Send";
+            this.checkBox_DeleteCommand.UseVisualStyleBackColor = true;
             // 
             // button_SendSerialPort
             // 
-            button_SendSerialPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button_SendSerialPort.Location = new System.Drawing.Point(8, 56);
-            button_SendSerialPort.Margin = new System.Windows.Forms.Padding(2);
-            button_SendSerialPort.Name = "button_SendSerialPort";
-            button_SendSerialPort.Size = new System.Drawing.Size(96, 23);
-            button_SendSerialPort.TabIndex = 1;
-            button_SendSerialPort.Text = "Send";
-            button_SendSerialPort.Click += new System.EventHandler(Button2_Click_1);
+            this.button_SendSerialPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SendSerialPort.Location = new System.Drawing.Point(8, 56);
+            this.button_SendSerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SendSerialPort.Name = "button_SendSerialPort";
+            this.button_SendSerialPort.Size = new System.Drawing.Size(96, 23);
+            this.button_SendSerialPort.TabIndex = 1;
+            this.button_SendSerialPort.Text = "Send";
+            this.button_SendSerialPort.Click += new System.EventHandler(this.Button2_Click_1);
             // 
             // gbPortSettings
             // 
-            gbPortSettings.Controls.Add(button_OpenPort);
-            gbPortSettings.Controls.Add(button_ReScanComPort);
-            gbPortSettings.Controls.Add(cmb_PortName);
-            gbPortSettings.Controls.Add(cmbBaudRate);
-            gbPortSettings.Controls.Add(cmb_StopBits);
-            gbPortSettings.Controls.Add(cmbParity);
-            gbPortSettings.Controls.Add(cmbDataBits);
-            gbPortSettings.Controls.Add(lblComPort);
-            gbPortSettings.Controls.Add(lblStopBits);
-            gbPortSettings.Controls.Add(lblBaudRate);
-            gbPortSettings.Controls.Add(lblDataBits);
-            gbPortSettings.Controls.Add(label3);
-            gbPortSettings.Location = new System.Drawing.Point(852, 13);
-            gbPortSettings.Margin = new System.Windows.Forms.Padding(2);
-            gbPortSettings.Name = "gbPortSettings";
-            gbPortSettings.Padding = new System.Windows.Forms.Padding(2);
-            gbPortSettings.Size = new System.Drawing.Size(557, 83);
-            gbPortSettings.TabIndex = 10;
-            gbPortSettings.TabStop = false;
-            gbPortSettings.Text = "COM Serial Port Settings";
+            this.gbPortSettings.Controls.Add(this.button_OpenPort);
+            this.gbPortSettings.Controls.Add(this.button_ReScanComPort);
+            this.gbPortSettings.Controls.Add(this.cmb_PortName);
+            this.gbPortSettings.Controls.Add(this.cmbBaudRate);
+            this.gbPortSettings.Controls.Add(this.cmb_StopBits);
+            this.gbPortSettings.Controls.Add(this.cmbParity);
+            this.gbPortSettings.Controls.Add(this.cmbDataBits);
+            this.gbPortSettings.Controls.Add(this.lblComPort);
+            this.gbPortSettings.Controls.Add(this.lblStopBits);
+            this.gbPortSettings.Controls.Add(this.lblBaudRate);
+            this.gbPortSettings.Controls.Add(this.lblDataBits);
+            this.gbPortSettings.Controls.Add(this.label3);
+            this.gbPortSettings.Location = new System.Drawing.Point(852, 13);
+            this.gbPortSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.gbPortSettings.Name = "gbPortSettings";
+            this.gbPortSettings.Padding = new System.Windows.Forms.Padding(2);
+            this.gbPortSettings.Size = new System.Drawing.Size(557, 83);
+            this.gbPortSettings.TabIndex = 10;
+            this.gbPortSettings.TabStop = false;
+            this.gbPortSettings.Text = "COM Serial Port Settings";
             // 
             // button_OpenPort
             // 
-            button_OpenPort.Location = new System.Drawing.Point(463, 33);
-            button_OpenPort.Margin = new System.Windows.Forms.Padding(2);
-            button_OpenPort.Name = "button_OpenPort";
-            button_OpenPort.Size = new System.Drawing.Size(83, 32);
-            button_OpenPort.TabIndex = 11;
-            button_OpenPort.Text = "Open ";
-            button_OpenPort.UseVisualStyleBackColor = true;
-            button_OpenPort.Click += new System.EventHandler(Button_OpenPort_Click);
+            this.button_OpenPort.Location = new System.Drawing.Point(463, 33);
+            this.button_OpenPort.Margin = new System.Windows.Forms.Padding(2);
+            this.button_OpenPort.Name = "button_OpenPort";
+            this.button_OpenPort.Size = new System.Drawing.Size(83, 32);
+            this.button_OpenPort.TabIndex = 11;
+            this.button_OpenPort.Text = "Open ";
+            this.button_OpenPort.UseVisualStyleBackColor = true;
+            this.button_OpenPort.Click += new System.EventHandler(this.Button_OpenPort_Click);
             // 
             // button_ReScanComPort
             // 
-            button_ReScanComPort.AutoSize = true;
-            button_ReScanComPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button_ReScanComPort.Location = new System.Drawing.Point(378, 33);
-            button_ReScanComPort.Margin = new System.Windows.Forms.Padding(2);
-            button_ReScanComPort.Name = "button_ReScanComPort";
-            button_ReScanComPort.Size = new System.Drawing.Size(80, 33);
-            button_ReScanComPort.TabIndex = 10;
-            button_ReScanComPort.Text = "ReScan";
-            button_ReScanComPort.UseVisualStyleBackColor = true;
-            button_ReScanComPort.Click += new System.EventHandler(Button_ReScanComPort_Click);
+            this.button_ReScanComPort.AutoSize = true;
+            this.button_ReScanComPort.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ReScanComPort.Location = new System.Drawing.Point(378, 33);
+            this.button_ReScanComPort.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReScanComPort.Name = "button_ReScanComPort";
+            this.button_ReScanComPort.Size = new System.Drawing.Size(80, 33);
+            this.button_ReScanComPort.TabIndex = 10;
+            this.button_ReScanComPort.Text = "ReScan";
+            this.button_ReScanComPort.UseVisualStyleBackColor = true;
+            this.button_ReScanComPort.Click += new System.EventHandler(this.Button_ReScanComPort_Click);
             // 
             // cmb_PortName
             // 
-            cmb_PortName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cmb_PortName.FormattingEnabled = true;
-            cmb_PortName.Items.AddRange(new object[] {
+            this.cmb_PortName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_PortName.FormattingEnabled = true;
+            this.cmb_PortName.Items.AddRange(new object[] {
             "COM1",
             "COM2",
             "COM3",
             "COM4",
             "COM5",
             "COM6"});
-            cmb_PortName.Location = new System.Drawing.Point(7, 37);
-            cmb_PortName.Margin = new System.Windows.Forms.Padding(2);
-            cmb_PortName.Name = "cmb_PortName";
-            cmb_PortName.Size = new System.Drawing.Size(62, 26);
-            cmb_PortName.TabIndex = 1;
-            cmb_PortName.Tag = "1";
-            cmb_PortName.SelectedIndexChanged += new System.EventHandler(CmbPortName_SelectedIndexChanged);
+            this.cmb_PortName.Location = new System.Drawing.Point(7, 37);
+            this.cmb_PortName.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_PortName.Name = "cmb_PortName";
+            this.cmb_PortName.Size = new System.Drawing.Size(62, 26);
+            this.cmb_PortName.TabIndex = 1;
+            this.cmb_PortName.Tag = "1";
+            this.cmb_PortName.SelectedIndexChanged += new System.EventHandler(this.CmbPortName_SelectedIndexChanged);
             // 
             // cmbBaudRate
             // 
-            cmbBaudRate.FormattingEnabled = true;
-            cmbBaudRate.Items.AddRange(new object[] {
+            this.cmbBaudRate.FormattingEnabled = true;
+            this.cmbBaudRate.Items.AddRange(new object[] {
             "1200",
             "2400",
             "4800",
@@ -2581,5513 +2583,5583 @@ namespace Monitor
             "38400",
             "57600",
             "115200"});
-            cmbBaudRate.Location = new System.Drawing.Point(74, 37);
-            cmbBaudRate.Margin = new System.Windows.Forms.Padding(2);
-            cmbBaudRate.Name = "cmbBaudRate";
-            cmbBaudRate.Size = new System.Drawing.Size(82, 26);
-            cmbBaudRate.TabIndex = 3;
-            cmbBaudRate.Text = "38400";
-            cmbBaudRate.SelectedIndexChanged += new System.EventHandler(CmbBaudRate_SelectedIndexChanged);
+            this.cmbBaudRate.Location = new System.Drawing.Point(74, 37);
+            this.cmbBaudRate.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbBaudRate.Name = "cmbBaudRate";
+            this.cmbBaudRate.Size = new System.Drawing.Size(82, 26);
+            this.cmbBaudRate.TabIndex = 3;
+            this.cmbBaudRate.Text = "38400";
+            this.cmbBaudRate.SelectedIndexChanged += new System.EventHandler(this.CmbBaudRate_SelectedIndexChanged);
             // 
             // cmb_StopBits
             // 
-            cmb_StopBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cmb_StopBits.FormattingEnabled = true;
-            cmb_StopBits.Items.AddRange(new object[] {
+            this.cmb_StopBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_StopBits.FormattingEnabled = true;
+            this.cmb_StopBits.Items.AddRange(new object[] {
             "1",
             "2",
             "3"});
-            cmb_StopBits.Location = new System.Drawing.Point(282, 36);
-            cmb_StopBits.Margin = new System.Windows.Forms.Padding(2);
-            cmb_StopBits.Name = "cmb_StopBits";
-            cmb_StopBits.Size = new System.Drawing.Size(82, 26);
-            cmb_StopBits.TabIndex = 9;
+            this.cmb_StopBits.Location = new System.Drawing.Point(282, 36);
+            this.cmb_StopBits.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_StopBits.Name = "cmb_StopBits";
+            this.cmb_StopBits.Size = new System.Drawing.Size(82, 26);
+            this.cmb_StopBits.TabIndex = 9;
             // 
             // cmbParity
             // 
-            cmbParity.DisplayMember = "1";
-            cmbParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cmbParity.FormattingEnabled = true;
-            cmbParity.Items.AddRange(new object[] {
+            this.cmbParity.DisplayMember = "1";
+            this.cmbParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbParity.FormattingEnabled = true;
+            this.cmbParity.Items.AddRange(new object[] {
             "None",
             "Even",
             "Odd"});
-            cmbParity.Location = new System.Drawing.Point(161, 36);
-            cmbParity.Margin = new System.Windows.Forms.Padding(2);
-            cmbParity.Name = "cmbParity";
-            cmbParity.Size = new System.Drawing.Size(56, 26);
-            cmbParity.TabIndex = 5;
-            cmbParity.Tag = "1";
+            this.cmbParity.Location = new System.Drawing.Point(161, 36);
+            this.cmbParity.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbParity.Name = "cmbParity";
+            this.cmbParity.Size = new System.Drawing.Size(56, 26);
+            this.cmbParity.TabIndex = 5;
+            this.cmbParity.Tag = "1";
             // 
             // cmbDataBits
             // 
-            cmbDataBits.FormattingEnabled = true;
-            cmbDataBits.Items.AddRange(new object[] {
+            this.cmbDataBits.FormattingEnabled = true;
+            this.cmbDataBits.Items.AddRange(new object[] {
             "5",
             "6",
             "7",
             "8"});
-            cmbDataBits.Location = new System.Drawing.Point(220, 36);
-            cmbDataBits.Margin = new System.Windows.Forms.Padding(2);
-            cmbDataBits.Name = "cmbDataBits";
-            cmbDataBits.Size = new System.Drawing.Size(56, 26);
-            cmbDataBits.TabIndex = 7;
-            cmbDataBits.Text = "8";
+            this.cmbDataBits.Location = new System.Drawing.Point(220, 36);
+            this.cmbDataBits.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbDataBits.Name = "cmbDataBits";
+            this.cmbDataBits.Size = new System.Drawing.Size(56, 26);
+            this.cmbDataBits.TabIndex = 7;
+            this.cmbDataBits.Text = "8";
             // 
             // lblComPort
             // 
-            lblComPort.AutoSize = true;
-            lblComPort.Location = new System.Drawing.Point(6, 22);
-            lblComPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lblComPort.Name = "lblComPort";
-            lblComPort.Size = new System.Drawing.Size(71, 18);
-            lblComPort.TabIndex = 0;
-            lblComPort.Text = "COM Port:";
+            this.lblComPort.AutoSize = true;
+            this.lblComPort.Location = new System.Drawing.Point(6, 22);
+            this.lblComPort.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblComPort.Name = "lblComPort";
+            this.lblComPort.Size = new System.Drawing.Size(71, 18);
+            this.lblComPort.TabIndex = 0;
+            this.lblComPort.Text = "COM Port:";
             // 
             // lblStopBits
             // 
-            lblStopBits.AutoSize = true;
-            lblStopBits.Location = new System.Drawing.Point(283, 20);
-            lblStopBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lblStopBits.Name = "lblStopBits";
-            lblStopBits.Size = new System.Drawing.Size(66, 18);
-            lblStopBits.TabIndex = 8;
-            lblStopBits.Text = "Stop Bits:";
+            this.lblStopBits.AutoSize = true;
+            this.lblStopBits.Location = new System.Drawing.Point(283, 20);
+            this.lblStopBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStopBits.Name = "lblStopBits";
+            this.lblStopBits.Size = new System.Drawing.Size(66, 18);
+            this.lblStopBits.TabIndex = 8;
+            this.lblStopBits.Text = "Stop Bits:";
             // 
             // lblBaudRate
             // 
-            lblBaudRate.AutoSize = true;
-            lblBaudRate.Location = new System.Drawing.Point(73, 22);
-            lblBaudRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lblBaudRate.Name = "lblBaudRate";
-            lblBaudRate.Size = new System.Drawing.Size(74, 18);
-            lblBaudRate.TabIndex = 2;
-            lblBaudRate.Text = "Baud Rate:";
+            this.lblBaudRate.AutoSize = true;
+            this.lblBaudRate.Location = new System.Drawing.Point(73, 22);
+            this.lblBaudRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBaudRate.Name = "lblBaudRate";
+            this.lblBaudRate.Size = new System.Drawing.Size(74, 18);
+            this.lblBaudRate.TabIndex = 2;
+            this.lblBaudRate.Text = "Baud Rate:";
             // 
             // lblDataBits
             // 
-            lblDataBits.AutoSize = true;
-            lblDataBits.Location = new System.Drawing.Point(223, 20);
-            lblDataBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            lblDataBits.Name = "lblDataBits";
-            lblDataBits.Size = new System.Drawing.Size(66, 18);
-            lblDataBits.TabIndex = 6;
-            lblDataBits.Text = "Data Bits:";
+            this.lblDataBits.AutoSize = true;
+            this.lblDataBits.Location = new System.Drawing.Point(223, 20);
+            this.lblDataBits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDataBits.Name = "lblDataBits";
+            this.lblDataBits.Size = new System.Drawing.Size(66, 18);
+            this.lblDataBits.TabIndex = 6;
+            this.lblDataBits.Text = "Data Bits:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(162, 20);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(48, 18);
-            label3.TabIndex = 4;
-            label3.Text = "Parity:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(162, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Parity:";
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(groupBox_Timer);
-            groupBox5.Controls.Add(groupBox_Stopwatch);
-            groupBox5.Controls.Add(checkBox_RxHex);
-            groupBox5.Controls.Add(textBox_SerialPortRecognizePattern3);
-            groupBox5.Controls.Add(textBox_SerialPortRecognizePattern2);
-            groupBox5.Controls.Add(textBox_SerialPortRecognizePattern);
-            groupBox5.Controls.Add(checkBox_S1RecordLog);
-            groupBox5.Controls.Add(checkBox_S1Pause);
-            groupBox5.Controls.Add(txtS1_Clear);
-            groupBox5.Controls.Add(SerialPortLogger_TextBox);
-            groupBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            groupBox5.Location = new System.Drawing.Point(4, 102);
-            groupBox5.Margin = new System.Windows.Forms.Padding(2);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            groupBox5.Size = new System.Drawing.Size(1405, 553);
-            groupBox5.TabIndex = 68;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Serial Port Console";
-            groupBox5.Enter += new System.EventHandler(GroupBox5_Enter);
+            this.groupBox5.Controls.Add(this.groupBox_Timer);
+            this.groupBox5.Controls.Add(this.groupBox_Stopwatch);
+            this.groupBox5.Controls.Add(this.checkBox_RxHex);
+            this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern3);
+            this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern2);
+            this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern);
+            this.groupBox5.Controls.Add(this.checkBox_S1RecordLog);
+            this.groupBox5.Controls.Add(this.checkBox_S1Pause);
+            this.groupBox5.Controls.Add(this.txtS1_Clear);
+            this.groupBox5.Controls.Add(this.SerialPortLogger_TextBox);
+            this.groupBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(4, 102);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(1405, 553);
+            this.groupBox5.TabIndex = 68;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Serial Port Console";
+            this.groupBox5.Enter += new System.EventHandler(this.GroupBox5_Enter);
             // 
             // groupBox_Timer
             // 
-            groupBox_Timer.Controls.Add(textBox_TimerTime);
-            groupBox_Timer.Controls.Add(button_StartStopTimer);
-            groupBox_Timer.Controls.Add(button_ResetTimer);
-            groupBox_Timer.Controls.Add(textBox_SetTimerTime);
-            groupBox_Timer.Location = new System.Drawing.Point(38, 704);
-            groupBox_Timer.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_Timer.Name = "groupBox_Timer";
-            groupBox_Timer.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_Timer.Size = new System.Drawing.Size(246, 107);
-            groupBox_Timer.TabIndex = 107;
-            groupBox_Timer.TabStop = false;
-            groupBox_Timer.Text = "Timer";
-            groupBox_Timer.Visible = false;
+            this.groupBox_Timer.Controls.Add(this.textBox_TimerTime);
+            this.groupBox_Timer.Controls.Add(this.button_StartStopTimer);
+            this.groupBox_Timer.Controls.Add(this.button_ResetTimer);
+            this.groupBox_Timer.Controls.Add(this.textBox_SetTimerTime);
+            this.groupBox_Timer.Location = new System.Drawing.Point(38, 704);
+            this.groupBox_Timer.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_Timer.Name = "groupBox_Timer";
+            this.groupBox_Timer.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_Timer.Size = new System.Drawing.Size(246, 107);
+            this.groupBox_Timer.TabIndex = 107;
+            this.groupBox_Timer.TabStop = false;
+            this.groupBox_Timer.Text = "Timer";
+            this.groupBox_Timer.Visible = false;
             // 
             // textBox_TimerTime
             // 
-            textBox_TimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_TimerTime.Location = new System.Drawing.Point(109, 64);
-            textBox_TimerTime.Margin = new System.Windows.Forms.Padding(2);
-            textBox_TimerTime.Name = "textBox_TimerTime";
-            textBox_TimerTime.ReadOnly = true;
-            textBox_TimerTime.Size = new System.Drawing.Size(65, 31);
-            textBox_TimerTime.TabIndex = 106;
-            textBox_TimerTime.Text = "0";
+            this.textBox_TimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TimerTime.Location = new System.Drawing.Point(109, 64);
+            this.textBox_TimerTime.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TimerTime.Name = "textBox_TimerTime";
+            this.textBox_TimerTime.ReadOnly = true;
+            this.textBox_TimerTime.Size = new System.Drawing.Size(65, 31);
+            this.textBox_TimerTime.TabIndex = 106;
+            this.textBox_TimerTime.Text = "0";
             // 
             // button_StartStopTimer
             // 
-            button_StartStopTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_StartStopTimer.Location = new System.Drawing.Point(8, 22);
-            button_StartStopTimer.Margin = new System.Windows.Forms.Padding(2);
-            button_StartStopTimer.Name = "button_StartStopTimer";
-            button_StartStopTimer.Size = new System.Drawing.Size(101, 36);
-            button_StartStopTimer.TabIndex = 104;
-            button_StartStopTimer.Text = "Start/Stop";
-            button_StartStopTimer.UseVisualStyleBackColor = true;
-            button_StartStopTimer.Click += new System.EventHandler(Button_StartStopTimer_Click);
+            this.button_StartStopTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_StartStopTimer.Location = new System.Drawing.Point(8, 22);
+            this.button_StartStopTimer.Margin = new System.Windows.Forms.Padding(2);
+            this.button_StartStopTimer.Name = "button_StartStopTimer";
+            this.button_StartStopTimer.Size = new System.Drawing.Size(101, 36);
+            this.button_StartStopTimer.TabIndex = 104;
+            this.button_StartStopTimer.Text = "Start/Stop";
+            this.button_StartStopTimer.UseVisualStyleBackColor = true;
+            this.button_StartStopTimer.Click += new System.EventHandler(this.Button_StartStopTimer_Click);
             // 
             // button_ResetTimer
             // 
-            button_ResetTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_ResetTimer.Location = new System.Drawing.Point(109, 22);
-            button_ResetTimer.Margin = new System.Windows.Forms.Padding(2);
-            button_ResetTimer.Name = "button_ResetTimer";
-            button_ResetTimer.Size = new System.Drawing.Size(101, 36);
-            button_ResetTimer.TabIndex = 105;
-            button_ResetTimer.Text = "Reset (0)";
-            button_ResetTimer.UseVisualStyleBackColor = true;
-            button_ResetTimer.Click += new System.EventHandler(Button_ResetTimer_Click);
+            this.button_ResetTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ResetTimer.Location = new System.Drawing.Point(109, 22);
+            this.button_ResetTimer.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ResetTimer.Name = "button_ResetTimer";
+            this.button_ResetTimer.Size = new System.Drawing.Size(101, 36);
+            this.button_ResetTimer.TabIndex = 105;
+            this.button_ResetTimer.Text = "Reset (0)";
+            this.button_ResetTimer.UseVisualStyleBackColor = true;
+            this.button_ResetTimer.Click += new System.EventHandler(this.Button_ResetTimer_Click);
             // 
             // textBox_SetTimerTime
             // 
-            textBox_SetTimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_SetTimerTime.Location = new System.Drawing.Point(8, 64);
-            textBox_SetTimerTime.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetTimerTime.Name = "textBox_SetTimerTime";
-            textBox_SetTimerTime.Size = new System.Drawing.Size(96, 31);
-            textBox_SetTimerTime.TabIndex = 103;
-            textBox_SetTimerTime.Text = "0";
+            this.textBox_SetTimerTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SetTimerTime.Location = new System.Drawing.Point(8, 64);
+            this.textBox_SetTimerTime.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetTimerTime.Name = "textBox_SetTimerTime";
+            this.textBox_SetTimerTime.Size = new System.Drawing.Size(96, 31);
+            this.textBox_SetTimerTime.TabIndex = 103;
+            this.textBox_SetTimerTime.Text = "0";
             // 
             // groupBox_Stopwatch
             // 
-            groupBox_Stopwatch.Controls.Add(button_TimerLog);
-            groupBox_Stopwatch.Controls.Add(button_Stopwatch_Start_Stop);
-            groupBox_Stopwatch.Controls.Add(button_StopwatchReset);
-            groupBox_Stopwatch.Controls.Add(textBox_StopWatch);
-            groupBox_Stopwatch.Location = new System.Drawing.Point(38, 590);
-            groupBox_Stopwatch.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_Stopwatch.Name = "groupBox_Stopwatch";
-            groupBox_Stopwatch.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_Stopwatch.Size = new System.Drawing.Size(246, 108);
-            groupBox_Stopwatch.TabIndex = 106;
-            groupBox_Stopwatch.TabStop = false;
-            groupBox_Stopwatch.Text = "Stopwatch";
-            groupBox_Stopwatch.Visible = false;
+            this.groupBox_Stopwatch.Controls.Add(this.button_TimerLog);
+            this.groupBox_Stopwatch.Controls.Add(this.button_Stopwatch_Start_Stop);
+            this.groupBox_Stopwatch.Controls.Add(this.button_StopwatchReset);
+            this.groupBox_Stopwatch.Controls.Add(this.textBox_StopWatch);
+            this.groupBox_Stopwatch.Location = new System.Drawing.Point(38, 590);
+            this.groupBox_Stopwatch.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_Stopwatch.Name = "groupBox_Stopwatch";
+            this.groupBox_Stopwatch.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_Stopwatch.Size = new System.Drawing.Size(246, 108);
+            this.groupBox_Stopwatch.TabIndex = 106;
+            this.groupBox_Stopwatch.TabStop = false;
+            this.groupBox_Stopwatch.Text = "Stopwatch";
+            this.groupBox_Stopwatch.Visible = false;
             // 
             // button_TimerLog
             // 
-            button_TimerLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_TimerLog.Location = new System.Drawing.Point(173, 22);
-            button_TimerLog.Margin = new System.Windows.Forms.Padding(2);
-            button_TimerLog.Name = "button_TimerLog";
-            button_TimerLog.Size = new System.Drawing.Size(69, 36);
-            button_TimerLog.TabIndex = 106;
-            button_TimerLog.Text = "Log ->";
-            button_TimerLog.UseVisualStyleBackColor = true;
-            button_TimerLog.Click += new System.EventHandler(Button_TimerLog_Click);
+            this.button_TimerLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_TimerLog.Location = new System.Drawing.Point(173, 22);
+            this.button_TimerLog.Margin = new System.Windows.Forms.Padding(2);
+            this.button_TimerLog.Name = "button_TimerLog";
+            this.button_TimerLog.Size = new System.Drawing.Size(69, 36);
+            this.button_TimerLog.TabIndex = 106;
+            this.button_TimerLog.Text = "Log ->";
+            this.button_TimerLog.UseVisualStyleBackColor = true;
+            this.button_TimerLog.Click += new System.EventHandler(this.Button_TimerLog_Click);
             // 
             // button_Stopwatch_Start_Stop
             // 
-            button_Stopwatch_Start_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_Stopwatch_Start_Stop.Location = new System.Drawing.Point(8, 22);
-            button_Stopwatch_Start_Stop.Margin = new System.Windows.Forms.Padding(2);
-            button_Stopwatch_Start_Stop.Name = "button_Stopwatch_Start_Stop";
-            button_Stopwatch_Start_Stop.Size = new System.Drawing.Size(101, 36);
-            button_Stopwatch_Start_Stop.TabIndex = 104;
-            button_Stopwatch_Start_Stop.Text = "Start/Stop";
-            button_Stopwatch_Start_Stop.UseVisualStyleBackColor = true;
-            button_Stopwatch_Start_Stop.Click += new System.EventHandler(Button_Stopwatch_Start_Stop_Click);
+            this.button_Stopwatch_Start_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Stopwatch_Start_Stop.Location = new System.Drawing.Point(8, 22);
+            this.button_Stopwatch_Start_Stop.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Stopwatch_Start_Stop.Name = "button_Stopwatch_Start_Stop";
+            this.button_Stopwatch_Start_Stop.Size = new System.Drawing.Size(101, 36);
+            this.button_Stopwatch_Start_Stop.TabIndex = 104;
+            this.button_Stopwatch_Start_Stop.Text = "Start/Stop";
+            this.button_Stopwatch_Start_Stop.UseVisualStyleBackColor = true;
+            this.button_Stopwatch_Start_Stop.Click += new System.EventHandler(this.Button_Stopwatch_Start_Stop_Click);
             // 
             // button_StopwatchReset
             // 
-            button_StopwatchReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_StopwatchReset.Location = new System.Drawing.Point(109, 22);
-            button_StopwatchReset.Margin = new System.Windows.Forms.Padding(2);
-            button_StopwatchReset.Name = "button_StopwatchReset";
-            button_StopwatchReset.Size = new System.Drawing.Size(64, 36);
-            button_StopwatchReset.TabIndex = 105;
-            button_StopwatchReset.Text = "Reset";
-            button_StopwatchReset.UseVisualStyleBackColor = true;
-            button_StopwatchReset.Click += new System.EventHandler(Button_StopwatchReset_Click);
+            this.button_StopwatchReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_StopwatchReset.Location = new System.Drawing.Point(109, 22);
+            this.button_StopwatchReset.Margin = new System.Windows.Forms.Padding(2);
+            this.button_StopwatchReset.Name = "button_StopwatchReset";
+            this.button_StopwatchReset.Size = new System.Drawing.Size(64, 36);
+            this.button_StopwatchReset.TabIndex = 105;
+            this.button_StopwatchReset.Text = "Reset";
+            this.button_StopwatchReset.UseVisualStyleBackColor = true;
+            this.button_StopwatchReset.Click += new System.EventHandler(this.Button_StopwatchReset_Click);
             // 
             // textBox_StopWatch
             // 
-            textBox_StopWatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_StopWatch.Location = new System.Drawing.Point(8, 64);
-            textBox_StopWatch.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StopWatch.Name = "textBox_StopWatch";
-            textBox_StopWatch.ReadOnly = true;
-            textBox_StopWatch.Size = new System.Drawing.Size(184, 31);
-            textBox_StopWatch.TabIndex = 103;
-            textBox_StopWatch.Text = "0";
-            textBox_StopWatch.TextChanged += new System.EventHandler(TextBox_StopWatch_TextChanged);
+            this.textBox_StopWatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_StopWatch.Location = new System.Drawing.Point(8, 64);
+            this.textBox_StopWatch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StopWatch.Name = "textBox_StopWatch";
+            this.textBox_StopWatch.ReadOnly = true;
+            this.textBox_StopWatch.Size = new System.Drawing.Size(184, 31);
+            this.textBox_StopWatch.TabIndex = 103;
+            this.textBox_StopWatch.Text = "0";
+            this.textBox_StopWatch.TextChanged += new System.EventHandler(this.TextBox_StopWatch_TextChanged);
             // 
             // checkBox_RxHex
             // 
-            checkBox_RxHex.AutoSize = true;
-            checkBox_RxHex.Checked = true;
-            checkBox_RxHex.CheckState = System.Windows.Forms.CheckState.Checked;
-            checkBox_RxHex.Location = new System.Drawing.Point(595, 19);
-            checkBox_RxHex.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_RxHex.Name = "checkBox_RxHex";
-            checkBox_RxHex.Size = new System.Drawing.Size(111, 23);
-            checkBox_RxHex.TabIndex = 6;
-            checkBox_RxHex.Text = "Show Rx Hex";
-            checkBox_RxHex.UseVisualStyleBackColor = true;
+            this.checkBox_RxHex.AutoSize = true;
+            this.checkBox_RxHex.Checked = true;
+            this.checkBox_RxHex.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_RxHex.Location = new System.Drawing.Point(595, 19);
+            this.checkBox_RxHex.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_RxHex.Name = "checkBox_RxHex";
+            this.checkBox_RxHex.Size = new System.Drawing.Size(111, 23);
+            this.checkBox_RxHex.TabIndex = 6;
+            this.checkBox_RxHex.Text = "Show Rx Hex";
+            this.checkBox_RxHex.UseVisualStyleBackColor = true;
             // 
             // textBox_SerialPortRecognizePattern3
             // 
-            textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(232, 15);
-            textBox_SerialPortRecognizePattern3.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SerialPortRecognizePattern3.Name = "textBox_SerialPortRecognizePattern3";
-            textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(108, 27);
-            textBox_SerialPortRecognizePattern3.TabIndex = 75;
+            this.textBox_SerialPortRecognizePattern3.Location = new System.Drawing.Point(232, 15);
+            this.textBox_SerialPortRecognizePattern3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SerialPortRecognizePattern3.Name = "textBox_SerialPortRecognizePattern3";
+            this.textBox_SerialPortRecognizePattern3.Size = new System.Drawing.Size(108, 27);
+            this.textBox_SerialPortRecognizePattern3.TabIndex = 75;
             // 
             // textBox_SerialPortRecognizePattern2
             // 
-            textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(120, 16);
-            textBox_SerialPortRecognizePattern2.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SerialPortRecognizePattern2.Name = "textBox_SerialPortRecognizePattern2";
-            textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(108, 27);
-            textBox_SerialPortRecognizePattern2.TabIndex = 74;
+            this.textBox_SerialPortRecognizePattern2.Location = new System.Drawing.Point(120, 16);
+            this.textBox_SerialPortRecognizePattern2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SerialPortRecognizePattern2.Name = "textBox_SerialPortRecognizePattern2";
+            this.textBox_SerialPortRecognizePattern2.Size = new System.Drawing.Size(108, 27);
+            this.textBox_SerialPortRecognizePattern2.TabIndex = 74;
             // 
             // textBox_SerialPortRecognizePattern
             // 
-            textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(8, 16);
-            textBox_SerialPortRecognizePattern.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SerialPortRecognizePattern.Name = "textBox_SerialPortRecognizePattern";
-            textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(108, 27);
-            textBox_SerialPortRecognizePattern.TabIndex = 73;
+            this.textBox_SerialPortRecognizePattern.Location = new System.Drawing.Point(8, 16);
+            this.textBox_SerialPortRecognizePattern.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SerialPortRecognizePattern.Name = "textBox_SerialPortRecognizePattern";
+            this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(108, 27);
+            this.textBox_SerialPortRecognizePattern.TabIndex = 73;
             // 
             // checkBox_S1RecordLog
             // 
-            checkBox_S1RecordLog.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_S1RecordLog.AutoSize = true;
-            checkBox_S1RecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_S1RecordLog.Location = new System.Drawing.Point(345, 14);
-            checkBox_S1RecordLog.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_S1RecordLog.Name = "checkBox_S1RecordLog";
-            checkBox_S1RecordLog.Size = new System.Drawing.Size(83, 29);
-            checkBox_S1RecordLog.TabIndex = 69;
-            checkBox_S1RecordLog.Text = "Log to file";
-            checkBox_S1RecordLog.UseVisualStyleBackColor = true;
-            checkBox_S1RecordLog.CheckedChanged += new System.EventHandler(CheckBox_S1RecordLog_CheckedChanged);
+            this.checkBox_S1RecordLog.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_S1RecordLog.AutoSize = true;
+            this.checkBox_S1RecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(345, 14);
+            this.checkBox_S1RecordLog.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_S1RecordLog.Name = "checkBox_S1RecordLog";
+            this.checkBox_S1RecordLog.Size = new System.Drawing.Size(83, 29);
+            this.checkBox_S1RecordLog.TabIndex = 69;
+            this.checkBox_S1RecordLog.Text = "Log to file";
+            this.checkBox_S1RecordLog.UseVisualStyleBackColor = true;
+            this.checkBox_S1RecordLog.CheckedChanged += new System.EventHandler(this.CheckBox_S1RecordLog_CheckedChanged);
             // 
             // checkBox_S1Pause
             // 
-            checkBox_S1Pause.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_S1Pause.AutoSize = true;
-            checkBox_S1Pause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_S1Pause.Location = new System.Drawing.Point(443, 13);
-            checkBox_S1Pause.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_S1Pause.Name = "checkBox_S1Pause";
-            checkBox_S1Pause.Size = new System.Drawing.Size(58, 29);
-            checkBox_S1Pause.TabIndex = 70;
-            checkBox_S1Pause.Text = "Pause";
-            checkBox_S1Pause.UseVisualStyleBackColor = true;
-            checkBox_S1Pause.CheckedChanged += new System.EventHandler(CheckBox_S1Pause_CheckedChanged);
+            this.checkBox_S1Pause.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_S1Pause.AutoSize = true;
+            this.checkBox_S1Pause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_S1Pause.Location = new System.Drawing.Point(443, 13);
+            this.checkBox_S1Pause.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_S1Pause.Name = "checkBox_S1Pause";
+            this.checkBox_S1Pause.Size = new System.Drawing.Size(58, 29);
+            this.checkBox_S1Pause.TabIndex = 70;
+            this.checkBox_S1Pause.Text = "Pause";
+            this.checkBox_S1Pause.UseVisualStyleBackColor = true;
+            this.checkBox_S1Pause.CheckedChanged += new System.EventHandler(this.CheckBox_S1Pause_CheckedChanged);
             // 
             // txtS1_Clear
             // 
-            txtS1_Clear.Font = new System.Drawing.Font("Calibri", 12F);
-            txtS1_Clear.Location = new System.Drawing.Point(514, 13);
-            txtS1_Clear.Margin = new System.Windows.Forms.Padding(2);
-            txtS1_Clear.Name = "txtS1_Clear";
-            txtS1_Clear.Size = new System.Drawing.Size(62, 29);
-            txtS1_Clear.TabIndex = 69;
-            txtS1_Clear.Text = "Clear";
-            txtS1_Clear.UseVisualStyleBackColor = true;
-            txtS1_Clear.Click += new System.EventHandler(txtS1_Clear_Click);
+            this.txtS1_Clear.Font = new System.Drawing.Font("Calibri", 12F);
+            this.txtS1_Clear.Location = new System.Drawing.Point(514, 13);
+            this.txtS1_Clear.Margin = new System.Windows.Forms.Padding(2);
+            this.txtS1_Clear.Name = "txtS1_Clear";
+            this.txtS1_Clear.Size = new System.Drawing.Size(62, 29);
+            this.txtS1_Clear.TabIndex = 69;
+            this.txtS1_Clear.Text = "Clear";
+            this.txtS1_Clear.UseVisualStyleBackColor = true;
+            this.txtS1_Clear.Click += new System.EventHandler(this.txtS1_Clear_Click);
             // 
             // SerialPortLogger_TextBox
             // 
-            SerialPortLogger_TextBox.BackColor = System.Drawing.Color.LightGray;
-            SerialPortLogger_TextBox.EnableAutoDragDrop = true;
-            SerialPortLogger_TextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            SerialPortLogger_TextBox.Location = new System.Drawing.Point(4, 47);
-            SerialPortLogger_TextBox.Margin = new System.Windows.Forms.Padding(2);
-            SerialPortLogger_TextBox.Name = "SerialPortLogger_TextBox";
-            SerialPortLogger_TextBox.Size = new System.Drawing.Size(1397, 502);
-            SerialPortLogger_TextBox.TabIndex = 0;
-            SerialPortLogger_TextBox.Text = "";
-            SerialPortLogger_TextBox.TextChanged += new System.EventHandler(SerialPortLogger_TextBox_TextChanged);
+            this.SerialPortLogger_TextBox.BackColor = System.Drawing.Color.LightGray;
+            this.SerialPortLogger_TextBox.EnableAutoDragDrop = true;
+            this.SerialPortLogger_TextBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SerialPortLogger_TextBox.Location = new System.Drawing.Point(4, 47);
+            this.SerialPortLogger_TextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SerialPortLogger_TextBox.Name = "SerialPortLogger_TextBox";
+            this.SerialPortLogger_TextBox.Size = new System.Drawing.Size(1397, 502);
+            this.SerialPortLogger_TextBox.TabIndex = 0;
+            this.SerialPortLogger_TextBox.Text = "";
+            this.SerialPortLogger_TextBox.TextChanged += new System.EventHandler(this.SerialPortLogger_TextBox_TextChanged);
             // 
             // tabPage_GenericFrame
             // 
-            tabPage_GenericFrame.Controls.Add(button52);
-            tabPage_GenericFrame.Controls.Add(groupBox31);
-            tabPage_GenericFrame.Controls.Add(groupBox_clientTX);
-            tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
-            tabPage_GenericFrame.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_GenericFrame.Name = "tabPage_GenericFrame";
-            tabPage_GenericFrame.Size = new System.Drawing.Size(1414, 659);
-            tabPage_GenericFrame.TabIndex = 10;
-            tabPage_GenericFrame.Text = "Generic Kratos frame";
-            tabPage_GenericFrame.UseVisualStyleBackColor = true;
-            tabPage_GenericFrame.Enter += new System.EventHandler(tabPage_GenericFrame_Enter);
-            tabPage_GenericFrame.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(tabPage_GenericFrame_PreviewKeyDown);
+            this.tabPage_GenericFrame.Controls.Add(this.button52);
+            this.tabPage_GenericFrame.Controls.Add(this.groupBox31);
+            this.tabPage_GenericFrame.Controls.Add(this.groupBox_clientTX);
+            this.tabPage_GenericFrame.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_GenericFrame.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_GenericFrame.Name = "tabPage_GenericFrame";
+            this.tabPage_GenericFrame.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_GenericFrame.TabIndex = 10;
+            this.tabPage_GenericFrame.Text = "Generic Kratos frame";
+            this.tabPage_GenericFrame.UseVisualStyleBackColor = true;
+            this.tabPage_GenericFrame.Enter += new System.EventHandler(this.tabPage_GenericFrame_Enter);
+            this.tabPage_GenericFrame.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tabPage_GenericFrame_PreviewKeyDown);
             // 
             // button52
             // 
-            button52.Location = new System.Drawing.Point(13, 506);
-            button52.Margin = new System.Windows.Forms.Padding(2);
-            button52.Name = "button52";
-            button52.Size = new System.Drawing.Size(69, 22);
-            button52.TabIndex = 15;
-            button52.Text = "Clear";
-            button52.UseVisualStyleBackColor = true;
-            button52.Click += new System.EventHandler(button52_Click);
+            this.button52.Location = new System.Drawing.Point(13, 506);
+            this.button52.Margin = new System.Windows.Forms.Padding(2);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(69, 22);
+            this.button52.TabIndex = 15;
+            this.button52.Text = "Clear";
+            this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
             // groupBox31
             // 
-            groupBox31.Controls.Add(textBox_RxClientCheckSum);
-            groupBox31.Controls.Add(label24);
-            groupBox31.Controls.Add(label41);
-            groupBox31.Controls.Add(textBox_RxClientDataLength);
-            groupBox31.Controls.Add(label23);
-            groupBox31.Controls.Add(label18);
-            groupBox31.Controls.Add(label13);
-            groupBox31.Controls.Add(textBox_RxClientPreamble);
-            groupBox31.Controls.Add(textBox_RxClientOpcode);
-            groupBox31.Controls.Add(textBox_RxClientData);
-            groupBox31.Controls.Add(label15);
-            groupBox31.Controls.Add(label16);
-            groupBox31.Location = new System.Drawing.Point(577, 15);
-            groupBox31.Margin = new System.Windows.Forms.Padding(2);
-            groupBox31.Name = "groupBox31";
-            groupBox31.Padding = new System.Windows.Forms.Padding(2);
-            groupBox31.Size = new System.Drawing.Size(829, 197);
-            groupBox31.TabIndex = 14;
-            groupBox31.TabStop = false;
-            groupBox31.Text = "Data received";
+            this.groupBox31.Controls.Add(this.textBox_RxClientCheckSum);
+            this.groupBox31.Controls.Add(this.label24);
+            this.groupBox31.Controls.Add(this.label41);
+            this.groupBox31.Controls.Add(this.textBox_RxClientDataLength);
+            this.groupBox31.Controls.Add(this.label23);
+            this.groupBox31.Controls.Add(this.label18);
+            this.groupBox31.Controls.Add(this.label13);
+            this.groupBox31.Controls.Add(this.textBox_RxClientPreamble);
+            this.groupBox31.Controls.Add(this.textBox_RxClientOpcode);
+            this.groupBox31.Controls.Add(this.textBox_RxClientData);
+            this.groupBox31.Controls.Add(this.label15);
+            this.groupBox31.Controls.Add(this.label16);
+            this.groupBox31.Location = new System.Drawing.Point(577, 15);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox31.Size = new System.Drawing.Size(829, 197);
+            this.groupBox31.TabIndex = 14;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Data received";
             // 
             // textBox_RxClientCheckSum
             // 
-            textBox_RxClientCheckSum.Location = new System.Drawing.Point(89, 155);
-            textBox_RxClientCheckSum.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RxClientCheckSum.MaxLength = 4;
-            textBox_RxClientCheckSum.Name = "textBox_RxClientCheckSum";
-            textBox_RxClientCheckSum.ReadOnly = true;
-            textBox_RxClientCheckSum.Size = new System.Drawing.Size(92, 26);
-            textBox_RxClientCheckSum.TabIndex = 15;
-            textBox_RxClientCheckSum.TabStop = false;
+            this.textBox_RxClientCheckSum.Location = new System.Drawing.Point(89, 155);
+            this.textBox_RxClientCheckSum.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RxClientCheckSum.MaxLength = 4;
+            this.textBox_RxClientCheckSum.Name = "textBox_RxClientCheckSum";
+            this.textBox_RxClientCheckSum.ReadOnly = true;
+            this.textBox_RxClientCheckSum.Size = new System.Drawing.Size(92, 26);
+            this.textBox_RxClientCheckSum.TabIndex = 15;
+            this.textBox_RxClientCheckSum.TabStop = false;
             // 
             // label24
             // 
-            label24.AutoSize = true;
-            label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label24.ForeColor = System.Drawing.Color.Maroon;
-            label24.Location = new System.Drawing.Point(186, 122);
-            label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(65, 21);
-            label24.TabIndex = 11;
-            label24.Text = "Decimal";
+            this.label24.AutoSize = true;
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Maroon;
+            this.label24.Location = new System.Drawing.Point(186, 122);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(65, 21);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Decimal";
             // 
             // label41
             // 
-            label41.AutoSize = true;
-            label41.Location = new System.Drawing.Point(9, 159);
-            label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label41.Name = "label41";
-            label41.Size = new System.Drawing.Size(75, 18);
-            label41.TabIndex = 14;
-            label41.Text = "Check Sum";
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(9, 159);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(75, 18);
+            this.label41.TabIndex = 14;
+            this.label41.Text = "Check Sum";
             // 
             // textBox_RxClientDataLength
             // 
-            textBox_RxClientDataLength.Location = new System.Drawing.Point(89, 121);
-            textBox_RxClientDataLength.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RxClientDataLength.MaxLength = 4;
-            textBox_RxClientDataLength.Name = "textBox_RxClientDataLength";
-            textBox_RxClientDataLength.ReadOnly = true;
-            textBox_RxClientDataLength.Size = new System.Drawing.Size(92, 26);
-            textBox_RxClientDataLength.TabIndex = 10;
-            textBox_RxClientDataLength.TabStop = false;
+            this.textBox_RxClientDataLength.Location = new System.Drawing.Point(89, 121);
+            this.textBox_RxClientDataLength.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RxClientDataLength.MaxLength = 4;
+            this.textBox_RxClientDataLength.Name = "textBox_RxClientDataLength";
+            this.textBox_RxClientDataLength.ReadOnly = true;
+            this.textBox_RxClientDataLength.Size = new System.Drawing.Size(92, 26);
+            this.textBox_RxClientDataLength.TabIndex = 10;
+            this.textBox_RxClientDataLength.TabStop = false;
             // 
             // label23
             // 
-            label23.AutoSize = true;
-            label23.Location = new System.Drawing.Point(9, 125);
-            label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(81, 18);
-            label23.TabIndex = 9;
-            label23.Text = "Data Length";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(9, 125);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 18);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Data Length";
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label18.ForeColor = System.Drawing.Color.Maroon;
-            label18.Location = new System.Drawing.Point(186, 17);
-            label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(97, 21);
-            label18.TabIndex = 8;
-            label18.Text = "Hexadecimal";
+            this.label18.AutoSize = true;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Maroon;
+            this.label18.Location = new System.Drawing.Point(186, 17);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 21);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Hexadecimal";
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(9, 20);
-            label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(68, 18);
-            label13.TabIndex = 4;
-            label13.Text = "Preamble";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 20);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 18);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Preamble";
             // 
             // textBox_RxClientPreamble
             // 
-            textBox_RxClientPreamble.Location = new System.Drawing.Point(89, 18);
-            textBox_RxClientPreamble.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RxClientPreamble.MaxLength = 4;
-            textBox_RxClientPreamble.Name = "textBox_RxClientPreamble";
-            textBox_RxClientPreamble.ReadOnly = true;
-            textBox_RxClientPreamble.Size = new System.Drawing.Size(92, 26);
-            textBox_RxClientPreamble.TabIndex = 0;
-            textBox_RxClientPreamble.TabStop = false;
-            textBox_RxClientPreamble.TextChanged += new System.EventHandler(textBox_RxClientPreamble_TextChanged);
+            this.textBox_RxClientPreamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_RxClientPreamble.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RxClientPreamble.MaxLength = 4;
+            this.textBox_RxClientPreamble.Name = "textBox_RxClientPreamble";
+            this.textBox_RxClientPreamble.ReadOnly = true;
+            this.textBox_RxClientPreamble.Size = new System.Drawing.Size(92, 26);
+            this.textBox_RxClientPreamble.TabIndex = 0;
+            this.textBox_RxClientPreamble.TabStop = false;
+            this.textBox_RxClientPreamble.TextChanged += new System.EventHandler(this.textBox_RxClientPreamble_TextChanged);
             // 
             // textBox_RxClientOpcode
             // 
-            textBox_RxClientOpcode.Location = new System.Drawing.Point(89, 52);
-            textBox_RxClientOpcode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RxClientOpcode.MaxLength = 4;
-            textBox_RxClientOpcode.Name = "textBox_RxClientOpcode";
-            textBox_RxClientOpcode.ReadOnly = true;
-            textBox_RxClientOpcode.Size = new System.Drawing.Size(92, 26);
-            textBox_RxClientOpcode.TabIndex = 1;
-            textBox_RxClientOpcode.TabStop = false;
+            this.textBox_RxClientOpcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_RxClientOpcode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RxClientOpcode.MaxLength = 4;
+            this.textBox_RxClientOpcode.Name = "textBox_RxClientOpcode";
+            this.textBox_RxClientOpcode.ReadOnly = true;
+            this.textBox_RxClientOpcode.Size = new System.Drawing.Size(92, 26);
+            this.textBox_RxClientOpcode.TabIndex = 1;
+            this.textBox_RxClientOpcode.TabStop = false;
             // 
             // textBox_RxClientData
             // 
-            textBox_RxClientData.Location = new System.Drawing.Point(89, 86);
-            textBox_RxClientData.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RxClientData.Name = "textBox_RxClientData";
-            textBox_RxClientData.ReadOnly = true;
-            textBox_RxClientData.Size = new System.Drawing.Size(608, 26);
-            textBox_RxClientData.TabIndex = 2;
-            textBox_RxClientData.TabStop = false;
-            textBox_RxClientData.TextChanged += new System.EventHandler(textBox_RxClientData_TextChanged);
+            this.textBox_RxClientData.Location = new System.Drawing.Point(89, 86);
+            this.textBox_RxClientData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RxClientData.Name = "textBox_RxClientData";
+            this.textBox_RxClientData.ReadOnly = true;
+            this.textBox_RxClientData.Size = new System.Drawing.Size(608, 26);
+            this.textBox_RxClientData.TabIndex = 2;
+            this.textBox_RxClientData.TabStop = false;
+            this.textBox_RxClientData.TextChanged += new System.EventHandler(this.textBox_RxClientData_TextChanged);
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Location = new System.Drawing.Point(9, 58);
-            label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(56, 18);
-            label15.TabIndex = 5;
-            label15.Text = "Opcode";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 58);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 18);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Opcode";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Location = new System.Drawing.Point(9, 88);
-            label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(36, 18);
-            label16.TabIndex = 6;
-            label16.Text = "Data";
-            label16.Click += new System.EventHandler(label16_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 88);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 18);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Data";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // groupBox_clientTX
             // 
-            groupBox_clientTX.Controls.Add(button_SendProtocolSerialPort);
-            groupBox_clientTX.Controls.Add(groupBox41);
-            groupBox_clientTX.Controls.Add(label17);
-            groupBox_clientTX.Controls.Add(label4);
-            groupBox_clientTX.Controls.Add(textBox_Preamble);
-            groupBox_clientTX.Controls.Add(button_SendProtocolTCPIP);
-            groupBox_clientTX.Controls.Add(textBox_Opcode);
-            groupBox_clientTX.Controls.Add(textBox_data);
-            groupBox_clientTX.Controls.Add(label6);
-            groupBox_clientTX.Controls.Add(label11);
-            groupBox_clientTX.Location = new System.Drawing.Point(13, 12);
-            groupBox_clientTX.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_clientTX.Name = "groupBox_clientTX";
-            groupBox_clientTX.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_clientTX.Size = new System.Drawing.Size(560, 490);
-            groupBox_clientTX.TabIndex = 13;
-            groupBox_clientTX.TabStop = false;
-            groupBox_clientTX.Text = "Send Data";
-            groupBox_clientTX.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(groupBox_clientTX_PreviewKeyDown);
+            this.groupBox_clientTX.Controls.Add(this.button_SendProtocolSerialPort);
+            this.groupBox_clientTX.Controls.Add(this.groupBox41);
+            this.groupBox_clientTX.Controls.Add(this.label17);
+            this.groupBox_clientTX.Controls.Add(this.label4);
+            this.groupBox_clientTX.Controls.Add(this.textBox_Preamble);
+            this.groupBox_clientTX.Controls.Add(this.button_SendProtocolTCPIP);
+            this.groupBox_clientTX.Controls.Add(this.textBox_Opcode);
+            this.groupBox_clientTX.Controls.Add(this.textBox_data);
+            this.groupBox_clientTX.Controls.Add(this.label6);
+            this.groupBox_clientTX.Controls.Add(this.label11);
+            this.groupBox_clientTX.Location = new System.Drawing.Point(13, 12);
+            this.groupBox_clientTX.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_clientTX.Name = "groupBox_clientTX";
+            this.groupBox_clientTX.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_clientTX.Size = new System.Drawing.Size(560, 490);
+            this.groupBox_clientTX.TabIndex = 13;
+            this.groupBox_clientTX.TabStop = false;
+            this.groupBox_clientTX.Text = "Send Data";
+            this.groupBox_clientTX.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.groupBox_clientTX_PreviewKeyDown);
             // 
             // button_SendProtocolSerialPort
             // 
-            button_SendProtocolSerialPort.Location = new System.Drawing.Point(120, 122);
-            button_SendProtocolSerialPort.Margin = new System.Windows.Forms.Padding(2);
-            button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
-            button_SendProtocolSerialPort.Size = new System.Drawing.Size(110, 22);
-            button_SendProtocolSerialPort.TabIndex = 16;
-            button_SendProtocolSerialPort.TabStop = false;
-            button_SendProtocolSerialPort.Text = "Send SerialPort";
-            button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
-            button_SendProtocolSerialPort.Click += new System.EventHandler(button_SendProtocolSerialPort_Click);
+            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(120, 122);
+            this.button_SendProtocolSerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
+            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(110, 22);
+            this.button_SendProtocolSerialPort.TabIndex = 16;
+            this.button_SendProtocolSerialPort.TabStop = false;
+            this.button_SendProtocolSerialPort.Text = "Send SerialPort";
+            this.button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
+            this.button_SendProtocolSerialPort.Click += new System.EventHandler(this.button_SendProtocolSerialPort_Click);
             // 
             // groupBox41
             // 
-            groupBox41.Controls.Add(textBox_SentChecksum);
-            groupBox41.Controls.Add(label48);
-            groupBox41.Controls.Add(label42);
-            groupBox41.Controls.Add(textBox_SentDataLength);
-            groupBox41.Controls.Add(label43);
-            groupBox41.Controls.Add(label44);
-            groupBox41.Controls.Add(label45);
-            groupBox41.Controls.Add(textBox_SentPreamble);
-            groupBox41.Controls.Add(textBox_SentOpcode);
-            groupBox41.Controls.Add(textBox_SentData);
-            groupBox41.Controls.Add(label46);
-            groupBox41.Controls.Add(label47);
-            groupBox41.Location = new System.Drawing.Point(6, 174);
-            groupBox41.Margin = new System.Windows.Forms.Padding(2);
-            groupBox41.Name = "groupBox41";
-            groupBox41.Padding = new System.Windows.Forms.Padding(2);
-            groupBox41.Size = new System.Drawing.Size(544, 312);
-            groupBox41.TabIndex = 15;
-            groupBox41.TabStop = false;
-            groupBox41.Text = "Data Sent";
+            this.groupBox41.Controls.Add(this.textBox_SentChecksum);
+            this.groupBox41.Controls.Add(this.label48);
+            this.groupBox41.Controls.Add(this.label42);
+            this.groupBox41.Controls.Add(this.textBox_SentDataLength);
+            this.groupBox41.Controls.Add(this.label43);
+            this.groupBox41.Controls.Add(this.label44);
+            this.groupBox41.Controls.Add(this.label45);
+            this.groupBox41.Controls.Add(this.textBox_SentPreamble);
+            this.groupBox41.Controls.Add(this.textBox_SentOpcode);
+            this.groupBox41.Controls.Add(this.textBox_SentData);
+            this.groupBox41.Controls.Add(this.label46);
+            this.groupBox41.Controls.Add(this.label47);
+            this.groupBox41.Location = new System.Drawing.Point(6, 174);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox41.Size = new System.Drawing.Size(544, 312);
+            this.groupBox41.TabIndex = 15;
+            this.groupBox41.TabStop = false;
+            this.groupBox41.Text = "Data Sent";
             // 
             // textBox_SentChecksum
             // 
-            textBox_SentChecksum.Location = new System.Drawing.Point(89, 157);
-            textBox_SentChecksum.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SentChecksum.MaxLength = 4;
-            textBox_SentChecksum.Name = "textBox_SentChecksum";
-            textBox_SentChecksum.ReadOnly = true;
-            textBox_SentChecksum.Size = new System.Drawing.Size(92, 26);
-            textBox_SentChecksum.TabIndex = 13;
-            textBox_SentChecksum.TabStop = false;
+            this.textBox_SentChecksum.Location = new System.Drawing.Point(89, 157);
+            this.textBox_SentChecksum.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SentChecksum.MaxLength = 4;
+            this.textBox_SentChecksum.Name = "textBox_SentChecksum";
+            this.textBox_SentChecksum.ReadOnly = true;
+            this.textBox_SentChecksum.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SentChecksum.TabIndex = 13;
+            this.textBox_SentChecksum.TabStop = false;
             // 
             // label48
             // 
-            label48.AutoSize = true;
-            label48.Location = new System.Drawing.Point(9, 161);
-            label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label48.Name = "label48";
-            label48.Size = new System.Drawing.Size(75, 18);
-            label48.TabIndex = 12;
-            label48.Text = "Check Sum";
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(9, 161);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(75, 18);
+            this.label48.TabIndex = 12;
+            this.label48.Text = "Check Sum";
             // 
             // label42
             // 
-            label42.AutoSize = true;
-            label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label42.ForeColor = System.Drawing.Color.Maroon;
-            label42.Location = new System.Drawing.Point(186, 122);
-            label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label42.Name = "label42";
-            label42.Size = new System.Drawing.Size(65, 21);
-            label42.TabIndex = 11;
-            label42.Text = "Decimal";
+            this.label42.AutoSize = true;
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Maroon;
+            this.label42.Location = new System.Drawing.Point(186, 122);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(65, 21);
+            this.label42.TabIndex = 11;
+            this.label42.Text = "Decimal";
             // 
             // textBox_SentDataLength
             // 
-            textBox_SentDataLength.Location = new System.Drawing.Point(89, 121);
-            textBox_SentDataLength.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SentDataLength.MaxLength = 4;
-            textBox_SentDataLength.Name = "textBox_SentDataLength";
-            textBox_SentDataLength.ReadOnly = true;
-            textBox_SentDataLength.Size = new System.Drawing.Size(92, 26);
-            textBox_SentDataLength.TabIndex = 10;
-            textBox_SentDataLength.TabStop = false;
+            this.textBox_SentDataLength.Location = new System.Drawing.Point(89, 121);
+            this.textBox_SentDataLength.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SentDataLength.MaxLength = 4;
+            this.textBox_SentDataLength.Name = "textBox_SentDataLength";
+            this.textBox_SentDataLength.ReadOnly = true;
+            this.textBox_SentDataLength.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SentDataLength.TabIndex = 10;
+            this.textBox_SentDataLength.TabStop = false;
             // 
             // label43
             // 
-            label43.AutoSize = true;
-            label43.Location = new System.Drawing.Point(9, 125);
-            label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label43.Name = "label43";
-            label43.Size = new System.Drawing.Size(81, 18);
-            label43.TabIndex = 9;
-            label43.Text = "Data Length";
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(9, 125);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(81, 18);
+            this.label43.TabIndex = 9;
+            this.label43.Text = "Data Length";
             // 
             // label44
             // 
-            label44.AutoSize = true;
-            label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label44.ForeColor = System.Drawing.Color.Maroon;
-            label44.Location = new System.Drawing.Point(192, 22);
-            label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label44.Name = "label44";
-            label44.Size = new System.Drawing.Size(97, 21);
-            label44.TabIndex = 8;
-            label44.Text = "Hexadecimal";
+            this.label44.AutoSize = true;
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Maroon;
+            this.label44.Location = new System.Drawing.Point(192, 22);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(97, 21);
+            this.label44.TabIndex = 8;
+            this.label44.Text = "Hexadecimal";
             // 
             // label45
             // 
-            label45.AutoSize = true;
-            label45.Location = new System.Drawing.Point(9, 20);
-            label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label45.Name = "label45";
-            label45.Size = new System.Drawing.Size(68, 18);
-            label45.TabIndex = 4;
-            label45.Text = "Preamble";
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(9, 20);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(68, 18);
+            this.label45.TabIndex = 4;
+            this.label45.Text = "Preamble";
             // 
             // textBox_SentPreamble
             // 
-            textBox_SentPreamble.Location = new System.Drawing.Point(89, 18);
-            textBox_SentPreamble.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SentPreamble.MaxLength = 4;
-            textBox_SentPreamble.Name = "textBox_SentPreamble";
-            textBox_SentPreamble.ReadOnly = true;
-            textBox_SentPreamble.Size = new System.Drawing.Size(92, 26);
-            textBox_SentPreamble.TabIndex = 0;
-            textBox_SentPreamble.TabStop = false;
+            this.textBox_SentPreamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_SentPreamble.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SentPreamble.MaxLength = 4;
+            this.textBox_SentPreamble.Name = "textBox_SentPreamble";
+            this.textBox_SentPreamble.ReadOnly = true;
+            this.textBox_SentPreamble.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SentPreamble.TabIndex = 0;
+            this.textBox_SentPreamble.TabStop = false;
             // 
             // textBox_SentOpcode
             // 
-            textBox_SentOpcode.Location = new System.Drawing.Point(89, 52);
-            textBox_SentOpcode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SentOpcode.MaxLength = 4;
-            textBox_SentOpcode.Name = "textBox_SentOpcode";
-            textBox_SentOpcode.ReadOnly = true;
-            textBox_SentOpcode.Size = new System.Drawing.Size(92, 26);
-            textBox_SentOpcode.TabIndex = 1;
-            textBox_SentOpcode.TabStop = false;
+            this.textBox_SentOpcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_SentOpcode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SentOpcode.MaxLength = 4;
+            this.textBox_SentOpcode.Name = "textBox_SentOpcode";
+            this.textBox_SentOpcode.ReadOnly = true;
+            this.textBox_SentOpcode.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SentOpcode.TabIndex = 1;
+            this.textBox_SentOpcode.TabStop = false;
             // 
             // textBox_SentData
             // 
-            textBox_SentData.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            textBox_SentData.Location = new System.Drawing.Point(89, 86);
-            textBox_SentData.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SentData.Name = "textBox_SentData";
-            textBox_SentData.ReadOnly = true;
-            textBox_SentData.Size = new System.Drawing.Size(449, 26);
-            textBox_SentData.TabIndex = 2;
-            textBox_SentData.TabStop = false;
+            this.textBox_SentData.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_SentData.Location = new System.Drawing.Point(89, 86);
+            this.textBox_SentData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SentData.Name = "textBox_SentData";
+            this.textBox_SentData.ReadOnly = true;
+            this.textBox_SentData.Size = new System.Drawing.Size(449, 26);
+            this.textBox_SentData.TabIndex = 2;
+            this.textBox_SentData.TabStop = false;
             // 
             // label46
             // 
-            label46.AutoSize = true;
-            label46.Location = new System.Drawing.Point(9, 58);
-            label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label46.Name = "label46";
-            label46.Size = new System.Drawing.Size(56, 18);
-            label46.TabIndex = 5;
-            label46.Text = "Opcode";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(9, 58);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(56, 18);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Opcode";
             // 
             // label47
             // 
-            label47.AutoSize = true;
-            label47.Location = new System.Drawing.Point(9, 88);
-            label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label47.Name = "label47";
-            label47.Size = new System.Drawing.Size(36, 18);
-            label47.TabIndex = 6;
-            label47.Text = "Data";
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(9, 88);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(36, 18);
+            this.label47.TabIndex = 6;
+            this.label47.Text = "Data";
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label17.ForeColor = System.Drawing.Color.Maroon;
-            label17.Location = new System.Drawing.Point(192, 22);
-            label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(97, 21);
-            label17.TabIndex = 7;
-            label17.Text = "Hexadecimal";
+            this.label17.AutoSize = true;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Maroon;
+            this.label17.Location = new System.Drawing.Point(192, 22);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 21);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Hexadecimal";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(17, 20);
-            label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(68, 18);
-            label4.TabIndex = 4;
-            label4.Text = "Preamble";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Preamble";
             // 
             // textBox_Preamble
             // 
-            textBox_Preamble.Location = new System.Drawing.Point(89, 18);
-            textBox_Preamble.Margin = new System.Windows.Forms.Padding(2);
-            textBox_Preamble.MaxLength = 5;
-            textBox_Preamble.Name = "textBox_Preamble";
-            textBox_Preamble.Size = new System.Drawing.Size(92, 26);
-            textBox_Preamble.TabIndex = 0;
-            textBox_Preamble.Text = "23";
-            textBox_Preamble.TextChanged += new System.EventHandler(textBox_Preamble_TextChanged);
-            textBox_Preamble.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox_Preamble_KeyDown);
+            this.textBox_Preamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_Preamble.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Preamble.MaxLength = 5;
+            this.textBox_Preamble.Name = "textBox_Preamble";
+            this.textBox_Preamble.Size = new System.Drawing.Size(92, 26);
+            this.textBox_Preamble.TabIndex = 0;
+            this.textBox_Preamble.Text = "23";
+            this.textBox_Preamble.TextChanged += new System.EventHandler(this.textBox_Preamble_TextChanged);
+            this.textBox_Preamble.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Preamble_KeyDown);
             // 
             // button_SendProtocolTCPIP
             // 
-            button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 122);
-            button_SendProtocolTCPIP.Margin = new System.Windows.Forms.Padding(2);
-            button_SendProtocolTCPIP.Name = "button_SendProtocolTCPIP";
-            button_SendProtocolTCPIP.Size = new System.Drawing.Size(109, 22);
-            button_SendProtocolTCPIP.TabIndex = 3;
-            button_SendProtocolTCPIP.TabStop = false;
-            button_SendProtocolTCPIP.Text = "Send TCP/IP";
-            button_SendProtocolTCPIP.UseVisualStyleBackColor = true;
-            button_SendProtocolTCPIP.Click += new System.EventHandler(button_Send_Click);
+            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 122);
+            this.button_SendProtocolTCPIP.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SendProtocolTCPIP.Name = "button_SendProtocolTCPIP";
+            this.button_SendProtocolTCPIP.Size = new System.Drawing.Size(109, 22);
+            this.button_SendProtocolTCPIP.TabIndex = 3;
+            this.button_SendProtocolTCPIP.TabStop = false;
+            this.button_SendProtocolTCPIP.Text = "Send TCP/IP";
+            this.button_SendProtocolTCPIP.UseVisualStyleBackColor = true;
+            this.button_SendProtocolTCPIP.Click += new System.EventHandler(this.button_Send_Click);
             // 
             // textBox_Opcode
             // 
-            textBox_Opcode.Location = new System.Drawing.Point(89, 52);
-            textBox_Opcode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_Opcode.MaxLength = 5;
-            textBox_Opcode.Name = "textBox_Opcode";
-            textBox_Opcode.Size = new System.Drawing.Size(92, 26);
-            textBox_Opcode.TabIndex = 1;
-            textBox_Opcode.Text = "70 00";
-            textBox_Opcode.TextChanged += new System.EventHandler(textBox_Opcode_TextChanged);
-            textBox_Opcode.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox_Opcode_KeyDown);
+            this.textBox_Opcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_Opcode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Opcode.MaxLength = 5;
+            this.textBox_Opcode.Name = "textBox_Opcode";
+            this.textBox_Opcode.Size = new System.Drawing.Size(92, 26);
+            this.textBox_Opcode.TabIndex = 1;
+            this.textBox_Opcode.Text = "70 00";
+            this.textBox_Opcode.TextChanged += new System.EventHandler(this.textBox_Opcode_TextChanged);
+            this.textBox_Opcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Opcode_KeyDown);
             // 
             // textBox_data
             // 
-            textBox_data.Location = new System.Drawing.Point(89, 86);
-            textBox_data.Margin = new System.Windows.Forms.Padding(2);
-            textBox_data.Name = "textBox_data";
-            textBox_data.Size = new System.Drawing.Size(206, 26);
-            textBox_data.TabIndex = 2;
-            textBox_data.Text = "04 00 00 00";
-            textBox_data.TextChanged += new System.EventHandler(textBox_data_TextChanged);
-            textBox_data.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox_data_KeyDown);
+            this.textBox_data.Location = new System.Drawing.Point(89, 86);
+            this.textBox_data.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_data.Name = "textBox_data";
+            this.textBox_data.Size = new System.Drawing.Size(206, 26);
+            this.textBox_data.TabIndex = 2;
+            this.textBox_data.Text = "04 00 00 00";
+            this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
+            this.textBox_data.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_data_KeyDown);
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(17, 55);
-            label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(56, 18);
-            label6.TabIndex = 5;
-            label6.Text = "Opcode";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 55);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 18);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Opcode";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(14, 88);
-            label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(36, 18);
-            label11.TabIndex = 6;
-            label11.Text = "Data";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 88);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 18);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Data";
             // 
             // tabPage_Commands
             // 
-            tabPage_Commands.Controls.Add(groupBox40);
-            tabPage_Commands.Controls.Add(groupBox32);
-            tabPage_Commands.Location = new System.Drawing.Point(4, 27);
-            tabPage_Commands.Margin = new System.Windows.Forms.Padding(2);
-            tabPage_Commands.Name = "tabPage_Commands";
-            tabPage_Commands.Size = new System.Drawing.Size(1414, 659);
-            tabPage_Commands.TabIndex = 11;
-            tabPage_Commands.Text = "SSPA Commands";
-            tabPage_Commands.UseVisualStyleBackColor = true;
+            this.tabPage_Commands.Controls.Add(this.groupBox40);
+            this.tabPage_Commands.Controls.Add(this.groupBox32);
+            this.tabPage_Commands.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Commands.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Commands.Name = "tabPage_Commands";
+            this.tabPage_Commands.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_Commands.TabIndex = 11;
+            this.tabPage_Commands.Text = "SSPA Commands";
+            this.tabPage_Commands.UseVisualStyleBackColor = true;
             // 
             // groupBox40
             // 
-            groupBox40.Controls.Add(tabControl_System);
-            groupBox40.Location = new System.Drawing.Point(9, 8);
-            groupBox40.Margin = new System.Windows.Forms.Padding(2);
-            groupBox40.Name = "groupBox40";
-            groupBox40.Padding = new System.Windows.Forms.Padding(2);
-            groupBox40.Size = new System.Drawing.Size(886, 642);
-            groupBox40.TabIndex = 11;
-            groupBox40.TabStop = false;
-            groupBox40.Text = "Commands for SSPA (press right click on mouse for help)";
+            this.groupBox40.Controls.Add(this.tabControl_System);
+            this.groupBox40.Location = new System.Drawing.Point(9, 8);
+            this.groupBox40.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox40.Size = new System.Drawing.Size(886, 642);
+            this.groupBox40.TabIndex = 11;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "Commands for SSPA (press right click on mouse for help)";
             // 
             // tabControl_System
             // 
-            tabControl_System.Controls.Add(tabPage1);
-            tabControl_System.Controls.Add(tabPage2);
-            tabControl_System.Location = new System.Drawing.Point(6, 22);
-            tabControl_System.Margin = new System.Windows.Forms.Padding(2);
-            tabControl_System.Name = "tabControl_System";
-            tabControl_System.SelectedIndex = 0;
-            tabControl_System.Size = new System.Drawing.Size(875, 615);
-            tabControl_System.TabIndex = 21;
-            tabControl_System.SelectedIndexChanged += new System.EventHandler(tabControl_MiniAda_SelectedIndexChanged);
+            this.tabControl_System.Controls.Add(this.tabPage1);
+            this.tabControl_System.Controls.Add(this.tabPage2);
+            this.tabControl_System.Location = new System.Drawing.Point(6, 22);
+            this.tabControl_System.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl_System.Name = "tabControl_System";
+            this.tabControl_System.SelectedIndex = 0;
+            this.tabControl_System.Size = new System.Drawing.Size(875, 615);
+            this.tabControl_System.TabIndex = 21;
+            this.tabControl_System.SelectedIndexChanged += new System.EventHandler(this.tabControl_MiniAda_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(textBox_SimulatorDiscreteCALSARcontrol);
-            tabPage1.Controls.Add(textBox16);
-            tabPage1.Controls.Add(button117);
-            tabPage1.Controls.Add(button_SimulatorDiscreteCALSARcontrol);
-            tabPage1.Controls.Add(textBox15);
-            tabPage1.Controls.Add(button115);
-            tabPage1.Controls.Add(button114);
-            tabPage1.Controls.Add(textBox14);
-            tabPage1.Controls.Add(button113);
-            tabPage1.Controls.Add(textBox13);
-            tabPage1.Controls.Add(button112);
-            tabPage1.Controls.Add(textBox12);
-            tabPage1.Controls.Add(button111);
-            tabPage1.Controls.Add(textBox_RFGenParms);
-            tabPage1.Controls.Add(button_SetRFGen);
-            tabPage1.Controls.Add(textBox10);
-            tabPage1.Controls.Add(button58);
-            tabPage1.Controls.Add(textBox_PulseGenParms);
-            tabPage1.Controls.Add(button_GPparms);
-            tabPage1.Controls.Add(textBox8);
-            tabPage1.Controls.Add(button56);
-            tabPage1.Controls.Add(textBox7);
-            tabPage1.Controls.Add(button55);
-            tabPage1.Controls.Add(textBox6);
-            tabPage1.Controls.Add(button54);
-            tabPage1.Controls.Add(textBox5);
-            tabPage1.Controls.Add(button53);
-            tabPage1.Controls.Add(textBox4);
-            tabPage1.Controls.Add(button51);
-            tabPage1.Controls.Add(button50);
-            tabPage1.Controls.Add(textBox3);
-            tabPage1.Controls.Add(button49);
-            tabPage1.Controls.Add(textBox_TxInhibit);
-            tabPage1.Controls.Add(button47);
-            tabPage1.Controls.Add(button48);
-            tabPage1.Controls.Add(button108);
-            tabPage1.Controls.Add(button109);
-            tabPage1.Controls.Add(button45);
-            tabPage1.Controls.Add(button46);
-            tabPage1.Location = new System.Drawing.Point(4, 27);
-            tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            tabPage1.Size = new System.Drawing.Size(867, 584);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Simulator";
-            tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.textBox_SimulatorDiscreteCALSARcontrol);
+            this.tabPage1.Controls.Add(this.textBox16);
+            this.tabPage1.Controls.Add(this.button117);
+            this.tabPage1.Controls.Add(this.button_SimulatorDiscreteCALSARcontrol);
+            this.tabPage1.Controls.Add(this.textBox15);
+            this.tabPage1.Controls.Add(this.button115);
+            this.tabPage1.Controls.Add(this.button114);
+            this.tabPage1.Controls.Add(this.textBox14);
+            this.tabPage1.Controls.Add(this.button113);
+            this.tabPage1.Controls.Add(this.textBox13);
+            this.tabPage1.Controls.Add(this.button112);
+            this.tabPage1.Controls.Add(this.textBox12);
+            this.tabPage1.Controls.Add(this.button111);
+            this.tabPage1.Controls.Add(this.textBox_RFGenParms);
+            this.tabPage1.Controls.Add(this.button_SetRFGen);
+            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.button58);
+            this.tabPage1.Controls.Add(this.textBox_PulseGenParms);
+            this.tabPage1.Controls.Add(this.button_GPparms);
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.button56);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.button55);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.button54);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.button53);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.button51);
+            this.tabPage1.Controls.Add(this.button50);
+            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.button49);
+            this.tabPage1.Controls.Add(this.textBox_TxInhibit);
+            this.tabPage1.Controls.Add(this.button47);
+            this.tabPage1.Controls.Add(this.button48);
+            this.tabPage1.Controls.Add(this.button108);
+            this.tabPage1.Controls.Add(this.button109);
+            this.tabPage1.Controls.Add(this.button45);
+            this.tabPage1.Controls.Add(this.button46);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(867, 584);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Simulator";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox_SimulatorDiscreteCALSARcontrol
             // 
-            textBox_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(599, 282);
-            textBox_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SimulatorDiscreteCALSARcontrol.MaxLength = 30;
-            textBox_SimulatorDiscreteCALSARcontrol.Name = "textBox_SimulatorDiscreteCALSARcontrol";
-            textBox_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(118, 26);
-            textBox_SimulatorDiscreteCALSARcontrol.TabIndex = 87;
-            textBox_SimulatorDiscreteCALSARcontrol.Text = "00";
-            textBox_SimulatorDiscreteCALSARcontrol.TextChanged += new System.EventHandler(textBox1_TextChanged_4);
+            this.textBox_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(599, 282);
+            this.textBox_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorDiscreteCALSARcontrol.MaxLength = 30;
+            this.textBox_SimulatorDiscreteCALSARcontrol.Name = "textBox_SimulatorDiscreteCALSARcontrol";
+            this.textBox_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(118, 26);
+            this.textBox_SimulatorDiscreteCALSARcontrol.TabIndex = 87;
+            this.textBox_SimulatorDiscreteCALSARcontrol.Text = "00";
+            this.textBox_SimulatorDiscreteCALSARcontrol.TextChanged += new System.EventHandler(this.textBox1_TextChanged_4);
             // 
             // textBox16
             // 
-            textBox16.Location = new System.Drawing.Point(599, 309);
-            textBox16.Margin = new System.Windows.Forms.Padding(2);
-            textBox16.MaxLength = 30;
-            textBox16.Name = "textBox16";
-            textBox16.Size = new System.Drawing.Size(118, 26);
-            textBox16.TabIndex = 86;
-            textBox16.Text = "00";
-            textBox16.TextChanged += new System.EventHandler(textBox16_TextChanged);
+            this.textBox16.Location = new System.Drawing.Point(599, 309);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox16.MaxLength = 30;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(118, 26);
+            this.textBox16.TabIndex = 86;
+            this.textBox16.Text = "00";
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // button117
             // 
-            button117.Location = new System.Drawing.Point(367, 310);
-            button117.Margin = new System.Windows.Forms.Padding(2);
-            button117.Name = "button117";
-            button117.Size = new System.Drawing.Size(223, 22);
-            button117.TabIndex = 85;
-            button117.Text = "Simulator discrete Tx_OVT_Check control";
-            button117.UseVisualStyleBackColor = true;
-            button117.Click += new System.EventHandler(button117_Click);
+            this.button117.Location = new System.Drawing.Point(367, 310);
+            this.button117.Margin = new System.Windows.Forms.Padding(2);
+            this.button117.Name = "button117";
+            this.button117.Size = new System.Drawing.Size(223, 22);
+            this.button117.TabIndex = 85;
+            this.button117.Text = "Simulator discrete Tx_OVT_Check control";
+            this.button117.UseVisualStyleBackColor = true;
+            this.button117.Click += new System.EventHandler(this.button117_Click);
             // 
             // button_SimulatorDiscreteCALSARcontrol
             // 
-            button_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(367, 281);
-            button_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
-            button_SimulatorDiscreteCALSARcontrol.Name = "button_SimulatorDiscreteCALSARcontrol";
-            button_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(223, 22);
-            button_SimulatorDiscreteCALSARcontrol.TabIndex = 84;
-            button_SimulatorDiscreteCALSARcontrol.Text = "Simulator Discrete CAL SAR";
-            button_SimulatorDiscreteCALSARcontrol.UseVisualStyleBackColor = true;
-            button_SimulatorDiscreteCALSARcontrol.Click += new System.EventHandler(button_SimulatorDiscreteCALSARcontrol_Click);
+            this.button_SimulatorDiscreteCALSARcontrol.Location = new System.Drawing.Point(367, 281);
+            this.button_SimulatorDiscreteCALSARcontrol.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SimulatorDiscreteCALSARcontrol.Name = "button_SimulatorDiscreteCALSARcontrol";
+            this.button_SimulatorDiscreteCALSARcontrol.Size = new System.Drawing.Size(223, 22);
+            this.button_SimulatorDiscreteCALSARcontrol.TabIndex = 84;
+            this.button_SimulatorDiscreteCALSARcontrol.Text = "Simulator Discrete CAL SAR";
+            this.button_SimulatorDiscreteCALSARcontrol.UseVisualStyleBackColor = true;
+            this.button_SimulatorDiscreteCALSARcontrol.Click += new System.EventHandler(this.button_SimulatorDiscreteCALSARcontrol_Click);
             // 
             // textBox15
             // 
-            textBox15.Location = new System.Drawing.Point(599, 253);
-            textBox15.Margin = new System.Windows.Forms.Padding(2);
-            textBox15.MaxLength = 30;
-            textBox15.Name = "textBox15";
-            textBox15.Size = new System.Drawing.Size(118, 26);
-            textBox15.TabIndex = 83;
-            textBox15.Text = "00";
-            textBox15.TextChanged += new System.EventHandler(textBox15_TextChanged);
+            this.textBox15.Location = new System.Drawing.Point(599, 253);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox15.MaxLength = 30;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(118, 26);
+            this.textBox15.TabIndex = 83;
+            this.textBox15.Text = "00";
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // button115
             // 
-            button115.Location = new System.Drawing.Point(367, 254);
-            button115.Margin = new System.Windows.Forms.Padding(2);
-            button115.Name = "button115";
-            button115.Size = new System.Drawing.Size(223, 22);
-            button115.TabIndex = 82;
-            button115.Text = "Set Simulator discrete DC4 ";
-            button115.UseVisualStyleBackColor = true;
-            button115.Click += new System.EventHandler(button115_Click);
+            this.button115.Location = new System.Drawing.Point(367, 254);
+            this.button115.Margin = new System.Windows.Forms.Padding(2);
+            this.button115.Name = "button115";
+            this.button115.Size = new System.Drawing.Size(223, 22);
+            this.button115.TabIndex = 82;
+            this.button115.Text = "Set Simulator discrete DC4 ";
+            this.button115.UseVisualStyleBackColor = true;
+            this.button115.Click += new System.EventHandler(this.button115_Click);
             // 
             // button114
             // 
-            button114.Location = new System.Drawing.Point(367, 226);
-            button114.Margin = new System.Windows.Forms.Padding(2);
-            button114.Name = "button114";
-            button114.Size = new System.Drawing.Size(223, 22);
-            button114.TabIndex = 81;
-            button114.Text = "Get Thermal Supervisor ";
-            button114.UseVisualStyleBackColor = true;
-            button114.Click += new System.EventHandler(button114_Click);
+            this.button114.Location = new System.Drawing.Point(367, 226);
+            this.button114.Margin = new System.Windows.Forms.Padding(2);
+            this.button114.Name = "button114";
+            this.button114.Size = new System.Drawing.Size(223, 22);
+            this.button114.TabIndex = 81;
+            this.button114.Text = "Get Thermal Supervisor ";
+            this.button114.UseVisualStyleBackColor = true;
+            this.button114.Click += new System.EventHandler(this.button114_Click);
             // 
             // textBox14
             // 
-            textBox14.Location = new System.Drawing.Point(599, 194);
-            textBox14.Margin = new System.Windows.Forms.Padding(2);
-            textBox14.MaxLength = 30;
-            textBox14.Name = "textBox14";
-            textBox14.Size = new System.Drawing.Size(118, 26);
-            textBox14.TabIndex = 80;
-            textBox14.Text = "00";
-            textBox14.TextChanged += new System.EventHandler(textBox14_TextChanged);
+            this.textBox14.Location = new System.Drawing.Point(599, 194);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox14.MaxLength = 30;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(118, 26);
+            this.textBox14.TabIndex = 80;
+            this.textBox14.Text = "00";
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
             // 
             // button113
             // 
-            button113.Location = new System.Drawing.Point(367, 196);
-            button113.Margin = new System.Windows.Forms.Padding(2);
-            button113.Name = "button113";
-            button113.Size = new System.Drawing.Size(223, 22);
-            button113.TabIndex = 79;
-            button113.Text = "Set Synchronized Tx-Strobe ";
-            button113.UseVisualStyleBackColor = true;
-            button113.Click += new System.EventHandler(button113_Click);
+            this.button113.Location = new System.Drawing.Point(367, 196);
+            this.button113.Margin = new System.Windows.Forms.Padding(2);
+            this.button113.Name = "button113";
+            this.button113.Size = new System.Drawing.Size(223, 22);
+            this.button113.TabIndex = 79;
+            this.button113.Text = "Set Synchronized Tx-Strobe ";
+            this.button113.UseVisualStyleBackColor = true;
+            this.button113.Click += new System.EventHandler(this.button113_Click);
             // 
             // textBox13
             // 
-            textBox13.Location = new System.Drawing.Point(231, 549);
-            textBox13.Margin = new System.Windows.Forms.Padding(2);
-            textBox13.MaxLength = 30;
-            textBox13.Name = "textBox13";
-            textBox13.Size = new System.Drawing.Size(119, 26);
-            textBox13.TabIndex = 78;
-            textBox13.Text = "00";
-            textBox13.TextChanged += new System.EventHandler(textBox13_TextChanged);
+            this.textBox13.Location = new System.Drawing.Point(231, 549);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox13.MaxLength = 30;
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(119, 26);
+            this.textBox13.TabIndex = 78;
+            this.textBox13.Text = "00";
+            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // button112
             // 
-            button112.Location = new System.Drawing.Point(0, 551);
-            button112.Margin = new System.Windows.Forms.Padding(2);
-            button112.Name = "button112";
-            button112.Size = new System.Drawing.Size(223, 22);
-            button112.TabIndex = 77;
-            button112.Text = "Set SEU Recover ";
-            button112.UseVisualStyleBackColor = true;
-            button112.Click += new System.EventHandler(button112_Click);
+            this.button112.Location = new System.Drawing.Point(0, 551);
+            this.button112.Margin = new System.Windows.Forms.Padding(2);
+            this.button112.Name = "button112";
+            this.button112.Size = new System.Drawing.Size(223, 22);
+            this.button112.TabIndex = 77;
+            this.button112.Text = "Set SEU Recover ";
+            this.button112.UseVisualStyleBackColor = true;
+            this.button112.Click += new System.EventHandler(this.button112_Click);
             // 
             // textBox12
             // 
-            textBox12.Location = new System.Drawing.Point(231, 519);
-            textBox12.Margin = new System.Windows.Forms.Padding(2);
-            textBox12.MaxLength = 30;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new System.Drawing.Size(119, 26);
-            textBox12.TabIndex = 76;
-            textBox12.Text = "00";
-            textBox12.TextChanged += new System.EventHandler(textBox12_TextChanged);
+            this.textBox12.Location = new System.Drawing.Point(231, 519);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox12.MaxLength = 30;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(119, 26);
+            this.textBox12.TabIndex = 76;
+            this.textBox12.Text = "00";
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // button111
             // 
-            button111.Location = new System.Drawing.Point(0, 521);
-            button111.Margin = new System.Windows.Forms.Padding(2);
-            button111.Name = "button111";
-            button111.Size = new System.Drawing.Size(223, 22);
-            button111.TabIndex = 75;
-            button111.Text = "Set RF Gen. Enable ";
-            button111.UseVisualStyleBackColor = true;
-            button111.Click += new System.EventHandler(button111_Click);
+            this.button111.Location = new System.Drawing.Point(0, 521);
+            this.button111.Margin = new System.Windows.Forms.Padding(2);
+            this.button111.Name = "button111";
+            this.button111.Size = new System.Drawing.Size(223, 22);
+            this.button111.TabIndex = 75;
+            this.button111.Text = "Set RF Gen. Enable ";
+            this.button111.UseVisualStyleBackColor = true;
+            this.button111.Click += new System.EventHandler(this.button111_Click);
             // 
             // textBox_RFGenParms
             // 
-            textBox_RFGenParms.Location = new System.Drawing.Point(231, 486);
-            textBox_RFGenParms.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RFGenParms.MaxLength = 30;
-            textBox_RFGenParms.Name = "textBox_RFGenParms";
-            textBox_RFGenParms.Size = new System.Drawing.Size(119, 26);
-            textBox_RFGenParms.TabIndex = 74;
-            textBox_RFGenParms.Text = "0000 0000 0000";
-            textBox_RFGenParms.TextChanged += new System.EventHandler(textBox11_TextChanged);
+            this.textBox_RFGenParms.Location = new System.Drawing.Point(231, 486);
+            this.textBox_RFGenParms.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RFGenParms.MaxLength = 30;
+            this.textBox_RFGenParms.Name = "textBox_RFGenParms";
+            this.textBox_RFGenParms.Size = new System.Drawing.Size(119, 26);
+            this.textBox_RFGenParms.TabIndex = 74;
+            this.textBox_RFGenParms.Text = "0000 0000 0000";
+            this.textBox_RFGenParms.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // button_SetRFGen
             // 
-            button_SetRFGen.Location = new System.Drawing.Point(0, 488);
-            button_SetRFGen.Margin = new System.Windows.Forms.Padding(2);
-            button_SetRFGen.Name = "button_SetRFGen";
-            button_SetRFGen.Size = new System.Drawing.Size(223, 22);
-            button_SetRFGen.TabIndex = 73;
-            button_SetRFGen.Text = "Set RF Gen. Parameters ";
-            button_SetRFGen.UseVisualStyleBackColor = true;
-            button_SetRFGen.Click += new System.EventHandler(button110_Click);
+            this.button_SetRFGen.Location = new System.Drawing.Point(0, 488);
+            this.button_SetRFGen.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SetRFGen.Name = "button_SetRFGen";
+            this.button_SetRFGen.Size = new System.Drawing.Size(223, 22);
+            this.button_SetRFGen.TabIndex = 73;
+            this.button_SetRFGen.Text = "Set RF Gen. Parameters ";
+            this.button_SetRFGen.UseVisualStyleBackColor = true;
+            this.button_SetRFGen.Click += new System.EventHandler(this.button110_Click);
             // 
             // textBox10
             // 
-            textBox10.Location = new System.Drawing.Point(231, 454);
-            textBox10.Margin = new System.Windows.Forms.Padding(2);
-            textBox10.MaxLength = 30;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new System.Drawing.Size(119, 26);
-            textBox10.TabIndex = 72;
-            textBox10.Text = "00";
-            textBox10.TextChanged += new System.EventHandler(textBox10_TextChanged);
+            this.textBox10.Location = new System.Drawing.Point(231, 454);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox10.MaxLength = 30;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(119, 26);
+            this.textBox10.TabIndex = 72;
+            this.textBox10.Text = "00";
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // button58
             // 
-            button58.Location = new System.Drawing.Point(0, 456);
-            button58.Margin = new System.Windows.Forms.Padding(2);
-            button58.Name = "button58";
-            button58.Size = new System.Drawing.Size(223, 22);
-            button58.TabIndex = 71;
-            button58.Text = "Set GP Enable ";
-            button58.UseVisualStyleBackColor = true;
-            button58.Click += new System.EventHandler(button58_Click_1);
+            this.button58.Location = new System.Drawing.Point(0, 456);
+            this.button58.Margin = new System.Windows.Forms.Padding(2);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(223, 22);
+            this.button58.TabIndex = 71;
+            this.button58.Text = "Set GP Enable ";
+            this.button58.UseVisualStyleBackColor = true;
+            this.button58.Click += new System.EventHandler(this.button58_Click_1);
             // 
             // textBox_PulseGenParms
             // 
-            textBox_PulseGenParms.Location = new System.Drawing.Point(231, 424);
-            textBox_PulseGenParms.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulseGenParms.MaxLength = 30;
-            textBox_PulseGenParms.Name = "textBox_PulseGenParms";
-            textBox_PulseGenParms.Size = new System.Drawing.Size(119, 26);
-            textBox_PulseGenParms.TabIndex = 70;
-            textBox_PulseGenParms.Text = "0000 0000 0000";
-            textBox_PulseGenParms.TextChanged += new System.EventHandler(textBox9_TextChanged);
+            this.textBox_PulseGenParms.Location = new System.Drawing.Point(231, 424);
+            this.textBox_PulseGenParms.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulseGenParms.MaxLength = 30;
+            this.textBox_PulseGenParms.Name = "textBox_PulseGenParms";
+            this.textBox_PulseGenParms.Size = new System.Drawing.Size(119, 26);
+            this.textBox_PulseGenParms.TabIndex = 70;
+            this.textBox_PulseGenParms.Text = "0000 0000 0000";
+            this.textBox_PulseGenParms.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // button_GPparms
             // 
-            button_GPparms.Location = new System.Drawing.Point(0, 426);
-            button_GPparms.Margin = new System.Windows.Forms.Padding(2);
-            button_GPparms.Name = "button_GPparms";
-            button_GPparms.Size = new System.Drawing.Size(223, 22);
-            button_GPparms.TabIndex = 69;
-            button_GPparms.Text = "Set GP Parameters ";
-            button_GPparms.UseVisualStyleBackColor = true;
-            button_GPparms.Click += new System.EventHandler(button57_Click);
+            this.button_GPparms.Location = new System.Drawing.Point(0, 426);
+            this.button_GPparms.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GPparms.Name = "button_GPparms";
+            this.button_GPparms.Size = new System.Drawing.Size(223, 22);
+            this.button_GPparms.TabIndex = 69;
+            this.button_GPparms.Text = "Set GP Parameters ";
+            this.button_GPparms.UseVisualStyleBackColor = true;
+            this.button_GPparms.Click += new System.EventHandler(this.button57_Click);
             // 
             // textBox8
             // 
-            textBox8.Location = new System.Drawing.Point(231, 394);
-            textBox8.Margin = new System.Windows.Forms.Padding(2);
-            textBox8.MaxLength = 30;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new System.Drawing.Size(119, 26);
-            textBox8.TabIndex = 68;
-            textBox8.Text = "00";
-            textBox8.TextChanged += new System.EventHandler(textBox8_TextChanged);
+            this.textBox8.Location = new System.Drawing.Point(231, 394);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox8.MaxLength = 30;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(119, 26);
+            this.textBox8.TabIndex = 68;
+            this.textBox8.Text = "00";
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button56
             // 
-            button56.Location = new System.Drawing.Point(0, 396);
-            button56.Margin = new System.Windows.Forms.Padding(2);
-            button56.Name = "button56";
-            button56.Size = new System.Drawing.Size(223, 22);
-            button56.TabIndex = 67;
-            button56.Text = "Set DCA Discretes ";
-            button56.UseVisualStyleBackColor = true;
-            button56.Click += new System.EventHandler(button56_Click_1);
+            this.button56.Location = new System.Drawing.Point(0, 396);
+            this.button56.Margin = new System.Windows.Forms.Padding(2);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(223, 22);
+            this.button56.TabIndex = 67;
+            this.button56.Text = "Set DCA Discretes ";
+            this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.button56_Click_1);
             // 
             // textBox7
             // 
-            textBox7.Location = new System.Drawing.Point(231, 366);
-            textBox7.Margin = new System.Windows.Forms.Padding(2);
-            textBox7.MaxLength = 30;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new System.Drawing.Size(119, 26);
-            textBox7.TabIndex = 66;
-            textBox7.Text = "00";
-            textBox7.TextChanged += new System.EventHandler(textBox7_TextChanged);
+            this.textBox7.Location = new System.Drawing.Point(231, 366);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.MaxLength = 30;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(119, 26);
+            this.textBox7.TabIndex = 66;
+            this.textBox7.Text = "00";
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // button55
             // 
-            button55.Location = new System.Drawing.Point(0, 368);
-            button55.Margin = new System.Windows.Forms.Padding(2);
-            button55.Name = "button55";
-            button55.Size = new System.Drawing.Size(223, 22);
-            button55.TabIndex = 65;
-            button55.Text = "Set Freq. Band ";
-            button55.UseVisualStyleBackColor = true;
-            button55.Click += new System.EventHandler(button55_Click);
+            this.button55.Location = new System.Drawing.Point(0, 368);
+            this.button55.Margin = new System.Windows.Forms.Padding(2);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(223, 22);
+            this.button55.TabIndex = 65;
+            this.button55.Text = "Set Freq. Band ";
+            this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
             // 
             // textBox6
             // 
-            textBox6.Location = new System.Drawing.Point(231, 338);
-            textBox6.Margin = new System.Windows.Forms.Padding(2);
-            textBox6.MaxLength = 30;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(119, 26);
-            textBox6.TabIndex = 64;
-            textBox6.Text = "00";
-            textBox6.TextChanged += new System.EventHandler(textBox6_TextChanged);
+            this.textBox6.Location = new System.Drawing.Point(231, 338);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.MaxLength = 30;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(119, 26);
+            this.textBox6.TabIndex = 64;
+            this.textBox6.Text = "00";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button54
             // 
-            button54.Location = new System.Drawing.Point(0, 340);
-            button54.Margin = new System.Windows.Forms.Padding(2);
-            button54.Name = "button54";
-            button54.Size = new System.Drawing.Size(223, 22);
-            button54.TabIndex = 63;
-            button54.Text = "Set OUT-TUNE ";
-            button54.UseVisualStyleBackColor = true;
-            button54.Click += new System.EventHandler(button54_Click);
+            this.button54.Location = new System.Drawing.Point(0, 340);
+            this.button54.Margin = new System.Windows.Forms.Padding(2);
+            this.button54.Name = "button54";
+            this.button54.Size = new System.Drawing.Size(223, 22);
+            this.button54.TabIndex = 63;
+            this.button54.Text = "Set OUT-TUNE ";
+            this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
             // textBox5
             // 
-            textBox5.Location = new System.Drawing.Point(231, 310);
-            textBox5.Margin = new System.Windows.Forms.Padding(2);
-            textBox5.MaxLength = 30;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(119, 26);
-            textBox5.TabIndex = 62;
-            textBox5.Text = "01";
-            textBox5.TextChanged += new System.EventHandler(textBox5_TextChanged);
+            this.textBox5.Location = new System.Drawing.Point(231, 310);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.MaxLength = 30;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(119, 26);
+            this.textBox5.TabIndex = 62;
+            this.textBox5.Text = "01";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button53
             // 
-            button53.Location = new System.Drawing.Point(0, 312);
-            button53.Margin = new System.Windows.Forms.Padding(2);
-            button53.Name = "button53";
-            button53.Size = new System.Drawing.Size(223, 22);
-            button53.TabIndex = 61;
-            button53.Text = "Set TX-STROBE ";
-            button53.UseVisualStyleBackColor = true;
-            button53.Click += new System.EventHandler(button53_Click_1);
+            this.button53.Location = new System.Drawing.Point(0, 312);
+            this.button53.Margin = new System.Windows.Forms.Padding(2);
+            this.button53.Name = "button53";
+            this.button53.Size = new System.Drawing.Size(223, 22);
+            this.button53.TabIndex = 61;
+            this.button53.Text = "Set TX-STROBE ";
+            this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.button53_Click_1);
             // 
             // textBox4
             // 
-            textBox4.Location = new System.Drawing.Point(231, 282);
-            textBox4.Margin = new System.Windows.Forms.Padding(2);
-            textBox4.MaxLength = 30;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(119, 26);
-            textBox4.TabIndex = 60;
-            textBox4.Text = "00";
-            textBox4.TextChanged += new System.EventHandler(textBox4_TextChanged);
+            this.textBox4.Location = new System.Drawing.Point(231, 282);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.MaxLength = 30;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(119, 26);
+            this.textBox4.TabIndex = 60;
+            this.textBox4.Text = "00";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // button51
             // 
-            button51.Location = new System.Drawing.Point(0, 284);
-            button51.Margin = new System.Windows.Forms.Padding(2);
-            button51.Name = "button51";
-            button51.Size = new System.Drawing.Size(223, 22);
-            button51.TabIndex = 59;
-            button51.Text = "Set Int_Set_Preserve ";
-            button51.UseVisualStyleBackColor = true;
-            button51.Click += new System.EventHandler(button51_Click);
+            this.button51.Location = new System.Drawing.Point(0, 284);
+            this.button51.Margin = new System.Windows.Forms.Padding(2);
+            this.button51.Name = "button51";
+            this.button51.Size = new System.Drawing.Size(223, 22);
+            this.button51.TabIndex = 59;
+            this.button51.Text = "Set Int_Set_Preserve ";
+            this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.button51_Click);
             // 
             // button50
             // 
-            button50.Location = new System.Drawing.Point(0, 257);
-            button50.Margin = new System.Windows.Forms.Padding(2);
-            button50.Name = "button50";
-            button50.Size = new System.Drawing.Size(223, 22);
-            button50.TabIndex = 58;
-            button50.Text = "Get Simulator Status";
-            button50.UseVisualStyleBackColor = true;
-            button50.Click += new System.EventHandler(button50_Click_1);
+            this.button50.Location = new System.Drawing.Point(0, 257);
+            this.button50.Margin = new System.Windows.Forms.Padding(2);
+            this.button50.Name = "button50";
+            this.button50.Size = new System.Drawing.Size(223, 22);
+            this.button50.TabIndex = 58;
+            this.button50.Text = "Get Simulator Status";
+            this.button50.UseVisualStyleBackColor = true;
+            this.button50.Click += new System.EventHandler(this.button50_Click_1);
             // 
             // textBox3
             // 
-            textBox3.Location = new System.Drawing.Point(231, 226);
-            textBox3.Margin = new System.Windows.Forms.Padding(2);
-            textBox3.MaxLength = 30;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(119, 26);
-            textBox3.TabIndex = 57;
-            textBox3.Text = "00";
-            textBox3.TextChanged += new System.EventHandler(textBox3_TextChanged);
+            this.textBox3.Location = new System.Drawing.Point(231, 226);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.MaxLength = 30;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(119, 26);
+            this.textBox3.TabIndex = 57;
+            this.textBox3.Text = "00";
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button49
             // 
-            button49.Location = new System.Drawing.Point(0, 227);
-            button49.Margin = new System.Windows.Forms.Padding(2);
-            button49.Name = "button49";
-            button49.Size = new System.Drawing.Size(223, 22);
-            button49.TabIndex = 56;
-            button49.Text = "Set TX-INHIBIT Enable ";
-            button49.UseVisualStyleBackColor = true;
-            button49.Click += new System.EventHandler(button49_Click_1);
+            this.button49.Location = new System.Drawing.Point(0, 227);
+            this.button49.Margin = new System.Windows.Forms.Padding(2);
+            this.button49.Name = "button49";
+            this.button49.Size = new System.Drawing.Size(223, 22);
+            this.button49.TabIndex = 56;
+            this.button49.Text = "Set TX-INHIBIT Enable ";
+            this.button49.UseVisualStyleBackColor = true;
+            this.button49.Click += new System.EventHandler(this.button49_Click_1);
             // 
             // textBox_TxInhibit
             // 
-            textBox_TxInhibit.Location = new System.Drawing.Point(231, 196);
-            textBox_TxInhibit.Margin = new System.Windows.Forms.Padding(2);
-            textBox_TxInhibit.MaxLength = 30;
-            textBox_TxInhibit.Name = "textBox_TxInhibit";
-            textBox_TxInhibit.Size = new System.Drawing.Size(119, 26);
-            textBox_TxInhibit.TabIndex = 55;
-            textBox_TxInhibit.Text = "0000 0000 0000";
-            textBox_TxInhibit.TextChanged += new System.EventHandler(textBox2_TextChanged_1);
+            this.textBox_TxInhibit.Location = new System.Drawing.Point(231, 196);
+            this.textBox_TxInhibit.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_TxInhibit.MaxLength = 30;
+            this.textBox_TxInhibit.Name = "textBox_TxInhibit";
+            this.textBox_TxInhibit.Size = new System.Drawing.Size(119, 26);
+            this.textBox_TxInhibit.TabIndex = 55;
+            this.textBox_TxInhibit.Text = "0000 0000 0000";
+            this.textBox_TxInhibit.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // button47
             // 
-            button47.Location = new System.Drawing.Point(0, 198);
-            button47.Margin = new System.Windows.Forms.Padding(2);
-            button47.Name = "button47";
-            button47.Size = new System.Drawing.Size(223, 22);
-            button47.TabIndex = 37;
-            button47.Text = "Set TX-INHIBIT Params ";
-            button47.UseVisualStyleBackColor = true;
-            button47.Click += new System.EventHandler(button47_Click);
+            this.button47.Location = new System.Drawing.Point(0, 198);
+            this.button47.Margin = new System.Windows.Forms.Padding(2);
+            this.button47.Name = "button47";
+            this.button47.Size = new System.Drawing.Size(223, 22);
+            this.button47.TabIndex = 37;
+            this.button47.Text = "Set TX-INHIBIT Params ";
+            this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.button47_Click);
             // 
             // button48
             // 
-            button48.Location = new System.Drawing.Point(-2, 122);
-            button48.Margin = new System.Windows.Forms.Padding(2);
-            button48.Name = "button48";
-            button48.Size = new System.Drawing.Size(223, 22);
-            button48.TabIndex = 36;
-            button48.Text = "Get Simulator serial number";
-            button48.UseVisualStyleBackColor = true;
-            button48.Click += new System.EventHandler(button48_Click_2);
+            this.button48.Location = new System.Drawing.Point(-2, 122);
+            this.button48.Margin = new System.Windows.Forms.Padding(2);
+            this.button48.Name = "button48";
+            this.button48.Size = new System.Drawing.Size(223, 22);
+            this.button48.TabIndex = 36;
+            this.button48.Text = "Get Simulator serial number";
+            this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.button48_Click_2);
             // 
             // button108
             // 
-            button108.Location = new System.Drawing.Point(0, 6);
-            button108.Margin = new System.Windows.Forms.Padding(2);
-            button108.Name = "button108";
-            button108.Size = new System.Drawing.Size(223, 22);
-            button108.TabIndex = 35;
-            button108.Text = "Get Simulator ID";
-            button108.UseVisualStyleBackColor = true;
-            button108.Click += new System.EventHandler(button108_Click);
+            this.button108.Location = new System.Drawing.Point(0, 6);
+            this.button108.Margin = new System.Windows.Forms.Padding(2);
+            this.button108.Name = "button108";
+            this.button108.Size = new System.Drawing.Size(223, 22);
+            this.button108.TabIndex = 35;
+            this.button108.Text = "Get Simulator ID";
+            this.button108.UseVisualStyleBackColor = true;
+            this.button108.Click += new System.EventHandler(this.button108_Click);
             // 
             // button109
             // 
-            button109.Location = new System.Drawing.Point(0, 35);
-            button109.Margin = new System.Windows.Forms.Padding(2);
-            button109.Name = "button109";
-            button109.Size = new System.Drawing.Size(223, 22);
-            button109.TabIndex = 10;
-            button109.Text = "Get Simulator Software version";
-            button109.UseVisualStyleBackColor = true;
-            button109.Click += new System.EventHandler(button_GetSoftwareVersion_Click);
+            this.button109.Location = new System.Drawing.Point(0, 35);
+            this.button109.Margin = new System.Windows.Forms.Padding(2);
+            this.button109.Name = "button109";
+            this.button109.Size = new System.Drawing.Size(223, 22);
+            this.button109.TabIndex = 10;
+            this.button109.Text = "Get Simulator Software version";
+            this.button109.UseVisualStyleBackColor = true;
+            this.button109.Click += new System.EventHandler(this.button_GetSoftwareVersion_Click);
             // 
             // button45
             // 
-            button45.Location = new System.Drawing.Point(2, 63);
-            button45.Margin = new System.Windows.Forms.Padding(2);
-            button45.Name = "button45";
-            button45.Size = new System.Drawing.Size(223, 22);
-            button45.TabIndex = 11;
-            button45.Text = "Get Simulator Firmware version";
-            button45.UseVisualStyleBackColor = true;
-            button45.Click += new System.EventHandler(button45_Click);
+            this.button45.Location = new System.Drawing.Point(2, 63);
+            this.button45.Margin = new System.Windows.Forms.Padding(2);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(223, 22);
+            this.button45.TabIndex = 11;
+            this.button45.Text = "Get Simulator Firmware version";
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
             // 
             // button46
             // 
-            button46.Location = new System.Drawing.Point(0, 95);
-            button46.Margin = new System.Windows.Forms.Padding(2);
-            button46.Name = "button46";
-            button46.Size = new System.Drawing.Size(223, 22);
-            button46.TabIndex = 12;
-            button46.Text = "Get Simulator Hardware version";
-            button46.UseVisualStyleBackColor = true;
-            button46.Click += new System.EventHandler(button46_Click);
+            this.button46.Location = new System.Drawing.Point(0, 95);
+            this.button46.Margin = new System.Windows.Forms.Padding(2);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(223, 22);
+            this.button46.TabIndex = 12;
+            this.button46.Text = "Get Simulator Hardware version";
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(textBox22);
-            tabPage2.Controls.Add(button122);
-            tabPage2.Controls.Add(textBox21);
-            tabPage2.Controls.Add(button121);
-            tabPage2.Controls.Add(textBox20);
-            tabPage2.Controls.Add(button120);
-            tabPage2.Controls.Add(textBox19);
-            tabPage2.Controls.Add(button119);
-            tabPage2.Controls.Add(textBox_ControlCal);
-            tabPage2.Controls.Add(button118);
-            tabPage2.Controls.Add(textBox17);
-            tabPage2.Controls.Add(textBox_SetSystemMode);
-            tabPage2.Controls.Add(button_SetSystemMode);
-            tabPage2.Controls.Add(textBox_SetDCAWithBusMode);
-            tabPage2.Controls.Add(button87);
-            tabPage2.Controls.Add(textBox_SetVVAAtt);
-            tabPage2.Controls.Add(button88);
-            tabPage2.Controls.Add(textBox_SetPSUOutput);
-            tabPage2.Controls.Add(button69);
-            tabPage2.Controls.Add(button68);
-            tabPage2.Controls.Add(button67);
-            tabPage2.Controls.Add(button66);
-            tabPage2.Controls.Add(button65);
-            tabPage2.Controls.Add(textBox_SetADCMode);
-            tabPage2.Controls.Add(button64);
-            tabPage2.Controls.Add(button63);
-            tabPage2.Controls.Add(button62);
-            tabPage2.Controls.Add(button61);
-            tabPage2.Controls.Add(button60);
-            tabPage2.Controls.Add(button_GetSystemID);
-            tabPage2.Location = new System.Drawing.Point(4, 27);
-            tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Size = new System.Drawing.Size(867, 584);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "WB UUT";
-            tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.textBox22);
+            this.tabPage2.Controls.Add(this.button122);
+            this.tabPage2.Controls.Add(this.textBox21);
+            this.tabPage2.Controls.Add(this.button121);
+            this.tabPage2.Controls.Add(this.textBox20);
+            this.tabPage2.Controls.Add(this.button120);
+            this.tabPage2.Controls.Add(this.textBox19);
+            this.tabPage2.Controls.Add(this.button119);
+            this.tabPage2.Controls.Add(this.textBox_ControlCal);
+            this.tabPage2.Controls.Add(this.button118);
+            this.tabPage2.Controls.Add(this.textBox17);
+            this.tabPage2.Controls.Add(this.textBox_SetSystemMode);
+            this.tabPage2.Controls.Add(this.button_SetSystemMode);
+            this.tabPage2.Controls.Add(this.textBox_SetDCAWithBusMode);
+            this.tabPage2.Controls.Add(this.button87);
+            this.tabPage2.Controls.Add(this.textBox_SetVVAAtt);
+            this.tabPage2.Controls.Add(this.button88);
+            this.tabPage2.Controls.Add(this.textBox_SetPSUOutput);
+            this.tabPage2.Controls.Add(this.button69);
+            this.tabPage2.Controls.Add(this.button68);
+            this.tabPage2.Controls.Add(this.button67);
+            this.tabPage2.Controls.Add(this.button66);
+            this.tabPage2.Controls.Add(this.button65);
+            this.tabPage2.Controls.Add(this.textBox_SetADCMode);
+            this.tabPage2.Controls.Add(this.button64);
+            this.tabPage2.Controls.Add(this.button63);
+            this.tabPage2.Controls.Add(this.button62);
+            this.tabPage2.Controls.Add(this.button61);
+            this.tabPage2.Controls.Add(this.button60);
+            this.tabPage2.Controls.Add(this.button_GetSystemID);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(867, 584);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "WB UUT";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // textBox22
             // 
-            textBox22.Location = new System.Drawing.Point(230, 566);
-            textBox22.Margin = new System.Windows.Forms.Padding(2);
-            textBox22.MaxLength = 30;
-            textBox22.Name = "textBox22";
-            textBox22.Size = new System.Drawing.Size(119, 26);
-            textBox22.TabIndex = 77;
-            textBox22.Text = "00";
-            textBox22.TextChanged += new System.EventHandler(textBox22_TextChanged);
+            this.textBox22.Location = new System.Drawing.Point(230, 566);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox22.MaxLength = 30;
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(119, 26);
+            this.textBox22.TabIndex = 77;
+            this.textBox22.Text = "00";
+            this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
             // button122
             // 
-            button122.Location = new System.Drawing.Point(4, 566);
-            button122.Margin = new System.Windows.Forms.Padding(2);
-            button122.Name = "button122";
-            button122.Size = new System.Drawing.Size(222, 22);
-            button122.TabIndex = 76;
-            button122.Text = "Erase flash";
-            button122.UseVisualStyleBackColor = true;
-            button122.Click += new System.EventHandler(button122_Click);
+            this.button122.Location = new System.Drawing.Point(4, 566);
+            this.button122.Margin = new System.Windows.Forms.Padding(2);
+            this.button122.Name = "button122";
+            this.button122.Size = new System.Drawing.Size(222, 22);
+            this.button122.TabIndex = 76;
+            this.button122.Text = "Erase flash";
+            this.button122.UseVisualStyleBackColor = true;
+            this.button122.Click += new System.EventHandler(this.button122_Click);
             // 
             // textBox21
             // 
-            textBox21.Location = new System.Drawing.Point(231, 537);
-            textBox21.Margin = new System.Windows.Forms.Padding(2);
-            textBox21.MaxLength = 30;
-            textBox21.Name = "textBox21";
-            textBox21.Size = new System.Drawing.Size(634, 26);
-            textBox21.TabIndex = 75;
-            textBox21.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
+            this.textBox21.Location = new System.Drawing.Point(231, 537);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox21.MaxLength = 30;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(634, 26);
+            this.textBox21.TabIndex = 75;
+            this.textBox21.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
-            textBox21.TextChanged += new System.EventHandler(textBox21_TextChanged);
+            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
             // 
             // button121
             // 
-            button121.Location = new System.Drawing.Point(4, 539);
-            button121.Margin = new System.Windows.Forms.Padding(2);
-            button121.Name = "button121";
-            button121.Size = new System.Drawing.Size(222, 22);
-            button121.TabIndex = 74;
-            button121.Text = "Write Flash";
-            button121.UseVisualStyleBackColor = true;
-            button121.Click += new System.EventHandler(button121_Click);
+            this.button121.Location = new System.Drawing.Point(4, 539);
+            this.button121.Margin = new System.Windows.Forms.Padding(2);
+            this.button121.Name = "button121";
+            this.button121.Size = new System.Drawing.Size(222, 22);
+            this.button121.TabIndex = 74;
+            this.button121.Text = "Write Flash";
+            this.button121.UseVisualStyleBackColor = true;
+            this.button121.Click += new System.EventHandler(this.button121_Click);
             // 
             // textBox20
             // 
-            textBox20.Location = new System.Drawing.Point(232, 509);
-            textBox20.Margin = new System.Windows.Forms.Padding(2);
-            textBox20.MaxLength = 30;
-            textBox20.Name = "textBox20";
-            textBox20.Size = new System.Drawing.Size(120, 26);
-            textBox20.TabIndex = 73;
-            textBox20.Text = "0000";
-            textBox20.TextChanged += new System.EventHandler(textBox20_TextChanged);
+            this.textBox20.Location = new System.Drawing.Point(232, 509);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox20.MaxLength = 30;
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(120, 26);
+            this.textBox20.TabIndex = 73;
+            this.textBox20.Text = "0000";
+            this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
             // button120
             // 
-            button120.Location = new System.Drawing.Point(4, 510);
-            button120.Margin = new System.Windows.Forms.Padding(2);
-            button120.Name = "button120";
-            button120.Size = new System.Drawing.Size(222, 22);
-            button120.TabIndex = 72;
-            button120.Text = "Read Flash ";
-            button120.UseVisualStyleBackColor = true;
-            button120.Click += new System.EventHandler(button120_Click);
+            this.button120.Location = new System.Drawing.Point(4, 510);
+            this.button120.Margin = new System.Windows.Forms.Padding(2);
+            this.button120.Name = "button120";
+            this.button120.Size = new System.Drawing.Size(222, 22);
+            this.button120.TabIndex = 72;
+            this.button120.Text = "Read Flash ";
+            this.button120.UseVisualStyleBackColor = true;
+            this.button120.Click += new System.EventHandler(this.button120_Click);
             // 
             // textBox19
             // 
-            textBox19.Location = new System.Drawing.Point(231, 478);
-            textBox19.Margin = new System.Windows.Forms.Padding(2);
-            textBox19.MaxLength = 30;
-            textBox19.Name = "textBox19";
-            textBox19.Size = new System.Drawing.Size(634, 26);
-            textBox19.TabIndex = 71;
-            textBox19.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
+            this.textBox19.Location = new System.Drawing.Point(231, 478);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox19.MaxLength = 30;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(634, 26);
+            this.textBox19.TabIndex = 71;
+            this.textBox19.Text = "0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0" +
     "000 0000 0000 0000 0000 0000 ";
-            textBox19.TextChanged += new System.EventHandler(textBox19_TextChanged);
+            this.textBox19.TextChanged += new System.EventHandler(this.textBox19_TextChanged);
             // 
             // button119
             // 
-            button119.Location = new System.Drawing.Point(4, 482);
-            button119.Margin = new System.Windows.Forms.Padding(2);
-            button119.Name = "button119";
-            button119.Size = new System.Drawing.Size(222, 22);
-            button119.TabIndex = 70;
-            button119.Text = "Set ADC value in debug mode";
-            button119.UseVisualStyleBackColor = true;
-            button119.Click += new System.EventHandler(button119_Click);
+            this.button119.Location = new System.Drawing.Point(4, 482);
+            this.button119.Margin = new System.Windows.Forms.Padding(2);
+            this.button119.Name = "button119";
+            this.button119.Size = new System.Drawing.Size(222, 22);
+            this.button119.TabIndex = 70;
+            this.button119.Text = "Set ADC value in debug mode";
+            this.button119.UseVisualStyleBackColor = true;
+            this.button119.Click += new System.EventHandler(this.button119_Click);
             // 
             // textBox_ControlCal
             // 
-            textBox_ControlCal.Location = new System.Drawing.Point(230, 450);
-            textBox_ControlCal.Margin = new System.Windows.Forms.Padding(2);
-            textBox_ControlCal.MaxLength = 30;
-            textBox_ControlCal.Name = "textBox_ControlCal";
-            textBox_ControlCal.Size = new System.Drawing.Size(119, 26);
-            textBox_ControlCal.TabIndex = 69;
-            textBox_ControlCal.Text = "00";
-            textBox_ControlCal.TextChanged += new System.EventHandler(textBox_ControlCal_TextChanged);
+            this.textBox_ControlCal.Location = new System.Drawing.Point(230, 450);
+            this.textBox_ControlCal.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ControlCal.MaxLength = 30;
+            this.textBox_ControlCal.Name = "textBox_ControlCal";
+            this.textBox_ControlCal.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ControlCal.TabIndex = 69;
+            this.textBox_ControlCal.Text = "00";
+            this.textBox_ControlCal.TextChanged += new System.EventHandler(this.textBox_ControlCal_TextChanged);
             // 
             // button118
             // 
-            button118.Location = new System.Drawing.Point(4, 451);
-            button118.Margin = new System.Windows.Forms.Padding(2);
-            button118.Name = "button118";
-            button118.Size = new System.Drawing.Size(222, 22);
-            button118.TabIndex = 68;
-            button118.Text = "Control CAL_SAR switches ";
-            button118.UseVisualStyleBackColor = true;
-            button118.Click += new System.EventHandler(button118_Click);
+            this.button118.Location = new System.Drawing.Point(4, 451);
+            this.button118.Margin = new System.Windows.Forms.Padding(2);
+            this.button118.Name = "button118";
+            this.button118.Size = new System.Drawing.Size(222, 22);
+            this.button118.TabIndex = 68;
+            this.button118.Text = "Control CAL_SAR switches ";
+            this.button118.UseVisualStyleBackColor = true;
+            this.button118.Click += new System.EventHandler(this.button118_Click);
             // 
             // textBox17
             // 
-            textBox17.Location = new System.Drawing.Point(230, 422);
-            textBox17.Margin = new System.Windows.Forms.Padding(2);
-            textBox17.MaxLength = 30;
-            textBox17.Name = "textBox17";
-            textBox17.Size = new System.Drawing.Size(119, 26);
-            textBox17.TabIndex = 67;
-            textBox17.Text = "00";
-            textBox17.TextChanged += new System.EventHandler(textBox17_TextChanged);
+            this.textBox17.Location = new System.Drawing.Point(230, 422);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox17.MaxLength = 30;
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(119, 26);
+            this.textBox17.TabIndex = 67;
+            this.textBox17.Text = "00";
+            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // textBox_SetSystemMode
             // 
-            textBox_SetSystemMode.Location = new System.Drawing.Point(230, 325);
-            textBox_SetSystemMode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetSystemMode.MaxLength = 30;
-            textBox_SetSystemMode.Name = "textBox_SetSystemMode";
-            textBox_SetSystemMode.Size = new System.Drawing.Size(143, 26);
-            textBox_SetSystemMode.TabIndex = 66;
-            textBox_SetSystemMode.Text = "00";
-            textBox_SetSystemMode.TextChanged += new System.EventHandler(textBox_Erase4KsectorQSPI_TextChanged);
+            this.textBox_SetSystemMode.Location = new System.Drawing.Point(230, 325);
+            this.textBox_SetSystemMode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetSystemMode.MaxLength = 30;
+            this.textBox_SetSystemMode.Name = "textBox_SetSystemMode";
+            this.textBox_SetSystemMode.Size = new System.Drawing.Size(143, 26);
+            this.textBox_SetSystemMode.TabIndex = 66;
+            this.textBox_SetSystemMode.Text = "00";
+            this.textBox_SetSystemMode.TextChanged += new System.EventHandler(this.textBox_Erase4KsectorQSPI_TextChanged);
             // 
             // button_SetSystemMode
             // 
-            button_SetSystemMode.Location = new System.Drawing.Point(2, 327);
-            button_SetSystemMode.Margin = new System.Windows.Forms.Padding(2);
-            button_SetSystemMode.Name = "button_SetSystemMode";
-            button_SetSystemMode.Size = new System.Drawing.Size(223, 22);
-            button_SetSystemMode.TabIndex = 65;
-            button_SetSystemMode.Text = "Set System Mode";
-            button_SetSystemMode.UseVisualStyleBackColor = true;
-            button_SetSystemMode.Click += new System.EventHandler(button_SetSystemMode_Click);
-            button_SetSystemMode.MouseDown += new System.Windows.Forms.MouseEventHandler(button89_MouseDown);
+            this.button_SetSystemMode.Location = new System.Drawing.Point(2, 327);
+            this.button_SetSystemMode.Margin = new System.Windows.Forms.Padding(2);
+            this.button_SetSystemMode.Name = "button_SetSystemMode";
+            this.button_SetSystemMode.Size = new System.Drawing.Size(223, 22);
+            this.button_SetSystemMode.TabIndex = 65;
+            this.button_SetSystemMode.Text = "Set System Mode";
+            this.button_SetSystemMode.UseVisualStyleBackColor = true;
+            this.button_SetSystemMode.Click += new System.EventHandler(this.button_SetSystemMode_Click);
+            this.button_SetSystemMode.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button89_MouseDown);
             // 
             // textBox_SetDCAWithBusMode
             // 
-            textBox_SetDCAWithBusMode.Location = new System.Drawing.Point(230, 286);
-            textBox_SetDCAWithBusMode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetDCAWithBusMode.MaxLength = 30;
-            textBox_SetDCAWithBusMode.Name = "textBox_SetDCAWithBusMode";
-            textBox_SetDCAWithBusMode.Size = new System.Drawing.Size(143, 26);
-            textBox_SetDCAWithBusMode.TabIndex = 64;
-            textBox_SetDCAWithBusMode.Text = "0000";
-            textBox_SetDCAWithBusMode.TextChanged += new System.EventHandler(textBox_ReadQSPIFlashData_TextChanged);
+            this.textBox_SetDCAWithBusMode.Location = new System.Drawing.Point(230, 286);
+            this.textBox_SetDCAWithBusMode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetDCAWithBusMode.MaxLength = 30;
+            this.textBox_SetDCAWithBusMode.Name = "textBox_SetDCAWithBusMode";
+            this.textBox_SetDCAWithBusMode.Size = new System.Drawing.Size(143, 26);
+            this.textBox_SetDCAWithBusMode.TabIndex = 64;
+            this.textBox_SetDCAWithBusMode.Text = "0000";
+            this.textBox_SetDCAWithBusMode.TextChanged += new System.EventHandler(this.textBox_ReadQSPIFlashData_TextChanged);
             // 
             // button87
             // 
-            button87.Location = new System.Drawing.Point(2, 289);
-            button87.Margin = new System.Windows.Forms.Padding(2);
-            button87.Name = "button87";
-            button87.Size = new System.Drawing.Size(223, 22);
-            button87.TabIndex = 63;
-            button87.Text = "Set DCA with Bus Mode";
-            button87.UseVisualStyleBackColor = true;
-            button87.Click += new System.EventHandler(button87_Click);
-            button87.MouseDown += new System.Windows.Forms.MouseEventHandler(button87_MouseDown);
+            this.button87.Location = new System.Drawing.Point(2, 289);
+            this.button87.Margin = new System.Windows.Forms.Padding(2);
+            this.button87.Name = "button87";
+            this.button87.Size = new System.Drawing.Size(223, 22);
+            this.button87.TabIndex = 63;
+            this.button87.Text = "Set DCA with Bus Mode";
+            this.button87.UseVisualStyleBackColor = true;
+            this.button87.Click += new System.EventHandler(this.button87_Click);
+            this.button87.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button87_MouseDown);
             // 
             // textBox_SetVVAAtt
             // 
-            textBox_SetVVAAtt.Location = new System.Drawing.Point(230, 254);
-            textBox_SetVVAAtt.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetVVAAtt.MaxLength = 30;
-            textBox_SetVVAAtt.Name = "textBox_SetVVAAtt";
-            textBox_SetVVAAtt.Size = new System.Drawing.Size(143, 26);
-            textBox_SetVVAAtt.TabIndex = 62;
-            textBox_SetVVAAtt.Text = "0000";
-            textBox_SetVVAAtt.TextChanged += new System.EventHandler(textBox_WriteQSPIFlashData_TextChanged);
+            this.textBox_SetVVAAtt.Location = new System.Drawing.Point(230, 254);
+            this.textBox_SetVVAAtt.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetVVAAtt.MaxLength = 30;
+            this.textBox_SetVVAAtt.Name = "textBox_SetVVAAtt";
+            this.textBox_SetVVAAtt.Size = new System.Drawing.Size(143, 26);
+            this.textBox_SetVVAAtt.TabIndex = 62;
+            this.textBox_SetVVAAtt.Text = "0000";
+            this.textBox_SetVVAAtt.TextChanged += new System.EventHandler(this.textBox_WriteQSPIFlashData_TextChanged);
             // 
             // button88
             // 
-            button88.Location = new System.Drawing.Point(2, 257);
-            button88.Margin = new System.Windows.Forms.Padding(2);
-            button88.Name = "button88";
-            button88.Size = new System.Drawing.Size(223, 22);
-            button88.TabIndex = 61;
-            button88.Text = "Set VVA Attenuation";
-            button88.UseVisualStyleBackColor = true;
-            button88.Click += new System.EventHandler(button88_Click);
-            button88.MouseDown += new System.Windows.Forms.MouseEventHandler(button88_MouseDown);
+            this.button88.Location = new System.Drawing.Point(2, 257);
+            this.button88.Margin = new System.Windows.Forms.Padding(2);
+            this.button88.Name = "button88";
+            this.button88.Size = new System.Drawing.Size(223, 22);
+            this.button88.TabIndex = 61;
+            this.button88.Text = "Set VVA Attenuation";
+            this.button88.UseVisualStyleBackColor = true;
+            this.button88.Click += new System.EventHandler(this.button88_Click);
+            this.button88.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button88_MouseDown);
             // 
             // textBox_SetPSUOutput
             // 
-            textBox_SetPSUOutput.Location = new System.Drawing.Point(230, 224);
-            textBox_SetPSUOutput.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetPSUOutput.MaxLength = 30;
-            textBox_SetPSUOutput.Name = "textBox_SetPSUOutput";
-            textBox_SetPSUOutput.Size = new System.Drawing.Size(118, 26);
-            textBox_SetPSUOutput.TabIndex = 54;
-            textBox_SetPSUOutput.Text = "0000 0000 0000 0000";
-            textBox_SetPSUOutput.TextChanged += new System.EventHandler(textBox_SetTCXOTrim_TextChanged);
+            this.textBox_SetPSUOutput.Location = new System.Drawing.Point(230, 224);
+            this.textBox_SetPSUOutput.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetPSUOutput.MaxLength = 30;
+            this.textBox_SetPSUOutput.Name = "textBox_SetPSUOutput";
+            this.textBox_SetPSUOutput.Size = new System.Drawing.Size(143, 26);
+            this.textBox_SetPSUOutput.TabIndex = 54;
+            this.textBox_SetPSUOutput.Text = "0000 0000 0000 0000";
+            this.textBox_SetPSUOutput.TextChanged += new System.EventHandler(this.textBox_SetTCXOTrim_TextChanged);
             // 
             // button69
             // 
-            button69.Location = new System.Drawing.Point(2, 226);
-            button69.Margin = new System.Windows.Forms.Padding(2);
-            button69.Name = "button69";
-            button69.Size = new System.Drawing.Size(223, 22);
-            button69.TabIndex = 53;
-            button69.Text = "Set PSU Output Voltage";
-            button69.UseVisualStyleBackColor = true;
-            button69.Click += new System.EventHandler(button69_Click);
-            button69.MouseDown += new System.Windows.Forms.MouseEventHandler(button69_MouseDown);
+            this.button69.Location = new System.Drawing.Point(2, 226);
+            this.button69.Margin = new System.Windows.Forms.Padding(2);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(223, 22);
+            this.button69.TabIndex = 53;
+            this.button69.Text = "Set PSU Output Voltage";
+            this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button69_Click);
+            this.button69.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button69_MouseDown);
             // 
             // button68
             // 
-            button68.Location = new System.Drawing.Point(2, 194);
-            button68.Margin = new System.Windows.Forms.Padding(2);
-            button68.Name = "button68";
-            button68.Size = new System.Drawing.Size(223, 22);
-            button68.TabIndex = 50;
-            button68.Text = "Get Discrete Status – Bus mode";
-            button68.UseVisualStyleBackColor = true;
-            button68.Click += new System.EventHandler(button68_Click);
-            button68.MouseDown += new System.Windows.Forms.MouseEventHandler(button68_MouseDown);
+            this.button68.Location = new System.Drawing.Point(2, 194);
+            this.button68.Margin = new System.Windows.Forms.Padding(2);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(223, 22);
+            this.button68.TabIndex = 50;
+            this.button68.Text = "Get Discrete Status – Bus mode";
+            this.button68.UseVisualStyleBackColor = true;
+            this.button68.Click += new System.EventHandler(this.button68_Click);
+            this.button68.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button68_MouseDown);
             // 
             // button67
             // 
-            button67.Location = new System.Drawing.Point(2, 161);
-            button67.Margin = new System.Windows.Forms.Padding(2);
-            button67.Name = "button67";
-            button67.Size = new System.Drawing.Size(223, 22);
-            button67.TabIndex = 49;
-            button67.Text = "Get Status";
-            button67.UseVisualStyleBackColor = true;
-            button67.Click += new System.EventHandler(button67_Click);
-            button67.MouseDown += new System.Windows.Forms.MouseEventHandler(button67_MouseDown);
+            this.button67.Location = new System.Drawing.Point(2, 161);
+            this.button67.Margin = new System.Windows.Forms.Padding(2);
+            this.button67.Name = "button67";
+            this.button67.Size = new System.Drawing.Size(223, 22);
+            this.button67.TabIndex = 49;
+            this.button67.Text = "Get Status";
+            this.button67.UseVisualStyleBackColor = true;
+            this.button67.Click += new System.EventHandler(this.button67_Click);
+            this.button67.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button67_MouseDown);
             // 
             // button66
             // 
-            button66.Location = new System.Drawing.Point(2, 130);
-            button66.Margin = new System.Windows.Forms.Padding(2);
-            button66.Name = "button66";
-            button66.Size = new System.Drawing.Size(223, 22);
-            button66.TabIndex = 46;
-            button66.Text = "Get Serial Number";
-            button66.UseVisualStyleBackColor = true;
-            button66.Click += new System.EventHandler(button66_Click);
-            button66.MouseDown += new System.Windows.Forms.MouseEventHandler(button66_MouseDown);
+            this.button66.Location = new System.Drawing.Point(2, 130);
+            this.button66.Margin = new System.Windows.Forms.Padding(2);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(223, 22);
+            this.button66.TabIndex = 46;
+            this.button66.Text = "Get Serial Number";
+            this.button66.UseVisualStyleBackColor = true;
+            this.button66.Click += new System.EventHandler(this.button66_Click);
+            this.button66.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button66_MouseDown);
             // 
             // button65
             // 
-            button65.Location = new System.Drawing.Point(4, 423);
-            button65.Margin = new System.Windows.Forms.Padding(2);
-            button65.Name = "button65";
-            button65.Size = new System.Drawing.Size(222, 22);
-            button65.TabIndex = 45;
-            button65.Text = "Set DC4 mode ON and OFF";
-            button65.UseVisualStyleBackColor = true;
-            button65.Click += new System.EventHandler(button65_Click);
-            button65.MouseDown += new System.Windows.Forms.MouseEventHandler(button65_MouseDown);
+            this.button65.Location = new System.Drawing.Point(4, 423);
+            this.button65.Margin = new System.Windows.Forms.Padding(2);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(222, 22);
+            this.button65.TabIndex = 45;
+            this.button65.Text = "Set DC4 mode ON and OFF";
+            this.button65.UseVisualStyleBackColor = true;
+            this.button65.Click += new System.EventHandler(this.button65_Click);
+            this.button65.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button65_MouseDown);
             // 
             // textBox_SetADCMode
             // 
-            textBox_SetADCMode.Location = new System.Drawing.Point(232, 365);
-            textBox_SetADCMode.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SetADCMode.MaxLength = 30;
-            textBox_SetADCMode.Name = "textBox_SetADCMode";
-            textBox_SetADCMode.Size = new System.Drawing.Size(120, 26);
-            textBox_SetADCMode.TabIndex = 43;
-            textBox_SetADCMode.Text = "0000";
-            textBox_SetADCMode.TextChanged += new System.EventHandler(textBox_SetSyestemState_TextChanged);
+            this.textBox_SetADCMode.Location = new System.Drawing.Point(232, 365);
+            this.textBox_SetADCMode.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SetADCMode.MaxLength = 30;
+            this.textBox_SetADCMode.Name = "textBox_SetADCMode";
+            this.textBox_SetADCMode.Size = new System.Drawing.Size(141, 26);
+            this.textBox_SetADCMode.TabIndex = 43;
+            this.textBox_SetADCMode.Text = "0000";
+            this.textBox_SetADCMode.TextChanged += new System.EventHandler(this.textBox_SetSyestemState_TextChanged);
             // 
             // button64
             // 
-            button64.Location = new System.Drawing.Point(4, 366);
-            button64.Margin = new System.Windows.Forms.Padding(2);
-            button64.Name = "button64";
-            button64.Size = new System.Drawing.Size(222, 22);
-            button64.TabIndex = 42;
-            button64.Text = "Set ADC System Mode";
-            button64.UseVisualStyleBackColor = true;
-            button64.Click += new System.EventHandler(button64_Click);
-            button64.MouseDown += new System.Windows.Forms.MouseEventHandler(button64_MouseDown);
+            this.button64.Location = new System.Drawing.Point(4, 366);
+            this.button64.Margin = new System.Windows.Forms.Padding(2);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(222, 22);
+            this.button64.TabIndex = 42;
+            this.button64.Text = "Set ADC System Mode";
+            this.button64.UseVisualStyleBackColor = true;
+            this.button64.Click += new System.EventHandler(this.button64_Click);
+            this.button64.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button64_MouseDown);
             // 
             // button63
             // 
-            button63.Location = new System.Drawing.Point(4, 395);
-            button63.Margin = new System.Windows.Forms.Padding(2);
-            button63.Name = "button63";
-            button63.Size = new System.Drawing.Size(222, 22);
-            button63.TabIndex = 41;
-            button63.Text = "Get System Table Indexes";
-            button63.UseVisualStyleBackColor = true;
-            button63.Click += new System.EventHandler(button63_Click);
-            button63.MouseDown += new System.Windows.Forms.MouseEventHandler(button63_MouseDown);
+            this.button63.Location = new System.Drawing.Point(4, 395);
+            this.button63.Margin = new System.Windows.Forms.Padding(2);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(222, 22);
+            this.button63.TabIndex = 41;
+            this.button63.Text = "Get System Table Indexes";
+            this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button63_Click);
+            this.button63.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button63_MouseDown);
             // 
             // button62
             // 
-            button62.Location = new System.Drawing.Point(2, 100);
-            button62.Margin = new System.Windows.Forms.Padding(2);
-            button62.Name = "button62";
-            button62.Size = new System.Drawing.Size(223, 22);
-            button62.TabIndex = 38;
-            button62.Text = "Get Hardware Version";
-            button62.UseVisualStyleBackColor = true;
-            button62.Click += new System.EventHandler(button62_Click);
-            button62.MouseDown += new System.Windows.Forms.MouseEventHandler(button62_MouseDown);
+            this.button62.Location = new System.Drawing.Point(2, 100);
+            this.button62.Margin = new System.Windows.Forms.Padding(2);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(223, 22);
+            this.button62.TabIndex = 38;
+            this.button62.Text = "Get Hardware Version";
+            this.button62.UseVisualStyleBackColor = true;
+            this.button62.Click += new System.EventHandler(this.button62_Click);
+            this.button62.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button62_MouseDown);
             // 
             // button61
             // 
-            button61.Location = new System.Drawing.Point(2, 70);
-            button61.Margin = new System.Windows.Forms.Padding(2);
-            button61.Name = "button61";
-            button61.Size = new System.Drawing.Size(223, 22);
-            button61.TabIndex = 35;
-            button61.Text = "Get Firmware Version";
-            button61.UseVisualStyleBackColor = true;
-            button61.Click += new System.EventHandler(button61_Click);
-            button61.MouseDown += new System.Windows.Forms.MouseEventHandler(button61_MouseDown);
+            this.button61.Location = new System.Drawing.Point(2, 70);
+            this.button61.Margin = new System.Windows.Forms.Padding(2);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(223, 22);
+            this.button61.TabIndex = 35;
+            this.button61.Text = "Get Firmware Version";
+            this.button61.UseVisualStyleBackColor = true;
+            this.button61.Click += new System.EventHandler(this.button61_Click);
+            this.button61.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button61_MouseDown);
             // 
             // button60
             // 
-            button60.Location = new System.Drawing.Point(2, 41);
-            button60.Margin = new System.Windows.Forms.Padding(2);
-            button60.Name = "button60";
-            button60.Size = new System.Drawing.Size(223, 22);
-            button60.TabIndex = 32;
-            button60.Text = "Get Software Version";
-            button60.UseVisualStyleBackColor = true;
-            button60.Click += new System.EventHandler(button60_Click);
-            button60.MouseDown += new System.Windows.Forms.MouseEventHandler(button60_MouseDown);
+            this.button60.Location = new System.Drawing.Point(2, 41);
+            this.button60.Margin = new System.Windows.Forms.Padding(2);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(223, 22);
+            this.button60.TabIndex = 32;
+            this.button60.Text = "Get Software Version";
+            this.button60.UseVisualStyleBackColor = true;
+            this.button60.Click += new System.EventHandler(this.button60_Click);
+            this.button60.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button60_MouseDown);
             // 
             // button_GetSystemID
             // 
-            button_GetSystemID.Location = new System.Drawing.Point(2, 10);
-            button_GetSystemID.Margin = new System.Windows.Forms.Padding(2);
-            button_GetSystemID.Name = "button_GetSystemID";
-            button_GetSystemID.Size = new System.Drawing.Size(223, 22);
-            button_GetSystemID.TabIndex = 29;
-            button_GetSystemID.Text = "Get ID";
-            button_GetSystemID.UseVisualStyleBackColor = true;
-            button_GetSystemID.Click += new System.EventHandler(button59_Click);
-            button_GetSystemID.MouseClick += new System.Windows.Forms.MouseEventHandler(button59_MouseClick);
-            button_GetSystemID.MouseDown += new System.Windows.Forms.MouseEventHandler(button59_MouseDown);
+            this.button_GetSystemID.Location = new System.Drawing.Point(2, 10);
+            this.button_GetSystemID.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GetSystemID.Name = "button_GetSystemID";
+            this.button_GetSystemID.Size = new System.Drawing.Size(223, 22);
+            this.button_GetSystemID.TabIndex = 29;
+            this.button_GetSystemID.Text = "Get ID";
+            this.button_GetSystemID.UseVisualStyleBackColor = true;
+            this.button_GetSystemID.Click += new System.EventHandler(this.button59_Click);
+            this.button_GetSystemID.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button59_MouseClick);
+            this.button_GetSystemID.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button59_MouseDown);
             // 
             // groupBox32
             // 
-            groupBox32.Controls.Add(richTextBox_SSPA);
-            groupBox32.Controls.Add(checkBox_RecordMiniAda);
-            groupBox32.Controls.Add(checkBox_PauseMiniAda);
-            groupBox32.Controls.Add(button_ClearMiniAda);
-            groupBox32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            groupBox32.Location = new System.Drawing.Point(901, 3);
-            groupBox32.Margin = new System.Windows.Forms.Padding(2);
-            groupBox32.Name = "groupBox32";
-            groupBox32.Padding = new System.Windows.Forms.Padding(2);
-            groupBox32.Size = new System.Drawing.Size(510, 646);
-            groupBox32.TabIndex = 9;
-            groupBox32.TabStop = false;
-            groupBox32.Text = "SSPA Monitor";
+            this.groupBox32.Controls.Add(this.richTextBox_SSPA);
+            this.groupBox32.Controls.Add(this.checkBox_RecordMiniAda);
+            this.groupBox32.Controls.Add(this.checkBox_PauseMiniAda);
+            this.groupBox32.Controls.Add(this.button_ClearMiniAda);
+            this.groupBox32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox32.Location = new System.Drawing.Point(901, 3);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox32.Size = new System.Drawing.Size(510, 646);
+            this.groupBox32.TabIndex = 9;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "SSPA Monitor";
             // 
             // richTextBox_SSPA
             // 
-            richTextBox_SSPA.BackColor = System.Drawing.Color.LightGray;
-            richTextBox_SSPA.EnableAutoDragDrop = true;
-            richTextBox_SSPA.Location = new System.Drawing.Point(6, 17);
-            richTextBox_SSPA.Margin = new System.Windows.Forms.Padding(2);
-            richTextBox_SSPA.Name = "richTextBox_SSPA";
-            richTextBox_SSPA.Size = new System.Drawing.Size(506, 588);
-            richTextBox_SSPA.TabIndex = 0;
-            richTextBox_SSPA.Text = "";
+            this.richTextBox_SSPA.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox_SSPA.EnableAutoDragDrop = true;
+            this.richTextBox_SSPA.Location = new System.Drawing.Point(6, 17);
+            this.richTextBox_SSPA.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_SSPA.Name = "richTextBox_SSPA";
+            this.richTextBox_SSPA.Size = new System.Drawing.Size(506, 588);
+            this.richTextBox_SSPA.TabIndex = 0;
+            this.richTextBox_SSPA.Text = "";
             // 
             // checkBox_RecordMiniAda
             // 
-            checkBox_RecordMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_RecordMiniAda.AutoSize = true;
-            checkBox_RecordMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_RecordMiniAda.Location = new System.Drawing.Point(6, 610);
-            checkBox_RecordMiniAda.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_RecordMiniAda.Name = "checkBox_RecordMiniAda";
-            checkBox_RecordMiniAda.Size = new System.Drawing.Size(99, 26);
-            checkBox_RecordMiniAda.TabIndex = 7;
-            checkBox_RecordMiniAda.Text = "Record Log";
-            checkBox_RecordMiniAda.UseVisualStyleBackColor = true;
+            this.checkBox_RecordMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RecordMiniAda.AutoSize = true;
+            this.checkBox_RecordMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_RecordMiniAda.Location = new System.Drawing.Point(6, 610);
+            this.checkBox_RecordMiniAda.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_RecordMiniAda.Name = "checkBox_RecordMiniAda";
+            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordMiniAda.TabIndex = 7;
+            this.checkBox_RecordMiniAda.Text = "Record Log";
+            this.checkBox_RecordMiniAda.UseVisualStyleBackColor = true;
             // 
             // checkBox_PauseMiniAda
             // 
-            checkBox_PauseMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_PauseMiniAda.AutoSize = true;
-            checkBox_PauseMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_PauseMiniAda.Location = new System.Drawing.Point(102, 610);
-            checkBox_PauseMiniAda.Margin = new System.Windows.Forms.Padding(2);
-            checkBox_PauseMiniAda.Name = "checkBox_PauseMiniAda";
-            checkBox_PauseMiniAda.Size = new System.Drawing.Size(62, 26);
-            checkBox_PauseMiniAda.TabIndex = 5;
-            checkBox_PauseMiniAda.Text = "Pause";
-            checkBox_PauseMiniAda.UseVisualStyleBackColor = true;
+            this.checkBox_PauseMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_PauseMiniAda.AutoSize = true;
+            this.checkBox_PauseMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(102, 610);
+            this.checkBox_PauseMiniAda.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_PauseMiniAda.Name = "checkBox_PauseMiniAda";
+            this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(62, 26);
+            this.checkBox_PauseMiniAda.TabIndex = 5;
+            this.checkBox_PauseMiniAda.Text = "Pause";
+            this.checkBox_PauseMiniAda.UseVisualStyleBackColor = true;
             // 
             // button_ClearMiniAda
             // 
-            button_ClearMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_ClearMiniAda.Location = new System.Drawing.Point(165, 610);
-            button_ClearMiniAda.Margin = new System.Windows.Forms.Padding(2);
-            button_ClearMiniAda.Name = "button_ClearMiniAda";
-            button_ClearMiniAda.Size = new System.Drawing.Size(57, 25);
-            button_ClearMiniAda.TabIndex = 6;
-            button_ClearMiniAda.Text = "Clear";
-            button_ClearMiniAda.UseVisualStyleBackColor = true;
+            this.button_ClearMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearMiniAda.Location = new System.Drawing.Point(165, 610);
+            this.button_ClearMiniAda.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearMiniAda.Name = "button_ClearMiniAda";
+            this.button_ClearMiniAda.Size = new System.Drawing.Size(57, 25);
+            this.button_ClearMiniAda.TabIndex = 6;
+            this.button_ClearMiniAda.Text = "Clear";
+            this.button_ClearMiniAda.UseVisualStyleBackColor = true;
             // 
             // tabPage3038WBPAA
             // 
-            tabPage3038WBPAA.Controls.Add(groupBox43);
-            tabPage3038WBPAA.Location = new System.Drawing.Point(4, 27);
-            tabPage3038WBPAA.Margin = new System.Windows.Forms.Padding(2);
-            tabPage3038WBPAA.Name = "tabPage3038WBPAA";
-            tabPage3038WBPAA.Size = new System.Drawing.Size(1414, 659);
-            tabPage3038WBPAA.TabIndex = 12;
-            tabPage3038WBPAA.Text = "3038 - WB PAA";
-            tabPage3038WBPAA.UseVisualStyleBackColor = true;
+            this.tabPage3038WBPAA.Controls.Add(this.groupBox43);
+            this.tabPage3038WBPAA.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3038WBPAA.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3038WBPAA.Name = "tabPage3038WBPAA";
+            this.tabPage3038WBPAA.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage3038WBPAA.TabIndex = 12;
+            this.tabPage3038WBPAA.Text = "3038 - WB PAA";
+            this.tabPage3038WBPAA.UseVisualStyleBackColor = true;
             // 
             // groupBox43
             // 
-            groupBox43.Controls.Add(groupBox48);
-            groupBox43.Controls.Add(groupBox38);
-            groupBox43.Controls.Add(tabControl1);
-            groupBox43.Location = new System.Drawing.Point(2, 8);
-            groupBox43.Margin = new System.Windows.Forms.Padding(2);
-            groupBox43.Name = "groupBox43";
-            groupBox43.Padding = new System.Windows.Forms.Padding(2);
-            groupBox43.Size = new System.Drawing.Size(1410, 646);
-            groupBox43.TabIndex = 0;
-            groupBox43.TabStop = false;
-            groupBox43.Text = "3038 - WB PAA";
+            this.groupBox43.Controls.Add(this.groupBox48);
+            this.groupBox43.Controls.Add(this.groupBox38);
+            this.groupBox43.Controls.Add(this.tabControl1);
+            this.groupBox43.Location = new System.Drawing.Point(2, 8);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox43.Size = new System.Drawing.Size(1410, 646);
+            this.groupBox43.TabIndex = 0;
+            this.groupBox43.TabStop = false;
+            this.groupBox43.Text = "3038 - WB PAA";
             // 
             // groupBox48
             // 
-            groupBox48.Controls.Add(button6);
-            groupBox48.Controls.Add(button29);
-            groupBox48.Location = new System.Drawing.Point(1248, 184);
-            groupBox48.Margin = new System.Windows.Forms.Padding(2);
-            groupBox48.Name = "groupBox48";
-            groupBox48.Padding = new System.Windows.Forms.Padding(2);
-            groupBox48.Size = new System.Drawing.Size(141, 130);
-            groupBox48.TabIndex = 23;
-            groupBox48.TabStop = false;
-            groupBox48.Text = "CSV file";
+            this.groupBox48.Controls.Add(this.button6);
+            this.groupBox48.Controls.Add(this.button29);
+            this.groupBox48.Location = new System.Drawing.Point(1248, 184);
+            this.groupBox48.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox48.Size = new System.Drawing.Size(141, 130);
+            this.groupBox48.TabIndex = 23;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "CSV file";
             // 
             // button6
             // 
-            button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button6.Location = new System.Drawing.Point(6, 22);
-            button6.Margin = new System.Windows.Forms.Padding(2);
-            button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(127, 43);
-            button6.TabIndex = 18;
-            button6.Text = "Read CSV file";
-            button6.UseVisualStyleBackColor = true;
+            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(6, 22);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(127, 43);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Read CSV file";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
-            button29.BackColor = System.Drawing.Color.Transparent;
-            button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button29.Location = new System.Drawing.Point(6, 77);
-            button29.Margin = new System.Windows.Forms.Padding(2);
-            button29.Name = "button29";
-            button29.Size = new System.Drawing.Size(127, 43);
-            button29.TabIndex = 21;
-            button29.Text = "Write CSV file";
-            button29.UseVisualStyleBackColor = false;
+            this.button29.BackColor = System.Drawing.Color.Transparent;
+            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.Location = new System.Drawing.Point(6, 77);
+            this.button29.Margin = new System.Windows.Forms.Padding(2);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(127, 43);
+            this.button29.TabIndex = 21;
+            this.button29.Text = "Write CSV file";
+            this.button29.UseVisualStyleBackColor = false;
             // 
             // groupBox38
             // 
-            groupBox38.Controls.Add(button2);
-            groupBox38.Controls.Add(button30);
-            groupBox38.Location = new System.Drawing.Point(1248, 42);
-            groupBox38.Margin = new System.Windows.Forms.Padding(2);
-            groupBox38.Name = "groupBox38";
-            groupBox38.Padding = new System.Windows.Forms.Padding(2);
-            groupBox38.Size = new System.Drawing.Size(141, 130);
-            groupBox38.TabIndex = 22;
-            groupBox38.TabStop = false;
-            groupBox38.Text = "Flash";
+            this.groupBox38.Controls.Add(this.button2);
+            this.groupBox38.Controls.Add(this.button30);
+            this.groupBox38.Location = new System.Drawing.Point(1248, 42);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox38.Name = "groupBox38";
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox38.Size = new System.Drawing.Size(141, 130);
+            this.groupBox38.TabIndex = 22;
+            this.groupBox38.TabStop = false;
+            this.groupBox38.Text = "Flash";
             // 
             // button2
             // 
-            button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button2.Location = new System.Drawing.Point(6, 22);
-            button2.Margin = new System.Windows.Forms.Padding(2);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(127, 43);
-            button2.TabIndex = 18;
-            button2.Text = "Read all from flash ";
-            button2.UseVisualStyleBackColor = true;
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(6, 22);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 43);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Read all from flash ";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button30
             // 
-            button30.BackColor = System.Drawing.Color.Transparent;
-            button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            button30.Location = new System.Drawing.Point(6, 77);
-            button30.Margin = new System.Windows.Forms.Padding(2);
-            button30.Name = "button30";
-            button30.Size = new System.Drawing.Size(127, 43);
-            button30.TabIndex = 21;
-            button30.Text = "Write all to flash";
-            button30.UseVisualStyleBackColor = false;
+            this.button30.BackColor = System.Drawing.Color.Transparent;
+            this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button30.Location = new System.Drawing.Point(6, 77);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(127, 43);
+            this.button30.TabIndex = 21;
+            this.button30.Text = "Write all to flash";
+            this.button30.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage6);
-            tabControl1.Controls.Add(tabPage13);
-            tabControl1.Controls.Add(tabPage7);
-            tabControl1.Controls.Add(tabPage8);
-            tabControl1.Controls.Add(tabPage9);
-            tabControl1.Location = new System.Drawing.Point(5, 17);
-            tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(1242, 623);
-            tabControl1.TabIndex = 0;
-            tabControl1.SelectedIndexChanged += new System.EventHandler(tabControl1_SelectedIndexChanged);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage13);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Location = new System.Drawing.Point(5, 17);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1242, 623);
+            this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage6
             // 
-            tabPage6.Controls.Add(groupBox49);
-            tabPage6.Controls.Add(groupBox37);
-            tabPage6.Controls.Add(button71);
-            tabPage6.Controls.Add(groupBox47);
-            tabPage6.Controls.Add(groupBox35);
-            tabPage6.Controls.Add(groupBox46);
-            tabPage6.Controls.Add(groupBox45);
-            tabPage6.Controls.Add(groupBox34);
-            tabPage6.Controls.Add(groupBox44);
-            tabPage6.Controls.Add(groupBox1);
-            tabPage6.Controls.Add(groupBox33);
-            tabPage6.Location = new System.Drawing.Point(4, 27);
-            tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            tabPage6.Size = new System.Drawing.Size(1234, 592);
-            tabPage6.TabIndex = 0;
-            tabPage6.Text = "Main";
-            tabPage6.UseVisualStyleBackColor = true;
+            this.tabPage6.Controls.Add(this.groupBox49);
+            this.tabPage6.Controls.Add(this.groupBox37);
+            this.tabPage6.Controls.Add(this.button71);
+            this.tabPage6.Controls.Add(this.groupBox47);
+            this.tabPage6.Controls.Add(this.groupBox35);
+            this.tabPage6.Controls.Add(this.groupBox46);
+            this.tabPage6.Controls.Add(this.groupBox45);
+            this.tabPage6.Controls.Add(this.groupBox34);
+            this.tabPage6.Controls.Add(this.groupBox44);
+            this.tabPage6.Controls.Add(this.groupBox1);
+            this.tabPage6.Controls.Add(this.groupBox33);
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Main";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.label123);
+            this.groupBox49.Controls.Add(this.button_SystemMode);
+            this.groupBox49.Controls.Add(this.textBox_SystemMode);
+            this.groupBox49.Location = new System.Drawing.Point(663, 120);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Size = new System.Drawing.Size(200, 90);
+            this.groupBox49.TabIndex = 31;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "System mode";
+            // 
+            // button_SystemMode
+            // 
+            this.button_SystemMode.Location = new System.Drawing.Point(6, 58);
+            this.button_SystemMode.Name = "button_SystemMode";
+            this.button_SystemMode.Size = new System.Drawing.Size(124, 23);
+            this.button_SystemMode.TabIndex = 32;
+            this.button_SystemMode.Text = "Set System mode";
+            this.button_SystemMode.UseVisualStyleBackColor = true;
+            this.button_SystemMode.Click += new System.EventHandler(this.button_SystemMode_Click);
+            // 
+            // textBox_SystemMode
+            // 
+            this.textBox_SystemMode.Location = new System.Drawing.Point(136, 57);
+            this.textBox_SystemMode.MaxLength = 2;
+            this.textBox_SystemMode.Name = "textBox_SystemMode";
+            this.textBox_SystemMode.Size = new System.Drawing.Size(56, 26);
+            this.textBox_SystemMode.TabIndex = 31;
+            this.textBox_SystemMode.Text = "00";
+            this.textBox_SystemMode.TextChanged += new System.EventHandler(this.textBox_SystemMode_TextChanged);
             // 
             // groupBox37
             // 
-            groupBox37.Controls.Add(checkBox4);
-            groupBox37.Controls.Add(checkBox3);
-            groupBox37.Controls.Add(checkBox9);
-            groupBox37.Controls.Add(checkBox2);
-            groupBox37.Controls.Add(button73);
-            groupBox37.Controls.Add(label114);
-            groupBox37.Controls.Add(label113);
-            groupBox37.Controls.Add(label112);
-            groupBox37.Controls.Add(textBox_CALSAR);
-            groupBox37.Controls.Add(label111);
-            groupBox37.Controls.Add(label110);
-            groupBox37.Controls.Add(textBox82);
-            groupBox37.Controls.Add(label107);
-            groupBox37.Controls.Add(textBox83);
-            groupBox37.Controls.Add(label108);
-            groupBox37.Controls.Add(textBox84);
-            groupBox37.Controls.Add(label109);
-            groupBox37.Location = new System.Drawing.Point(876, 330);
-            groupBox37.Margin = new System.Windows.Forms.Padding(2);
-            groupBox37.Name = "groupBox37";
-            groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            groupBox37.Size = new System.Drawing.Size(354, 192);
-            groupBox37.TabIndex = 17;
-            groupBox37.TabStop = false;
+            this.groupBox37.Controls.Add(this.checkBox4);
+            this.groupBox37.Controls.Add(this.checkBox3);
+            this.groupBox37.Controls.Add(this.checkBox9);
+            this.groupBox37.Controls.Add(this.checkBox2);
+            this.groupBox37.Controls.Add(this.button73);
+            this.groupBox37.Controls.Add(this.label114);
+            this.groupBox37.Controls.Add(this.label113);
+            this.groupBox37.Controls.Add(this.label112);
+            this.groupBox37.Controls.Add(this.textBox_CALSAR);
+            this.groupBox37.Controls.Add(this.label111);
+            this.groupBox37.Controls.Add(this.label110);
+            this.groupBox37.Controls.Add(this.textBox82);
+            this.groupBox37.Controls.Add(this.label107);
+            this.groupBox37.Controls.Add(this.textBox83);
+            this.groupBox37.Controls.Add(this.label108);
+            this.groupBox37.Controls.Add(this.textBox84);
+            this.groupBox37.Controls.Add(this.label109);
+            this.groupBox37.Location = new System.Drawing.Point(876, 330);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Size = new System.Drawing.Size(354, 192);
+            this.groupBox37.TabIndex = 17;
+            this.groupBox37.TabStop = false;
             // 
             // checkBox4
             // 
-            checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new System.Drawing.Point(174, 113);
-            checkBox4.Margin = new System.Windows.Forms.Padding(2);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new System.Drawing.Size(36, 28);
-            checkBox4.TabIndex = 28;
-            checkBox4.Text = "On";
-            checkBox4.UseVisualStyleBackColor = true;
-            checkBox4.CheckedChanged += new System.EventHandler(checkBox4_CheckedChanged_1);
+            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(174, 113);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(36, 28);
+            this.checkBox4.TabIndex = 28;
+            this.checkBox4.Text = "On";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
             // checkBox3
             // 
-            checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new System.Drawing.Point(96, 112);
-            checkBox3.Margin = new System.Windows.Forms.Padding(2);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new System.Drawing.Size(36, 28);
-            checkBox3.TabIndex = 27;
-            checkBox3.Text = "On";
-            checkBox3.UseVisualStyleBackColor = true;
-            checkBox3.CheckedChanged += new System.EventHandler(checkBox3_CheckedChanged_1);
+            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(96, 112);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(36, 28);
+            this.checkBox3.TabIndex = 27;
+            this.checkBox3.Text = "On";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
             // 
             // checkBox9
             // 
-            checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox9.AutoSize = true;
-            checkBox9.Location = new System.Drawing.Point(18, 112);
-            checkBox9.Margin = new System.Windows.Forms.Padding(2);
-            checkBox9.Name = "checkBox9";
-            checkBox9.Size = new System.Drawing.Size(36, 28);
-            checkBox9.TabIndex = 26;
-            checkBox9.Text = "On";
-            checkBox9.UseVisualStyleBackColor = true;
-            checkBox9.CheckedChanged += new System.EventHandler(checkBox9_CheckedChanged);
+            this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(18, 112);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(36, 28);
+            this.checkBox9.TabIndex = 26;
+            this.checkBox9.Text = "On";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
             // checkBox2
             // 
-            checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new System.Drawing.Point(232, 54);
-            checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new System.Drawing.Size(36, 28);
-            checkBox2.TabIndex = 20;
-            checkBox2.Text = "On";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += new System.EventHandler(checkBox2_CheckedChanged_1);
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(232, 54);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(36, 28);
+            this.checkBox2.TabIndex = 20;
+            this.checkBox2.Text = "On";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
             // button73
             // 
-            button73.BackColor = System.Drawing.SystemColors.Highlight;
-            button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button73.Location = new System.Drawing.Point(233, 98);
-            button73.Margin = new System.Windows.Forms.Padding(2);
-            button73.Name = "button73";
-            button73.Size = new System.Drawing.Size(107, 39);
-            button73.TabIndex = 17;
-            button73.Text = "Strobe";
-            button73.UseVisualStyleBackColor = false;
-            button73.Click += new System.EventHandler(button73_Click_3);
+            this.button73.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button73.Location = new System.Drawing.Point(233, 98);
+            this.button73.Margin = new System.Windows.Forms.Padding(2);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(107, 39);
+            this.button73.TabIndex = 17;
+            this.button73.Text = "Strobe";
+            this.button73.UseVisualStyleBackColor = false;
+            this.button73.Click += new System.EventHandler(this.button73_Click_3);
             // 
             // label114
             // 
-            label114.AutoSize = true;
-            label114.Location = new System.Drawing.Point(158, 90);
-            label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label114.Name = "label114";
-            label114.Size = new System.Drawing.Size(63, 18);
-            label114.TabIndex = 24;
-            label114.Text = "Preserve";
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(158, 90);
+            this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(63, 18);
+            this.label114.TabIndex = 24;
+            this.label114.Text = "Preserve";
             // 
             // label113
             // 
-            label113.AutoSize = true;
-            label113.Location = new System.Drawing.Point(82, 90);
-            label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label113.Name = "label113";
-            label113.Size = new System.Drawing.Size(72, 18);
-            label113.TabIndex = 22;
-            label113.Text = "OVT check";
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(82, 90);
+            this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(72, 18);
+            this.label113.TabIndex = 22;
+            this.label113.Text = "OVT check";
             // 
             // label112
             // 
-            label112.AutoSize = true;
-            label112.Location = new System.Drawing.Point(4, 90);
-            label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label112.Name = "label112";
-            label112.Size = new System.Drawing.Size(81, 18);
-            label112.TabIndex = 20;
-            label112.Text = "SEU recover";
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(4, 90);
+            this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(81, 18);
+            this.label112.TabIndex = 20;
+            this.label112.Text = "SEU recover";
             // 
             // textBox_CALSAR
             // 
-            textBox_CALSAR.Location = new System.Drawing.Point(286, 55);
-            textBox_CALSAR.Margin = new System.Windows.Forms.Padding(2);
-            textBox_CALSAR.Name = "textBox_CALSAR";
-            textBox_CALSAR.Size = new System.Drawing.Size(53, 26);
-            textBox_CALSAR.TabIndex = 19;
-            textBox_CALSAR.Text = "0";
-            textBox_CALSAR.TextChanged += new System.EventHandler(textBox_CALSAR_TextChanged);
-            textBox_CALSAR.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox_CALSAR_KeyDown);
+            this.textBox_CALSAR.Location = new System.Drawing.Point(286, 55);
+            this.textBox_CALSAR.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CALSAR.Name = "textBox_CALSAR";
+            this.textBox_CALSAR.Size = new System.Drawing.Size(53, 26);
+            this.textBox_CALSAR.TabIndex = 19;
+            this.textBox_CALSAR.Text = "0";
+            this.textBox_CALSAR.TextChanged += new System.EventHandler(this.textBox_CALSAR_TextChanged);
+            this.textBox_CALSAR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CALSAR_KeyDown);
             // 
             // label111
             // 
-            label111.AutoSize = true;
-            label111.Location = new System.Drawing.Point(282, 30);
-            label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label111.Name = "label111";
-            label111.Size = new System.Drawing.Size(58, 18);
-            label111.TabIndex = 18;
-            label111.Text = "CAL SAR";
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(282, 30);
+            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(58, 18);
+            this.label111.TabIndex = 18;
+            this.label111.Text = "CAL SAR";
             // 
             // label110
             // 
-            label110.AutoSize = true;
-            label110.Location = new System.Drawing.Point(233, 30);
-            label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label110.Name = "label110";
-            label110.Size = new System.Drawing.Size(32, 18);
-            label110.TabIndex = 16;
-            label110.Text = "DC4";
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(233, 30);
+            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(32, 18);
+            this.label110.TabIndex = 16;
+            this.label110.Text = "DC4";
             // 
             // textBox82
             // 
-            textBox82.Location = new System.Drawing.Point(165, 55);
-            textBox82.Margin = new System.Windows.Forms.Padding(2);
-            textBox82.Name = "textBox82";
-            textBox82.Size = new System.Drawing.Size(53, 26);
-            textBox82.TabIndex = 15;
-            textBox82.Text = "0";
-            textBox82.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox82_KeyDown);
+            this.textBox82.Location = new System.Drawing.Point(165, 55);
+            this.textBox82.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox82.Name = "textBox82";
+            this.textBox82.Size = new System.Drawing.Size(53, 26);
+            this.textBox82.TabIndex = 15;
+            this.textBox82.Text = "0";
+            this.textBox82.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox82_KeyDown);
             // 
             // label107
             // 
-            label107.AutoSize = true;
-            label107.Location = new System.Drawing.Point(162, 30);
-            label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label107.Name = "label107";
-            label107.Size = new System.Drawing.Size(50, 18);
-            label107.TabIndex = 14;
-            label107.Text = "ATT bit";
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(162, 30);
+            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(50, 18);
+            this.label107.TabIndex = 14;
+            this.label107.Text = "ATT bit";
             // 
             // textBox83
             // 
-            textBox83.Location = new System.Drawing.Point(87, 55);
-            textBox83.Margin = new System.Windows.Forms.Padding(2);
-            textBox83.Name = "textBox83";
-            textBox83.Size = new System.Drawing.Size(53, 26);
-            textBox83.TabIndex = 13;
-            textBox83.Text = "0";
-            textBox83.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox83_KeyDown);
+            this.textBox83.Location = new System.Drawing.Point(87, 55);
+            this.textBox83.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox83.Name = "textBox83";
+            this.textBox83.Size = new System.Drawing.Size(53, 26);
+            this.textBox83.TabIndex = 13;
+            this.textBox83.Text = "0";
+            this.textBox83.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox83_KeyDown);
             // 
             // label108
             // 
-            label108.AutoSize = true;
-            label108.Location = new System.Drawing.Point(89, 29);
-            label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label108.Name = "label108";
-            label108.Size = new System.Drawing.Size(42, 18);
-            label108.TabIndex = 12;
-            label108.Text = "FT bit";
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(89, 29);
+            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(42, 18);
+            this.label108.TabIndex = 12;
+            this.label108.Text = "FT bit";
             // 
             // textBox84
             // 
-            textBox84.Location = new System.Drawing.Point(18, 55);
-            textBox84.Margin = new System.Windows.Forms.Padding(2);
-            textBox84.Name = "textBox84";
-            textBox84.Size = new System.Drawing.Size(53, 26);
-            textBox84.TabIndex = 11;
-            textBox84.Text = "0";
-            textBox84.TextChanged += new System.EventHandler(textBox84_TextChanged);
-            textBox84.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox84_KeyDown);
+            this.textBox84.Location = new System.Drawing.Point(18, 55);
+            this.textBox84.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox84.Name = "textBox84";
+            this.textBox84.Size = new System.Drawing.Size(53, 26);
+            this.textBox84.TabIndex = 11;
+            this.textBox84.Text = "0";
+            this.textBox84.TextChanged += new System.EventHandler(this.textBox84_TextChanged);
+            this.textBox84.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
             // 
             // label109
             // 
-            label109.AutoSize = true;
-            label109.Location = new System.Drawing.Point(12, 30);
-            label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label109.Name = "label109";
-            label109.Size = new System.Drawing.Size(56, 18);
-            label109.TabIndex = 1;
-            label109.Text = "Freq bit";
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(12, 30);
+            this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(56, 18);
+            this.label109.TabIndex = 1;
+            this.label109.Text = "Freq bit";
             // 
             // button71
             // 
-            button71.Location = new System.Drawing.Point(552, 184);
-            button71.Margin = new System.Windows.Forms.Padding(2);
-            button71.Name = "button71";
-            button71.Size = new System.Drawing.Size(97, 22);
-            button71.TabIndex = 16;
-            button71.Text = "Save CSV";
-            button71.UseVisualStyleBackColor = true;
-            button71.Click += new System.EventHandler(button71_Click);
+            this.button71.Location = new System.Drawing.Point(552, 184);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(97, 22);
+            this.button71.TabIndex = 16;
+            this.button71.Text = "Save CSV";
+            this.button71.UseVisualStyleBackColor = true;
+            this.button71.Click += new System.EventHandler(this.button71_Click);
             // 
             // groupBox47
             // 
-            groupBox47.Controls.Add(label103);
-            groupBox47.Controls.Add(button74);
-            groupBox47.Controls.Add(textBox_StatusUUT32);
-            groupBox47.Controls.Add(button_GetStatus);
-            groupBox47.Controls.Add(label104);
-            groupBox47.Controls.Add(label105);
-            groupBox47.Controls.Add(textBox_StatusUUT25);
-            groupBox47.Controls.Add(textBox_StatusUUT31);
-            groupBox47.Controls.Add(label69);
-            groupBox47.Controls.Add(label106);
-            groupBox47.Controls.Add(label120);
-            groupBox47.Controls.Add(textBox_StatusUUT30);
-            groupBox47.Controls.Add(textBox_StatusUUT26);
-            groupBox47.Controls.Add(label118);
-            groupBox47.Controls.Add(textBox_StatusUUT23);
-            groupBox47.Controls.Add(textBox_StatusUUT29);
-            groupBox47.Controls.Add(label56);
-            groupBox47.Controls.Add(label119);
-            groupBox47.Controls.Add(textBox_StatusUUT24);
-            groupBox47.Controls.Add(textBox_StatusUUT27);
-            groupBox47.Controls.Add(textBox_StatusUUT12);
-            groupBox47.Controls.Add(textBox_StatusUUT28);
-            groupBox47.Controls.Add(label57);
-            groupBox47.Controls.Add(label67);
-            groupBox47.Controls.Add(textBox_StatusUUT22);
-            groupBox47.Controls.Add(label58);
-            groupBox47.Controls.Add(label70);
-            groupBox47.Controls.Add(textBox_StatusUUT21);
-            groupBox47.Controls.Add(label59);
-            groupBox47.Controls.Add(textBox_StatusUUT20);
-            groupBox47.Controls.Add(label60);
-            groupBox47.Controls.Add(textBox_StatusUUT19);
-            groupBox47.Controls.Add(label61);
-            groupBox47.Controls.Add(textBox_StatusUUT18);
-            groupBox47.Controls.Add(label62);
-            groupBox47.Controls.Add(textBox_StatusUUT17);
-            groupBox47.Controls.Add(label63);
-            groupBox47.Controls.Add(textBox_StatusUUT16);
-            groupBox47.Controls.Add(label64);
-            groupBox47.Controls.Add(textBox_StatusUUT15);
-            groupBox47.Controls.Add(label65);
-            groupBox47.Controls.Add(textBox_StatusUUT14);
-            groupBox47.Controls.Add(label66);
-            groupBox47.Controls.Add(textBox_StatusUUT13);
-            groupBox47.Controls.Add(label55);
-            groupBox47.Controls.Add(textBox_StatusUUT1);
-            groupBox47.Controls.Add(label54);
-            groupBox47.Controls.Add(textBox_StatusUUT11);
-            groupBox47.Controls.Add(label53);
-            groupBox47.Controls.Add(textBox_StatusUUT10);
-            groupBox47.Controls.Add(label52);
-            groupBox47.Controls.Add(textBox_StatusUUT9);
-            groupBox47.Controls.Add(label51);
-            groupBox47.Controls.Add(textBox_StatusUUT8);
-            groupBox47.Controls.Add(label50);
-            groupBox47.Controls.Add(textBox_StatusUUT7);
-            groupBox47.Controls.Add(label49);
-            groupBox47.Controls.Add(textBox_StatusUUT6);
-            groupBox47.Controls.Add(label40);
-            groupBox47.Controls.Add(textBox_StatusUUT5);
-            groupBox47.Controls.Add(label39);
-            groupBox47.Controls.Add(textBox_StatusUUT4);
-            groupBox47.Controls.Add(label33);
-            groupBox47.Controls.Add(textBox_StatusUUT3);
-            groupBox47.Controls.Add(label32);
-            groupBox47.Controls.Add(textBox_StatusUUT2);
-            groupBox47.Controls.Add(groupBox39);
-            groupBox47.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            groupBox47.Location = new System.Drawing.Point(6, 209);
-            groupBox47.Margin = new System.Windows.Forms.Padding(2);
-            groupBox47.Name = "groupBox47";
-            groupBox47.Padding = new System.Windows.Forms.Padding(2);
-            groupBox47.Size = new System.Drawing.Size(857, 379);
-            groupBox47.TabIndex = 15;
-            groupBox47.TabStop = false;
-            groupBox47.Text = " Status UUT";
+            this.groupBox47.Controls.Add(this.label103);
+            this.groupBox47.Controls.Add(this.button74);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT32);
+            this.groupBox47.Controls.Add(this.button_GetStatus);
+            this.groupBox47.Controls.Add(this.label104);
+            this.groupBox47.Controls.Add(this.label105);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT25);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT31);
+            this.groupBox47.Controls.Add(this.label69);
+            this.groupBox47.Controls.Add(this.label106);
+            this.groupBox47.Controls.Add(this.label120);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT30);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT26);
+            this.groupBox47.Controls.Add(this.label118);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT23);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT29);
+            this.groupBox47.Controls.Add(this.label56);
+            this.groupBox47.Controls.Add(this.label119);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT24);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT27);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT12);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT28);
+            this.groupBox47.Controls.Add(this.label57);
+            this.groupBox47.Controls.Add(this.label67);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT22);
+            this.groupBox47.Controls.Add(this.label58);
+            this.groupBox47.Controls.Add(this.label70);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT21);
+            this.groupBox47.Controls.Add(this.label59);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT20);
+            this.groupBox47.Controls.Add(this.label60);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT19);
+            this.groupBox47.Controls.Add(this.label61);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT18);
+            this.groupBox47.Controls.Add(this.label62);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT17);
+            this.groupBox47.Controls.Add(this.label63);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT16);
+            this.groupBox47.Controls.Add(this.label64);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT15);
+            this.groupBox47.Controls.Add(this.label65);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT14);
+            this.groupBox47.Controls.Add(this.label66);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT13);
+            this.groupBox47.Controls.Add(this.label55);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT1);
+            this.groupBox47.Controls.Add(this.label54);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT11);
+            this.groupBox47.Controls.Add(this.label53);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT10);
+            this.groupBox47.Controls.Add(this.label52);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT9);
+            this.groupBox47.Controls.Add(this.label51);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT8);
+            this.groupBox47.Controls.Add(this.label50);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT7);
+            this.groupBox47.Controls.Add(this.label49);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT6);
+            this.groupBox47.Controls.Add(this.label40);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT5);
+            this.groupBox47.Controls.Add(this.label39);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT4);
+            this.groupBox47.Controls.Add(this.label33);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT3);
+            this.groupBox47.Controls.Add(this.label32);
+            this.groupBox47.Controls.Add(this.textBox_StatusUUT2);
+            this.groupBox47.Controls.Add(this.groupBox39);
+            this.groupBox47.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox47.Location = new System.Drawing.Point(6, 209);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Size = new System.Drawing.Size(857, 379);
+            this.groupBox47.TabIndex = 15;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = " Status UUT";
             // 
             // label103
             // 
-            label103.AutoSize = true;
-            label103.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label103.ForeColor = System.Drawing.Color.Black;
-            label103.Location = new System.Drawing.Point(425, 172);
-            label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label103.Name = "label103";
-            label103.Size = new System.Drawing.Size(105, 19);
-            label103.TabIndex = 87;
-            label103.Text = "Tx OVT hazard";
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.Black;
+            this.label103.Location = new System.Drawing.Point(425, 172);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(105, 19);
+            this.label103.TabIndex = 87;
+            this.label103.Text = "Tx OVT hazard";
             // 
             // button74
             // 
-            button74.Location = new System.Drawing.Point(757, 330);
-            button74.Margin = new System.Windows.Forms.Padding(2);
-            button74.Name = "button74";
-            button74.Size = new System.Drawing.Size(97, 43);
-            button74.TabIndex = 77;
-            button74.Text = "Clear";
-            button74.UseVisualStyleBackColor = true;
-            button74.Click += new System.EventHandler(button74_Click_1);
+            this.button74.Location = new System.Drawing.Point(757, 330);
+            this.button74.Margin = new System.Windows.Forms.Padding(2);
+            this.button74.Name = "button74";
+            this.button74.Size = new System.Drawing.Size(97, 43);
+            this.button74.TabIndex = 77;
+            this.button74.Text = "Clear";
+            this.button74.UseVisualStyleBackColor = true;
+            this.button74.Click += new System.EventHandler(this.button74_Click_1);
             // 
             // textBox_StatusUUT32
             // 
-            textBox_StatusUUT32.Location = new System.Drawing.Point(538, 169);
-            textBox_StatusUUT32.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT32.Name = "textBox_StatusUUT32";
-            textBox_StatusUUT32.ReadOnly = true;
-            textBox_StatusUUT32.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT32.TabIndex = 86;
-            textBox_StatusUUT32.TextChanged += new System.EventHandler(textBox_StatusUUT32_TextChanged);
+            this.textBox_StatusUUT32.Location = new System.Drawing.Point(538, 169);
+            this.textBox_StatusUUT32.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT32.Name = "textBox_StatusUUT32";
+            this.textBox_StatusUUT32.ReadOnly = true;
+            this.textBox_StatusUUT32.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT32.TabIndex = 86;
+            this.textBox_StatusUUT32.TextChanged += new System.EventHandler(this.textBox_StatusUUT32_TextChanged);
             // 
             // button_GetStatus
             // 
-            button_GetStatus.Location = new System.Drawing.Point(652, 330);
-            button_GetStatus.Margin = new System.Windows.Forms.Padding(2);
-            button_GetStatus.Name = "button_GetStatus";
-            button_GetStatus.Size = new System.Drawing.Size(97, 43);
-            button_GetStatus.TabIndex = 17;
-            button_GetStatus.Text = "Get Status";
-            button_GetStatus.UseVisualStyleBackColor = true;
-            button_GetStatus.Click += new System.EventHandler(button_GetStatus_Click);
+            this.button_GetStatus.Location = new System.Drawing.Point(652, 330);
+            this.button_GetStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GetStatus.Name = "button_GetStatus";
+            this.button_GetStatus.Size = new System.Drawing.Size(97, 43);
+            this.button_GetStatus.TabIndex = 17;
+            this.button_GetStatus.Text = "Get Status";
+            this.button_GetStatus.UseVisualStyleBackColor = true;
+            this.button_GetStatus.Click += new System.EventHandler(this.button_GetStatus_Click);
             // 
             // label104
             // 
-            label104.AutoSize = true;
-            label104.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label104.ForeColor = System.Drawing.Color.Black;
-            label104.Location = new System.Drawing.Point(441, 18);
-            label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label104.Name = "label104";
-            label104.Size = new System.Drawing.Size(51, 19);
-            label104.TabIndex = 80;
-            label104.Text = "Ready";
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.Black;
+            this.label104.Location = new System.Drawing.Point(441, 18);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(51, 19);
+            this.label104.TabIndex = 80;
+            this.label104.Text = "Ready";
             // 
             // label105
             // 
-            label105.AutoSize = true;
-            label105.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label105.ForeColor = System.Drawing.Color.Black;
-            label105.Location = new System.Drawing.Point(441, 142);
-            label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label105.Name = "label105";
-            label105.Size = new System.Drawing.Size(35, 19);
-            label105.TabIndex = 85;
-            label105.Text = "SEU";
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.Black;
+            this.label105.Location = new System.Drawing.Point(441, 142);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(35, 19);
+            this.label105.TabIndex = 85;
+            this.label105.Text = "SEU";
             // 
             // textBox_StatusUUT25
             // 
-            textBox_StatusUUT25.Location = new System.Drawing.Point(538, 262);
-            textBox_StatusUUT25.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT25.Name = "textBox_StatusUUT25";
-            textBox_StatusUUT25.ReadOnly = true;
-            textBox_StatusUUT25.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT25.TabIndex = 57;
-            textBox_StatusUUT25.TextChanged += new System.EventHandler(textBox_StatusUUT25_TextChanged);
+            this.textBox_StatusUUT25.Location = new System.Drawing.Point(538, 262);
+            this.textBox_StatusUUT25.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT25.Name = "textBox_StatusUUT25";
+            this.textBox_StatusUUT25.ReadOnly = true;
+            this.textBox_StatusUUT25.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT25.TabIndex = 57;
+            this.textBox_StatusUUT25.TextChanged += new System.EventHandler(this.textBox_StatusUUT25_TextChanged);
             // 
             // textBox_StatusUUT31
             // 
-            textBox_StatusUUT31.Location = new System.Drawing.Point(538, 139);
-            textBox_StatusUUT31.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT31.Name = "textBox_StatusUUT31";
-            textBox_StatusUUT31.ReadOnly = true;
-            textBox_StatusUUT31.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT31.TabIndex = 84;
-            textBox_StatusUUT31.TextChanged += new System.EventHandler(textBox_StatusUUT31_TextChanged);
+            this.textBox_StatusUUT31.Location = new System.Drawing.Point(538, 139);
+            this.textBox_StatusUUT31.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT31.Name = "textBox_StatusUUT31";
+            this.textBox_StatusUUT31.ReadOnly = true;
+            this.textBox_StatusUUT31.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT31.TabIndex = 84;
+            this.textBox_StatusUUT31.TextChanged += new System.EventHandler(this.textBox_StatusUUT31_TextChanged);
             // 
             // label69
             // 
-            label69.AutoSize = true;
-            label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label69.ForeColor = System.Drawing.Color.Black;
-            label69.Location = new System.Drawing.Point(446, 268);
-            label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label69.Name = "label69";
-            label69.Size = new System.Drawing.Size(76, 19);
-            label69.TabIndex = 58;
-            label69.Text = "DC1 value";
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.Black;
+            this.label69.Location = new System.Drawing.Point(446, 268);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(76, 19);
+            this.label69.TabIndex = 58;
+            this.label69.Text = "DC1 value";
             // 
             // label106
             // 
-            label106.AutoSize = true;
-            label106.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label106.ForeColor = System.Drawing.Color.Black;
-            label106.Location = new System.Drawing.Point(441, 113);
-            label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label106.Name = "label106";
-            label106.Size = new System.Drawing.Size(81, 19);
-            label106.TabIndex = 83;
-            label106.Text = "Protection";
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.ForeColor = System.Drawing.Color.Black;
+            this.label106.Location = new System.Drawing.Point(441, 113);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(81, 19);
+            this.label106.TabIndex = 83;
+            this.label106.Text = "Protection";
             // 
             // label120
             // 
-            label120.AutoSize = true;
-            label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label120.ForeColor = System.Drawing.Color.Black;
-            label120.Location = new System.Drawing.Point(241, 351);
-            label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label120.Name = "label120";
-            label120.Size = new System.Drawing.Size(90, 19);
-            label120.TabIndex = 75;
-            label120.Text = "CAL SAR BIT";
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.ForeColor = System.Drawing.Color.Black;
+            this.label120.Location = new System.Drawing.Point(241, 351);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(90, 19);
+            this.label120.TabIndex = 75;
+            this.label120.Text = "CAL SAR BIT";
             // 
             // textBox_StatusUUT30
             // 
-            textBox_StatusUUT30.Location = new System.Drawing.Point(538, 106);
-            textBox_StatusUUT30.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT30.Name = "textBox_StatusUUT30";
-            textBox_StatusUUT30.ReadOnly = true;
-            textBox_StatusUUT30.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT30.TabIndex = 82;
-            textBox_StatusUUT30.TextChanged += new System.EventHandler(textBox_StatusUUT30_TextChanged);
+            this.textBox_StatusUUT30.Location = new System.Drawing.Point(538, 106);
+            this.textBox_StatusUUT30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT30.Name = "textBox_StatusUUT30";
+            this.textBox_StatusUUT30.ReadOnly = true;
+            this.textBox_StatusUUT30.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT30.TabIndex = 82;
+            this.textBox_StatusUUT30.TextChanged += new System.EventHandler(this.textBox_StatusUUT30_TextChanged);
             // 
             // textBox_StatusUUT26
             // 
-            textBox_StatusUUT26.Location = new System.Drawing.Point(538, 295);
-            textBox_StatusUUT26.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT26.Name = "textBox_StatusUUT26";
-            textBox_StatusUUT26.ReadOnly = true;
-            textBox_StatusUUT26.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT26.TabIndex = 59;
-            textBox_StatusUUT26.TextChanged += new System.EventHandler(textBox_StatusUUT26_TextChanged);
+            this.textBox_StatusUUT26.Location = new System.Drawing.Point(538, 295);
+            this.textBox_StatusUUT26.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT26.Name = "textBox_StatusUUT26";
+            this.textBox_StatusUUT26.ReadOnly = true;
+            this.textBox_StatusUUT26.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT26.TabIndex = 59;
+            this.textBox_StatusUUT26.TextChanged += new System.EventHandler(this.textBox_StatusUUT26_TextChanged);
             // 
             // label118
             // 
-            label118.AutoSize = true;
-            label118.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label118.ForeColor = System.Drawing.Color.Black;
-            label118.Location = new System.Drawing.Point(431, 79);
-            label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label118.Name = "label118";
-            label118.Size = new System.Drawing.Size(97, 19);
-            label118.TabIndex = 81;
-            label118.Text = "Over voltage";
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.ForeColor = System.Drawing.Color.Black;
+            this.label118.Location = new System.Drawing.Point(431, 79);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(97, 19);
+            this.label118.TabIndex = 81;
+            this.label118.Text = "Over voltage";
             // 
             // textBox_StatusUUT23
             // 
-            textBox_StatusUUT23.Location = new System.Drawing.Point(332, 351);
-            textBox_StatusUUT23.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT23.Name = "textBox_StatusUUT23";
-            textBox_StatusUUT23.ReadOnly = true;
-            textBox_StatusUUT23.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT23.TabIndex = 74;
-            textBox_StatusUUT23.TextChanged += new System.EventHandler(textBox_StatusUUT23_TextChanged);
+            this.textBox_StatusUUT23.Location = new System.Drawing.Point(332, 351);
+            this.textBox_StatusUUT23.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT23.Name = "textBox_StatusUUT23";
+            this.textBox_StatusUUT23.ReadOnly = true;
+            this.textBox_StatusUUT23.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT23.TabIndex = 74;
+            this.textBox_StatusUUT23.TextChanged += new System.EventHandler(this.textBox_StatusUUT23_TextChanged);
             // 
             // textBox_StatusUUT29
             // 
-            textBox_StatusUUT29.Location = new System.Drawing.Point(538, 75);
-            textBox_StatusUUT29.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT29.Name = "textBox_StatusUUT29";
-            textBox_StatusUUT29.ReadOnly = true;
-            textBox_StatusUUT29.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT29.TabIndex = 76;
-            textBox_StatusUUT29.TextChanged += new System.EventHandler(textBox_StatusUUT29_TextChanged);
+            this.textBox_StatusUUT29.Location = new System.Drawing.Point(538, 75);
+            this.textBox_StatusUUT29.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT29.Name = "textBox_StatusUUT29";
+            this.textBox_StatusUUT29.ReadOnly = true;
+            this.textBox_StatusUUT29.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT29.TabIndex = 76;
+            this.textBox_StatusUUT29.TextChanged += new System.EventHandler(this.textBox_StatusUUT29_TextChanged);
             // 
             // label56
             // 
-            label56.AutoSize = true;
-            label56.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label56.ForeColor = System.Drawing.Color.Black;
-            label56.Location = new System.Drawing.Point(239, 14);
-            label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label56.Name = "label56";
-            label56.Size = new System.Drawing.Size(85, 19);
-            label56.TabIndex = 56;
-            label56.Text = "PRM_temp";
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.Black;
+            this.label56.Location = new System.Drawing.Point(239, 14);
+            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(85, 19);
+            this.label56.TabIndex = 56;
+            this.label56.Text = "PRM_temp";
             // 
             // label119
             // 
-            label119.AutoSize = true;
-            label119.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label119.ForeColor = System.Drawing.Color.Black;
-            label119.Location = new System.Drawing.Point(429, 46);
-            label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label119.Name = "label119";
-            label119.Size = new System.Drawing.Size(106, 19);
-            label119.TabIndex = 77;
-            label119.Text = "Under voltage";
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.ForeColor = System.Drawing.Color.Black;
+            this.label119.Location = new System.Drawing.Point(429, 46);
+            this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(106, 19);
+            this.label119.TabIndex = 77;
+            this.label119.Text = "Under voltage";
             // 
             // textBox_StatusUUT24
             // 
-            textBox_StatusUUT24.Location = new System.Drawing.Point(538, 233);
-            textBox_StatusUUT24.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT24.Name = "textBox_StatusUUT24";
-            textBox_StatusUUT24.ReadOnly = true;
-            textBox_StatusUUT24.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT24.TabIndex = 61;
-            textBox_StatusUUT24.TextChanged += new System.EventHandler(textBox_StatusUUT24_TextChanged);
+            this.textBox_StatusUUT24.Location = new System.Drawing.Point(538, 233);
+            this.textBox_StatusUUT24.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT24.Name = "textBox_StatusUUT24";
+            this.textBox_StatusUUT24.ReadOnly = true;
+            this.textBox_StatusUUT24.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT24.TabIndex = 61;
+            this.textBox_StatusUUT24.TextChanged += new System.EventHandler(this.textBox_StatusUUT24_TextChanged);
             // 
             // textBox_StatusUUT27
             // 
-            textBox_StatusUUT27.Location = new System.Drawing.Point(538, 14);
-            textBox_StatusUUT27.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT27.Name = "textBox_StatusUUT27";
-            textBox_StatusUUT27.ReadOnly = true;
-            textBox_StatusUUT27.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT27.TabIndex = 79;
-            textBox_StatusUUT27.TextChanged += new System.EventHandler(textBox_StatusUUT27_TextChanged);
+            this.textBox_StatusUUT27.Location = new System.Drawing.Point(538, 14);
+            this.textBox_StatusUUT27.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT27.Name = "textBox_StatusUUT27";
+            this.textBox_StatusUUT27.ReadOnly = true;
+            this.textBox_StatusUUT27.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT27.TabIndex = 79;
+            this.textBox_StatusUUT27.TextChanged += new System.EventHandler(this.textBox_StatusUUT27_TextChanged);
             // 
             // textBox_StatusUUT12
             // 
-            textBox_StatusUUT12.Location = new System.Drawing.Point(332, 9);
-            textBox_StatusUUT12.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT12.Name = "textBox_StatusUUT12";
-            textBox_StatusUUT12.ReadOnly = true;
-            textBox_StatusUUT12.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT12.TabIndex = 55;
-            textBox_StatusUUT12.TextChanged += new System.EventHandler(textBox_StatusUUT12_TextChanged);
+            this.textBox_StatusUUT12.Location = new System.Drawing.Point(332, 9);
+            this.textBox_StatusUUT12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT12.Name = "textBox_StatusUUT12";
+            this.textBox_StatusUUT12.ReadOnly = true;
+            this.textBox_StatusUUT12.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT12.TabIndex = 55;
+            this.textBox_StatusUUT12.TextChanged += new System.EventHandler(this.textBox_StatusUUT12_TextChanged);
             // 
             // textBox_StatusUUT28
             // 
-            textBox_StatusUUT28.Location = new System.Drawing.Point(538, 45);
-            textBox_StatusUUT28.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT28.Name = "textBox_StatusUUT28";
-            textBox_StatusUUT28.ReadOnly = true;
-            textBox_StatusUUT28.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT28.TabIndex = 78;
-            textBox_StatusUUT28.TextChanged += new System.EventHandler(textBox_StatusUUT28_TextChanged);
+            this.textBox_StatusUUT28.Location = new System.Drawing.Point(538, 45);
+            this.textBox_StatusUUT28.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT28.Name = "textBox_StatusUUT28";
+            this.textBox_StatusUUT28.ReadOnly = true;
+            this.textBox_StatusUUT28.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT28.TabIndex = 78;
+            this.textBox_StatusUUT28.TextChanged += new System.EventHandler(this.textBox_StatusUUT28_TextChanged);
             // 
             // label57
             // 
-            label57.AutoSize = true;
-            label57.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label57.ForeColor = System.Drawing.Color.Black;
-            label57.Location = new System.Drawing.Point(241, 327);
-            label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label57.Name = "label57";
-            label57.Size = new System.Drawing.Size(60, 19);
-            label57.TabIndex = 54;
-            label57.Text = "DCA bit";
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Black;
+            this.label57.Location = new System.Drawing.Point(241, 327);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(60, 19);
+            this.label57.TabIndex = 54;
+            this.label57.Text = "DCA bit";
             // 
             // label67
             // 
-            label67.AutoSize = true;
-            label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label67.ForeColor = System.Drawing.Color.Black;
-            label67.Location = new System.Drawing.Point(446, 239);
-            label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label67.Name = "label67";
-            label67.Size = new System.Drawing.Size(77, 19);
-            label67.TabIndex = 62;
-            label67.Text = "VVA value";
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(446, 239);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(77, 19);
+            this.label67.TabIndex = 62;
+            this.label67.Text = "VVA value";
             // 
             // textBox_StatusUUT22
             // 
-            textBox_StatusUUT22.Location = new System.Drawing.Point(332, 322);
-            textBox_StatusUUT22.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT22.Name = "textBox_StatusUUT22";
-            textBox_StatusUUT22.ReadOnly = true;
-            textBox_StatusUUT22.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT22.TabIndex = 53;
-            textBox_StatusUUT22.TextChanged += new System.EventHandler(textBox_StatusUUT22_TextChanged);
+            this.textBox_StatusUUT22.Location = new System.Drawing.Point(332, 322);
+            this.textBox_StatusUUT22.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT22.Name = "textBox_StatusUUT22";
+            this.textBox_StatusUUT22.ReadOnly = true;
+            this.textBox_StatusUUT22.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT22.TabIndex = 53;
+            this.textBox_StatusUUT22.TextChanged += new System.EventHandler(this.textBox_StatusUUT22_TextChanged);
             // 
             // label58
             // 
-            label58.AutoSize = true;
-            label58.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label58.ForeColor = System.Drawing.Color.Black;
-            label58.Location = new System.Drawing.Point(241, 296);
-            label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label58.Name = "label58";
-            label58.Size = new System.Drawing.Size(47, 19);
-            label58.TabIndex = 52;
-            label58.Text = "FT bit";
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Black;
+            this.label58.Location = new System.Drawing.Point(241, 296);
+            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(47, 19);
+            this.label58.TabIndex = 52;
+            this.label58.Text = "FT bit";
             // 
             // label70
             // 
-            label70.AutoSize = true;
-            label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label70.ForeColor = System.Drawing.Color.Black;
-            label70.Location = new System.Drawing.Point(446, 300);
-            label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label70.Name = "label70";
-            label70.Size = new System.Drawing.Size(76, 19);
-            label70.TabIndex = 63;
-            label70.Text = "DC2 value";
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.Black;
+            this.label70.Location = new System.Drawing.Point(446, 300);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(76, 19);
+            this.label70.TabIndex = 63;
+            this.label70.Text = "DC2 value";
             // 
             // textBox_StatusUUT21
             // 
-            textBox_StatusUUT21.Location = new System.Drawing.Point(332, 291);
-            textBox_StatusUUT21.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT21.Name = "textBox_StatusUUT21";
-            textBox_StatusUUT21.ReadOnly = true;
-            textBox_StatusUUT21.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT21.TabIndex = 51;
-            textBox_StatusUUT21.TextChanged += new System.EventHandler(textBox_StatusUUT21_TextChanged);
+            this.textBox_StatusUUT21.Location = new System.Drawing.Point(332, 291);
+            this.textBox_StatusUUT21.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT21.Name = "textBox_StatusUUT21";
+            this.textBox_StatusUUT21.ReadOnly = true;
+            this.textBox_StatusUUT21.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT21.TabIndex = 51;
+            this.textBox_StatusUUT21.TextChanged += new System.EventHandler(this.textBox_StatusUUT21_TextChanged);
             // 
             // label59
             // 
-            label59.AutoSize = true;
-            label59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label59.ForeColor = System.Drawing.Color.Black;
-            label59.Location = new System.Drawing.Point(241, 264);
-            label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label59.Name = "label59";
-            label59.Size = new System.Drawing.Size(60, 19);
-            label59.TabIndex = 50;
-            label59.Text = "freq bit";
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Black;
+            this.label59.Location = new System.Drawing.Point(241, 264);
+            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(60, 19);
+            this.label59.TabIndex = 50;
+            this.label59.Text = "freq bit";
             // 
             // textBox_StatusUUT20
             // 
-            textBox_StatusUUT20.Location = new System.Drawing.Point(332, 259);
-            textBox_StatusUUT20.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT20.Name = "textBox_StatusUUT20";
-            textBox_StatusUUT20.ReadOnly = true;
-            textBox_StatusUUT20.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT20.TabIndex = 49;
-            textBox_StatusUUT20.TextChanged += new System.EventHandler(textBox_StatusUUT20_TextChanged);
+            this.textBox_StatusUUT20.Location = new System.Drawing.Point(332, 259);
+            this.textBox_StatusUUT20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT20.Name = "textBox_StatusUUT20";
+            this.textBox_StatusUUT20.ReadOnly = true;
+            this.textBox_StatusUUT20.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT20.TabIndex = 49;
+            this.textBox_StatusUUT20.TextChanged += new System.EventHandler(this.textBox_StatusUUT20_TextChanged);
             // 
             // label60
             // 
-            label60.AutoSize = true;
-            label60.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label60.ForeColor = System.Drawing.Color.Black;
-            label60.Location = new System.Drawing.Point(241, 234);
-            label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label60.Name = "label60";
-            label60.Size = new System.Drawing.Size(94, 19);
-            label60.TabIndex = 48;
-            label60.Text = "Pulse period";
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Black;
+            this.label60.Location = new System.Drawing.Point(241, 234);
+            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(94, 19);
+            this.label60.TabIndex = 48;
+            this.label60.Text = "Pulse period";
             // 
             // textBox_StatusUUT19
             // 
-            textBox_StatusUUT19.Location = new System.Drawing.Point(332, 229);
-            textBox_StatusUUT19.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT19.Name = "textBox_StatusUUT19";
-            textBox_StatusUUT19.ReadOnly = true;
-            textBox_StatusUUT19.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT19.TabIndex = 47;
-            textBox_StatusUUT19.TextChanged += new System.EventHandler(textBox_StatusUUT19_TextChanged);
+            this.textBox_StatusUUT19.Location = new System.Drawing.Point(332, 229);
+            this.textBox_StatusUUT19.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT19.Name = "textBox_StatusUUT19";
+            this.textBox_StatusUUT19.ReadOnly = true;
+            this.textBox_StatusUUT19.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT19.TabIndex = 47;
+            this.textBox_StatusUUT19.TextChanged += new System.EventHandler(this.textBox_StatusUUT19_TextChanged);
             // 
             // label61
             // 
-            label61.AutoSize = true;
-            label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label61.ForeColor = System.Drawing.Color.Black;
-            label61.Location = new System.Drawing.Point(239, 202);
-            label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label61.Name = "label61";
-            label61.Size = new System.Drawing.Size(89, 19);
-            label61.TabIndex = 46;
-            label61.Text = "Pulse width";
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Black;
+            this.label61.Location = new System.Drawing.Point(239, 202);
+            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(89, 19);
+            this.label61.TabIndex = 46;
+            this.label61.Text = "Pulse width";
             // 
             // textBox_StatusUUT18
             // 
-            textBox_StatusUUT18.Location = new System.Drawing.Point(332, 198);
-            textBox_StatusUUT18.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT18.Name = "textBox_StatusUUT18";
-            textBox_StatusUUT18.ReadOnly = true;
-            textBox_StatusUUT18.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT18.TabIndex = 45;
-            textBox_StatusUUT18.TextChanged += new System.EventHandler(textBox_StatusUUT18_TextChanged);
+            this.textBox_StatusUUT18.Location = new System.Drawing.Point(332, 198);
+            this.textBox_StatusUUT18.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT18.Name = "textBox_StatusUUT18";
+            this.textBox_StatusUUT18.ReadOnly = true;
+            this.textBox_StatusUUT18.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT18.TabIndex = 45;
+            this.textBox_StatusUUT18.TextChanged += new System.EventHandler(this.textBox_StatusUUT18_TextChanged);
             // 
             // label62
             // 
-            label62.AutoSize = true;
-            label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label62.ForeColor = System.Drawing.Color.Black;
-            label62.Location = new System.Drawing.Point(239, 171);
-            label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label62.Name = "label62";
-            label62.Size = new System.Drawing.Size(76, 19);
-            label62.TabIndex = 44;
-            label62.Text = "PSU temp";
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.Black;
+            this.label62.Location = new System.Drawing.Point(239, 171);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(76, 19);
+            this.label62.TabIndex = 44;
+            this.label62.Text = "PSU temp";
             // 
             // textBox_StatusUUT17
             // 
-            textBox_StatusUUT17.Location = new System.Drawing.Point(332, 166);
-            textBox_StatusUUT17.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT17.Name = "textBox_StatusUUT17";
-            textBox_StatusUUT17.ReadOnly = true;
-            textBox_StatusUUT17.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT17.TabIndex = 43;
-            textBox_StatusUUT17.TextChanged += new System.EventHandler(textBox_StatusUUT17_TextChanged);
+            this.textBox_StatusUUT17.Location = new System.Drawing.Point(332, 166);
+            this.textBox_StatusUUT17.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT17.Name = "textBox_StatusUUT17";
+            this.textBox_StatusUUT17.ReadOnly = true;
+            this.textBox_StatusUUT17.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT17.TabIndex = 43;
+            this.textBox_StatusUUT17.TextChanged += new System.EventHandler(this.textBox_StatusUUT17_TextChanged);
             // 
             // label63
             // 
-            label63.AutoSize = true;
-            label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label63.ForeColor = System.Drawing.Color.Black;
-            label63.Location = new System.Drawing.Point(239, 138);
-            label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label63.Name = "label63";
-            label63.Size = new System.Drawing.Size(80, 19);
-            label63.TabIndex = 42;
-            label63.Text = "VTM temp";
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Black;
+            this.label63.Location = new System.Drawing.Point(239, 138);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(80, 19);
+            this.label63.TabIndex = 42;
+            this.label63.Text = "VTM temp";
             // 
             // textBox_StatusUUT16
             // 
-            textBox_StatusUUT16.Location = new System.Drawing.Point(332, 133);
-            textBox_StatusUUT16.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT16.Name = "textBox_StatusUUT16";
-            textBox_StatusUUT16.ReadOnly = true;
-            textBox_StatusUUT16.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT16.TabIndex = 41;
-            textBox_StatusUUT16.TextChanged += new System.EventHandler(textBox_StatusUUT16_TextChanged);
+            this.textBox_StatusUUT16.Location = new System.Drawing.Point(332, 133);
+            this.textBox_StatusUUT16.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT16.Name = "textBox_StatusUUT16";
+            this.textBox_StatusUUT16.ReadOnly = true;
+            this.textBox_StatusUUT16.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT16.TabIndex = 41;
+            this.textBox_StatusUUT16.TextChanged += new System.EventHandler(this.textBox_StatusUUT16_TextChanged);
             // 
             // label64
             // 
-            label64.AutoSize = true;
-            label64.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label64.ForeColor = System.Drawing.Color.Black;
-            label64.Location = new System.Drawing.Point(239, 106);
-            label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label64.Name = "label64";
-            label64.Size = new System.Drawing.Size(85, 19);
-            label64.TabIndex = 40;
-            label64.Text = "48V in rush";
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Black;
+            this.label64.Location = new System.Drawing.Point(239, 106);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(85, 19);
+            this.label64.TabIndex = 40;
+            this.label64.Text = "48V in rush";
             // 
             // textBox_StatusUUT15
             // 
-            textBox_StatusUUT15.Location = new System.Drawing.Point(332, 102);
-            textBox_StatusUUT15.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT15.Name = "textBox_StatusUUT15";
-            textBox_StatusUUT15.ReadOnly = true;
-            textBox_StatusUUT15.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT15.TabIndex = 39;
-            textBox_StatusUUT15.TextChanged += new System.EventHandler(textBox_StatusUUT15_TextChanged);
+            this.textBox_StatusUUT15.Location = new System.Drawing.Point(332, 102);
+            this.textBox_StatusUUT15.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT15.Name = "textBox_StatusUUT15";
+            this.textBox_StatusUUT15.ReadOnly = true;
+            this.textBox_StatusUUT15.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT15.TabIndex = 39;
+            this.textBox_StatusUUT15.TextChanged += new System.EventHandler(this.textBox_StatusUUT15_TextChanged);
             // 
             // label65
             // 
-            label65.AutoSize = true;
-            label65.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label65.ForeColor = System.Drawing.Color.Black;
-            label65.Location = new System.Drawing.Point(239, 75);
-            label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label65.Name = "label65";
-            label65.Size = new System.Drawing.Size(71, 19);
-            label65.TabIndex = 38;
-            label65.Text = "48V filter";
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.Black;
+            this.label65.Location = new System.Drawing.Point(239, 75);
+            this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(71, 19);
+            this.label65.TabIndex = 38;
+            this.label65.Text = "48V filter";
             // 
             // textBox_StatusUUT14
             // 
-            textBox_StatusUUT14.Location = new System.Drawing.Point(332, 70);
-            textBox_StatusUUT14.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT14.Name = "textBox_StatusUUT14";
-            textBox_StatusUUT14.ReadOnly = true;
-            textBox_StatusUUT14.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT14.TabIndex = 37;
-            textBox_StatusUUT14.TextChanged += new System.EventHandler(textBox_StatusUUT14_TextChanged);
+            this.textBox_StatusUUT14.Location = new System.Drawing.Point(332, 70);
+            this.textBox_StatusUUT14.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT14.Name = "textBox_StatusUUT14";
+            this.textBox_StatusUUT14.ReadOnly = true;
+            this.textBox_StatusUUT14.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT14.TabIndex = 37;
+            this.textBox_StatusUUT14.TextChanged += new System.EventHandler(this.textBox_StatusUUT14_TextChanged);
             // 
             // label66
             // 
-            label66.AutoSize = true;
-            label66.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label66.ForeColor = System.Drawing.Color.Black;
-            label66.Location = new System.Drawing.Point(239, 42);
-            label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label66.Name = "label66";
-            label66.Size = new System.Drawing.Size(89, 19);
-            label66.TabIndex = 36;
-            label66.Text = "48V current";
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.Black;
+            this.label66.Location = new System.Drawing.Point(239, 42);
+            this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(89, 19);
+            this.label66.TabIndex = 36;
+            this.label66.Text = "48V current";
             // 
             // textBox_StatusUUT13
             // 
-            textBox_StatusUUT13.Location = new System.Drawing.Point(332, 38);
-            textBox_StatusUUT13.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT13.Name = "textBox_StatusUUT13";
-            textBox_StatusUUT13.ReadOnly = true;
-            textBox_StatusUUT13.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT13.TabIndex = 35;
-            textBox_StatusUUT13.TextChanged += new System.EventHandler(textBox_StatusUUT13_TextChanged);
+            this.textBox_StatusUUT13.Location = new System.Drawing.Point(332, 38);
+            this.textBox_StatusUUT13.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT13.Name = "textBox_StatusUUT13";
+            this.textBox_StatusUUT13.ReadOnly = true;
+            this.textBox_StatusUUT13.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT13.TabIndex = 35;
+            this.textBox_StatusUUT13.TextChanged += new System.EventHandler(this.textBox_StatusUUT13_TextChanged);
             // 
             // label55
             // 
-            label55.AutoSize = true;
-            label55.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label55.ForeColor = System.Drawing.Color.Black;
-            label55.Location = new System.Drawing.Point(6, 15);
-            label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label55.Name = "label55";
-            label55.Size = new System.Drawing.Size(136, 19);
-            label55.TabIndex = 34;
-            label55.Text = "Main Temperature";
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.Black;
+            this.label55.Location = new System.Drawing.Point(6, 15);
+            this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(136, 19);
+            this.label55.TabIndex = 34;
+            this.label55.Text = "Main Temperature";
             // 
             // textBox_StatusUUT1
             // 
-            textBox_StatusUUT1.Location = new System.Drawing.Point(147, 10);
-            textBox_StatusUUT1.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT1.Name = "textBox_StatusUUT1";
-            textBox_StatusUUT1.ReadOnly = true;
-            textBox_StatusUUT1.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT1.TabIndex = 33;
-            textBox_StatusUUT1.TextChanged += new System.EventHandler(textBox_StatusUUT1_TextChanged);
+            this.textBox_StatusUUT1.Location = new System.Drawing.Point(147, 10);
+            this.textBox_StatusUUT1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT1.Name = "textBox_StatusUUT1";
+            this.textBox_StatusUUT1.ReadOnly = true;
+            this.textBox_StatusUUT1.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT1.TabIndex = 33;
+            this.textBox_StatusUUT1.TextChanged += new System.EventHandler(this.textBox_StatusUUT1_TextChanged);
             // 
             // label54
             // 
-            label54.AutoSize = true;
-            label54.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label54.ForeColor = System.Drawing.Color.Black;
-            label54.Location = new System.Drawing.Point(6, 330);
-            label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label54.Name = "label54";
-            label54.Size = new System.Drawing.Size(54, 19);
-            label54.TabIndex = 32;
-            label54.Text = "Detect";
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.Black;
+            this.label54.Location = new System.Drawing.Point(6, 330);
+            this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(54, 19);
+            this.label54.TabIndex = 32;
+            this.label54.Text = "Detect";
             // 
             // textBox_StatusUUT11
             // 
-            textBox_StatusUUT11.Location = new System.Drawing.Point(148, 324);
-            textBox_StatusUUT11.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT11.Name = "textBox_StatusUUT11";
-            textBox_StatusUUT11.ReadOnly = true;
-            textBox_StatusUUT11.Size = new System.Drawing.Size(93, 26);
-            textBox_StatusUUT11.TabIndex = 31;
-            textBox_StatusUUT11.TextChanged += new System.EventHandler(textBox_StatusUUT11_TextChanged);
+            this.textBox_StatusUUT11.Location = new System.Drawing.Point(148, 324);
+            this.textBox_StatusUUT11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT11.Name = "textBox_StatusUUT11";
+            this.textBox_StatusUUT11.ReadOnly = true;
+            this.textBox_StatusUUT11.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT11.TabIndex = 31;
+            this.textBox_StatusUUT11.TextChanged += new System.EventHandler(this.textBox_StatusUUT11_TextChanged);
             // 
             // label53
             // 
-            label53.AutoSize = true;
-            label53.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label53.ForeColor = System.Drawing.Color.Black;
-            label53.Location = new System.Drawing.Point(6, 298);
-            label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label53.Name = "label53";
-            label53.Size = new System.Drawing.Size(65, 19);
-            label53.TabIndex = 30;
-            label53.Text = "Vgg N5V";
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.Black;
+            this.label53.Location = new System.Drawing.Point(6, 298);
+            this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(65, 19);
+            this.label53.TabIndex = 30;
+            this.label53.Text = "Vgg N5V";
             // 
             // textBox_StatusUUT10
             // 
-            textBox_StatusUUT10.Location = new System.Drawing.Point(148, 292);
-            textBox_StatusUUT10.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT10.Name = "textBox_StatusUUT10";
-            textBox_StatusUUT10.ReadOnly = true;
-            textBox_StatusUUT10.Size = new System.Drawing.Size(93, 26);
-            textBox_StatusUUT10.TabIndex = 29;
-            textBox_StatusUUT10.TextChanged += new System.EventHandler(textBox_StatusUUT10_TextChanged);
+            this.textBox_StatusUUT10.Location = new System.Drawing.Point(148, 292);
+            this.textBox_StatusUUT10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT10.Name = "textBox_StatusUUT10";
+            this.textBox_StatusUUT10.ReadOnly = true;
+            this.textBox_StatusUUT10.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT10.TabIndex = 29;
+            this.textBox_StatusUUT10.TextChanged += new System.EventHandler(this.textBox_StatusUUT10_TextChanged);
             // 
             // label52
             // 
-            label52.AutoSize = true;
-            label52.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label52.ForeColor = System.Drawing.Color.Black;
-            label52.Location = new System.Drawing.Point(6, 266);
-            label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label52.Name = "label52";
-            label52.Size = new System.Drawing.Size(60, 19);
-            label52.TabIndex = 28;
-            label52.Text = "Vdd_4V";
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.Black;
+            this.label52.Location = new System.Drawing.Point(6, 266);
+            this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(60, 19);
+            this.label52.TabIndex = 28;
+            this.label52.Text = "Vdd_4V";
             // 
             // textBox_StatusUUT9
             // 
-            textBox_StatusUUT9.Location = new System.Drawing.Point(148, 260);
-            textBox_StatusUUT9.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT9.Name = "textBox_StatusUUT9";
-            textBox_StatusUUT9.ReadOnly = true;
-            textBox_StatusUUT9.Size = new System.Drawing.Size(93, 26);
-            textBox_StatusUUT9.TabIndex = 27;
-            textBox_StatusUUT9.TextChanged += new System.EventHandler(textBox_StatusUUT9_TextChanged);
+            this.textBox_StatusUUT9.Location = new System.Drawing.Point(148, 260);
+            this.textBox_StatusUUT9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT9.Name = "textBox_StatusUUT9";
+            this.textBox_StatusUUT9.ReadOnly = true;
+            this.textBox_StatusUUT9.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT9.TabIndex = 27;
+            this.textBox_StatusUUT9.TextChanged += new System.EventHandler(this.textBox_StatusUUT9_TextChanged);
             // 
             // label51
             // 
-            label51.AutoSize = true;
-            label51.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label51.ForeColor = System.Drawing.Color.Black;
-            label51.Location = new System.Drawing.Point(6, 235);
-            label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label51.Name = "label51";
-            label51.Size = new System.Drawing.Size(60, 19);
-            label51.TabIndex = 26;
-            label51.Text = "Vdd_5V";
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.Black;
+            this.label51.Location = new System.Drawing.Point(6, 235);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(60, 19);
+            this.label51.TabIndex = 26;
+            this.label51.Text = "Vdd_5V";
             // 
             // textBox_StatusUUT8
             // 
-            textBox_StatusUUT8.Location = new System.Drawing.Point(148, 229);
-            textBox_StatusUUT8.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT8.Name = "textBox_StatusUUT8";
-            textBox_StatusUUT8.ReadOnly = true;
-            textBox_StatusUUT8.Size = new System.Drawing.Size(93, 26);
-            textBox_StatusUUT8.TabIndex = 25;
-            textBox_StatusUUT8.TextChanged += new System.EventHandler(textBox_StatusUUT8_TextChanged);
+            this.textBox_StatusUUT8.Location = new System.Drawing.Point(148, 229);
+            this.textBox_StatusUUT8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT8.Name = "textBox_StatusUUT8";
+            this.textBox_StatusUUT8.ReadOnly = true;
+            this.textBox_StatusUUT8.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT8.TabIndex = 25;
+            this.textBox_StatusUUT8.TextChanged += new System.EventHandler(this.textBox_StatusUUT8_TextChanged);
             // 
             // label50
             // 
-            label50.AutoSize = true;
-            label50.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label50.ForeColor = System.Drawing.Color.Black;
-            label50.Location = new System.Drawing.Point(6, 204);
-            label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label50.Name = "label50";
-            label50.Size = new System.Drawing.Size(60, 19);
-            label50.TabIndex = 24;
-            label50.Text = "Vdd_9V";
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.Black;
+            this.label50.Location = new System.Drawing.Point(6, 204);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(60, 19);
+            this.label50.TabIndex = 24;
+            this.label50.Text = "Vdd_9V";
             // 
             // textBox_StatusUUT7
             // 
-            textBox_StatusUUT7.Location = new System.Drawing.Point(147, 199);
-            textBox_StatusUUT7.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT7.Name = "textBox_StatusUUT7";
-            textBox_StatusUUT7.ReadOnly = true;
-            textBox_StatusUUT7.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT7.TabIndex = 23;
-            textBox_StatusUUT7.TextChanged += new System.EventHandler(textBox_StatusUUT7_TextChanged);
+            this.textBox_StatusUUT7.Location = new System.Drawing.Point(147, 199);
+            this.textBox_StatusUUT7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT7.Name = "textBox_StatusUUT7";
+            this.textBox_StatusUUT7.ReadOnly = true;
+            this.textBox_StatusUUT7.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT7.TabIndex = 23;
+            this.textBox_StatusUUT7.TextChanged += new System.EventHandler(this.textBox_StatusUUT7_TextChanged);
             // 
             // label49
             // 
-            label49.AutoSize = true;
-            label49.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label49.ForeColor = System.Drawing.Color.Black;
-            label49.Location = new System.Drawing.Point(6, 174);
-            label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label49.Name = "label49";
-            label49.Size = new System.Drawing.Size(68, 19);
-            label49.TabIndex = 22;
-            label49.Text = "Vdd_28V";
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.Black;
+            this.label49.Location = new System.Drawing.Point(6, 174);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(68, 19);
+            this.label49.TabIndex = 22;
+            this.label49.Text = "Vdd_28V";
             // 
             // textBox_StatusUUT6
             // 
-            textBox_StatusUUT6.Location = new System.Drawing.Point(147, 168);
-            textBox_StatusUUT6.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT6.Name = "textBox_StatusUUT6";
-            textBox_StatusUUT6.ReadOnly = true;
-            textBox_StatusUUT6.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT6.TabIndex = 21;
-            textBox_StatusUUT6.TextChanged += new System.EventHandler(textBox_StatusUUT6_TextChanged);
+            this.textBox_StatusUUT6.Location = new System.Drawing.Point(147, 168);
+            this.textBox_StatusUUT6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT6.Name = "textBox_StatusUUT6";
+            this.textBox_StatusUUT6.ReadOnly = true;
+            this.textBox_StatusUUT6.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT6.TabIndex = 21;
+            this.textBox_StatusUUT6.TextChanged += new System.EventHandler(this.textBox_StatusUUT6_TextChanged);
             // 
             // label40
             // 
-            label40.AutoSize = true;
-            label40.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label40.ForeColor = System.Drawing.Color.Black;
-            label40.Location = new System.Drawing.Point(6, 139);
-            label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label40.Name = "label40";
-            label40.Size = new System.Drawing.Size(81, 19);
-            label40.TabIndex = 20;
-            label40.Text = "9V current";
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(6, 139);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(81, 19);
+            this.label40.TabIndex = 20;
+            this.label40.Text = "9V current";
             // 
             // textBox_StatusUUT5
             // 
-            textBox_StatusUUT5.Location = new System.Drawing.Point(147, 133);
-            textBox_StatusUUT5.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT5.Name = "textBox_StatusUUT5";
-            textBox_StatusUUT5.ReadOnly = true;
-            textBox_StatusUUT5.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT5.TabIndex = 19;
-            textBox_StatusUUT5.TextChanged += new System.EventHandler(textBox_StatusUUT5_TextChanged);
+            this.textBox_StatusUUT5.Location = new System.Drawing.Point(147, 133);
+            this.textBox_StatusUUT5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT5.Name = "textBox_StatusUUT5";
+            this.textBox_StatusUUT5.ReadOnly = true;
+            this.textBox_StatusUUT5.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT5.TabIndex = 19;
+            this.textBox_StatusUUT5.TextChanged += new System.EventHandler(this.textBox_StatusUUT5_TextChanged);
             // 
             // label39
             // 
-            label39.AutoSize = true;
-            label39.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label39.ForeColor = System.Drawing.Color.Black;
-            label39.Location = new System.Drawing.Point(6, 109);
-            label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label39.Name = "label39";
-            label39.Size = new System.Drawing.Size(89, 19);
-            label39.TabIndex = 18;
-            label39.Text = "28V current";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(6, 109);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(89, 19);
+            this.label39.TabIndex = 18;
+            this.label39.Text = "28V current";
             // 
             // textBox_StatusUUT4
             // 
-            textBox_StatusUUT4.Location = new System.Drawing.Point(147, 103);
-            textBox_StatusUUT4.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT4.Name = "textBox_StatusUUT4";
-            textBox_StatusUUT4.ReadOnly = true;
-            textBox_StatusUUT4.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT4.TabIndex = 17;
-            textBox_StatusUUT4.TextChanged += new System.EventHandler(textBox_StatusUUT4_TextChanged);
+            this.textBox_StatusUUT4.Location = new System.Drawing.Point(147, 103);
+            this.textBox_StatusUUT4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT4.Name = "textBox_StatusUUT4";
+            this.textBox_StatusUUT4.ReadOnly = true;
+            this.textBox_StatusUUT4.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT4.TabIndex = 17;
+            this.textBox_StatusUUT4.TextChanged += new System.EventHandler(this.textBox_StatusUUT4_TextChanged);
             // 
             // label33
             // 
-            label33.AutoSize = true;
-            label33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label33.ForeColor = System.Drawing.Color.Black;
-            label33.Location = new System.Drawing.Point(6, 78);
-            label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label33.Name = "label33";
-            label33.Size = new System.Drawing.Size(81, 19);
-            label33.TabIndex = 16;
-            label33.Text = "5V current";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Black;
+            this.label33.Location = new System.Drawing.Point(6, 78);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(81, 19);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "5V current";
             // 
             // textBox_StatusUUT3
             // 
-            textBox_StatusUUT3.Location = new System.Drawing.Point(147, 72);
-            textBox_StatusUUT3.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT3.Name = "textBox_StatusUUT3";
-            textBox_StatusUUT3.ReadOnly = true;
-            textBox_StatusUUT3.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT3.TabIndex = 15;
-            textBox_StatusUUT3.TextChanged += new System.EventHandler(textBox_StatusUUT3_TextChanged);
+            this.textBox_StatusUUT3.Location = new System.Drawing.Point(147, 72);
+            this.textBox_StatusUUT3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT3.Name = "textBox_StatusUUT3";
+            this.textBox_StatusUUT3.ReadOnly = true;
+            this.textBox_StatusUUT3.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT3.TabIndex = 15;
+            this.textBox_StatusUUT3.TextChanged += new System.EventHandler(this.textBox_StatusUUT3_TextChanged);
             // 
             // label32
             // 
-            label32.AutoSize = true;
-            label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label32.ForeColor = System.Drawing.Color.Black;
-            label32.Location = new System.Drawing.Point(6, 45);
-            label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label32.Name = "label32";
-            label32.Size = new System.Drawing.Size(85, 19);
-            label32.TabIndex = 14;
-            label32.Text = "Main Index";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(6, 45);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(85, 19);
+            this.label32.TabIndex = 14;
+            this.label32.Text = "Main Index";
             // 
             // textBox_StatusUUT2
             // 
-            textBox_StatusUUT2.Location = new System.Drawing.Point(147, 39);
-            textBox_StatusUUT2.Margin = new System.Windows.Forms.Padding(2);
-            textBox_StatusUUT2.Name = "textBox_StatusUUT2";
-            textBox_StatusUUT2.ReadOnly = true;
-            textBox_StatusUUT2.Size = new System.Drawing.Size(92, 26);
-            textBox_StatusUUT2.TabIndex = 0;
-            textBox_StatusUUT2.TextChanged += new System.EventHandler(textBox_StatusUUT2_TextChanged);
+            this.textBox_StatusUUT2.Location = new System.Drawing.Point(147, 39);
+            this.textBox_StatusUUT2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT2.Name = "textBox_StatusUUT2";
+            this.textBox_StatusUUT2.ReadOnly = true;
+            this.textBox_StatusUUT2.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT2.TabIndex = 0;
+            this.textBox_StatusUUT2.TextChanged += new System.EventHandler(this.textBox_StatusUUT2_TextChanged);
             // 
             // groupBox39
             // 
-            groupBox39.BackColor = System.Drawing.Color.FromArgb(224, 224, 224);
-            groupBox39.Controls.Add(label115);
-            groupBox39.Controls.Add(textBox95);
-            groupBox39.Controls.Add(label71);
-            groupBox39.Controls.Add(label74);
-            groupBox39.Controls.Add(textBox94);
-            groupBox39.Controls.Add(label73);
-            groupBox39.Controls.Add(textBox93);
-            groupBox39.Controls.Add(label68);
-            groupBox39.Controls.Add(textBox92);
-            groupBox39.Controls.Add(label72);
-            groupBox39.Controls.Add(textBox90);
-            groupBox39.Controls.Add(textBox91);
-            groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            groupBox39.Location = new System.Drawing.Point(642, 14);
-            groupBox39.Margin = new System.Windows.Forms.Padding(2);
-            groupBox39.Name = "groupBox39";
-            groupBox39.Padding = new System.Windows.Forms.Padding(2);
-            groupBox39.Size = new System.Drawing.Size(211, 215);
-            groupBox39.TabIndex = 76;
-            groupBox39.TabStop = false;
-            groupBox39.Text = "Status Simulator";
+            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox39.Controls.Add(this.label115);
+            this.groupBox39.Controls.Add(this.textBox95);
+            this.groupBox39.Controls.Add(this.label71);
+            this.groupBox39.Controls.Add(this.label74);
+            this.groupBox39.Controls.Add(this.textBox94);
+            this.groupBox39.Controls.Add(this.label73);
+            this.groupBox39.Controls.Add(this.textBox93);
+            this.groupBox39.Controls.Add(this.label68);
+            this.groupBox39.Controls.Add(this.textBox92);
+            this.groupBox39.Controls.Add(this.label72);
+            this.groupBox39.Controls.Add(this.textBox90);
+            this.groupBox39.Controls.Add(this.textBox91);
+            this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox39.Location = new System.Drawing.Point(642, 14);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox39.Size = new System.Drawing.Size(211, 215);
+            this.groupBox39.TabIndex = 76;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "Status Simulator";
             // 
             // label115
             // 
-            label115.AutoSize = true;
-            label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label115.ForeColor = System.Drawing.Color.Black;
-            label115.Location = new System.Drawing.Point(2, 189);
-            label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label115.Name = "label115";
-            label115.Size = new System.Drawing.Size(105, 19);
-            label115.TabIndex = 75;
-            label115.Text = "Tx OVT hazard";
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.Black;
+            this.label115.Location = new System.Drawing.Point(2, 189);
+            this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(105, 19);
+            this.label115.TabIndex = 75;
+            this.label115.Text = "Tx OVT hazard";
             // 
             // textBox95
             // 
-            textBox95.Location = new System.Drawing.Point(115, 186);
-            textBox95.Margin = new System.Windows.Forms.Padding(2);
-            textBox95.Name = "textBox95";
-            textBox95.ReadOnly = true;
-            textBox95.Size = new System.Drawing.Size(92, 26);
-            textBox95.TabIndex = 74;
-            textBox95.TextChanged += new System.EventHandler(textBox95_TextChanged);
+            this.textBox95.Location = new System.Drawing.Point(115, 186);
+            this.textBox95.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox95.Name = "textBox95";
+            this.textBox95.ReadOnly = true;
+            this.textBox95.Size = new System.Drawing.Size(92, 26);
+            this.textBox95.TabIndex = 74;
+            this.textBox95.TextChanged += new System.EventHandler(this.textBox95_TextChanged);
             // 
             // label71
             // 
-            label71.AutoSize = true;
-            label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label71.ForeColor = System.Drawing.Color.Black;
-            label71.Location = new System.Drawing.Point(18, 35);
-            label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label71.Name = "label71";
-            label71.Size = new System.Drawing.Size(51, 19);
-            label71.TabIndex = 68;
-            label71.Text = "Ready";
-            label71.Click += new System.EventHandler(label71_Click);
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.Black;
+            this.label71.Location = new System.Drawing.Point(18, 35);
+            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(51, 19);
+            this.label71.TabIndex = 68;
+            this.label71.Text = "Ready";
+            this.label71.Click += new System.EventHandler(this.label71_Click);
             // 
             // label74
             // 
-            label74.AutoSize = true;
-            label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label74.ForeColor = System.Drawing.Color.Black;
-            label74.Location = new System.Drawing.Point(18, 159);
-            label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label74.Name = "label74";
-            label74.Size = new System.Drawing.Size(35, 19);
-            label74.TabIndex = 73;
-            label74.Text = "SEU";
-            label74.Click += new System.EventHandler(label74_Click);
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.Black;
+            this.label74.Location = new System.Drawing.Point(18, 159);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(35, 19);
+            this.label74.TabIndex = 73;
+            this.label74.Text = "SEU";
+            this.label74.Click += new System.EventHandler(this.label74_Click);
             // 
             // textBox94
             // 
-            textBox94.Location = new System.Drawing.Point(115, 156);
-            textBox94.Margin = new System.Windows.Forms.Padding(2);
-            textBox94.Name = "textBox94";
-            textBox94.ReadOnly = true;
-            textBox94.Size = new System.Drawing.Size(92, 26);
-            textBox94.TabIndex = 72;
-            textBox94.TextChanged += new System.EventHandler(textBox60_TextChanged);
+            this.textBox94.Location = new System.Drawing.Point(115, 156);
+            this.textBox94.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox94.Name = "textBox94";
+            this.textBox94.ReadOnly = true;
+            this.textBox94.Size = new System.Drawing.Size(92, 26);
+            this.textBox94.TabIndex = 72;
+            this.textBox94.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
             // 
             // label73
             // 
-            label73.AutoSize = true;
-            label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label73.ForeColor = System.Drawing.Color.Black;
-            label73.Location = new System.Drawing.Point(18, 130);
-            label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label73.Name = "label73";
-            label73.Size = new System.Drawing.Size(81, 19);
-            label73.TabIndex = 71;
-            label73.Text = "Protection";
-            label73.Click += new System.EventHandler(label73_Click);
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.Black;
+            this.label73.Location = new System.Drawing.Point(18, 130);
+            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(81, 19);
+            this.label73.TabIndex = 71;
+            this.label73.Text = "Protection";
+            this.label73.Click += new System.EventHandler(this.label73_Click);
             // 
             // textBox93
             // 
-            textBox93.Location = new System.Drawing.Point(115, 123);
-            textBox93.Margin = new System.Windows.Forms.Padding(2);
-            textBox93.Name = "textBox93";
-            textBox93.ReadOnly = true;
-            textBox93.Size = new System.Drawing.Size(92, 26);
-            textBox93.TabIndex = 70;
-            textBox93.TextChanged += new System.EventHandler(textBox59_TextChanged);
+            this.textBox93.Location = new System.Drawing.Point(115, 123);
+            this.textBox93.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox93.Name = "textBox93";
+            this.textBox93.ReadOnly = true;
+            this.textBox93.Size = new System.Drawing.Size(92, 26);
+            this.textBox93.TabIndex = 70;
+            this.textBox93.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
             // 
             // label68
             // 
-            label68.AutoSize = true;
-            label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label68.ForeColor = System.Drawing.Color.Black;
-            label68.Location = new System.Drawing.Point(8, 96);
-            label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label68.Name = "label68";
-            label68.Size = new System.Drawing.Size(97, 19);
-            label68.TabIndex = 69;
-            label68.Text = "Over voltage";
-            label68.Click += new System.EventHandler(label68_Click);
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.Black;
+            this.label68.Location = new System.Drawing.Point(8, 96);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(97, 19);
+            this.label68.TabIndex = 69;
+            this.label68.Text = "Over voltage";
+            this.label68.Click += new System.EventHandler(this.label68_Click);
             // 
             // textBox92
             // 
-            textBox92.Location = new System.Drawing.Point(115, 92);
-            textBox92.Margin = new System.Windows.Forms.Padding(2);
-            textBox92.Name = "textBox92";
-            textBox92.ReadOnly = true;
-            textBox92.Size = new System.Drawing.Size(92, 26);
-            textBox92.TabIndex = 64;
-            textBox92.TextChanged += new System.EventHandler(textBox58_TextChanged);
+            this.textBox92.Location = new System.Drawing.Point(115, 92);
+            this.textBox92.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox92.Name = "textBox92";
+            this.textBox92.ReadOnly = true;
+            this.textBox92.Size = new System.Drawing.Size(92, 26);
+            this.textBox92.TabIndex = 64;
+            this.textBox92.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
             // 
             // label72
             // 
-            label72.AutoSize = true;
-            label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label72.ForeColor = System.Drawing.Color.Black;
-            label72.Location = new System.Drawing.Point(6, 63);
-            label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label72.Name = "label72";
-            label72.Size = new System.Drawing.Size(106, 19);
-            label72.TabIndex = 65;
-            label72.Text = "Under voltage";
-            label72.Click += new System.EventHandler(label72_Click);
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.Black;
+            this.label72.Location = new System.Drawing.Point(6, 63);
+            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(106, 19);
+            this.label72.TabIndex = 65;
+            this.label72.Text = "Under voltage";
+            this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
             // textBox90
             // 
-            textBox90.Location = new System.Drawing.Point(115, 31);
-            textBox90.Margin = new System.Windows.Forms.Padding(2);
-            textBox90.Name = "textBox90";
-            textBox90.ReadOnly = true;
-            textBox90.Size = new System.Drawing.Size(92, 26);
-            textBox90.TabIndex = 67;
-            textBox90.TextChanged += new System.EventHandler(textBox56_TextChanged);
+            this.textBox90.Location = new System.Drawing.Point(115, 31);
+            this.textBox90.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox90.Name = "textBox90";
+            this.textBox90.ReadOnly = true;
+            this.textBox90.Size = new System.Drawing.Size(92, 26);
+            this.textBox90.TabIndex = 67;
+            this.textBox90.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
             // 
             // textBox91
             // 
-            textBox91.Location = new System.Drawing.Point(115, 62);
-            textBox91.Margin = new System.Windows.Forms.Padding(2);
-            textBox91.Name = "textBox91";
-            textBox91.ReadOnly = true;
-            textBox91.Size = new System.Drawing.Size(92, 26);
-            textBox91.TabIndex = 66;
-            textBox91.TextChanged += new System.EventHandler(textBox57_TextChanged);
+            this.textBox91.Location = new System.Drawing.Point(115, 62);
+            this.textBox91.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox91.Name = "textBox91";
+            this.textBox91.ReadOnly = true;
+            this.textBox91.Size = new System.Drawing.Size(92, 26);
+            this.textBox91.TabIndex = 66;
+            this.textBox91.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
             // groupBox35
             // 
-            groupBox35.Controls.Add(label84);
-            groupBox35.Controls.Add(checkBox8);
-            groupBox35.Controls.Add(label85);
-            groupBox35.Controls.Add(button44);
-            groupBox35.Controls.Add(label101);
-            groupBox35.Controls.Add(textBox_PulseDelay2);
-            groupBox35.Controls.Add(textBox_PulsePeriod2);
-            groupBox35.Controls.Add(textBox_PulseWidth2);
-            groupBox35.Location = new System.Drawing.Point(876, 233);
-            groupBox35.Margin = new System.Windows.Forms.Padding(2);
-            groupBox35.Name = "groupBox35";
-            groupBox35.Padding = new System.Windows.Forms.Padding(2);
-            groupBox35.Size = new System.Drawing.Size(354, 97);
-            groupBox35.TabIndex = 18;
-            groupBox35.TabStop = false;
-            groupBox35.Text = "GP pulse gen";
+            this.groupBox35.Controls.Add(this.label84);
+            this.groupBox35.Controls.Add(this.checkBox8);
+            this.groupBox35.Controls.Add(this.label85);
+            this.groupBox35.Controls.Add(this.button44);
+            this.groupBox35.Controls.Add(this.label101);
+            this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
+            this.groupBox35.Controls.Add(this.textBox_PulsePeriod2);
+            this.groupBox35.Controls.Add(this.textBox_PulseWidth2);
+            this.groupBox35.Location = new System.Drawing.Point(876, 233);
+            this.groupBox35.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox35.Size = new System.Drawing.Size(354, 97);
+            this.groupBox35.TabIndex = 18;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "GP pulse gen";
             // 
             // label84
             // 
-            label84.AutoSize = true;
-            label84.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label84.Location = new System.Drawing.Point(171, 34);
-            label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label84.Name = "label84";
-            label84.Size = new System.Drawing.Size(69, 15);
-            label84.TabIndex = 23;
-            label84.Text = "Delay (1us)";
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Location = new System.Drawing.Point(171, 34);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(69, 15);
+            this.label84.TabIndex = 23;
+            this.label84.Text = "Delay (1us)";
             // 
             // checkBox8
             // 
-            checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox8.AutoSize = true;
-            checkBox8.Location = new System.Drawing.Point(268, 20);
-            checkBox8.Margin = new System.Windows.Forms.Padding(2);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new System.Drawing.Size(64, 28);
-            checkBox8.TabIndex = 19;
-            checkBox8.Text = "Control";
-            checkBox8.UseVisualStyleBackColor = true;
-            checkBox8.CheckedChanged += new System.EventHandler(checkBox8_CheckedChanged);
+            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Location = new System.Drawing.Point(268, 20);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(64, 28);
+            this.checkBox8.TabIndex = 19;
+            this.checkBox8.Text = "Control";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // label85
             // 
-            label85.AutoSize = true;
-            label85.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label85.Location = new System.Drawing.Point(93, 34);
-            label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label85.Name = "label85";
-            label85.Size = new System.Drawing.Size(74, 15);
-            label85.TabIndex = 22;
-            label85.Text = "Period (1us)";
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.Location = new System.Drawing.Point(93, 34);
+            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(74, 15);
+            this.label85.TabIndex = 22;
+            this.label85.Text = "Period (1us)";
             // 
             // button44
             // 
-            button44.Location = new System.Drawing.Point(222, 58);
-            button44.Margin = new System.Windows.Forms.Padding(2);
-            button44.Name = "button44";
-            button44.Size = new System.Drawing.Size(112, 22);
-            button44.TabIndex = 16;
-            button44.Text = "Set GP parms";
-            button44.UseVisualStyleBackColor = true;
-            button44.Click += new System.EventHandler(button44_Click);
+            this.button44.Location = new System.Drawing.Point(222, 58);
+            this.button44.Margin = new System.Windows.Forms.Padding(2);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(112, 22);
+            this.button44.TabIndex = 16;
+            this.button44.Text = "Set GP parms";
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
             // label101
             // 
-            label101.AutoSize = true;
-            label101.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label101.Location = new System.Drawing.Point(15, 34);
-            label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label101.Name = "label101";
-            label101.Size = new System.Drawing.Size(72, 15);
-            label101.TabIndex = 21;
-            label101.Text = "Width (1us)";
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Location = new System.Drawing.Point(15, 34);
+            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(72, 15);
+            this.label101.TabIndex = 21;
+            this.label101.Text = "Width (1us)";
             // 
             // textBox_PulseDelay2
             // 
-            textBox_PulseDelay2.Location = new System.Drawing.Point(165, 55);
-            textBox_PulseDelay2.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulseDelay2.Name = "textBox_PulseDelay2";
-            textBox_PulseDelay2.Size = new System.Drawing.Size(53, 26);
-            textBox_PulseDelay2.TabIndex = 15;
-            textBox_PulseDelay2.Text = "0";
+            this.textBox_PulseDelay2.Location = new System.Drawing.Point(165, 55);
+            this.textBox_PulseDelay2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulseDelay2.Name = "textBox_PulseDelay2";
+            this.textBox_PulseDelay2.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulseDelay2.TabIndex = 15;
+            this.textBox_PulseDelay2.Text = "0";
             // 
             // textBox_PulsePeriod2
             // 
-            textBox_PulsePeriod2.Location = new System.Drawing.Point(87, 55);
-            textBox_PulsePeriod2.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
-            textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
-            textBox_PulsePeriod2.TabIndex = 13;
-            textBox_PulsePeriod2.Text = "16";
-            textBox_PulsePeriod2.TextChanged += new System.EventHandler(textBox_PulsePeriod2_TextChanged);
+            this.textBox_PulsePeriod2.Location = new System.Drawing.Point(87, 55);
+            this.textBox_PulsePeriod2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
+            this.textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulsePeriod2.TabIndex = 13;
+            this.textBox_PulsePeriod2.Text = "16";
+            this.textBox_PulsePeriod2.TextChanged += new System.EventHandler(this.textBox_PulsePeriod2_TextChanged);
             // 
             // textBox_PulseWidth2
             // 
-            textBox_PulseWidth2.Location = new System.Drawing.Point(18, 55);
-            textBox_PulseWidth2.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulseWidth2.Name = "textBox_PulseWidth2";
-            textBox_PulseWidth2.Size = new System.Drawing.Size(53, 26);
-            textBox_PulseWidth2.TabIndex = 11;
-            textBox_PulseWidth2.Text = "2";
-            textBox_PulseWidth2.TextChanged += new System.EventHandler(textBox_PulseWidth2_TextChanged);
+            this.textBox_PulseWidth2.Location = new System.Drawing.Point(18, 55);
+            this.textBox_PulseWidth2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulseWidth2.Name = "textBox_PulseWidth2";
+            this.textBox_PulseWidth2.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulseWidth2.TabIndex = 11;
+            this.textBox_PulseWidth2.Text = "2";
+            this.textBox_PulseWidth2.TextChanged += new System.EventHandler(this.textBox_PulseWidth2_TextChanged);
             // 
             // groupBox46
             // 
-            groupBox46.Controls.Add(label38);
-            groupBox46.Controls.Add(label34);
-            groupBox46.Controls.Add(label35);
-            groupBox46.Controls.Add(textBox29);
-            groupBox46.Controls.Add(textBox30);
-            groupBox46.Controls.Add(textBox31);
-            groupBox46.Controls.Add(label36);
-            groupBox46.Location = new System.Drawing.Point(310, 106);
-            groupBox46.Margin = new System.Windows.Forms.Padding(2);
-            groupBox46.Name = "groupBox46";
-            groupBox46.Padding = new System.Windows.Forms.Padding(2);
-            groupBox46.Size = new System.Drawing.Size(232, 104);
-            groupBox46.TabIndex = 14;
-            groupBox46.TabStop = false;
-            groupBox46.Enter += new System.EventHandler(groupBox46_Enter);
+            this.groupBox46.Controls.Add(this.label38);
+            this.groupBox46.Controls.Add(this.label34);
+            this.groupBox46.Controls.Add(this.label35);
+            this.groupBox46.Controls.Add(this.textBox29);
+            this.groupBox46.Controls.Add(this.textBox30);
+            this.groupBox46.Controls.Add(this.textBox31);
+            this.groupBox46.Controls.Add(this.label36);
+            this.groupBox46.Location = new System.Drawing.Point(310, 106);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Size = new System.Drawing.Size(232, 104);
+            this.groupBox46.TabIndex = 14;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Enter += new System.EventHandler(this.groupBox46_Enter);
             // 
             // label38
             // 
-            label38.AutoSize = true;
-            label38.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label38.ForeColor = System.Drawing.Color.Black;
-            label38.Location = new System.Drawing.Point(121, 43);
-            label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label38.Name = "label38";
-            label38.Size = new System.Drawing.Size(45, 19);
-            label38.TabIndex = 14;
-            label38.Text = "DCA2";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(121, 43);
+            this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(45, 19);
+            this.label38.TabIndex = 14;
+            this.label38.Text = "DCA2";
             // 
             // label34
             // 
-            label34.AutoSize = true;
-            label34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label34.ForeColor = System.Drawing.Color.Black;
-            label34.Location = new System.Drawing.Point(62, 43);
-            label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label34.Name = "label34";
-            label34.Size = new System.Drawing.Size(45, 19);
-            label34.TabIndex = 11;
-            label34.Text = "DCA1";
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(62, 43);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(45, 19);
+            this.label34.TabIndex = 11;
+            this.label34.Text = "DCA1";
             // 
             // label35
             // 
-            label35.AutoSize = true;
-            label35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label35.ForeColor = System.Drawing.Color.Black;
-            label35.Location = new System.Drawing.Point(7, 43);
-            label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label35.Name = "label35";
-            label35.Size = new System.Drawing.Size(36, 19);
-            label35.TabIndex = 7;
-            label35.Text = "VVA";
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Black;
+            this.label35.Location = new System.Drawing.Point(7, 43);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(36, 19);
+            this.label35.TabIndex = 7;
+            this.label35.Text = "VVA";
             // 
             // textBox29
             // 
-            textBox29.Location = new System.Drawing.Point(65, 69);
-            textBox29.Margin = new System.Windows.Forms.Padding(2);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new System.Drawing.Size(50, 26);
-            textBox29.TabIndex = 6;
-            textBox29.Text = "0";
-            toolTip1.SetToolTip(textBox29, "Press Enter to update");
-            textBox29.TextChanged += new System.EventHandler(textBox29_TextChanged);
-            textBox29.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox29_KeyDown);
+            this.textBox29.Location = new System.Drawing.Point(65, 69);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(50, 26);
+            this.textBox29.TabIndex = 6;
+            this.textBox29.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox29, "Press Enter to update");
+            this.textBox29.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
+            this.textBox29.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox29_KeyDown);
             // 
             // textBox30
             // 
-            textBox30.Location = new System.Drawing.Point(123, 68);
-            textBox30.Margin = new System.Windows.Forms.Padding(2);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new System.Drawing.Size(50, 26);
-            textBox30.TabIndex = 7;
-            textBox30.Text = "0";
-            toolTip1.SetToolTip(textBox30, "Press Enter to update");
-            textBox30.TextChanged += new System.EventHandler(textBox30_TextChanged);
-            textBox30.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox30_KeyDown);
+            this.textBox30.Location = new System.Drawing.Point(123, 68);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(50, 26);
+            this.textBox30.TabIndex = 7;
+            this.textBox30.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox30, "Press Enter to update");
+            this.textBox30.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
+            this.textBox30.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox30_KeyDown);
             // 
             // textBox31
             // 
-            textBox31.Location = new System.Drawing.Point(7, 69);
-            textBox31.Margin = new System.Windows.Forms.Padding(2);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new System.Drawing.Size(50, 26);
-            textBox31.TabIndex = 5;
-            textBox31.Text = "0";
-            toolTip1.SetToolTip(textBox31, "Press Enter to update");
-            textBox31.TextChanged += new System.EventHandler(textBox31_TextChanged);
-            textBox31.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox31_KeyDown);
+            this.textBox31.Location = new System.Drawing.Point(7, 69);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(50, 26);
+            this.textBox31.TabIndex = 5;
+            this.textBox31.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox31, "Press Enter to update");
+            this.textBox31.TextChanged += new System.EventHandler(this.textBox31_TextChanged);
+            this.textBox31.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox31_KeyDown);
             // 
             // label36
             // 
-            label36.AutoSize = true;
-            label36.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label36.ForeColor = System.Drawing.Color.Blue;
-            label36.Location = new System.Drawing.Point(51, 14);
-            label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label36.Name = "label36";
-            label36.Size = new System.Drawing.Size(133, 23);
-            label36.TabIndex = 7;
-            label36.Text = "Set Attenuation";
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Blue;
+            this.label36.Location = new System.Drawing.Point(51, 14);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(133, 23);
+            this.label36.TabIndex = 7;
+            this.label36.Text = "Set Attenuation";
             // 
             // groupBox45
             // 
-            groupBox45.Controls.Add(label102);
-            groupBox45.Controls.Add(label31);
-            groupBox45.Controls.Add(label30);
-            groupBox45.Controls.Add(label29);
-            groupBox45.Controls.Add(label28);
-            groupBox45.Controls.Add(textBox27);
-            groupBox45.Controls.Add(textBox26);
-            groupBox45.Controls.Add(textBox25);
-            groupBox45.Controls.Add(textBox24);
-            groupBox45.Controls.Add(label25);
-            groupBox45.Location = new System.Drawing.Point(6, 102);
-            groupBox45.Margin = new System.Windows.Forms.Padding(2);
-            groupBox45.Name = "groupBox45";
-            groupBox45.Padding = new System.Windows.Forms.Padding(2);
-            groupBox45.Size = new System.Drawing.Size(295, 105);
-            groupBox45.TabIndex = 1;
-            groupBox45.TabStop = false;
+            this.groupBox45.Controls.Add(this.label102);
+            this.groupBox45.Controls.Add(this.label31);
+            this.groupBox45.Controls.Add(this.label30);
+            this.groupBox45.Controls.Add(this.label29);
+            this.groupBox45.Controls.Add(this.label28);
+            this.groupBox45.Controls.Add(this.textBox27);
+            this.groupBox45.Controls.Add(this.textBox26);
+            this.groupBox45.Controls.Add(this.textBox25);
+            this.groupBox45.Controls.Add(this.textBox24);
+            this.groupBox45.Controls.Add(this.label25);
+            this.groupBox45.Location = new System.Drawing.Point(6, 102);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Size = new System.Drawing.Size(295, 105);
+            this.groupBox45.TabIndex = 1;
+            this.groupBox45.TabStop = false;
             // 
             // label102
             // 
-            label102.AutoSize = true;
-            label102.Location = new System.Drawing.Point(198, 13);
-            label102.Name = "label102";
-            label102.Size = new System.Drawing.Size(90, 18);
-            label102.TabIndex = 14;
-            label102.Text = "Enter to send";
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(198, 13);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(90, 18);
+            this.label102.TabIndex = 14;
+            this.label102.Text = "Enter to send";
             // 
             // label31
             // 
-            label31.AutoSize = true;
-            label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label31.ForeColor = System.Drawing.Color.Black;
-            label31.Location = new System.Drawing.Point(180, 41);
-            label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(26, 19);
-            label31.TabIndex = 13;
-            label31.Text = "4V";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Location = new System.Drawing.Point(180, 41);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(26, 19);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "4V";
             // 
             // label30
             // 
-            label30.AutoSize = true;
-            label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label30.ForeColor = System.Drawing.Color.Black;
-            label30.Location = new System.Drawing.Point(124, 42);
-            label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label30.Name = "label30";
-            label30.Size = new System.Drawing.Size(26, 19);
-            label30.TabIndex = 12;
-            label30.Text = "5V";
-            label30.Click += new System.EventHandler(label30_Click);
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(124, 42);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(26, 19);
+            this.label30.TabIndex = 12;
+            this.label30.Text = "5V";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // label29
             // 
-            label29.AutoSize = true;
-            label29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label29.ForeColor = System.Drawing.Color.Black;
-            label29.Location = new System.Drawing.Point(63, 42);
-            label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(26, 19);
-            label29.TabIndex = 11;
-            label29.Text = "9V";
-            label29.Click += new System.EventHandler(label29_Click);
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(63, 42);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(26, 19);
+            this.label29.TabIndex = 11;
+            this.label29.Text = "9V";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label28
             // 
-            label28.AutoSize = true;
-            label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label28.ForeColor = System.Drawing.Color.Black;
-            label28.Location = new System.Drawing.Point(13, 41);
-            label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(34, 19);
-            label28.TabIndex = 7;
-            label28.Text = "28V";
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Black;
+            this.label28.Location = new System.Drawing.Point(13, 41);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 19);
+            this.label28.TabIndex = 7;
+            this.label28.Text = "28V";
             // 
             // textBox27
             // 
-            textBox27.Location = new System.Drawing.Point(171, 69);
-            textBox27.Margin = new System.Windows.Forms.Padding(2);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new System.Drawing.Size(50, 26);
-            textBox27.TabIndex = 4;
-            textBox27.Text = "0";
-            toolTip1.SetToolTip(textBox27, "Press Enter to update");
-            textBox27.TextChanged += new System.EventHandler(textBox27_TextChanged);
-            textBox27.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox27_KeyDown);
+            this.textBox27.Location = new System.Drawing.Point(171, 69);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(50, 26);
+            this.textBox27.TabIndex = 4;
+            this.textBox27.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox27, "Press Enter to update");
+            this.textBox27.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
+            this.textBox27.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
             // 
             // textBox26
             // 
-            textBox26.Location = new System.Drawing.Point(116, 69);
-            textBox26.Margin = new System.Windows.Forms.Padding(2);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new System.Drawing.Size(50, 26);
-            textBox26.TabIndex = 3;
-            textBox26.Text = "0";
-            toolTip1.SetToolTip(textBox26, "Press Enter to update");
-            textBox26.TextChanged += new System.EventHandler(textBox26_TextChanged);
-            textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox26_KeyDown);
+            this.textBox26.Location = new System.Drawing.Point(116, 69);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(50, 26);
+            this.textBox26.TabIndex = 3;
+            this.textBox26.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox26, "Press Enter to update");
+            this.textBox26.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
+            this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
             // textBox25
             // 
-            textBox25.Location = new System.Drawing.Point(62, 69);
-            textBox25.Margin = new System.Windows.Forms.Padding(2);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new System.Drawing.Size(50, 26);
-            textBox25.TabIndex = 2;
-            textBox25.Text = "0";
-            toolTip1.SetToolTip(textBox25, "Press Enter to update");
-            textBox25.TextChanged += new System.EventHandler(textBox25_TextChanged);
-            textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox25_KeyDown);
+            this.textBox25.Location = new System.Drawing.Point(62, 69);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(50, 26);
+            this.textBox25.TabIndex = 2;
+            this.textBox25.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox25, "Press Enter to update");
+            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
+            this.textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
             // 
             // textBox24
             // 
-            textBox24.Location = new System.Drawing.Point(6, 69);
-            textBox24.Margin = new System.Windows.Forms.Padding(2);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new System.Drawing.Size(50, 26);
-            textBox24.TabIndex = 1;
-            textBox24.Text = "0";
-            toolTip1.SetToolTip(textBox24, "Press Enter to update");
-            textBox24.TextChanged += new System.EventHandler(textBox24_TextChanged);
-            textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(textBox24_KeyDown);
+            this.textBox24.Location = new System.Drawing.Point(6, 69);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(50, 26);
+            this.textBox24.TabIndex = 1;
+            this.textBox24.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox24, "Press Enter to update");
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
+            this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
             // label25
             // 
-            label25.AutoSize = true;
-            label25.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label25.ForeColor = System.Drawing.Color.Blue;
-            label25.Location = new System.Drawing.Point(51, 14);
-            label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(134, 23);
-            label25.TabIndex = 7;
-            label25.Text = "Set PSU voltage";
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Blue;
+            this.label25.Location = new System.Drawing.Point(51, 14);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(134, 23);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Set PSU voltage";
             // 
             // groupBox34
             // 
-            groupBox34.Controls.Add(label79);
-            groupBox34.Controls.Add(checkBox7);
-            groupBox34.Controls.Add(label80);
-            groupBox34.Controls.Add(button42);
-            groupBox34.Controls.Add(label83);
-            groupBox34.Controls.Add(textBox_PulseDelay);
-            groupBox34.Controls.Add(textBox_PulsePeriod);
-            groupBox34.Controls.Add(textBox_PulseWidth);
-            groupBox34.Location = new System.Drawing.Point(876, 128);
-            groupBox34.Margin = new System.Windows.Forms.Padding(2);
-            groupBox34.Name = "groupBox34";
-            groupBox34.Padding = new System.Windows.Forms.Padding(2);
-            groupBox34.Size = new System.Drawing.Size(354, 97);
-            groupBox34.TabIndex = 17;
-            groupBox34.TabStop = false;
-            groupBox34.Text = "Pulse gen";
+            this.groupBox34.Controls.Add(this.label79);
+            this.groupBox34.Controls.Add(this.checkBox7);
+            this.groupBox34.Controls.Add(this.label80);
+            this.groupBox34.Controls.Add(this.button42);
+            this.groupBox34.Controls.Add(this.label83);
+            this.groupBox34.Controls.Add(this.textBox_PulseDelay);
+            this.groupBox34.Controls.Add(this.textBox_PulsePeriod);
+            this.groupBox34.Controls.Add(this.textBox_PulseWidth);
+            this.groupBox34.Location = new System.Drawing.Point(876, 128);
+            this.groupBox34.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox34.Size = new System.Drawing.Size(354, 97);
+            this.groupBox34.TabIndex = 17;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "Pulse gen";
             // 
             // label79
             // 
-            label79.AutoSize = true;
-            label79.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label79.Location = new System.Drawing.Point(171, 33);
-            label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label79.Name = "label79";
-            label79.Size = new System.Drawing.Size(69, 15);
-            label79.TabIndex = 20;
-            label79.Text = "Delay (1us)";
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(171, 33);
+            this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(69, 15);
+            this.label79.TabIndex = 20;
+            this.label79.Text = "Delay (1us)";
             // 
             // checkBox7
             // 
-            checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox7.AutoSize = true;
-            checkBox7.Location = new System.Drawing.Point(268, 19);
-            checkBox7.Margin = new System.Windows.Forms.Padding(2);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new System.Drawing.Size(64, 28);
-            checkBox7.TabIndex = 18;
-            checkBox7.Text = "Control";
-            checkBox7.UseVisualStyleBackColor = true;
-            checkBox7.CheckedChanged += new System.EventHandler(checkBox7_CheckedChanged);
+            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(268, 19);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(64, 28);
+            this.checkBox7.TabIndex = 18;
+            this.checkBox7.Text = "Control";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // label80
             // 
-            label80.AutoSize = true;
-            label80.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label80.Location = new System.Drawing.Point(93, 33);
-            label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label80.Name = "label80";
-            label80.Size = new System.Drawing.Size(74, 15);
-            label80.TabIndex = 19;
-            label80.Text = "Period (1us)";
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(93, 33);
+            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(74, 15);
+            this.label80.TabIndex = 19;
+            this.label80.Text = "Period (1us)";
             // 
             // button42
             // 
-            button42.Location = new System.Drawing.Point(222, 58);
-            button42.Margin = new System.Windows.Forms.Padding(2);
-            button42.Name = "button42";
-            button42.Size = new System.Drawing.Size(112, 22);
-            button42.TabIndex = 16;
-            button42.Text = "Set Tx Inhabit";
-            button42.UseVisualStyleBackColor = true;
-            button42.Click += new System.EventHandler(button42_Click_2);
+            this.button42.Location = new System.Drawing.Point(222, 58);
+            this.button42.Margin = new System.Windows.Forms.Padding(2);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(112, 22);
+            this.button42.TabIndex = 16;
+            this.button42.Text = "Set Tx Inhabit";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click_2);
             // 
             // label83
             // 
-            label83.AutoSize = true;
-            label83.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label83.Location = new System.Drawing.Point(15, 33);
-            label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label83.Name = "label83";
-            label83.Size = new System.Drawing.Size(72, 15);
-            label83.TabIndex = 18;
-            label83.Text = "Width (1us)";
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Location = new System.Drawing.Point(15, 33);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(72, 15);
+            this.label83.TabIndex = 18;
+            this.label83.Text = "Width (1us)";
             // 
             // textBox_PulseDelay
             // 
-            textBox_PulseDelay.Location = new System.Drawing.Point(165, 55);
-            textBox_PulseDelay.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulseDelay.Name = "textBox_PulseDelay";
-            textBox_PulseDelay.Size = new System.Drawing.Size(53, 26);
-            textBox_PulseDelay.TabIndex = 15;
-            textBox_PulseDelay.Text = "0";
+            this.textBox_PulseDelay.Location = new System.Drawing.Point(165, 55);
+            this.textBox_PulseDelay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulseDelay.Name = "textBox_PulseDelay";
+            this.textBox_PulseDelay.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulseDelay.TabIndex = 15;
+            this.textBox_PulseDelay.Text = "0";
             // 
             // textBox_PulsePeriod
             // 
-            textBox_PulsePeriod.Location = new System.Drawing.Point(87, 55);
-            textBox_PulsePeriod.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulsePeriod.Name = "textBox_PulsePeriod";
-            textBox_PulsePeriod.Size = new System.Drawing.Size(53, 26);
-            textBox_PulsePeriod.TabIndex = 13;
-            textBox_PulsePeriod.Text = "16";
-            textBox_PulsePeriod.TextChanged += new System.EventHandler(textBox_PulsePeriod_TextChanged);
+            this.textBox_PulsePeriod.Location = new System.Drawing.Point(87, 55);
+            this.textBox_PulsePeriod.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulsePeriod.Name = "textBox_PulsePeriod";
+            this.textBox_PulsePeriod.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulsePeriod.TabIndex = 13;
+            this.textBox_PulsePeriod.Text = "16";
+            this.textBox_PulsePeriod.TextChanged += new System.EventHandler(this.textBox_PulsePeriod_TextChanged);
             // 
             // textBox_PulseWidth
             // 
-            textBox_PulseWidth.Location = new System.Drawing.Point(18, 55);
-            textBox_PulseWidth.Margin = new System.Windows.Forms.Padding(2);
-            textBox_PulseWidth.Name = "textBox_PulseWidth";
-            textBox_PulseWidth.Size = new System.Drawing.Size(53, 26);
-            textBox_PulseWidth.TabIndex = 11;
-            textBox_PulseWidth.Text = "2";
-            textBox_PulseWidth.TextChanged += new System.EventHandler(textBox_PulseWidth_TextChanged);
+            this.textBox_PulseWidth.Location = new System.Drawing.Point(18, 55);
+            this.textBox_PulseWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_PulseWidth.Name = "textBox_PulseWidth";
+            this.textBox_PulseWidth.Size = new System.Drawing.Size(53, 26);
+            this.textBox_PulseWidth.TabIndex = 11;
+            this.textBox_PulseWidth.Text = "2";
+            this.textBox_PulseWidth.TextChanged += new System.EventHandler(this.textBox_PulseWidth_TextChanged);
             // 
             // groupBox44
             // 
-            groupBox44.Controls.Add(label121);
-            groupBox44.Controls.Add(button57);
-            groupBox44.Controls.Add(textBox_SystemSN);
-            groupBox44.Controls.Add(textBox_SystemFWVersion);
-            groupBox44.Controls.Add(label122);
-            groupBox44.Controls.Add(textBox_SystemHWVersion);
-            groupBox44.Controls.Add(textBox_SystemID);
-            groupBox44.Controls.Add(button70);
-            groupBox44.Controls.Add(label27);
-            groupBox44.Controls.Add(label26);
-            groupBox44.Controls.Add(label19);
-            groupBox44.Location = new System.Drawing.Point(6, 4);
-            groupBox44.Margin = new System.Windows.Forms.Padding(2);
-            groupBox44.Name = "groupBox44";
-            groupBox44.Padding = new System.Windows.Forms.Padding(2);
-            groupBox44.Size = new System.Drawing.Size(399, 97);
-            groupBox44.TabIndex = 0;
-            groupBox44.TabStop = false;
+            this.groupBox44.Controls.Add(this.label121);
+            this.groupBox44.Controls.Add(this.button57);
+            this.groupBox44.Controls.Add(this.textBox_SystemSN);
+            this.groupBox44.Controls.Add(this.textBox_SystemFWVersion);
+            this.groupBox44.Controls.Add(this.label122);
+            this.groupBox44.Controls.Add(this.textBox_SystemHWVersion);
+            this.groupBox44.Controls.Add(this.textBox_SystemID);
+            this.groupBox44.Controls.Add(this.button70);
+            this.groupBox44.Controls.Add(this.label27);
+            this.groupBox44.Controls.Add(this.label26);
+            this.groupBox44.Controls.Add(this.label19);
+            this.groupBox44.Location = new System.Drawing.Point(6, 4);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Size = new System.Drawing.Size(399, 97);
+            this.groupBox44.TabIndex = 0;
+            this.groupBox44.TabStop = false;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(310, 70);
+            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(29, 18);
+            this.label121.TabIndex = 15;
+            this.label121.Text = "SN:";
             // 
             // button57
             // 
-            button57.Location = new System.Drawing.Point(6, 68);
-            button57.Margin = new System.Windows.Forms.Padding(2);
-            button57.Name = "button57";
-            button57.Size = new System.Drawing.Size(69, 22);
-            button57.TabIndex = 12;
-            button57.Text = "Clear";
-            button57.UseVisualStyleBackColor = true;
-            button57.Click += new System.EventHandler(button57_Click_1);
+            this.button57.Location = new System.Drawing.Point(6, 68);
+            this.button57.Margin = new System.Windows.Forms.Padding(2);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(69, 22);
+            this.button57.TabIndex = 12;
+            this.button57.Text = "Clear";
+            this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.button57_Click_1);
+            // 
+            // textBox_SystemSN
+            // 
+            this.textBox_SystemSN.Location = new System.Drawing.Point(339, 62);
+            this.textBox_SystemSN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemSN.Name = "textBox_SystemSN";
+            this.textBox_SystemSN.ReadOnly = true;
+            this.textBox_SystemSN.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SystemSN.TabIndex = 14;
             // 
             // textBox_SystemFWVersion
             // 
-            textBox_SystemFWVersion.Location = new System.Drawing.Point(162, 63);
-            textBox_SystemFWVersion.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SystemFWVersion.Name = "textBox_SystemFWVersion";
-            textBox_SystemFWVersion.ReadOnly = true;
-            textBox_SystemFWVersion.Size = new System.Drawing.Size(126, 26);
-            textBox_SystemFWVersion.TabIndex = 13;
+            this.textBox_SystemFWVersion.Location = new System.Drawing.Point(162, 63);
+            this.textBox_SystemFWVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemFWVersion.Name = "textBox_SystemFWVersion";
+            this.textBox_SystemFWVersion.ReadOnly = true;
+            this.textBox_SystemFWVersion.Size = new System.Drawing.Size(126, 26);
+            this.textBox_SystemFWVersion.TabIndex = 13;
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(310, 38);
+            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(25, 18);
+            this.label122.TabIndex = 13;
+            this.label122.Text = "ID:";
             // 
             // textBox_SystemHWVersion
             // 
-            textBox_SystemHWVersion.Location = new System.Drawing.Point(162, 31);
-            textBox_SystemHWVersion.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SystemHWVersion.Name = "textBox_SystemHWVersion";
-            textBox_SystemHWVersion.ReadOnly = true;
-            textBox_SystemHWVersion.Size = new System.Drawing.Size(126, 26);
-            textBox_SystemHWVersion.TabIndex = 12;
+            this.textBox_SystemHWVersion.Location = new System.Drawing.Point(162, 31);
+            this.textBox_SystemHWVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemHWVersion.Name = "textBox_SystemHWVersion";
+            this.textBox_SystemHWVersion.ReadOnly = true;
+            this.textBox_SystemHWVersion.Size = new System.Drawing.Size(126, 26);
+            this.textBox_SystemHWVersion.TabIndex = 12;
+            // 
+            // textBox_SystemID
+            // 
+            this.textBox_SystemID.Location = new System.Drawing.Point(339, 31);
+            this.textBox_SystemID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemID.Name = "textBox_SystemID";
+            this.textBox_SystemID.ReadOnly = true;
+            this.textBox_SystemID.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SystemID.TabIndex = 12;
             // 
             // button70
             // 
-            button70.Location = new System.Drawing.Point(6, 42);
-            button70.Margin = new System.Windows.Forms.Padding(2);
-            button70.Name = "button70";
-            button70.Size = new System.Drawing.Size(69, 22);
-            button70.TabIndex = 6;
-            button70.Text = "Get";
-            button70.UseVisualStyleBackColor = true;
-            button70.Click += new System.EventHandler(button70_Click_1);
+            this.button70.Location = new System.Drawing.Point(6, 42);
+            this.button70.Margin = new System.Windows.Forms.Padding(2);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(69, 22);
+            this.button70.TabIndex = 6;
+            this.button70.Text = "Get";
+            this.button70.UseVisualStyleBackColor = true;
+            this.button70.Click += new System.EventHandler(this.button70_Click_1);
             // 
             // label27
             // 
-            label27.AutoSize = true;
-            label27.Location = new System.Drawing.Point(82, 70);
-            label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(81, 18);
-            label27.TabIndex = 5;
-            label27.Text = "FW version:";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(82, 70);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(81, 18);
+            this.label27.TabIndex = 5;
+            this.label27.Text = "FW version:";
             // 
             // label26
             // 
-            label26.AutoSize = true;
-            label26.Location = new System.Drawing.Point(79, 40);
-            label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label26.Name = "label26";
-            label26.Size = new System.Drawing.Size(83, 18);
-            label26.TabIndex = 4;
-            label26.Text = "HW version:";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(79, 40);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(83, 18);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "HW version:";
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label19.Location = new System.Drawing.Point(5, 14);
-            label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(68, 23);
-            label19.TabIndex = 0;
-            label19.Text = "System";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(5, 14);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 23);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "System";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button75);
-            groupBox1.Controls.Add(label97);
-            groupBox1.Controls.Add(textBox_SimulatorSN);
-            groupBox1.Controls.Add(label96);
-            groupBox1.Controls.Add(textBox_SimulatorID);
-            groupBox1.Controls.Add(button31);
-            groupBox1.Controls.Add(label93);
-            groupBox1.Controls.Add(label94);
-            groupBox1.Controls.Add(textBox_SimulatorFWVersion);
-            groupBox1.Controls.Add(textBox_SimulatorHWVersion);
-            groupBox1.Controls.Add(label95);
-            groupBox1.Location = new System.Drawing.Point(411, 4);
-            groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            groupBox1.Size = new System.Drawing.Size(354, 97);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
+            this.groupBox1.Controls.Add(this.button75);
+            this.groupBox1.Controls.Add(this.label97);
+            this.groupBox1.Controls.Add(this.textBox_SimulatorSN);
+            this.groupBox1.Controls.Add(this.label96);
+            this.groupBox1.Controls.Add(this.textBox_SimulatorID);
+            this.groupBox1.Controls.Add(this.button31);
+            this.groupBox1.Controls.Add(this.label93);
+            this.groupBox1.Controls.Add(this.label94);
+            this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
+            this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
+            this.groupBox1.Controls.Add(this.label95);
+            this.groupBox1.Location = new System.Drawing.Point(411, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(354, 97);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
             // 
             // button75
             // 
-            button75.Location = new System.Drawing.Point(6, 65);
-            button75.Margin = new System.Windows.Forms.Padding(2);
-            button75.Name = "button75";
-            button75.Size = new System.Drawing.Size(69, 22);
-            button75.TabIndex = 11;
-            button75.Text = "Clear";
-            button75.UseVisualStyleBackColor = true;
-            button75.Click += new System.EventHandler(button75_Click_1);
+            this.button75.Location = new System.Drawing.Point(6, 65);
+            this.button75.Margin = new System.Windows.Forms.Padding(2);
+            this.button75.Name = "button75";
+            this.button75.Size = new System.Drawing.Size(69, 22);
+            this.button75.TabIndex = 11;
+            this.button75.Text = "Clear";
+            this.button75.UseVisualStyleBackColor = true;
+            this.button75.Click += new System.EventHandler(this.button75_Click_1);
             // 
             // label97
             // 
-            label97.AutoSize = true;
-            label97.Location = new System.Drawing.Point(274, 71);
-            label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label97.Name = "label97";
-            label97.Size = new System.Drawing.Size(29, 18);
-            label97.TabIndex = 10;
-            label97.Text = "SN:";
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(274, 71);
+            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(29, 18);
+            this.label97.TabIndex = 10;
+            this.label97.Text = "SN:";
             // 
             // textBox_SimulatorSN
             // 
-            textBox_SimulatorSN.Location = new System.Drawing.Point(303, 63);
-            textBox_SimulatorSN.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SimulatorSN.Name = "textBox_SimulatorSN";
-            textBox_SimulatorSN.ReadOnly = true;
-            textBox_SimulatorSN.Size = new System.Drawing.Size(46, 26);
-            textBox_SimulatorSN.TabIndex = 9;
+            this.textBox_SimulatorSN.Location = new System.Drawing.Point(303, 63);
+            this.textBox_SimulatorSN.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorSN.Name = "textBox_SimulatorSN";
+            this.textBox_SimulatorSN.ReadOnly = true;
+            this.textBox_SimulatorSN.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SimulatorSN.TabIndex = 9;
             // 
             // label96
             // 
-            label96.AutoSize = true;
-            label96.Location = new System.Drawing.Point(274, 39);
-            label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label96.Name = "label96";
-            label96.Size = new System.Drawing.Size(25, 18);
-            label96.TabIndex = 8;
-            label96.Text = "ID:";
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(274, 39);
+            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(25, 18);
+            this.label96.TabIndex = 8;
+            this.label96.Text = "ID:";
             // 
             // textBox_SimulatorID
             // 
-            textBox_SimulatorID.Location = new System.Drawing.Point(303, 32);
-            textBox_SimulatorID.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SimulatorID.Name = "textBox_SimulatorID";
-            textBox_SimulatorID.ReadOnly = true;
-            textBox_SimulatorID.Size = new System.Drawing.Size(46, 26);
-            textBox_SimulatorID.TabIndex = 7;
+            this.textBox_SimulatorID.Location = new System.Drawing.Point(303, 32);
+            this.textBox_SimulatorID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorID.Name = "textBox_SimulatorID";
+            this.textBox_SimulatorID.ReadOnly = true;
+            this.textBox_SimulatorID.Size = new System.Drawing.Size(46, 26);
+            this.textBox_SimulatorID.TabIndex = 7;
             // 
             // button31
             // 
-            button31.Location = new System.Drawing.Point(6, 38);
-            button31.Margin = new System.Windows.Forms.Padding(2);
-            button31.Name = "button31";
-            button31.Size = new System.Drawing.Size(69, 22);
-            button31.TabIndex = 6;
-            button31.Text = "Get";
-            button31.UseVisualStyleBackColor = true;
-            button31.Click += new System.EventHandler(button31_Click_1);
+            this.button31.Location = new System.Drawing.Point(6, 38);
+            this.button31.Margin = new System.Windows.Forms.Padding(2);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(69, 22);
+            this.button31.TabIndex = 6;
+            this.button31.Text = "Get";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click_1);
             // 
             // label93
             // 
-            label93.AutoSize = true;
-            label93.Location = new System.Drawing.Point(95, 67);
-            label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label93.Name = "label93";
-            label93.Size = new System.Drawing.Size(81, 18);
-            label93.TabIndex = 5;
-            label93.Text = "FW version:";
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(95, 67);
+            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(81, 18);
+            this.label93.TabIndex = 5;
+            this.label93.Text = "FW version:";
             // 
             // label94
             // 
-            label94.AutoSize = true;
-            label94.Location = new System.Drawing.Point(90, 35);
-            label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label94.Name = "label94";
-            label94.Size = new System.Drawing.Size(83, 18);
-            label94.TabIndex = 4;
-            label94.Text = "HW version:";
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(90, 35);
+            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(83, 18);
+            this.label94.TabIndex = 4;
+            this.label94.Text = "HW version:";
             // 
             // textBox_SimulatorFWVersion
             // 
-            textBox_SimulatorFWVersion.Location = new System.Drawing.Point(177, 63);
-            textBox_SimulatorFWVersion.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SimulatorFWVersion.Name = "textBox_SimulatorFWVersion";
-            textBox_SimulatorFWVersion.ReadOnly = true;
-            textBox_SimulatorFWVersion.Size = new System.Drawing.Size(92, 26);
-            textBox_SimulatorFWVersion.TabIndex = 3;
+            this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(177, 63);
+            this.textBox_SimulatorFWVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorFWVersion.Name = "textBox_SimulatorFWVersion";
+            this.textBox_SimulatorFWVersion.ReadOnly = true;
+            this.textBox_SimulatorFWVersion.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorFWVersion.TabIndex = 3;
             // 
             // textBox_SimulatorHWVersion
             // 
-            textBox_SimulatorHWVersion.Location = new System.Drawing.Point(177, 34);
-            textBox_SimulatorHWVersion.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SimulatorHWVersion.Name = "textBox_SimulatorHWVersion";
-            textBox_SimulatorHWVersion.ReadOnly = true;
-            textBox_SimulatorHWVersion.Size = new System.Drawing.Size(92, 26);
-            textBox_SimulatorHWVersion.TabIndex = 1;
+            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(177, 34);
+            this.textBox_SimulatorHWVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorHWVersion.Name = "textBox_SimulatorHWVersion";
+            this.textBox_SimulatorHWVersion.ReadOnly = true;
+            this.textBox_SimulatorHWVersion.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorHWVersion.TabIndex = 1;
             // 
             // label95
             // 
-            label95.AutoSize = true;
-            label95.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label95.Location = new System.Drawing.Point(4, 14);
-            label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label95.Name = "label95";
-            label95.Size = new System.Drawing.Size(87, 23);
-            label95.TabIndex = 0;
-            label95.Text = "Simulator";
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(4, 14);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(87, 23);
+            this.label95.TabIndex = 0;
+            this.label95.Text = "Simulator";
             // 
             // groupBox33
             // 
-            groupBox33.Controls.Add(checkBox6);
-            groupBox33.Controls.Add(button32);
-            groupBox33.Controls.Add(textBox_RFDelay);
-            groupBox33.Controls.Add(label100);
-            groupBox33.Controls.Add(textBox_RFPeriod);
-            groupBox33.Controls.Add(label99);
-            groupBox33.Controls.Add(textBox_RFWidth);
-            groupBox33.Controls.Add(label98);
-            groupBox33.Location = new System.Drawing.Point(876, 23);
-            groupBox33.Margin = new System.Windows.Forms.Padding(2);
-            groupBox33.Name = "groupBox33";
-            groupBox33.Padding = new System.Windows.Forms.Padding(2);
-            groupBox33.Size = new System.Drawing.Size(354, 97);
-            groupBox33.TabIndex = 2;
-            groupBox33.TabStop = false;
-            groupBox33.Text = "RF gen";
+            this.groupBox33.Controls.Add(this.checkBox6);
+            this.groupBox33.Controls.Add(this.button32);
+            this.groupBox33.Controls.Add(this.textBox_RFDelay);
+            this.groupBox33.Controls.Add(this.label100);
+            this.groupBox33.Controls.Add(this.textBox_RFPeriod);
+            this.groupBox33.Controls.Add(this.label99);
+            this.groupBox33.Controls.Add(this.textBox_RFWidth);
+            this.groupBox33.Controls.Add(this.label98);
+            this.groupBox33.Location = new System.Drawing.Point(876, 23);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox33.Size = new System.Drawing.Size(354, 97);
+            this.groupBox33.TabIndex = 2;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "RF gen";
             // 
             // checkBox6
             // 
-            checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox6.AutoSize = true;
-            checkBox6.Location = new System.Drawing.Point(268, 18);
-            checkBox6.Margin = new System.Windows.Forms.Padding(2);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new System.Drawing.Size(64, 28);
-            checkBox6.TabIndex = 17;
-            checkBox6.Text = "Control";
-            checkBox6.UseVisualStyleBackColor = true;
-            checkBox6.CheckedChanged += new System.EventHandler(checkBox6_CheckedChanged);
+            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(268, 18);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(64, 28);
+            this.checkBox6.TabIndex = 17;
+            this.checkBox6.Text = "Control";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // button32
             // 
-            button32.Location = new System.Drawing.Point(222, 58);
-            button32.Margin = new System.Windows.Forms.Padding(2);
-            button32.Name = "button32";
-            button32.Size = new System.Drawing.Size(112, 22);
-            button32.TabIndex = 16;
-            button32.Text = "Set RF gen parms";
-            button32.UseVisualStyleBackColor = true;
-            button32.Click += new System.EventHandler(button32_Click_1);
+            this.button32.Location = new System.Drawing.Point(222, 58);
+            this.button32.Margin = new System.Windows.Forms.Padding(2);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(112, 22);
+            this.button32.TabIndex = 16;
+            this.button32.Text = "Set RF gen parms";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click_1);
             // 
             // textBox_RFDelay
             // 
-            textBox_RFDelay.Location = new System.Drawing.Point(165, 55);
-            textBox_RFDelay.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RFDelay.Name = "textBox_RFDelay";
-            textBox_RFDelay.Size = new System.Drawing.Size(53, 26);
-            textBox_RFDelay.TabIndex = 15;
-            textBox_RFDelay.Text = "0";
+            this.textBox_RFDelay.Location = new System.Drawing.Point(165, 55);
+            this.textBox_RFDelay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RFDelay.Name = "textBox_RFDelay";
+            this.textBox_RFDelay.Size = new System.Drawing.Size(53, 26);
+            this.textBox_RFDelay.TabIndex = 15;
+            this.textBox_RFDelay.Text = "0";
             // 
             // label100
             // 
-            label100.AutoSize = true;
-            label100.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label100.Location = new System.Drawing.Point(162, 36);
-            label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label100.Name = "label100";
-            label100.Size = new System.Drawing.Size(69, 15);
-            label100.TabIndex = 14;
-            label100.Text = "Delay (1us)";
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.Location = new System.Drawing.Point(162, 36);
+            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(69, 15);
+            this.label100.TabIndex = 14;
+            this.label100.Text = "Delay (1us)";
             // 
             // textBox_RFPeriod
             // 
-            textBox_RFPeriod.Location = new System.Drawing.Point(87, 55);
-            textBox_RFPeriod.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RFPeriod.Name = "textBox_RFPeriod";
-            textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
-            textBox_RFPeriod.TabIndex = 13;
-            textBox_RFPeriod.Text = "16";
-            textBox_RFPeriod.TextChanged += new System.EventHandler(textBox_RFPeriod_TextChanged);
+            this.textBox_RFPeriod.Location = new System.Drawing.Point(87, 55);
+            this.textBox_RFPeriod.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RFPeriod.Name = "textBox_RFPeriod";
+            this.textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
+            this.textBox_RFPeriod.TabIndex = 13;
+            this.textBox_RFPeriod.Text = "16";
+            this.textBox_RFPeriod.TextChanged += new System.EventHandler(this.textBox_RFPeriod_TextChanged);
             // 
             // label99
             // 
-            label99.AutoSize = true;
-            label99.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label99.Location = new System.Drawing.Point(84, 36);
-            label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label99.Name = "label99";
-            label99.Size = new System.Drawing.Size(74, 15);
-            label99.TabIndex = 12;
-            label99.Text = "Period (1us)";
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Location = new System.Drawing.Point(84, 36);
+            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(74, 15);
+            this.label99.TabIndex = 12;
+            this.label99.Text = "Period (1us)";
             // 
             // textBox_RFWidth
             // 
-            textBox_RFWidth.Location = new System.Drawing.Point(18, 55);
-            textBox_RFWidth.Margin = new System.Windows.Forms.Padding(2);
-            textBox_RFWidth.Name = "textBox_RFWidth";
-            textBox_RFWidth.Size = new System.Drawing.Size(53, 26);
-            textBox_RFWidth.TabIndex = 11;
-            textBox_RFWidth.Text = "2";
-            textBox_RFWidth.TextChanged += new System.EventHandler(textBox_RFWidth_TextChanged);
+            this.textBox_RFWidth.Location = new System.Drawing.Point(18, 55);
+            this.textBox_RFWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_RFWidth.Name = "textBox_RFWidth";
+            this.textBox_RFWidth.Size = new System.Drawing.Size(53, 26);
+            this.textBox_RFWidth.TabIndex = 11;
+            this.textBox_RFWidth.Text = "2";
+            this.textBox_RFWidth.TextChanged += new System.EventHandler(this.textBox_RFWidth_TextChanged);
             // 
             // label98
             // 
-            label98.AutoSize = true;
-            label98.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label98.Location = new System.Drawing.Point(6, 36);
-            label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label98.Name = "label98";
-            label98.Size = new System.Drawing.Size(72, 15);
-            label98.TabIndex = 1;
-            label98.Text = "Width (1us)";
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(6, 36);
+            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(72, 15);
+            this.label98.TabIndex = 1;
+            this.label98.Text = "Width (1us)";
             // 
             // tabPage13
             // 
-            tabPage13.Controls.Add(dataGridView_ValPage0);
-            tabPage13.Controls.Add(label81);
-            tabPage13.Controls.Add(dataGridView_OverUnder);
-            tabPage13.Controls.Add(label82);
-            tabPage13.Controls.Add(textBox66);
-            tabPage13.Controls.Add(label78);
-            tabPage13.Controls.Add(textBox62);
-            tabPage13.Controls.Add(label77);
-            tabPage13.Controls.Add(textBox61);
-            tabPage13.Location = new System.Drawing.Point(4, 27);
-            tabPage13.Margin = new System.Windows.Forms.Padding(2);
-            tabPage13.Name = "tabPage13";
-            tabPage13.Size = new System.Drawing.Size(1234, 592);
-            tabPage13.TabIndex = 4;
-            tabPage13.Text = "Page 0";
-            tabPage13.UseVisualStyleBackColor = true;
+            this.tabPage13.Controls.Add(this.dataGridView_ValPage0);
+            this.tabPage13.Controls.Add(this.label81);
+            this.tabPage13.Controls.Add(this.dataGridView_OverUnder);
+            this.tabPage13.Controls.Add(this.label82);
+            this.tabPage13.Controls.Add(this.textBox66);
+            this.tabPage13.Controls.Add(this.label78);
+            this.tabPage13.Controls.Add(this.textBox62);
+            this.tabPage13.Controls.Add(this.label77);
+            this.tabPage13.Controls.Add(this.textBox61);
+            this.tabPage13.Location = new System.Drawing.Point(4, 27);
+            this.tabPage13.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage13.TabIndex = 4;
+            this.tabPage13.Text = "Page 0";
+            this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // dataGridView_ValPage0
             // 
-            dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn29});
-            dataGridView_ValPage0.Location = new System.Drawing.Point(435, 234);
-            dataGridView_ValPage0.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_ValPage0.Name = "dataGridView_ValPage0";
-            dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView_ValPage0.Size = new System.Drawing.Size(307, 350);
-            dataGridView_ValPage0.TabIndex = 27;
+            this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn29});
+            this.dataGridView_ValPage0.Location = new System.Drawing.Point(435, 234);
+            this.dataGridView_ValPage0.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
+            this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_ValPage0.Size = new System.Drawing.Size(307, 350);
+            this.dataGridView_ValPage0.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn29
             // 
-            dataGridViewTextBoxColumn29.HeaderText = "Value";
-            dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            dataGridViewTextBoxColumn29.Width = 125;
+            this.dataGridViewTextBoxColumn29.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.Width = 125;
             // 
             // label81
             // 
-            label81.AutoSize = true;
-            label81.Location = new System.Drawing.Point(484, 682);
-            label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label81.Name = "label81";
-            label81.Size = new System.Drawing.Size(115, 18);
-            label81.TabIndex = 26;
-            label81.Text = "TGA2700 DC4 Vdd";
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(484, 682);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(115, 18);
+            this.label81.TabIndex = 26;
+            this.label81.Text = "TGA2700 DC4 Vdd";
             // 
             // dataGridView_OverUnder
             // 
-            dataGridView_OverUnder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_OverUnder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn3,
-            dataGridViewTextBoxColumn4,
-            Column3});
-            dataGridView_OverUnder.Location = new System.Drawing.Point(6, 234);
-            dataGridView_OverUnder.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_OverUnder.Name = "dataGridView_OverUnder";
-            dataGridView_OverUnder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView_OverUnder.Size = new System.Drawing.Size(423, 350);
-            dataGridView_OverUnder.TabIndex = 17;
+            this.dataGridView_OverUnder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_OverUnder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.Column3});
+            this.dataGridView_OverUnder.Location = new System.Drawing.Point(6, 234);
+            this.dataGridView_OverUnder.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_OverUnder.Name = "dataGridView_OverUnder";
+            this.dataGridView_OverUnder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_OverUnder.Size = new System.Drawing.Size(423, 350);
+            this.dataGridView_OverUnder.TabIndex = 17;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Over";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Over";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Under";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 125;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Under";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Hystersis";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
+            this.Column3.HeaderText = "Hystersis";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // label82
             // 
-            label82.AutoSize = true;
-            label82.Location = new System.Drawing.Point(18, 184);
-            label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label82.Name = "label82";
-            label82.Size = new System.Drawing.Size(106, 18);
-            label82.TabIndex = 16;
-            label82.Text = "Calibration date";
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(18, 184);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(106, 18);
+            this.label82.TabIndex = 16;
+            this.label82.Text = "Calibration date";
             // 
             // textBox66
             // 
-            textBox66.Location = new System.Drawing.Point(124, 178);
-            textBox66.Margin = new System.Windows.Forms.Padding(2);
-            textBox66.Name = "textBox66";
-            textBox66.Size = new System.Drawing.Size(93, 26);
-            textBox66.TabIndex = 15;
+            this.textBox66.Location = new System.Drawing.Point(124, 178);
+            this.textBox66.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(93, 26);
+            this.textBox66.TabIndex = 15;
             // 
             // label78
             // 
-            label78.AutoSize = true;
-            label78.Location = new System.Drawing.Point(278, 42);
-            label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label78.Name = "label78";
-            label78.Size = new System.Drawing.Size(83, 18);
-            label78.TabIndex = 8;
-            label78.Text = "HW version:";
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(278, 42);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(83, 18);
+            this.label78.TabIndex = 8;
+            this.label78.Text = "HW version:";
             // 
             // textBox62
             // 
-            textBox62.Location = new System.Drawing.Point(402, 42);
-            textBox62.Margin = new System.Windows.Forms.Padding(2);
-            textBox62.Name = "textBox62";
-            textBox62.Size = new System.Drawing.Size(92, 26);
-            textBox62.TabIndex = 7;
+            this.textBox62.Location = new System.Drawing.Point(402, 42);
+            this.textBox62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox62.Name = "textBox62";
+            this.textBox62.Size = new System.Drawing.Size(92, 26);
+            this.textBox62.TabIndex = 7;
             // 
             // label77
             // 
-            label77.AutoSize = true;
-            label77.Location = new System.Drawing.Point(18, 43);
-            label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label77.Name = "label77";
-            label77.Size = new System.Drawing.Size(99, 18);
-            label77.TabIndex = 6;
-            label77.Text = "Serial number:";
-            label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(18, 43);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(99, 18);
+            this.label77.TabIndex = 6;
+            this.label77.Text = "Serial number:";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox61
             // 
-            textBox61.Location = new System.Drawing.Point(124, 41);
-            textBox61.Margin = new System.Windows.Forms.Padding(2);
-            textBox61.Name = "textBox61";
-            textBox61.Size = new System.Drawing.Size(93, 26);
-            textBox61.TabIndex = 5;
+            this.textBox61.Location = new System.Drawing.Point(124, 41);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox61.Name = "textBox61";
+            this.textBox61.Size = new System.Drawing.Size(93, 26);
+            this.textBox61.TabIndex = 5;
             // 
             // tabPage7
             // 
-            tabPage7.Controls.Add(label117);
-            tabPage7.Controls.Add(label116);
-            tabPage7.Controls.Add(dataGridView_Page1_4);
-            tabPage7.Location = new System.Drawing.Point(4, 27);
-            tabPage7.Margin = new System.Windows.Forms.Padding(2);
-            tabPage7.Name = "tabPage7";
-            tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            tabPage7.Size = new System.Drawing.Size(1234, 592);
-            tabPage7.TabIndex = 1;
-            tabPage7.Text = "Page 1-4";
-            tabPage7.UseVisualStyleBackColor = true;
+            this.tabPage7.Controls.Add(this.label117);
+            this.tabPage7.Controls.Add(this.label116);
+            this.tabPage7.Controls.Add(this.dataGridView_Page1_4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage7.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "Page 1-4";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // label117
             // 
-            label117.AutoSize = true;
-            label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label117.Location = new System.Drawing.Point(474, 4);
-            label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label117.Name = "label117";
-            label117.Size = new System.Drawing.Size(108, 23);
-            label117.TabIndex = 31;
-            label117.Text = "DC4-40 dBm";
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.Location = new System.Drawing.Point(474, 4);
+            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(108, 23);
+            this.label117.TabIndex = 31;
+            this.label117.Text = "DC4-40 dBm";
             // 
             // label116
             // 
-            label116.AutoSize = true;
-            label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label116.Location = new System.Drawing.Point(173, 3);
-            label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label116.Name = "label116";
-            label116.Size = new System.Drawing.Size(70, 23);
-            label116.TabIndex = 30;
-            label116.Text = "46 dBm";
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.Location = new System.Drawing.Point(173, 3);
+            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(70, 23);
+            this.label116.TabIndex = 30;
+            this.label116.Text = "46 dBm";
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
-            dataGridView_Page1_4.ColumnHeadersHeight = 29;
-            dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn1,
-            dataGridViewTextBoxColumn2,
-            dataGridViewTextBoxColumn23,
-            dataGridViewTextBoxColumn24,
-            dataGridViewTextBoxColumn25,
-            dataGridViewTextBoxColumn26,
-            dataGridViewTextBoxColumn27,
-            dataGridViewTextBoxColumn28,
-            Column14,
-            Column15,
-            Column16,
-            Column17,
-            Column18,
-            Column19,
-            Column20,
-            Column21});
-            dataGridView_Page1_4.Location = new System.Drawing.Point(9, 36);
-            dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_Page1_4.Name = "dataGridView_Page1_4";
-            dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
-            dataGridView_Page1_4.TabIndex = 28;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
+            this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.Column14,
+            this.Column15,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21});
+            this.dataGridView_Page1_4.Location = new System.Drawing.Point(9, 36);
+            this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
+            this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
+            this.dataGridView_Page1_4.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "F0";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 47;
+            this.dataGridViewTextBoxColumn1.HeaderText = "F0";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 47;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "F1";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 47;
+            this.dataGridViewTextBoxColumn2.HeaderText = "F1";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 47;
             // 
             // dataGridViewTextBoxColumn23
             // 
-            dataGridViewTextBoxColumn23.HeaderText = "F2";
-            dataGridViewTextBoxColumn23.MinimumWidth = 6;
-            dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            dataGridViewTextBoxColumn23.Width = 47;
+            this.dataGridViewTextBoxColumn23.HeaderText = "F2";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 47;
             // 
             // dataGridViewTextBoxColumn24
             // 
-            dataGridViewTextBoxColumn24.HeaderText = "F3";
-            dataGridViewTextBoxColumn24.MinimumWidth = 6;
-            dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            dataGridViewTextBoxColumn24.Width = 47;
+            this.dataGridViewTextBoxColumn24.HeaderText = "F3";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 47;
             // 
             // dataGridViewTextBoxColumn25
             // 
-            dataGridViewTextBoxColumn25.HeaderText = "F4";
-            dataGridViewTextBoxColumn25.MinimumWidth = 6;
-            dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            dataGridViewTextBoxColumn25.Width = 47;
+            this.dataGridViewTextBoxColumn25.HeaderText = "F4";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 47;
             // 
             // dataGridViewTextBoxColumn26
             // 
-            dataGridViewTextBoxColumn26.HeaderText = "F5";
-            dataGridViewTextBoxColumn26.MinimumWidth = 6;
-            dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            dataGridViewTextBoxColumn26.Width = 47;
+            this.dataGridViewTextBoxColumn26.HeaderText = "F5";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 47;
             // 
             // dataGridViewTextBoxColumn27
             // 
-            dataGridViewTextBoxColumn27.HeaderText = "F6";
-            dataGridViewTextBoxColumn27.MinimumWidth = 6;
-            dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            dataGridViewTextBoxColumn27.Width = 47;
+            this.dataGridViewTextBoxColumn27.HeaderText = "F6";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 47;
             // 
             // dataGridViewTextBoxColumn28
             // 
-            dataGridViewTextBoxColumn28.HeaderText = "F7";
-            dataGridViewTextBoxColumn28.MinimumWidth = 6;
-            dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            dataGridViewTextBoxColumn28.Width = 47;
+            this.dataGridViewTextBoxColumn28.HeaderText = "F7";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 47;
             // 
             // Column14
             // 
-            Column14.HeaderText = "F0";
-            Column14.MinimumWidth = 6;
-            Column14.Name = "Column14";
-            Column14.Width = 47;
+            this.Column14.HeaderText = "F0";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 47;
             // 
             // Column15
             // 
-            Column15.HeaderText = "F1";
-            Column15.MinimumWidth = 6;
-            Column15.Name = "Column15";
-            Column15.Width = 47;
+            this.Column15.HeaderText = "F1";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 47;
             // 
             // Column16
             // 
-            Column16.HeaderText = "F2";
-            Column16.MinimumWidth = 6;
-            Column16.Name = "Column16";
-            Column16.Width = 47;
+            this.Column16.HeaderText = "F2";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 47;
             // 
             // Column17
             // 
-            Column17.HeaderText = "F3";
-            Column17.MinimumWidth = 6;
-            Column17.Name = "Column17";
-            Column17.Width = 47;
+            this.Column17.HeaderText = "F3";
+            this.Column17.MinimumWidth = 6;
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 47;
             // 
             // Column18
             // 
-            Column18.HeaderText = "F4";
-            Column18.MinimumWidth = 6;
-            Column18.Name = "Column18";
-            Column18.Width = 47;
+            this.Column18.HeaderText = "F4";
+            this.Column18.MinimumWidth = 6;
+            this.Column18.Name = "Column18";
+            this.Column18.Width = 47;
             // 
             // Column19
             // 
-            Column19.HeaderText = "F5";
-            Column19.MinimumWidth = 6;
-            Column19.Name = "Column19";
-            Column19.Width = 47;
+            this.Column19.HeaderText = "F5";
+            this.Column19.MinimumWidth = 6;
+            this.Column19.Name = "Column19";
+            this.Column19.Width = 47;
             // 
             // Column20
             // 
-            Column20.HeaderText = "F6";
-            Column20.MinimumWidth = 6;
-            Column20.Name = "Column20";
-            Column20.Width = 47;
+            this.Column20.HeaderText = "F6";
+            this.Column20.MinimumWidth = 6;
+            this.Column20.Name = "Column20";
+            this.Column20.Width = 47;
             // 
             // Column21
             // 
-            Column21.HeaderText = "F7";
-            Column21.MinimumWidth = 6;
-            Column21.Name = "Column21";
-            Column21.Width = 47;
+            this.Column21.HeaderText = "F7";
+            this.Column21.MinimumWidth = 6;
+            this.Column21.Name = "Column21";
+            this.Column21.Width = 47;
             // 
             // tabPage8
             // 
-            tabPage8.Controls.Add(label89);
-            tabPage8.Controls.Add(dataGridView_VVAOffset1);
-            tabPage8.Controls.Add(label88);
-            tabPage8.Controls.Add(dataGridView_VVAOffset2);
-            tabPage8.Controls.Add(label87);
-            tabPage8.Controls.Add(label86);
-            tabPage8.Controls.Add(dataGridView_PAVVA);
-            tabPage8.Controls.Add(label76);
-            tabPage8.Controls.Add(label75);
-            tabPage8.Controls.Add(dataGridView_DC4);
-            tabPage8.Location = new System.Drawing.Point(4, 27);
-            tabPage8.Margin = new System.Windows.Forms.Padding(2);
-            tabPage8.Name = "tabPage8";
-            tabPage8.Size = new System.Drawing.Size(1234, 592);
-            tabPage8.TabIndex = 2;
-            tabPage8.Text = "Page 5-7";
-            tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage8.Controls.Add(this.label89);
+            this.tabPage8.Controls.Add(this.dataGridView_VVAOffset1);
+            this.tabPage8.Controls.Add(this.label88);
+            this.tabPage8.Controls.Add(this.dataGridView_VVAOffset2);
+            this.tabPage8.Controls.Add(this.label87);
+            this.tabPage8.Controls.Add(this.label86);
+            this.tabPage8.Controls.Add(this.dataGridView_PAVVA);
+            this.tabPage8.Controls.Add(this.label76);
+            this.tabPage8.Controls.Add(this.label75);
+            this.tabPage8.Controls.Add(this.dataGridView_DC4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage8.TabIndex = 2;
+            this.tabPage8.Text = "Page 5-7";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // label89
             // 
-            label89.AutoSize = true;
-            label89.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label89.Location = new System.Drawing.Point(755, 304);
-            label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label89.Name = "label89";
-            label89.Size = new System.Drawing.Size(100, 23);
-            label89.TabIndex = 12;
-            label89.Text = "Vdd offset1";
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Location = new System.Drawing.Point(755, 304);
+            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(100, 23);
+            this.label89.TabIndex = 12;
+            this.label89.Text = "Vdd offset1";
             // 
             // dataGridView_VVAOffset1
             // 
-            dataGridView_VVAOffset1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView_VVAOffset1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_VVAOffset1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn10,
-            dataGridViewTextBoxColumn11,
-            dataGridViewTextBoxColumn12,
-            dataGridViewTextBoxColumn13,
-            dataGridViewTextBoxColumn14,
-            dataGridViewTextBoxColumn15,
-            dataGridViewTextBoxColumn16,
-            dataGridViewTextBoxColumn17});
-            dataGridView_VVAOffset1.Location = new System.Drawing.Point(712, 330);
-            dataGridView_VVAOffset1.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_VVAOffset1.Name = "dataGridView_VVAOffset1";
-            dataGridView_VVAOffset1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView_VVAOffset1.Size = new System.Drawing.Size(508, 256);
-            dataGridView_VVAOffset1.TabIndex = 11;
+            this.dataGridView_VVAOffset1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_VVAOffset1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_VVAOffset1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.dataGridView_VVAOffset1.Location = new System.Drawing.Point(712, 330);
+            this.dataGridView_VVAOffset1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_VVAOffset1.Name = "dataGridView_VVAOffset1";
+            this.dataGridView_VVAOffset1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_VVAOffset1.Size = new System.Drawing.Size(508, 256);
+            this.dataGridView_VVAOffset1.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn10
             // 
-            dataGridViewTextBoxColumn10.HeaderText = "F0";
-            dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            dataGridViewTextBoxColumn10.Width = 47;
+            this.dataGridViewTextBoxColumn10.HeaderText = "F0";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 47;
             // 
             // dataGridViewTextBoxColumn11
             // 
-            dataGridViewTextBoxColumn11.HeaderText = "F1";
-            dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            dataGridViewTextBoxColumn11.Width = 47;
+            this.dataGridViewTextBoxColumn11.HeaderText = "F1";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 47;
             // 
             // dataGridViewTextBoxColumn12
             // 
-            dataGridViewTextBoxColumn12.HeaderText = "F2";
-            dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            dataGridViewTextBoxColumn12.Width = 47;
+            this.dataGridViewTextBoxColumn12.HeaderText = "F2";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 47;
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewTextBoxColumn13.HeaderText = "F3";
-            dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            dataGridViewTextBoxColumn13.Width = 47;
+            this.dataGridViewTextBoxColumn13.HeaderText = "F3";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 47;
             // 
             // dataGridViewTextBoxColumn14
             // 
-            dataGridViewTextBoxColumn14.HeaderText = "F4";
-            dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            dataGridViewTextBoxColumn14.Width = 47;
+            this.dataGridViewTextBoxColumn14.HeaderText = "F4";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 47;
             // 
             // dataGridViewTextBoxColumn15
             // 
-            dataGridViewTextBoxColumn15.HeaderText = "F5";
-            dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            dataGridViewTextBoxColumn15.Width = 47;
+            this.dataGridViewTextBoxColumn15.HeaderText = "F5";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 47;
             // 
             // dataGridViewTextBoxColumn16
             // 
-            dataGridViewTextBoxColumn16.HeaderText = "F6";
-            dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            dataGridViewTextBoxColumn16.Width = 47;
+            this.dataGridViewTextBoxColumn16.HeaderText = "F6";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 47;
             // 
             // dataGridViewTextBoxColumn17
             // 
-            dataGridViewTextBoxColumn17.HeaderText = "F7";
-            dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            dataGridViewTextBoxColumn17.Width = 47;
+            this.dataGridViewTextBoxColumn17.HeaderText = "F7";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 47;
             // 
             // label88
             // 
-            label88.AutoSize = true;
-            label88.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label88.Location = new System.Drawing.Point(755, 10);
-            label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label88.Name = "label88";
-            label88.Size = new System.Drawing.Size(103, 23);
-            label88.TabIndex = 10;
-            label88.Text = "VVA offset2";
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(755, 10);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(103, 23);
+            this.label88.TabIndex = 10;
+            this.label88.Text = "VVA offset2";
             // 
             // dataGridView_VVAOffset2
             // 
-            dataGridView_VVAOffset2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView_VVAOffset2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            dataGridView_VVAOffset2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_VVAOffset2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn8,
-            dataGridViewTextBoxColumn9,
-            Column4,
-            Column5,
-            Column6,
-            Column7,
-            Column8,
-            Column9});
-            dataGridView_VVAOffset2.Location = new System.Drawing.Point(712, 41);
-            dataGridView_VVAOffset2.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
-            dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView_VVAOffset2.Size = new System.Drawing.Size(510, 262);
-            dataGridView_VVAOffset2.TabIndex = 9;
+            this.dataGridView_VVAOffset2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_VVAOffset2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataGridView_VVAOffset2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_VVAOffset2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(712, 41);
+            this.dataGridView_VVAOffset2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
+            this.dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(510, 262);
+            this.dataGridView_VVAOffset2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewTextBoxColumn8.HeaderText = "F0";
-            dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.Width = 47;
+            this.dataGridViewTextBoxColumn8.HeaderText = "F0";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 47;
             // 
             // dataGridViewTextBoxColumn9
             // 
-            dataGridViewTextBoxColumn9.HeaderText = "F1";
-            dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.Width = 47;
+            this.dataGridViewTextBoxColumn9.HeaderText = "F1";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 47;
             // 
             // Column4
             // 
-            Column4.HeaderText = "F2";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 47;
+            this.Column4.HeaderText = "F2";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 47;
             // 
             // Column5
             // 
-            Column5.HeaderText = "F3";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 47;
+            this.Column5.HeaderText = "F3";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 47;
             // 
             // Column6
             // 
-            Column6.HeaderText = "F4";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.Width = 47;
+            this.Column6.HeaderText = "F4";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 47;
             // 
             // Column7
             // 
-            Column7.HeaderText = "F5";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.Width = 47;
+            this.Column7.HeaderText = "F5";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 47;
             // 
             // Column8
             // 
-            Column8.HeaderText = "F6";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.Width = 47;
+            this.Column8.HeaderText = "F6";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 47;
             // 
             // Column9
             // 
-            Column9.HeaderText = "F7";
-            Column9.MinimumWidth = 6;
-            Column9.Name = "Column9";
-            Column9.Width = 47;
+            this.Column9.HeaderText = "F7";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 47;
             // 
             // label87
             // 
-            label87.AutoSize = true;
-            label87.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label87.Location = new System.Drawing.Point(441, 8);
-            label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label87.Name = "label87";
-            label87.Size = new System.Drawing.Size(105, 23);
-            label87.TabIndex = 8;
-            label87.Text = "DCA control";
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Location = new System.Drawing.Point(441, 8);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(105, 23);
+            this.label87.TabIndex = 8;
+            this.label87.Text = "DCA control";
             // 
             // label86
             // 
-            label86.AutoSize = true;
-            label86.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label86.Location = new System.Drawing.Point(331, 8);
-            label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label86.Name = "label86";
-            label86.Size = new System.Drawing.Size(118, 23);
-            label86.TabIndex = 6;
-            label86.Text = "PA VVA offset";
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.Location = new System.Drawing.Point(331, 8);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(118, 23);
+            this.label86.TabIndex = 6;
+            this.label86.Text = "PA VVA offset";
             // 
             // dataGridView_PAVVA
             // 
-            dataGridView_PAVVA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView_PAVVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_PAVVA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn5,
-            Column12,
-            Column13});
-            dataGridView_PAVVA.Location = new System.Drawing.Point(346, 41);
-            dataGridView_PAVVA.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_PAVVA.Name = "dataGridView_PAVVA";
-            dataGridView_PAVVA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView_PAVVA.Size = new System.Drawing.Size(361, 545);
-            dataGridView_PAVVA.TabIndex = 5;
+            this.dataGridView_PAVVA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_PAVVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_PAVVA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.Column12,
+            this.Column13});
+            this.dataGridView_PAVVA.Location = new System.Drawing.Point(346, 41);
+            this.dataGridView_PAVVA.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_PAVVA.Name = "dataGridView_PAVVA";
+            this.dataGridView_PAVVA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_PAVVA.Size = new System.Drawing.Size(361, 545);
+            this.dataGridView_PAVVA.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewTextBoxColumn5.HeaderText = "VVA";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Width = 59;
+            this.dataGridViewTextBoxColumn5.HeaderText = "VVA";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 59;
             // 
             // Column12
             // 
-            Column12.HeaderText = "DCA1";
-            Column12.MinimumWidth = 6;
-            Column12.Name = "Column12";
-            Column12.Width = 66;
+            this.Column12.HeaderText = "DCA1";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 66;
             // 
             // Column13
             // 
-            Column13.HeaderText = "DCA2";
-            Column13.MinimumWidth = 6;
-            Column13.Name = "Column13";
-            Column13.Width = 66;
+            this.Column13.HeaderText = "DCA2";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 66;
             // 
             // label76
             // 
-            label76.AutoSize = true;
-            label76.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label76.Location = new System.Drawing.Point(258, 12);
-            label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label76.Name = "label76";
-            label76.Size = new System.Drawing.Size(66, 23);
-            label76.TabIndex = 4;
-            label76.Text = "DC4 on";
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Location = new System.Drawing.Point(258, 12);
+            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(66, 23);
+            this.label76.TabIndex = 4;
+            this.label76.Text = "DC4 on";
             // 
             // label75
             // 
-            label75.AutoSize = true;
-            label75.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label75.Location = new System.Drawing.Point(162, 10);
-            label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label75.Name = "label75";
-            label75.Size = new System.Drawing.Size(67, 23);
-            label75.TabIndex = 2;
-            label75.Text = "DC4 off";
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(162, 10);
+            this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(67, 23);
+            this.label75.TabIndex = 2;
+            this.label75.Text = "DC4 off";
             // 
             // dataGridView_DC4
             // 
-            dataGridView_DC4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView_DC4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_DC4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            Column1,
-            Column2,
-            Column10,
-            Column11});
-            dataGridView_DC4.Location = new System.Drawing.Point(2, 43);
-            dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView_DC4.Name = "dataGridView_DC4";
-            dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
-            dataGridView_DC4.TabIndex = 1;
-            dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(dataGridView1_CellContentClick);
+            this.dataGridView_DC4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_DC4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DC4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column10,
+            this.Column11});
+            this.dataGridView_DC4.Location = new System.Drawing.Point(2, 43);
+            this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_DC4.Name = "dataGridView_DC4";
+            this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
+            this.dataGridView_DC4.TabIndex = 1;
+            this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
-            Column1.HeaderText = "28V";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 56;
+            this.Column1.HeaderText = "28V";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 56;
             // 
             // Column2
             // 
-            Column2.HeaderText = "Vgg";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 55;
+            this.Column2.HeaderText = "Vgg";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 55;
             // 
             // Column10
             // 
-            Column10.HeaderText = "28V";
-            Column10.MinimumWidth = 6;
-            Column10.Name = "Column10";
-            Column10.Width = 56;
+            this.Column10.HeaderText = "28V";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 56;
             // 
             // Column11
             // 
-            Column11.HeaderText = "Vgg";
-            Column11.MinimumWidth = 6;
-            Column11.Name = "Column11";
-            Column11.Width = 55;
+            this.Column11.HeaderText = "Vgg";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 55;
             // 
             // tabPage9
             // 
-            tabPage9.Controls.Add(label92);
-            tabPage9.Controls.Add(dataGridView10);
-            tabPage9.Controls.Add(label91);
-            tabPage9.Controls.Add(dataGridView9);
-            tabPage9.Controls.Add(label90);
-            tabPage9.Controls.Add(dataGridView8);
-            tabPage9.Location = new System.Drawing.Point(4, 27);
-            tabPage9.Margin = new System.Windows.Forms.Padding(2);
-            tabPage9.Name = "tabPage9";
-            tabPage9.Size = new System.Drawing.Size(1234, 592);
-            tabPage9.TabIndex = 3;
-            tabPage9.Text = "Page 8";
-            tabPage9.UseVisualStyleBackColor = true;
+            this.tabPage9.Controls.Add(this.label92);
+            this.tabPage9.Controls.Add(this.dataGridView10);
+            this.tabPage9.Controls.Add(this.label91);
+            this.tabPage9.Controls.Add(this.dataGridView9);
+            this.tabPage9.Controls.Add(this.label90);
+            this.tabPage9.Controls.Add(this.dataGridView8);
+            this.tabPage9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage9.TabIndex = 3;
+            this.tabPage9.Text = "Page 8";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // label92
             // 
-            label92.AutoSize = true;
-            label92.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label92.Location = new System.Drawing.Point(489, 13);
-            label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label92.Name = "label92";
-            label92.Size = new System.Drawing.Size(169, 23);
-            label92.TabIndex = 12;
-            label92.Text = "Pulse fall time delay";
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(489, 13);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(169, 23);
+            this.label92.TabIndex = 12;
+            this.label92.Text = "Pulse fall time delay";
             // 
             // dataGridView10
             // 
-            dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn21,
-            dataGridViewTextBoxColumn22});
-            dataGridView10.Location = new System.Drawing.Point(486, 42);
-            dataGridView10.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView10.Name = "dataGridView10";
-            dataGridView10.RowHeadersWidth = 51;
-            dataGridView10.Size = new System.Drawing.Size(151, 546);
-            dataGridView10.TabIndex = 11;
+            this.dataGridView10.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22});
+            this.dataGridView10.Location = new System.Drawing.Point(486, 42);
+            this.dataGridView10.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.RowHeadersWidth = 51;
+            this.dataGridView10.Size = new System.Drawing.Size(151, 546);
+            this.dataGridView10.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn21
             // 
-            dataGridViewTextBoxColumn21.HeaderText = "MPA";
-            dataGridViewTextBoxColumn21.MinimumWidth = 6;
-            dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            dataGridViewTextBoxColumn21.Width = 61;
+            this.dataGridViewTextBoxColumn21.HeaderText = "MPA";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 61;
             // 
             // dataGridViewTextBoxColumn22
             // 
-            dataGridViewTextBoxColumn22.HeaderText = "SPA";
-            dataGridViewTextBoxColumn22.MinimumWidth = 6;
-            dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            dataGridViewTextBoxColumn22.Width = 56;
+            this.dataGridViewTextBoxColumn22.HeaderText = "SPA";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 56;
             // 
             // label91
             // 
-            label91.AutoSize = true;
-            label91.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label91.Location = new System.Drawing.Point(262, 13);
-            label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label91.Name = "label91";
-            label91.Size = new System.Drawing.Size(181, 23);
-            label91.TabIndex = 10;
-            label91.Text = "Pulse Rise Time delay";
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(262, 13);
+            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(181, 23);
+            this.label91.TabIndex = 10;
+            this.label91.Text = "Pulse Rise Time delay";
             // 
             // dataGridView9
             // 
-            dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn19,
-            dataGridViewTextBoxColumn20});
-            dataGridView9.Location = new System.Drawing.Point(258, 42);
-            dataGridView9.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView9.Name = "dataGridView9";
-            dataGridView9.RowHeadersWidth = 51;
-            dataGridView9.Size = new System.Drawing.Size(151, 546);
-            dataGridView9.TabIndex = 9;
+            this.dataGridView9.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
+            this.dataGridView9.Location = new System.Drawing.Point(258, 42);
+            this.dataGridView9.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.RowHeadersWidth = 51;
+            this.dataGridView9.Size = new System.Drawing.Size(151, 546);
+            this.dataGridView9.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn19
             // 
-            dataGridViewTextBoxColumn19.HeaderText = "MPA";
-            dataGridViewTextBoxColumn19.MinimumWidth = 6;
-            dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            dataGridViewTextBoxColumn19.Width = 61;
+            this.dataGridViewTextBoxColumn19.HeaderText = "MPA";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 61;
             // 
             // dataGridViewTextBoxColumn20
             // 
-            dataGridViewTextBoxColumn20.HeaderText = "SPA";
-            dataGridViewTextBoxColumn20.MinimumWidth = 6;
-            dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            dataGridViewTextBoxColumn20.Width = 56;
+            this.dataGridViewTextBoxColumn20.HeaderText = "SPA";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Width = 56;
             // 
             // label90
             // 
-            label90.AutoSize = true;
-            label90.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label90.Location = new System.Drawing.Point(11, 13);
-            label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label90.Name = "label90";
-            label90.Size = new System.Drawing.Size(77, 23);
-            label90.TabIndex = 8;
-            label90.Text = "SAR-SAT";
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Location = new System.Drawing.Point(11, 13);
+            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(77, 23);
+            this.label90.TabIndex = 8;
+            this.label90.Text = "SAR-SAT";
             // 
             // dataGridView8
             // 
-            dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            dataGridViewTextBoxColumn18});
-            dataGridView8.Location = new System.Drawing.Point(12, 46);
-            dataGridView8.Margin = new System.Windows.Forms.Padding(2);
-            dataGridView8.Name = "dataGridView8";
-            dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView8.Size = new System.Drawing.Size(220, 545);
-            dataGridView8.TabIndex = 7;
+            this.dataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18});
+            this.dataGridView8.Location = new System.Drawing.Point(12, 46);
+            this.dataGridView8.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView8.Size = new System.Drawing.Size(220, 545);
+            this.dataGridView8.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn18
             // 
-            dataGridViewTextBoxColumn18.HeaderText = "Value";
-            dataGridViewTextBoxColumn18.MinimumWidth = 6;
-            dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            dataGridViewTextBoxColumn18.Width = 68;
+            this.dataGridViewTextBoxColumn18.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 68;
             // 
             // groupBox42
             // 
-            groupBox42.Controls.Add(radioButton_TCPIP);
-            groupBox42.Controls.Add(radioButton_SerialPort);
-            groupBox42.Location = new System.Drawing.Point(1427, 332);
-            groupBox42.Margin = new System.Windows.Forms.Padding(2);
-            groupBox42.Name = "groupBox42";
-            groupBox42.Padding = new System.Windows.Forms.Padding(2);
-            groupBox42.Size = new System.Drawing.Size(183, 97);
-            groupBox42.TabIndex = 33;
-            groupBox42.TabStop = false;
-            groupBox42.Text = "Communication gatway";
+            this.groupBox42.Controls.Add(this.radioButton_TCPIP);
+            this.groupBox42.Controls.Add(this.radioButton_SerialPort);
+            this.groupBox42.Location = new System.Drawing.Point(1427, 332);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox42.Size = new System.Drawing.Size(183, 97);
+            this.groupBox42.TabIndex = 33;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "Communication gatway";
             // 
             // radioButton_TCPIP
             // 
-            radioButton_TCPIP.AutoSize = true;
-            radioButton_TCPIP.Location = new System.Drawing.Point(18, 54);
-            radioButton_TCPIP.Margin = new System.Windows.Forms.Padding(2);
-            radioButton_TCPIP.Name = "radioButton_TCPIP";
-            radioButton_TCPIP.Size = new System.Drawing.Size(66, 22);
-            radioButton_TCPIP.TabIndex = 1;
-            radioButton_TCPIP.TabStop = true;
-            radioButton_TCPIP.Text = "TCP/IP";
-            radioButton_TCPIP.UseVisualStyleBackColor = true;
+            this.radioButton_TCPIP.AutoSize = true;
+            this.radioButton_TCPIP.Location = new System.Drawing.Point(18, 54);
+            this.radioButton_TCPIP.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton_TCPIP.Name = "radioButton_TCPIP";
+            this.radioButton_TCPIP.Size = new System.Drawing.Size(66, 22);
+            this.radioButton_TCPIP.TabIndex = 1;
+            this.radioButton_TCPIP.TabStop = true;
+            this.radioButton_TCPIP.Text = "TCP/IP";
+            this.radioButton_TCPIP.UseVisualStyleBackColor = true;
             // 
             // radioButton_SerialPort
             // 
-            radioButton_SerialPort.AutoSize = true;
-            radioButton_SerialPort.Checked = true;
-            radioButton_SerialPort.Location = new System.Drawing.Point(18, 25);
-            radioButton_SerialPort.Margin = new System.Windows.Forms.Padding(2);
-            radioButton_SerialPort.Name = "radioButton_SerialPort";
-            radioButton_SerialPort.Size = new System.Drawing.Size(90, 22);
-            radioButton_SerialPort.TabIndex = 0;
-            radioButton_SerialPort.TabStop = true;
-            radioButton_SerialPort.Text = "Serial Port";
-            radioButton_SerialPort.UseVisualStyleBackColor = true;
+            this.radioButton_SerialPort.AutoSize = true;
+            this.radioButton_SerialPort.Checked = true;
+            this.radioButton_SerialPort.Location = new System.Drawing.Point(18, 25);
+            this.radioButton_SerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton_SerialPort.Name = "radioButton_SerialPort";
+            this.radioButton_SerialPort.Size = new System.Drawing.Size(90, 22);
+            this.radioButton_SerialPort.TabIndex = 0;
+            this.radioButton_SerialPort.TabStop = true;
+            this.radioButton_SerialPort.Text = "Serial Port";
+            this.radioButton_SerialPort.UseVisualStyleBackColor = true;
             // 
             // button_OpenFolder
             // 
-            button_OpenFolder.Location = new System.Drawing.Point(1427, 294);
-            button_OpenFolder.Margin = new System.Windows.Forms.Padding(2);
-            button_OpenFolder.Name = "button_OpenFolder";
-            button_OpenFolder.Size = new System.Drawing.Size(174, 25);
-            button_OpenFolder.TabIndex = 76;
-            button_OpenFolder.Text = "Open Folder";
-            button_OpenFolder.UseVisualStyleBackColor = true;
-            button_OpenFolder.Click += new System.EventHandler(Button43_Click);
+            this.button_OpenFolder.Location = new System.Drawing.Point(1427, 294);
+            this.button_OpenFolder.Margin = new System.Windows.Forms.Padding(2);
+            this.button_OpenFolder.Name = "button_OpenFolder";
+            this.button_OpenFolder.Size = new System.Drawing.Size(174, 25);
+            this.button_OpenFolder.TabIndex = 76;
+            this.button_OpenFolder.Text = "Open Folder";
+            this.button_OpenFolder.UseVisualStyleBackColor = true;
+            this.button_OpenFolder.Click += new System.EventHandler(this.Button43_Click);
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(S1_Configuration);
-            tabPage4.Location = new System.Drawing.Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Size = new System.Drawing.Size(1406, 776);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "S1 Configuration";
-            tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Controls.Add(this.S1_Configuration);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1406, 776);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "S1 Configuration";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // S1_Configuration
             // 
-            S1_Configuration.Controls.Add(groupBox12);
-            S1_Configuration.Controls.Add(groupBox22);
-            S1_Configuration.Controls.Add(groupBox28);
-            S1_Configuration.Controls.Add(groupBox30);
-            S1_Configuration.Controls.Add(groupBox29);
-            S1_Configuration.Controls.Add(groupBox27);
-            S1_Configuration.Controls.Add(groupBox26);
-            S1_Configuration.Controls.Add(groupBox25);
-            S1_Configuration.Controls.Add(groupBox24);
-            S1_Configuration.Controls.Add(groupBox23);
-            S1_Configuration.Controls.Add(groupBox21);
-            S1_Configuration.Controls.Add(groupBox20);
-            S1_Configuration.Controls.Add(groupBox19);
-            S1_Configuration.Controls.Add(groupBox18);
-            S1_Configuration.Controls.Add(groupBox17);
-            S1_Configuration.Controls.Add(groupBox11);
-            S1_Configuration.Controls.Add(groupBox10);
-            S1_Configuration.Controls.Add(groupBox9);
-            S1_Configuration.Controls.Add(groupBox8);
-            S1_Configuration.Controls.Add(groupBox7);
-            S1_Configuration.Controls.Add(groupBox6);
-            S1_Configuration.Controls.Add(groupBox13);
-            S1_Configuration.Controls.Add(groupBox14);
-            S1_Configuration.Controls.Add(groupBox15);
-            S1_Configuration.Controls.Add(groupBox16);
-            S1_Configuration.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            S1_Configuration.Location = new System.Drawing.Point(3, 3);
-            S1_Configuration.Name = "S1_Configuration";
-            S1_Configuration.Size = new System.Drawing.Size(924, 741);
-            S1_Configuration.TabIndex = 12;
-            S1_Configuration.TabStop = false;
-            S1_Configuration.Text = "S1 Configuration";
+            this.S1_Configuration.Controls.Add(this.groupBox12);
+            this.S1_Configuration.Controls.Add(this.groupBox22);
+            this.S1_Configuration.Controls.Add(this.groupBox28);
+            this.S1_Configuration.Controls.Add(this.groupBox30);
+            this.S1_Configuration.Controls.Add(this.groupBox29);
+            this.S1_Configuration.Controls.Add(this.groupBox27);
+            this.S1_Configuration.Controls.Add(this.groupBox26);
+            this.S1_Configuration.Controls.Add(this.groupBox25);
+            this.S1_Configuration.Controls.Add(this.groupBox24);
+            this.S1_Configuration.Controls.Add(this.groupBox23);
+            this.S1_Configuration.Controls.Add(this.groupBox21);
+            this.S1_Configuration.Controls.Add(this.groupBox20);
+            this.S1_Configuration.Controls.Add(this.groupBox19);
+            this.S1_Configuration.Controls.Add(this.groupBox18);
+            this.S1_Configuration.Controls.Add(this.groupBox17);
+            this.S1_Configuration.Controls.Add(this.groupBox11);
+            this.S1_Configuration.Controls.Add(this.groupBox10);
+            this.S1_Configuration.Controls.Add(this.groupBox9);
+            this.S1_Configuration.Controls.Add(this.groupBox8);
+            this.S1_Configuration.Controls.Add(this.groupBox7);
+            this.S1_Configuration.Controls.Add(this.groupBox6);
+            this.S1_Configuration.Controls.Add(this.groupBox13);
+            this.S1_Configuration.Controls.Add(this.groupBox14);
+            this.S1_Configuration.Controls.Add(this.groupBox15);
+            this.S1_Configuration.Controls.Add(this.groupBox16);
+            this.S1_Configuration.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S1_Configuration.Location = new System.Drawing.Point(3, 3);
+            this.S1_Configuration.Name = "S1_Configuration";
+            this.S1_Configuration.Size = new System.Drawing.Size(924, 741);
+            this.S1_Configuration.TabIndex = 12;
+            this.S1_Configuration.TabStop = false;
+            this.S1_Configuration.Text = "S1 Configuration";
             // 
             // groupBox12
             // 
-            groupBox12.Controls.Add(button13);
-            groupBox12.Location = new System.Drawing.Point(716, 24);
-            groupBox12.Name = "groupBox12";
-            groupBox12.Size = new System.Drawing.Size(164, 58);
-            groupBox12.TabIndex = 67;
-            groupBox12.TabStop = false;
-            groupBox12.Text = "RF pairing";
+            this.groupBox12.Controls.Add(this.button13);
+            this.groupBox12.Location = new System.Drawing.Point(716, 24);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(164, 58);
+            this.groupBox12.TabIndex = 67;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "RF pairing";
             // 
             // button13
             // 
-            button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button13.Location = new System.Drawing.Point(10, 20);
-            button13.Name = "button13";
-            button13.Size = new System.Drawing.Size(152, 26);
-            button13.TabIndex = 49;
-            button13.Text = "RF Pairing";
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += new System.EventHandler(Button13_Click);
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(10, 20);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(152, 26);
+            this.button13.TabIndex = 49;
+            this.button13.Text = "RF Pairing";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // groupBox22
             // 
-            groupBox22.Controls.Add(TextBox_Odometer);
-            groupBox22.Controls.Add(button19);
-            groupBox22.Location = new System.Drawing.Point(718, 88);
-            groupBox22.Name = "groupBox22";
-            groupBox22.Size = new System.Drawing.Size(200, 78);
-            groupBox22.TabIndex = 68;
-            groupBox22.TabStop = false;
-            groupBox22.Text = "Odometer";
+            this.groupBox22.Controls.Add(this.TextBox_Odometer);
+            this.groupBox22.Controls.Add(this.button19);
+            this.groupBox22.Location = new System.Drawing.Point(718, 88);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(200, 78);
+            this.groupBox22.TabIndex = 68;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Odometer";
             // 
             // TextBox_Odometer
             // 
-            TextBox_Odometer.Location = new System.Drawing.Point(6, 23);
-            TextBox_Odometer.Name = "TextBox_Odometer";
-            TextBox_Odometer.Size = new System.Drawing.Size(100, 22);
-            TextBox_Odometer.TabIndex = 64;
+            this.TextBox_Odometer.Location = new System.Drawing.Point(6, 23);
+            this.TextBox_Odometer.Name = "TextBox_Odometer";
+            this.TextBox_Odometer.Size = new System.Drawing.Size(100, 22);
+            this.TextBox_Odometer.TabIndex = 64;
             // 
             // button19
             // 
-            button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button19.Location = new System.Drawing.Point(6, 50);
-            button19.Name = "button19";
-            button19.Size = new System.Drawing.Size(74, 26);
-            button19.TabIndex = 63;
-            button19.Text = "Odometer Config";
-            button19.UseVisualStyleBackColor = true;
-            button19.Click += new System.EventHandler(Button19_Click);
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(6, 50);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(74, 26);
+            this.button19.TabIndex = 63;
+            this.button19.Text = "Odometer Config";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.Button19_Click);
             // 
             // groupBox28
             // 
-            groupBox28.Controls.Add(textBox_ModemSocket);
-            groupBox28.Controls.Add(textBox_ModemRetries);
-            groupBox28.Controls.Add(textBox_ModemTimeOut);
-            groupBox28.Controls.Add(button25);
-            groupBox28.Controls.Add(textBox_ModemPrimeryPort);
-            groupBox28.Controls.Add(textBox_ModemPrimeryHost);
-            groupBox28.Location = new System.Drawing.Point(188, 499);
-            groupBox28.Name = "groupBox28";
-            groupBox28.Size = new System.Drawing.Size(146, 195);
-            groupBox28.TabIndex = 45;
-            groupBox28.TabStop = false;
-            groupBox28.Text = "Modem Config";
+            this.groupBox28.Controls.Add(this.textBox_ModemSocket);
+            this.groupBox28.Controls.Add(this.textBox_ModemRetries);
+            this.groupBox28.Controls.Add(this.textBox_ModemTimeOut);
+            this.groupBox28.Controls.Add(this.button25);
+            this.groupBox28.Controls.Add(this.textBox_ModemPrimeryPort);
+            this.groupBox28.Controls.Add(this.textBox_ModemPrimeryHost);
+            this.groupBox28.Location = new System.Drawing.Point(188, 499);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(146, 195);
+            this.groupBox28.TabIndex = 45;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Modem Config";
             // 
             // textBox_ModemSocket
             // 
-            textBox_ModemSocket.Location = new System.Drawing.Point(8, 77);
-            textBox_ModemSocket.Name = "textBox_ModemSocket";
-            textBox_ModemSocket.Size = new System.Drawing.Size(132, 22);
-            textBox_ModemSocket.TabIndex = 80;
+            this.textBox_ModemSocket.Location = new System.Drawing.Point(8, 77);
+            this.textBox_ModemSocket.Name = "textBox_ModemSocket";
+            this.textBox_ModemSocket.Size = new System.Drawing.Size(132, 22);
+            this.textBox_ModemSocket.TabIndex = 80;
             // 
             // textBox_ModemRetries
             // 
-            textBox_ModemRetries.Location = new System.Drawing.Point(8, 50);
-            textBox_ModemRetries.Name = "textBox_ModemRetries";
-            textBox_ModemRetries.Size = new System.Drawing.Size(132, 22);
-            textBox_ModemRetries.TabIndex = 79;
+            this.textBox_ModemRetries.Location = new System.Drawing.Point(8, 50);
+            this.textBox_ModemRetries.Name = "textBox_ModemRetries";
+            this.textBox_ModemRetries.Size = new System.Drawing.Size(132, 22);
+            this.textBox_ModemRetries.TabIndex = 79;
             // 
             // textBox_ModemTimeOut
             // 
-            textBox_ModemTimeOut.Location = new System.Drawing.Point(8, 23);
-            textBox_ModemTimeOut.Name = "textBox_ModemTimeOut";
-            textBox_ModemTimeOut.Size = new System.Drawing.Size(132, 22);
-            textBox_ModemTimeOut.TabIndex = 78;
+            this.textBox_ModemTimeOut.Location = new System.Drawing.Point(8, 23);
+            this.textBox_ModemTimeOut.Name = "textBox_ModemTimeOut";
+            this.textBox_ModemTimeOut.Size = new System.Drawing.Size(132, 22);
+            this.textBox_ModemTimeOut.TabIndex = 78;
             // 
             // button25
             // 
-            button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button25.Location = new System.Drawing.Point(8, 157);
-            button25.Name = "button25";
-            button25.Size = new System.Drawing.Size(132, 26);
-            button25.TabIndex = 44;
-            button25.Text = "Config Modem";
-            button25.UseVisualStyleBackColor = true;
-            button25.Click += new System.EventHandler(Button25_Click);
+            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.Location = new System.Drawing.Point(8, 157);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(132, 26);
+            this.button25.TabIndex = 44;
+            this.button25.Text = "Config Modem";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.Button25_Click);
             // 
             // textBox_ModemPrimeryPort
             // 
-            textBox_ModemPrimeryPort.Location = new System.Drawing.Point(8, 129);
-            textBox_ModemPrimeryPort.Name = "textBox_ModemPrimeryPort";
-            textBox_ModemPrimeryPort.Size = new System.Drawing.Size(132, 22);
-            textBox_ModemPrimeryPort.TabIndex = 37;
+            this.textBox_ModemPrimeryPort.Location = new System.Drawing.Point(8, 129);
+            this.textBox_ModemPrimeryPort.Name = "textBox_ModemPrimeryPort";
+            this.textBox_ModemPrimeryPort.Size = new System.Drawing.Size(132, 22);
+            this.textBox_ModemPrimeryPort.TabIndex = 37;
             // 
             // textBox_ModemPrimeryHost
             // 
-            textBox_ModemPrimeryHost.Location = new System.Drawing.Point(8, 101);
-            textBox_ModemPrimeryHost.Name = "textBox_ModemPrimeryHost";
-            textBox_ModemPrimeryHost.Size = new System.Drawing.Size(132, 22);
-            textBox_ModemPrimeryHost.TabIndex = 36;
+            this.textBox_ModemPrimeryHost.Location = new System.Drawing.Point(8, 101);
+            this.textBox_ModemPrimeryHost.Name = "textBox_ModemPrimeryHost";
+            this.textBox_ModemPrimeryHost.Size = new System.Drawing.Size(132, 22);
+            this.textBox_ModemPrimeryHost.TabIndex = 36;
             // 
             // groupBox30
             // 
-            groupBox30.Controls.Add(textBox_ForginPassword);
-            groupBox30.Controls.Add(button27);
-            groupBox30.Controls.Add(textBox_ForginAcessPoint);
-            groupBox30.Controls.Add(textBox_ForginSecondaryDNS);
-            groupBox30.Controls.Add(textBox_ForginUserName);
-            groupBox30.Controls.Add(textBox_ForginPrimeryDNS);
-            groupBox30.Location = new System.Drawing.Point(344, 499);
-            groupBox30.Name = "groupBox30";
-            groupBox30.Size = new System.Drawing.Size(160, 195);
-            groupBox30.TabIndex = 47;
-            groupBox30.TabStop = false;
-            groupBox30.Text = "Config Forgin Network";
+            this.groupBox30.Controls.Add(this.textBox_ForginPassword);
+            this.groupBox30.Controls.Add(this.button27);
+            this.groupBox30.Controls.Add(this.textBox_ForginAcessPoint);
+            this.groupBox30.Controls.Add(this.textBox_ForginSecondaryDNS);
+            this.groupBox30.Controls.Add(this.textBox_ForginUserName);
+            this.groupBox30.Controls.Add(this.textBox_ForginPrimeryDNS);
+            this.groupBox30.Location = new System.Drawing.Point(344, 499);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(160, 195);
+            this.groupBox30.TabIndex = 47;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Config Forgin Network";
             // 
             // textBox_ForginPassword
             // 
-            textBox_ForginPassword.Location = new System.Drawing.Point(8, 77);
-            textBox_ForginPassword.Name = "textBox_ForginPassword";
-            textBox_ForginPassword.Size = new System.Drawing.Size(146, 22);
-            textBox_ForginPassword.TabIndex = 35;
+            this.textBox_ForginPassword.Location = new System.Drawing.Point(8, 77);
+            this.textBox_ForginPassword.Name = "textBox_ForginPassword";
+            this.textBox_ForginPassword.Size = new System.Drawing.Size(146, 22);
+            this.textBox_ForginPassword.TabIndex = 35;
             // 
             // button27
             // 
-            button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button27.Location = new System.Drawing.Point(8, 157);
-            button27.Name = "button27";
-            button27.Size = new System.Drawing.Size(146, 26);
-            button27.TabIndex = 44;
-            button27.Text = "Config Forgin Net";
-            button27.UseVisualStyleBackColor = true;
-            button27.Click += new System.EventHandler(Button27_Click);
+            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button27.Location = new System.Drawing.Point(8, 157);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(146, 26);
+            this.button27.TabIndex = 44;
+            this.button27.Text = "Config Forgin Net";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.Button27_Click);
             // 
             // textBox_ForginAcessPoint
             // 
-            textBox_ForginAcessPoint.Location = new System.Drawing.Point(7, 23);
-            textBox_ForginAcessPoint.Name = "textBox_ForginAcessPoint";
-            textBox_ForginAcessPoint.Size = new System.Drawing.Size(147, 22);
-            textBox_ForginAcessPoint.TabIndex = 33;
+            this.textBox_ForginAcessPoint.Location = new System.Drawing.Point(7, 23);
+            this.textBox_ForginAcessPoint.Name = "textBox_ForginAcessPoint";
+            this.textBox_ForginAcessPoint.Size = new System.Drawing.Size(147, 22);
+            this.textBox_ForginAcessPoint.TabIndex = 33;
             // 
             // textBox_ForginSecondaryDNS
             // 
-            textBox_ForginSecondaryDNS.Location = new System.Drawing.Point(8, 129);
-            textBox_ForginSecondaryDNS.Name = "textBox_ForginSecondaryDNS";
-            textBox_ForginSecondaryDNS.Size = new System.Drawing.Size(146, 22);
-            textBox_ForginSecondaryDNS.TabIndex = 37;
+            this.textBox_ForginSecondaryDNS.Location = new System.Drawing.Point(8, 129);
+            this.textBox_ForginSecondaryDNS.Name = "textBox_ForginSecondaryDNS";
+            this.textBox_ForginSecondaryDNS.Size = new System.Drawing.Size(146, 22);
+            this.textBox_ForginSecondaryDNS.TabIndex = 37;
             // 
             // textBox_ForginUserName
             // 
-            textBox_ForginUserName.Location = new System.Drawing.Point(8, 51);
-            textBox_ForginUserName.Name = "textBox_ForginUserName";
-            textBox_ForginUserName.Size = new System.Drawing.Size(146, 22);
-            textBox_ForginUserName.TabIndex = 34;
+            this.textBox_ForginUserName.Location = new System.Drawing.Point(8, 51);
+            this.textBox_ForginUserName.Name = "textBox_ForginUserName";
+            this.textBox_ForginUserName.Size = new System.Drawing.Size(146, 22);
+            this.textBox_ForginUserName.TabIndex = 34;
             // 
             // textBox_ForginPrimeryDNS
             // 
-            textBox_ForginPrimeryDNS.Location = new System.Drawing.Point(8, 101);
-            textBox_ForginPrimeryDNS.Name = "textBox_ForginPrimeryDNS";
-            textBox_ForginPrimeryDNS.Size = new System.Drawing.Size(146, 22);
-            textBox_ForginPrimeryDNS.TabIndex = 36;
+            this.textBox_ForginPrimeryDNS.Location = new System.Drawing.Point(8, 101);
+            this.textBox_ForginPrimeryDNS.Name = "textBox_ForginPrimeryDNS";
+            this.textBox_ForginPrimeryDNS.Size = new System.Drawing.Size(146, 22);
+            this.textBox_ForginPrimeryDNS.TabIndex = 36;
             // 
             // groupBox29
             // 
-            groupBox29.Controls.Add(textBox_HomePassword);
-            groupBox29.Controls.Add(button26);
-            groupBox29.Controls.Add(textBox_HomeAcessPoint);
-            groupBox29.Controls.Add(textBox_HomeSecondaryDNS);
-            groupBox29.Controls.Add(textBox_HomeUserName);
-            groupBox29.Controls.Add(textBox_HomePrimeryDNS);
-            groupBox29.Location = new System.Drawing.Point(345, 298);
-            groupBox29.Name = "groupBox29";
-            groupBox29.Size = new System.Drawing.Size(160, 195);
-            groupBox29.TabIndex = 46;
-            groupBox29.TabStop = false;
-            groupBox29.Text = "Config Home Net";
+            this.groupBox29.Controls.Add(this.textBox_HomePassword);
+            this.groupBox29.Controls.Add(this.button26);
+            this.groupBox29.Controls.Add(this.textBox_HomeAcessPoint);
+            this.groupBox29.Controls.Add(this.textBox_HomeSecondaryDNS);
+            this.groupBox29.Controls.Add(this.textBox_HomeUserName);
+            this.groupBox29.Controls.Add(this.textBox_HomePrimeryDNS);
+            this.groupBox29.Location = new System.Drawing.Point(345, 298);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(160, 195);
+            this.groupBox29.TabIndex = 46;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Config Home Net";
             // 
             // textBox_HomePassword
             // 
-            textBox_HomePassword.Location = new System.Drawing.Point(8, 77);
-            textBox_HomePassword.Name = "textBox_HomePassword";
-            textBox_HomePassword.Size = new System.Drawing.Size(146, 22);
-            textBox_HomePassword.TabIndex = 35;
-            textBox_HomePassword.Text = "Password";
+            this.textBox_HomePassword.Location = new System.Drawing.Point(8, 77);
+            this.textBox_HomePassword.Name = "textBox_HomePassword";
+            this.textBox_HomePassword.Size = new System.Drawing.Size(146, 22);
+            this.textBox_HomePassword.TabIndex = 35;
+            this.textBox_HomePassword.Text = "Password";
             // 
             // button26
             // 
-            button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button26.Location = new System.Drawing.Point(8, 157);
-            button26.Name = "button26";
-            button26.Size = new System.Drawing.Size(146, 26);
-            button26.TabIndex = 44;
-            button26.Text = "Config Home Net";
-            button26.UseVisualStyleBackColor = true;
-            button26.Click += new System.EventHandler(Button26_Click);
+            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.Location = new System.Drawing.Point(8, 157);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(146, 26);
+            this.button26.TabIndex = 44;
+            this.button26.Text = "Config Home Net";
+            this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.Button26_Click);
             // 
             // textBox_HomeAcessPoint
             // 
-            textBox_HomeAcessPoint.Location = new System.Drawing.Point(7, 23);
-            textBox_HomeAcessPoint.Name = "textBox_HomeAcessPoint";
-            textBox_HomeAcessPoint.Size = new System.Drawing.Size(147, 22);
-            textBox_HomeAcessPoint.TabIndex = 33;
-            textBox_HomeAcessPoint.Text = "Aceess point";
+            this.textBox_HomeAcessPoint.Location = new System.Drawing.Point(7, 23);
+            this.textBox_HomeAcessPoint.Name = "textBox_HomeAcessPoint";
+            this.textBox_HomeAcessPoint.Size = new System.Drawing.Size(147, 22);
+            this.textBox_HomeAcessPoint.TabIndex = 33;
+            this.textBox_HomeAcessPoint.Text = "Aceess point";
             // 
             // textBox_HomeSecondaryDNS
             // 
-            textBox_HomeSecondaryDNS.Location = new System.Drawing.Point(8, 129);
-            textBox_HomeSecondaryDNS.Name = "textBox_HomeSecondaryDNS";
-            textBox_HomeSecondaryDNS.Size = new System.Drawing.Size(146, 22);
-            textBox_HomeSecondaryDNS.TabIndex = 37;
-            textBox_HomeSecondaryDNS.Text = "Secondary DNS";
+            this.textBox_HomeSecondaryDNS.Location = new System.Drawing.Point(8, 129);
+            this.textBox_HomeSecondaryDNS.Name = "textBox_HomeSecondaryDNS";
+            this.textBox_HomeSecondaryDNS.Size = new System.Drawing.Size(146, 22);
+            this.textBox_HomeSecondaryDNS.TabIndex = 37;
+            this.textBox_HomeSecondaryDNS.Text = "Secondary DNS";
             // 
             // textBox_HomeUserName
             // 
-            textBox_HomeUserName.Location = new System.Drawing.Point(8, 51);
-            textBox_HomeUserName.Name = "textBox_HomeUserName";
-            textBox_HomeUserName.Size = new System.Drawing.Size(146, 22);
-            textBox_HomeUserName.TabIndex = 34;
-            textBox_HomeUserName.Text = "User Name";
+            this.textBox_HomeUserName.Location = new System.Drawing.Point(8, 51);
+            this.textBox_HomeUserName.Name = "textBox_HomeUserName";
+            this.textBox_HomeUserName.Size = new System.Drawing.Size(146, 22);
+            this.textBox_HomeUserName.TabIndex = 34;
+            this.textBox_HomeUserName.Text = "User Name";
             // 
             // textBox_HomePrimeryDNS
             // 
-            textBox_HomePrimeryDNS.Location = new System.Drawing.Point(8, 101);
-            textBox_HomePrimeryDNS.Name = "textBox_HomePrimeryDNS";
-            textBox_HomePrimeryDNS.Size = new System.Drawing.Size(146, 22);
-            textBox_HomePrimeryDNS.TabIndex = 36;
-            textBox_HomePrimeryDNS.Text = "Primery DNS";
+            this.textBox_HomePrimeryDNS.Location = new System.Drawing.Point(8, 101);
+            this.textBox_HomePrimeryDNS.Name = "textBox_HomePrimeryDNS";
+            this.textBox_HomePrimeryDNS.Size = new System.Drawing.Size(146, 22);
+            this.textBox_HomePrimeryDNS.TabIndex = 36;
+            this.textBox_HomePrimeryDNS.Text = "Primery DNS";
             // 
             // groupBox27
             // 
-            groupBox27.Controls.Add(maskedTextBox1);
-            groupBox27.Controls.Add(button24);
-            groupBox27.Location = new System.Drawing.Point(315, 107);
-            groupBox27.Name = "groupBox27";
-            groupBox27.Size = new System.Drawing.Size(145, 78);
-            groupBox27.TabIndex = 72;
-            groupBox27.TabStop = false;
-            groupBox27.Text = "Sleep Status Duration";
+            this.groupBox27.Controls.Add(this.maskedTextBox1);
+            this.groupBox27.Controls.Add(this.button24);
+            this.groupBox27.Location = new System.Drawing.Point(315, 107);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(145, 78);
+            this.groupBox27.TabIndex = 72;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Sleep Status Duration";
             // 
             // maskedTextBox1
             // 
-            maskedTextBox1.Location = new System.Drawing.Point(6, 18);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            maskedTextBox1.TabIndex = 71;
+            this.maskedTextBox1.Location = new System.Drawing.Point(6, 18);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox1.TabIndex = 71;
             // 
             // button24
             // 
-            button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button24.Location = new System.Drawing.Point(6, 45);
-            button24.Name = "button24";
-            button24.Size = new System.Drawing.Size(131, 26);
-            button24.TabIndex = 70;
-            button24.Text = "Duration sleep";
-            button24.UseVisualStyleBackColor = true;
-            button24.Click += new System.EventHandler(Button24_Click);
+            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(6, 45);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(131, 26);
+            this.button24.TabIndex = 70;
+            this.button24.Text = "Duration sleep";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.Button24_Click);
             // 
             // groupBox26
             // 
-            groupBox26.Controls.Add(TextBox_NormalStatusDuration);
-            groupBox26.Controls.Add(button23);
-            groupBox26.Location = new System.Drawing.Point(334, 24);
-            groupBox26.Name = "groupBox26";
-            groupBox26.Size = new System.Drawing.Size(171, 77);
-            groupBox26.TabIndex = 71;
-            groupBox26.TabStop = false;
-            groupBox26.Text = "Normal Status Duration";
+            this.groupBox26.Controls.Add(this.TextBox_NormalStatusDuration);
+            this.groupBox26.Controls.Add(this.button23);
+            this.groupBox26.Location = new System.Drawing.Point(334, 24);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(171, 77);
+            this.groupBox26.TabIndex = 71;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Normal Status Duration";
             // 
             // TextBox_NormalStatusDuration
             // 
-            TextBox_NormalStatusDuration.Location = new System.Drawing.Point(6, 17);
-            TextBox_NormalStatusDuration.Name = "TextBox_NormalStatusDuration";
-            TextBox_NormalStatusDuration.Size = new System.Drawing.Size(100, 22);
-            TextBox_NormalStatusDuration.TabIndex = 71;
+            this.TextBox_NormalStatusDuration.Location = new System.Drawing.Point(6, 17);
+            this.TextBox_NormalStatusDuration.Name = "TextBox_NormalStatusDuration";
+            this.TextBox_NormalStatusDuration.Size = new System.Drawing.Size(100, 22);
+            this.TextBox_NormalStatusDuration.TabIndex = 71;
             // 
             // button23
             // 
-            button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button23.Location = new System.Drawing.Point(6, 45);
-            button23.Name = "button23";
-            button23.Size = new System.Drawing.Size(111, 26);
-            button23.TabIndex = 70;
-            button23.Text = "Set Duration";
-            button23.UseVisualStyleBackColor = true;
-            button23.Click += new System.EventHandler(Button23_Click);
+            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Location = new System.Drawing.Point(6, 45);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(111, 26);
+            this.button23.TabIndex = 70;
+            this.button23.Text = "Set Duration";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.Button23_Click);
             // 
             // groupBox25
             // 
-            groupBox25.Controls.Add(maskedTextBox_SpeedLimit2);
-            groupBox25.Controls.Add(maskedTextBox_SpeedLimit3);
-            groupBox25.Controls.Add(maskedTextBox_SpeedLimit1);
-            groupBox25.Controls.Add(button22);
-            groupBox25.Location = new System.Drawing.Point(510, 557);
-            groupBox25.Name = "groupBox25";
-            groupBox25.Size = new System.Drawing.Size(200, 89);
-            groupBox25.TabIndex = 70;
-            groupBox25.TabStop = false;
-            groupBox25.Text = "Speed Limit Config";
+            this.groupBox25.Controls.Add(this.maskedTextBox_SpeedLimit2);
+            this.groupBox25.Controls.Add(this.maskedTextBox_SpeedLimit3);
+            this.groupBox25.Controls.Add(this.maskedTextBox_SpeedLimit1);
+            this.groupBox25.Controls.Add(this.button22);
+            this.groupBox25.Location = new System.Drawing.Point(510, 557);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(200, 89);
+            this.groupBox25.TabIndex = 70;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Speed Limit Config";
             // 
             // maskedTextBox_SpeedLimit2
             // 
-            maskedTextBox_SpeedLimit2.Location = new System.Drawing.Point(53, 20);
-            maskedTextBox_SpeedLimit2.Name = "maskedTextBox_SpeedLimit2";
-            maskedTextBox_SpeedLimit2.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_SpeedLimit2.TabIndex = 80;
+            this.maskedTextBox_SpeedLimit2.Location = new System.Drawing.Point(53, 20);
+            this.maskedTextBox_SpeedLimit2.Name = "maskedTextBox_SpeedLimit2";
+            this.maskedTextBox_SpeedLimit2.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_SpeedLimit2.TabIndex = 80;
             // 
             // maskedTextBox_SpeedLimit3
             // 
-            maskedTextBox_SpeedLimit3.Location = new System.Drawing.Point(101, 19);
-            maskedTextBox_SpeedLimit3.Name = "maskedTextBox_SpeedLimit3";
-            maskedTextBox_SpeedLimit3.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_SpeedLimit3.TabIndex = 79;
+            this.maskedTextBox_SpeedLimit3.Location = new System.Drawing.Point(101, 19);
+            this.maskedTextBox_SpeedLimit3.Name = "maskedTextBox_SpeedLimit3";
+            this.maskedTextBox_SpeedLimit3.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_SpeedLimit3.TabIndex = 79;
             // 
             // maskedTextBox_SpeedLimit1
             // 
-            maskedTextBox_SpeedLimit1.Location = new System.Drawing.Point(6, 20);
-            maskedTextBox_SpeedLimit1.Name = "maskedTextBox_SpeedLimit1";
-            maskedTextBox_SpeedLimit1.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_SpeedLimit1.TabIndex = 78;
+            this.maskedTextBox_SpeedLimit1.Location = new System.Drawing.Point(6, 20);
+            this.maskedTextBox_SpeedLimit1.Name = "maskedTextBox_SpeedLimit1";
+            this.maskedTextBox_SpeedLimit1.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_SpeedLimit1.TabIndex = 78;
             // 
             // button22
             // 
-            button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button22.Location = new System.Drawing.Point(6, 47);
-            button22.Name = "button22";
-            button22.Size = new System.Drawing.Size(140, 26);
-            button22.TabIndex = 65;
-            button22.Text = "Speed Limit Alert";
-            button22.UseVisualStyleBackColor = true;
-            button22.Click += new System.EventHandler(Button22_Click);
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(6, 47);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(140, 26);
+            this.button22.TabIndex = 65;
+            this.button22.Text = "Speed Limit Alert";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.Button22_Click);
             // 
             // groupBox24
             // 
-            groupBox24.Controls.Add(comboBox_DispatchSpeed);
-            groupBox24.Controls.Add(button21);
-            groupBox24.Location = new System.Drawing.Point(228, 377);
-            groupBox24.Name = "groupBox24";
-            groupBox24.Size = new System.Drawing.Size(106, 103);
-            groupBox24.TabIndex = 68;
-            groupBox24.TabStop = false;
-            groupBox24.Text = "Dispatch Speed Limit";
+            this.groupBox24.Controls.Add(this.comboBox_DispatchSpeed);
+            this.groupBox24.Controls.Add(this.button21);
+            this.groupBox24.Location = new System.Drawing.Point(228, 377);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(106, 103);
+            this.groupBox24.TabIndex = 68;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Dispatch Speed Limit";
             // 
             // comboBox_DispatchSpeed
             // 
-            comboBox_DispatchSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_DispatchSpeed.FormattingEnabled = true;
-            comboBox_DispatchSpeed.Items.AddRange(new object[] {
+            this.comboBox_DispatchSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_DispatchSpeed.FormattingEnabled = true;
+            this.comboBox_DispatchSpeed.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_DispatchSpeed.Location = new System.Drawing.Point(8, 44);
-            comboBox_DispatchSpeed.Name = "comboBox_DispatchSpeed";
-            comboBox_DispatchSpeed.Size = new System.Drawing.Size(94, 21);
-            comboBox_DispatchSpeed.TabIndex = 63;
-            comboBox_DispatchSpeed.Text = "Speed";
+            this.comboBox_DispatchSpeed.Location = new System.Drawing.Point(8, 44);
+            this.comboBox_DispatchSpeed.Name = "comboBox_DispatchSpeed";
+            this.comboBox_DispatchSpeed.Size = new System.Drawing.Size(94, 21);
+            this.comboBox_DispatchSpeed.TabIndex = 63;
+            this.comboBox_DispatchSpeed.Text = "Speed";
             // 
             // button21
             // 
-            button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button21.Location = new System.Drawing.Point(8, 71);
-            button21.Name = "button21";
-            button21.Size = new System.Drawing.Size(94, 26);
-            button21.TabIndex = 64;
-            button21.Text = "Dispatch Speed";
-            button21.UseVisualStyleBackColor = true;
-            button21.Click += new System.EventHandler(Button21_Click);
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(8, 71);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(94, 26);
+            this.button21.TabIndex = 64;
+            this.button21.Text = "Dispatch Speed";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.Button21_Click);
             // 
             // groupBox23
             // 
-            groupBox23.Controls.Add(comboBox_KillEngine);
-            groupBox23.Controls.Add(button20);
-            groupBox23.Location = new System.Drawing.Point(230, 287);
-            groupBox23.Name = "groupBox23";
-            groupBox23.Size = new System.Drawing.Size(109, 91);
-            groupBox23.TabIndex = 67;
-            groupBox23.TabStop = false;
-            groupBox23.Text = "Kill Engine";
+            this.groupBox23.Controls.Add(this.comboBox_KillEngine);
+            this.groupBox23.Controls.Add(this.button20);
+            this.groupBox23.Location = new System.Drawing.Point(230, 287);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(109, 91);
+            this.groupBox23.TabIndex = 67;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Kill Engine";
             // 
             // comboBox_KillEngine
             // 
-            comboBox_KillEngine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_KillEngine.FormattingEnabled = true;
-            comboBox_KillEngine.Items.AddRange(new object[] {
+            this.comboBox_KillEngine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_KillEngine.FormattingEnabled = true;
+            this.comboBox_KillEngine.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_KillEngine.Location = new System.Drawing.Point(6, 20);
-            comboBox_KillEngine.Name = "comboBox_KillEngine";
-            comboBox_KillEngine.Size = new System.Drawing.Size(58, 21);
-            comboBox_KillEngine.TabIndex = 63;
-            comboBox_KillEngine.Text = "Engine";
+            this.comboBox_KillEngine.Location = new System.Drawing.Point(6, 20);
+            this.comboBox_KillEngine.Name = "comboBox_KillEngine";
+            this.comboBox_KillEngine.Size = new System.Drawing.Size(58, 21);
+            this.comboBox_KillEngine.TabIndex = 63;
+            this.comboBox_KillEngine.Text = "Engine";
             // 
             // button20
             // 
-            button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button20.Location = new System.Drawing.Point(6, 43);
-            button20.Name = "button20";
-            button20.Size = new System.Drawing.Size(98, 26);
-            button20.TabIndex = 64;
-            button20.Text = "Kill Engine";
-            button20.UseVisualStyleBackColor = true;
-            button20.Click += new System.EventHandler(Button20_Click);
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Location = new System.Drawing.Point(6, 43);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(98, 26);
+            this.button20.TabIndex = 64;
+            this.button20.Text = "Kill Engine";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.Button20_Click);
             // 
             // groupBox21
             // 
-            groupBox21.Controls.Add(maskedTextBox_TiltTowSens);
-            groupBox21.Controls.Add(comboBox_TiltTowSensState);
-            groupBox21.Controls.Add(button18);
-            groupBox21.Location = new System.Drawing.Point(510, 451);
-            groupBox21.Name = "groupBox21";
-            groupBox21.Size = new System.Drawing.Size(200, 100);
-            groupBox21.TabIndex = 65;
-            groupBox21.TabStop = false;
-            groupBox21.Text = "Tilt Tow Sensitivity";
+            this.groupBox21.Controls.Add(this.maskedTextBox_TiltTowSens);
+            this.groupBox21.Controls.Add(this.comboBox_TiltTowSensState);
+            this.groupBox21.Controls.Add(this.button18);
+            this.groupBox21.Location = new System.Drawing.Point(510, 451);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(200, 100);
+            this.groupBox21.TabIndex = 65;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Tilt Tow Sensitivity";
             // 
             // maskedTextBox_TiltTowSens
             // 
-            maskedTextBox_TiltTowSens.Location = new System.Drawing.Point(81, 32);
-            maskedTextBox_TiltTowSens.Name = "maskedTextBox_TiltTowSens";
-            maskedTextBox_TiltTowSens.Size = new System.Drawing.Size(100, 22);
-            maskedTextBox_TiltTowSens.TabIndex = 83;
+            this.maskedTextBox_TiltTowSens.Location = new System.Drawing.Point(81, 32);
+            this.maskedTextBox_TiltTowSens.Name = "maskedTextBox_TiltTowSens";
+            this.maskedTextBox_TiltTowSens.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_TiltTowSens.TabIndex = 83;
             // 
             // comboBox_TiltTowSensState
             // 
-            comboBox_TiltTowSensState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_TiltTowSensState.FormattingEnabled = true;
-            comboBox_TiltTowSensState.Items.AddRange(new object[] {
+            this.comboBox_TiltTowSensState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_TiltTowSensState.FormattingEnabled = true;
+            this.comboBox_TiltTowSensState.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_TiltTowSensState.Location = new System.Drawing.Point(17, 32);
-            comboBox_TiltTowSensState.Name = "comboBox_TiltTowSensState";
-            comboBox_TiltTowSensState.Size = new System.Drawing.Size(58, 21);
-            comboBox_TiltTowSensState.TabIndex = 82;
-            comboBox_TiltTowSensState.Text = "State";
+            this.comboBox_TiltTowSensState.Location = new System.Drawing.Point(17, 32);
+            this.comboBox_TiltTowSensState.Name = "comboBox_TiltTowSensState";
+            this.comboBox_TiltTowSensState.Size = new System.Drawing.Size(58, 21);
+            this.comboBox_TiltTowSensState.TabIndex = 82;
+            this.comboBox_TiltTowSensState.Text = "State";
             // 
             // button18
             // 
-            button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button18.Location = new System.Drawing.Point(17, 59);
-            button18.Name = "button18";
-            button18.Size = new System.Drawing.Size(140, 26);
-            button18.TabIndex = 61;
-            button18.Text = "Tilt/Tow Sensitivity";
-            button18.UseVisualStyleBackColor = true;
-            button18.Click += new System.EventHandler(Button18_Click);
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Location = new System.Drawing.Point(17, 59);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(140, 26);
+            this.button18.TabIndex = 61;
+            this.button18.Text = "Tilt/Tow Sensitivity";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.Button18_Click);
             // 
             // groupBox20
             // 
-            groupBox20.Controls.Add(maskedTextBox_HitSensitivity);
-            groupBox20.Controls.Add(comboBox_HitState);
-            groupBox20.Controls.Add(button17);
-            groupBox20.Location = new System.Drawing.Point(510, 345);
-            groupBox20.Name = "groupBox20";
-            groupBox20.Size = new System.Drawing.Size(200, 100);
-            groupBox20.TabIndex = 64;
-            groupBox20.TabStop = false;
-            groupBox20.Text = "Hit Sensitivity";
+            this.groupBox20.Controls.Add(this.maskedTextBox_HitSensitivity);
+            this.groupBox20.Controls.Add(this.comboBox_HitState);
+            this.groupBox20.Controls.Add(this.button17);
+            this.groupBox20.Location = new System.Drawing.Point(510, 345);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(200, 100);
+            this.groupBox20.TabIndex = 64;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Hit Sensitivity";
             // 
             // maskedTextBox_HitSensitivity
             // 
-            maskedTextBox_HitSensitivity.Location = new System.Drawing.Point(81, 32);
-            maskedTextBox_HitSensitivity.Name = "maskedTextBox_HitSensitivity";
-            maskedTextBox_HitSensitivity.Size = new System.Drawing.Size(100, 22);
-            maskedTextBox_HitSensitivity.TabIndex = 82;
+            this.maskedTextBox_HitSensitivity.Location = new System.Drawing.Point(81, 32);
+            this.maskedTextBox_HitSensitivity.Name = "maskedTextBox_HitSensitivity";
+            this.maskedTextBox_HitSensitivity.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox_HitSensitivity.TabIndex = 82;
             // 
             // comboBox_HitState
             // 
-            comboBox_HitState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_HitState.FormattingEnabled = true;
-            comboBox_HitState.Items.AddRange(new object[] {
+            this.comboBox_HitState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_HitState.FormattingEnabled = true;
+            this.comboBox_HitState.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_HitState.Location = new System.Drawing.Point(17, 32);
-            comboBox_HitState.Name = "comboBox_HitState";
-            comboBox_HitState.Size = new System.Drawing.Size(58, 21);
-            comboBox_HitState.TabIndex = 62;
-            comboBox_HitState.Text = "State";
+            this.comboBox_HitState.Location = new System.Drawing.Point(17, 32);
+            this.comboBox_HitState.Name = "comboBox_HitState";
+            this.comboBox_HitState.Size = new System.Drawing.Size(58, 21);
+            this.comboBox_HitState.TabIndex = 62;
+            this.comboBox_HitState.Text = "State";
             // 
             // button17
             // 
-            button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button17.Location = new System.Drawing.Point(17, 59);
-            button17.Name = "button17";
-            button17.Size = new System.Drawing.Size(140, 26);
-            button17.TabIndex = 61;
-            button17.Text = "Hit Sensitivity";
-            button17.UseVisualStyleBackColor = true;
-            button17.Click += new System.EventHandler(Button17_Click);
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Location = new System.Drawing.Point(17, 59);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(140, 26);
+            this.button17.TabIndex = 61;
+            this.button17.Text = "Hit Sensitivity";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.Button17_Click);
             // 
             // groupBox19
             // 
-            groupBox19.Controls.Add(maskedTextBox_ShockDetectNum);
-            groupBox19.Controls.Add(maskedTextBox_ShockWindow);
-            groupBox19.Controls.Add(comboBox_ShockState);
-            groupBox19.Controls.Add(button16);
-            groupBox19.Location = new System.Drawing.Point(718, 276);
-            groupBox19.Name = "groupBox19";
-            groupBox19.Size = new System.Drawing.Size(200, 100);
-            groupBox19.TabIndex = 63;
-            groupBox19.TabStop = false;
-            groupBox19.Text = "Config Shock";
+            this.groupBox19.Controls.Add(this.maskedTextBox_ShockDetectNum);
+            this.groupBox19.Controls.Add(this.maskedTextBox_ShockWindow);
+            this.groupBox19.Controls.Add(this.comboBox_ShockState);
+            this.groupBox19.Controls.Add(this.button16);
+            this.groupBox19.Location = new System.Drawing.Point(718, 276);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(200, 100);
+            this.groupBox19.TabIndex = 63;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Config Shock";
             // 
             // maskedTextBox_ShockDetectNum
             // 
-            maskedTextBox_ShockDetectNum.Location = new System.Drawing.Point(111, 24);
-            maskedTextBox_ShockDetectNum.Name = "maskedTextBox_ShockDetectNum";
-            maskedTextBox_ShockDetectNum.Size = new System.Drawing.Size(46, 22);
-            maskedTextBox_ShockDetectNum.TabIndex = 82;
+            this.maskedTextBox_ShockDetectNum.Location = new System.Drawing.Point(111, 24);
+            this.maskedTextBox_ShockDetectNum.Name = "maskedTextBox_ShockDetectNum";
+            this.maskedTextBox_ShockDetectNum.Size = new System.Drawing.Size(46, 22);
+            this.maskedTextBox_ShockDetectNum.TabIndex = 82;
             // 
             // maskedTextBox_ShockWindow
             // 
-            maskedTextBox_ShockWindow.Location = new System.Drawing.Point(59, 24);
-            maskedTextBox_ShockWindow.Name = "maskedTextBox_ShockWindow";
-            maskedTextBox_ShockWindow.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_ShockWindow.TabIndex = 81;
+            this.maskedTextBox_ShockWindow.Location = new System.Drawing.Point(59, 24);
+            this.maskedTextBox_ShockWindow.Name = "maskedTextBox_ShockWindow";
+            this.maskedTextBox_ShockWindow.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_ShockWindow.TabIndex = 81;
             // 
             // comboBox_ShockState
             // 
-            comboBox_ShockState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_ShockState.FormattingEnabled = true;
-            comboBox_ShockState.Items.AddRange(new object[] {
+            this.comboBox_ShockState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_ShockState.FormattingEnabled = true;
+            this.comboBox_ShockState.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_ShockState.Location = new System.Drawing.Point(1, 24);
-            comboBox_ShockState.Name = "comboBox_ShockState";
-            comboBox_ShockState.Size = new System.Drawing.Size(48, 21);
-            comboBox_ShockState.TabIndex = 61;
-            comboBox_ShockState.Text = "State";
+            this.comboBox_ShockState.Location = new System.Drawing.Point(1, 24);
+            this.comboBox_ShockState.Name = "comboBox_ShockState";
+            this.comboBox_ShockState.Size = new System.Drawing.Size(48, 21);
+            this.comboBox_ShockState.TabIndex = 61;
+            this.comboBox_ShockState.Text = "State";
             // 
             // button16
             // 
-            button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button16.Location = new System.Drawing.Point(6, 54);
-            button16.Name = "button16";
-            button16.Size = new System.Drawing.Size(140, 26);
-            button16.TabIndex = 42;
-            button16.Text = "Config Shock";
-            button16.UseVisualStyleBackColor = true;
-            button16.Click += new System.EventHandler(Button16_Click);
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Location = new System.Drawing.Point(6, 54);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(140, 26);
+            this.button16.TabIndex = 42;
+            this.button16.Text = "Config Shock";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.Button16_Click);
             // 
             // groupBox18
             // 
-            groupBox18.Controls.Add(maskedTextBox_TiltDetectNum);
-            groupBox18.Controls.Add(maskedTextBox_TiltWindow);
-            groupBox18.Controls.Add(maskedTextBox_TiltAngle);
-            groupBox18.Controls.Add(comboBox1_TiltState);
-            groupBox18.Controls.Add(button15);
-            groupBox18.Location = new System.Drawing.Point(718, 170);
-            groupBox18.Name = "groupBox18";
-            groupBox18.Size = new System.Drawing.Size(200, 100);
-            groupBox18.TabIndex = 62;
-            groupBox18.TabStop = false;
-            groupBox18.Text = "Config Tow";
+            this.groupBox18.Controls.Add(this.maskedTextBox_TiltDetectNum);
+            this.groupBox18.Controls.Add(this.maskedTextBox_TiltWindow);
+            this.groupBox18.Controls.Add(this.maskedTextBox_TiltAngle);
+            this.groupBox18.Controls.Add(this.comboBox1_TiltState);
+            this.groupBox18.Controls.Add(this.button15);
+            this.groupBox18.Location = new System.Drawing.Point(718, 170);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(200, 100);
+            this.groupBox18.TabIndex = 62;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Config Tow";
             // 
             // maskedTextBox_TiltDetectNum
             // 
-            maskedTextBox_TiltDetectNum.Location = new System.Drawing.Point(100, 29);
-            maskedTextBox_TiltDetectNum.Name = "maskedTextBox_TiltDetectNum";
-            maskedTextBox_TiltDetectNum.Size = new System.Drawing.Size(42, 22);
-            maskedTextBox_TiltDetectNum.TabIndex = 83;
+            this.maskedTextBox_TiltDetectNum.Location = new System.Drawing.Point(100, 29);
+            this.maskedTextBox_TiltDetectNum.Name = "maskedTextBox_TiltDetectNum";
+            this.maskedTextBox_TiltDetectNum.Size = new System.Drawing.Size(42, 22);
+            this.maskedTextBox_TiltDetectNum.TabIndex = 83;
             // 
             // maskedTextBox_TiltWindow
             // 
-            maskedTextBox_TiltWindow.Location = new System.Drawing.Point(53, 29);
-            maskedTextBox_TiltWindow.Name = "maskedTextBox_TiltWindow";
-            maskedTextBox_TiltWindow.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_TiltWindow.TabIndex = 82;
+            this.maskedTextBox_TiltWindow.Location = new System.Drawing.Point(53, 29);
+            this.maskedTextBox_TiltWindow.Name = "maskedTextBox_TiltWindow";
+            this.maskedTextBox_TiltWindow.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_TiltWindow.TabIndex = 82;
             // 
             // maskedTextBox_TiltAngle
             // 
-            maskedTextBox_TiltAngle.Location = new System.Drawing.Point(10, 29);
-            maskedTextBox_TiltAngle.Name = "maskedTextBox_TiltAngle";
-            maskedTextBox_TiltAngle.Size = new System.Drawing.Size(37, 22);
-            maskedTextBox_TiltAngle.TabIndex = 81;
+            this.maskedTextBox_TiltAngle.Location = new System.Drawing.Point(10, 29);
+            this.maskedTextBox_TiltAngle.Name = "maskedTextBox_TiltAngle";
+            this.maskedTextBox_TiltAngle.Size = new System.Drawing.Size(37, 22);
+            this.maskedTextBox_TiltAngle.TabIndex = 81;
             // 
             // comboBox1_TiltState
             // 
-            comboBox1_TiltState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox1_TiltState.FormattingEnabled = true;
-            comboBox1_TiltState.Items.AddRange(new object[] {
+            this.comboBox1_TiltState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1_TiltState.FormattingEnabled = true;
+            this.comboBox1_TiltState.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox1_TiltState.Location = new System.Drawing.Point(152, 29);
-            comboBox1_TiltState.Name = "comboBox1_TiltState";
-            comboBox1_TiltState.Size = new System.Drawing.Size(42, 21);
-            comboBox1_TiltState.TabIndex = 38;
-            comboBox1_TiltState.Text = "State";
+            this.comboBox1_TiltState.Location = new System.Drawing.Point(152, 29);
+            this.comboBox1_TiltState.Name = "comboBox1_TiltState";
+            this.comboBox1_TiltState.Size = new System.Drawing.Size(42, 21);
+            this.comboBox1_TiltState.TabIndex = 38;
+            this.comboBox1_TiltState.Text = "State";
             // 
             // button15
             // 
-            button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button15.Location = new System.Drawing.Point(6, 56);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(140, 26);
-            button15.TabIndex = 42;
-            button15.Text = "Config Tilt";
-            button15.UseVisualStyleBackColor = true;
-            button15.Click += new System.EventHandler(Button15_Click);
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Location = new System.Drawing.Point(6, 56);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(140, 26);
+            this.button15.TabIndex = 42;
+            this.button15.Text = "Config Tilt";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // groupBox17
             // 
-            groupBox17.Controls.Add(maskedTextBox_TowDetectNum);
-            groupBox17.Controls.Add(maskedTextBox_TowWindow);
-            groupBox17.Controls.Add(maskedTextBox_TowAngle);
-            groupBox17.Controls.Add(button14);
-            groupBox17.Location = new System.Drawing.Point(516, 17);
-            groupBox17.Name = "groupBox17";
-            groupBox17.Size = new System.Drawing.Size(157, 100);
-            groupBox17.TabIndex = 61;
-            groupBox17.TabStop = false;
-            groupBox17.Text = "Tow Configuration";
+            this.groupBox17.Controls.Add(this.maskedTextBox_TowDetectNum);
+            this.groupBox17.Controls.Add(this.maskedTextBox_TowWindow);
+            this.groupBox17.Controls.Add(this.maskedTextBox_TowAngle);
+            this.groupBox17.Controls.Add(this.button14);
+            this.groupBox17.Location = new System.Drawing.Point(516, 17);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(157, 100);
+            this.groupBox17.TabIndex = 61;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Tow Configuration";
             // 
             // maskedTextBox_TowDetectNum
             // 
-            maskedTextBox_TowDetectNum.Location = new System.Drawing.Point(100, 24);
-            maskedTextBox_TowDetectNum.Name = "maskedTextBox_TowDetectNum";
-            maskedTextBox_TowDetectNum.Size = new System.Drawing.Size(42, 22);
-            maskedTextBox_TowDetectNum.TabIndex = 80;
+            this.maskedTextBox_TowDetectNum.Location = new System.Drawing.Point(100, 24);
+            this.maskedTextBox_TowDetectNum.Name = "maskedTextBox_TowDetectNum";
+            this.maskedTextBox_TowDetectNum.Size = new System.Drawing.Size(42, 22);
+            this.maskedTextBox_TowDetectNum.TabIndex = 80;
             // 
             // maskedTextBox_TowWindow
             // 
-            maskedTextBox_TowWindow.Location = new System.Drawing.Point(53, 24);
-            maskedTextBox_TowWindow.Name = "maskedTextBox_TowWindow";
-            maskedTextBox_TowWindow.Size = new System.Drawing.Size(41, 22);
-            maskedTextBox_TowWindow.TabIndex = 79;
+            this.maskedTextBox_TowWindow.Location = new System.Drawing.Point(53, 24);
+            this.maskedTextBox_TowWindow.Name = "maskedTextBox_TowWindow";
+            this.maskedTextBox_TowWindow.Size = new System.Drawing.Size(41, 22);
+            this.maskedTextBox_TowWindow.TabIndex = 79;
             // 
             // maskedTextBox_TowAngle
             // 
-            maskedTextBox_TowAngle.Location = new System.Drawing.Point(10, 24);
-            maskedTextBox_TowAngle.Name = "maskedTextBox_TowAngle";
-            maskedTextBox_TowAngle.Size = new System.Drawing.Size(37, 22);
-            maskedTextBox_TowAngle.TabIndex = 78;
+            this.maskedTextBox_TowAngle.Location = new System.Drawing.Point(10, 24);
+            this.maskedTextBox_TowAngle.Name = "maskedTextBox_TowAngle";
+            this.maskedTextBox_TowAngle.Size = new System.Drawing.Size(37, 22);
+            this.maskedTextBox_TowAngle.TabIndex = 78;
             // 
             // button14
             // 
-            button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button14.Location = new System.Drawing.Point(6, 54);
-            button14.Name = "button14";
-            button14.Size = new System.Drawing.Size(140, 26);
-            button14.TabIndex = 42;
-            button14.Text = "Config Tow";
-            button14.UseVisualStyleBackColor = true;
-            button14.Click += new System.EventHandler(Button14_Click);
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(6, 54);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(140, 26);
+            this.button14.TabIndex = 42;
+            this.button14.Text = "Config Tow";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.Button14_Click);
             // 
             // groupBox11
             // 
-            groupBox11.Controls.Add(comboBox_SleepPolicy);
-            groupBox11.Controls.Add(button12);
-            groupBox11.Location = new System.Drawing.Point(15, 598);
-            groupBox11.Name = "groupBox11";
-            groupBox11.Size = new System.Drawing.Size(167, 84);
-            groupBox11.TabIndex = 57;
-            groupBox11.TabStop = false;
-            groupBox11.Text = "Sleep Policy";
+            this.groupBox11.Controls.Add(this.comboBox_SleepPolicy);
+            this.groupBox11.Controls.Add(this.button12);
+            this.groupBox11.Location = new System.Drawing.Point(15, 598);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(167, 84);
+            this.groupBox11.TabIndex = 57;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Sleep Policy";
             // 
             // comboBox_SleepPolicy
             // 
-            comboBox_SleepPolicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_SleepPolicy.FormattingEnabled = true;
-            comboBox_SleepPolicy.Items.AddRange(new object[] {
+            this.comboBox_SleepPolicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_SleepPolicy.FormattingEnabled = true;
+            this.comboBox_SleepPolicy.Items.AddRange(new object[] {
             "0",
             "1",
             "2",
             "3"});
-            comboBox_SleepPolicy.Location = new System.Drawing.Point(6, 27);
-            comboBox_SleepPolicy.Name = "comboBox_SleepPolicy";
-            comboBox_SleepPolicy.Size = new System.Drawing.Size(80, 21);
-            comboBox_SleepPolicy.TabIndex = 47;
-            comboBox_SleepPolicy.Text = "Sleep Policy";
+            this.comboBox_SleepPolicy.Location = new System.Drawing.Point(6, 27);
+            this.comboBox_SleepPolicy.Name = "comboBox_SleepPolicy";
+            this.comboBox_SleepPolicy.Size = new System.Drawing.Size(80, 21);
+            this.comboBox_SleepPolicy.TabIndex = 47;
+            this.comboBox_SleepPolicy.Text = "Sleep Policy";
             // 
             // button12
             // 
-            button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button12.Location = new System.Drawing.Point(6, 51);
-            button12.Name = "button12";
-            button12.Size = new System.Drawing.Size(152, 26);
-            button12.TabIndex = 48;
-            button12.Text = "Set Sleep Policy";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += new System.EventHandler(Button12_Click);
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(6, 51);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(152, 26);
+            this.button12.TabIndex = 48;
+            this.button12.Text = "Set Sleep Policy";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // groupBox10
             // 
-            groupBox10.Controls.Add(comboBox_AlarmPilicy);
-            groupBox10.Controls.Add(button11);
-            groupBox10.Location = new System.Drawing.Point(15, 492);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new System.Drawing.Size(166, 100);
-            groupBox10.TabIndex = 56;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "Set Alarm Configuration";
+            this.groupBox10.Controls.Add(this.comboBox_AlarmPilicy);
+            this.groupBox10.Controls.Add(this.button11);
+            this.groupBox10.Location = new System.Drawing.Point(15, 492);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(166, 100);
+            this.groupBox10.TabIndex = 56;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Set Alarm Configuration";
             // 
             // comboBox_AlarmPilicy
             // 
-            comboBox_AlarmPilicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_AlarmPilicy.FormattingEnabled = true;
-            comboBox_AlarmPilicy.Items.AddRange(new object[] {
+            this.comboBox_AlarmPilicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_AlarmPilicy.FormattingEnabled = true;
+            this.comboBox_AlarmPilicy.Items.AddRange(new object[] {
             "0",
             "1",
             "2",
             "3"});
-            comboBox_AlarmPilicy.Location = new System.Drawing.Point(8, 28);
-            comboBox_AlarmPilicy.Name = "comboBox_AlarmPilicy";
-            comboBox_AlarmPilicy.Size = new System.Drawing.Size(80, 21);
-            comboBox_AlarmPilicy.TabIndex = 42;
-            comboBox_AlarmPilicy.Text = "Alarm Policy";
+            this.comboBox_AlarmPilicy.Location = new System.Drawing.Point(8, 28);
+            this.comboBox_AlarmPilicy.Name = "comboBox_AlarmPilicy";
+            this.comboBox_AlarmPilicy.Size = new System.Drawing.Size(80, 21);
+            this.comboBox_AlarmPilicy.TabIndex = 42;
+            this.comboBox_AlarmPilicy.Text = "Alarm Policy";
             // 
             // button11
             // 
-            button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button11.Location = new System.Drawing.Point(8, 52);
-            button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(152, 26);
-            button11.TabIndex = 43;
-            button11.Text = "Set Alarm Policy";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += new System.EventHandler(Button11_Click);
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(8, 52);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(152, 26);
+            this.button11.TabIndex = 43;
+            this.button11.Text = "Set Alarm Policy";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // groupBox9
             // 
-            groupBox9.Controls.Add(dateTimePicker_SetTimeDate);
-            groupBox9.Controls.Add(button10);
-            groupBox9.Location = new System.Drawing.Point(353, 193);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Size = new System.Drawing.Size(204, 81);
-            groupBox9.TabIndex = 55;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "Set Time and Date";
+            this.groupBox9.Controls.Add(this.dateTimePicker_SetTimeDate);
+            this.groupBox9.Controls.Add(this.button10);
+            this.groupBox9.Location = new System.Drawing.Point(353, 193);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(204, 81);
+            this.groupBox9.TabIndex = 55;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Set Time and Date";
             // 
             // dateTimePicker_SetTimeDate
             // 
-            dateTimePicker_SetTimeDate.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            dateTimePicker_SetTimeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dateTimePicker_SetTimeDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            dateTimePicker_SetTimeDate.Location = new System.Drawing.Point(6, 20);
-            dateTimePicker_SetTimeDate.Name = "dateTimePicker_SetTimeDate";
-            dateTimePicker_SetTimeDate.Size = new System.Drawing.Size(179, 21);
-            dateTimePicker_SetTimeDate.TabIndex = 41;
+            this.dateTimePicker_SetTimeDate.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.dateTimePicker_SetTimeDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_SetTimeDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker_SetTimeDate.Location = new System.Drawing.Point(6, 20);
+            this.dateTimePicker_SetTimeDate.Name = "dateTimePicker_SetTimeDate";
+            this.dateTimePicker_SetTimeDate.Size = new System.Drawing.Size(179, 21);
+            this.dateTimePicker_SetTimeDate.TabIndex = 41;
             // 
             // button10
             // 
-            button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button10.Location = new System.Drawing.Point(6, 47);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(87, 26);
-            button10.TabIndex = 40;
-            button10.Text = "Time Date Config";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += new System.EventHandler(Button10_Click);
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(6, 47);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(87, 26);
+            this.button10.TabIndex = 40;
+            this.button10.Text = "Time Date Config";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // groupBox8
             // 
-            groupBox8.Controls.Add(comboBox_BatThreshold);
-            groupBox8.Controls.Add(button9);
-            groupBox8.Location = new System.Drawing.Point(187, 183);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new System.Drawing.Size(160, 91);
-            groupBox8.TabIndex = 54;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Vehicle Battery threshold ";
+            this.groupBox8.Controls.Add(this.comboBox_BatThreshold);
+            this.groupBox8.Controls.Add(this.button9);
+            this.groupBox8.Location = new System.Drawing.Point(187, 183);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(160, 91);
+            this.groupBox8.TabIndex = 54;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Vehicle Battery threshold ";
             // 
             // comboBox_BatThreshold
             // 
-            comboBox_BatThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_BatThreshold.FormattingEnabled = true;
-            comboBox_BatThreshold.Items.AddRange(new object[] {
+            this.comboBox_BatThreshold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_BatThreshold.FormattingEnabled = true;
+            this.comboBox_BatThreshold.Items.AddRange(new object[] {
             "0",
             "1",
             "2",
@@ -8101,1260 +8173,1200 @@ namespace Monitor
             "10",
             "11",
             "12"});
-            comboBox_BatThreshold.Location = new System.Drawing.Point(6, 20);
-            comboBox_BatThreshold.Name = "comboBox_BatThreshold";
-            comboBox_BatThreshold.Size = new System.Drawing.Size(49, 21);
-            comboBox_BatThreshold.TabIndex = 39;
+            this.comboBox_BatThreshold.Location = new System.Drawing.Point(6, 20);
+            this.comboBox_BatThreshold.Name = "comboBox_BatThreshold";
+            this.comboBox_BatThreshold.Size = new System.Drawing.Size(49, 21);
+            this.comboBox_BatThreshold.TabIndex = 39;
             // 
             // button9
             // 
-            button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button9.Location = new System.Drawing.Point(6, 47);
-            button9.Name = "button9";
-            button9.Size = new System.Drawing.Size(135, 26);
-            button9.TabIndex = 38;
-            button9.Text = "Vehicle Battery";
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += new System.EventHandler(Button9_Click);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(6, 47);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(135, 26);
+            this.button9.TabIndex = 38;
+            this.button9.Text = "Vehicle Battery";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.Button9_Click);
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(maskedTextBox_OutputDuration);
-            groupBox7.Controls.Add(comboBox_OutputNum);
-            groupBox7.Controls.Add(comboBox_OutputControl);
-            groupBox7.Controls.Add(button8);
-            groupBox7.Controls.Add(comboBox_OutputPulseLevel);
-            groupBox7.Location = new System.Drawing.Point(9, 386);
-            groupBox7.Name = "groupBox7";
-            groupBox7.Size = new System.Drawing.Size(215, 94);
-            groupBox7.TabIndex = 12;
-            groupBox7.TabStop = false;
-            groupBox7.Text = "Set Input Config";
+            this.groupBox7.Controls.Add(this.maskedTextBox_OutputDuration);
+            this.groupBox7.Controls.Add(this.comboBox_OutputNum);
+            this.groupBox7.Controls.Add(this.comboBox_OutputControl);
+            this.groupBox7.Controls.Add(this.button8);
+            this.groupBox7.Controls.Add(this.comboBox_OutputPulseLevel);
+            this.groupBox7.Location = new System.Drawing.Point(9, 386);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(215, 94);
+            this.groupBox7.TabIndex = 12;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Set Input Config";
             // 
             // maskedTextBox_OutputDuration
             // 
-            maskedTextBox_OutputDuration.Location = new System.Drawing.Point(164, 48);
-            maskedTextBox_OutputDuration.Name = "maskedTextBox_OutputDuration";
-            maskedTextBox_OutputDuration.Size = new System.Drawing.Size(39, 22);
-            maskedTextBox_OutputDuration.TabIndex = 38;
+            this.maskedTextBox_OutputDuration.Location = new System.Drawing.Point(164, 48);
+            this.maskedTextBox_OutputDuration.Name = "maskedTextBox_OutputDuration";
+            this.maskedTextBox_OutputDuration.Size = new System.Drawing.Size(39, 22);
+            this.maskedTextBox_OutputDuration.TabIndex = 38;
             // 
             // comboBox_OutputNum
             // 
-            comboBox_OutputNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_OutputNum.FormattingEnabled = true;
-            comboBox_OutputNum.Items.AddRange(new object[] {
+            this.comboBox_OutputNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_OutputNum.FormattingEnabled = true;
+            this.comboBox_OutputNum.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            comboBox_OutputNum.Location = new System.Drawing.Point(6, 20);
-            comboBox_OutputNum.Name = "comboBox_OutputNum";
-            comboBox_OutputNum.Size = new System.Drawing.Size(71, 21);
-            comboBox_OutputNum.TabIndex = 33;
-            comboBox_OutputNum.Text = "Output Num";
+            this.comboBox_OutputNum.Location = new System.Drawing.Point(6, 20);
+            this.comboBox_OutputNum.Name = "comboBox_OutputNum";
+            this.comboBox_OutputNum.Size = new System.Drawing.Size(71, 21);
+            this.comboBox_OutputNum.TabIndex = 33;
+            this.comboBox_OutputNum.Text = "Output Num";
             // 
             // comboBox_OutputControl
             // 
-            comboBox_OutputControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_OutputControl.FormattingEnabled = true;
-            comboBox_OutputControl.Items.AddRange(new object[] {
+            this.comboBox_OutputControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_OutputControl.FormattingEnabled = true;
+            this.comboBox_OutputControl.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_OutputControl.Location = new System.Drawing.Point(83, 20);
-            comboBox_OutputControl.Name = "comboBox_OutputControl";
-            comboBox_OutputControl.Size = new System.Drawing.Size(71, 21);
-            comboBox_OutputControl.TabIndex = 34;
-            comboBox_OutputControl.Text = "Cntl";
+            this.comboBox_OutputControl.Location = new System.Drawing.Point(83, 20);
+            this.comboBox_OutputControl.Name = "comboBox_OutputControl";
+            this.comboBox_OutputControl.Size = new System.Drawing.Size(71, 21);
+            this.comboBox_OutputControl.TabIndex = 34;
+            this.comboBox_OutputControl.Text = "Cntl";
             // 
             // button8
             // 
-            button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button8.Location = new System.Drawing.Point(5, 47);
-            button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(152, 26);
-            button8.TabIndex = 36;
-            button8.Text = "Set Output Config";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += new System.EventHandler(Button8_Click);
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(5, 47);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(152, 26);
+            this.button8.TabIndex = 36;
+            this.button8.Text = "Set Output Config";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.Button8_Click);
             // 
             // comboBox_OutputPulseLevel
             // 
-            comboBox_OutputPulseLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_OutputPulseLevel.FormattingEnabled = true;
-            comboBox_OutputPulseLevel.Items.AddRange(new object[] {
+            this.comboBox_OutputPulseLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_OutputPulseLevel.FormattingEnabled = true;
+            this.comboBox_OutputPulseLevel.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_OutputPulseLevel.Location = new System.Drawing.Point(160, 20);
-            comboBox_OutputPulseLevel.Name = "comboBox_OutputPulseLevel";
-            comboBox_OutputPulseLevel.Size = new System.Drawing.Size(43, 21);
-            comboBox_OutputPulseLevel.TabIndex = 37;
-            comboBox_OutputPulseLevel.Text = "Pulse\\Level";
+            this.comboBox_OutputPulseLevel.Location = new System.Drawing.Point(160, 20);
+            this.comboBox_OutputPulseLevel.Name = "comboBox_OutputPulseLevel";
+            this.comboBox_OutputPulseLevel.Size = new System.Drawing.Size(43, 21);
+            this.comboBox_OutputPulseLevel.TabIndex = 37;
+            this.comboBox_OutputPulseLevel.Text = "Pulse\\Level";
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(maskedTextBox_InputDuration);
-            groupBox6.Controls.Add(comboBox_InputNum1);
-            groupBox6.Controls.Add(comboBox_Interupt);
-            groupBox6.Controls.Add(button7);
-            groupBox6.Location = new System.Drawing.Point(9, 280);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new System.Drawing.Size(215, 100);
-            groupBox6.TabIndex = 53;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Input Configuration";
+            this.groupBox6.Controls.Add(this.maskedTextBox_InputDuration);
+            this.groupBox6.Controls.Add(this.comboBox_InputNum1);
+            this.groupBox6.Controls.Add(this.comboBox_Interupt);
+            this.groupBox6.Controls.Add(this.button7);
+            this.groupBox6.Location = new System.Drawing.Point(9, 280);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(215, 100);
+            this.groupBox6.TabIndex = 53;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Input Configuration";
             // 
             // maskedTextBox_InputDuration
             // 
-            maskedTextBox_InputDuration.Location = new System.Drawing.Point(157, 31);
-            maskedTextBox_InputDuration.Name = "maskedTextBox_InputDuration";
-            maskedTextBox_InputDuration.Size = new System.Drawing.Size(46, 22);
-            maskedTextBox_InputDuration.TabIndex = 33;
+            this.maskedTextBox_InputDuration.Location = new System.Drawing.Point(157, 31);
+            this.maskedTextBox_InputDuration.Name = "maskedTextBox_InputDuration";
+            this.maskedTextBox_InputDuration.Size = new System.Drawing.Size(46, 22);
+            this.maskedTextBox_InputDuration.TabIndex = 33;
             // 
             // comboBox_InputNum1
             // 
-            comboBox_InputNum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_InputNum1.FormattingEnabled = true;
-            comboBox_InputNum1.Items.AddRange(new object[] {
+            this.comboBox_InputNum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_InputNum1.FormattingEnabled = true;
+            this.comboBox_InputNum1.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_InputNum1.Location = new System.Drawing.Point(6, 31);
-            comboBox_InputNum1.Name = "comboBox_InputNum1";
-            comboBox_InputNum1.Size = new System.Drawing.Size(71, 21);
-            comboBox_InputNum1.TabIndex = 29;
-            comboBox_InputNum1.Text = "Input Num";
+            this.comboBox_InputNum1.Location = new System.Drawing.Point(6, 31);
+            this.comboBox_InputNum1.Name = "comboBox_InputNum1";
+            this.comboBox_InputNum1.Size = new System.Drawing.Size(71, 21);
+            this.comboBox_InputNum1.TabIndex = 29;
+            this.comboBox_InputNum1.Text = "Input Num";
             // 
             // comboBox_Interupt
             // 
-            comboBox_Interupt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_Interupt.FormattingEnabled = true;
-            comboBox_Interupt.Items.AddRange(new object[] {
+            this.comboBox_Interupt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_Interupt.FormattingEnabled = true;
+            this.comboBox_Interupt.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_Interupt.Location = new System.Drawing.Point(83, 31);
-            comboBox_Interupt.Name = "comboBox_Interupt";
-            comboBox_Interupt.Size = new System.Drawing.Size(71, 21);
-            comboBox_Interupt.TabIndex = 30;
-            comboBox_Interupt.Text = "Interrupt";
+            this.comboBox_Interupt.Location = new System.Drawing.Point(83, 31);
+            this.comboBox_Interupt.Name = "comboBox_Interupt";
+            this.comboBox_Interupt.Size = new System.Drawing.Size(71, 21);
+            this.comboBox_Interupt.TabIndex = 30;
+            this.comboBox_Interupt.Text = "Interrupt";
             // 
             // button7
             // 
-            button7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button7.Location = new System.Drawing.Point(5, 58);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(152, 26);
-            button7.TabIndex = 32;
-            button7.Text = "Set Input Config";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += new System.EventHandler(Button7_Click);
+            this.button7.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(5, 58);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(152, 26);
+            this.button7.TabIndex = 32;
+            this.button7.Text = "Set Input Config";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // groupBox13
             // 
-            groupBox13.Controls.Add(btn_ChangePassword);
-            groupBox13.Controls.Add(textBox_NewPassword);
-            groupBox13.Location = new System.Drawing.Point(9, 174);
-            groupBox13.Name = "groupBox13";
-            groupBox13.Size = new System.Drawing.Size(172, 100);
-            groupBox13.TabIndex = 52;
-            groupBox13.TabStop = false;
-            groupBox13.Text = "Change Password";
+            this.groupBox13.Controls.Add(this.btn_ChangePassword);
+            this.groupBox13.Controls.Add(this.textBox_NewPassword);
+            this.groupBox13.Location = new System.Drawing.Point(9, 174);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(172, 100);
+            this.groupBox13.TabIndex = 52;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Change Password";
             // 
             // btn_ChangePassword
             // 
-            btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btn_ChangePassword.Location = new System.Drawing.Point(8, 48);
-            btn_ChangePassword.Name = "btn_ChangePassword";
-            btn_ChangePassword.Size = new System.Drawing.Size(152, 26);
-            btn_ChangePassword.TabIndex = 28;
-            btn_ChangePassword.Text = "Change Password";
-            btn_ChangePassword.UseVisualStyleBackColor = true;
+            this.btn_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChangePassword.Location = new System.Drawing.Point(8, 48);
+            this.btn_ChangePassword.Name = "btn_ChangePassword";
+            this.btn_ChangePassword.Size = new System.Drawing.Size(152, 26);
+            this.btn_ChangePassword.TabIndex = 28;
+            this.btn_ChangePassword.Text = "Change Password";
+            this.btn_ChangePassword.UseVisualStyleBackColor = true;
             // 
             // textBox_NewPassword
             // 
-            textBox_NewPassword.Location = new System.Drawing.Point(6, 19);
-            textBox_NewPassword.Name = "textBox_NewPassword";
-            textBox_NewPassword.Size = new System.Drawing.Size(120, 22);
-            textBox_NewPassword.TabIndex = 27;
+            this.textBox_NewPassword.Location = new System.Drawing.Point(6, 19);
+            this.textBox_NewPassword.Name = "textBox_NewPassword";
+            this.textBox_NewPassword.Size = new System.Drawing.Size(120, 22);
+            this.textBox_NewPassword.TabIndex = 27;
             // 
             // groupBox14
             // 
-            groupBox14.Controls.Add(comboBox_SMSControl);
-            groupBox14.Controls.Add(button_SMSControl);
-            groupBox14.Location = new System.Drawing.Point(187, 105);
-            groupBox14.Name = "groupBox14";
-            groupBox14.Size = new System.Drawing.Size(122, 80);
-            groupBox14.TabIndex = 51;
-            groupBox14.TabStop = false;
-            groupBox14.Text = "SMS Control";
+            this.groupBox14.Controls.Add(this.comboBox_SMSControl);
+            this.groupBox14.Controls.Add(this.button_SMSControl);
+            this.groupBox14.Location = new System.Drawing.Point(187, 105);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(122, 80);
+            this.groupBox14.TabIndex = 51;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "SMS Control";
             // 
             // comboBox_SMSControl
             // 
-            comboBox_SMSControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_SMSControl.FormattingEnabled = true;
-            comboBox_SMSControl.Items.AddRange(new object[] {
+            this.comboBox_SMSControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_SMSControl.FormattingEnabled = true;
+            this.comboBox_SMSControl.Items.AddRange(new object[] {
             "0",
             "1"});
-            comboBox_SMSControl.Location = new System.Drawing.Point(6, 20);
-            comboBox_SMSControl.Name = "comboBox_SMSControl";
-            comboBox_SMSControl.Size = new System.Drawing.Size(101, 21);
-            comboBox_SMSControl.TabIndex = 25;
+            this.comboBox_SMSControl.Location = new System.Drawing.Point(6, 20);
+            this.comboBox_SMSControl.Name = "comboBox_SMSControl";
+            this.comboBox_SMSControl.Size = new System.Drawing.Size(101, 21);
+            this.comboBox_SMSControl.TabIndex = 25;
             // 
             // button_SMSControl
             // 
-            button_SMSControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_SMSControl.Location = new System.Drawing.Point(6, 47);
-            button_SMSControl.Name = "button_SMSControl";
-            button_SMSControl.Size = new System.Drawing.Size(113, 26);
-            button_SMSControl.TabIndex = 26;
-            button_SMSControl.Text = "SMS Control";
-            button_SMSControl.UseVisualStyleBackColor = true;
-            button_SMSControl.Click += new System.EventHandler(Button_SMSControl_Click);
+            this.button_SMSControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SMSControl.Location = new System.Drawing.Point(6, 47);
+            this.button_SMSControl.Name = "button_SMSControl";
+            this.button_SMSControl.Size = new System.Drawing.Size(113, 26);
+            this.button_SMSControl.TabIndex = 26;
+            this.button_SMSControl.Text = "SMS Control";
+            this.button_SMSControl.UseVisualStyleBackColor = true;
+            this.button_SMSControl.Click += new System.EventHandler(this.Button_SMSControl_Click);
             // 
             // groupBox15
             // 
-            groupBox15.Controls.Add(textBox_FreeText);
-            groupBox15.Controls.Add(comboBox_InputIndex);
-            groupBox15.Controls.Add(button_SetFreeText);
-            groupBox15.Location = new System.Drawing.Point(187, 24);
-            groupBox15.Name = "groupBox15";
-            groupBox15.Size = new System.Drawing.Size(141, 75);
-            groupBox15.TabIndex = 50;
-            groupBox15.TabStop = false;
-            groupBox15.Text = "Set Input Free Text";
+            this.groupBox15.Controls.Add(this.textBox_FreeText);
+            this.groupBox15.Controls.Add(this.comboBox_InputIndex);
+            this.groupBox15.Controls.Add(this.button_SetFreeText);
+            this.groupBox15.Location = new System.Drawing.Point(187, 24);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(141, 75);
+            this.groupBox15.TabIndex = 50;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Set Input Free Text";
             // 
             // textBox_FreeText
             // 
-            textBox_FreeText.Location = new System.Drawing.Point(52, 16);
-            textBox_FreeText.Name = "textBox_FreeText";
-            textBox_FreeText.Size = new System.Drawing.Size(67, 22);
-            textBox_FreeText.TabIndex = 25;
+            this.textBox_FreeText.Location = new System.Drawing.Point(52, 16);
+            this.textBox_FreeText.Name = "textBox_FreeText";
+            this.textBox_FreeText.Size = new System.Drawing.Size(67, 22);
+            this.textBox_FreeText.TabIndex = 25;
             // 
             // comboBox_InputIndex
             // 
-            comboBox_InputIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            comboBox_InputIndex.FormattingEnabled = true;
-            comboBox_InputIndex.Items.AddRange(new object[] {
+            this.comboBox_InputIndex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_InputIndex.FormattingEnabled = true;
+            this.comboBox_InputIndex.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            comboBox_InputIndex.Location = new System.Drawing.Point(8, 17);
-            comboBox_InputIndex.Name = "comboBox_InputIndex";
-            comboBox_InputIndex.Size = new System.Drawing.Size(37, 21);
-            comboBox_InputIndex.TabIndex = 20;
+            this.comboBox_InputIndex.Location = new System.Drawing.Point(8, 17);
+            this.comboBox_InputIndex.Name = "comboBox_InputIndex";
+            this.comboBox_InputIndex.Size = new System.Drawing.Size(37, 21);
+            this.comboBox_InputIndex.TabIndex = 20;
             // 
             // button_SetFreeText
             // 
-            button_SetFreeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_SetFreeText.Location = new System.Drawing.Point(8, 40);
-            button_SetFreeText.Name = "button_SetFreeText";
-            button_SetFreeText.Size = new System.Drawing.Size(111, 26);
-            button_SetFreeText.TabIndex = 24;
-            button_SetFreeText.Text = "Set Free Text";
-            button_SetFreeText.UseVisualStyleBackColor = true;
+            this.button_SetFreeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_SetFreeText.Location = new System.Drawing.Point(8, 40);
+            this.button_SetFreeText.Name = "button_SetFreeText";
+            this.button_SetFreeText.Size = new System.Drawing.Size(111, 26);
+            this.button_SetFreeText.TabIndex = 24;
+            this.button_SetFreeText.Text = "Set Free Text";
+            this.button_SetFreeText.UseVisualStyleBackColor = true;
             // 
             // groupBox16
             // 
-            groupBox16.Controls.Add(maskedTextBox3_Subscriber3);
-            groupBox16.Controls.Add(maskedTextBox2_Subscriber2);
-            groupBox16.Controls.Add(maskedTextBox1_Subscriber1);
-            groupBox16.Controls.Add(button4);
-            groupBox16.Location = new System.Drawing.Point(9, 20);
-            groupBox16.Name = "groupBox16";
-            groupBox16.Size = new System.Drawing.Size(172, 149);
-            groupBox16.TabIndex = 20;
-            groupBox16.TabStop = false;
-            groupBox16.Text = "Subscribers";
+            this.groupBox16.Controls.Add(this.maskedTextBox3_Subscriber3);
+            this.groupBox16.Controls.Add(this.maskedTextBox2_Subscriber2);
+            this.groupBox16.Controls.Add(this.maskedTextBox1_Subscriber1);
+            this.groupBox16.Controls.Add(this.button4);
+            this.groupBox16.Location = new System.Drawing.Point(9, 20);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(172, 149);
+            this.groupBox16.TabIndex = 20;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Subscribers";
             // 
             // maskedTextBox3_Subscriber3
             // 
-            maskedTextBox3_Subscriber3.Location = new System.Drawing.Point(8, 76);
-            maskedTextBox3_Subscriber3.Name = "maskedTextBox3_Subscriber3";
-            maskedTextBox3_Subscriber3.Size = new System.Drawing.Size(153, 22);
-            maskedTextBox3_Subscriber3.TabIndex = 28;
+            this.maskedTextBox3_Subscriber3.Location = new System.Drawing.Point(8, 76);
+            this.maskedTextBox3_Subscriber3.Name = "maskedTextBox3_Subscriber3";
+            this.maskedTextBox3_Subscriber3.Size = new System.Drawing.Size(153, 22);
+            this.maskedTextBox3_Subscriber3.TabIndex = 28;
             // 
             // maskedTextBox2_Subscriber2
             // 
-            maskedTextBox2_Subscriber2.Location = new System.Drawing.Point(8, 49);
-            maskedTextBox2_Subscriber2.Name = "maskedTextBox2_Subscriber2";
-            maskedTextBox2_Subscriber2.Size = new System.Drawing.Size(153, 22);
-            maskedTextBox2_Subscriber2.TabIndex = 27;
+            this.maskedTextBox2_Subscriber2.Location = new System.Drawing.Point(8, 49);
+            this.maskedTextBox2_Subscriber2.Name = "maskedTextBox2_Subscriber2";
+            this.maskedTextBox2_Subscriber2.Size = new System.Drawing.Size(153, 22);
+            this.maskedTextBox2_Subscriber2.TabIndex = 27;
             // 
             // maskedTextBox1_Subscriber1
             // 
-            maskedTextBox1_Subscriber1.Location = new System.Drawing.Point(8, 24);
-            maskedTextBox1_Subscriber1.Name = "maskedTextBox1_Subscriber1";
-            maskedTextBox1_Subscriber1.Size = new System.Drawing.Size(153, 22);
-            maskedTextBox1_Subscriber1.TabIndex = 26;
+            this.maskedTextBox1_Subscriber1.Location = new System.Drawing.Point(8, 24);
+            this.maskedTextBox1_Subscriber1.Name = "maskedTextBox1_Subscriber1";
+            this.maskedTextBox1_Subscriber1.Size = new System.Drawing.Size(153, 22);
+            this.maskedTextBox1_Subscriber1.TabIndex = 26;
             // 
             // button4
             // 
-            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button4.Location = new System.Drawing.Point(6, 107);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(154, 26);
-            button4.TabIndex = 20;
-            button4.Text = "Set Subscribers";
-            button4.UseVisualStyleBackColor = true;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(6, 107);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(154, 26);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Set Subscribers";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
             // 
-            tabPage5.Location = new System.Drawing.Point(4, 24);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Size = new System.Drawing.Size(1406, 776);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "S1 Requests and Qureies";
-            tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1406, 776);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "S1 Requests and Qureies";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // textBox_SMSPhoneNumber
             // 
-            textBox_SMSPhoneNumber.Location = new System.Drawing.Point(6, 22);
-            textBox_SMSPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SMSPhoneNumber.Name = "textBox_SMSPhoneNumber";
-            textBox_SMSPhoneNumber.Size = new System.Drawing.Size(143, 26);
-            textBox_SMSPhoneNumber.TabIndex = 10;
+            this.textBox_SMSPhoneNumber.Location = new System.Drawing.Point(6, 22);
+            this.textBox_SMSPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SMSPhoneNumber.Name = "textBox_SMSPhoneNumber";
+            this.textBox_SMSPhoneNumber.Size = new System.Drawing.Size(143, 26);
+            this.textBox_SMSPhoneNumber.TabIndex = 10;
             // 
             // button_SendAllCheckedSMS
             // 
-            button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
-            button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
-            button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
-            button_SendAllCheckedSMS.TabIndex = 7;
-            button_SendAllCheckedSMS.Text = "Send SMS Multi";
-            button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
-            button_SendAllCheckedSMS.Click += new System.EventHandler(Button39_Click);
+            this.button_SendAllCheckedSMS.Location = new System.Drawing.Point(353, 115);
+            this.button_SendAllCheckedSMS.Name = "button_SendAllCheckedSMS";
+            this.button_SendAllCheckedSMS.Size = new System.Drawing.Size(123, 23);
+            this.button_SendAllCheckedSMS.TabIndex = 7;
+            this.button_SendAllCheckedSMS.Text = "Send SMS Multi";
+            this.button_SendAllCheckedSMS.UseVisualStyleBackColor = true;
+            this.button_SendAllCheckedSMS.Click += new System.EventHandler(this.Button39_Click);
             // 
             // button_SendSelectedSMS
             // 
-            button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
-            button_SendSelectedSMS.Name = "button_SendSelectedSMS";
-            button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
-            button_SendSelectedSMS.TabIndex = 8;
-            button_SendSelectedSMS.Text = "Send SMS One";
-            button_SendSelectedSMS.UseVisualStyleBackColor = true;
-            button_SendSelectedSMS.Click += new System.EventHandler(Button_SendSelectedSMS_Click);
+            this.button_SendSelectedSMS.Location = new System.Drawing.Point(482, 115);
+            this.button_SendSelectedSMS.Name = "button_SendSelectedSMS";
+            this.button_SendSelectedSMS.Size = new System.Drawing.Size(107, 23);
+            this.button_SendSelectedSMS.TabIndex = 8;
+            this.button_SendSelectedSMS.Text = "Send SMS One";
+            this.button_SendSelectedSMS.UseVisualStyleBackColor = true;
+            this.button_SendSelectedSMS.Click += new System.EventHandler(this.Button_SendSelectedSMS_Click);
             // 
             // button_Ring
             // 
-            button_Ring.Location = new System.Drawing.Point(88, 112);
-            button_Ring.Name = "button_Ring";
-            button_Ring.Size = new System.Drawing.Size(141, 23);
-            button_Ring.TabIndex = 14;
-            button_Ring.Text = "Ring";
-            button_Ring.UseVisualStyleBackColor = true;
+            this.button_Ring.Location = new System.Drawing.Point(88, 112);
+            this.button_Ring.Name = "button_Ring";
+            this.button_Ring.Size = new System.Drawing.Size(141, 23);
+            this.button_Ring.TabIndex = 14;
+            this.button_Ring.Text = "Ring";
+            this.button_Ring.UseVisualStyleBackColor = true;
             // 
             // comboBox_SystemType
             // 
-            comboBox_SystemType.FormattingEnabled = true;
-            comboBox_SystemType.Items.AddRange(new object[] {
+            this.comboBox_SystemType.FormattingEnabled = true;
+            this.comboBox_SystemType.Items.AddRange(new object[] {
             "A",
             "B",
             "C"});
-            comboBox_SystemType.Location = new System.Drawing.Point(5, 45);
-            comboBox_SystemType.Name = "comboBox_SystemType";
-            comboBox_SystemType.Size = new System.Drawing.Size(78, 21);
-            comboBox_SystemType.TabIndex = 77;
-            comboBox_SystemType.MouseDown += new System.Windows.Forms.MouseEventHandler(comboBox2_MouseDown);
+            this.comboBox_SystemType.Location = new System.Drawing.Point(5, 45);
+            this.comboBox_SystemType.Name = "comboBox_SystemType";
+            this.comboBox_SystemType.Size = new System.Drawing.Size(78, 21);
+            this.comboBox_SystemType.TabIndex = 77;
+            this.comboBox_SystemType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseDown);
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // timer_General_100ms
             // 
-            timer_General_100ms.Enabled = true;
-            timer_General_100ms.Tick += new System.EventHandler(Timer_ConectionKeepAlive_Tick);
+            this.timer_General_100ms.Enabled = true;
+            this.timer_General_100ms.Tick += new System.EventHandler(this.Timer_ConectionKeepAlive_Tick);
             // 
             // timer_General_1Second
             // 
-            timer_General_1Second.Enabled = true;
-            timer_General_1Second.Interval = 1000;
-            timer_General_1Second.Tick += new System.EventHandler(Timer_General_Tick);
+            this.timer_General_1Second.Enabled = true;
+            this.timer_General_1Second.Interval = 1000;
+            this.timer_General_1Second.Tick += new System.EventHandler(this.Timer_General_Tick);
             // 
             // serialPort
             // 
-            serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(SerialPort_DataReceived);
+            this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort_DataReceived);
             // 
             // groupBox36
             // 
-            groupBox36.Location = new System.Drawing.Point(0, -58);
-            groupBox36.Margin = new System.Windows.Forms.Padding(2);
-            groupBox36.Name = "groupBox36";
-            groupBox36.Padding = new System.Windows.Forms.Padding(2);
-            groupBox36.Size = new System.Drawing.Size(126, 55);
-            groupBox36.TabIndex = 11;
-            groupBox36.TabStop = false;
-            groupBox36.Text = "Comm Interface";
+            this.groupBox36.Location = new System.Drawing.Point(0, -58);
+            this.groupBox36.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox36.Name = "groupBox36";
+            this.groupBox36.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox36.Size = new System.Drawing.Size(126, 55);
+            this.groupBox36.TabIndex = 11;
+            this.groupBox36.TabStop = false;
+            this.groupBox36.Text = "Comm Interface";
             // 
             // groupBox_PhoneNumber
             // 
-            groupBox_PhoneNumber.Controls.Add(textBox_SMSPhoneNumber);
-            groupBox_PhoneNumber.Location = new System.Drawing.Point(890, 5);
-            groupBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_PhoneNumber.Name = "groupBox_PhoneNumber";
-            groupBox_PhoneNumber.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_PhoneNumber.Size = new System.Drawing.Size(158, 54);
-            groupBox_PhoneNumber.TabIndex = 12;
-            groupBox_PhoneNumber.TabStop = false;
-            groupBox_PhoneNumber.Text = "Phone Number";
-            groupBox_PhoneNumber.Visible = false;
+            this.groupBox_PhoneNumber.Controls.Add(this.textBox_SMSPhoneNumber);
+            this.groupBox_PhoneNumber.Location = new System.Drawing.Point(890, 5);
+            this.groupBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_PhoneNumber.Name = "groupBox_PhoneNumber";
+            this.groupBox_PhoneNumber.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_PhoneNumber.Size = new System.Drawing.Size(158, 54);
+            this.groupBox_PhoneNumber.TabIndex = 12;
+            this.groupBox_PhoneNumber.TabStop = false;
+            this.groupBox_PhoneNumber.Text = "Phone Number";
+            this.groupBox_PhoneNumber.Visible = false;
             // 
             // Label_SerialPortRx
             // 
-            Label_SerialPortRx.AutoSize = true;
-            Label_SerialPortRx.Location = new System.Drawing.Point(19, 52);
-            Label_SerialPortRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            Label_SerialPortRx.Name = "Label_SerialPortRx";
-            Label_SerialPortRx.Size = new System.Drawing.Size(23, 18);
-            Label_SerialPortRx.TabIndex = 108;
-            Label_SerialPortRx.Text = "Rx";
+            this.Label_SerialPortRx.AutoSize = true;
+            this.Label_SerialPortRx.Location = new System.Drawing.Point(19, 52);
+            this.Label_SerialPortRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_SerialPortRx.Name = "Label_SerialPortRx";
+            this.Label_SerialPortRx.Size = new System.Drawing.Size(23, 18);
+            this.Label_SerialPortRx.TabIndex = 108;
+            this.Label_SerialPortRx.Text = "Rx";
             // 
             // label_SerialPortConnected
             // 
-            label_SerialPortConnected.AutoSize = true;
-            label_SerialPortConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label_SerialPortConnected.Location = new System.Drawing.Point(15, 28);
-            label_SerialPortConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label_SerialPortConnected.Name = "label_SerialPortConnected";
-            label_SerialPortConnected.Size = new System.Drawing.Size(69, 18);
-            label_SerialPortConnected.TabIndex = 109;
-            label_SerialPortConnected.Text = "Conneted";
+            this.label_SerialPortConnected.AutoSize = true;
+            this.label_SerialPortConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SerialPortConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_SerialPortConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_SerialPortConnected.Name = "label_SerialPortConnected";
+            this.label_SerialPortConnected.Size = new System.Drawing.Size(69, 18);
+            this.label_SerialPortConnected.TabIndex = 109;
+            this.label_SerialPortConnected.Text = "Conneted";
             // 
             // Label_SerialPortTx
             // 
-            Label_SerialPortTx.AutoSize = true;
-            Label_SerialPortTx.Location = new System.Drawing.Point(59, 52);
-            Label_SerialPortTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            Label_SerialPortTx.Name = "Label_SerialPortTx";
-            Label_SerialPortTx.Size = new System.Drawing.Size(21, 18);
-            Label_SerialPortTx.TabIndex = 110;
-            Label_SerialPortTx.Text = "Tx";
+            this.Label_SerialPortTx.AutoSize = true;
+            this.Label_SerialPortTx.Location = new System.Drawing.Point(59, 52);
+            this.Label_SerialPortTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_SerialPortTx.Name = "Label_SerialPortTx";
+            this.Label_SerialPortTx.Size = new System.Drawing.Size(21, 18);
+            this.Label_SerialPortTx.TabIndex = 110;
+            this.Label_SerialPortTx.Text = "Tx";
             // 
             // groupBox_SerialPort
             // 
-            groupBox_SerialPort.Controls.Add(label_SerialPortStatus);
-            groupBox_SerialPort.Controls.Add(Label_SerialPortTx);
-            groupBox_SerialPort.Controls.Add(label_SerialPortConnected);
-            groupBox_SerialPort.Controls.Add(Label_SerialPortRx);
-            groupBox_SerialPort.Location = new System.Drawing.Point(1427, 74);
-            groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_SerialPort.Name = "groupBox_SerialPort";
-            groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_SerialPort.Size = new System.Drawing.Size(174, 103);
-            groupBox_SerialPort.TabIndex = 111;
-            groupBox_SerialPort.TabStop = false;
-            groupBox_SerialPort.Text = "Serial port";
-            groupBox_SerialPort.Enter += new System.EventHandler(groupBox_SerialPort_Enter);
+            this.groupBox_SerialPort.Controls.Add(this.label_SerialPortStatus);
+            this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
+            this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
+            this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 74);
+            this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_SerialPort.Name = "groupBox_SerialPort";
+            this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 103);
+            this.groupBox_SerialPort.TabIndex = 111;
+            this.groupBox_SerialPort.TabStop = false;
+            this.groupBox_SerialPort.Text = "Serial port";
+            this.groupBox_SerialPort.Enter += new System.EventHandler(this.groupBox_SerialPort_Enter);
             // 
             // label_SerialPortStatus
             // 
-            label_SerialPortStatus.AutoSize = true;
-            label_SerialPortStatus.Location = new System.Drawing.Point(87, 28);
-            label_SerialPortStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label_SerialPortStatus.Name = "label_SerialPortStatus";
-            label_SerialPortStatus.Size = new System.Drawing.Size(42, 18);
-            label_SerialPortStatus.TabIndex = 111;
-            label_SerialPortStatus.Text = "None";
+            this.label_SerialPortStatus.AutoSize = true;
+            this.label_SerialPortStatus.Location = new System.Drawing.Point(87, 28);
+            this.label_SerialPortStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_SerialPortStatus.Name = "label_SerialPortStatus";
+            this.label_SerialPortStatus.Size = new System.Drawing.Size(42, 18);
+            this.label_SerialPortStatus.TabIndex = 111;
+            this.label_SerialPortStatus.Text = "None";
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(button97);
-            groupBox4.Controls.Add(textBox_SystemStatus);
-            groupBox4.Location = new System.Drawing.Point(1427, 443);
-            groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            groupBox4.Size = new System.Drawing.Size(174, 210);
-            groupBox4.TabIndex = 114;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "User information";
+            this.groupBox4.Controls.Add(this.button97);
+            this.groupBox4.Controls.Add(this.textBox_SystemStatus);
+            this.groupBox4.Location = new System.Drawing.Point(1427, 443);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(174, 210);
+            this.groupBox4.TabIndex = 114;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "User information";
             // 
             // button97
             // 
-            button97.Location = new System.Drawing.Point(5, 182);
-            button97.Margin = new System.Windows.Forms.Padding(2);
-            button97.Name = "button97";
-            button97.Size = new System.Drawing.Size(53, 22);
-            button97.TabIndex = 114;
-            button97.Text = "Clear";
-            button97.UseVisualStyleBackColor = true;
-            button97.Click += new System.EventHandler(button97_Click);
+            this.button97.Location = new System.Drawing.Point(5, 182);
+            this.button97.Margin = new System.Windows.Forms.Padding(2);
+            this.button97.Name = "button97";
+            this.button97.Size = new System.Drawing.Size(53, 22);
+            this.button97.TabIndex = 114;
+            this.button97.Text = "Clear";
+            this.button97.UseVisualStyleBackColor = true;
+            this.button97.Click += new System.EventHandler(this.button97_Click);
             // 
             // textBox_SystemStatus
             // 
-            textBox_SystemStatus.Location = new System.Drawing.Point(6, 17);
-            textBox_SystemStatus.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SystemStatus.Multiline = true;
-            textBox_SystemStatus.Name = "textBox_SystemStatus";
-            textBox_SystemStatus.ReadOnly = true;
-            textBox_SystemStatus.Size = new System.Drawing.Size(166, 163);
-            textBox_SystemStatus.TabIndex = 113;
-            textBox_SystemStatus.TabStop = false;
+            this.textBox_SystemStatus.Location = new System.Drawing.Point(6, 17);
+            this.textBox_SystemStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemStatus.Multiline = true;
+            this.textBox_SystemStatus.Name = "textBox_SystemStatus";
+            this.textBox_SystemStatus.ReadOnly = true;
+            this.textBox_SystemStatus.Size = new System.Drawing.Size(166, 163);
+            this.textBox_SystemStatus.TabIndex = 113;
+            this.textBox_SystemStatus.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            pictureBox1.Location = new System.Drawing.Point(1427, 31);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(174, 37);
-            pictureBox1.TabIndex = 115;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1427, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 37);
+            this.pictureBox1.TabIndex = 115;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox_ClentTCPStatus
             // 
-            groupBox_ClentTCPStatus.Controls.Add(label_TCPClient);
-            groupBox_ClentTCPStatus.Controls.Add(label12);
-            groupBox_ClentTCPStatus.Controls.Add(label_ClientTCPConnected);
-            groupBox_ClentTCPStatus.Controls.Add(label14);
-            groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 186);
-            groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
-            groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
-            groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2);
-            groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 103);
-            groupBox_ClentTCPStatus.TabIndex = 112;
-            groupBox_ClentTCPStatus.TabStop = false;
-            groupBox_ClentTCPStatus.Text = "Client TCP";
+            this.groupBox_ClentTCPStatus.Controls.Add(this.label_TCPClient);
+            this.groupBox_ClentTCPStatus.Controls.Add(this.label12);
+            this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
+            this.groupBox_ClentTCPStatus.Controls.Add(this.label14);
+            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 186);
+            this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
+            this.groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 103);
+            this.groupBox_ClentTCPStatus.TabIndex = 112;
+            this.groupBox_ClentTCPStatus.TabStop = false;
+            this.groupBox_ClentTCPStatus.Text = "Client TCP";
             // 
             // label_TCPClient
             // 
-            label_TCPClient.AutoSize = true;
-            label_TCPClient.Location = new System.Drawing.Point(84, 28);
-            label_TCPClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label_TCPClient.Name = "label_TCPClient";
-            label_TCPClient.Size = new System.Drawing.Size(45, 18);
-            label_TCPClient.TabIndex = 111;
-            label_TCPClient.Text = " None";
+            this.label_TCPClient.AutoSize = true;
+            this.label_TCPClient.Location = new System.Drawing.Point(84, 28);
+            this.label_TCPClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_TCPClient.Name = "label_TCPClient";
+            this.label_TCPClient.Size = new System.Drawing.Size(45, 18);
+            this.label_TCPClient.TabIndex = 111;
+            this.label_TCPClient.Text = " None";
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(59, 52);
-            label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(21, 18);
-            label12.TabIndex = 110;
-            label12.Text = "Tx";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(59, 52);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(21, 18);
+            this.label12.TabIndex = 110;
+            this.label12.Text = "Tx";
             // 
             // label_ClientTCPConnected
             // 
-            label_ClientTCPConnected.AutoSize = true;
-            label_ClientTCPConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label_ClientTCPConnected.Location = new System.Drawing.Point(15, 28);
-            label_ClientTCPConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label_ClientTCPConnected.Name = "label_ClientTCPConnected";
-            label_ClientTCPConnected.Size = new System.Drawing.Size(69, 18);
-            label_ClientTCPConnected.TabIndex = 109;
-            label_ClientTCPConnected.Text = "Conneted";
+            this.label_ClientTCPConnected.AutoSize = true;
+            this.label_ClientTCPConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ClientTCPConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_ClientTCPConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_ClientTCPConnected.Name = "label_ClientTCPConnected";
+            this.label_ClientTCPConnected.Size = new System.Drawing.Size(69, 18);
+            this.label_ClientTCPConnected.TabIndex = 109;
+            this.label_ClientTCPConnected.Text = "Conneted";
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Location = new System.Drawing.Point(19, 52);
-            label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(23, 18);
-            label14.TabIndex = 108;
-            label14.Text = "Rx";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 52);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 18);
+            this.label14.TabIndex = 108;
+            this.label14.Text = "Rx";
             // 
             // checkedListBox_PhoneBook
             // 
-            checkedListBox_PhoneBook.FormattingEnabled = true;
-            checkedListBox_PhoneBook.Location = new System.Drawing.Point(5, 19);
-            checkedListBox_PhoneBook.Name = "checkedListBox_PhoneBook";
-            checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 289);
-            checkedListBox_PhoneBook.TabIndex = 0;
-            checkedListBox_PhoneBook.SelectedIndexChanged += new System.EventHandler(CheckedListBox_PhoneBook_SelectedIndexChanged);
-            checkedListBox_PhoneBook.KeyDown += new System.Windows.Forms.KeyEventHandler(CheckedListBox_PhoneBook_KeyDown);
-            checkedListBox_PhoneBook.MouseDown += new System.Windows.Forms.MouseEventHandler(CheckedListBox_PhoneBook_MouseDown);
+            this.checkedListBox_PhoneBook.FormattingEnabled = true;
+            this.checkedListBox_PhoneBook.Location = new System.Drawing.Point(5, 19);
+            this.checkedListBox_PhoneBook.Name = "checkedListBox_PhoneBook";
+            this.checkedListBox_PhoneBook.Size = new System.Drawing.Size(279, 289);
+            this.checkedListBox_PhoneBook.TabIndex = 0;
+            this.checkedListBox_PhoneBook.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox_PhoneBook_SelectedIndexChanged);
+            this.checkedListBox_PhoneBook.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CheckedListBox_PhoneBook_KeyDown);
+            this.checkedListBox_PhoneBook.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CheckedListBox_PhoneBook_MouseDown);
             // 
             // button_AddContact
             // 
-            button_AddContact.Location = new System.Drawing.Point(7, 371);
-            button_AddContact.Name = "button_AddContact";
-            button_AddContact.Size = new System.Drawing.Size(75, 23);
-            button_AddContact.TabIndex = 1;
-            button_AddContact.Text = "Add";
-            button_AddContact.UseVisualStyleBackColor = true;
-            button_AddContact.Click += new System.EventHandler(Button33_Click_1);
+            this.button_AddContact.Location = new System.Drawing.Point(7, 371);
+            this.button_AddContact.Name = "button_AddContact";
+            this.button_AddContact.Size = new System.Drawing.Size(75, 23);
+            this.button_AddContact.TabIndex = 1;
+            this.button_AddContact.Text = "Add";
+            this.button_AddContact.UseVisualStyleBackColor = true;
+            this.button_AddContact.Click += new System.EventHandler(this.Button33_Click_1);
             // 
             // button_RemoveContact
             // 
-            button_RemoveContact.Location = new System.Drawing.Point(88, 371);
-            button_RemoveContact.Name = "button_RemoveContact";
-            button_RemoveContact.Size = new System.Drawing.Size(75, 23);
-            button_RemoveContact.TabIndex = 2;
-            button_RemoveContact.Text = "Remove";
-            button_RemoveContact.UseVisualStyleBackColor = true;
-            button_RemoveContact.Click += new System.EventHandler(Button_RemoveContact_Click);
+            this.button_RemoveContact.Location = new System.Drawing.Point(88, 371);
+            this.button_RemoveContact.Name = "button_RemoveContact";
+            this.button_RemoveContact.Size = new System.Drawing.Size(75, 23);
+            this.button_RemoveContact.TabIndex = 2;
+            this.button_RemoveContact.Text = "Remove";
+            this.button_RemoveContact.UseVisualStyleBackColor = true;
+            this.button_RemoveContact.Click += new System.EventHandler(this.Button_RemoveContact_Click);
             // 
             // button_ExportToXML
             // 
-            button_ExportToXML.Location = new System.Drawing.Point(7, 400);
-            button_ExportToXML.Name = "button_ExportToXML";
-            button_ExportToXML.Size = new System.Drawing.Size(75, 23);
-            button_ExportToXML.TabIndex = 3;
-            button_ExportToXML.Text = "Export";
-            button_ExportToXML.UseVisualStyleBackColor = true;
-            button_ExportToXML.Click += new System.EventHandler(Button_ExportToXML_Click);
+            this.button_ExportToXML.Location = new System.Drawing.Point(7, 400);
+            this.button_ExportToXML.Name = "button_ExportToXML";
+            this.button_ExportToXML.Size = new System.Drawing.Size(75, 23);
+            this.button_ExportToXML.TabIndex = 3;
+            this.button_ExportToXML.Text = "Export";
+            this.button_ExportToXML.UseVisualStyleBackColor = true;
+            this.button_ExportToXML.Click += new System.EventHandler(this.Button_ExportToXML_Click);
             // 
             // button_ImportToXML
             // 
-            button_ImportToXML.Location = new System.Drawing.Point(88, 400);
-            button_ImportToXML.Name = "button_ImportToXML";
-            button_ImportToXML.Size = new System.Drawing.Size(75, 23);
-            button_ImportToXML.TabIndex = 4;
-            button_ImportToXML.Text = "Import";
-            button_ImportToXML.UseVisualStyleBackColor = true;
-            button_ImportToXML.Click += new System.EventHandler(Button_ImportToXML_Click);
+            this.button_ImportToXML.Location = new System.Drawing.Point(88, 400);
+            this.button_ImportToXML.Name = "button_ImportToXML";
+            this.button_ImportToXML.Size = new System.Drawing.Size(75, 23);
+            this.button_ImportToXML.TabIndex = 4;
+            this.button_ImportToXML.Text = "Import";
+            this.button_ImportToXML.UseVisualStyleBackColor = true;
+            this.button_ImportToXML.Click += new System.EventHandler(this.Button_ImportToXML_Click);
             // 
             // button33
             // 
-            button33.Location = new System.Drawing.Point(169, 371);
-            button33.Name = "button33";
-            button33.Size = new System.Drawing.Size(75, 23);
-            button33.TabIndex = 5;
-            button33.Text = "Edit";
-            button33.UseVisualStyleBackColor = true;
-            button33.Click += new System.EventHandler(Button33_Click_2);
+            this.button33.Location = new System.Drawing.Point(169, 371);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(75, 23);
+            this.button33.TabIndex = 5;
+            this.button33.Text = "Edit";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.Button33_Click_2);
             // 
             // richTextBox_ContactDetails
             // 
-            richTextBox_ContactDetails.BackColor = System.Drawing.SystemColors.Control;
-            richTextBox_ContactDetails.Location = new System.Drawing.Point(290, 19);
-            richTextBox_ContactDetails.Name = "richTextBox_ContactDetails";
-            richTextBox_ContactDetails.Size = new System.Drawing.Size(166, 328);
-            richTextBox_ContactDetails.TabIndex = 6;
-            richTextBox_ContactDetails.Text = "";
-            richTextBox_ContactDetails.TextChanged += new System.EventHandler(RichTextBox_ContactDetails_TextChanged);
+            this.richTextBox_ContactDetails.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox_ContactDetails.Location = new System.Drawing.Point(290, 19);
+            this.richTextBox_ContactDetails.Name = "richTextBox_ContactDetails";
+            this.richTextBox_ContactDetails.Size = new System.Drawing.Size(166, 328);
+            this.richTextBox_ContactDetails.TabIndex = 6;
+            this.richTextBox_ContactDetails.Text = "";
+            this.richTextBox_ContactDetails.TextChanged += new System.EventHandler(this.RichTextBox_ContactDetails_TextChanged);
             // 
             // button34
             // 
-            button34.Location = new System.Drawing.Point(169, 400);
-            button34.Name = "button34";
-            button34.Size = new System.Drawing.Size(75, 23);
-            button34.TabIndex = 7;
-            button34.Text = "Backup";
-            button34.UseVisualStyleBackColor = true;
-            button34.Click += new System.EventHandler(Button34_Click_2);
+            this.button34.Location = new System.Drawing.Point(169, 400);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 23);
+            this.button34.TabIndex = 7;
+            this.button34.Text = "Backup";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.Button34_Click_2);
             // 
             // richTextBox_TextSendSMS
             // 
-            richTextBox_TextSendSMS.AutoWordSelection = true;
-            richTextBox_TextSendSMS.EnableAutoDragDrop = true;
-            richTextBox_TextSendSMS.Location = new System.Drawing.Point(10, 18);
-            richTextBox_TextSendSMS.Name = "richTextBox_TextSendSMS";
-            richTextBox_TextSendSMS.Size = new System.Drawing.Size(579, 91);
-            richTextBox_TextSendSMS.TabIndex = 2;
-            richTextBox_TextSendSMS.Text = "";
-            richTextBox_TextSendSMS.TextChanged += new System.EventHandler(RichTextBox_TextSendSMS_TextChanged);
+            this.richTextBox_TextSendSMS.AutoWordSelection = true;
+            this.richTextBox_TextSendSMS.EnableAutoDragDrop = true;
+            this.richTextBox_TextSendSMS.Location = new System.Drawing.Point(10, 18);
+            this.richTextBox_TextSendSMS.Name = "richTextBox_TextSendSMS";
+            this.richTextBox_TextSendSMS.Size = new System.Drawing.Size(579, 91);
+            this.richTextBox_TextSendSMS.TabIndex = 2;
+            this.richTextBox_TextSendSMS.Text = "";
+            this.richTextBox_TextSendSMS.TextChanged += new System.EventHandler(this.RichTextBox_TextSendSMS_TextChanged);
             // 
             // label_SMSSendCharacters
             // 
-            label_SMSSendCharacters.AutoSize = true;
-            label_SMSSendCharacters.Location = new System.Drawing.Point(12, 119);
-            label_SMSSendCharacters.Name = "label_SMSSendCharacters";
-            label_SMSSendCharacters.Size = new System.Drawing.Size(36, 13);
-            label_SMSSendCharacters.TabIndex = 9;
+            this.label_SMSSendCharacters.AutoSize = true;
+            this.label_SMSSendCharacters.Location = new System.Drawing.Point(12, 119);
+            this.label_SMSSendCharacters.Name = "label_SMSSendCharacters";
+            this.label_SMSSendCharacters.Size = new System.Drawing.Size(36, 13);
+            this.label_SMSSendCharacters.TabIndex = 9;
             // 
             // checkBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new System.Drawing.Point(145, 145);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new System.Drawing.Size(92, 22);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(145, 145);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(92, 22);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox_SendSMSAsIs
             // 
-            checkBox_SendSMSAsIs.AutoSize = true;
-            checkBox_SendSMSAsIs.Location = new System.Drawing.Point(240, 115);
-            checkBox_SendSMSAsIs.Name = "checkBox_SendSMSAsIs";
-            checkBox_SendSMSAsIs.Size = new System.Drawing.Size(116, 22);
-            checkBox_SendSMSAsIs.TabIndex = 11;
-            checkBox_SendSMSAsIs.Text = "Send SMS as is";
-            checkBox_SendSMSAsIs.UseVisualStyleBackColor = true;
-            checkBox_SendSMSAsIs.CheckedChanged += new System.EventHandler(CheckBox_SendSMSAsIs_CheckedChanged);
+            this.checkBox_SendSMSAsIs.AutoSize = true;
+            this.checkBox_SendSMSAsIs.Location = new System.Drawing.Point(240, 115);
+            this.checkBox_SendSMSAsIs.Name = "checkBox_SendSMSAsIs";
+            this.checkBox_SendSMSAsIs.Size = new System.Drawing.Size(116, 22);
+            this.checkBox_SendSMSAsIs.TabIndex = 11;
+            this.checkBox_SendSMSAsIs.Text = "Send SMS as is";
+            this.checkBox_SendSMSAsIs.UseVisualStyleBackColor = true;
+            this.checkBox_SendSMSAsIs.CheckedChanged += new System.EventHandler(this.CheckBox_SendSMSAsIs_CheckedChanged);
             // 
             // checkBox_SMSencrypted
             // 
-            checkBox_SMSencrypted.AutoSize = true;
-            checkBox_SMSencrypted.Location = new System.Drawing.Point(595, 20);
-            checkBox_SMSencrypted.Name = "checkBox_SMSencrypted";
-            checkBox_SMSencrypted.Size = new System.Drawing.Size(89, 22);
-            checkBox_SMSencrypted.TabIndex = 12;
-            checkBox_SMSencrypted.Text = "Encrypted";
-            checkBox_SMSencrypted.UseVisualStyleBackColor = true;
-            checkBox_SMSencrypted.CheckedChanged += new System.EventHandler(CheckBox_SMSencrypted_CheckedChanged);
+            this.checkBox_SMSencrypted.AutoSize = true;
+            this.checkBox_SMSencrypted.Location = new System.Drawing.Point(595, 20);
+            this.checkBox_SMSencrypted.Name = "checkBox_SMSencrypted";
+            this.checkBox_SMSencrypted.Size = new System.Drawing.Size(89, 22);
+            this.checkBox_SMSencrypted.TabIndex = 12;
+            this.checkBox_SMSencrypted.Text = "Encrypted";
+            this.checkBox_SMSencrypted.UseVisualStyleBackColor = true;
+            this.checkBox_SMSencrypted.CheckedChanged += new System.EventHandler(this.CheckBox_SMSencrypted_CheckedChanged);
             // 
             // GrooupBox_Encryption
             // 
-            GrooupBox_Encryption.Enabled = false;
-            GrooupBox_Encryption.Location = new System.Drawing.Point(595, 38);
-            GrooupBox_Encryption.Name = "GrooupBox_Encryption";
-            GrooupBox_Encryption.Size = new System.Drawing.Size(184, 103);
-            GrooupBox_Encryption.TabIndex = 13;
-            GrooupBox_Encryption.TabStop = false;
+            this.GrooupBox_Encryption.Enabled = false;
+            this.GrooupBox_Encryption.Location = new System.Drawing.Point(595, 38);
+            this.GrooupBox_Encryption.Name = "GrooupBox_Encryption";
+            this.GrooupBox_Encryption.Size = new System.Drawing.Size(184, 103);
+            this.GrooupBox_Encryption.TabIndex = 13;
+            this.GrooupBox_Encryption.TabStop = false;
             // 
             // textBox_UnitIDForSMS
             // 
-            textBox_UnitIDForSMS.Location = new System.Drawing.Point(54, 17);
-            textBox_UnitIDForSMS.MaxLength = 16;
-            textBox_UnitIDForSMS.Name = "textBox_UnitIDForSMS";
-            textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 20);
-            textBox_UnitIDForSMS.TabIndex = 0;
+            this.textBox_UnitIDForSMS.Location = new System.Drawing.Point(54, 17);
+            this.textBox_UnitIDForSMS.MaxLength = 16;
+            this.textBox_UnitIDForSMS.Name = "textBox_UnitIDForSMS";
+            this.textBox_UnitIDForSMS.Size = new System.Drawing.Size(124, 20);
+            this.textBox_UnitIDForSMS.TabIndex = 0;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(6, 20);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(37, 13);
-            label2.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 1;
             // 
             // textBox_CodeArrayForSMS
             // 
-            textBox_CodeArrayForSMS.Location = new System.Drawing.Point(54, 46);
-            textBox_CodeArrayForSMS.MaxLength = 4;
-            textBox_CodeArrayForSMS.Name = "textBox_CodeArrayForSMS";
-            textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 20);
-            textBox_CodeArrayForSMS.TabIndex = 2;
+            this.textBox_CodeArrayForSMS.Location = new System.Drawing.Point(54, 46);
+            this.textBox_CodeArrayForSMS.MaxLength = 4;
+            this.textBox_CodeArrayForSMS.Name = "textBox_CodeArrayForSMS";
+            this.textBox_CodeArrayForSMS.Size = new System.Drawing.Size(124, 20);
+            this.textBox_CodeArrayForSMS.TabIndex = 2;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(6, 46);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(32, 13);
-            label5.TabIndex = 3;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 3;
             // 
             // richTextBox_ModemStatus
             // 
-            richTextBox_ModemStatus.Location = new System.Drawing.Point(7, 19);
-            richTextBox_ModemStatus.Name = "richTextBox_ModemStatus";
-            richTextBox_ModemStatus.Size = new System.Drawing.Size(256, 115);
-            richTextBox_ModemStatus.TabIndex = 0;
-            richTextBox_ModemStatus.Text = "";
+            this.richTextBox_ModemStatus.Location = new System.Drawing.Point(7, 19);
+            this.richTextBox_ModemStatus.Name = "richTextBox_ModemStatus";
+            this.richTextBox_ModemStatus.Size = new System.Drawing.Size(256, 115);
+            this.richTextBox_ModemStatus.TabIndex = 0;
+            this.richTextBox_ModemStatus.Text = "";
             // 
             // comboBox_ComportSMS
             // 
-            comboBox_ComportSMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            comboBox_ComportSMS.FormattingEnabled = true;
-            comboBox_ComportSMS.Items.AddRange(new object[] {
+            this.comboBox_ComportSMS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ComportSMS.FormattingEnabled = true;
+            this.comboBox_ComportSMS.Items.AddRange(new object[] {
             "COM1",
             "COM2",
             "COM3",
             "COM4",
             "COM5",
             "COM6"});
-            comboBox_ComportSMS.Location = new System.Drawing.Point(290, 22);
-            comboBox_ComportSMS.Name = "comboBox_ComportSMS";
-            comboBox_ComportSMS.Size = new System.Drawing.Size(67, 21);
-            comboBox_ComportSMS.TabIndex = 9;
-            comboBox_ComportSMS.Tag = "1";
-            comboBox_ComportSMS.SelectedIndexChanged += new System.EventHandler(ComboBox1_SelectedIndexChanged_2);
+            this.comboBox_ComportSMS.Location = new System.Drawing.Point(290, 22);
+            this.comboBox_ComportSMS.Name = "comboBox_ComportSMS";
+            this.comboBox_ComportSMS.Size = new System.Drawing.Size(67, 21);
+            this.comboBox_ComportSMS.TabIndex = 9;
+            this.comboBox_ComportSMS.Tag = "1";
+            this.comboBox_ComportSMS.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_2);
             // 
             // button36
             // 
-            button36.Location = new System.Drawing.Point(269, 109);
-            button36.Name = "button36";
-            button36.Size = new System.Drawing.Size(75, 23);
-            button36.TabIndex = 6;
-            button36.Text = "Clear";
-            button36.UseVisualStyleBackColor = true;
-            button36.Click += new System.EventHandler(Button36_Click);
+            this.button36.Location = new System.Drawing.Point(269, 109);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 23);
+            this.button36.TabIndex = 6;
+            this.button36.Text = "Clear";
+            this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.Button36_Click);
             // 
             // checkBox_OpenPortSMS
             // 
-            checkBox_OpenPortSMS.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_OpenPortSMS.AutoSize = true;
-            checkBox_OpenPortSMS.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_OpenPortSMS.Location = new System.Drawing.Point(363, 20);
-            checkBox_OpenPortSMS.Name = "checkBox_OpenPortSMS";
-            checkBox_OpenPortSMS.Size = new System.Drawing.Size(84, 29);
-            checkBox_OpenPortSMS.TabIndex = 10;
-            checkBox_OpenPortSMS.Text = "Open Port";
-            checkBox_OpenPortSMS.UseVisualStyleBackColor = true;
-            checkBox_OpenPortSMS.CheckedChanged += new System.EventHandler(CheckBox_OpenPortSMS_CheckedChanged);
+            this.checkBox_OpenPortSMS.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_OpenPortSMS.AutoSize = true;
+            this.checkBox_OpenPortSMS.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_OpenPortSMS.Location = new System.Drawing.Point(363, 20);
+            this.checkBox_OpenPortSMS.Name = "checkBox_OpenPortSMS";
+            this.checkBox_OpenPortSMS.Size = new System.Drawing.Size(84, 29);
+            this.checkBox_OpenPortSMS.TabIndex = 10;
+            this.checkBox_OpenPortSMS.Text = "Open Port";
+            this.checkBox_OpenPortSMS.UseVisualStyleBackColor = true;
+            this.checkBox_OpenPortSMS.CheckedChanged += new System.EventHandler(this.CheckBox_OpenPortSMS_CheckedChanged);
             // 
             // checkBox_DebugSMS
             // 
-            checkBox_DebugSMS.AutoSize = true;
-            checkBox_DebugSMS.Location = new System.Drawing.Point(390, 54);
-            checkBox_DebugSMS.Name = "checkBox_DebugSMS";
-            checkBox_DebugSMS.Size = new System.Drawing.Size(67, 22);
-            checkBox_DebugSMS.TabIndex = 11;
-            checkBox_DebugSMS.Text = "Debug";
-            checkBox_DebugSMS.UseVisualStyleBackColor = true;
+            this.checkBox_DebugSMS.AutoSize = true;
+            this.checkBox_DebugSMS.Location = new System.Drawing.Point(390, 54);
+            this.checkBox_DebugSMS.Name = "checkBox_DebugSMS";
+            this.checkBox_DebugSMS.Size = new System.Drawing.Size(67, 22);
+            this.checkBox_DebugSMS.TabIndex = 11;
+            this.checkBox_DebugSMS.Text = "Debug";
+            this.checkBox_DebugSMS.UseVisualStyleBackColor = true;
             // 
             // button_ClearSMSConsole
             // 
-            button_ClearSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            button_ClearSMSConsole.Location = new System.Drawing.Point(395, 630);
-            button_ClearSMSConsole.Name = "button_ClearSMSConsole";
-            button_ClearSMSConsole.Size = new System.Drawing.Size(62, 26);
-            button_ClearSMSConsole.TabIndex = 6;
-            button_ClearSMSConsole.Text = "Clear";
-            button_ClearSMSConsole.UseVisualStyleBackColor = true;
+            this.button_ClearSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearSMSConsole.Location = new System.Drawing.Point(395, 630);
+            this.button_ClearSMSConsole.Name = "button_ClearSMSConsole";
+            this.button_ClearSMSConsole.Size = new System.Drawing.Size(62, 26);
+            this.button_ClearSMSConsole.TabIndex = 6;
+            this.button_ClearSMSConsole.Text = "Clear";
+            this.button_ClearSMSConsole.UseVisualStyleBackColor = true;
             // 
             // checkBox_PauseSMSConsole
             // 
-            checkBox_PauseSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_PauseSMSConsole.AutoSize = true;
-            checkBox_PauseSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_PauseSMSConsole.Location = new System.Drawing.Point(327, 630);
-            checkBox_PauseSMSConsole.Name = "checkBox_PauseSMSConsole";
-            checkBox_PauseSMSConsole.Size = new System.Drawing.Size(62, 26);
-            checkBox_PauseSMSConsole.TabIndex = 5;
-            checkBox_PauseSMSConsole.Text = "Pause";
-            checkBox_PauseSMSConsole.UseVisualStyleBackColor = true;
+            this.checkBox_PauseSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_PauseSMSConsole.AutoSize = true;
+            this.checkBox_PauseSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_PauseSMSConsole.Location = new System.Drawing.Point(327, 630);
+            this.checkBox_PauseSMSConsole.Name = "checkBox_PauseSMSConsole";
+            this.checkBox_PauseSMSConsole.Size = new System.Drawing.Size(62, 26);
+            this.checkBox_PauseSMSConsole.TabIndex = 5;
+            this.checkBox_PauseSMSConsole.Text = "Pause";
+            this.checkBox_PauseSMSConsole.UseVisualStyleBackColor = true;
             // 
             // checkBox_RecordSMSConsole
             // 
-            checkBox_RecordSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
-            checkBox_RecordSMSConsole.AutoSize = true;
-            checkBox_RecordSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            checkBox_RecordSMSConsole.Location = new System.Drawing.Point(222, 630);
-            checkBox_RecordSMSConsole.Name = "checkBox_RecordSMSConsole";
-            checkBox_RecordSMSConsole.Size = new System.Drawing.Size(99, 26);
-            checkBox_RecordSMSConsole.TabIndex = 7;
-            checkBox_RecordSMSConsole.Text = "Record Log";
-            checkBox_RecordSMSConsole.UseVisualStyleBackColor = true;
+            this.checkBox_RecordSMSConsole.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RecordSMSConsole.AutoSize = true;
+            this.checkBox_RecordSMSConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_RecordSMSConsole.Location = new System.Drawing.Point(222, 630);
+            this.checkBox_RecordSMSConsole.Name = "checkBox_RecordSMSConsole";
+            this.checkBox_RecordSMSConsole.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordSMSConsole.TabIndex = 7;
+            this.checkBox_RecordSMSConsole.Text = "Record Log";
+            this.checkBox_RecordSMSConsole.UseVisualStyleBackColor = true;
             // 
             // richTextBox_SMSConsole
             // 
-            richTextBox_SMSConsole.EnableAutoDragDrop = true;
-            richTextBox_SMSConsole.Location = new System.Drawing.Point(6, 17);
-            richTextBox_SMSConsole.Name = "richTextBox_SMSConsole";
-            richTextBox_SMSConsole.Size = new System.Drawing.Size(451, 607);
-            richTextBox_SMSConsole.TabIndex = 0;
-            richTextBox_SMSConsole.Text = "";
+            this.richTextBox_SMSConsole.EnableAutoDragDrop = true;
+            this.richTextBox_SMSConsole.Location = new System.Drawing.Point(6, 17);
+            this.richTextBox_SMSConsole.Name = "richTextBox_SMSConsole";
+            this.richTextBox_SMSConsole.Size = new System.Drawing.Size(451, 607);
+            this.richTextBox_SMSConsole.TabIndex = 0;
+            this.richTextBox_SMSConsole.Text = "";
             // 
             // button41
             // 
-            button41.Location = new System.Drawing.Point(7, 359);
-            button41.Name = "button41";
-            button41.Size = new System.Drawing.Size(75, 23);
-            button41.TabIndex = 1;
-            button41.Text = "Add";
-            button41.UseVisualStyleBackColor = true;
-            button41.Click += new System.EventHandler(Button41_Click);
+            this.button41.Location = new System.Drawing.Point(7, 359);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 23);
+            this.button41.TabIndex = 1;
+            this.button41.Text = "Add";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.Button41_Click);
             // 
             // button40
             // 
-            button40.Location = new System.Drawing.Point(88, 359);
-            button40.Name = "button40";
-            button40.Size = new System.Drawing.Size(75, 23);
-            button40.TabIndex = 2;
-            button40.Text = "Remove";
-            button40.UseVisualStyleBackColor = true;
-            button40.Click += new System.EventHandler(Button40_Click);
+            this.button40.Location = new System.Drawing.Point(88, 359);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(75, 23);
+            this.button40.TabIndex = 2;
+            this.button40.Text = "Remove";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.Button40_Click);
             // 
             // button39
             // 
-            button39.Location = new System.Drawing.Point(7, 395);
-            button39.Name = "button39";
-            button39.Size = new System.Drawing.Size(75, 23);
-            button39.TabIndex = 3;
-            button39.Text = "Export";
-            button39.UseVisualStyleBackColor = true;
-            button39.Click += new System.EventHandler(Button39_Click_1);
+            this.button39.Location = new System.Drawing.Point(7, 395);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 23);
+            this.button39.TabIndex = 3;
+            this.button39.Text = "Export";
+            this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.Button39_Click_1);
             // 
             // button38
             // 
-            button38.Location = new System.Drawing.Point(88, 395);
-            button38.Name = "button38";
-            button38.Size = new System.Drawing.Size(75, 23);
-            button38.TabIndex = 4;
-            button38.Text = "Import";
-            button38.UseVisualStyleBackColor = true;
-            button38.Click += new System.EventHandler(Button38_Click);
+            this.button38.Location = new System.Drawing.Point(88, 395);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(75, 23);
+            this.button38.TabIndex = 4;
+            this.button38.Text = "Import";
+            this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.Button38_Click);
             // 
             // button37
             // 
-            button37.Location = new System.Drawing.Point(169, 359);
-            button37.Name = "button37";
-            button37.Size = new System.Drawing.Size(75, 23);
-            button37.TabIndex = 5;
-            button37.Text = "Edit";
-            button37.UseVisualStyleBackColor = true;
-            button37.Click += new System.EventHandler(Button37_Click);
+            this.button37.Location = new System.Drawing.Point(169, 359);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 23);
+            this.button37.TabIndex = 5;
+            this.button37.Text = "Edit";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.Button37_Click);
             // 
             // listBox_SMSCommands
             // 
-            listBox_SMSCommands.FormattingEnabled = true;
-            listBox_SMSCommands.Location = new System.Drawing.Point(6, 17);
-            listBox_SMSCommands.Name = "listBox_SMSCommands";
-            listBox_SMSCommands.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            listBox_SMSCommands.Size = new System.Drawing.Size(303, 290);
-            listBox_SMSCommands.TabIndex = 6;
-            listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(ListBox_SMSCommands_SelectedIndexChanged_1);
+            this.listBox_SMSCommands.FormattingEnabled = true;
+            this.listBox_SMSCommands.Location = new System.Drawing.Point(6, 17);
+            this.listBox_SMSCommands.Name = "listBox_SMSCommands";
+            this.listBox_SMSCommands.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_SMSCommands.Size = new System.Drawing.Size(303, 290);
+            this.listBox_SMSCommands.TabIndex = 6;
+            this.listBox_SMSCommands.SelectedIndexChanged += new System.EventHandler(this.ListBox_SMSCommands_SelectedIndexChanged_1);
             // 
             // button_WriteCatalinas
             // 
-            button_WriteCatalinas.Location = new System.Drawing.Point(789, 449);
-            button_WriteCatalinas.Name = "button_WriteCatalinas";
-            button_WriteCatalinas.Size = new System.Drawing.Size(144, 23);
-            button_WriteCatalinas.TabIndex = 69;
-            button_WriteCatalinas.Text = "Write Files To Flash";
-            button_WriteCatalinas.UseVisualStyleBackColor = true;
-            button_WriteCatalinas.Click += new System.EventHandler(button72_Click_2);
+            this.button_WriteCatalinas.Location = new System.Drawing.Point(789, 449);
+            this.button_WriteCatalinas.Name = "button_WriteCatalinas";
+            this.button_WriteCatalinas.Size = new System.Drawing.Size(144, 23);
+            this.button_WriteCatalinas.TabIndex = 69;
+            this.button_WriteCatalinas.Text = "Write Files To Flash";
+            this.button_WriteCatalinas.UseVisualStyleBackColor = true;
+            this.button_WriteCatalinas.Click += new System.EventHandler(this.button72_Click_2);
             // 
             // textBox_FilesToWriteForTheCatalinas
             // 
-            textBox_FilesToWriteForTheCatalinas.Location = new System.Drawing.Point(0, 311);
-            textBox_FilesToWriteForTheCatalinas.Name = "textBox_FilesToWriteForTheCatalinas";
-            textBox_FilesToWriteForTheCatalinas.Size = new System.Drawing.Size(933, 131);
-            textBox_FilesToWriteForTheCatalinas.TabIndex = 70;
-            textBox_FilesToWriteForTheCatalinas.Text = "";
-            textBox_FilesToWriteForTheCatalinas.MouseDown += new System.Windows.Forms.MouseEventHandler(textBox_FilesToWriteForTheCatalinas2_MouseDown);
+            this.textBox_FilesToWriteForTheCatalinas.Location = new System.Drawing.Point(0, 311);
+            this.textBox_FilesToWriteForTheCatalinas.Name = "textBox_FilesToWriteForTheCatalinas";
+            this.textBox_FilesToWriteForTheCatalinas.Size = new System.Drawing.Size(933, 131);
+            this.textBox_FilesToWriteForTheCatalinas.TabIndex = 70;
+            this.textBox_FilesToWriteForTheCatalinas.Text = "";
+            this.textBox_FilesToWriteForTheCatalinas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_FilesToWriteForTheCatalinas2_MouseDown);
             // 
             // richTextBox_SyntisazerL1
             // 
-            richTextBox_SyntisazerL1.Location = new System.Drawing.Point(5, 111);
-            richTextBox_SyntisazerL1.Name = "richTextBox_SyntisazerL1";
-            richTextBox_SyntisazerL1.Size = new System.Drawing.Size(161, 124);
-            richTextBox_SyntisazerL1.TabIndex = 71;
-            richTextBox_SyntisazerL1.Text = "";
-            richTextBox_SyntisazerL1.TextChanged += new System.EventHandler(richTextBox_SyntisazerL1_TextChanged);
-            richTextBox_SyntisazerL1.MouseDown += new System.Windows.Forms.MouseEventHandler(richTextBox_SyntisazerL1_MouseDown);
+            this.richTextBox_SyntisazerL1.Location = new System.Drawing.Point(5, 111);
+            this.richTextBox_SyntisazerL1.Name = "richTextBox_SyntisazerL1";
+            this.richTextBox_SyntisazerL1.Size = new System.Drawing.Size(161, 124);
+            this.richTextBox_SyntisazerL1.TabIndex = 71;
+            this.richTextBox_SyntisazerL1.Text = "";
+            this.richTextBox_SyntisazerL1.TextChanged += new System.EventHandler(this.richTextBox_SyntisazerL1_TextChanged);
+            this.richTextBox_SyntisazerL1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox_SyntisazerL1_MouseDown);
             // 
             // richTextBox_SyntisazerL2
             // 
-            richTextBox_SyntisazerL2.Location = new System.Drawing.Point(243, 108);
-            richTextBox_SyntisazerL2.Name = "richTextBox_SyntisazerL2";
-            richTextBox_SyntisazerL2.Size = new System.Drawing.Size(161, 132);
-            richTextBox_SyntisazerL2.TabIndex = 72;
-            richTextBox_SyntisazerL2.Text = "";
-            richTextBox_SyntisazerL2.TextChanged += new System.EventHandler(richTextBox_SyntisazerL2_TextChanged);
-            richTextBox_SyntisazerL2.MouseDown += new System.Windows.Forms.MouseEventHandler(richTextBox_SyntisazerL2_MouseDown);
+            this.richTextBox_SyntisazerL2.Location = new System.Drawing.Point(243, 108);
+            this.richTextBox_SyntisazerL2.Name = "richTextBox_SyntisazerL2";
+            this.richTextBox_SyntisazerL2.Size = new System.Drawing.Size(161, 132);
+            this.richTextBox_SyntisazerL2.TabIndex = 72;
+            this.richTextBox_SyntisazerL2.Text = "";
+            this.richTextBox_SyntisazerL2.TextChanged += new System.EventHandler(this.richTextBox_SyntisazerL2_TextChanged);
+            this.richTextBox_SyntisazerL2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox_SyntisazerL2_MouseDown);
             // 
             // comboBox1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "A",
             "B"});
-            comboBox1.Location = new System.Drawing.Point(371, 76);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(37, 21);
-            comboBox1.TabIndex = 73;
-            comboBox1.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged_3);
+            this.comboBox1.Location = new System.Drawing.Point(371, 76);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(37, 21);
+            this.comboBox1.TabIndex = 73;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_3);
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(8, 87);
-            label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(103, 13);
-            label20.TabIndex = 74;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(8, 87);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(103, 13);
+            this.label20.TabIndex = 74;
             // 
             // label21
             // 
-            label21.AutoSize = true;
-            label21.Location = new System.Drawing.Point(240, 83);
-            label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(103, 13);
-            label21.TabIndex = 75;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(240, 83);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(103, 13);
+            this.label21.TabIndex = 75;
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Location = new System.Drawing.Point(6, 22);
-            label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(64, 13);
-            label22.TabIndex = 76;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 22);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 13);
+            this.label22.TabIndex = 76;
             // 
             // button_WriteSystemType
             // 
-            button_WriteSystemType.Location = new System.Drawing.Point(89, 45);
-            button_WriteSystemType.Name = "button_WriteSystemType";
-            button_WriteSystemType.Size = new System.Drawing.Size(188, 23);
-            button_WriteSystemType.TabIndex = 78;
-            button_WriteSystemType.Text = "Write System type to flash";
-            button_WriteSystemType.UseVisualStyleBackColor = true;
-            button_WriteSystemType.Click += new System.EventHandler(button73_Click_1);
+            this.button_WriteSystemType.Location = new System.Drawing.Point(89, 45);
+            this.button_WriteSystemType.Name = "button_WriteSystemType";
+            this.button_WriteSystemType.Size = new System.Drawing.Size(188, 23);
+            this.button_WriteSystemType.TabIndex = 78;
+            this.button_WriteSystemType.Text = "Write System type to flash";
+            this.button_WriteSystemType.UseVisualStyleBackColor = true;
+            this.button_WriteSystemType.Click += new System.EventHandler(this.button73_Click_1);
             // 
             // button_SynthL1
             // 
-            button_SynthL1.Location = new System.Drawing.Point(2, 244);
-            button_SynthL1.Name = "button_SynthL1";
-            button_SynthL1.Size = new System.Drawing.Size(227, 23);
-            button_SynthL1.TabIndex = 79;
-            button_SynthL1.Text = "Write Synthesizer L1";
-            button_SynthL1.UseVisualStyleBackColor = true;
-            button_SynthL1.Click += new System.EventHandler(button96_Click_2);
+            this.button_SynthL1.Location = new System.Drawing.Point(2, 244);
+            this.button_SynthL1.Name = "button_SynthL1";
+            this.button_SynthL1.Size = new System.Drawing.Size(227, 23);
+            this.button_SynthL1.TabIndex = 79;
+            this.button_SynthL1.Text = "Write Synthesizer L1";
+            this.button_SynthL1.UseVisualStyleBackColor = true;
+            this.button_SynthL1.Click += new System.EventHandler(this.button96_Click_2);
             // 
             // button_WriteAllToFlash
             // 
-            button_WriteAllToFlash.BackColor = System.Drawing.Color.Transparent;
-            button_WriteAllToFlash.Location = new System.Drawing.Point(789, 24);
-            button_WriteAllToFlash.Name = "button_WriteAllToFlash";
-            button_WriteAllToFlash.Size = new System.Drawing.Size(144, 34);
-            button_WriteAllToFlash.TabIndex = 80;
-            button_WriteAllToFlash.Text = "Write all to flash";
-            button_WriteAllToFlash.UseVisualStyleBackColor = false;
-            button_WriteAllToFlash.Click += new System.EventHandler(button100_Click_2);
+            this.button_WriteAllToFlash.BackColor = System.Drawing.Color.Transparent;
+            this.button_WriteAllToFlash.Location = new System.Drawing.Point(789, 24);
+            this.button_WriteAllToFlash.Name = "button_WriteAllToFlash";
+            this.button_WriteAllToFlash.Size = new System.Drawing.Size(144, 34);
+            this.button_WriteAllToFlash.TabIndex = 80;
+            this.button_WriteAllToFlash.Text = "Write all to flash";
+            this.button_WriteAllToFlash.UseVisualStyleBackColor = false;
+            this.button_WriteAllToFlash.Click += new System.EventHandler(this.button100_Click_2);
             // 
             // button_SynthL2
             // 
-            button_SynthL2.Location = new System.Drawing.Point(243, 244);
-            button_SynthL2.Name = "button_SynthL2";
-            button_SynthL2.Size = new System.Drawing.Size(227, 23);
-            button_SynthL2.TabIndex = 81;
-            button_SynthL2.Text = "Write Synthesizer L2";
-            button_SynthL2.UseVisualStyleBackColor = true;
-            button_SynthL2.Click += new System.EventHandler(button101_Click);
+            this.button_SynthL2.Location = new System.Drawing.Point(243, 244);
+            this.button_SynthL2.Name = "button_SynthL2";
+            this.button_SynthL2.Size = new System.Drawing.Size(227, 23);
+            this.button_SynthL2.TabIndex = 81;
+            this.button_SynthL2.Text = "Write Synthesizer L2";
+            this.button_SynthL2.UseVisualStyleBackColor = true;
+            this.button_SynthL2.Click += new System.EventHandler(this.button101_Click);
             // 
             // progressBar_WriteToFlash
             // 
-            progressBar_WriteToFlash.Location = new System.Drawing.Point(789, 68);
-            progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
-            progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
-            progressBar_WriteToFlash.TabIndex = 82;
+            this.progressBar_WriteToFlash.Location = new System.Drawing.Point(789, 68);
+            this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
+            this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
+            this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // label121
+            // label123
             // 
-            label121.AutoSize = true;
-            label121.Location = new System.Drawing.Point(310, 70);
-            label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label121.Name = "label121";
-            label121.Size = new System.Drawing.Size(29, 18);
-            label121.TabIndex = 15;
-            label121.Text = "SN:";
-            // 
-            // textBox_SystemSN
-            // 
-            textBox_SystemSN.Location = new System.Drawing.Point(339, 62);
-            textBox_SystemSN.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SystemSN.Name = "textBox_SystemSN";
-            textBox_SystemSN.ReadOnly = true;
-            textBox_SystemSN.Size = new System.Drawing.Size(46, 26);
-            textBox_SystemSN.TabIndex = 14;
-            // 
-            // label122
-            // 
-            label122.AutoSize = true;
-            label122.Location = new System.Drawing.Point(310, 38);
-            label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label122.Name = "label122";
-            label122.Size = new System.Drawing.Size(25, 18);
-            label122.TabIndex = 13;
-            label122.Text = "ID:";
-            // 
-            // textBox_SystemID
-            // 
-            textBox_SystemID.Location = new System.Drawing.Point(339, 31);
-            textBox_SystemID.Margin = new System.Windows.Forms.Padding(2);
-            textBox_SystemID.Name = "textBox_SystemID";
-            textBox_SystemID.ReadOnly = true;
-            textBox_SystemID.Size = new System.Drawing.Size(46, 26);
-            textBox_SystemID.TabIndex = 12;
-            // 
-            // groupBox49
-            // 
-            groupBox49.Controls.Add(button_SystemMode);
-            groupBox49.Controls.Add(textBox_SystemMode);
-            groupBox49.Location = new System.Drawing.Point(663, 120);
-            groupBox49.Name = "groupBox49";
-            groupBox49.Size = new System.Drawing.Size(200, 90);
-            groupBox49.TabIndex = 31;
-            groupBox49.TabStop = false;
-            groupBox49.Text = "System mode";
-            // 
-            // textBox_SystemMode
-            // 
-            textBox_SystemMode.Location = new System.Drawing.Point(136, 57);
-            textBox_SystemMode.MaxLength = 2;
-            textBox_SystemMode.Name = "textBox_SystemMode";
-            textBox_SystemMode.Size = new System.Drawing.Size(56, 26);
-            textBox_SystemMode.TabIndex = 31;
-            textBox_SystemMode.Text = "00";
-            textBox_SystemMode.TextChanged += new System.EventHandler(textBox_SystemMode_TextChanged);
-            // 
-            // button_SystemMode
-            // 
-            button_SystemMode.Location = new System.Drawing.Point(6, 58);
-            button_SystemMode.Name = "button_SystemMode";
-            button_SystemMode.Size = new System.Drawing.Size(124, 23);
-            button_SystemMode.TabIndex = 32;
-            button_SystemMode.Text = "Set System mode";
-            button_SystemMode.UseVisualStyleBackColor = true;
-            button_SystemMode.Click += new System.EventHandler(button_SystemMode_Click);
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(124, 34);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(68, 18);
+            this.label123.TabIndex = 33;
+            this.label123.Text = "hex value";
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            AutoScroll = true;
-            AutoSize = true;
-            ClientSize = new System.Drawing.Size(1458, 626);
-            Controls.Add(groupBox_ClentTCPStatus);
-            Controls.Add(pictureBox1);
-            Controls.Add(groupBox4);
-            Controls.Add(button_OpenFolder);
-            Controls.Add(groupBox_SerialPort);
-            Controls.Add(tabControl_Main);
-            Controls.Add(groupBox36);
-            Controls.Add(groupBox_PhoneNumber);
-            Controls.Add(groupBox42);
-            Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            KeyPreview = true;
-            Margin = new System.Windows.Forms.Padding(2);
-            Name = "MainForm";
-            Text = "3038 - WB PAA";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            FormClosed += new System.Windows.Forms.FormClosedEventHandler(MainForm_FormClosed_1);
-            Load += new System.EventHandler(MainForm_Load);
-            groupBox_ServerSettings.ResumeLayout(false);
-            groupBox_ServerSettings.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            tabControl_Main.ResumeLayout(false);
-            tabPage_charts.ResumeLayout(false);
-            tabPage_charts.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(chart1)).EndInit();
-            tabPage_ServerTCP.ResumeLayout(false);
-            tabPage_ServerTCP.PerformLayout();
-            groupBox_FOTA.ResumeLayout(false);
-            groupBox_FOTA.PerformLayout();
-            groupBox_ConnectionTimedOut.ResumeLayout(false);
-            groupBox_ConnectionTimedOut.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            tabPage_ClientTCP.ResumeLayout(false);
-            tabPage_ClientTCP.PerformLayout();
-            tabPage_SerialPort.ResumeLayout(false);
-            groupBox_SendSerialOrMonitorCommands.ResumeLayout(false);
-            groupBox_SendSerialOrMonitorCommands.PerformLayout();
-            gbPortSettings.ResumeLayout(false);
-            gbPortSettings.PerformLayout();
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
-            groupBox_Timer.ResumeLayout(false);
-            groupBox_Timer.PerformLayout();
-            groupBox_Stopwatch.ResumeLayout(false);
-            groupBox_Stopwatch.PerformLayout();
-            tabPage_GenericFrame.ResumeLayout(false);
-            groupBox31.ResumeLayout(false);
-            groupBox31.PerformLayout();
-            groupBox_clientTX.ResumeLayout(false);
-            groupBox_clientTX.PerformLayout();
-            groupBox41.ResumeLayout(false);
-            groupBox41.PerformLayout();
-            tabPage_Commands.ResumeLayout(false);
-            groupBox40.ResumeLayout(false);
-            tabControl_System.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            groupBox32.ResumeLayout(false);
-            groupBox32.PerformLayout();
-            tabPage3038WBPAA.ResumeLayout(false);
-            groupBox43.ResumeLayout(false);
-            groupBox48.ResumeLayout(false);
-            groupBox38.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
-            tabPage6.ResumeLayout(false);
-            groupBox37.ResumeLayout(false);
-            groupBox37.PerformLayout();
-            groupBox47.ResumeLayout(false);
-            groupBox47.PerformLayout();
-            groupBox39.ResumeLayout(false);
-            groupBox39.PerformLayout();
-            groupBox35.ResumeLayout(false);
-            groupBox35.PerformLayout();
-            groupBox46.ResumeLayout(false);
-            groupBox46.PerformLayout();
-            groupBox45.ResumeLayout(false);
-            groupBox45.PerformLayout();
-            groupBox34.ResumeLayout(false);
-            groupBox34.PerformLayout();
-            groupBox44.ResumeLayout(false);
-            groupBox44.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox33.ResumeLayout(false);
-            groupBox33.PerformLayout();
-            tabPage13.ResumeLayout(false);
-            tabPage13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_ValPage0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_OverUnder)).EndInit();
-            tabPage7.ResumeLayout(false);
-            tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_Page1_4)).EndInit();
-            tabPage8.ResumeLayout(false);
-            tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_VVAOffset1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_VVAOffset2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_PAVVA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView_DC4)).EndInit();
-            tabPage9.ResumeLayout(false);
-            tabPage9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(dataGridView8)).EndInit();
-            groupBox42.ResumeLayout(false);
-            groupBox42.PerformLayout();
-            tabPage4.ResumeLayout(false);
-            S1_Configuration.ResumeLayout(false);
-            groupBox12.ResumeLayout(false);
-            groupBox22.ResumeLayout(false);
-            groupBox22.PerformLayout();
-            groupBox28.ResumeLayout(false);
-            groupBox28.PerformLayout();
-            groupBox30.ResumeLayout(false);
-            groupBox30.PerformLayout();
-            groupBox29.ResumeLayout(false);
-            groupBox29.PerformLayout();
-            groupBox27.ResumeLayout(false);
-            groupBox27.PerformLayout();
-            groupBox26.ResumeLayout(false);
-            groupBox26.PerformLayout();
-            groupBox25.ResumeLayout(false);
-            groupBox25.PerformLayout();
-            groupBox24.ResumeLayout(false);
-            groupBox23.ResumeLayout(false);
-            groupBox21.ResumeLayout(false);
-            groupBox21.PerformLayout();
-            groupBox20.ResumeLayout(false);
-            groupBox20.PerformLayout();
-            groupBox19.ResumeLayout(false);
-            groupBox19.PerformLayout();
-            groupBox18.ResumeLayout(false);
-            groupBox18.PerformLayout();
-            groupBox17.ResumeLayout(false);
-            groupBox17.PerformLayout();
-            groupBox11.ResumeLayout(false);
-            groupBox10.ResumeLayout(false);
-            groupBox9.ResumeLayout(false);
-            groupBox8.ResumeLayout(false);
-            groupBox7.ResumeLayout(false);
-            groupBox7.PerformLayout();
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            groupBox13.ResumeLayout(false);
-            groupBox13.PerformLayout();
-            groupBox14.ResumeLayout(false);
-            groupBox15.ResumeLayout(false);
-            groupBox15.PerformLayout();
-            groupBox16.ResumeLayout(false);
-            groupBox16.PerformLayout();
-            groupBox_PhoneNumber.ResumeLayout(false);
-            groupBox_PhoneNumber.PerformLayout();
-            groupBox_SerialPort.ResumeLayout(false);
-            groupBox_SerialPort.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(pictureBox1)).EndInit();
-            groupBox_ClentTCPStatus.ResumeLayout(false);
-            groupBox_ClentTCPStatus.PerformLayout();
-            groupBox49.ResumeLayout(false);
-            groupBox49.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1458, 626);
+            this.Controls.Add(this.groupBox_ClentTCPStatus);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.button_OpenFolder);
+            this.Controls.Add(this.groupBox_SerialPort);
+            this.Controls.Add(this.tabControl_Main);
+            this.Controls.Add(this.groupBox36);
+            this.Controls.Add(this.groupBox_PhoneNumber);
+            this.Controls.Add(this.groupBox42);
+            this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "MainForm";
+            this.Text = "3038 - WB PAA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed_1);
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.groupBox_ServerSettings.ResumeLayout(false);
+            this.groupBox_ServerSettings.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabControl_Main.ResumeLayout(false);
+            this.tabPage_charts.ResumeLayout(false);
+            this.tabPage_charts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.tabPage_ServerTCP.ResumeLayout(false);
+            this.tabPage_ServerTCP.PerformLayout();
+            this.groupBox_FOTA.ResumeLayout(false);
+            this.groupBox_FOTA.PerformLayout();
+            this.groupBox_ConnectionTimedOut.ResumeLayout(false);
+            this.groupBox_ConnectionTimedOut.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPage_ClientTCP.ResumeLayout(false);
+            this.tabPage_ClientTCP.PerformLayout();
+            this.tabPage_SerialPort.ResumeLayout(false);
+            this.groupBox_SendSerialOrMonitorCommands.ResumeLayout(false);
+            this.groupBox_SendSerialOrMonitorCommands.PerformLayout();
+            this.gbPortSettings.ResumeLayout(false);
+            this.gbPortSettings.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox_Timer.ResumeLayout(false);
+            this.groupBox_Timer.PerformLayout();
+            this.groupBox_Stopwatch.ResumeLayout(false);
+            this.groupBox_Stopwatch.PerformLayout();
+            this.tabPage_GenericFrame.ResumeLayout(false);
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox31.PerformLayout();
+            this.groupBox_clientTX.ResumeLayout(false);
+            this.groupBox_clientTX.PerformLayout();
+            this.groupBox41.ResumeLayout(false);
+            this.groupBox41.PerformLayout();
+            this.tabPage_Commands.ResumeLayout(false);
+            this.groupBox40.ResumeLayout(false);
+            this.tabControl_System.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
+            this.tabPage3038WBPAA.ResumeLayout(false);
+            this.groupBox43.ResumeLayout(false);
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox38.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox49.PerformLayout();
+            this.groupBox37.ResumeLayout(false);
+            this.groupBox37.PerformLayout();
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
+            this.groupBox39.ResumeLayout(false);
+            this.groupBox39.PerformLayout();
+            this.groupBox35.ResumeLayout(false);
+            this.groupBox35.PerformLayout();
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox46.PerformLayout();
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox34.PerformLayout();
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox33.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
+            this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_OverUnder)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.groupBox42.ResumeLayout(false);
+            this.groupBox42.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.S1_Configuration.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox29.PerformLayout();
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox27.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox_PhoneNumber.ResumeLayout(false);
+            this.groupBox_PhoneNumber.PerformLayout();
+            this.groupBox_SerialPort.ResumeLayout(false);
+            this.groupBox_SerialPort.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox_ClentTCPStatus.ResumeLayout(false);
+            this.groupBox_ClentTCPStatus.PerformLayout();
+            this.ResumeLayout(false);
 
         }
 
