@@ -10581,82 +10581,33 @@ namespace Monitor
                 tabControl_Main.TabPages.RemoveAt(0);
                 tabControl_Main.TabPages.RemoveAt(0);
 
-                //system1_Parser.AddCommand("sum", " sum all the elements \n Format: sum 1 2 3");
-                //System1_parser.AddCommand("sum", "sum args", "sum all the numbers");
-                //List_SeriesCharts.Add(series1);
-                //List_SeriesCharts.Add(series2);
-                //List_SeriesCharts.Add(series3);
-                // this.TopMost = true;
-                //// this.FormBorderStyle = FormBorderStyle.None;
-                // this.WindowState = FormWindowState.Maximized;
-                //foreach(Series ser in chart1.Series)
-                //{
-                //    listBox_Charts.Items.Add(ser.Name);
-                //}
-                // textBox_SendSerialPort.PreviewKeyDown += TextBox_SendSerialPort_PreviewKeyDown;
-                // this.FormClosed += MainForm_FormClosed;
-                // chart1.Series.Clear();
-                // chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-                // chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-                //chart1.Series.Add(series1);
-                //chart1.Series.Add(series2);
-                //chart1.Series.Add(series3);
-                //chart1.Series[0].BorderWidth = 2;
-                //chart1.Series[1].BorderWidth = 2;
 
-                //chart1.Series[0].IsValueShownAsLabel = true;
-                //chart1.Series[1].IsValueShownAsLabel = false;
-                //chart1.Series[1].SmartLabelStyle.IsMarkerOverlappingAllowed = false;
-                //chart1.Series[0].SmartLabelStyle.IsMarkerOverlappingAllowed = false;
-                //chart1.Series[1].SmartLabelStyle.Enabled = true;
 
-                //chart1.ChartAreas[0].AxisX.IsLogarithmic = true;
-                //comboBox_WindowsDSPLib.DataSource = Enum.GetNames(typeof(DSPLib.DSP.Window.Type));
-                // chart1.MouseMove += Chart1_MouseMove;
-                //chart1.MouseClick += Chart1_MouseClick;
+
                 chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.###E+0";
-                // tabControl_Main.DrawItem += TabControl1_DrawItem1;
-                //  textBox_SendSerialPort.KeyDown += TextBox_SendSerialPort_KeyDown;
-
-                //tabControl1.TabPages.RemoveAt(2);
-                //      UpdatePhoneBook();
-                //   UpdateSMSCommands();
 
 
-                txtPortNo.Text = Monitor.Properties.Settings.Default.Start_Port;
-                txtDataTx.Text = Monitor.Properties.Settings.Default.Default_Server_Message;
-                //  richTextBox_RegisterCommands.Text = Monitor.Properties.Settings.Default.RegisterCommands;
 
 
-                //pictureBox_logo.BringToFront();
 
-                //Gil: Generate all the loggers
+
                 ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
                 SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, txtS1_Clear, checkBox_S1Pause, checkBox_S1RecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
                 SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
 
 
-                // LogSMS = new TextBox_Logger("Log_SMS", richTextBox_SMSConsole, button_ClearSMSConsole, checkBox_PauseSMSConsole, checkBox_RecordSMSConsole, null, null, null, null);
-
-                //Gil: Active All the recorders
-                //  checkBox_RecordGeneral.Checked = !checkBox_RecordGeneral.Checked;
-                // checkBox_S1RecordLog.Checked = !checkBox_S1RecordLog.Checked;
-                //checkBox_RecordLatLong.Checked = !checkBox_RecordLatLong.Checked;
-
-                //        checkBox_RecordTrace.Checked = !checkBox_RecordTrace.Checked;
-
-                //Gil: Initialize the serial ports
-                //serialPort.DataReceived += new SerialDataReceivedEventHandler(SerialPort_DataReceived);
-
                 ScanComports();
+
+
                 cmb_StopBits.DataSource = Enum.GetValues(typeof(StopBits));
                 cmb_StopBits.SelectedIndex = (int)StopBits.One;
 
                 cmbParity.DataSource = Enum.GetValues(typeof(Parity));
                 cmbParity.SelectedIndex = (int)Parity.None;
 
-                //cmbDataBits.DataSource = Enum.GetValues(typeof(Data));
 
+                txtPortNo.Text = Monitor.Properties.Settings.Default.Start_Port;
+                txtDataTx.Text = Monitor.Properties.Settings.Default.Default_Server_Message;
                 cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
                 cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits;
                 cmb_StopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit;
@@ -10664,16 +10615,6 @@ namespace Monitor
                 cmb_PortName.Text = Monitor.Properties.Settings.Default.Comport_Port;
 
 
-
-
-
-
-
-                //cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
-                //cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits;
-                //cmbStopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit;
-                //cmbParity.Text = Monitor.Properties.Settings.Default.Comport_Parity;
-                //cmbPortName.Text = Monitor.Properties.Settings.Default.Comport_Port;
 
 
                 //Gil: Set Versions Names
@@ -10698,46 +10639,18 @@ namespace Monitor
 
 
 
-                foreach (TextBox txtbx in List_ConfigurationTextBoxes)
-                {
-                    txtbx.GotFocus += Txtbx_GotFocus;
-                }
-
-
                 UpdateSerialPortComboBox();
 
-                //ShowHidePages();
 
 
 
 
-
-                TimeSpan TimeFromLastRunTime = DateTime.Now - Monitor.Properties.Settings.Default.LastRunTime;
-                //      TimeSpan TimeFromCompilation = DateTime.Now - RetrieveLinkerTimestamp();
-                TimeSpan TimeForRunPhoneBookAtTime = DateTime.Now - RetrieveLinkerTimestamp();
-                Monitor.Properties.Settings.Default.LastRunTime = DateTime.Now;
-                Monitor.Properties.Settings.Default.Save();
-
-                ///////////////////////////////// Leonid: Compilation time span (Remember this!!!!!!!!)
-                if (TimeForRunPhoneBookAtTime.Days > 90)
-                {
-                    //   ClacPhoneBookTimeForPeriodOfSystem();
-
-                }
-                ///////////////////////////////
-                //if (TimeFromLastSave.Days > 3)
-                //{
-                //    SaveCommandsAndContacts();
-
-
-                //}
 
 
                 EditDataGridForSSPAWB();
 
 
 
-                SerialPortLogger.LogMessage(Color.Yellow, Color.LightGray, "Press F1 for help", New_Line = true, Show_Time = true);
 
                 foreach (Control allContrls in Controls)
                 {
