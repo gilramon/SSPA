@@ -465,10 +465,10 @@ namespace Monitor
         private Label label30;
         private Label label29;
         private Label label28;
-        private TextBox textBox27;
-        private TextBox textBox26;
-        private TextBox textBox25;
-        private TextBox textBox24;
+        private TextBox textBox_4V;
+        private TextBox textBox_5V;
+        private TextBox textBox_9V;
+        private TextBox textBox_28V;
         private Label label25;
         private GroupBox groupBox44;
         private Button button70;
@@ -479,9 +479,9 @@ namespace Monitor
         private Label label38;
         private Label label34;
         private Label label35;
-        private TextBox textBox29;
-        private TextBox textBox30;
-        private TextBox textBox31;
+        private TextBox textBox_DCA1;
+        private TextBox textBox_DCA2;
+        private TextBox textBox_VVA;
         private Label label36;
         private GroupBox groupBox47;
         private Button button_GetStatus;
@@ -721,30 +721,30 @@ namespace Monitor
         private Button button_SystemMode;
         private Label label123;
         private Label label125;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBox_VDDoff1;
+        private TextBox textBox_Vdd_temp;
         private Label label128;
         private Label label126;
         private Label label127;
-        private TextBox textBox9;
-        private TextBox textBox11;
+        private TextBox textBox_Vgg2;
+        private TextBox textBox_Vgg1;
         private Label label124;
         private Label label131;
-        private TextBox textBox23;
+        private TextBox textBox_MPA_Toff;
         private Label label133;
-        private TextBox textBox32;
+        private TextBox textBox_MPA_Ton;
         private Label label129;
         private Label label130;
         private Label label132;
-        private TextBox textBox18;
-        private TextBox textBox28;
+        private TextBox textBox_SPA_Toff;
+        private TextBox textBox_SPA_Ton;
         private Label label134;
         private Label label136;
-        private TextBox textBox34;
+        private TextBox textBox_VVAoff2;
         private Label label137;
-        private TextBox textBox35;
+        private TextBox textBox_VVAoff1;
         private Label label135;
-        private TextBox textBox33;
+        private TextBox textBox_VVA_temp;
         private TabPage tabPage3;
         private TextBox textBox_WriteRegister;
         private Button button_WriteRegister;
@@ -756,6 +756,12 @@ namespace Monitor
         private Label label140;
         private Label label139;
         private Label label138;
+        private TextBox textBox_ReadFlash;
+        private Button button_ReadFlash;
+        private TextBox textBox_WriteFlash;
+        private Button button_WriteFlash;
+        private TextBox textBox_EraseFlash;
+        private Button button_EraseFlash;
         private static readonly string PREAMBLE = "23";
 
 
@@ -810,11 +816,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1038,6 +1044,12 @@ namespace Monitor
             this.button60 = new System.Windows.Forms.Button();
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label140 = new System.Windows.Forms.Label();
+            this.label139 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.textBox36 = new System.Windows.Forms.TextBox();
             this.textBox_ReadRegister = new System.Windows.Forms.TextBox();
             this.button_ReadFromRegister = new System.Windows.Forms.Button();
             this.textBox_WriteRegister = new System.Windows.Forms.TextBox();
@@ -1170,47 +1182,47 @@ namespace Monitor
             this.textBox_PulseWidth2 = new System.Windows.Forms.TextBox();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
             this.label136 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBox_VVAoff2 = new System.Windows.Forms.TextBox();
             this.label137 = new System.Windows.Forms.Label();
-            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBox_VVAoff1 = new System.Windows.Forms.TextBox();
             this.label135 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox_VVA_temp = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox_DCA1 = new System.Windows.Forms.TextBox();
+            this.textBox_DCA2 = new System.Windows.Forms.TextBox();
+            this.textBox_VVA = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
             this.label130 = new System.Windows.Forms.Label();
             this.label132 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBox_SPA_Toff = new System.Windows.Forms.TextBox();
+            this.textBox_SPA_Ton = new System.Windows.Forms.TextBox();
             this.label134 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox_MPA_Toff = new System.Windows.Forms.TextBox();
             this.label133 = new System.Windows.Forms.Label();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox_MPA_Ton = new System.Windows.Forms.TextBox();
             this.label129 = new System.Windows.Forms.Label();
             this.label128 = new System.Windows.Forms.Label();
             this.label126 = new System.Windows.Forms.Label();
             this.label127 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox_Vgg2 = new System.Windows.Forms.TextBox();
+            this.textBox_Vgg1 = new System.Windows.Forms.TextBox();
             this.label124 = new System.Windows.Forms.Label();
             this.label125 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_VDDoff1 = new System.Windows.Forms.TextBox();
+            this.textBox_Vdd_temp = new System.Windows.Forms.TextBox();
             this.label102 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox_4V = new System.Windows.Forms.TextBox();
+            this.textBox_5V = new System.Windows.Forms.TextBox();
+            this.textBox_9V = new System.Windows.Forms.TextBox();
+            this.textBox_28V = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.label79 = new System.Windows.Forms.Label();
@@ -1518,12 +1530,12 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.label138 = new System.Windows.Forms.Label();
-            this.label139 = new System.Windows.Forms.Label();
-            this.label140 = new System.Windows.Forms.Label();
+            this.textBox_EraseFlash = new System.Windows.Forms.TextBox();
+            this.button_EraseFlash = new System.Windows.Forms.Button();
+            this.textBox_WriteFlash = new System.Windows.Forms.TextBox();
+            this.button_WriteFlash = new System.Windows.Forms.Button();
+            this.textBox_ReadFlash = new System.Windows.Forms.TextBox();
+            this.button_ReadFlash = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1948,17 +1960,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea11.AxisX.Title = "Freq";
-            chartArea11.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea11.AxisY.Title = "Power [dBm]";
-            chartArea11.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea11.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea11);
-            legend11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend11.IsTextAutoFit = false;
-            legend11.Name = "Legend1";
-            legend11.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend11);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4360,6 +4372,12 @@ namespace Monitor
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox_ReadFlash);
+            this.tabPage3.Controls.Add(this.button_ReadFlash);
+            this.tabPage3.Controls.Add(this.textBox_WriteFlash);
+            this.tabPage3.Controls.Add(this.button_WriteFlash);
+            this.tabPage3.Controls.Add(this.textBox_EraseFlash);
+            this.tabPage3.Controls.Add(this.button_EraseFlash);
             this.tabPage3.Controls.Add(this.label140);
             this.tabPage3.Controls.Add(this.label139);
             this.tabPage3.Controls.Add(this.label138);
@@ -4378,6 +4396,66 @@ namespace Monitor
             this.tabPage3.Text = "Registers";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(360, 40);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(58, 18);
+            this.label140.TabIndex = 65;
+            this.label140.Text = "Address";
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(509, 10);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(36, 18);
+            this.label139.TabIndex = 64;
+            this.label139.Text = "Data";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(359, 13);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(58, 18);
+            this.label138.TabIndex = 63;
+            this.label138.Text = "Address";
+            // 
+            // textBox38
+            // 
+            this.textBox38.Location = new System.Drawing.Point(572, 7);
+            this.textBox38.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox38.MaxLength = 30;
+            this.textBox38.Name = "textBox38";
+            this.textBox38.Size = new System.Drawing.Size(93, 26);
+            this.textBox38.TabIndex = 62;
+            this.textBox38.Text = "11 22";
+            this.textBox38.TextChanged += new System.EventHandler(this.textBox38_TextChanged);
+            // 
+            // textBox37
+            // 
+            this.textBox37.Location = new System.Drawing.Point(421, 37);
+            this.textBox37.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox37.MaxLength = 30;
+            this.textBox37.Name = "textBox37";
+            this.textBox37.Size = new System.Drawing.Size(119, 26);
+            this.textBox37.TabIndex = 61;
+            this.textBox37.Text = "00 85";
+            this.textBox37.TextChanged += new System.EventHandler(this.textBox37_TextChanged);
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(421, 7);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox36.MaxLength = 30;
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(83, 26);
+            this.textBox36.TabIndex = 60;
+            this.textBox36.Text = "00 85";
+            this.textBox36.TextChanged += new System.EventHandler(this.textBox36_TextChanged);
             // 
             // textBox_ReadRegister
             // 
@@ -5953,17 +6031,17 @@ namespace Monitor
             // groupBox46
             // 
             this.groupBox46.Controls.Add(this.label136);
-            this.groupBox46.Controls.Add(this.textBox34);
+            this.groupBox46.Controls.Add(this.textBox_VVAoff2);
             this.groupBox46.Controls.Add(this.label137);
-            this.groupBox46.Controls.Add(this.textBox35);
+            this.groupBox46.Controls.Add(this.textBox_VVAoff1);
             this.groupBox46.Controls.Add(this.label135);
-            this.groupBox46.Controls.Add(this.textBox33);
+            this.groupBox46.Controls.Add(this.textBox_VVA_temp);
             this.groupBox46.Controls.Add(this.label38);
             this.groupBox46.Controls.Add(this.label34);
             this.groupBox46.Controls.Add(this.label35);
-            this.groupBox46.Controls.Add(this.textBox29);
-            this.groupBox46.Controls.Add(this.textBox30);
-            this.groupBox46.Controls.Add(this.textBox31);
+            this.groupBox46.Controls.Add(this.textBox_DCA1);
+            this.groupBox46.Controls.Add(this.textBox_DCA2);
+            this.groupBox46.Controls.Add(this.textBox_VVA);
             this.groupBox46.Controls.Add(this.label36);
             this.groupBox46.Location = new System.Drawing.Point(451, 101);
             this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
@@ -5986,15 +6064,15 @@ namespace Monitor
             this.label136.TabIndex = 20;
             this.label136.Text = "VVA (off2)";
             // 
-            // textBox34
+            // textBox_VVAoff2
             // 
-            this.textBox34.Location = new System.Drawing.Point(177, 67);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(50, 26);
-            this.textBox34.TabIndex = 19;
-            this.textBox34.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox34, "Press Enter to update");
+            this.textBox_VVAoff2.Location = new System.Drawing.Point(177, 67);
+            this.textBox_VVAoff2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_VVAoff2.Name = "textBox_VVAoff2";
+            this.textBox_VVAoff2.Size = new System.Drawing.Size(50, 26);
+            this.textBox_VVAoff2.TabIndex = 19;
+            this.textBox_VVAoff2.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_VVAoff2, "Press Enter to update");
             // 
             // label137
             // 
@@ -6008,15 +6086,15 @@ namespace Monitor
             this.label137.TabIndex = 18;
             this.label137.Text = "VVA (off1)";
             // 
-            // textBox35
+            // textBox_VVAoff1
             // 
-            this.textBox35.Location = new System.Drawing.Point(119, 68);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(50, 26);
-            this.textBox35.TabIndex = 17;
-            this.textBox35.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox35, "Press Enter to update");
+            this.textBox_VVAoff1.Location = new System.Drawing.Point(119, 68);
+            this.textBox_VVAoff1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_VVAoff1.Name = "textBox_VVAoff1";
+            this.textBox_VVAoff1.Size = new System.Drawing.Size(50, 26);
+            this.textBox_VVAoff1.TabIndex = 17;
+            this.textBox_VVAoff1.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_VVAoff1, "Press Enter to update");
             // 
             // label135
             // 
@@ -6030,15 +6108,15 @@ namespace Monitor
             this.label135.TabIndex = 16;
             this.label135.Text = "VVA (temp)";
             // 
-            // textBox33
+            // textBox_VVA_temp
             // 
-            this.textBox33.Location = new System.Drawing.Point(65, 68);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(50, 26);
-            this.textBox33.TabIndex = 15;
-            this.textBox33.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox33, "Press Enter to update");
+            this.textBox_VVA_temp.Location = new System.Drawing.Point(65, 68);
+            this.textBox_VVA_temp.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_VVA_temp.Name = "textBox_VVA_temp";
+            this.textBox_VVA_temp.Size = new System.Drawing.Size(50, 26);
+            this.textBox_VVA_temp.TabIndex = 15;
+            this.textBox_VVA_temp.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_VVA_temp, "Press Enter to update");
             // 
             // label38
             // 
@@ -6078,41 +6156,41 @@ namespace Monitor
             this.label35.TabIndex = 7;
             this.label35.Text = "VVA";
             // 
-            // textBox29
+            // textBox_DCA1
             // 
-            this.textBox29.Location = new System.Drawing.Point(304, 72);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(50, 26);
-            this.textBox29.TabIndex = 6;
-            this.textBox29.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox29, "Press Enter to update");
-            this.textBox29.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
-            this.textBox29.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox29_KeyDown);
+            this.textBox_DCA1.Location = new System.Drawing.Point(304, 72);
+            this.textBox_DCA1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DCA1.Name = "textBox_DCA1";
+            this.textBox_DCA1.Size = new System.Drawing.Size(50, 26);
+            this.textBox_DCA1.TabIndex = 6;
+            this.textBox_DCA1.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_DCA1, "Press Enter to update");
+            this.textBox_DCA1.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
+            this.textBox_DCA1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox29_KeyDown);
             // 
-            // textBox30
+            // textBox_DCA2
             // 
-            this.textBox30.Location = new System.Drawing.Point(362, 71);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(50, 26);
-            this.textBox30.TabIndex = 7;
-            this.textBox30.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox30, "Press Enter to update");
-            this.textBox30.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
-            this.textBox30.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox30_KeyDown);
+            this.textBox_DCA2.Location = new System.Drawing.Point(362, 71);
+            this.textBox_DCA2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_DCA2.Name = "textBox_DCA2";
+            this.textBox_DCA2.Size = new System.Drawing.Size(50, 26);
+            this.textBox_DCA2.TabIndex = 7;
+            this.textBox_DCA2.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_DCA2, "Press Enter to update");
+            this.textBox_DCA2.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
+            this.textBox_DCA2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox30_KeyDown);
             // 
-            // textBox31
+            // textBox_VVA
             // 
-            this.textBox31.Location = new System.Drawing.Point(7, 69);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(50, 26);
-            this.textBox31.TabIndex = 5;
-            this.textBox31.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox31, "Press Enter to update");
-            this.textBox31.TextChanged += new System.EventHandler(this.textBox31_TextChanged);
-            this.textBox31.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox31_KeyDown);
+            this.textBox_VVA.Location = new System.Drawing.Point(7, 69);
+            this.textBox_VVA.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_VVA.Name = "textBox_VVA";
+            this.textBox_VVA.Size = new System.Drawing.Size(50, 26);
+            this.textBox_VVA.TabIndex = 5;
+            this.textBox_VVA.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_VVA, "Press Enter to update");
+            this.textBox_VVA.TextChanged += new System.EventHandler(this.textBox31_TextChanged);
+            this.textBox_VVA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox31_KeyDown);
             // 
             // label36
             // 
@@ -6130,32 +6208,32 @@ namespace Monitor
             // 
             this.groupBox45.Controls.Add(this.label130);
             this.groupBox45.Controls.Add(this.label132);
-            this.groupBox45.Controls.Add(this.textBox18);
-            this.groupBox45.Controls.Add(this.textBox28);
+            this.groupBox45.Controls.Add(this.textBox_SPA_Toff);
+            this.groupBox45.Controls.Add(this.textBox_SPA_Ton);
             this.groupBox45.Controls.Add(this.label134);
             this.groupBox45.Controls.Add(this.label131);
-            this.groupBox45.Controls.Add(this.textBox23);
+            this.groupBox45.Controls.Add(this.textBox_MPA_Toff);
             this.groupBox45.Controls.Add(this.label133);
-            this.groupBox45.Controls.Add(this.textBox32);
+            this.groupBox45.Controls.Add(this.textBox_MPA_Ton);
             this.groupBox45.Controls.Add(this.label129);
             this.groupBox45.Controls.Add(this.label128);
             this.groupBox45.Controls.Add(this.label126);
             this.groupBox45.Controls.Add(this.label127);
-            this.groupBox45.Controls.Add(this.textBox9);
-            this.groupBox45.Controls.Add(this.textBox11);
+            this.groupBox45.Controls.Add(this.textBox_Vgg2);
+            this.groupBox45.Controls.Add(this.textBox_Vgg1);
             this.groupBox45.Controls.Add(this.label124);
             this.groupBox45.Controls.Add(this.label125);
-            this.groupBox45.Controls.Add(this.textBox1);
-            this.groupBox45.Controls.Add(this.textBox2);
+            this.groupBox45.Controls.Add(this.textBox_VDDoff1);
+            this.groupBox45.Controls.Add(this.textBox_Vdd_temp);
             this.groupBox45.Controls.Add(this.label102);
             this.groupBox45.Controls.Add(this.label31);
             this.groupBox45.Controls.Add(this.label30);
             this.groupBox45.Controls.Add(this.label29);
             this.groupBox45.Controls.Add(this.label28);
-            this.groupBox45.Controls.Add(this.textBox27);
-            this.groupBox45.Controls.Add(this.textBox26);
-            this.groupBox45.Controls.Add(this.textBox25);
-            this.groupBox45.Controls.Add(this.textBox24);
+            this.groupBox45.Controls.Add(this.textBox_4V);
+            this.groupBox45.Controls.Add(this.textBox_5V);
+            this.groupBox45.Controls.Add(this.textBox_9V);
+            this.groupBox45.Controls.Add(this.textBox_28V);
             this.groupBox45.Controls.Add(this.label25);
             this.groupBox45.Location = new System.Drawing.Point(6, 9);
             this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
@@ -6190,25 +6268,29 @@ namespace Monitor
             this.label132.TabIndex = 36;
             this.label132.Text = "Ton";
             // 
-            // textBox18
+            // textBox_SPA_Toff
             // 
-            this.textBox18.Location = new System.Drawing.Point(278, 154);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(50, 26);
-            this.textBox18.TabIndex = 35;
-            this.textBox18.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox18, "Press Enter to update");
+            this.textBox_SPA_Toff.Location = new System.Drawing.Point(278, 154);
+            this.textBox_SPA_Toff.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SPA_Toff.Name = "textBox_SPA_Toff";
+            this.textBox_SPA_Toff.Size = new System.Drawing.Size(50, 26);
+            this.textBox_SPA_Toff.TabIndex = 35;
+            this.textBox_SPA_Toff.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_SPA_Toff, "Press Enter to update");
+            this.textBox_SPA_Toff.TextChanged += new System.EventHandler(this.textBox_SPA_Toff_TextChanged);
+            this.textBox_SPA_Toff.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_SPA_Toff_KeyDown);
             // 
-            // textBox28
+            // textBox_SPA_Ton
             // 
-            this.textBox28.Location = new System.Drawing.Point(218, 155);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(50, 26);
-            this.textBox28.TabIndex = 33;
-            this.textBox28.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox28, "Press Enter to update");
+            this.textBox_SPA_Ton.Location = new System.Drawing.Point(218, 155);
+            this.textBox_SPA_Ton.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SPA_Ton.Name = "textBox_SPA_Ton";
+            this.textBox_SPA_Ton.Size = new System.Drawing.Size(50, 26);
+            this.textBox_SPA_Ton.TabIndex = 33;
+            this.textBox_SPA_Ton.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_SPA_Ton, "Press Enter to update");
+            this.textBox_SPA_Ton.TextChanged += new System.EventHandler(this.textBox_SPA_Ton_TextChanged);
+            this.textBox_SPA_Ton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_SPA_Ton_KeyDown);
             // 
             // label134
             // 
@@ -6235,16 +6317,17 @@ namespace Monitor
             this.label131.Text = "Toff";
             this.label131.Click += new System.EventHandler(this.label131_Click);
             // 
-            // textBox23
+            // textBox_MPA_Toff
             // 
-            this.textBox23.Location = new System.Drawing.Point(278, 76);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(50, 26);
-            this.textBox23.TabIndex = 29;
-            this.textBox23.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox23, "Press Enter to update");
-            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
+            this.textBox_MPA_Toff.Location = new System.Drawing.Point(278, 76);
+            this.textBox_MPA_Toff.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MPA_Toff.Name = "textBox_MPA_Toff";
+            this.textBox_MPA_Toff.Size = new System.Drawing.Size(50, 26);
+            this.textBox_MPA_Toff.TabIndex = 29;
+            this.textBox_MPA_Toff.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_MPA_Toff, "Press Enter to update");
+            this.textBox_MPA_Toff.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
+            this.textBox_MPA_Toff.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_MPA_Toff_KeyDown);
             // 
             // label133
             // 
@@ -6259,16 +6342,17 @@ namespace Monitor
             this.label133.Text = "Ton";
             this.label133.Click += new System.EventHandler(this.label133_Click);
             // 
-            // textBox32
+            // textBox_MPA_Ton
             // 
-            this.textBox32.Location = new System.Drawing.Point(218, 77);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(50, 26);
-            this.textBox32.TabIndex = 25;
-            this.textBox32.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox32, "Press Enter to update");
-            this.textBox32.TextChanged += new System.EventHandler(this.textBox32_TextChanged);
+            this.textBox_MPA_Ton.Location = new System.Drawing.Point(218, 77);
+            this.textBox_MPA_Ton.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MPA_Ton.Name = "textBox_MPA_Ton";
+            this.textBox_MPA_Ton.Size = new System.Drawing.Size(50, 26);
+            this.textBox_MPA_Ton.TabIndex = 25;
+            this.textBox_MPA_Ton.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_MPA_Ton, "Press Enter to update");
+            this.textBox_MPA_Ton.TextChanged += new System.EventHandler(this.textBox32_TextChanged);
+            this.textBox_MPA_Ton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_MPA_Ton_KeyDown);
             // 
             // label129
             // 
@@ -6321,25 +6405,29 @@ namespace Monitor
             this.label127.Text = "Vgg1";
             this.label127.Click += new System.EventHandler(this.label127_Click);
             // 
-            // textBox9
+            // textBox_Vgg2
             // 
-            this.textBox9.Location = new System.Drawing.Point(122, 117);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(50, 26);
-            this.textBox9.TabIndex = 20;
-            this.textBox9.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox9, "Press Enter to update");
+            this.textBox_Vgg2.Location = new System.Drawing.Point(122, 117);
+            this.textBox_Vgg2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Vgg2.Name = "textBox_Vgg2";
+            this.textBox_Vgg2.Size = new System.Drawing.Size(50, 26);
+            this.textBox_Vgg2.TabIndex = 20;
+            this.textBox_Vgg2.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_Vgg2, "Press Enter to update");
+            this.textBox_Vgg2.TextChanged += new System.EventHandler(this.textBox9_TextChanged_1);
+            this.textBox_Vgg2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
             // 
-            // textBox11
+            // textBox_Vgg1
             // 
-            this.textBox11.Location = new System.Drawing.Point(122, 68);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(50, 26);
-            this.textBox11.TabIndex = 19;
-            this.textBox11.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox11, "Press Enter to update");
+            this.textBox_Vgg1.Location = new System.Drawing.Point(122, 68);
+            this.textBox_Vgg1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Vgg1.Name = "textBox_Vgg1";
+            this.textBox_Vgg1.Size = new System.Drawing.Size(50, 26);
+            this.textBox_Vgg1.TabIndex = 19;
+            this.textBox_Vgg1.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_Vgg1, "Press Enter to update");
+            this.textBox_Vgg1.TextChanged += new System.EventHandler(this.textBox11_TextChanged_1);
+            this.textBox_Vgg1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
             // 
             // label124
             // 
@@ -6365,25 +6453,27 @@ namespace Monitor
             this.label125.TabIndex = 17;
             this.label125.Text = "Vdd (temp)";
             // 
-            // textBox1
+            // textBox_VDDoff1
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 169);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 26);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox1, "Press Enter to update");
+            this.textBox_VDDoff1.Location = new System.Drawing.Point(4, 169);
+            this.textBox_VDDoff1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_VDDoff1.Name = "textBox_VDDoff1";
+            this.textBox_VDDoff1.Size = new System.Drawing.Size(50, 26);
+            this.textBox_VDDoff1.TabIndex = 16;
+            this.textBox_VDDoff1.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_VDDoff1, "Press Enter to update");
+            this.textBox_VDDoff1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_5);
             // 
-            // textBox2
+            // textBox_Vdd_temp
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 120);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 26);
-            this.textBox2.TabIndex = 15;
-            this.textBox2.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox2, "Press Enter to update");
+            this.textBox_Vdd_temp.Location = new System.Drawing.Point(6, 120);
+            this.textBox_Vdd_temp.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Vdd_temp.Name = "textBox_Vdd_temp";
+            this.textBox_Vdd_temp.Size = new System.Drawing.Size(50, 26);
+            this.textBox_Vdd_temp.TabIndex = 15;
+            this.textBox_Vdd_temp.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_Vdd_temp, "Press Enter to update");
+            this.textBox_Vdd_temp.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
             // 
             // label102
             // 
@@ -6444,53 +6534,53 @@ namespace Monitor
             this.label28.TabIndex = 7;
             this.label28.Text = "28V";
             // 
-            // textBox27
+            // textBox_4V
             // 
-            this.textBox27.Location = new System.Drawing.Point(60, 167);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(50, 26);
-            this.textBox27.TabIndex = 4;
-            this.textBox27.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox27, "Press Enter to update");
-            this.textBox27.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
-            this.textBox27.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
+            this.textBox_4V.Location = new System.Drawing.Point(60, 167);
+            this.textBox_4V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_4V.Name = "textBox_4V";
+            this.textBox_4V.Size = new System.Drawing.Size(50, 26);
+            this.textBox_4V.TabIndex = 4;
+            this.textBox_4V.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_4V, "Press Enter to update");
+            this.textBox_4V.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
+            this.textBox_4V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
             // 
-            // textBox26
+            // textBox_5V
             // 
-            this.textBox26.Location = new System.Drawing.Point(62, 118);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(50, 26);
-            this.textBox26.TabIndex = 3;
-            this.textBox26.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox26, "Press Enter to update");
-            this.textBox26.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
-            this.textBox26.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
+            this.textBox_5V.Location = new System.Drawing.Point(62, 118);
+            this.textBox_5V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_5V.Name = "textBox_5V";
+            this.textBox_5V.Size = new System.Drawing.Size(50, 26);
+            this.textBox_5V.TabIndex = 3;
+            this.textBox_5V.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_5V, "Press Enter to update");
+            this.textBox_5V.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
+            this.textBox_5V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
-            // textBox25
+            // textBox_9V
             // 
-            this.textBox25.Location = new System.Drawing.Point(62, 69);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(50, 26);
-            this.textBox25.TabIndex = 2;
-            this.textBox25.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox25, "Press Enter to update");
-            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
-            this.textBox25.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
+            this.textBox_9V.Location = new System.Drawing.Point(62, 69);
+            this.textBox_9V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_9V.Name = "textBox_9V";
+            this.textBox_9V.Size = new System.Drawing.Size(50, 26);
+            this.textBox_9V.TabIndex = 2;
+            this.textBox_9V.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_9V, "Press Enter to update");
+            this.textBox_9V.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
+            this.textBox_9V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
             // 
-            // textBox24
+            // textBox_28V
             // 
-            this.textBox24.Location = new System.Drawing.Point(6, 69);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(50, 26);
-            this.textBox24.TabIndex = 1;
-            this.textBox24.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox24, "Press Enter to update");
-            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
-            this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
+            this.textBox_28V.Location = new System.Drawing.Point(6, 69);
+            this.textBox_28V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_28V.Name = "textBox_28V";
+            this.textBox_28V.Size = new System.Drawing.Size(50, 26);
+            this.textBox_28V.TabIndex = 1;
+            this.textBox_28V.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_28V, "Press Enter to update");
+            this.textBox_28V.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
+            this.textBox_28V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
             // label25
             // 
@@ -7150,8 +7240,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7176,8 +7266,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7582,9 +7672,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9635,65 +9725,71 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // textBox36
+            // textBox_EraseFlash
             // 
-            this.textBox36.Location = new System.Drawing.Point(421, 7);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox36.MaxLength = 30;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(83, 26);
-            this.textBox36.TabIndex = 60;
-            this.textBox36.Text = "00 85";
-            this.textBox36.TextChanged += new System.EventHandler(this.textBox36_TextChanged);
+            this.textBox_EraseFlash.Location = new System.Drawing.Point(236, 72);
+            this.textBox_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_EraseFlash.MaxLength = 30;
+            this.textBox_EraseFlash.Name = "textBox_EraseFlash";
+            this.textBox_EraseFlash.Size = new System.Drawing.Size(119, 26);
+            this.textBox_EraseFlash.TabIndex = 67;
+            this.textBox_EraseFlash.Text = "00 03 01 00 00";
+            this.textBox_EraseFlash.TextChanged += new System.EventHandler(this.textBox_EraseFlash_TextChanged);
             // 
-            // textBox37
+            // button_EraseFlash
             // 
-            this.textBox37.Location = new System.Drawing.Point(421, 37);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox37.MaxLength = 30;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(119, 26);
-            this.textBox37.TabIndex = 61;
-            this.textBox37.Text = "00 85";
-            this.textBox37.TextChanged += new System.EventHandler(this.textBox37_TextChanged);
+            this.button_EraseFlash.Location = new System.Drawing.Point(5, 74);
+            this.button_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_EraseFlash.Name = "button_EraseFlash";
+            this.button_EraseFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_EraseFlash.TabIndex = 66;
+            this.button_EraseFlash.Text = "Erase flash";
+            this.button_EraseFlash.UseVisualStyleBackColor = true;
+            this.button_EraseFlash.Click += new System.EventHandler(this.button_EraseFlash_Click);
             // 
-            // textBox38
+            // textBox_WriteFlash
             // 
-            this.textBox38.Location = new System.Drawing.Point(572, 7);
-            this.textBox38.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox38.MaxLength = 30;
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(93, 26);
-            this.textBox38.TabIndex = 62;
-            this.textBox38.Text = "11 22";
-            this.textBox38.TextChanged += new System.EventHandler(this.textBox38_TextChanged);
+            this.textBox_WriteFlash.Location = new System.Drawing.Point(236, 104);
+            this.textBox_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteFlash.MaxLength = 30;
+            this.textBox_WriteFlash.Name = "textBox_WriteFlash";
+            this.textBox_WriteFlash.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteFlash.TabIndex = 69;
+            this.textBox_WriteFlash.Text = "00 04 00 00 00 00";
+            this.textBox_WriteFlash.TextChanged += new System.EventHandler(this.textBox_WriteFlash_TextChanged);
             // 
-            // label138
+            // button_WriteFlash
             // 
-            this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(359, 13);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(58, 18);
-            this.label138.TabIndex = 63;
-            this.label138.Text = "Address";
+            this.button_WriteFlash.Location = new System.Drawing.Point(5, 106);
+            this.button_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteFlash.Name = "button_WriteFlash";
+            this.button_WriteFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_WriteFlash.TabIndex = 68;
+            this.button_WriteFlash.Text = "Write flash";
+            this.button_WriteFlash.UseVisualStyleBackColor = true;
+            this.button_WriteFlash.Click += new System.EventHandler(this.button_WriteFlash_Click);
             // 
-            // label139
+            // textBox_ReadFlash
             // 
-            this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(509, 10);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(36, 18);
-            this.label139.TabIndex = 64;
-            this.label139.Text = "Data";
+            this.textBox_ReadFlash.Location = new System.Drawing.Point(236, 134);
+            this.textBox_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadFlash.MaxLength = 30;
+            this.textBox_ReadFlash.Name = "textBox_ReadFlash";
+            this.textBox_ReadFlash.Size = new System.Drawing.Size(147, 26);
+            this.textBox_ReadFlash.TabIndex = 71;
+            this.textBox_ReadFlash.Text = "00 05 00 00 00 00 00";
+            this.textBox_ReadFlash.TextChanged += new System.EventHandler(this.textBox_ReadFlash_TextChanged);
             // 
-            // label140
+            // button_ReadFlash
             // 
-            this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(360, 40);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(58, 18);
-            this.label140.TabIndex = 65;
-            this.label140.Text = "Address";
+            this.button_ReadFlash.Location = new System.Drawing.Point(5, 136);
+            this.button_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadFlash.Name = "button_ReadFlash";
+            this.button_ReadFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_ReadFlash.TabIndex = 70;
+            this.button_ReadFlash.Text = "Read flash";
+            this.button_ReadFlash.UseVisualStyleBackColor = true;
+            this.button_ReadFlash.Click += new System.EventHandler(this.button_ReadFlash_Click);
             // 
             // MainForm
             // 
@@ -20645,22 +20741,22 @@ Note: eStatus enum 
         {
 
             string hexValue = "";
-            if (int.TryParse(textBox24.Text, out int temp))
+            if (int.TryParse(textBox_28V.Text, out int temp))
             {
                 hexValue += LittleBigEndian_Change(temp.ToString("X4"));
             }
 
-            if (int.TryParse(textBox25.Text, out temp))
+            if (int.TryParse(textBox_9V.Text, out temp))
             {
                 hexValue += LittleBigEndian_Change(temp.ToString("X4"));
             }
 
-            if (int.TryParse(textBox26.Text, out temp))
+            if (int.TryParse(textBox_5V.Text, out temp))
             {
                 hexValue += LittleBigEndian_Change(temp.ToString("X4"));
             }
 
-            if (int.TryParse(textBox27.Text, out temp))
+            if (int.TryParse(textBox_4V.Text, out temp))
             {
                 hexValue += LittleBigEndian_Change(temp.ToString("X4"));
             }
@@ -20673,36 +20769,67 @@ Note: eStatus enum 
         }
         private void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
-
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetPSUValues();
-
+                if(m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 1A", hexValue);
+                }
 
             }
         }
 
         private void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetPSUValues();
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 12", hexValue);
+                }
+                //SetPSUValues();
+
+
             }
         }
 
         private void textBox26_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetPSUValues();
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 15", hexValue);
+                }
+                //SetPSUValues();
+
+
             }
         }
 
         private void textBox27_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetPSUValues();
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 16", hexValue);
+                }
+                //SetPSUValues();
+
+
             }
         }
 
@@ -20721,22 +20848,18 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox31_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox31_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-
-                string hexValue = "";
-                if (int.TryParse(textBox31.Text, out int temp))
+                if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    hexValue += temp.ToString("X4");
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 11", hexValue);
                 }
 
-                textBox_SetVVAAtt.Text = hexValue;
-                button88_Click(null, null);
-
-                await Task.Delay(500);
-                button_GetStatus_Click(null, null);
             }
         }
 
@@ -20744,12 +20867,12 @@ Note: eStatus enum 
         {
 
             string hexValue = "";
-            if (int.TryParse(textBox29.Text, out int temp))
+            if (int.TryParse(textBox_DCA1.Text, out int temp))
             {
                 hexValue += temp.ToString("X4");
             }
 
-            if (int.TryParse(textBox30.Text, out temp))
+            if (int.TryParse(textBox_DCA2.Text, out temp))
             {
                 hexValue += temp.ToString("X4");
             }
@@ -20770,10 +20893,36 @@ Note: eStatus enum 
 
         private void textBox29_KeyDown(object sender, KeyEventArgs e)
         {
+
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetDCAValues();
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    string hexValue = "";
+                    if (int.TryParse(textBox_DCA1.Text, out int temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+                    if (int.TryParse(textBox_DCA2.Text, out temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+
+                    Write_Register(" 00 1B", hexValue);
+                }
+
+
+
             }
+
+
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    SetDCAValues();
+            //}
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
@@ -20910,21 +21059,21 @@ Note: eStatus enum 
 
         private void textBox24_TextChanged(object sender, EventArgs e)
         {
-            TextBox txtbox = (TextBox)sender;
-            if (int.TryParse(txtbox.Text, out int Num) == true)
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
             {
                 if (Num >= 0 && Num <= 4095)
                 {
-                    txtbox.BackColor = Color.LightGreen;
+                    m_Textbox.BackColor = Color.LightGreen;
                 }
                 else
                 {
-                    txtbox.BackColor = Color.Red;
+                    m_Textbox.BackColor = Color.Red;
                 }
             }
             else
             {
-                txtbox.BackColor = Color.Red;
+                m_Textbox.BackColor = Color.Red;
             }
         }
 
@@ -21722,12 +21871,44 @@ Note: eStatus enum 
 
         private void textBox32_TextChanged(object sender, EventArgs e)
         {
-
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
         }
 
         private void textBox23_TextChanged(object sender, EventArgs e)
         {
-
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
         }
 
         private void label131_Click(object sender, EventArgs e)
@@ -21783,7 +21964,7 @@ Note: eStatus enum 
             }
         }
 
-        void  ReadFromRegister(String i_Address)
+        void  Read_Register(String i_Address)
         {
             textBox_ReadRegister.Text = String.Format("02 {0} 00 02", i_Address);
 
@@ -21791,7 +21972,7 @@ Note: eStatus enum 
   
         }
 
-        void WriteFromRegister(String i_Address, String i_Data)
+        void Write_Register(String i_Address, String i_Data)
         {
             textBox_WriteRegister.Text = String.Format("01 {0} {1}", i_Address, i_Data);
 
@@ -21821,7 +22002,7 @@ Note: eStatus enum 
 
             if (buffer != null)
             {
-                WriteFromRegister(textBox36.Text, textBox38.Text);
+                //WriteFromRegister(textBox36.Text, textBox38.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -21840,7 +22021,7 @@ Note: eStatus enum 
 
             if (buffer != null)
             {
-                ReadFromRegister(textBox37.Text);
+               // ReadFromRegister(textBox37.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -21859,7 +22040,7 @@ Note: eStatus enum 
 
             if (buffer != null)
             {
-                WriteFromRegister(textBox36.Text, textBox38.Text);
+                Write_Register(textBox36.Text, textBox38.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -21875,6 +22056,285 @@ Note: eStatus enum 
             textBox_data.Text = textBox_WriteRegister.Text;
 
             SendDataToSystem();
+        }
+
+        private void button_EraseFlash_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "74";
+            textBox_data.Text = textBox_EraseFlash.Text;
+
+            SendDataToSystem();
+        }
+
+        private void textBox_EraseFlash_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_WriteFlash_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_ReadFlash_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void button_WriteFlash_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "72";
+            textBox_data.Text = textBox_WriteFlash.Text;
+
+            SendDataToSystem();
+        }
+
+        private void button_ReadFlash_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "70";
+            textBox_data.Text = textBox_ReadFlash.Text;
+
+            SendDataToSystem();
+        }
+
+        private void textBox11_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 13", hexValue);
+                }
+                //SetPSUValues();
+
+
+            }
+        }
+
+        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 14", hexValue);
+                }
+                //SetPSUValues();
+
+
+            }
+        }
+
+        private void textBox_MPA_Ton_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 0C", hexValue);
+                }
+
+            }
+        }
+
+        private void textBox_MPA_Toff_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 0D", hexValue);
+                }
+
+            }
+        }
+
+        private void textBox_SPA_Ton_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 0E", hexValue);
+                }
+
+            }
+        }
+
+        private void textBox_SPA_Toff_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+                    Write_Register(" 00 0F", hexValue);
+                }
+
+            }
+        }
+
+        private void textBox_SPA_Ton_TextChanged(object sender, EventArgs e)
+        {
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_SPA_Toff_TextChanged(object sender, EventArgs e)
+        {
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox9_TextChanged_1(object sender, EventArgs e)
+        {
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox2_TextChanged_2(object sender, EventArgs e)
+        {
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox1_TextChanged_5(object sender, EventArgs e)
+        {
+            TextBox m_Textbox = (TextBox)sender;
+            if (int.TryParse(m_Textbox.Text, out int Num) == true)
+            {
+                m_Textbox.BackColor = Color.LightGreen;
+                //if (Num >= 0 && Num <= 4095)
+                //{
+                //    m_Textbox.BackColor = Color.LightGreen;
+                //}
+                //else
+                //{
+                //    m_Textbox.BackColor = Color.Red;
+                //}
+            }
+            else
+            {
+                m_Textbox.BackColor = Color.Red;
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
