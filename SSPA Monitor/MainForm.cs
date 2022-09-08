@@ -762,6 +762,10 @@ namespace Monitor
         private Button button_WriteFlash;
         private TextBox textBox_EraseFlash;
         private Button button_EraseFlash;
+        private TabPage tabPage10;
+        private Button button_InitSSPA;
+        private Label label141;
+        private CheckBox checkBox_U19DAC;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1044,6 +1048,12 @@ namespace Monitor
             this.button60 = new System.Windows.Forms.Button();
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox_ReadFlash = new System.Windows.Forms.TextBox();
+            this.button_ReadFlash = new System.Windows.Forms.Button();
+            this.textBox_WriteFlash = new System.Windows.Forms.TextBox();
+            this.button_WriteFlash = new System.Windows.Forms.Button();
+            this.textBox_EraseFlash = new System.Windows.Forms.TextBox();
+            this.button_EraseFlash = new System.Windows.Forms.Button();
             this.label140 = new System.Windows.Forms.Label();
             this.label139 = new System.Windows.Forms.Label();
             this.label138 = new System.Windows.Forms.Label();
@@ -1530,12 +1540,10 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox_EraseFlash = new System.Windows.Forms.TextBox();
-            this.button_EraseFlash = new System.Windows.Forms.Button();
-            this.textBox_WriteFlash = new System.Windows.Forms.TextBox();
-            this.button_WriteFlash = new System.Windows.Forms.Button();
-            this.textBox_ReadFlash = new System.Windows.Forms.TextBox();
-            this.button_ReadFlash = new System.Windows.Forms.Button();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label141 = new System.Windows.Forms.Label();
+            this.button_InitSSPA = new System.Windows.Forms.Button();
+            this.checkBox_U19DAC = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1627,6 +1635,7 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.tabPage10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -4397,6 +4406,72 @@ namespace Monitor
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // textBox_ReadFlash
+            // 
+            this.textBox_ReadFlash.Location = new System.Drawing.Point(236, 134);
+            this.textBox_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadFlash.MaxLength = 30;
+            this.textBox_ReadFlash.Name = "textBox_ReadFlash";
+            this.textBox_ReadFlash.Size = new System.Drawing.Size(147, 26);
+            this.textBox_ReadFlash.TabIndex = 71;
+            this.textBox_ReadFlash.Text = "00 05 00 00 00 00 00";
+            this.textBox_ReadFlash.TextChanged += new System.EventHandler(this.textBox_ReadFlash_TextChanged);
+            // 
+            // button_ReadFlash
+            // 
+            this.button_ReadFlash.Location = new System.Drawing.Point(5, 136);
+            this.button_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadFlash.Name = "button_ReadFlash";
+            this.button_ReadFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_ReadFlash.TabIndex = 70;
+            this.button_ReadFlash.Text = "Read flash";
+            this.button_ReadFlash.UseVisualStyleBackColor = true;
+            this.button_ReadFlash.Click += new System.EventHandler(this.button_ReadFlash_Click);
+            // 
+            // textBox_WriteFlash
+            // 
+            this.textBox_WriteFlash.Location = new System.Drawing.Point(236, 104);
+            this.textBox_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteFlash.MaxLength = 30;
+            this.textBox_WriteFlash.Name = "textBox_WriteFlash";
+            this.textBox_WriteFlash.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteFlash.TabIndex = 69;
+            this.textBox_WriteFlash.Text = "00 04 00 00 00 00";
+            this.textBox_WriteFlash.TextChanged += new System.EventHandler(this.textBox_WriteFlash_TextChanged);
+            // 
+            // button_WriteFlash
+            // 
+            this.button_WriteFlash.Location = new System.Drawing.Point(5, 106);
+            this.button_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteFlash.Name = "button_WriteFlash";
+            this.button_WriteFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_WriteFlash.TabIndex = 68;
+            this.button_WriteFlash.Text = "Write flash";
+            this.button_WriteFlash.UseVisualStyleBackColor = true;
+            this.button_WriteFlash.Click += new System.EventHandler(this.button_WriteFlash_Click);
+            // 
+            // textBox_EraseFlash
+            // 
+            this.textBox_EraseFlash.Location = new System.Drawing.Point(236, 72);
+            this.textBox_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_EraseFlash.MaxLength = 30;
+            this.textBox_EraseFlash.Name = "textBox_EraseFlash";
+            this.textBox_EraseFlash.Size = new System.Drawing.Size(119, 26);
+            this.textBox_EraseFlash.TabIndex = 67;
+            this.textBox_EraseFlash.Text = "00 03 01 00 00";
+            this.textBox_EraseFlash.TextChanged += new System.EventHandler(this.textBox_EraseFlash_TextChanged);
+            // 
+            // button_EraseFlash
+            // 
+            this.button_EraseFlash.Location = new System.Drawing.Point(5, 74);
+            this.button_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_EraseFlash.Name = "button_EraseFlash";
+            this.button_EraseFlash.Size = new System.Drawing.Size(223, 22);
+            this.button_EraseFlash.TabIndex = 66;
+            this.button_EraseFlash.Text = "Erase flash";
+            this.button_EraseFlash.UseVisualStyleBackColor = true;
+            this.button_EraseFlash.Click += new System.EventHandler(this.button_EraseFlash_Click);
+            // 
             // label140
             // 
             this.label140.AutoSize = true;
@@ -4664,6 +4739,7 @@ namespace Monitor
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage7);
@@ -5038,12 +5114,12 @@ namespace Monitor
             // label103
             // 
             this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.ForeColor = System.Drawing.Color.Black;
             this.label103.Location = new System.Drawing.Point(425, 172);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(105, 19);
+            this.label103.Size = new System.Drawing.Size(81, 14);
             this.label103.TabIndex = 87;
             this.label103.Text = "Tx OVT hazard";
             // 
@@ -5082,24 +5158,24 @@ namespace Monitor
             // label104
             // 
             this.label104.AutoSize = true;
-            this.label104.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.ForeColor = System.Drawing.Color.Black;
             this.label104.Location = new System.Drawing.Point(441, 18);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(51, 19);
+            this.label104.Size = new System.Drawing.Size(40, 14);
             this.label104.TabIndex = 80;
             this.label104.Text = "Ready";
             // 
             // label105
             // 
             this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.ForeColor = System.Drawing.Color.Black;
             this.label105.Location = new System.Drawing.Point(441, 142);
             this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(35, 19);
+            this.label105.Size = new System.Drawing.Size(27, 14);
             this.label105.TabIndex = 85;
             this.label105.Text = "SEU";
             // 
@@ -5126,36 +5202,36 @@ namespace Monitor
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.Black;
             this.label69.Location = new System.Drawing.Point(446, 268);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(76, 19);
+            this.label69.Size = new System.Drawing.Size(60, 14);
             this.label69.TabIndex = 58;
             this.label69.Text = "DC1 value";
             // 
             // label106
             // 
             this.label106.AutoSize = true;
-            this.label106.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.ForeColor = System.Drawing.Color.Black;
             this.label106.Location = new System.Drawing.Point(441, 113);
             this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(81, 19);
+            this.label106.Size = new System.Drawing.Size(61, 14);
             this.label106.TabIndex = 83;
             this.label106.Text = "Protection";
             // 
             // label120
             // 
             this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Black;
             this.label120.Location = new System.Drawing.Point(241, 351);
             this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(90, 19);
+            this.label120.Size = new System.Drawing.Size(68, 14);
             this.label120.TabIndex = 75;
             this.label120.Text = "CAL SAR BIT";
             // 
@@ -5182,12 +5258,12 @@ namespace Monitor
             // label118
             // 
             this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.Black;
             this.label118.Location = new System.Drawing.Point(431, 79);
             this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(97, 19);
+            this.label118.Size = new System.Drawing.Size(74, 14);
             this.label118.TabIndex = 81;
             this.label118.Text = "Over voltage";
             // 
@@ -5214,24 +5290,24 @@ namespace Monitor
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
             this.label56.Location = new System.Drawing.Point(239, 14);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(85, 19);
+            this.label56.Size = new System.Drawing.Size(69, 14);
             this.label56.TabIndex = 56;
-            this.label56.Text = "PRM_temp";
+            this.label56.Text = "Ch 1 CS_48V";
             // 
             // label119
             // 
             this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label119.ForeColor = System.Drawing.Color.Black;
             this.label119.Location = new System.Drawing.Point(429, 46);
             this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(106, 19);
+            this.label119.Size = new System.Drawing.Size(83, 14);
             this.label119.TabIndex = 77;
             this.label119.Text = "Under voltage";
             // 
@@ -5278,24 +5354,24 @@ namespace Monitor
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Black;
             this.label57.Location = new System.Drawing.Point(241, 327);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(60, 19);
+            this.label57.Size = new System.Drawing.Size(46, 14);
             this.label57.TabIndex = 54;
             this.label57.Text = "DCA bit";
             // 
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.Black;
             this.label67.Location = new System.Drawing.Point(446, 239);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(77, 19);
+            this.label67.Size = new System.Drawing.Size(60, 14);
             this.label67.TabIndex = 62;
             this.label67.Text = "VVA value";
             // 
@@ -5312,24 +5388,24 @@ namespace Monitor
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
             this.label58.Location = new System.Drawing.Point(241, 296);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(47, 19);
+            this.label58.Size = new System.Drawing.Size(37, 14);
             this.label58.TabIndex = 52;
             this.label58.Text = "FT bit";
             // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Black;
             this.label70.Location = new System.Drawing.Point(446, 300);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(76, 19);
+            this.label70.Size = new System.Drawing.Size(60, 14);
             this.label70.TabIndex = 63;
             this.label70.Text = "DC2 value";
             // 
@@ -5346,12 +5422,12 @@ namespace Monitor
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
             this.label59.Location = new System.Drawing.Point(241, 264);
             this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(60, 19);
+            this.label59.Size = new System.Drawing.Size(47, 14);
             this.label59.TabIndex = 50;
             this.label59.Text = "freq bit";
             // 
@@ -5368,12 +5444,12 @@ namespace Monitor
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.Black;
             this.label60.Location = new System.Drawing.Point(241, 234);
             this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(94, 19);
+            this.label60.Size = new System.Drawing.Size(76, 14);
             this.label60.TabIndex = 48;
             this.label60.Text = "Pulse period";
             // 
@@ -5390,12 +5466,12 @@ namespace Monitor
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
             this.label61.Location = new System.Drawing.Point(239, 202);
             this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(89, 19);
+            this.label61.Size = new System.Drawing.Size(71, 14);
             this.label61.TabIndex = 46;
             this.label61.Text = "Pulse width";
             // 
@@ -5412,12 +5488,12 @@ namespace Monitor
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.Black;
             this.label62.Location = new System.Drawing.Point(239, 171);
             this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(76, 19);
+            this.label62.Size = new System.Drawing.Size(58, 14);
             this.label62.TabIndex = 44;
             this.label62.Text = "PSU temp";
             // 
@@ -5434,12 +5510,12 @@ namespace Monitor
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.Black;
             this.label63.Location = new System.Drawing.Point(239, 138);
             this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(80, 19);
+            this.label63.Size = new System.Drawing.Size(61, 14);
             this.label63.TabIndex = 42;
             this.label63.Text = "VTM temp";
             // 
@@ -5456,14 +5532,14 @@ namespace Monitor
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.Color.Black;
             this.label64.Location = new System.Drawing.Point(239, 106);
             this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(85, 19);
+            this.label64.Size = new System.Drawing.Size(77, 14);
             this.label64.TabIndex = 40;
-            this.label64.Text = "48V in rush";
+            this.label64.Text = "Ch 4 VTM_TM";
             // 
             // textBox_StatusUUT15
             // 
@@ -5478,14 +5554,15 @@ namespace Monitor
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.Black;
             this.label65.Location = new System.Drawing.Point(239, 75);
             this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(71, 19);
+            this.label65.Size = new System.Drawing.Size(92, 14);
             this.label65.TabIndex = 38;
-            this.label65.Text = "48V filter";
+            this.label65.Text = "Ch 3 Inrush_48V";
+            this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // textBox_StatusUUT14
             // 
@@ -5500,14 +5577,14 @@ namespace Monitor
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.ForeColor = System.Drawing.Color.Black;
             this.label66.Location = new System.Drawing.Point(239, 42);
             this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(89, 19);
+            this.label66.Size = new System.Drawing.Size(63, 14);
             this.label66.TabIndex = 36;
-            this.label66.Text = "48V current";
+            this.label66.Text = "Ch 2 VIN_F";
             // 
             // textBox_StatusUUT13
             // 
@@ -5522,14 +5599,14 @@ namespace Monitor
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Black;
             this.label55.Location = new System.Drawing.Point(6, 15);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(136, 19);
+            this.label55.Size = new System.Drawing.Size(61, 14);
             this.label55.TabIndex = 34;
-            this.label55.Text = "Main Temperature";
+            this.label55.Text = "5V current";
             // 
             // textBox_StatusUUT1
             // 
@@ -5544,14 +5621,14 @@ namespace Monitor
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Black;
             this.label54.Location = new System.Drawing.Point(6, 330);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(54, 19);
+            this.label54.Size = new System.Drawing.Size(103, 14);
             this.label54.TabIndex = 32;
-            this.label54.Text = "Detect";
+            this.label54.Text = "Ch 0 PRM_ tempra";
             // 
             // textBox_StatusUUT11
             // 
@@ -5566,14 +5643,14 @@ namespace Monitor
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Black;
             this.label53.Location = new System.Drawing.Point(6, 298);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(65, 19);
+            this.label53.Size = new System.Drawing.Size(46, 14);
             this.label53.TabIndex = 30;
-            this.label53.Text = "Vgg N5V";
+            this.label53.Text = "Vdd_9V";
             // 
             // textBox_StatusUUT10
             // 
@@ -5588,14 +5665,14 @@ namespace Monitor
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.Black;
             this.label52.Location = new System.Drawing.Point(6, 266);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(60, 19);
+            this.label52.Size = new System.Drawing.Size(52, 14);
             this.label52.TabIndex = 28;
-            this.label52.Text = "Vdd_4V";
+            this.label52.Text = "Vdd_28V";
             // 
             // textBox_StatusUUT9
             // 
@@ -5610,14 +5687,14 @@ namespace Monitor
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
             this.label51.Location = new System.Drawing.Point(6, 235);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(60, 19);
+            this.label51.Size = new System.Drawing.Size(46, 14);
             this.label51.TabIndex = 26;
-            this.label51.Text = "Vdd_5V";
+            this.label51.Text = "Vdd_4V";
             // 
             // textBox_StatusUUT8
             // 
@@ -5632,14 +5709,14 @@ namespace Monitor
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Black;
             this.label50.Location = new System.Drawing.Point(6, 204);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(60, 19);
+            this.label50.Size = new System.Drawing.Size(46, 14);
             this.label50.TabIndex = 24;
-            this.label50.Text = "Vdd_9V";
+            this.label50.Text = "Vdd_5V";
             // 
             // textBox_StatusUUT7
             // 
@@ -5654,14 +5731,14 @@ namespace Monitor
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.Black;
             this.label49.Location = new System.Drawing.Point(6, 174);
             this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(68, 19);
+            this.label49.Size = new System.Drawing.Size(52, 14);
             this.label49.TabIndex = 22;
-            this.label49.Text = "Vdd_28V";
+            this.label49.Text = "Vgg_N5V";
             // 
             // textBox_StatusUUT6
             // 
@@ -5676,14 +5753,14 @@ namespace Monitor
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.Black;
             this.label40.Location = new System.Drawing.Point(6, 139);
             this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(81, 19);
+            this.label40.Size = new System.Drawing.Size(103, 14);
             this.label40.TabIndex = 20;
-            this.label40.Text = "9V current";
+            this.label40.Text = "DETECTOR voltage";
             // 
             // textBox_StatusUUT5
             // 
@@ -5698,14 +5775,14 @@ namespace Monitor
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Black;
             this.label39.Location = new System.Drawing.Point(6, 109);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(89, 19);
+            this.label39.Size = new System.Drawing.Size(35, 14);
             this.label39.TabIndex = 18;
-            this.label39.Text = "28V current";
+            this.label39.Text = "CS 9V";
             // 
             // textBox_StatusUUT4
             // 
@@ -5720,14 +5797,14 @@ namespace Monitor
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
             this.label33.Location = new System.Drawing.Point(6, 78);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(81, 19);
+            this.label33.Size = new System.Drawing.Size(41, 14);
             this.label33.TabIndex = 16;
-            this.label33.Text = "5V current";
+            this.label33.Text = "CS 28V";
             // 
             // textBox_StatusUUT3
             // 
@@ -5742,14 +5819,14 @@ namespace Monitor
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
             this.label32.Location = new System.Drawing.Point(6, 45);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(85, 19);
+            this.label32.Size = new System.Drawing.Size(80, 14);
             this.label32.TabIndex = 14;
-            this.label32.Text = "Main Index";
+            this.label32.Text = "THERM_VPTAT";
             // 
             // textBox_StatusUUT2
             // 
@@ -5789,12 +5866,12 @@ namespace Monitor
             // label115
             // 
             this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label115.ForeColor = System.Drawing.Color.Black;
             this.label115.Location = new System.Drawing.Point(2, 189);
             this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(105, 19);
+            this.label115.Size = new System.Drawing.Size(81, 14);
             this.label115.TabIndex = 75;
             this.label115.Text = "Tx OVT hazard";
             // 
@@ -5811,12 +5888,12 @@ namespace Monitor
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.Black;
             this.label71.Location = new System.Drawing.Point(18, 35);
             this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(51, 19);
+            this.label71.Size = new System.Drawing.Size(40, 14);
             this.label71.TabIndex = 68;
             this.label71.Text = "Ready";
             this.label71.Click += new System.EventHandler(this.label71_Click);
@@ -5824,12 +5901,12 @@ namespace Monitor
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.ForeColor = System.Drawing.Color.Black;
             this.label74.Location = new System.Drawing.Point(18, 159);
             this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(35, 19);
+            this.label74.Size = new System.Drawing.Size(27, 14);
             this.label74.TabIndex = 73;
             this.label74.Text = "SEU";
             this.label74.Click += new System.EventHandler(this.label74_Click);
@@ -5847,12 +5924,12 @@ namespace Monitor
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.Black;
             this.label73.Location = new System.Drawing.Point(18, 130);
             this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(81, 19);
+            this.label73.Size = new System.Drawing.Size(61, 14);
             this.label73.TabIndex = 71;
             this.label73.Text = "Protection";
             this.label73.Click += new System.EventHandler(this.label73_Click);
@@ -5870,12 +5947,12 @@ namespace Monitor
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.Black;
             this.label68.Location = new System.Drawing.Point(8, 96);
             this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(97, 19);
+            this.label68.Size = new System.Drawing.Size(74, 14);
             this.label68.TabIndex = 69;
             this.label68.Text = "Over voltage";
             this.label68.Click += new System.EventHandler(this.label68_Click);
@@ -5893,12 +5970,12 @@ namespace Monitor
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.Black;
             this.label72.Location = new System.Drawing.Point(6, 63);
             this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(106, 19);
+            this.label72.Size = new System.Drawing.Size(83, 14);
             this.label72.TabIndex = 65;
             this.label72.Text = "Under voltage";
             this.label72.Click += new System.EventHandler(this.label72_Click);
@@ -9725,71 +9802,50 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // textBox_EraseFlash
+            // tabPage10
             // 
-            this.textBox_EraseFlash.Location = new System.Drawing.Point(236, 72);
-            this.textBox_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_EraseFlash.MaxLength = 30;
-            this.textBox_EraseFlash.Name = "textBox_EraseFlash";
-            this.textBox_EraseFlash.Size = new System.Drawing.Size(119, 26);
-            this.textBox_EraseFlash.TabIndex = 67;
-            this.textBox_EraseFlash.Text = "00 03 01 00 00";
-            this.textBox_EraseFlash.TextChanged += new System.EventHandler(this.textBox_EraseFlash_TextChanged);
+            this.tabPage10.Controls.Add(this.checkBox_U19DAC);
+            this.tabPage10.Controls.Add(this.button_InitSSPA);
+            this.tabPage10.Controls.Add(this.label141);
+            this.tabPage10.Location = new System.Drawing.Point(4, 27);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage10.TabIndex = 5;
+            this.tabPage10.Text = "Init";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // button_EraseFlash
+            // label141
             // 
-            this.button_EraseFlash.Location = new System.Drawing.Point(5, 74);
-            this.button_EraseFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.button_EraseFlash.Name = "button_EraseFlash";
-            this.button_EraseFlash.Size = new System.Drawing.Size(223, 22);
-            this.button_EraseFlash.TabIndex = 66;
-            this.button_EraseFlash.Text = "Erase flash";
-            this.button_EraseFlash.UseVisualStyleBackColor = true;
-            this.button_EraseFlash.Click += new System.EventHandler(this.button_EraseFlash_Click);
+            this.label141.AutoSize = true;
+            this.label141.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label141.ForeColor = System.Drawing.Color.Red;
+            this.label141.Location = new System.Drawing.Point(31, 18);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(166, 23);
+            this.label141.TabIndex = 0;
+            this.label141.Text = "Init DAC before USE";
             // 
-            // textBox_WriteFlash
+            // button_InitSSPA
             // 
-            this.textBox_WriteFlash.Location = new System.Drawing.Point(236, 104);
-            this.textBox_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_WriteFlash.MaxLength = 30;
-            this.textBox_WriteFlash.Name = "textBox_WriteFlash";
-            this.textBox_WriteFlash.Size = new System.Drawing.Size(119, 26);
-            this.textBox_WriteFlash.TabIndex = 69;
-            this.textBox_WriteFlash.Text = "00 04 00 00 00 00";
-            this.textBox_WriteFlash.TextChanged += new System.EventHandler(this.textBox_WriteFlash_TextChanged);
+            this.button_InitSSPA.Location = new System.Drawing.Point(35, 50);
+            this.button_InitSSPA.Name = "button_InitSSPA";
+            this.button_InitSSPA.Size = new System.Drawing.Size(143, 23);
+            this.button_InitSSPA.TabIndex = 1;
+            this.button_InitSSPA.Text = "Init SSPA";
+            this.button_InitSSPA.UseVisualStyleBackColor = true;
+            this.button_InitSSPA.Click += new System.EventHandler(this.button_InitSSPA_Click);
             // 
-            // button_WriteFlash
+            // checkBox_U19DAC
             // 
-            this.button_WriteFlash.Location = new System.Drawing.Point(5, 106);
-            this.button_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WriteFlash.Name = "button_WriteFlash";
-            this.button_WriteFlash.Size = new System.Drawing.Size(223, 22);
-            this.button_WriteFlash.TabIndex = 68;
-            this.button_WriteFlash.Text = "Write flash";
-            this.button_WriteFlash.UseVisualStyleBackColor = true;
-            this.button_WriteFlash.Click += new System.EventHandler(this.button_WriteFlash_Click);
-            // 
-            // textBox_ReadFlash
-            // 
-            this.textBox_ReadFlash.Location = new System.Drawing.Point(236, 134);
-            this.textBox_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ReadFlash.MaxLength = 30;
-            this.textBox_ReadFlash.Name = "textBox_ReadFlash";
-            this.textBox_ReadFlash.Size = new System.Drawing.Size(147, 26);
-            this.textBox_ReadFlash.TabIndex = 71;
-            this.textBox_ReadFlash.Text = "00 05 00 00 00 00 00";
-            this.textBox_ReadFlash.TextChanged += new System.EventHandler(this.textBox_ReadFlash_TextChanged);
-            // 
-            // button_ReadFlash
-            // 
-            this.button_ReadFlash.Location = new System.Drawing.Point(5, 136);
-            this.button_ReadFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ReadFlash.Name = "button_ReadFlash";
-            this.button_ReadFlash.Size = new System.Drawing.Size(223, 22);
-            this.button_ReadFlash.TabIndex = 70;
-            this.button_ReadFlash.Text = "Read flash";
-            this.button_ReadFlash.UseVisualStyleBackColor = true;
-            this.button_ReadFlash.Click += new System.EventHandler(this.button_ReadFlash_Click);
+            this.checkBox_U19DAC.AutoSize = true;
+            this.checkBox_U19DAC.Checked = true;
+            this.checkBox_U19DAC.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_U19DAC.Location = new System.Drawing.Point(209, 51);
+            this.checkBox_U19DAC.Name = "checkBox_U19DAC";
+            this.checkBox_U19DAC.Size = new System.Drawing.Size(117, 22);
+            this.checkBox_U19DAC.TabIndex = 2;
+            this.checkBox_U19DAC.Text = "Write U19 DAC";
+            this.checkBox_U19DAC.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -9964,6 +10020,8 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -12568,10 +12626,24 @@ namespace Monitor
 
             string ret = string.Format("\n Opcode Unhandled: [{0}] \n", i_Parsedframe.Opcode);
             textBox_SystemStatus.Text = ret;
+            textBox_SystemStatus.BackColor = Color.Orange;
+            textBox_SystemStatus_Timer = 4;
 
             return ret;
 
         }
+        private string UnHandledAddress(String i_Address)
+        {
+
+            string ret = string.Format("\n Address Unhandled: [{0}] \n", i_Address);
+            textBox_SystemStatus.Text = ret;
+            textBox_SystemStatus.BackColor = Color.Orange;
+            textBox_SystemStatus_Timer = 4;
+
+            return ret;
+
+        }
+        uint textBox_SystemStatus_Timer = 0;
 
         //string RetriveIQData(KratosProtocolFrame i_Parsedframe)
         //{
@@ -13078,20 +13150,139 @@ namespace Monitor
             //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
 
+        private void ReadRegisterAckFrame(KratosProtocolFrame i_Parsedframe)
+        {
+            //    ICD major version – 	1 byte
+            //ICD minor version – 	1 byte
+            //Unit major version – 	1 byte
+            //Unit minor version – 	1 byte
+            //Version day –		1 bytes
+            //Version month –	1 bytes
+            //Version year –		2 bytes
+
+            String str_Address = i_Parsedframe.Data.Substring(10, 4);
+            String str_Data = i_Parsedframe.Data.Substring(14, 4);
+            int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+            switch(str_Address)
+            {
+                case "001C":
+                    textBox_StatusUUT1.Text = str_Data;
+
+                    break;
+
+                case "001D":
+                    textBox_StatusUUT2.Text = str_Data;
+
+                    break;
+
+                case "001E":
+                    textBox_StatusUUT3.Text = str_Data;
+
+                    break;
+
+                case "001F":
+                    textBox_StatusUUT4.Text = str_Data;
+
+                    break;
+
+                case "0020":
+                    textBox_StatusUUT5.Text = str_Data;
+
+                    break;
+
+                case "0021":
+                    textBox_StatusUUT6.Text = str_Data;
+
+                    break;
+
+                case "0022":
+                    textBox_StatusUUT7.Text = str_Data;
+
+                    break;
+
+                case "0023":
+                    textBox_StatusUUT8.Text = str_Data;
+
+                    break;
+
+                case "0024":
+                    textBox_StatusUUT9.Text = str_Data;
+
+                    break;
+
+                case "0025":
+                    textBox_StatusUUT10.Text = str_Data;
+
+                    break;
+
+                case "0026":
+                    textBox_StatusUUT11.Text = str_Data;
+
+                    break;
+
+                case "0027":
+                    textBox_StatusUUT12.Text = str_Data;
+
+                    break;
+
+                case "0028":
+                    textBox_StatusUUT13.Text = str_Data;
+
+                    break;
+
+                case "0029":
+                    textBox_StatusUUT14.Text = str_Data;
+
+                    break;
+
+                case "002A":
+                    textBox_StatusUUT15.Text = str_Data;
+
+                    break;
+
+
+                default:
+                    UnHandledAddress(str_Address);
+                    break;
+            }
+            //int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+            //int UnitMajorNumber = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            //int UnitMinorNumber = int.Parse(i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+            //string VersionDateTime = ConvertHex(i_Parsedframe.Data.Substring(8));
+
+
+            //        SendMessageToSystemLogger(String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
+            //"\n Version date time  [{4}]\n ",
+            //ICDMajor, ICDMinor, UnitMajorNumber, UnitMinorNumber, VersionDateTime));
+            //        //int VersionDay = int.Parse(i_Parsedframe.Data.Substring(8, 2), System.Globalization.NumberStyles.HexNumber);
+            //        //int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(10, 2), System.Globalization.NumberStyles.HexNumber);
+            //        //int VersionYear = int.Parse(i_Parsedframe.Data.Substring(14, 2) + i_Parsedframe.Data.Substring(12, 2), System.Globalization.NumberStyles.HexNumber);  //Gil: because it is little endian so I need to reverse the bytes
+            //        //return String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
+            //        //    "\n Version day  [{4}]\n Version month [{5}]\n Version year [{6}]\n",
+            //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
+        }
+        
+
+        /// <summary>
+        /// Gil: Income frame parser
+        /// </summary>
+        /// <param name="i_Parsedframe"></param>
         private void ParseSystemFrame(KratosProtocolFrame i_Parsedframe)
         {
             if (i_Parsedframe == null)
             {
                 textBox_SystemStatus.Text = "frame received as null";
             }
-            int intValue = int.Parse(i_Parsedframe.Preamble, System.Globalization.NumberStyles.HexNumber);
-            if (intValue != 0x23)
+
+            int Received_Preamble = int.Parse(i_Parsedframe.Preamble, System.Globalization.NumberStyles.HexNumber);
+            int Expected_Preamble = int.Parse(PREAMBLE, System.Globalization.NumberStyles.HexNumber);
+
+            if (Received_Preamble != Expected_Preamble)
             {
                 UnHandaledPreample(i_Parsedframe);
             }
             else
             {
-                //ret = "[ACK]  ";
                 switch (i_Parsedframe.Opcode)
                 {
 
@@ -13152,6 +13343,11 @@ namespace Monitor
 
                     case "37":
                         GetSystemTableIndexes(i_Parsedframe);
+
+                        break;
+
+                    case "53":
+                        ReadRegisterAckFrame(i_Parsedframe);
 
                         break;
 
@@ -13492,6 +13688,15 @@ namespace Monitor
         //uint IntervalTimeBetweenTransmitions = 1;
         private void Timer_General_Tick(object sender, EventArgs e)
         {
+            if (textBox_SystemStatus_Timer > 0)
+            {
+                textBox_SystemStatus_Timer--;
+            }
+            else
+            {
+                textBox_SystemStatus.Text = "";
+                textBox_SystemStatus.BackColor = default;
+            }
 
             // CheckIfSerialPortOpen();
 
@@ -22335,6 +22540,21 @@ Note: eStatus enum 
             {
                 m_Textbox.BackColor = Color.Red;
             }
+        }
+
+        private void label65_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void button_InitSSPA_Click(object sender, EventArgs e)
+        {
+            if (checkBox_U19DAC.Checked == true)
+            {
+                Write_Register("00 30", "00 04");
+            }
+
+            await Task.Delay(100);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
