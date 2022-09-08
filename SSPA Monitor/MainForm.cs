@@ -762,10 +762,6 @@ namespace Monitor
         private Button button_WriteFlash;
         private TextBox textBox_EraseFlash;
         private Button button_EraseFlash;
-        private TabPage tabPage10;
-        private Button button_InitSSPA;
-        private Label label141;
-        private CheckBox checkBox_U19DAC;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1540,10 +1536,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label141 = new System.Windows.Forms.Label();
-            this.button_InitSSPA = new System.Windows.Forms.Button();
-            this.checkBox_U19DAC = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1635,7 +1627,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.tabPage10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -4739,7 +4730,6 @@ namespace Monitor
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage7);
@@ -9802,51 +9792,6 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.checkBox_U19DAC);
-            this.tabPage10.Controls.Add(this.button_InitSSPA);
-            this.tabPage10.Controls.Add(this.label141);
-            this.tabPage10.Location = new System.Drawing.Point(4, 27);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage10.TabIndex = 5;
-            this.tabPage10.Text = "Init";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label141.ForeColor = System.Drawing.Color.Red;
-            this.label141.Location = new System.Drawing.Point(31, 18);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(166, 23);
-            this.label141.TabIndex = 0;
-            this.label141.Text = "Init DAC before USE";
-            // 
-            // button_InitSSPA
-            // 
-            this.button_InitSSPA.Location = new System.Drawing.Point(35, 50);
-            this.button_InitSSPA.Name = "button_InitSSPA";
-            this.button_InitSSPA.Size = new System.Drawing.Size(143, 23);
-            this.button_InitSSPA.TabIndex = 1;
-            this.button_InitSSPA.Text = "Init SSPA";
-            this.button_InitSSPA.UseVisualStyleBackColor = true;
-            this.button_InitSSPA.Click += new System.EventHandler(this.button_InitSSPA_Click);
-            // 
-            // checkBox_U19DAC
-            // 
-            this.checkBox_U19DAC.AutoSize = true;
-            this.checkBox_U19DAC.Checked = true;
-            this.checkBox_U19DAC.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_U19DAC.Location = new System.Drawing.Point(209, 51);
-            this.checkBox_U19DAC.Name = "checkBox_U19DAC";
-            this.checkBox_U19DAC.Size = new System.Drawing.Size(117, 22);
-            this.checkBox_U19DAC.TabIndex = 2;
-            this.checkBox_U19DAC.Text = "Write U19 DAC";
-            this.checkBox_U19DAC.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -10020,8 +9965,6 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -22401,7 +22344,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 9999999999)
+                if (Num >= 0 && Num <= 99999999)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22682,15 +22625,15 @@ Note: eStatus enum 
 
         }
 
-        private async void button_InitSSPA_Click(object sender, EventArgs e)
-        {
-            if (checkBox_U19DAC.Checked == true)
-            {
-                Write_Register("00 30", "00 04");
-            }
+        //private async void button_InitSSPA_Click(object sender, EventArgs e)
+        //{
+        //    if (checkBox_U19DAC.Checked == true)
+        //    {
+        //        Write_Register("00 30", "00 04");
+        //    }
 
-            await Task.Delay(100);
-        }
+        //    await Task.Delay(100);
+        //}
 
         private void button57_Click_1(object sender, EventArgs e)
         {
