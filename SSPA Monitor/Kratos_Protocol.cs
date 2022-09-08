@@ -152,9 +152,9 @@ namespace Monitor
                 byte[] DataBytes = StringToByteArray(i_Frame.Data);
                 UInt16 Datalength = (UInt16)DataBytes.Length;
                 byte[] intBytes = BitConverter.GetBytes(Datalength);
-                ListBytes.AddRange(intBytes);
+                ListBytes.AddRange(intBytes.Reverse().ToArray());
 
-
+                
                 ListBytes.AddRange(DataBytes);
 
                 byte CheckSum = 0;
@@ -183,7 +183,7 @@ namespace Monitor
 
             //try
             //{
-            byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).ToArray();
+            byte[] DataLengthBytes = i_IncomingBytes.Skip(2).Take(2).Reverse().ToArray();
 
             UInt16 FrameDataLength = BitConverter.ToUInt16(DataLengthBytes, 0);
             int CheckSumIndex = (int)FrameDataLength + 4;
