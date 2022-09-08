@@ -12924,7 +12924,7 @@ namespace Monitor
             }
             else
             {
-                return ReverseHexStringLittleBigEndian(i_data.Substring(StartIndex, i_NumOfBytes * 2));
+                return i_data.Substring(StartIndex, i_NumOfBytes * 2);
 
             }
 
@@ -13152,16 +13152,10 @@ namespace Monitor
 
         private void ReadRegisterAckFrame(KratosProtocolFrame i_Parsedframe)
         {
-            //    ICD major version – 	1 byte
-            //ICD minor version – 	1 byte
-            //Unit major version – 	1 byte
-            //Unit minor version – 	1 byte
-            //Version day –		1 bytes
-            //Version month –	1 bytes
-            //Version year –		2 bytes
 
-            String str_Address = i_Parsedframe.Data.Substring(10, 4);
-            String str_Data = i_Parsedframe.Data.Substring(14, 4);
+            
+            String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+            String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
             int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
             switch(str_Address)
             {
@@ -13264,7 +13258,9 @@ namespace Monitor
         
 
         /// <summary>
-        /// Gil: Income frame parser
+        /// Gil: Income frame parser ************************************************
+        /// **************************************************
+        /// ***********************************
         /// </summary>
         /// <param name="i_Parsedframe"></param>
         private void ParseSystemFrame(KratosProtocolFrame i_Parsedframe)
@@ -13343,6 +13339,11 @@ namespace Monitor
 
                     case "37":
                         GetSystemTableIndexes(i_Parsedframe);
+
+                        break;
+
+                    case "51":
+                        ACK_Received(i_Parsedframe);
 
                         break;
 
@@ -20975,16 +20976,30 @@ Note: eStatus enum 
             await Task.Delay(500);
             button_GetStatus_Click(null, null);
         }
-        private void textBox24_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox24_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if(m_TextBox.BackColor == Color.LightGreen)
                 {
+
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+
                     Write_Register(" 00 1A", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+ 
+
                 }
 
             }
@@ -21919,50 +21934,57 @@ Note: eStatus enum 
 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
-            GlobalSystemResultReceived = "";
-            button67_Click(null, null);
-            await Task.Delay(500);
-            button68_Click(null, null);
-            await Task.Delay(500);
-            button50_Click_1(null, null);
-            await Task.Delay(500);
-            button63_Click(null, null);
-            await Task.Delay(500);
-            string[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.RemoveEmptyEntries);
 
-            if (TextDataRecieved.Length < 50)
-            {
-                return;
-            }
+            Read_Register("00 1C");
+            await Task.Delay(500);
 
-            textBox_StatusUUT1.Text = TextDataRecieved[1];
-            textBox_StatusUUT2.Text = TextDataRecieved[3];
-            textBox_StatusUUT3.Text = TextDataRecieved[5];
-            textBox_StatusUUT4.Text = TextDataRecieved[7];
-            textBox_StatusUUT5.Text = TextDataRecieved[9];
-            textBox_StatusUUT6.Text = TextDataRecieved[11];
-            textBox_StatusUUT7.Text = TextDataRecieved[13];
-            textBox_StatusUUT8.Text = TextDataRecieved[15];
-            textBox_StatusUUT9.Text = TextDataRecieved[17];
-            textBox_StatusUUT10.Text = TextDataRecieved[19];
-            textBox_StatusUUT11.Text = TextDataRecieved[21];
-            textBox_StatusUUT12.Text = TextDataRecieved[23];
-            textBox_StatusUUT13.Text = TextDataRecieved[25];
-            textBox_StatusUUT14.Text = TextDataRecieved[27];
-            textBox_StatusUUT15.Text = TextDataRecieved[29];
-            textBox_StatusUUT16.Text = TextDataRecieved[31];
-            textBox_StatusUUT17.Text = TextDataRecieved[33];
-            textBox_StatusUUT18.Text = TextDataRecieved[35];
-            textBox_StatusUUT19.Text = TextDataRecieved[37];
-            textBox_StatusUUT20.Text = TextDataRecieved[39];
-            textBox_StatusUUT21.Text = TextDataRecieved[41];
-            textBox_StatusUUT22.Text = TextDataRecieved[43];
-            textBox_StatusUUT23.Text = TextDataRecieved[45];
-            textBox_StatusUUT24.Text = TextDataRecieved[47];
-            textBox_StatusUUT25.Text = TextDataRecieved[49];
-            textBox_StatusUUT26.Text = TextDataRecieved[51];
+            Read_Register("00 1D");
+            await Task.Delay(500);
 
+            Read_Register("00 1E");
+            await Task.Delay(500);
 
+            Read_Register("00 1F");
+            await Task.Delay(500);
+
+            Read_Register("00 20");
+            await Task.Delay(500);
+
+            Read_Register("00 21");
+            await Task.Delay(500);
+
+            Read_Register("00 22");
+            await Task.Delay(500);
+
+            Read_Register("00 22");
+            await Task.Delay(500);
+
+            Read_Register("00 23");
+            await Task.Delay(500);
+
+            Read_Register("00 24");
+            await Task.Delay(500);
+
+            Read_Register("00 25");
+            await Task.Delay(500);
+
+            Read_Register("00 26");
+            await Task.Delay(500);
+
+            Read_Register("00 27");
+            await Task.Delay(500);
+
+            Read_Register("00 28");
+            await Task.Delay(500);
+
+            Read_Register("00 29");
+            await Task.Delay(500);
+
+            Read_Register("00 2A");
+            await Task.Delay(500);
+
+            Read_Register("00 2E");
+            await Task.Delay(500);
 
         }
 
