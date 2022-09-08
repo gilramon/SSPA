@@ -17627,6 +17627,9 @@ namespace Monitor
             if (serialPort.IsOpen == false)
             {
                 SystemLogger.LogMessage(Color.Red, Color.White, "Serial Port is not open", true, true);
+                textBox_SystemStatus.Text = "Serial Port is not open";
+                textBox_SystemStatus.BackColor = Color.Orange;
+                textBox_SystemStatus_Timer = 3;
                 return;
             }
             else
