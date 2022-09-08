@@ -20993,7 +20993,6 @@ Note: eStatus enum 
                     Write_Register(" 00 30", "00 04");
                     await Task.Delay(300);
 
-
                     Write_Register(" 00 1A", hexValue);
                     await Task.Delay(300);
 
@@ -21005,7 +21004,7 @@ Note: eStatus enum 
             }
         }
 
-        private void textBox25_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -21014,15 +21013,26 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 12", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
                 }
-                //SetPSUValues();
+
 
 
             }
         }
 
-        private void textBox26_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox26_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -21031,15 +21041,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 15", hexValue);
-                }
-                //SetPSUValues();
+                    await Task.Delay(300);
 
+                    Write_Register(" 00 01", "40 00");
+
+                }
 
             }
         }
 
-        private void textBox27_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox27_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -21048,10 +21067,19 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
-                    Write_Register(" 00 16", hexValue);
-                }
-                //SetPSUValues();
 
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 16", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
+                }
 
             }
         }
@@ -21114,7 +21142,7 @@ Note: eStatus enum 
             }
         }
 
-        private void textBox29_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox29_KeyDown(object sender, KeyEventArgs e)
         {
 
             TextBox m_TextBox = (TextBox)sender;
@@ -21134,18 +21162,23 @@ Note: eStatus enum 
                     }
 
 
-                    Write_Register(" 00 1B", hexValue);
-                }
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
 
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 1B", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
+                        
+                }
 
 
             }
 
-
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    SetDCAValues();
-            //}
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
@@ -22365,10 +22398,25 @@ Note: eStatus enum 
 
         private void textBox11_TextChanged_1(object sender, EventArgs e)
         {
-
+            TextBox txtbox = (TextBox)sender;
+            if (int.TryParse(txtbox.Text, out int Num) == true)
+            {
+                if (Num >= 0 && Num <= 9999999999)
+                {
+                    txtbox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtbox.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
         }
 
-        private void textBox11_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22377,15 +22425,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 13", hexValue);
-                }
-                //SetPSUValues();
+                    await Task.Delay(300);
 
+                    Write_Register(" 00 01", "40 00");
+
+                }
 
             }
         }
 
-        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22394,15 +22451,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 14", hexValue);
-                }
-                //SetPSUValues();
+                    await Task.Delay(300);
 
+                    Write_Register(" 00 01", "40 00");
+
+                }
 
             }
         }
 
-        private void textBox_MPA_Ton_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_MPA_Ton_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22411,13 +22477,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 0C", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
                 }
 
             }
         }
 
-        private void textBox_MPA_Toff_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_MPA_Toff_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22426,13 +22503,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 0D", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
                 }
 
             }
         }
 
-        private void textBox_SPA_Ton_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_SPA_Ton_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22441,13 +22529,24 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 0E", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
                 }
 
             }
         }
 
-        private void textBox_SPA_Toff_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_SPA_Toff_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22456,7 +22555,18 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 30", "00 04");
+                    await Task.Delay(300);
+
                     Write_Register(" 00 0F", hexValue);
+                    await Task.Delay(300);
+
+                    Write_Register(" 00 01", "40 00");
+
                 }
 
             }
