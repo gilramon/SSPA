@@ -762,6 +762,10 @@ namespace Monitor
         private Button button_WriteFlash;
         private TextBox textBox_EraseFlash;
         private Button button_EraseFlash;
+        private Label label141;
+        private TextBox textBox_ReadRegisterAnswer;
+        private Label label142;
+        private TextBox textBox_ACKWriteRegisterReceived;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1536,6 +1540,10 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox_ReadRegisterAnswer = new System.Windows.Forms.TextBox();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.textBox_ACKWriteRegisterReceived = new System.Windows.Forms.TextBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -4372,6 +4380,10 @@ namespace Monitor
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label142);
+            this.tabPage3.Controls.Add(this.textBox_ACKWriteRegisterReceived);
+            this.tabPage3.Controls.Add(this.label141);
+            this.tabPage3.Controls.Add(this.textBox_ReadRegisterAnswer);
             this.tabPage3.Controls.Add(this.textBox_ReadFlash);
             this.tabPage3.Controls.Add(this.button_ReadFlash);
             this.tabPage3.Controls.Add(this.textBox_WriteFlash);
@@ -4492,7 +4504,7 @@ namespace Monitor
             // 
             // textBox38
             // 
-            this.textBox38.Location = new System.Drawing.Point(572, 7);
+            this.textBox38.Location = new System.Drawing.Point(548, 7);
             this.textBox38.Margin = new System.Windows.Forms.Padding(2);
             this.textBox38.MaxLength = 30;
             this.textBox38.Name = "textBox38";
@@ -4500,6 +4512,7 @@ namespace Monitor
             this.textBox38.TabIndex = 62;
             this.textBox38.Text = "11 22";
             this.textBox38.TextChanged += new System.EventHandler(this.textBox38_TextChanged);
+            this.textBox38.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox38_KeyDown);
             // 
             // textBox37
             // 
@@ -4511,6 +4524,7 @@ namespace Monitor
             this.textBox37.TabIndex = 61;
             this.textBox37.Text = "00 85";
             this.textBox37.TextChanged += new System.EventHandler(this.textBox37_TextChanged);
+            this.textBox37.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox37_KeyDown);
             // 
             // textBox36
             // 
@@ -4522,6 +4536,7 @@ namespace Monitor
             this.textBox36.TabIndex = 60;
             this.textBox36.Text = "00 85";
             this.textBox36.TextChanged += new System.EventHandler(this.textBox36_TextChanged);
+            this.textBox36.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox36_KeyDown);
             // 
             // textBox_ReadRegister
             // 
@@ -4529,6 +4544,7 @@ namespace Monitor
             this.textBox_ReadRegister.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ReadRegister.MaxLength = 30;
             this.textBox_ReadRegister.Name = "textBox_ReadRegister";
+            this.textBox_ReadRegister.ReadOnly = true;
             this.textBox_ReadRegister.Size = new System.Drawing.Size(119, 26);
             this.textBox_ReadRegister.TabIndex = 59;
             this.textBox_ReadRegister.Text = "02 00 85 00 02";
@@ -4551,6 +4567,7 @@ namespace Monitor
             this.textBox_WriteRegister.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_WriteRegister.MaxLength = 30;
             this.textBox_WriteRegister.Name = "textBox_WriteRegister";
+            this.textBox_WriteRegister.ReadOnly = true;
             this.textBox_WriteRegister.Size = new System.Drawing.Size(119, 26);
             this.textBox_WriteRegister.TabIndex = 57;
             this.textBox_WriteRegister.Text = "01 00 85 00 02";
@@ -9792,6 +9809,44 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // textBox_ReadRegisterAnswer
+            // 
+            this.textBox_ReadRegisterAnswer.Location = new System.Drawing.Point(622, 37);
+            this.textBox_ReadRegisterAnswer.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadRegisterAnswer.MaxLength = 30;
+            this.textBox_ReadRegisterAnswer.Name = "textBox_ReadRegisterAnswer";
+            this.textBox_ReadRegisterAnswer.ReadOnly = true;
+            this.textBox_ReadRegisterAnswer.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadRegisterAnswer.TabIndex = 72;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(550, 42);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(55, 18);
+            this.label141.TabIndex = 73;
+            this.label141.Text = "Answer";
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(653, 7);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(33, 18);
+            this.label142.TabIndex = 75;
+            this.label142.Text = "ACK";
+            // 
+            // textBox_ACKWriteRegisterReceived
+            // 
+            this.textBox_ACKWriteRegisterReceived.Location = new System.Drawing.Point(725, 2);
+            this.textBox_ACKWriteRegisterReceived.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ACKWriteRegisterReceived.MaxLength = 30;
+            this.textBox_ACKWriteRegisterReceived.Name = "textBox_ACKWriteRegisterReceived";
+            this.textBox_ACKWriteRegisterReceived.ReadOnly = true;
+            this.textBox_ACKWriteRegisterReceived.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ACKWriteRegisterReceived.TabIndex = 74;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -12956,6 +13011,8 @@ namespace Monitor
         private void ACK_Received(KratosProtocolFrame i_Parsedframe)
         {
             string ret = string.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+            textBox_ACKWriteRegisterReceived.Text = i_Parsedframe.Data;
+            textBox_ACKWriteRegisterReceived.BackColor = Color.LightGreen;
             //       SendMessageToSystemLogger(ret);
         }
 
@@ -13100,7 +13157,10 @@ namespace Monitor
             String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
             String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
             int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
-            switch(str_Address)
+
+            textBox_ReadRegisterAnswer.Text = String.Format("Address : [{0}] Data: [{1}]", str_Address, str_Data);
+            textBox_ReadRegisterAnswer.BackColor = Color.LightGreen;
+            switch (str_Address)
             {
                 case "001C":
                     textBox_StatusUUT1.Text = str_Data;
@@ -20930,10 +20990,7 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
-
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
 
                     Write_Register(" 00 1A", hexValue);
@@ -20957,16 +21014,18 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
+
 
                     Write_Register(" 00 30", "00 04");
                     await Task.Delay(300);
+
 
                     Write_Register(" 00 12", hexValue);
                     await Task.Delay(300);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "48 00");
 
                 }
 
@@ -20985,8 +21044,9 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
+
 
                     Write_Register(" 00 30", "00 04");
                     await Task.Delay(300);
@@ -21011,7 +21071,7 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
@@ -21105,16 +21165,14 @@ Note: eStatus enum 
                     }
 
 
-                    Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
 
                     Write_Register(" 00 1B", hexValue);
                     await Task.Delay(300);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                         
                 }
@@ -22206,7 +22264,7 @@ Note: eStatus enum 
             string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null)
+            if (buffer != null && buffer.Length == 2)
             {
                 //WriteFromRegister(textBox36.Text, textBox38.Text);
                 txtbox.BackColor = Color.LightGreen;
@@ -22225,7 +22283,7 @@ Note: eStatus enum 
             string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null)
+            if (buffer != null && buffer.Length == 2)
             {
                // ReadFromRegister(textBox37.Text);
                 txtbox.BackColor = Color.LightGreen;
@@ -22244,9 +22302,9 @@ Note: eStatus enum 
             string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null)
+            if (buffer != null && buffer.Length == 2)
             {
-                Write_Register(textBox36.Text, textBox38.Text);
+               // Write_Register(textBox36.Text, textBox38.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -22369,8 +22427,9 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
+
 
                     Write_Register(" 00 30", "00 04");
                     await Task.Delay(300);
@@ -22395,7 +22454,7 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register(" 00 03", "00 07");
                     await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
@@ -22623,6 +22682,54 @@ Note: eStatus enum 
         private void label65_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox36_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    Write_Register(textBox36.Text, textBox38.Text);
+
+                }
+
+            }
+
+            
+        }
+
+        private void textBox38_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    Write_Register(textBox36.Text, textBox38.Text);
+                    textBox_ACKWriteRegisterReceived.Text = ""; 
+                    textBox_ACKWriteRegisterReceived.BackColor = default;
+
+                }
+
+            }
+        }
+
+        private void textBox37_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    textBox_ReadRegisterAnswer.Text = "";
+                    textBox_ReadRegisterAnswer.BackColor = default;
+                    Read_Register(textBox37.Text);
+
+                }
+
+            }
         }
 
         //private async void button_InitSSPA_Click(object sender, EventArgs e)
