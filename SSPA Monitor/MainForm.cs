@@ -4855,8 +4855,7 @@ namespace Monitor
             this.button_SystemMode.TabIndex = 32;
             this.button_SystemMode.Text = "Set System mode";
             this.button_SystemMode.UseVisualStyleBackColor = true;
-            this.button_SystemMode.Click += new System.EventHandler(this.textBox_ATTBit_TextChanged);
-            this.button_SystemMode.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_SystemMode_MouseClick);
+            this.button_SystemMode.Click += new System.EventHandler(this.button_SystemMode_Click);
             this.button_SystemMode.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button_SystemMode_MouseUp);
             // 
             // textBox_SystemMode
@@ -7966,7 +7965,7 @@ namespace Monitor
             // 
             this.groupBox42.Controls.Add(this.radioButton_TCPIP);
             this.groupBox42.Controls.Add(this.radioButton_SerialPort);
-            this.groupBox42.Location = new System.Drawing.Point(1427, 332);
+            this.groupBox42.Location = new System.Drawing.Point(1427, 383);
             this.groupBox42.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Padding = new System.Windows.Forms.Padding(2);
@@ -8002,7 +8001,7 @@ namespace Monitor
             // 
             // button_OpenFolder
             // 
-            this.button_OpenFolder.Location = new System.Drawing.Point(1427, 294);
+            this.button_OpenFolder.Location = new System.Drawing.Point(1427, 345);
             this.button_OpenFolder.Margin = new System.Windows.Forms.Padding(2);
             this.button_OpenFolder.Name = "button_OpenFolder";
             this.button_OpenFolder.Size = new System.Drawing.Size(174, 25);
@@ -9277,7 +9276,7 @@ namespace Monitor
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
             this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
-            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 74);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 125);
             this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SerialPort.Name = "groupBox_SerialPort";
             this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
@@ -9301,7 +9300,7 @@ namespace Monitor
             // 
             this.groupBox4.Controls.Add(this.button97);
             this.groupBox4.Controls.Add(this.textBox_SystemStatus);
-            this.groupBox4.Location = new System.Drawing.Point(1427, 443);
+            this.groupBox4.Location = new System.Drawing.Point(1427, 482);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
@@ -9338,7 +9337,8 @@ namespace Monitor
             this.pictureBox1.Location = new System.Drawing.Point(1427, 31);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 115;
             this.pictureBox1.TabStop = false;
             // 
@@ -9348,7 +9348,7 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.Controls.Add(this.label12);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label14);
-            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 186);
+            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 237);
             this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
             this.groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2);
@@ -22800,11 +22800,6 @@ Note: eStatus enum 
 
         private void button_SystemMode_MouseClick(object sender, MouseEventArgs e)
         {
-            MouseEventArgs me = (MouseEventArgs)e;
-            if (e.Button == System.Windows.Forms.MouseButtons.Right)
-            {
-                MessageBox.Show("Right click");
-            }
 
         }
 
@@ -22813,7 +22808,11 @@ Note: eStatus enum 
             MouseEventArgs me = (MouseEventArgs)e;
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                MessageBox.Show("Write to register 0x03", "SSPA 3038 Help");
+                string box_msg = "Write to register 0x03";
+
+                string box_title = "SSPA 3038 Help";
+
+                MessageBox.Show(box_msg, box_title);
             }
         }
 

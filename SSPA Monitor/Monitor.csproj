@@ -197,6 +197,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Kratos eyal gmi.jpg" />
     <Content Include="Kratos icon.ico" />
     <Content Include="Kratos png.png" />
   </ItemGroup>
