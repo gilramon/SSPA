@@ -718,7 +718,6 @@ namespace Monitor
         private TextBox textBox_SystemID;
         private GroupBox groupBox49;
         private TextBox textBox_SystemMode;
-        private Button button_SystemMode;
         private Label label123;
         private Label label125;
         private TextBox textBox_VDDoff1;
@@ -768,6 +767,7 @@ namespace Monitor
         private TextBox textBox_ACKWriteRegisterReceived;
         private Label label143;
         private TextBox textBox_ReadLength;
+        private Label label144;
         private static readonly string PREAMBLE = "23";
 
 
@@ -822,11 +822,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1087,7 +1087,6 @@ namespace Monitor
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
             this.label123 = new System.Windows.Forms.Label();
-            this.button_SystemMode = new System.Windows.Forms.Button();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -1548,6 +1547,7 @@ namespace Monitor
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label143 = new System.Windows.Forms.Label();
             this.textBox_ReadLength = new System.Windows.Forms.TextBox();
+            this.label144 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1972,17 +1972,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4828,8 +4828,8 @@ namespace Monitor
             // 
             // groupBox49
             // 
+            this.groupBox49.Controls.Add(this.label144);
             this.groupBox49.Controls.Add(this.label123);
-            this.groupBox49.Controls.Add(this.button_SystemMode);
             this.groupBox49.Controls.Add(this.textBox_SystemMode);
             this.groupBox49.Location = new System.Drawing.Point(1034, 10);
             this.groupBox49.Name = "groupBox49";
@@ -4841,22 +4841,11 @@ namespace Monitor
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(124, 34);
+            this.label123.Location = new System.Drawing.Point(62, 60);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(68, 18);
             this.label123.TabIndex = 33;
             this.label123.Text = "hex value";
-            // 
-            // button_SystemMode
-            // 
-            this.button_SystemMode.Location = new System.Drawing.Point(6, 58);
-            this.button_SystemMode.Name = "button_SystemMode";
-            this.button_SystemMode.Size = new System.Drawing.Size(124, 23);
-            this.button_SystemMode.TabIndex = 32;
-            this.button_SystemMode.Text = "Set System mode";
-            this.button_SystemMode.UseVisualStyleBackColor = true;
-            this.button_SystemMode.Click += new System.EventHandler(this.button_SystemMode_Click);
-            this.button_SystemMode.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button_SystemMode_MouseUp);
             // 
             // textBox_SystemMode
             // 
@@ -4867,6 +4856,7 @@ namespace Monitor
             this.textBox_SystemMode.TabIndex = 31;
             this.textBox_SystemMode.Text = "0007";
             this.textBox_SystemMode.TextChanged += new System.EventHandler(this.textBox_SystemMode_TextChanged);
+            this.textBox_SystemMode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_SystemMode_KeyDown);
             // 
             // groupBox37
             // 
@@ -4998,6 +4988,7 @@ namespace Monitor
             this.textBox_CALSAR.Size = new System.Drawing.Size(53, 26);
             this.textBox_CALSAR.TabIndex = 19;
             this.textBox_CALSAR.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_CALSAR, "0-4");
             this.textBox_CALSAR.TextChanged += new System.EventHandler(this.textBox_CALSAR_TextChanged);
             this.textBox_CALSAR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CALSAR_KeyDown);
             // 
@@ -5029,6 +5020,7 @@ namespace Monitor
             this.textBox_ATTBit.Size = new System.Drawing.Size(53, 26);
             this.textBox_ATTBit.TabIndex = 15;
             this.textBox_ATTBit.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_ATTBit, "0-15");
             this.textBox_ATTBit.TextChanged += new System.EventHandler(this.textBox_ATTBit_TextChanged);
             this.textBox_ATTBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox82_KeyDown);
             // 
@@ -5050,6 +5042,7 @@ namespace Monitor
             this.textBox_FTbit.Size = new System.Drawing.Size(53, 26);
             this.textBox_FTbit.TabIndex = 13;
             this.textBox_FTbit.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_FTbit, "0-7");
             this.textBox_FTbit.TextChanged += new System.EventHandler(this.textBox_FTbit_TextChanged);
             this.textBox_FTbit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox83_KeyDown);
             // 
@@ -5071,6 +5064,7 @@ namespace Monitor
             this.textBox_FreqBit.Size = new System.Drawing.Size(53, 26);
             this.textBox_FreqBit.TabIndex = 11;
             this.textBox_FreqBit.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_FreqBit, "0-7");
             this.textBox_FreqBit.TextChanged += new System.EventHandler(this.textBox84_TextChanged);
             this.textBox_FreqBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
             // 
@@ -6671,7 +6665,7 @@ namespace Monitor
             this.textBox_4V.Size = new System.Drawing.Size(50, 26);
             this.textBox_4V.TabIndex = 4;
             this.textBox_4V.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_4V, "Press Enter to update");
+            this.toolTip1.SetToolTip(this.textBox_4V, "0-4095");
             this.textBox_4V.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
             this.textBox_4V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
             // 
@@ -6683,7 +6677,7 @@ namespace Monitor
             this.textBox_5V.Size = new System.Drawing.Size(50, 26);
             this.textBox_5V.TabIndex = 3;
             this.textBox_5V.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_5V, "Press Enter to update");
+            this.toolTip1.SetToolTip(this.textBox_5V, "0-4095");
             this.textBox_5V.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
             this.textBox_5V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
             // 
@@ -6695,7 +6689,7 @@ namespace Monitor
             this.textBox_9V.Size = new System.Drawing.Size(50, 26);
             this.textBox_9V.TabIndex = 2;
             this.textBox_9V.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_9V, "Press Enter to update");
+            this.toolTip1.SetToolTip(this.textBox_9V, "0-4095");
             this.textBox_9V.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
             this.textBox_9V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
             // 
@@ -6707,7 +6701,7 @@ namespace Monitor
             this.textBox_28V.Size = new System.Drawing.Size(50, 26);
             this.textBox_28V.TabIndex = 1;
             this.textBox_28V.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_28V, "Press Enter to update");
+            this.toolTip1.SetToolTip(this.textBox_28V, "0-4095");
             this.textBox_28V.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             this.textBox_28V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
@@ -7369,8 +7363,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7395,8 +7389,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7801,9 +7795,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9875,6 +9869,15 @@ namespace Monitor
             this.textBox_ReadLength.Text = "00 02";
             this.textBox_ReadLength.TextChanged += new System.EventHandler(this.textBox_ReadLength_TextChanged);
             this.textBox_ReadLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadLength_KeyDown);
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(53, 32);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(139, 18);
+            this.label144.TabIndex = 34;
+            this.label144.Text = "write to register 0x03";
             // 
             // MainForm
             // 
@@ -21023,9 +21026,9 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 1A", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
  
 
                 }
@@ -21048,11 +21051,11 @@ Note: eStatus enum 
 
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
 
                     Write_Register(" 00 12", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 01", "48 00");
 
@@ -21078,12 +21081,12 @@ Note: eStatus enum 
 
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 15", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -21104,12 +21107,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 16", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -21195,11 +21198,11 @@ Note: eStatus enum 
 
 
 
-                    Write_Register(" 00 03", "00 07");
-                    await Task.Delay(300);
+                    //Write_Register(" 00 03", "00 07");
+                    //await Task.Delay(300);
 
                     Write_Register(" 00 1B", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 01", "04 00");
 
@@ -22465,12 +22468,12 @@ Note: eStatus enum 
 
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 13", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22491,12 +22494,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 14", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22517,12 +22520,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 0C", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22543,12 +22546,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 0D", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22569,12 +22572,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 0E", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22595,12 +22598,12 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
                     Write_Register(" 00 30", "00 04");
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
                     Write_Register(" 00 0F", hexValue);
-                    await Task.Delay(300);
+                    await Task.Delay(500);
 
-                    Write_Register(" 00 01", "40 00");
+                    Write_Register(" 00 01", "04 00");
 
                 }
 
@@ -22813,6 +22816,19 @@ Note: eStatus enum 
                 string box_title = "SSPA 3038 Help";
 
                 MessageBox.Show(box_msg, box_title);
+            }
+        }
+
+        private void textBox_SystemMode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (textBox_SystemMode.BackColor == Color.LightGreen)
+                {
+
+                    Write_Register(" 00 03", textBox_SystemMode.Text);
+
+                }
             }
         }
 
