@@ -836,11 +836,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2000,17 +2000,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4676,18 +4676,18 @@ namespace Monitor
             // 
             // textBox_ACKWriteRegisterReceived
             // 
-            this.textBox_ACKWriteRegisterReceived.Location = new System.Drawing.Point(725, 2);
+            this.textBox_ACKWriteRegisterReceived.Location = new System.Drawing.Point(689, 2);
             this.textBox_ACKWriteRegisterReceived.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ACKWriteRegisterReceived.MaxLength = 30;
             this.textBox_ACKWriteRegisterReceived.Name = "textBox_ACKWriteRegisterReceived";
             this.textBox_ACKWriteRegisterReceived.ReadOnly = true;
-            this.textBox_ACKWriteRegisterReceived.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ACKWriteRegisterReceived.Size = new System.Drawing.Size(155, 26);
             this.textBox_ACKWriteRegisterReceived.TabIndex = 74;
             // 
             // label141
             // 
             this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(653, 40);
+            this.label141.Location = new System.Drawing.Point(708, 68);
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(55, 18);
             this.label141.TabIndex = 73;
@@ -4695,12 +4695,12 @@ namespace Monitor
             // 
             // textBox_ReadRegisterAnswer
             // 
-            this.textBox_ReadRegisterAnswer.Location = new System.Drawing.Point(725, 35);
+            this.textBox_ReadRegisterAnswer.Location = new System.Drawing.Point(596, 35);
             this.textBox_ReadRegisterAnswer.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ReadRegisterAnswer.MaxLength = 30;
             this.textBox_ReadRegisterAnswer.Name = "textBox_ReadRegisterAnswer";
             this.textBox_ReadRegisterAnswer.ReadOnly = true;
-            this.textBox_ReadRegisterAnswer.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadRegisterAnswer.Size = new System.Drawing.Size(248, 26);
             this.textBox_ReadRegisterAnswer.TabIndex = 72;
             // 
             // textBox_ReadFlash
@@ -7588,8 +7588,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7614,8 +7614,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -8020,9 +8020,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -13426,27 +13426,27 @@ namespace Monitor
                         break;
 
                     case "00B7":
-                        textBox_StatusUUT11.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
                         break;
 
                     case "00B8":
-                        textBox_StatusUUT12.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00B9":
-                        textBox_StatusUUT13.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT13.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00BA":
-                        textBox_StatusUUT14.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT14.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00BB":
-                        textBox_StatusUUT15.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00BF":
-                        textBox_StatusUUT16.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     default:
@@ -21279,7 +21279,7 @@ Note: eStatus enum 
                     Write_Register_To_UUT(" 00 12", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 01", "48 00");
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -21308,7 +21308,7 @@ Note: eStatus enum 
                     Write_Register_To_UUT(" 00 15", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -21334,7 +21334,7 @@ Note: eStatus enum 
                     Write_Register_To_UUT(" 00 16", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -21356,7 +21356,7 @@ Note: eStatus enum 
             }
         }
 
-        private  void textBox31_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox31_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -21365,7 +21365,12 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
+
                     Write_Register_To_UUT(" 00 11", hexValue);
+
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
                 }
 
             }
@@ -21391,11 +21396,33 @@ Note: eStatus enum 
             await Task.Delay(500);
             button_GetStatus_Click(null, null);
         }
-        private void textBox30_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox30_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                SetDCAValues();
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    string hexValue = "";
+                    if (int.TryParse(textBox_DCA1.Text, out int temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+                    if (int.TryParse(textBox_DCA2.Text, out temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+                    Write_Register_To_UUT(" 00 1B", hexValue);
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "04 00");
+
+
+                }
+
+
             }
         }
 
@@ -21417,11 +21444,6 @@ Note: eStatus enum 
                     {
                         hexValue += temp.ToString("X2");
                     }
-
-
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
 
                     Write_Register_To_UUT(" 00 1B", hexValue);
                     await Task.Delay(500);
@@ -21520,17 +21542,22 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                textBox15.Text = "01";
+                Write_Register_To_Simulator(" 00 09", "00 01");
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox15.Text = "00";
+
+                Write_Register_To_Simulator(" 00 09", "00 00");
                 Checkbx.BackColor = default;
             }
 
-            button115_Click(null, null);
+
+
+
+
+            
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
@@ -21538,17 +21565,16 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                textBox13.Text = "01";
+                Write_Register_To_Simulator(" 00 09", "00 01");
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox13.Text = "00";
+
+                Write_Register_To_Simulator(" 00 09", "00 00");
                 Checkbx.BackColor = default;
             }
-
-            button112_Click(null, null);
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
@@ -21615,33 +21641,51 @@ Note: eStatus enum 
 
         private void textBox84_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-
-                string hexValue = "";
-                if (int.TryParse(textBox_FreqBit.Text, out int temp))
+                if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    hexValue += temp.ToString("X2");
+
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    //Write_Register(" 00 03", "00 07");
+                    //await Task.Delay(300);
+
+                    Write_Register_To_Simulator(" 00 05", hexValue);
+                    //await Task.Delay(500);
+
+                    //Write_Register_To_UUT(" 00 01", "04 00");
+
+
                 }
 
-                textBox7.Text = hexValue;
-                button55_Click(null, null);
             }
         }
 
         private void textBox83_KeyDown(object sender, KeyEventArgs e)
         {
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-
-                string hexValue = "";
-                if (int.TryParse(textBox_FTbit.Text, out int temp))
+                if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    hexValue += temp.ToString("X2");
+
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    //Write_Register(" 00 03", "00 07");
+                    //await Task.Delay(300);
+
+                    Write_Register_To_Simulator(" 00 06", hexValue);
+                    //await Task.Delay(500);
+
+                    //Write_Register_To_UUT(" 00 01", "04 00");
+
+
                 }
 
-                textBox6.Text = hexValue;
-                button54_Click(null, null);
             }
         }
 
@@ -21943,20 +21987,20 @@ Note: eStatus enum 
         private void textBox_CALSAR_KeyDown(object sender, KeyEventArgs e)
         {
 
+            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                if (textBox_CALSAR.BackColor == Color.LightGreen)
+                if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    string hexValue = "";
-                    if (int.TryParse(textBox_CALSAR.Text, out int temp))
-                    {
-                        hexValue += temp.ToString("X2");
-                    }
 
-                    textBox_SimulatorDiscreteCALSARcontrol.Text = hexValue;
-                    button_SimulatorDiscreteCALSARcontrol_Click(null, null);
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    Write_Register_To_Simulator(" 00 08", hexValue);
+
+
+
                 }
-
 
             }
         }
@@ -22283,7 +22327,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 7)
+                if (Num >= 0 && Num <= 15)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22303,7 +22347,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 15)
+                if (Num >= 0 && Num <= 31)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22665,7 +22709,7 @@ Note: eStatus enum 
                     Write_Register_To_UUT(" 00 13", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -22691,7 +22735,7 @@ Note: eStatus enum 
                     Write_Register_To_UUT(" 00 14", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
