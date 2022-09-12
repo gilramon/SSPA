@@ -764,6 +764,8 @@ namespace Monitor
         private Label label143;
         private TextBox textBox_ReadLength;
         private Label label144;
+        private TextBox textBox1;
+        private TextBox textBox2;
         private static readonly string PREAMBLE = "23";
 
 
@@ -818,11 +820,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1540,6 +1542,8 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1964,17 +1968,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea6.AxisX.Title = "Freq";
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Title = "Power [dBm]";
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4376,6 +4380,8 @@ namespace Monitor
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label143);
             this.tabPage3.Controls.Add(this.textBox_ReadLength);
             this.tabPage3.Controls.Add(this.label142);
@@ -7342,8 +7348,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7368,8 +7374,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7774,9 +7780,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9827,6 +9833,27 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 132);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MaxLength = 30;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 26);
+            this.textBox1.TabIndex = 78;
+            this.textBox1.Text = "112233445566";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_6);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(361, 134);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MaxLength = 30;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(119, 26);
+            this.textBox2.TabIndex = 79;
             // 
             // MainForm
             // 
@@ -12894,16 +12921,18 @@ namespace Monitor
 
         private string GetBytesFromData(string i_data, int i_ByteStartIndex, int i_NumOfBytes)
         {
+            string Data_Without_Spaces = Regex.Replace(i_data, @"\s+", "");
+
             int StartIndex = i_ByteStartIndex * 2;
             int MaxIndex = (StartIndex + i_NumOfBytes * 2);
-            if (i_data.Length < MaxIndex)
+            if (Data_Without_Spaces.Length < MaxIndex)
             {
 
-                return string.Format("Out of range [{0}] - [{1}]", i_data.Length, MaxIndex);
+                return string.Format("Out of range [{0}] - [{1}]", Data_Without_Spaces.Length, MaxIndex);
             }
             else
             {
-                return i_data.Substring(StartIndex, i_NumOfBytes * 2);
+                return Data_Without_Spaces.Substring(StartIndex, i_NumOfBytes * 2);
 
             }
 
@@ -13134,94 +13163,66 @@ namespace Monitor
         private void ReadRegisterAckFrame(KratosProtocolFrame i_Parsedframe)
         {
 
-            
-            String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
-            String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
-            int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
-
-            textBox_ReadRegisterAnswer.Text = String.Format("Address : [{0}] Data: [{1}]", str_Address, str_Data);
-            textBox_ReadRegisterAnswer.BackColor = Color.LightGreen;
-            switch (str_Address)
+            try
             {
-                case "001C":
-                    textBox_StatusUUT1.Text = str_Data;
 
-                    break;
+                String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+                String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
 
-                case "001D":
-                    textBox_StatusUUT2.Text = str_Data;
+                textBox_ReadRegisterAnswer.Text = String.Format("Address : [{0}] Data: [{1}]", str_Address, str_Data);
+                textBox_ReadRegisterAnswer.BackColor = Color.LightGreen;
 
-                    break;
+                
+                switch (str_Address)
+                {
+                    
+                    case "00AD":
+                        textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT7.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT8.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT9.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT10.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
-                case "001E":
-                    textBox_StatusUUT3.Text = str_Data;
+                        break;
 
-                    break;
+                    case "00B7":
+                        textBox_StatusUUT11.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                case "001F":
-                    textBox_StatusUUT4.Text = str_Data;
+                    case "00B8":
+                        textBox_StatusUUT12.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                    break;
+                    case "00B9":
+                        textBox_StatusUUT13.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                case "0020":
-                    textBox_StatusUUT5.Text = str_Data;
+                    case "00BA":
+                        textBox_StatusUUT14.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                    break;
+                    case "00BB":
+                        textBox_StatusUUT15.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                case "0021":
-                    textBox_StatusUUT6.Text = str_Data;
+                    case "00BF":
+                        textBox_StatusUUT16.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
 
-                    break;
-
-                case "0022":
-                    textBox_StatusUUT7.Text = str_Data;
-
-                    break;
-
-                case "0023":
-                    textBox_StatusUUT8.Text = str_Data;
-
-                    break;
-
-                case "0024":
-                    textBox_StatusUUT9.Text = str_Data;
-
-                    break;
-
-                case "0025":
-                    textBox_StatusUUT10.Text = str_Data;
-
-                    break;
-
-                case "0026":
-                    textBox_StatusUUT11.Text = str_Data;
-
-                    break;
-
-                case "0027":
-                    textBox_StatusUUT12.Text = str_Data;
-
-                    break;
-
-                case "0028":
-                    textBox_StatusUUT13.Text = str_Data;
-
-                    break;
-
-                case "0029":
-                    textBox_StatusUUT14.Text = str_Data;
-
-                    break;
-
-                case "002A":
-                    textBox_StatusUUT15.Text = str_Data;
-
-                    break;
-
-
-                default:
-                    UnHandledAddress(str_Address);
-                    break;
+                    default:
+                        UnHandledAddress(str_Address);
+                        break;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             //int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             //int UnitMajorNumber = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
@@ -13239,12 +13240,43 @@ namespace Monitor
             //        //    "\n Version day  [{4}]\n Version month [{5}]\n Version year [{6}]\n",
             //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
-        
+
+        public class AutoClosingMessageBox
+        {
+            System.Threading.Timer _timeoutTimer;
+            string _caption;
+            AutoClosingMessageBox(string text, string caption, int timeout)
+            {
+                _caption = caption;
+                _timeoutTimer = new System.Threading.Timer(OnTimerElapsed,
+                    null, timeout, System.Threading.Timeout.Infinite);
+                using (_timeoutTimer)
+                    MessageBox.Show(text, caption);
+            }
+            public static void Show(string text, string caption, int timeout)
+            {
+                new AutoClosingMessageBox(text, caption, timeout);
+            }
+            void OnTimerElapsed(object state)
+            {
+                IntPtr mbWnd = FindWindow("#32770", _caption); // lpClassName is #32770 for MessageBox
+                if (mbWnd != IntPtr.Zero)
+                    SendMessage(mbWnd, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
+                _timeoutTimer.Dispose();
+            }
+            const int WM_CLOSE = 0x0010;
+            [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
+            static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+            [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
+            static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+        }
+
 
         /// <summary>
-        /// Gil: Income frame parser ************************************************
-        /// **************************************************
-        /// ***********************************
+        /// Gil: Income frame parser *********************************************************
+        /// *********************************************************************************
+        /// ***********************************************************************************
+        /// **********************************************************************************
         /// </summary>
         /// <param name="i_Parsedframe"></param>
         private void ParseSystemFrame(KratosProtocolFrame i_Parsedframe)
@@ -20784,6 +20816,8 @@ Note: eStatus enum 
                 }
             }
 
+            
+
 
 
         }
@@ -22726,6 +22760,32 @@ Note: eStatus enum 
         private void textBox_PulseDelay2_TextChanged(object sender, EventArgs e)
         {
             testPulseGenTextBoxs2();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter && m_TextBox.BackColor == Color.LightGreen)
+            {
+                textBox2.Text = GetBytesFromData(textBox1.Text, 1, 2);
+
+            }
+        }
+
+        private void textBox1_TextChanged_6(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null)
+            {
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
