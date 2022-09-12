@@ -766,6 +766,22 @@ namespace Monitor
         private Label label144;
         private TextBox textBox1;
         private TextBox textBox2;
+        private Label label102;
+        private TextBox textBox9;
+        private Label label145;
+        private TextBox textBox11;
+        private Label label146;
+        private TextBox textBox18;
+        private Label label147;
+        private Label label148;
+        private Label label149;
+        private TextBox textBox23;
+        private TextBox textBox24;
+        private TextBox textBox25;
+        private TextBox textBox_ReadToSimulator;
+        private Button button_ReadRegisterToSimulator;
+        private TextBox textBox_WriteToSimulator;
+        private Button button_WriteRegisterToSimulator;
         private static readonly string PREAMBLE = "23";
 
 
@@ -820,11 +836,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1544,6 +1560,22 @@ namespace Monitor
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label149 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox_ReadToSimulator = new System.Windows.Forms.TextBox();
+            this.button_ReadRegisterToSimulator = new System.Windows.Forms.Button();
+            this.textBox_WriteToSimulator = new System.Windows.Forms.TextBox();
+            this.button_WriteRegisterToSimulator = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1968,17 +2000,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea6.AxisX.Title = "Freq";
-            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisY.Title = "Power [dBm]";
-            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.IsTextAutoFit = false;
-            legend6.Name = "Legend1";
-            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend6);
+            chartArea4.AxisX.Title = "Freq";
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.Title = "Power [dBm]";
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4380,6 +4412,22 @@ namespace Monitor
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label102);
+            this.tabPage3.Controls.Add(this.textBox9);
+            this.tabPage3.Controls.Add(this.label145);
+            this.tabPage3.Controls.Add(this.textBox11);
+            this.tabPage3.Controls.Add(this.label146);
+            this.tabPage3.Controls.Add(this.textBox18);
+            this.tabPage3.Controls.Add(this.label147);
+            this.tabPage3.Controls.Add(this.label148);
+            this.tabPage3.Controls.Add(this.label149);
+            this.tabPage3.Controls.Add(this.textBox23);
+            this.tabPage3.Controls.Add(this.textBox24);
+            this.tabPage3.Controls.Add(this.textBox25);
+            this.tabPage3.Controls.Add(this.textBox_ReadToSimulator);
+            this.tabPage3.Controls.Add(this.button_ReadRegisterToSimulator);
+            this.tabPage3.Controls.Add(this.textBox_WriteToSimulator);
+            this.tabPage3.Controls.Add(this.button_WriteRegisterToSimulator);
             this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label143);
@@ -4620,7 +4668,7 @@ namespace Monitor
             this.button_ReadFromRegister.Name = "button_ReadFromRegister";
             this.button_ReadFromRegister.Size = new System.Drawing.Size(223, 22);
             this.button_ReadFromRegister.TabIndex = 58;
-            this.button_ReadFromRegister.Text = "Read Register";
+            this.button_ReadFromRegister.Text = "Read Register from UUT";
             this.button_ReadFromRegister.UseVisualStyleBackColor = true;
             this.button_ReadFromRegister.Click += new System.EventHandler(this.button_ReadFromRegister_Click);
             // 
@@ -4643,7 +4691,7 @@ namespace Monitor
             this.button_WriteRegister.Name = "button_WriteRegister";
             this.button_WriteRegister.Size = new System.Drawing.Size(223, 22);
             this.button_WriteRegister.TabIndex = 56;
-            this.button_WriteRegister.Text = "Write Register";
+            this.button_WriteRegister.Text = "Write Register to UUT";
             this.button_WriteRegister.UseVisualStyleBackColor = true;
             this.button_WriteRegister.Click += new System.EventHandler(this.button_WriteRegister_Click);
             // 
@@ -7348,8 +7396,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7374,8 +7422,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7780,9 +7828,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9836,7 +9884,7 @@ namespace Monitor
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 132);
+            this.textBox1.Location = new System.Drawing.Point(620, 453);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
@@ -9848,12 +9896,174 @@ namespace Monitor
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(361, 134);
+            this.textBox2.Location = new System.Drawing.Point(743, 455);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.MaxLength = 30;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(119, 26);
             this.textBox2.TabIndex = 79;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(487, 153);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(50, 18);
+            this.label102.TabIndex = 95;
+            this.label102.Text = "Length";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(548, 150);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.MaxLength = 30;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(44, 26);
+            this.textBox9.TabIndex = 94;
+            this.textBox9.Text = "00 02";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(653, 120);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(33, 18);
+            this.label145.TabIndex = 93;
+            this.label145.Text = "ACK";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(725, 115);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox11.MaxLength = 30;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(119, 26);
+            this.textBox11.TabIndex = 92;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(653, 153);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(55, 18);
+            this.label146.TabIndex = 91;
+            this.label146.Text = "Answer";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(725, 148);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox18.MaxLength = 30;
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(119, 26);
+            this.textBox18.TabIndex = 90;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(360, 153);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(58, 18);
+            this.label147.TabIndex = 89;
+            this.label147.Text = "Address";
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(509, 123);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(36, 18);
+            this.label148.TabIndex = 88;
+            this.label148.Text = "Data";
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(359, 126);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(58, 18);
+            this.label149.TabIndex = 87;
+            this.label149.Text = "Address";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(548, 120);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox23.MaxLength = 30;
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(93, 26);
+            this.textBox23.TabIndex = 86;
+            this.textBox23.Text = "11 22";
+            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged_1);
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(421, 150);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox24.MaxLength = 30;
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(44, 26);
+            this.textBox24.TabIndex = 85;
+            this.textBox24.Text = "00 85";
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged_1);
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(421, 120);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox25.MaxLength = 30;
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(83, 26);
+            this.textBox25.TabIndex = 84;
+            this.textBox25.Text = "00 85";
+            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged_1);
+            // 
+            // textBox_ReadToSimulator
+            // 
+            this.textBox_ReadToSimulator.Location = new System.Drawing.Point(236, 153);
+            this.textBox_ReadToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadToSimulator.MaxLength = 30;
+            this.textBox_ReadToSimulator.Name = "textBox_ReadToSimulator";
+            this.textBox_ReadToSimulator.ReadOnly = true;
+            this.textBox_ReadToSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadToSimulator.TabIndex = 83;
+            this.textBox_ReadToSimulator.Text = "02 00 85 00 02";
+            // 
+            // button_ReadRegisterToSimulator
+            // 
+            this.button_ReadRegisterToSimulator.Location = new System.Drawing.Point(5, 155);
+            this.button_ReadRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadRegisterToSimulator.Name = "button_ReadRegisterToSimulator";
+            this.button_ReadRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
+            this.button_ReadRegisterToSimulator.TabIndex = 82;
+            this.button_ReadRegisterToSimulator.Text = "Read Register from Simulator";
+            this.button_ReadRegisterToSimulator.UseVisualStyleBackColor = true;
+            this.button_ReadRegisterToSimulator.Click += new System.EventHandler(this.button_ReadRegisterToSimulator_Click);
+            // 
+            // textBox_WriteToSimulator
+            // 
+            this.textBox_WriteToSimulator.Location = new System.Drawing.Point(236, 122);
+            this.textBox_WriteToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteToSimulator.MaxLength = 30;
+            this.textBox_WriteToSimulator.Name = "textBox_WriteToSimulator";
+            this.textBox_WriteToSimulator.ReadOnly = true;
+            this.textBox_WriteToSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteToSimulator.TabIndex = 81;
+            this.textBox_WriteToSimulator.Text = "01 00 85 00 02";
+            // 
+            // button_WriteRegisterToSimulator
+            // 
+            this.button_WriteRegisterToSimulator.Location = new System.Drawing.Point(5, 124);
+            this.button_WriteRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteRegisterToSimulator.Name = "button_WriteRegisterToSimulator";
+            this.button_WriteRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
+            this.button_WriteRegisterToSimulator.TabIndex = 80;
+            this.button_WriteRegisterToSimulator.Text = "Write Register to Simulator";
+            this.button_WriteRegisterToSimulator.UseVisualStyleBackColor = true;
+            this.button_WriteRegisterToSimulator.Click += new System.EventHandler(this.button_WriteRegisterToSimulator_Click);
             // 
             // MainForm
             // 
@@ -21008,10 +21218,10 @@ Note: eStatus enum 
                     //Write_Register(" 00 03", "00 07");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 1A", hexValue);
+                    Write_Register_To_UUT(" 00 1A", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
  
 
                 }
@@ -21033,14 +21243,14 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
 
-                    Write_Register(" 00 12", hexValue);
+                    Write_Register_To_UUT(" 00 12", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "48 00");
+                    Write_Register_To_UUT(" 00 01", "48 00");
 
                 }
 
@@ -21063,13 +21273,13 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 15", hexValue);
+                    Write_Register_To_UUT(" 00 15", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -21089,13 +21299,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 03", "00 07");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 16", hexValue);
+                    Write_Register_To_UUT(" 00 16", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -21126,7 +21336,7 @@ Note: eStatus enum 
                 {
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
-                    Write_Register(" 00 11", hexValue);
+                    Write_Register_To_UUT(" 00 11", hexValue);
                 }
 
             }
@@ -21184,10 +21394,10 @@ Note: eStatus enum 
                     //Write_Register(" 00 03", "00 07");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 1B", hexValue);
+                    Write_Register_To_UUT(" 00 1B", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                         
                 }
@@ -21939,31 +22149,31 @@ Note: eStatus enum 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
 
-            Write_Register("00 01", "01 00");
+            Write_Register_To_UUT("00 01", "01 00");
             await Task.Delay(500);
 
-            Read_Register("00 AD", "00 0A");
+            Write_Register_To_UUT("00 AD", "00 0A");
             await Task.Delay(500);
 
-            Write_Register("00 01", "02 00");
+            Write_Register_To_UUT("00 01", "02 00");
             await Task.Delay(500);
 
-            Read_Register("00 B7");
+            Read_Register_From_UUT("00 B7");
             await Task.Delay(500);
 
-            Read_Register("00 B8");
+            Read_Register_From_UUT("00 B8");
             await Task.Delay(500);
 
-            Read_Register("00 B9");
+            Read_Register_From_UUT("00 B9");
             await Task.Delay(500);
 
-            Read_Register("00 BA");
+            Read_Register_From_UUT("00 BA");
             await Task.Delay(500);
 
-            Read_Register("00 BB");
+            Read_Register_From_UUT("00 BB");
             await Task.Delay(500);
 
-            Read_Register("00 BF");
+            Read_Register_From_UUT("00 BF");
             await Task.Delay(500);
 
 
@@ -22007,7 +22217,7 @@ Note: eStatus enum 
                 if (textBox_SystemMode.BackColor == Color.LightGreen)
                 {
 
-                    Write_Register(" 00 03", textBox_SystemMode.Text);
+                Write_Register_To_UUT(" 00 03", textBox_SystemMode.Text);
 
                 }
 
@@ -22179,7 +22389,7 @@ Note: eStatus enum 
             }
         }
 
-        void  Read_Register(String i_Address, String i_Length = "00 02")
+        void  Read_Register_From_UUT(String i_Address, String i_Length = "00 02")
         {
             textBox_ReadRegister.Text = String.Format("02 {0} {1}", i_Address, i_Length);
 
@@ -22187,11 +22397,20 @@ Note: eStatus enum 
   
         }
 
-        void Write_Register(String i_Address, String i_Data)
+        void Write_Register_To_UUT(String i_Address, String i_Data)
         {
-            textBox_WriteRegister.Text = String.Format("01 {0} {1}", i_Address, i_Data);
+            textBox_WriteToSimulator.Text = String.Format("01 {0} {1}", i_Address, i_Data);
 
             button_WriteRegister_Click(null, null);
+
+        }
+
+
+        void Read_Register_From_Simulator(String i_Address, String i_Length = "00 02")
+        {
+            textBox_ReadToSimulator.Text = String.Format("02 {0} {1}", i_Address, i_Length);
+
+            button_ReadRegisterToSimulator_Click(null, null);
 
         }
 
@@ -22382,13 +22601,13 @@ Note: eStatus enum 
                     //await Task.Delay(300);
 
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 13", hexValue);
+                    Write_Register_To_UUT(" 00 13", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22408,13 +22627,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 03", "00 07");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 14", hexValue);
+                    Write_Register_To_UUT(" 00 14", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22434,13 +22653,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 30", "00 04");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 0C", hexValue);
+                    Write_Register_To_UUT(" 00 0C", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22460,13 +22679,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 30", "00 04");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 0D", hexValue);
+                    Write_Register_To_UUT(" 00 0D", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22486,13 +22705,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 30", "00 04");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 0E", hexValue);
+                    Write_Register_To_UUT(" 00 0E", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22512,13 +22731,13 @@ Note: eStatus enum 
                     //Write_Register(" 00 30", "00 04");
                     //await Task.Delay(300);
 
-                    Write_Register(" 00 30", "00 04");
+                    Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register(" 00 0F", hexValue);
+                    Write_Register_To_UUT(" 00 0F", hexValue);
                     await Task.Delay(500);
 
-                    Write_Register(" 00 01", "04 00");
+                    Write_Register_To_UUT(" 00 01", "04 00");
 
                 }
 
@@ -22642,7 +22861,7 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register(textBox_WriteAddressRegister.Text, textBox_WriteDataToRegister.Text);
+                    Write_Register_To_UUT(textBox_WriteAddressRegister.Text, textBox_WriteDataToRegister.Text);
 
                 }
 
@@ -22658,7 +22877,7 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register(textBox_WriteAddressRegister.Text, textBox_WriteDataToRegister.Text);
+                    Write_Register_To_UUT(textBox_WriteAddressRegister.Text, textBox_WriteDataToRegister.Text);
                     textBox_ACKWriteRegisterReceived.Text = ""; 
                     textBox_ACKWriteRegisterReceived.BackColor = default;
 
@@ -22676,7 +22895,7 @@ Note: eStatus enum 
                 {
                     textBox_ReadRegisterAnswer.Text = "";
                     textBox_ReadRegisterAnswer.BackColor = default;
-                    Read_Register(textBox_ReadAddressRegister.Text, textBox_ReadLength.Text);
+                    Read_Register_From_UUT(textBox_ReadAddressRegister.Text, textBox_ReadLength.Text);
 
                 }
 
@@ -22709,7 +22928,7 @@ Note: eStatus enum 
                 {
                     textBox_ReadRegisterAnswer.Text = "";
                     textBox_ReadRegisterAnswer.BackColor = default;
-                    Read_Register(textBox_ReadAddressRegister.Text, textBox_ReadLength.Text);
+                    Read_Register_From_UUT(textBox_ReadAddressRegister.Text, textBox_ReadLength.Text);
 
                 }
 
@@ -22741,7 +22960,7 @@ Note: eStatus enum 
                 if (textBox_SystemMode.BackColor == Color.LightGreen)
                 {
 
-                    Write_Register(" 00 03", textBox_SystemMode.Text);
+                    Write_Register_To_UUT(" 00 03", textBox_SystemMode.Text);
 
                 }
             }
@@ -22786,6 +23005,110 @@ Note: eStatus enum 
             {
                 txtbox.BackColor = Color.Red;
             }
+        }
+
+        private void button42_Click_3(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "B0";
+            textBox_data.Text = textBox_WriteRegister.Text;
+
+            SendDataToSystem();
+        }
+
+        private void button32_Click_2(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "B2";
+            textBox_data.Text = textBox_WriteToSimulator.Text;
+
+            SendDataToSystem();
+        }
+
+        private void textBox25_TextChanged_1(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null && buffer.Length == 2)
+            {
+                //WriteFromRegister(textBox36.Text, textBox38.Text);
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox24_TextChanged_1(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null && buffer.Length == 2)
+            {
+                //WriteFromRegister(textBox36.Text, textBox38.Text);
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox23_TextChanged_1(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null && buffer.Length == 2)
+            {
+                //WriteFromRegister(textBox36.Text, textBox38.Text);
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox9_TextChanged_2(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null && buffer.Length == 2)
+            {
+                //WriteFromRegister(textBox36.Text, textBox38.Text);
+                txtbox.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void button_WriteRegisterToSimulator_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "B0";
+            textBox_data.Text = textBox_WriteRegister.Text;
+
+            SendDataToSystem();
+        }
+
+        private void button_ReadRegisterToSimulator_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "B2";
+            textBox_data.Text = textBox_WriteToSimulator.Text;
+
+            SendDataToSystem();
         }
 
         private void button57_Click_1(object sender, EventArgs e)
