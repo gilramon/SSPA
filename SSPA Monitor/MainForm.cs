@@ -596,7 +596,6 @@ namespace Monitor
         private DataGridView dataGridView8;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private GroupBox groupBox33;
-        private Button button32;
         private TextBox textBox_RFDelay;
         private Label label100;
         private TextBox textBox_RFPeriod;
@@ -629,12 +628,10 @@ namespace Monitor
         private TextBox textBox_FreqBit;
         private Label label109;
         private GroupBox groupBox35;
-        private Button button44;
         private TextBox textBox_PulseDelay2;
         private TextBox textBox_PulsePeriod2;
         private TextBox textBox_PulseWidth2;
         private GroupBox groupBox34;
-        private Button button42;
         private TextBox textBox_PulseDelay;
         private TextBox textBox_PulsePeriod;
         private TextBox textBox_PulseWidth;
@@ -695,7 +692,6 @@ namespace Monitor
         private Label label80;
         private Label label83;
         private Button button74;
-        private Label label102;
         private CheckBox checkBox_ParseRxTCPBuffer;
         private CheckBox checkBox_SendEveryOneSecond;
         private TextBox textBox_SendSerialPortPeriod;
@@ -1050,6 +1046,8 @@ namespace Monitor
             this.button60 = new System.Windows.Forms.Button();
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label143 = new System.Windows.Forms.Label();
+            this.textBox_ReadLength = new System.Windows.Forms.TextBox();
             this.label142 = new System.Windows.Forms.Label();
             this.textBox_ACKWriteRegisterReceived = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
@@ -1086,6 +1084,7 @@ namespace Monitor
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.label144 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
@@ -1190,7 +1189,6 @@ namespace Monitor
             this.label84 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.label85 = new System.Windows.Forms.Label();
-            this.button44 = new System.Windows.Forms.Button();
             this.label101 = new System.Windows.Forms.Label();
             this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
             this.textBox_PulsePeriod2 = new System.Windows.Forms.TextBox();
@@ -1229,7 +1227,6 @@ namespace Monitor
             this.label125 = new System.Windows.Forms.Label();
             this.textBox_VDDoff1 = new System.Windows.Forms.TextBox();
             this.textBox_Vdd_temp = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -1243,7 +1240,6 @@ namespace Monitor
             this.label79 = new System.Windows.Forms.Label();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.label80 = new System.Windows.Forms.Label();
-            this.button42 = new System.Windows.Forms.Button();
             this.label83 = new System.Windows.Forms.Label();
             this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
             this.textBox_PulsePeriod = new System.Windows.Forms.TextBox();
@@ -1274,7 +1270,6 @@ namespace Monitor
             this.label95 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.button32 = new System.Windows.Forms.Button();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
             this.textBox_RFPeriod = new System.Windows.Forms.TextBox();
@@ -1545,9 +1540,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label143 = new System.Windows.Forms.Label();
-            this.textBox_ReadLength = new System.Windows.Forms.TextBox();
-            this.label144 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -4415,6 +4407,27 @@ namespace Monitor
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Location = new System.Drawing.Point(487, 40);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(50, 18);
+            this.label143.TabIndex = 77;
+            this.label143.Text = "Length";
+            // 
+            // textBox_ReadLength
+            // 
+            this.textBox_ReadLength.Location = new System.Drawing.Point(548, 37);
+            this.textBox_ReadLength.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadLength.MaxLength = 30;
+            this.textBox_ReadLength.Name = "textBox_ReadLength";
+            this.textBox_ReadLength.Size = new System.Drawing.Size(44, 26);
+            this.textBox_ReadLength.TabIndex = 76;
+            this.textBox_ReadLength.Text = "00 02";
+            this.textBox_ReadLength.TextChanged += new System.EventHandler(this.textBox_ReadLength_TextChanged);
+            this.textBox_ReadLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadLength_KeyDown);
+            // 
             // label142
             // 
             this.label142.AutoSize = true;
@@ -4831,17 +4844,26 @@ namespace Monitor
             this.groupBox49.Controls.Add(this.label144);
             this.groupBox49.Controls.Add(this.label123);
             this.groupBox49.Controls.Add(this.textBox_SystemMode);
-            this.groupBox49.Location = new System.Drawing.Point(1034, 10);
+            this.groupBox49.Location = new System.Drawing.Point(350, 13);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(194, 101);
+            this.groupBox49.Size = new System.Drawing.Size(194, 91);
             this.groupBox49.TabIndex = 31;
             this.groupBox49.TabStop = false;
             this.groupBox49.Text = "System mode";
             // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(13, 34);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(139, 18);
+            this.label144.TabIndex = 34;
+            this.label144.Text = "write to register 0x03";
+            // 
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(62, 60);
+            this.label123.Location = new System.Drawing.Point(22, 62);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(68, 18);
             this.label123.TabIndex = 33;
@@ -4849,7 +4871,7 @@ namespace Monitor
             // 
             // textBox_SystemMode
             // 
-            this.textBox_SystemMode.Location = new System.Drawing.Point(136, 57);
+            this.textBox_SystemMode.Location = new System.Drawing.Point(96, 59);
             this.textBox_SystemMode.MaxLength = 999999;
             this.textBox_SystemMode.Name = "textBox_SystemMode";
             this.textBox_SystemMode.Size = new System.Drawing.Size(56, 26);
@@ -6051,7 +6073,6 @@ namespace Monitor
             this.groupBox35.Controls.Add(this.label84);
             this.groupBox35.Controls.Add(this.checkBox8);
             this.groupBox35.Controls.Add(this.label85);
-            this.groupBox35.Controls.Add(this.button44);
             this.groupBox35.Controls.Add(this.label101);
             this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
             this.groupBox35.Controls.Add(this.textBox_PulsePeriod2);
@@ -6080,7 +6101,7 @@ namespace Monitor
             // 
             this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(268, 20);
+            this.checkBox8.Location = new System.Drawing.Point(222, 55);
             this.checkBox8.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(64, 28);
@@ -6099,17 +6120,6 @@ namespace Monitor
             this.label85.Size = new System.Drawing.Size(74, 15);
             this.label85.TabIndex = 22;
             this.label85.Text = "Period (1us)";
-            // 
-            // button44
-            // 
-            this.button44.Location = new System.Drawing.Point(222, 58);
-            this.button44.Margin = new System.Windows.Forms.Padding(2);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(112, 22);
-            this.button44.TabIndex = 16;
-            this.button44.Text = "Set GP parms";
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
             // label101
             // 
@@ -6130,6 +6140,7 @@ namespace Monitor
             this.textBox_PulseDelay2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseDelay2.TabIndex = 15;
             this.textBox_PulseDelay2.Text = "0";
+            this.textBox_PulseDelay2.TextChanged += new System.EventHandler(this.textBox_PulseDelay2_TextChanged);
             // 
             // textBox_PulsePeriod2
             // 
@@ -6166,11 +6177,11 @@ namespace Monitor
             this.groupBox46.Controls.Add(this.textBox_DCA2);
             this.groupBox46.Controls.Add(this.textBox_VVA);
             this.groupBox46.Controls.Add(this.label36);
-            this.groupBox46.Location = new System.Drawing.Point(451, 101);
+            this.groupBox46.Location = new System.Drawing.Point(349, 104);
             this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox46.Name = "groupBox46";
             this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox46.Size = new System.Drawing.Size(420, 106);
+            this.groupBox46.Size = new System.Drawing.Size(482, 106);
             this.groupBox46.TabIndex = 14;
             this.groupBox46.TabStop = false;
             this.groupBox46.Enter += new System.EventHandler(this.groupBox46_Enter);
@@ -6348,7 +6359,6 @@ namespace Monitor
             this.groupBox45.Controls.Add(this.label125);
             this.groupBox45.Controls.Add(this.textBox_VDDoff1);
             this.groupBox45.Controls.Add(this.textBox_Vdd_temp);
-            this.groupBox45.Controls.Add(this.label102);
             this.groupBox45.Controls.Add(this.label31);
             this.groupBox45.Controls.Add(this.label30);
             this.groupBox45.Controls.Add(this.label29);
@@ -6362,7 +6372,7 @@ namespace Monitor
             this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox45.Size = new System.Drawing.Size(441, 198);
+            this.groupBox45.Size = new System.Drawing.Size(339, 198);
             this.groupBox45.TabIndex = 1;
             this.groupBox45.TabStop = false;
             this.groupBox45.Enter += new System.EventHandler(this.groupBox45_Enter);
@@ -6372,7 +6382,7 @@ namespace Monitor
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.Color.Black;
-            this.label130.Location = new System.Drawing.Point(287, 133);
+            this.label130.Location = new System.Drawing.Point(261, 133);
             this.label130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(27, 15);
@@ -6384,7 +6394,7 @@ namespace Monitor
             this.label132.AutoSize = true;
             this.label132.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label132.ForeColor = System.Drawing.Color.Black;
-            this.label132.Location = new System.Drawing.Point(233, 134);
+            this.label132.Location = new System.Drawing.Point(207, 134);
             this.label132.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(26, 15);
@@ -6393,7 +6403,7 @@ namespace Monitor
             // 
             // textBox_SPA_Toff
             // 
-            this.textBox_SPA_Toff.Location = new System.Drawing.Point(278, 154);
+            this.textBox_SPA_Toff.Location = new System.Drawing.Point(252, 154);
             this.textBox_SPA_Toff.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SPA_Toff.Name = "textBox_SPA_Toff";
             this.textBox_SPA_Toff.Size = new System.Drawing.Size(50, 26);
@@ -6405,7 +6415,7 @@ namespace Monitor
             // 
             // textBox_SPA_Ton
             // 
-            this.textBox_SPA_Ton.Location = new System.Drawing.Point(218, 155);
+            this.textBox_SPA_Ton.Location = new System.Drawing.Point(192, 155);
             this.textBox_SPA_Ton.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SPA_Ton.Name = "textBox_SPA_Ton";
             this.textBox_SPA_Ton.Size = new System.Drawing.Size(50, 26);
@@ -6420,7 +6430,7 @@ namespace Monitor
             this.label134.AutoSize = true;
             this.label134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label134.ForeColor = System.Drawing.Color.Black;
-            this.label134.Location = new System.Drawing.Point(231, 114);
+            this.label134.Location = new System.Drawing.Point(205, 114);
             this.label134.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(76, 19);
@@ -6432,7 +6442,7 @@ namespace Monitor
             this.label131.AutoSize = true;
             this.label131.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label131.ForeColor = System.Drawing.Color.Black;
-            this.label131.Location = new System.Drawing.Point(287, 55);
+            this.label131.Location = new System.Drawing.Point(261, 55);
             this.label131.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(27, 15);
@@ -6442,7 +6452,7 @@ namespace Monitor
             // 
             // textBox_MPA_Toff
             // 
-            this.textBox_MPA_Toff.Location = new System.Drawing.Point(278, 76);
+            this.textBox_MPA_Toff.Location = new System.Drawing.Point(252, 76);
             this.textBox_MPA_Toff.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_MPA_Toff.Name = "textBox_MPA_Toff";
             this.textBox_MPA_Toff.Size = new System.Drawing.Size(50, 26);
@@ -6457,7 +6467,7 @@ namespace Monitor
             this.label133.AutoSize = true;
             this.label133.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label133.ForeColor = System.Drawing.Color.Black;
-            this.label133.Location = new System.Drawing.Point(233, 56);
+            this.label133.Location = new System.Drawing.Point(207, 56);
             this.label133.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(26, 15);
@@ -6467,7 +6477,7 @@ namespace Monitor
             // 
             // textBox_MPA_Ton
             // 
-            this.textBox_MPA_Ton.Location = new System.Drawing.Point(218, 77);
+            this.textBox_MPA_Ton.Location = new System.Drawing.Point(192, 77);
             this.textBox_MPA_Ton.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_MPA_Ton.Name = "textBox_MPA_Ton";
             this.textBox_MPA_Ton.Size = new System.Drawing.Size(50, 26);
@@ -6482,7 +6492,7 @@ namespace Monitor
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label129.ForeColor = System.Drawing.Color.Black;
-            this.label129.Location = new System.Drawing.Point(231, 36);
+            this.label129.Location = new System.Drawing.Point(205, 36);
             this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(82, 19);
@@ -6495,7 +6505,7 @@ namespace Monitor
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label128.ForeColor = System.Drawing.Color.Blue;
-            this.label128.Location = new System.Drawing.Point(215, 17);
+            this.label128.Location = new System.Drawing.Point(189, 17);
             this.label128.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(113, 19);
@@ -6508,7 +6518,7 @@ namespace Monitor
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(123, 95);
+            this.label126.Location = new System.Drawing.Point(128, 98);
             this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(32, 15);
@@ -6520,7 +6530,7 @@ namespace Monitor
             this.label127.AutoSize = true;
             this.label127.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.ForeColor = System.Drawing.Color.Black;
-            this.label127.Location = new System.Drawing.Point(123, 41);
+            this.label127.Location = new System.Drawing.Point(128, 44);
             this.label127.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(32, 15);
@@ -6530,7 +6540,7 @@ namespace Monitor
             // 
             // textBox_Vgg2
             // 
-            this.textBox_Vgg2.Location = new System.Drawing.Point(122, 117);
+            this.textBox_Vgg2.Location = new System.Drawing.Point(127, 120);
             this.textBox_Vgg2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg2.Name = "textBox_Vgg2";
             this.textBox_Vgg2.Size = new System.Drawing.Size(50, 26);
@@ -6542,7 +6552,7 @@ namespace Monitor
             // 
             // textBox_Vgg1
             // 
-            this.textBox_Vgg1.Location = new System.Drawing.Point(122, 68);
+            this.textBox_Vgg1.Location = new System.Drawing.Point(127, 71);
             this.textBox_Vgg1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg1.Name = "textBox_Vgg1";
             this.textBox_Vgg1.Size = new System.Drawing.Size(50, 26);
@@ -6557,7 +6567,7 @@ namespace Monitor
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.Color.Black;
-            this.label124.Location = new System.Drawing.Point(1, 147);
+            this.label124.Location = new System.Drawing.Point(6, 150);
             this.label124.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(60, 15);
@@ -6569,7 +6579,7 @@ namespace Monitor
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label125.ForeColor = System.Drawing.Color.Black;
-            this.label125.Location = new System.Drawing.Point(1, 97);
+            this.label125.Location = new System.Drawing.Point(6, 100);
             this.label125.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(65, 15);
@@ -6578,7 +6588,7 @@ namespace Monitor
             // 
             // textBox_VDDoff1
             // 
-            this.textBox_VDDoff1.Location = new System.Drawing.Point(4, 169);
+            this.textBox_VDDoff1.Location = new System.Drawing.Point(9, 172);
             this.textBox_VDDoff1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_VDDoff1.Name = "textBox_VDDoff1";
             this.textBox_VDDoff1.Size = new System.Drawing.Size(50, 26);
@@ -6598,21 +6608,12 @@ namespace Monitor
             this.toolTip1.SetToolTip(this.textBox_Vdd_temp, "Press Enter to update");
             this.textBox_Vdd_temp.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
             // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(346, 15);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(90, 18);
-            this.label102.TabIndex = 14;
-            this.label102.Text = "Enter to send";
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(69, 146);
+            this.label31.Location = new System.Drawing.Point(74, 149);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(21, 15);
@@ -6624,7 +6625,7 @@ namespace Monitor
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(69, 97);
+            this.label30.Location = new System.Drawing.Point(74, 100);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(21, 15);
@@ -6637,7 +6638,7 @@ namespace Monitor
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(69, 42);
+            this.label29.Location = new System.Drawing.Point(74, 45);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(21, 15);
@@ -6659,7 +6660,7 @@ namespace Monitor
             // 
             // textBox_4V
             // 
-            this.textBox_4V.Location = new System.Drawing.Point(60, 167);
+            this.textBox_4V.Location = new System.Drawing.Point(65, 170);
             this.textBox_4V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_4V.Name = "textBox_4V";
             this.textBox_4V.Size = new System.Drawing.Size(50, 26);
@@ -6671,7 +6672,7 @@ namespace Monitor
             // 
             // textBox_5V
             // 
-            this.textBox_5V.Location = new System.Drawing.Point(62, 118);
+            this.textBox_5V.Location = new System.Drawing.Point(67, 121);
             this.textBox_5V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_5V.Name = "textBox_5V";
             this.textBox_5V.Size = new System.Drawing.Size(50, 26);
@@ -6683,7 +6684,7 @@ namespace Monitor
             // 
             // textBox_9V
             // 
-            this.textBox_9V.Location = new System.Drawing.Point(62, 69);
+            this.textBox_9V.Location = new System.Drawing.Point(67, 72);
             this.textBox_9V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_9V.Name = "textBox_9V";
             this.textBox_9V.Size = new System.Drawing.Size(50, 26);
@@ -6710,7 +6711,7 @@ namespace Monitor
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Blue;
-            this.label25.Location = new System.Drawing.Point(51, 14);
+            this.label25.Location = new System.Drawing.Point(26, 14);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(134, 23);
@@ -6722,7 +6723,6 @@ namespace Monitor
             this.groupBox34.Controls.Add(this.label79);
             this.groupBox34.Controls.Add(this.checkBox7);
             this.groupBox34.Controls.Add(this.label80);
-            this.groupBox34.Controls.Add(this.button42);
             this.groupBox34.Controls.Add(this.label83);
             this.groupBox34.Controls.Add(this.textBox_PulseDelay);
             this.groupBox34.Controls.Add(this.textBox_PulsePeriod);
@@ -6751,7 +6751,7 @@ namespace Monitor
             // 
             this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(268, 19);
+            this.checkBox7.Location = new System.Drawing.Point(232, 52);
             this.checkBox7.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(64, 28);
@@ -6770,17 +6770,6 @@ namespace Monitor
             this.label80.Size = new System.Drawing.Size(74, 15);
             this.label80.TabIndex = 19;
             this.label80.Text = "Period (1us)";
-            // 
-            // button42
-            // 
-            this.button42.Location = new System.Drawing.Point(222, 58);
-            this.button42.Margin = new System.Windows.Forms.Padding(2);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(112, 22);
-            this.button42.TabIndex = 16;
-            this.button42.Text = "Set Tx Inhabit";
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click_2);
             // 
             // label83
             // 
@@ -6801,6 +6790,7 @@ namespace Monitor
             this.textBox_PulseDelay.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulseDelay.TabIndex = 15;
             this.textBox_PulseDelay.Text = "0";
+            this.textBox_PulseDelay.TextChanged += new System.EventHandler(this.textBox_PulseDelay_TextChanged);
             // 
             // textBox_PulsePeriod
             // 
@@ -6835,7 +6825,7 @@ namespace Monitor
             this.groupBox44.Controls.Add(this.label27);
             this.groupBox44.Controls.Add(this.label26);
             this.groupBox44.Controls.Add(this.label19);
-            this.groupBox44.Location = new System.Drawing.Point(462, 8);
+            this.groupBox44.Location = new System.Drawing.Point(549, 4);
             this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
@@ -6965,11 +6955,11 @@ namespace Monitor
             this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
             this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
             this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Location = new System.Drawing.Point(748, 8);
+            this.groupBox1.Location = new System.Drawing.Point(876, 32);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(281, 102);
+            this.groupBox1.Size = new System.Drawing.Size(354, 102);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -7085,7 +7075,6 @@ namespace Monitor
             // groupBox33
             // 
             this.groupBox33.Controls.Add(this.checkBox6);
-            this.groupBox33.Controls.Add(this.button32);
             this.groupBox33.Controls.Add(this.textBox_RFDelay);
             this.groupBox33.Controls.Add(this.label100);
             this.groupBox33.Controls.Add(this.textBox_RFPeriod);
@@ -7105,7 +7094,7 @@ namespace Monitor
             // 
             this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(268, 18);
+            this.checkBox6.Location = new System.Drawing.Point(232, 54);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(64, 28);
@@ -7113,17 +7102,6 @@ namespace Monitor
             this.checkBox6.Text = "Control";
             this.checkBox6.UseVisualStyleBackColor = true;
             this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(222, 58);
-            this.button32.Margin = new System.Windows.Forms.Padding(2);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(112, 22);
-            this.button32.TabIndex = 16;
-            this.button32.Text = "Set RF gen parms";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click_1);
             // 
             // textBox_RFDelay
             // 
@@ -7133,6 +7111,7 @@ namespace Monitor
             this.textBox_RFDelay.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFDelay.TabIndex = 15;
             this.textBox_RFDelay.Text = "0";
+            this.textBox_RFDelay.TextChanged += new System.EventHandler(this.textBox_RFDelay_TextChanged);
             // 
             // label100
             // 
@@ -9848,36 +9827,6 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
-            // 
-            // label143
-            // 
-            this.label143.AutoSize = true;
-            this.label143.Location = new System.Drawing.Point(487, 40);
-            this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(50, 18);
-            this.label143.TabIndex = 77;
-            this.label143.Text = "Length";
-            // 
-            // textBox_ReadLength
-            // 
-            this.textBox_ReadLength.Location = new System.Drawing.Point(548, 37);
-            this.textBox_ReadLength.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ReadLength.MaxLength = 30;
-            this.textBox_ReadLength.Name = "textBox_ReadLength";
-            this.textBox_ReadLength.Size = new System.Drawing.Size(44, 26);
-            this.textBox_ReadLength.TabIndex = 76;
-            this.textBox_ReadLength.Text = "00 02";
-            this.textBox_ReadLength.TextChanged += new System.EventHandler(this.textBox_ReadLength_TextChanged);
-            this.textBox_ReadLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadLength_KeyDown);
-            // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(53, 32);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(139, 18);
-            this.label144.TabIndex = 34;
-            this.label144.Text = "write to register 0x03";
             // 
             // MainForm
             // 
@@ -21450,9 +21399,9 @@ Note: eStatus enum 
 
         }
 
-        private bool CheckPeriodAndWidth(int i_Period, int i_Width)
+        private bool CheckPeriodAndWidth(int i_Period, int i_Width, int i_Delay)
         {
-            if (i_Period >= i_Width)
+            if (i_Period >= i_Width && i_Period >= i_Delay)
             {
                 return true;
             }
@@ -21463,134 +21412,89 @@ Note: eStatus enum 
         }
         private void textBox_RFPeriod_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_RFPeriod.Text, out int Period) && int.TryParse(textBox_RFWidth.Text, out int Width))
+            testRFTextboxs();
+        }
+
+        void testRFTextboxs()
+        {
+            if (int.TryParse(textBox_RFPeriod.Text, out int Period) &&
+            int.TryParse(textBox_RFWidth.Text, out int Width) &&
+            int.TryParse(textBox_RFDelay.Text, out int Delay) &&
+            CheckPeriodAndWidth(Period, Width, Delay) == true)
             {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_RFPeriod.BackColor = Color.LightGreen;
-                    textBox_RFWidth.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_RFPeriod.BackColor = Color.Red;
-                    textBox_RFWidth.BackColor = Color.Red;
-                }
+                textBox_RFPeriod.BackColor = Color.LightGreen;
+                textBox_RFWidth.BackColor = Color.LightGreen;
+                textBox_RFDelay.BackColor = Color.LightGreen;
             }
             else
             {
                 textBox_RFPeriod.BackColor = Color.Red;
                 textBox_RFWidth.BackColor = Color.Red;
+                textBox_RFDelay.BackColor = Color.Red;
+            }
+        }
+
+        void testPulseGenTextBoxs()
+        {
+            if (int.TryParse(textBox_PulsePeriod.Text, out int Period) &&
+            int.TryParse(textBox_PulseWidth.Text, out int Width) &&
+            int.TryParse(textBox_PulseDelay.Text, out int Delay) &&
+            CheckPeriodAndWidth(Period, Width, Delay) == true)
+            {
+                textBox_PulsePeriod.BackColor = Color.LightGreen;
+                textBox_PulseWidth.BackColor = Color.LightGreen;
+                textBox_PulseDelay.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBox_PulsePeriod.BackColor = Color.Red;
+                textBox_PulseWidth.BackColor = Color.Red;
+                textBox_PulseDelay.BackColor = Color.Red;
+            }
+        }
+
+        void testPulseGenTextBoxs2()
+        {
+            if (int.TryParse(textBox_PulsePeriod2.Text, out int Period) &&
+            int.TryParse(textBox_PulseWidth2.Text, out int Width) &&
+            int.TryParse(textBox_PulseDelay2.Text, out int Delay) &&
+            CheckPeriodAndWidth(Period, Width, Delay) == true)
+            {
+                textBox_PulsePeriod2.BackColor = Color.LightGreen;
+                textBox_PulseWidth2.BackColor = Color.LightGreen;
+                textBox_PulseDelay2.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                textBox_PulsePeriod2.BackColor = Color.Red;
+                textBox_PulseWidth2.BackColor = Color.Red;
+                textBox_PulseDelay2.BackColor = Color.Red;
             }
         }
 
         private void textBox_RFWidth_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_RFPeriod.Text, out int Period) && int.TryParse(textBox_RFWidth.Text, out int Width))
-            {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_RFPeriod.BackColor = Color.LightGreen;
-                    textBox_RFWidth.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_RFPeriod.BackColor = Color.Red;
-                    textBox_RFWidth.BackColor = Color.Red;
-                }
-            }
-            else
-            {
-                textBox_RFPeriod.BackColor = Color.Red;
-                textBox_RFWidth.BackColor = Color.Red;
-            }
+            testRFTextboxs();
         }
 
         private void textBox_PulseWidth_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_PulsePeriod.Text, out int Period) && int.TryParse(textBox_PulseWidth.Text, out int Width))
-            {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_PulsePeriod.BackColor = Color.LightGreen;
-                    textBox_PulseWidth.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_PulsePeriod.BackColor = Color.Red;
-                    textBox_PulseWidth.BackColor = Color.Red;
-                }
-            }
-            else
-            {
-                textBox_PulsePeriod.BackColor = Color.Red;
-                textBox_PulseWidth.BackColor = Color.Red;
-            }
+            testPulseGenTextBoxs();
         }
 
         private void textBox_PulsePeriod_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_PulsePeriod.Text, out int Period) && int.TryParse(textBox_PulseWidth.Text, out int Width))
-            {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_PulsePeriod.BackColor = Color.LightGreen;
-                    textBox_PulseWidth.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_PulsePeriod.BackColor = Color.Red;
-                    textBox_PulseWidth.BackColor = Color.Red;
-                }
-            }
-            else
-            {
-                textBox_PulsePeriod.BackColor = Color.Red;
-                textBox_PulseWidth.BackColor = Color.Red;
-            }
+            testPulseGenTextBoxs();
         }
 
         private void textBox_PulseWidth2_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_PulsePeriod2.Text, out int Period) && int.TryParse(textBox_PulseWidth2.Text, out int Width))
-            {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_PulsePeriod2.BackColor = Color.LightGreen;
-                    textBox_PulseWidth2.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_PulsePeriod2.BackColor = Color.Red;
-                    textBox_PulseWidth2.BackColor = Color.Red;
-                }
-            }
-            else
-            {
-                textBox_PulsePeriod2.BackColor = Color.Red;
-                textBox_PulseWidth2.BackColor = Color.Red;
-            }
+            testPulseGenTextBoxs2();
         }
 
         private void textBox_PulsePeriod2_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_PulsePeriod2.Text, out int Period) && int.TryParse(textBox_PulseWidth2.Text, out int Width))
-            {
-                if (CheckPeriodAndWidth(Period, Width) == true)
-                {
-                    textBox_PulsePeriod2.BackColor = Color.LightGreen;
-                    textBox_PulseWidth2.BackColor = Color.LightGreen;
-                }
-                else
-                {
-                    textBox_PulsePeriod2.BackColor = Color.Red;
-                    textBox_PulseWidth2.BackColor = Color.Red;
-                }
-            }
-            else
-            {
-                textBox_PulsePeriod2.BackColor = Color.Red;
-                textBox_PulseWidth2.BackColor = Color.Red;
-            }
+            testPulseGenTextBoxs2();
         }
 
         private void button74_Click_1(object sender, EventArgs e)
@@ -22001,56 +21905,33 @@ Note: eStatus enum 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
 
-            Read_Register("00 1C");
+            Write_Register("00 01", "01 00");
             await Task.Delay(500);
 
-            Read_Register("00 1D");
+            Read_Register("00 AD", "00 0A");
             await Task.Delay(500);
 
-            Read_Register("00 1E");
+            Write_Register("00 01", "02 00");
             await Task.Delay(500);
 
-            Read_Register("00 1F");
+            Read_Register("00 B7");
             await Task.Delay(500);
 
-            Read_Register("00 20");
+            Read_Register("00 B8");
             await Task.Delay(500);
 
-            Read_Register("00 21");
+            Read_Register("00 B9");
             await Task.Delay(500);
 
-            Read_Register("00 22");
+            Read_Register("00 BA");
             await Task.Delay(500);
 
-            Read_Register("00 22");
+            Read_Register("00 BB");
             await Task.Delay(500);
 
-            Read_Register("00 23");
+            Read_Register("00 BF");
             await Task.Delay(500);
 
-            Read_Register("00 24");
-            await Task.Delay(500);
-
-            Read_Register("00 25");
-            await Task.Delay(500);
-
-            Read_Register("00 26");
-            await Task.Delay(500);
-
-            Read_Register("00 27");
-            await Task.Delay(500);
-
-            Read_Register("00 28");
-            await Task.Delay(500);
-
-            Read_Register("00 29");
-            await Task.Delay(500);
-
-            Read_Register("00 2A");
-            await Task.Delay(500);
-
-            Read_Register("00 2E");
-            await Task.Delay(500);
 
         }
 
@@ -22830,6 +22711,21 @@ Note: eStatus enum 
 
                 }
             }
+        }
+
+        private void textBox_RFDelay_TextChanged(object sender, EventArgs e)
+        {
+            testRFTextboxs();
+        }
+
+        private void textBox_PulseDelay_TextChanged(object sender, EventArgs e)
+        {
+            testPulseGenTextBoxs();
+        }
+
+        private void textBox_PulseDelay2_TextChanged(object sender, EventArgs e)
+        {
+            testPulseGenTextBoxs2();
         }
 
         private void button57_Click_1(object sender, EventArgs e)
