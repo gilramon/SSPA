@@ -646,9 +646,9 @@ namespace Monitor
         private TextBox textBox_SystemFWVersion;
         private TextBox textBox_SystemHWVersion;
         private ToolTip toolTip1;
-        private CheckBox checkBox6;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
+        private CheckBox checkBox_RFGen;
+        private CheckBox checkBox_PulseGen2;
+        private CheckBox checkBox_PulseGen;
         private Label label115;
         private TextBox textBox95;
         private CheckBox checkBox4;
@@ -741,8 +741,8 @@ namespace Monitor
         private Label label135;
         private TextBox textBox_VVA_temp;
         private TabPage tabPage3;
-        private TextBox textBox_WriteRegister;
-        private Button button_WriteRegister;
+        private TextBox textBox_WriteRegisterToUUT;
+        private Button button_WriteRegisterToUUT;
         private TextBox textBox_ReadRegister;
         private Button button_ReadFromRegister;
         private TextBox textBox_WriteAddressRegister;
@@ -769,9 +769,9 @@ namespace Monitor
         private Label label102;
         private TextBox textBox9;
         private Label label145;
-        private TextBox textBox11;
+        private TextBox textBox_ACKSimulator;
         private Label label146;
-        private TextBox textBox18;
+        private TextBox textBox_ReadSimulatorAnwser;
         private Label label147;
         private Label label148;
         private Label label149;
@@ -836,11 +836,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1064,6 +1064,24 @@ namespace Monitor
             this.button60 = new System.Windows.Forms.Button();
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label102 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.textBox_ACKSimulator = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.textBox_ReadSimulatorAnwser = new System.Windows.Forms.TextBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label149 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox_ReadToSimulator = new System.Windows.Forms.TextBox();
+            this.button_ReadRegisterToSimulator = new System.Windows.Forms.Button();
+            this.textBox_WriteToSimulator = new System.Windows.Forms.TextBox();
+            this.button_WriteRegisterToSimulator = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label143 = new System.Windows.Forms.Label();
             this.textBox_ReadLength = new System.Windows.Forms.TextBox();
             this.label142 = new System.Windows.Forms.Label();
@@ -1084,8 +1102,8 @@ namespace Monitor
             this.textBox_WriteAddressRegister = new System.Windows.Forms.TextBox();
             this.textBox_ReadRegister = new System.Windows.Forms.TextBox();
             this.button_ReadFromRegister = new System.Windows.Forms.Button();
-            this.textBox_WriteRegister = new System.Windows.Forms.TextBox();
-            this.button_WriteRegister = new System.Windows.Forms.Button();
+            this.textBox_WriteRegisterToUUT = new System.Windows.Forms.TextBox();
+            this.button_WriteRegisterToUUT = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
             this.checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
@@ -1205,7 +1223,7 @@ namespace Monitor
             this.textBox91 = new System.Windows.Forms.TextBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.label84 = new System.Windows.Forms.Label();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox_PulseGen2 = new System.Windows.Forms.CheckBox();
             this.label85 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.textBox_PulseDelay2 = new System.Windows.Forms.TextBox();
@@ -1256,7 +1274,7 @@ namespace Monitor
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.label79 = new System.Windows.Forms.Label();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox_PulseGen = new System.Windows.Forms.CheckBox();
             this.label80 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
@@ -1287,7 +1305,7 @@ namespace Monitor
             this.textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox_RFGen = new System.Windows.Forms.CheckBox();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
             this.textBox_RFPeriod = new System.Windows.Forms.TextBox();
@@ -1558,24 +1576,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label145 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label146 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label148 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox_ReadToSimulator = new System.Windows.Forms.TextBox();
-            this.button_ReadRegisterToSimulator = new System.Windows.Forms.Button();
-            this.textBox_WriteToSimulator = new System.Windows.Forms.TextBox();
-            this.button_WriteRegisterToSimulator = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2000,17 +2000,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea6.AxisX.Title = "Freq";
-            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.AxisY.Title = "Power [dBm]";
-            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend6.IsTextAutoFit = false;
-            legend6.Name = "Legend1";
-            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend6);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4415,9 +4415,9 @@ namespace Monitor
             this.tabPage3.Controls.Add(this.label102);
             this.tabPage3.Controls.Add(this.textBox9);
             this.tabPage3.Controls.Add(this.label145);
-            this.tabPage3.Controls.Add(this.textBox11);
+            this.tabPage3.Controls.Add(this.textBox_ACKSimulator);
             this.tabPage3.Controls.Add(this.label146);
-            this.tabPage3.Controls.Add(this.textBox18);
+            this.tabPage3.Controls.Add(this.textBox_ReadSimulatorAnwser);
             this.tabPage3.Controls.Add(this.label147);
             this.tabPage3.Controls.Add(this.label148);
             this.tabPage3.Controls.Add(this.label149);
@@ -4450,8 +4450,8 @@ namespace Monitor
             this.tabPage3.Controls.Add(this.textBox_WriteAddressRegister);
             this.tabPage3.Controls.Add(this.textBox_ReadRegister);
             this.tabPage3.Controls.Add(this.button_ReadFromRegister);
-            this.tabPage3.Controls.Add(this.textBox_WriteRegister);
-            this.tabPage3.Controls.Add(this.button_WriteRegister);
+            this.tabPage3.Controls.Add(this.textBox_WriteRegisterToUUT);
+            this.tabPage3.Controls.Add(this.button_WriteRegisterToUUT);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -4460,6 +4460,189 @@ namespace Monitor
             this.tabPage3.Text = "Registers";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(487, 153);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(50, 18);
+            this.label102.TabIndex = 95;
+            this.label102.Text = "Length";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(548, 150);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.MaxLength = 30;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(44, 26);
+            this.textBox9.TabIndex = 94;
+            this.textBox9.Text = "00 02";
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(653, 120);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(33, 18);
+            this.label145.TabIndex = 93;
+            this.label145.Text = "ACK";
+            // 
+            // textBox_ACKSimulator
+            // 
+            this.textBox_ACKSimulator.Location = new System.Drawing.Point(725, 115);
+            this.textBox_ACKSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ACKSimulator.MaxLength = 30;
+            this.textBox_ACKSimulator.Name = "textBox_ACKSimulator";
+            this.textBox_ACKSimulator.ReadOnly = true;
+            this.textBox_ACKSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ACKSimulator.TabIndex = 92;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(653, 153);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(55, 18);
+            this.label146.TabIndex = 91;
+            this.label146.Text = "Answer";
+            // 
+            // textBox_ReadSimulatorAnwser
+            // 
+            this.textBox_ReadSimulatorAnwser.Location = new System.Drawing.Point(725, 148);
+            this.textBox_ReadSimulatorAnwser.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadSimulatorAnwser.MaxLength = 30;
+            this.textBox_ReadSimulatorAnwser.Name = "textBox_ReadSimulatorAnwser";
+            this.textBox_ReadSimulatorAnwser.ReadOnly = true;
+            this.textBox_ReadSimulatorAnwser.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadSimulatorAnwser.TabIndex = 90;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(360, 153);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(58, 18);
+            this.label147.TabIndex = 89;
+            this.label147.Text = "Address";
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(509, 123);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(36, 18);
+            this.label148.TabIndex = 88;
+            this.label148.Text = "Data";
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(359, 126);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(58, 18);
+            this.label149.TabIndex = 87;
+            this.label149.Text = "Address";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(548, 120);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox23.MaxLength = 30;
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(93, 26);
+            this.textBox23.TabIndex = 86;
+            this.textBox23.Text = "11 22";
+            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged_1);
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(421, 150);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox24.MaxLength = 30;
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(44, 26);
+            this.textBox24.TabIndex = 85;
+            this.textBox24.Text = "00 85";
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged_1);
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(421, 120);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox25.MaxLength = 30;
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(83, 26);
+            this.textBox25.TabIndex = 84;
+            this.textBox25.Text = "00 85";
+            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged_1);
+            // 
+            // textBox_ReadToSimulator
+            // 
+            this.textBox_ReadToSimulator.Location = new System.Drawing.Point(236, 153);
+            this.textBox_ReadToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadToSimulator.MaxLength = 30;
+            this.textBox_ReadToSimulator.Name = "textBox_ReadToSimulator";
+            this.textBox_ReadToSimulator.ReadOnly = true;
+            this.textBox_ReadToSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadToSimulator.TabIndex = 83;
+            this.textBox_ReadToSimulator.Text = "02 00 85 00 02";
+            // 
+            // button_ReadRegisterToSimulator
+            // 
+            this.button_ReadRegisterToSimulator.Location = new System.Drawing.Point(5, 155);
+            this.button_ReadRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadRegisterToSimulator.Name = "button_ReadRegisterToSimulator";
+            this.button_ReadRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
+            this.button_ReadRegisterToSimulator.TabIndex = 82;
+            this.button_ReadRegisterToSimulator.Text = "Read Register from Simulator";
+            this.button_ReadRegisterToSimulator.UseVisualStyleBackColor = true;
+            this.button_ReadRegisterToSimulator.Click += new System.EventHandler(this.button_ReadRegisterToSimulator_Click);
+            // 
+            // textBox_WriteToSimulator
+            // 
+            this.textBox_WriteToSimulator.Location = new System.Drawing.Point(236, 122);
+            this.textBox_WriteToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteToSimulator.MaxLength = 30;
+            this.textBox_WriteToSimulator.Name = "textBox_WriteToSimulator";
+            this.textBox_WriteToSimulator.ReadOnly = true;
+            this.textBox_WriteToSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteToSimulator.TabIndex = 81;
+            this.textBox_WriteToSimulator.Text = "01 00 85 00 02";
+            // 
+            // button_WriteRegisterToSimulator
+            // 
+            this.button_WriteRegisterToSimulator.Location = new System.Drawing.Point(5, 124);
+            this.button_WriteRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteRegisterToSimulator.Name = "button_WriteRegisterToSimulator";
+            this.button_WriteRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
+            this.button_WriteRegisterToSimulator.TabIndex = 80;
+            this.button_WriteRegisterToSimulator.Text = "Write Register to Simulator";
+            this.button_WriteRegisterToSimulator.UseVisualStyleBackColor = true;
+            this.button_WriteRegisterToSimulator.Click += new System.EventHandler(this.button_WriteRegisterToSimulator_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(542, 455);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MaxLength = 30;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(320, 26);
+            this.textBox2.TabIndex = 79;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(403, 452);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MaxLength = 30;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 26);
+            this.textBox1.TabIndex = 78;
+            this.textBox1.Text = "112233445566";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_6);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label143
             // 
@@ -4672,28 +4855,28 @@ namespace Monitor
             this.button_ReadFromRegister.UseVisualStyleBackColor = true;
             this.button_ReadFromRegister.Click += new System.EventHandler(this.button_ReadFromRegister_Click);
             // 
-            // textBox_WriteRegister
+            // textBox_WriteRegisterToUUT
             // 
-            this.textBox_WriteRegister.Location = new System.Drawing.Point(236, 9);
-            this.textBox_WriteRegister.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_WriteRegister.MaxLength = 30;
-            this.textBox_WriteRegister.Name = "textBox_WriteRegister";
-            this.textBox_WriteRegister.ReadOnly = true;
-            this.textBox_WriteRegister.Size = new System.Drawing.Size(119, 26);
-            this.textBox_WriteRegister.TabIndex = 57;
-            this.textBox_WriteRegister.Text = "01 00 85 00 02";
-            this.textBox_WriteRegister.TextChanged += new System.EventHandler(this.textBox_WriteReadRegister_TextChanged);
+            this.textBox_WriteRegisterToUUT.Location = new System.Drawing.Point(236, 9);
+            this.textBox_WriteRegisterToUUT.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteRegisterToUUT.MaxLength = 30;
+            this.textBox_WriteRegisterToUUT.Name = "textBox_WriteRegisterToUUT";
+            this.textBox_WriteRegisterToUUT.ReadOnly = true;
+            this.textBox_WriteRegisterToUUT.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteRegisterToUUT.TabIndex = 57;
+            this.textBox_WriteRegisterToUUT.Text = "01 00 85 00 02";
+            this.textBox_WriteRegisterToUUT.TextChanged += new System.EventHandler(this.textBox_WriteReadRegister_TextChanged);
             // 
-            // button_WriteRegister
+            // button_WriteRegisterToUUT
             // 
-            this.button_WriteRegister.Location = new System.Drawing.Point(5, 11);
-            this.button_WriteRegister.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WriteRegister.Name = "button_WriteRegister";
-            this.button_WriteRegister.Size = new System.Drawing.Size(223, 22);
-            this.button_WriteRegister.TabIndex = 56;
-            this.button_WriteRegister.Text = "Write Register to UUT";
-            this.button_WriteRegister.UseVisualStyleBackColor = true;
-            this.button_WriteRegister.Click += new System.EventHandler(this.button_WriteRegister_Click);
+            this.button_WriteRegisterToUUT.Location = new System.Drawing.Point(5, 11);
+            this.button_WriteRegisterToUUT.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteRegisterToUUT.Name = "button_WriteRegisterToUUT";
+            this.button_WriteRegisterToUUT.Size = new System.Drawing.Size(223, 22);
+            this.button_WriteRegisterToUUT.TabIndex = 56;
+            this.button_WriteRegisterToUUT.Text = "Write Register to UUT";
+            this.button_WriteRegisterToUUT.UseVisualStyleBackColor = true;
+            this.button_WriteRegisterToUUT.Click += new System.EventHandler(this.button_WriteRegisterToUUT_Click);
             // 
             // groupBox32
             // 
@@ -4898,9 +5081,9 @@ namespace Monitor
             this.groupBox49.Controls.Add(this.label144);
             this.groupBox49.Controls.Add(this.label123);
             this.groupBox49.Controls.Add(this.textBox_SystemMode);
-            this.groupBox49.Location = new System.Drawing.Point(350, 13);
+            this.groupBox49.Location = new System.Drawing.Point(350, 5);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(194, 91);
+            this.groupBox49.Size = new System.Drawing.Size(194, 99);
             this.groupBox49.TabIndex = 31;
             this.groupBox49.TabStop = false;
             this.groupBox49.Text = "System mode";
@@ -6125,7 +6308,7 @@ namespace Monitor
             // groupBox35
             // 
             this.groupBox35.Controls.Add(this.label84);
-            this.groupBox35.Controls.Add(this.checkBox8);
+            this.groupBox35.Controls.Add(this.checkBox_PulseGen2);
             this.groupBox35.Controls.Add(this.label85);
             this.groupBox35.Controls.Add(this.label101);
             this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
@@ -6151,18 +6334,18 @@ namespace Monitor
             this.label84.TabIndex = 23;
             this.label84.Text = "Delay (1us)";
             // 
-            // checkBox8
+            // checkBox_PulseGen2
             // 
-            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(222, 55);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(64, 28);
-            this.checkBox8.TabIndex = 19;
-            this.checkBox8.Text = "Control";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.checkBox_PulseGen2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_PulseGen2.AutoSize = true;
+            this.checkBox_PulseGen2.Location = new System.Drawing.Point(232, 52);
+            this.checkBox_PulseGen2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_PulseGen2.Name = "checkBox_PulseGen2";
+            this.checkBox_PulseGen2.Size = new System.Drawing.Size(64, 28);
+            this.checkBox_PulseGen2.TabIndex = 19;
+            this.checkBox_PulseGen2.Text = "Control";
+            this.checkBox_PulseGen2.UseVisualStyleBackColor = true;
+            this.checkBox_PulseGen2.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // label85
             // 
@@ -6195,6 +6378,7 @@ namespace Monitor
             this.textBox_PulseDelay2.TabIndex = 15;
             this.textBox_PulseDelay2.Text = "0";
             this.textBox_PulseDelay2.TextChanged += new System.EventHandler(this.textBox_PulseDelay2_TextChanged);
+            this.textBox_PulseDelay2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulseDelay2_KeyDown);
             // 
             // textBox_PulsePeriod2
             // 
@@ -6205,6 +6389,7 @@ namespace Monitor
             this.textBox_PulsePeriod2.TabIndex = 13;
             this.textBox_PulsePeriod2.Text = "16";
             this.textBox_PulsePeriod2.TextChanged += new System.EventHandler(this.textBox_PulsePeriod2_TextChanged);
+            this.textBox_PulsePeriod2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulsePeriod2_KeyDown);
             // 
             // textBox_PulseWidth2
             // 
@@ -6215,6 +6400,7 @@ namespace Monitor
             this.textBox_PulseWidth2.TabIndex = 11;
             this.textBox_PulseWidth2.Text = "2";
             this.textBox_PulseWidth2.TextChanged += new System.EventHandler(this.textBox_PulseWidth2_TextChanged);
+            this.textBox_PulseWidth2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulseWidth2_KeyDown);
             // 
             // groupBox46
             // 
@@ -6756,7 +6942,7 @@ namespace Monitor
             this.textBox_28V.Size = new System.Drawing.Size(50, 26);
             this.textBox_28V.TabIndex = 1;
             this.textBox_28V.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_28V, "0-4095");
+            this.toolTip1.SetToolTip(this.textBox_28V, "0-1000");
             this.textBox_28V.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
             this.textBox_28V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
@@ -6775,7 +6961,7 @@ namespace Monitor
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.label79);
-            this.groupBox34.Controls.Add(this.checkBox7);
+            this.groupBox34.Controls.Add(this.checkBox_PulseGen);
             this.groupBox34.Controls.Add(this.label80);
             this.groupBox34.Controls.Add(this.label83);
             this.groupBox34.Controls.Add(this.textBox_PulseDelay);
@@ -6801,18 +6987,18 @@ namespace Monitor
             this.label79.TabIndex = 20;
             this.label79.Text = "Delay (1us)";
             // 
-            // checkBox7
+            // checkBox_PulseGen
             // 
-            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(232, 52);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(64, 28);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "Control";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.checkBox_PulseGen.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_PulseGen.AutoSize = true;
+            this.checkBox_PulseGen.Location = new System.Drawing.Point(232, 52);
+            this.checkBox_PulseGen.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_PulseGen.Name = "checkBox_PulseGen";
+            this.checkBox_PulseGen.Size = new System.Drawing.Size(64, 28);
+            this.checkBox_PulseGen.TabIndex = 18;
+            this.checkBox_PulseGen.Text = "Control";
+            this.checkBox_PulseGen.UseVisualStyleBackColor = true;
+            this.checkBox_PulseGen.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // label80
             // 
@@ -6845,6 +7031,7 @@ namespace Monitor
             this.textBox_PulseDelay.TabIndex = 15;
             this.textBox_PulseDelay.Text = "0";
             this.textBox_PulseDelay.TextChanged += new System.EventHandler(this.textBox_PulseDelay_TextChanged);
+            this.textBox_PulseDelay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulseDelay_KeyDown);
             // 
             // textBox_PulsePeriod
             // 
@@ -6855,6 +7042,7 @@ namespace Monitor
             this.textBox_PulsePeriod.TabIndex = 13;
             this.textBox_PulsePeriod.Text = "16";
             this.textBox_PulsePeriod.TextChanged += new System.EventHandler(this.textBox_PulsePeriod_TextChanged);
+            this.textBox_PulsePeriod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulsePeriod_KeyDown);
             // 
             // textBox_PulseWidth
             // 
@@ -6865,6 +7053,7 @@ namespace Monitor
             this.textBox_PulseWidth.TabIndex = 11;
             this.textBox_PulseWidth.Text = "2";
             this.textBox_PulseWidth.TextChanged += new System.EventHandler(this.textBox_PulseWidth_TextChanged);
+            this.textBox_PulseWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulseWidth_KeyDown);
             // 
             // groupBox44
             // 
@@ -7009,7 +7198,7 @@ namespace Monitor
             this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
             this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
             this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Location = new System.Drawing.Point(876, 32);
+            this.groupBox1.Location = new System.Drawing.Point(876, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -7128,14 +7317,14 @@ namespace Monitor
             // 
             // groupBox33
             // 
-            this.groupBox33.Controls.Add(this.checkBox6);
+            this.groupBox33.Controls.Add(this.checkBox_RFGen);
             this.groupBox33.Controls.Add(this.textBox_RFDelay);
             this.groupBox33.Controls.Add(this.label100);
             this.groupBox33.Controls.Add(this.textBox_RFPeriod);
             this.groupBox33.Controls.Add(this.label99);
             this.groupBox33.Controls.Add(this.textBox_RFWidth);
             this.groupBox33.Controls.Add(this.label98);
-            this.groupBox33.Location = new System.Drawing.Point(876, 130);
+            this.groupBox33.Location = new System.Drawing.Point(876, 116);
             this.groupBox33.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Padding = new System.Windows.Forms.Padding(2);
@@ -7144,18 +7333,18 @@ namespace Monitor
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "RF gen";
             // 
-            // checkBox6
+            // checkBox_RFGen
             // 
-            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(232, 54);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(64, 28);
-            this.checkBox6.TabIndex = 17;
-            this.checkBox6.Text = "Control";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.checkBox_RFGen.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RFGen.AutoSize = true;
+            this.checkBox_RFGen.Location = new System.Drawing.Point(232, 54);
+            this.checkBox_RFGen.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_RFGen.Name = "checkBox_RFGen";
+            this.checkBox_RFGen.Size = new System.Drawing.Size(64, 28);
+            this.checkBox_RFGen.TabIndex = 17;
+            this.checkBox_RFGen.Text = "Control";
+            this.checkBox_RFGen.UseVisualStyleBackColor = true;
+            this.checkBox_RFGen.CheckedChanged += new System.EventHandler(this.checkBox_RFGen_CheckedChanged);
             // 
             // textBox_RFDelay
             // 
@@ -7166,6 +7355,7 @@ namespace Monitor
             this.textBox_RFDelay.TabIndex = 15;
             this.textBox_RFDelay.Text = "0";
             this.textBox_RFDelay.TextChanged += new System.EventHandler(this.textBox_RFDelay_TextChanged);
+            this.textBox_RFDelay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_RFDelay_KeyDown);
             // 
             // label100
             // 
@@ -7187,6 +7377,7 @@ namespace Monitor
             this.textBox_RFPeriod.TabIndex = 13;
             this.textBox_RFPeriod.Text = "16";
             this.textBox_RFPeriod.TextChanged += new System.EventHandler(this.textBox_RFPeriod_TextChanged);
+            this.textBox_RFPeriod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_RFPeriod_KeyDown);
             // 
             // label99
             // 
@@ -7208,6 +7399,7 @@ namespace Monitor
             this.textBox_RFWidth.TabIndex = 11;
             this.textBox_RFWidth.Text = "2";
             this.textBox_RFWidth.TextChanged += new System.EventHandler(this.textBox_RFWidth_TextChanged);
+            this.textBox_RFWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_RFWidth_KeyDown);
             // 
             // label98
             // 
@@ -7396,8 +7588,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7422,8 +7614,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7828,9 +8020,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -9881,189 +10073,6 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(403, 452);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 26);
-            this.textBox1.TabIndex = 78;
-            this.textBox1.Text = "112233445566";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_6);
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(542, 455);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 26);
-            this.textBox2.TabIndex = 79;
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(487, 153);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(50, 18);
-            this.label102.TabIndex = 95;
-            this.label102.Text = "Length";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(548, 150);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(44, 26);
-            this.textBox9.TabIndex = 94;
-            this.textBox9.Text = "00 02";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(653, 120);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(33, 18);
-            this.label145.TabIndex = 93;
-            this.label145.Text = "ACK";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(725, 115);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.MaxLength = 30;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(119, 26);
-            this.textBox11.TabIndex = 92;
-            // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(653, 153);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(55, 18);
-            this.label146.TabIndex = 91;
-            this.label146.Text = "Answer";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(725, 148);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.MaxLength = 30;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(119, 26);
-            this.textBox18.TabIndex = 90;
-            // 
-            // label147
-            // 
-            this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(360, 153);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(58, 18);
-            this.label147.TabIndex = 89;
-            this.label147.Text = "Address";
-            // 
-            // label148
-            // 
-            this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(509, 123);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(36, 18);
-            this.label148.TabIndex = 88;
-            this.label148.Text = "Data";
-            // 
-            // label149
-            // 
-            this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(359, 126);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(58, 18);
-            this.label149.TabIndex = 87;
-            this.label149.Text = "Address";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(548, 120);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox23.MaxLength = 30;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(93, 26);
-            this.textBox23.TabIndex = 86;
-            this.textBox23.Text = "11 22";
-            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged_1);
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(421, 150);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox24.MaxLength = 30;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(44, 26);
-            this.textBox24.TabIndex = 85;
-            this.textBox24.Text = "00 85";
-            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged_1);
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(421, 120);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox25.MaxLength = 30;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(83, 26);
-            this.textBox25.TabIndex = 84;
-            this.textBox25.Text = "00 85";
-            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged_1);
-            // 
-            // textBox_ReadToSimulator
-            // 
-            this.textBox_ReadToSimulator.Location = new System.Drawing.Point(236, 153);
-            this.textBox_ReadToSimulator.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ReadToSimulator.MaxLength = 30;
-            this.textBox_ReadToSimulator.Name = "textBox_ReadToSimulator";
-            this.textBox_ReadToSimulator.ReadOnly = true;
-            this.textBox_ReadToSimulator.Size = new System.Drawing.Size(119, 26);
-            this.textBox_ReadToSimulator.TabIndex = 83;
-            this.textBox_ReadToSimulator.Text = "02 00 85 00 02";
-            // 
-            // button_ReadRegisterToSimulator
-            // 
-            this.button_ReadRegisterToSimulator.Location = new System.Drawing.Point(5, 155);
-            this.button_ReadRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ReadRegisterToSimulator.Name = "button_ReadRegisterToSimulator";
-            this.button_ReadRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
-            this.button_ReadRegisterToSimulator.TabIndex = 82;
-            this.button_ReadRegisterToSimulator.Text = "Read Register from Simulator";
-            this.button_ReadRegisterToSimulator.UseVisualStyleBackColor = true;
-            this.button_ReadRegisterToSimulator.Click += new System.EventHandler(this.button_ReadRegisterToSimulator_Click);
-            // 
-            // textBox_WriteToSimulator
-            // 
-            this.textBox_WriteToSimulator.Location = new System.Drawing.Point(236, 122);
-            this.textBox_WriteToSimulator.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_WriteToSimulator.MaxLength = 30;
-            this.textBox_WriteToSimulator.Name = "textBox_WriteToSimulator";
-            this.textBox_WriteToSimulator.ReadOnly = true;
-            this.textBox_WriteToSimulator.Size = new System.Drawing.Size(119, 26);
-            this.textBox_WriteToSimulator.TabIndex = 81;
-            this.textBox_WriteToSimulator.Text = "01 00 85 00 02";
-            // 
-            // button_WriteRegisterToSimulator
-            // 
-            this.button_WriteRegisterToSimulator.Location = new System.Drawing.Point(5, 124);
-            this.button_WriteRegisterToSimulator.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WriteRegisterToSimulator.Name = "button_WriteRegisterToSimulator";
-            this.button_WriteRegisterToSimulator.Size = new System.Drawing.Size(223, 22);
-            this.button_WriteRegisterToSimulator.TabIndex = 80;
-            this.button_WriteRegisterToSimulator.Text = "Write Register to Simulator";
-            this.button_WriteRegisterToSimulator.UseVisualStyleBackColor = true;
-            this.button_WriteRegisterToSimulator.Click += new System.EventHandler(this.button_WriteRegisterToSimulator_Click);
             // 
             // MainForm
             // 
@@ -13231,8 +13240,23 @@ namespace Monitor
         private void ACK_Received(KratosProtocolFrame i_Parsedframe)
         {
             string ret = string.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+
+            //       SendMessageToSystemLogger(ret);
+        }
+
+        private void ACK_ReceivedUUT(KratosProtocolFrame i_Parsedframe)
+        {
+            string ret = string.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
             textBox_ACKWriteRegisterReceived.Text = i_Parsedframe.Data;
             textBox_ACKWriteRegisterReceived.BackColor = Color.LightGreen;
+            //       SendMessageToSystemLogger(ret);
+        }
+
+        private void ACK_ReceivedSimulator(KratosProtocolFrame i_Parsedframe)
+        {
+            string ret = string.Format("\n recieved OK, Opcode :[{0}] \n", i_Parsedframe.Opcode);
+            textBox_ACKSimulator.Text = i_Parsedframe.Data;
+            textBox_ACKSimulator.BackColor = Color.LightGreen;
             //       SendMessageToSystemLogger(ret);
         }
 
@@ -13388,8 +13412,8 @@ namespace Monitor
                 {
                     
                     case "00AD":
-                        textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -13569,7 +13593,7 @@ namespace Monitor
                         break;
 
                     case "51":
-                        ACK_Received(i_Parsedframe);
+                        ACK_ReceivedUUT(i_Parsedframe);
 
                         break;
 
@@ -13709,6 +13733,11 @@ namespace Monitor
 
                         break;
 
+                    case "B1":
+                        ACK_ReceivedSimulator(i_Parsedframe);
+
+                        break;
+                        
 
                     default:
                         UnHandledOpcode(i_Parsedframe);
@@ -21430,35 +21459,60 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                textBox3.Text = "01";
+
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox3.Text = "00";
+
                 Checkbx.BackColor = default;
             }
 
-            button49_Click_1(null, null);
+
+            SetControlGenerators();
         }
 
+        void SetControlGenerators()
+        {
+            int num = 0;
+            if (checkBox_RFGen.Checked == true)
+            {
+                //intValue |= 1 << bitPosition;
+                num |= (1 << 2);
+            }
+
+            if (checkBox_PulseGen.Checked == true)
+            {
+                num |= (1 << 0);
+            }
+
+            if (checkBox_PulseGen2.Checked == true)
+            {
+                num |= (1 << 1);
+            }
+            num |= (8 << 1);
+            Write_Register_To_Simulator("00 02", num.ToString("X4"));
+        }
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
+
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                textBox10.Text = "01";
+
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox10.Text = "00";
+
                 Checkbx.BackColor = default;
             }
 
-            button58_Click_1(null, null);
+
+            SetControlGenerators();
+            
         }
 
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
@@ -21544,7 +21598,7 @@ Note: eStatus enum 
             TextBox m_Textbox = (TextBox)sender;
             if (int.TryParse(m_Textbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 1000)
                 {
                     m_Textbox.BackColor = Color.LightGreen;
                 }
@@ -22152,7 +22206,7 @@ Note: eStatus enum 
             Write_Register_To_UUT("00 01", "01 00");
             await Task.Delay(500);
 
-            Write_Register_To_UUT("00 AD", "00 0A");
+            Read_Register_From_UUT("00 AD", "00 14");
             await Task.Delay(500);
 
             Write_Register_To_UUT("00 01", "02 00");
@@ -22399,9 +22453,17 @@ Note: eStatus enum 
 
         void Write_Register_To_UUT(String i_Address, String i_Data)
         {
+            textBox_WriteRegisterToUUT.Text = String.Format("01 {0} {1}", i_Address, i_Data);
+
+            button_WriteRegisterToUUT_Click(null, null);
+
+        }
+
+        void Write_Register_To_Simulator(String i_Address, String i_Data)
+        {
             textBox_WriteToSimulator.Text = String.Format("01 {0} {1}", i_Address, i_Data);
 
-            button_WriteRegister_Click(null, null);
+            button_WriteRegisterToSimulator_Click(null, null);
 
         }
 
@@ -22485,11 +22547,7 @@ Note: eStatus enum 
 
         private void button_WriteRegister_Click(object sender, EventArgs e)
         {
-            textBox_Preamble.Text = PREAMBLE;
-            textBox_Opcode.Text = "50";
-            textBox_data.Text = textBox_WriteRegister.Text;
 
-            SendDataToSystem();
         }
 
         private void button_EraseFlash_Click(object sender, EventArgs e)
@@ -23011,7 +23069,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "B0";
-            textBox_data.Text = textBox_WriteRegister.Text;
+            textBox_data.Text = textBox_WriteRegisterToUUT.Text;
 
             SendDataToSystem();
         }
@@ -23097,7 +23155,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "B0";
-            textBox_data.Text = textBox_WriteRegister.Text;
+            textBox_data.Text = textBox_WriteToSimulator.Text;
 
             SendDataToSystem();
         }
@@ -23106,9 +23164,216 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "B2";
-            textBox_data.Text = textBox_WriteToSimulator.Text;
+            textBox_data.Text = textBox_ReadToSimulator.Text;
 
             SendDataToSystem();
+        }
+
+        async void  WriteRFWidthToSimulator()
+        {
+
+            if (textBox_RFWidth.BackColor == Color.LightGreen  && textBox_RFPeriod.BackColor == Color.LightGreen  && textBox_RFDelay.BackColor == Color.LightGreen)
+            {
+                int.TryParse(textBox_RFPeriod.Text, out int Period);
+                int.TryParse(textBox_RFWidth.Text, out int Width);
+                int.TryParse(textBox_RFDelay.Text, out int Delay);
+
+                Write_Register_To_Simulator("00 10", Width.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 11", Period.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 12", Delay.ToString("X4"));
+                await Task.Delay(500);
+            }
+        }
+
+        async void WritePulseGenToSimulator()
+        {
+
+            if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
+            {
+                int.TryParse(textBox_PulsePeriod.Text, out int Period);
+                int.TryParse(textBox_PulseWidth.Text, out int Width);
+                int.TryParse(textBox_PulseDelay.Text, out int Delay);
+
+                Write_Register_To_Simulator("00 0A", Width.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 0B", Period.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 0C", Delay.ToString("X4"));
+                await Task.Delay(500);
+            }
+        }
+
+        async void WritePulseGenToSimulator2()
+        {
+
+            if (textBox_PulseWidth2.BackColor == Color.LightGreen && textBox_PulsePeriod2.BackColor == Color.LightGreen && textBox_PulseDelay2.BackColor == Color.LightGreen)
+            {
+                int.TryParse(textBox_PulsePeriod2.Text, out int Period);
+                int.TryParse(textBox_PulseWidth2.Text, out int Width);
+                int.TryParse(textBox_PulseDelay2.Text, out int Delay);
+
+                Write_Register_To_Simulator("00 0D", Width.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 0E", Period.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 0F", Delay.ToString("X4"));
+                await Task.Delay(500);
+            }
+        }
+        private void textBox_RFWidth_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WriteRFWidthToSimulator();
+
+                }
+            }
+        }
+
+        private void button_WriteRegisterToUUT_Click(object sender, EventArgs e)
+        {
+            textBox_Preamble.Text = PREAMBLE;
+            textBox_Opcode.Text = "50";
+            textBox_data.Text = textBox_WriteRegisterToUUT.Text;
+
+            SendDataToSystem();
+        }
+
+        private void textBox_RFPeriod_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WriteRFWidthToSimulator();
+
+                }
+            }
+        }
+
+        private void textBox_RFDelay_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WriteRFWidthToSimulator();
+
+                }
+            }
+        }
+
+        private void textBox_PulseWidth_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator();
+
+                }
+            }
+        }
+
+        private void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator();
+
+                }
+            }
+        }
+
+        private void textBox_PulseDelay_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator();
+
+                }
+            }
+        }
+
+        private void textBox_PulseWidth2_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator2();
+
+                }
+            }
+        }
+
+        private void textBox_PulsePeriod2_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator2();
+
+                }
+            }
+        }
+
+        private void textBox_PulseDelay2_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    WritePulseGenToSimulator2();
+
+                }
+            }
+        }
+
+        private void checkBox_RFGen_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox Checkbx = (CheckBox)sender;
+            if (Checkbx.Checked == true)
+            {
+
+
+                Checkbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+
+                Checkbx.BackColor = default;
+            }
+
+
+            SetControlGenerators();
         }
 
         private void button57_Click_1(object sender, EventArgs e)
