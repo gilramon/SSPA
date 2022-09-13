@@ -555,12 +555,6 @@ namespace Monitor
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn Column3;
-        private Label label82;
-        private TextBox textBox66;
-        private Label label78;
-        private TextBox textBox62;
-        private Label label77;
-        private TextBox textBox61;
         private Label label89;
         private DataGridView dataGridView_VVAOffset1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -758,31 +752,37 @@ namespace Monitor
         private TextBox textBox_EraseFlash;
         private Button button_EraseFlash;
         private Label label141;
-        private TextBox textBox_ReadRegisterAnswer;
-        private Label label142;
-        private TextBox textBox_ACKWriteRegisterReceived;
         private Label label143;
         private TextBox textBox_ReadLength;
         private Label label144;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label102;
-        private TextBox textBox9;
-        private Label label145;
-        private TextBox textBox_ACKSimulator;
-        private Label label146;
-        private TextBox textBox_ReadSimulatorAnwser;
+        private TextBox textBox_ReadSimulatorData;
         private Label label147;
         private Label label148;
         private Label label149;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
+        private TextBox textBox_WriteSimulatorData;
+        private TextBox textBox_ReadSimulatorAddress;
+        private TextBox textBox_WriteSimulatorAddress;
         private TextBox textBox_ReadToSimulator;
         private Button button_ReadRegisterToSimulator;
         private TextBox textBox_WriteToSimulator;
         private Button button_WriteRegisterToSimulator;
         private Button button32;
+        private Label label82;
+        private TextBox textBox66;
+        private Label label78;
+        private TextBox textBox62;
+        private Label label77;
+        private TextBox textBox61;
+        private Label label145;
+        private TextBox textBox_ACKSimulator;
+        private Label label146;
+        private TextBox textBox_ReadSimulatorAnwser;
+        private Label label142;
+        private TextBox textBox_ACKWriteRegisterReceived;
+        private TextBox textBox_ReadRegisterAnswer;
         private static readonly string PREAMBLE = "23";
 
 
@@ -837,11 +837,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1066,17 +1066,13 @@ namespace Monitor
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label102 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label145 = new System.Windows.Forms.Label();
-            this.textBox_ACKSimulator = new System.Windows.Forms.TextBox();
-            this.label146 = new System.Windows.Forms.Label();
-            this.textBox_ReadSimulatorAnwser = new System.Windows.Forms.TextBox();
+            this.textBox_ReadSimulatorData = new System.Windows.Forms.TextBox();
             this.label147 = new System.Windows.Forms.Label();
             this.label148 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox_WriteSimulatorData = new System.Windows.Forms.TextBox();
+            this.textBox_ReadSimulatorAddress = new System.Windows.Forms.TextBox();
+            this.textBox_WriteSimulatorAddress = new System.Windows.Forms.TextBox();
             this.textBox_ReadToSimulator = new System.Windows.Forms.TextBox();
             this.button_ReadRegisterToSimulator = new System.Windows.Forms.Button();
             this.textBox_WriteToSimulator = new System.Windows.Forms.TextBox();
@@ -1085,10 +1081,7 @@ namespace Monitor
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label143 = new System.Windows.Forms.Label();
             this.textBox_ReadLength = new System.Windows.Forms.TextBox();
-            this.label142 = new System.Windows.Forms.Label();
-            this.textBox_ACKWriteRegisterReceived = new System.Windows.Forms.TextBox();
             this.label141 = new System.Windows.Forms.Label();
-            this.textBox_ReadRegisterAnswer = new System.Windows.Forms.TextBox();
             this.textBox_ReadFlash = new System.Windows.Forms.TextBox();
             this.button_ReadFlash = new System.Windows.Forms.Button();
             this.textBox_WriteFlash = new System.Windows.Forms.TextBox();
@@ -1321,12 +1314,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label82 = new System.Windows.Forms.Label();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.textBox61 = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label117 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
@@ -1578,6 +1565,19 @@ namespace Monitor
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button32 = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label142 = new System.Windows.Forms.Label();
+            this.textBox_ACKWriteRegisterReceived = new System.Windows.Forms.TextBox();
+            this.textBox_ReadRegisterAnswer = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.textBox_ReadSimulatorAnwser = new System.Windows.Forms.TextBox();
+            this.textBox_ACKSimulator = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2003,17 +2003,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea6.AxisX.Title = "Freq";
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Title = "Power [dBm]";
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4417,7 +4417,7 @@ namespace Monitor
             // 
             this.tabPage3.Controls.Add(this.button32);
             this.tabPage3.Controls.Add(this.label102);
-            this.tabPage3.Controls.Add(this.textBox9);
+            this.tabPage3.Controls.Add(this.textBox_ReadSimulatorData);
             this.tabPage3.Controls.Add(this.label145);
             this.tabPage3.Controls.Add(this.textBox_ACKSimulator);
             this.tabPage3.Controls.Add(this.label146);
@@ -4425,9 +4425,9 @@ namespace Monitor
             this.tabPage3.Controls.Add(this.label147);
             this.tabPage3.Controls.Add(this.label148);
             this.tabPage3.Controls.Add(this.label149);
-            this.tabPage3.Controls.Add(this.textBox23);
-            this.tabPage3.Controls.Add(this.textBox24);
-            this.tabPage3.Controls.Add(this.textBox25);
+            this.tabPage3.Controls.Add(this.textBox_WriteSimulatorData);
+            this.tabPage3.Controls.Add(this.textBox_ReadSimulatorAddress);
+            this.tabPage3.Controls.Add(this.textBox_WriteSimulatorAddress);
             this.tabPage3.Controls.Add(this.textBox_ReadToSimulator);
             this.tabPage3.Controls.Add(this.button_ReadRegisterToSimulator);
             this.tabPage3.Controls.Add(this.textBox_WriteToSimulator);
@@ -4474,54 +4474,17 @@ namespace Monitor
             this.label102.TabIndex = 95;
             this.label102.Text = "Length";
             // 
-            // textBox9
+            // textBox_ReadSimulatorData
             // 
-            this.textBox9.Location = new System.Drawing.Point(548, 150);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.MaxLength = 30;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(44, 26);
-            this.textBox9.TabIndex = 94;
-            this.textBox9.Text = "00 02";
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(653, 120);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(33, 18);
-            this.label145.TabIndex = 93;
-            this.label145.Text = "ACK";
-            // 
-            // textBox_ACKSimulator
-            // 
-            this.textBox_ACKSimulator.Location = new System.Drawing.Point(725, 115);
-            this.textBox_ACKSimulator.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ACKSimulator.MaxLength = 30;
-            this.textBox_ACKSimulator.Name = "textBox_ACKSimulator";
-            this.textBox_ACKSimulator.ReadOnly = true;
-            this.textBox_ACKSimulator.Size = new System.Drawing.Size(119, 26);
-            this.textBox_ACKSimulator.TabIndex = 92;
-            // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(653, 153);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(55, 18);
-            this.label146.TabIndex = 91;
-            this.label146.Text = "Answer";
-            // 
-            // textBox_ReadSimulatorAnwser
-            // 
-            this.textBox_ReadSimulatorAnwser.Location = new System.Drawing.Point(725, 148);
-            this.textBox_ReadSimulatorAnwser.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ReadSimulatorAnwser.MaxLength = 30;
-            this.textBox_ReadSimulatorAnwser.Name = "textBox_ReadSimulatorAnwser";
-            this.textBox_ReadSimulatorAnwser.ReadOnly = true;
-            this.textBox_ReadSimulatorAnwser.Size = new System.Drawing.Size(119, 26);
-            this.textBox_ReadSimulatorAnwser.TabIndex = 90;
+            this.textBox_ReadSimulatorData.Location = new System.Drawing.Point(548, 150);
+            this.textBox_ReadSimulatorData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadSimulatorData.MaxLength = 30;
+            this.textBox_ReadSimulatorData.Name = "textBox_ReadSimulatorData";
+            this.textBox_ReadSimulatorData.Size = new System.Drawing.Size(44, 26);
+            this.textBox_ReadSimulatorData.TabIndex = 94;
+            this.textBox_ReadSimulatorData.Text = "00 02";
+            this.textBox_ReadSimulatorData.TextChanged += new System.EventHandler(this.textBox9_TextChanged_2);
+            this.textBox_ReadSimulatorData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadSimulatorData_KeyDown);
             // 
             // label147
             // 
@@ -4550,38 +4513,41 @@ namespace Monitor
             this.label149.TabIndex = 87;
             this.label149.Text = "Address";
             // 
-            // textBox23
+            // textBox_WriteSimulatorData
             // 
-            this.textBox23.Location = new System.Drawing.Point(548, 120);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox23.MaxLength = 30;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(93, 26);
-            this.textBox23.TabIndex = 86;
-            this.textBox23.Text = "11 22";
-            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged_1);
+            this.textBox_WriteSimulatorData.Location = new System.Drawing.Point(548, 120);
+            this.textBox_WriteSimulatorData.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteSimulatorData.MaxLength = 30;
+            this.textBox_WriteSimulatorData.Name = "textBox_WriteSimulatorData";
+            this.textBox_WriteSimulatorData.Size = new System.Drawing.Size(93, 26);
+            this.textBox_WriteSimulatorData.TabIndex = 86;
+            this.textBox_WriteSimulatorData.Text = "11 22";
+            this.textBox_WriteSimulatorData.TextChanged += new System.EventHandler(this.textBox23_TextChanged_1);
+            this.textBox_WriteSimulatorData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_WriteSimulatorData_KeyDown);
             // 
-            // textBox24
+            // textBox_ReadSimulatorAddress
             // 
-            this.textBox24.Location = new System.Drawing.Point(421, 150);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox24.MaxLength = 30;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(44, 26);
-            this.textBox24.TabIndex = 85;
-            this.textBox24.Text = "00 85";
-            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged_1);
+            this.textBox_ReadSimulatorAddress.Location = new System.Drawing.Point(421, 150);
+            this.textBox_ReadSimulatorAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadSimulatorAddress.MaxLength = 30;
+            this.textBox_ReadSimulatorAddress.Name = "textBox_ReadSimulatorAddress";
+            this.textBox_ReadSimulatorAddress.Size = new System.Drawing.Size(44, 26);
+            this.textBox_ReadSimulatorAddress.TabIndex = 85;
+            this.textBox_ReadSimulatorAddress.Text = "00 85";
+            this.textBox_ReadSimulatorAddress.TextChanged += new System.EventHandler(this.textBox24_TextChanged_1);
+            this.textBox_ReadSimulatorAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadSimulatorAddress_KeyDown);
             // 
-            // textBox25
+            // textBox_WriteSimulatorAddress
             // 
-            this.textBox25.Location = new System.Drawing.Point(421, 120);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox25.MaxLength = 30;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(83, 26);
-            this.textBox25.TabIndex = 84;
-            this.textBox25.Text = "00 85";
-            this.textBox25.TextChanged += new System.EventHandler(this.textBox25_TextChanged_1);
+            this.textBox_WriteSimulatorAddress.Location = new System.Drawing.Point(421, 120);
+            this.textBox_WriteSimulatorAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_WriteSimulatorAddress.MaxLength = 30;
+            this.textBox_WriteSimulatorAddress.Name = "textBox_WriteSimulatorAddress";
+            this.textBox_WriteSimulatorAddress.Size = new System.Drawing.Size(83, 26);
+            this.textBox_WriteSimulatorAddress.TabIndex = 84;
+            this.textBox_WriteSimulatorAddress.Text = "00 85";
+            this.textBox_WriteSimulatorAddress.TextChanged += new System.EventHandler(this.textBox25_TextChanged_1);
+            this.textBox_WriteSimulatorAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_WriteSimulatorAddress_KeyDown);
             // 
             // textBox_ReadToSimulator
             // 
@@ -4669,25 +4635,6 @@ namespace Monitor
             this.textBox_ReadLength.TextChanged += new System.EventHandler(this.textBox_ReadLength_TextChanged);
             this.textBox_ReadLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_ReadLength_KeyDown);
             // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(653, 7);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(33, 18);
-            this.label142.TabIndex = 75;
-            this.label142.Text = "ACK";
-            // 
-            // textBox_ACKWriteRegisterReceived
-            // 
-            this.textBox_ACKWriteRegisterReceived.Location = new System.Drawing.Point(689, 2);
-            this.textBox_ACKWriteRegisterReceived.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ACKWriteRegisterReceived.MaxLength = 30;
-            this.textBox_ACKWriteRegisterReceived.Name = "textBox_ACKWriteRegisterReceived";
-            this.textBox_ACKWriteRegisterReceived.ReadOnly = true;
-            this.textBox_ACKWriteRegisterReceived.Size = new System.Drawing.Size(155, 26);
-            this.textBox_ACKWriteRegisterReceived.TabIndex = 74;
-            // 
             // label141
             // 
             this.label141.AutoSize = true;
@@ -4696,16 +4643,6 @@ namespace Monitor
             this.label141.Size = new System.Drawing.Size(55, 18);
             this.label141.TabIndex = 73;
             this.label141.Text = "Answer";
-            // 
-            // textBox_ReadRegisterAnswer
-            // 
-            this.textBox_ReadRegisterAnswer.Location = new System.Drawing.Point(596, 35);
-            this.textBox_ReadRegisterAnswer.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ReadRegisterAnswer.MaxLength = 30;
-            this.textBox_ReadRegisterAnswer.Name = "textBox_ReadRegisterAnswer";
-            this.textBox_ReadRegisterAnswer.ReadOnly = true;
-            this.textBox_ReadRegisterAnswer.Size = new System.Drawing.Size(248, 26);
-            this.textBox_ReadRegisterAnswer.TabIndex = 72;
             // 
             // textBox_ReadFlash
             // 
@@ -4733,7 +4670,7 @@ namespace Monitor
             // 
             this.textBox_WriteFlash.Location = new System.Drawing.Point(236, 264);
             this.textBox_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_WriteFlash.MaxLength = 30;
+            this.textBox_WriteFlash.MaxLength = 9999999;
             this.textBox_WriteFlash.Name = "textBox_WriteFlash";
             this.textBox_WriteFlash.Size = new System.Drawing.Size(626, 26);
             this.textBox_WriteFlash.TabIndex = 69;
@@ -7501,61 +7438,6 @@ namespace Monitor
             this.Column3.Name = "Column3";
             this.Column3.Width = 125;
             // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(18, 184);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(106, 18);
-            this.label82.TabIndex = 16;
-            this.label82.Text = "Calibration date";
-            // 
-            // textBox66
-            // 
-            this.textBox66.Location = new System.Drawing.Point(124, 178);
-            this.textBox66.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(93, 26);
-            this.textBox66.TabIndex = 15;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(278, 42);
-            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(83, 18);
-            this.label78.TabIndex = 8;
-            this.label78.Text = "HW version:";
-            // 
-            // textBox62
-            // 
-            this.textBox62.Location = new System.Drawing.Point(402, 42);
-            this.textBox62.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(92, 26);
-            this.textBox62.TabIndex = 7;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(18, 43);
-            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(99, 18);
-            this.label77.TabIndex = 6;
-            this.label77.Text = "Serial number:";
-            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox61
-            // 
-            this.textBox61.Location = new System.Drawing.Point(124, 41);
-            this.textBox61.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(93, 26);
-            this.textBox61.TabIndex = 5;
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.label117);
@@ -7594,8 +7476,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7620,8 +7502,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -8026,9 +7908,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10090,6 +9972,128 @@ namespace Monitor
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.button32_Click_3);
             // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(278, 42);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(83, 18);
+            this.label78.TabIndex = 8;
+            this.label78.Text = "HW version:";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(18, 184);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(106, 18);
+            this.label82.TabIndex = 16;
+            this.label82.Text = "Calibration date";
+            // 
+            // textBox66
+            // 
+            this.textBox66.Location = new System.Drawing.Point(124, 178);
+            this.textBox66.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(93, 26);
+            this.textBox66.TabIndex = 15;
+            // 
+            // textBox62
+            // 
+            this.textBox62.Location = new System.Drawing.Point(402, 42);
+            this.textBox62.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox62.Name = "textBox62";
+            this.textBox62.Size = new System.Drawing.Size(92, 26);
+            this.textBox62.TabIndex = 7;
+            // 
+            // textBox61
+            // 
+            this.textBox61.Location = new System.Drawing.Point(124, 41);
+            this.textBox61.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox61.Name = "textBox61";
+            this.textBox61.Size = new System.Drawing.Size(93, 26);
+            this.textBox61.TabIndex = 5;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(18, 43);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(99, 18);
+            this.label77.TabIndex = 6;
+            this.label77.Text = "Serial number:";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(653, 7);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(33, 18);
+            this.label142.TabIndex = 75;
+            this.label142.Text = "ACK";
+            // 
+            // textBox_ACKWriteRegisterReceived
+            // 
+            this.textBox_ACKWriteRegisterReceived.Location = new System.Drawing.Point(689, 2);
+            this.textBox_ACKWriteRegisterReceived.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ACKWriteRegisterReceived.MaxLength = 30;
+            this.textBox_ACKWriteRegisterReceived.Name = "textBox_ACKWriteRegisterReceived";
+            this.textBox_ACKWriteRegisterReceived.ReadOnly = true;
+            this.textBox_ACKWriteRegisterReceived.Size = new System.Drawing.Size(155, 26);
+            this.textBox_ACKWriteRegisterReceived.TabIndex = 74;
+            // 
+            // textBox_ReadRegisterAnswer
+            // 
+            this.textBox_ReadRegisterAnswer.Location = new System.Drawing.Point(596, 35);
+            this.textBox_ReadRegisterAnswer.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadRegisterAnswer.MaxLength = 30;
+            this.textBox_ReadRegisterAnswer.Name = "textBox_ReadRegisterAnswer";
+            this.textBox_ReadRegisterAnswer.ReadOnly = true;
+            this.textBox_ReadRegisterAnswer.Size = new System.Drawing.Size(248, 26);
+            this.textBox_ReadRegisterAnswer.TabIndex = 72;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(653, 153);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(55, 18);
+            this.label146.TabIndex = 91;
+            this.label146.Text = "Answer";
+            // 
+            // textBox_ReadSimulatorAnwser
+            // 
+            this.textBox_ReadSimulatorAnwser.Location = new System.Drawing.Point(725, 148);
+            this.textBox_ReadSimulatorAnwser.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ReadSimulatorAnwser.MaxLength = 30;
+            this.textBox_ReadSimulatorAnwser.Name = "textBox_ReadSimulatorAnwser";
+            this.textBox_ReadSimulatorAnwser.ReadOnly = true;
+            this.textBox_ReadSimulatorAnwser.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ReadSimulatorAnwser.TabIndex = 90;
+            // 
+            // textBox_ACKSimulator
+            // 
+            this.textBox_ACKSimulator.Location = new System.Drawing.Point(725, 115);
+            this.textBox_ACKSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_ACKSimulator.MaxLength = 30;
+            this.textBox_ACKSimulator.Name = "textBox_ACKSimulator";
+            this.textBox_ACKSimulator.ReadOnly = true;
+            this.textBox_ACKSimulator.Size = new System.Drawing.Size(119, 26);
+            this.textBox_ACKSimulator.TabIndex = 92;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(653, 120);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(33, 18);
+            this.label145.TabIndex = 93;
+            this.label145.Text = "ACK";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -11666,6 +11670,18 @@ namespace Monitor
 
 
             i = 0;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
+            i++;
+
+            dataGridView_ValPage0.Rows.Add();
+            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
+            i++;
 
             dataGridView_ValPage0.Rows.Add();
             dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
@@ -22624,11 +22640,6 @@ Note: eStatus enum 
 
 
 
-        private void button_WriteRegister_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_EraseFlash_Click(object sender, EventArgs e)
         {
             textBox_Preamble.Text = PREAMBLE;
@@ -23123,23 +23134,15 @@ Note: eStatus enum 
             try
             {
                 TextBox m_TextBox = (TextBox)sender;
-                bool Do_it= false;
-                if( e == null)
-                {
-                    Do_it = true;
-                }
-                else
+  
                     if ((e.KeyCode == Keys.Enter ) && m_TextBox.BackColor == Color.LightGreen)
                     {
-                    
-                        Do_it = true;
 
-                    }
-
-                if(Do_it == true)
-                {
                     textBox2.Text = GetBytesFromData(textBox1.Text, 1, 2);
+
                 }
+
+
             }
             catch
             {
@@ -23576,7 +23579,70 @@ FF CheckSum
         private void button32_Click_3(object sender, EventArgs e)
         {
             
-            textBox1_KeyDown(null,  null);
+            textBox1_KeyDown(textBox1, new KeyEventArgs(Keys.Enter));
+        }
+
+        private void textBox25_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void textBox_WriteSimulatorAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    Write_Register_To_Simulator(textBox_WriteSimulatorAddress.Text, textBox_WriteSimulatorData.Text);
+
+                }
+
+            }
+        }
+
+        private void textBox_WriteSimulatorData_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    Write_Register_To_Simulator(textBox_WriteSimulatorAddress.Text, textBox_WriteSimulatorData.Text);
+
+                }
+
+            }
+        }
+
+        private void textBox_ReadSimulatorAddress_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    Read_Register_From_Simulator(textBox_ReadSimulatorAddress.Text, textBox_ReadSimulatorData.Text);
+
+                }
+
+            }
+        }
+
+        private void textBox_ReadSimulatorData_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    Read_Register_From_Simulator(textBox_ReadSimulatorAddress.Text, textBox_ReadSimulatorData.Text);
+
+                }
+
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
