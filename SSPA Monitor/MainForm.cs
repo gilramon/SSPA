@@ -13394,6 +13394,56 @@ namespace Monitor
             //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
 
+        
+
+        private void ACK_ReadRegisterReceivedSimulator(KratosProtocolFrame i_Parsedframe)
+        {
+
+            try
+            {
+
+                String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+                String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+
+                textBox_ReadRegisterAnswer.Text = String.Format("Address : [{0}] Data: [{1}]", str_Address, str_Data);
+                textBox_ReadRegisterAnswer.BackColor = Color.LightGreen;
+
+
+                switch (str_Address)
+                {
+                    case "008A":
+                        textBox_SimulatorID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+                    case "0090":
+                        textBox_SimulatorFWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+                    case "0094":
+                        textBox_SimulatorHWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+
+
+                    default:
+                        UnHandledAddress(str_Address);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void ReadRegisterAckFrame(KratosProtocolFrame i_Parsedframe)
         {
 
@@ -13410,7 +13460,25 @@ namespace Monitor
                 
                 switch (str_Address)
                 {
-                    
+                    case "008A":
+                        textBox_SystemID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+                    case "0090":
+                        textBox_SystemFWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+                    case "0094":
+                        textBox_SystemHWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
                     case "00AD":
                         textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -13458,52 +13526,9 @@ namespace Monitor
             {
                 MessageBox.Show(ex.ToString());
             }
-            //int ICDMinor = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
-            //int UnitMajorNumber = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
-            //int UnitMinorNumber = int.Parse(i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
-            //string VersionDateTime = ConvertHex(i_Parsedframe.Data.Substring(8));
-
-
-            //        SendMessageToSystemLogger(String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
-            //"\n Version date time  [{4}]\n ",
-            //ICDMajor, ICDMinor, UnitMajorNumber, UnitMinorNumber, VersionDateTime));
-            //        //int VersionDay = int.Parse(i_Parsedframe.Data.Substring(8, 2), System.Globalization.NumberStyles.HexNumber);
-            //        //int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(10, 2), System.Globalization.NumberStyles.HexNumber);
-            //        //int VersionYear = int.Parse(i_Parsedframe.Data.Substring(14, 2) + i_Parsedframe.Data.Substring(12, 2), System.Globalization.NumberStyles.HexNumber);  //Gil: because it is little endian so I need to reverse the bytes
-            //        //return String.Format("\n ICD major version [{0}]\n ICD minor version [{1}]\n Unit major version [{2}]\n Unit minor version [{3}]" +
-            //        //    "\n Version day  [{4}]\n Version month [{5}]\n Version year [{6}]\n",
-            //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
 
-        public class AutoClosingMessageBox
-        {
-            System.Threading.Timer _timeoutTimer;
-            string _caption;
-            AutoClosingMessageBox(string text, string caption, int timeout)
-            {
-                _caption = caption;
-                _timeoutTimer = new System.Threading.Timer(OnTimerElapsed,
-                    null, timeout, System.Threading.Timeout.Infinite);
-                using (_timeoutTimer)
-                    MessageBox.Show(text, caption);
-            }
-            public static void Show(string text, string caption, int timeout)
-            {
-                new AutoClosingMessageBox(text, caption, timeout);
-            }
-            void OnTimerElapsed(object state)
-            {
-                IntPtr mbWnd = FindWindow("#32770", _caption); // lpClassName is #32770 for MessageBox
-                if (mbWnd != IntPtr.Zero)
-                    SendMessage(mbWnd, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
-                _timeoutTimer.Dispose();
-            }
-            const int WM_CLOSE = 0x0010;
-            [System.Runtime.InteropServices.DllImport("user32.dll", SetLastError = true)]
-            static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-            [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
-            static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
-        }
+       
 
 
         /// <summary>
@@ -13737,7 +13762,12 @@ namespace Monitor
                         ACK_ReceivedSimulator(i_Parsedframe);
 
                         break;
-                        
+
+                    case "B3":
+                        ACK_ReadRegisterReceivedSimulator(i_Parsedframe);
+
+                        break;
+
 
                     default:
                         UnHandledOpcode(i_Parsedframe);
@@ -20977,19 +21007,11 @@ Note: eStatus enum 
         }
         private async void button70_Click_1(object sender, EventArgs e)
         {
-            GlobalSystemResultReceived = "";
-
-            button62_Click(null, null);
+            Read_Register_From_UUT(" 00 8A","00 04");
             await Task.Delay(500);
-            button61_Click(null, null);
+            Read_Register_From_UUT(" 00 90", "00 08");
             await Task.Delay(500);
-            button59_Click(null, null);
-            await Task.Delay(500);
-            button66_Click(null, null);
-            await Task.Delay(500);
-
-
-
+            Read_Register_From_UUT(" 00 94", "00 08");
 
 
         }
@@ -21002,37 +21024,11 @@ Note: eStatus enum 
 
         private async void button31_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                // GlobalSystemResultReceived = "";
-
-
-
-                button108_Click(null, null);
-                await Task.Delay(500);
-                button48_Click_2(null, null);
-                await Task.Delay(500);
-                button46_Click(null, null);
-                await Task.Delay(500);
-                button45_Click(null, null);
-                await Task.Delay(500);
-
-
-                //String[] TextDataRecieved = GlobalSystemResultReceived.Split(new string[] { "<<", ">>" }, StringSplitOptions.None);
-
-
-
-                //textBox_SimulatorID.Text = TextDataRecieved[1];
-                //textBox_SimulatorSN.Text = TextDataRecieved[3];
-                //textBox_SimulatorHWVersion.Text = TextDataRecieved[5];
-                //textBox_SimulatorFWVersion.Text = TextDataRecieved[7];
-            }
-            catch (Exception ex)
-            {
-                textBox_SystemStatus.BackColor = Color.DarkOrange;
-                textBox_SystemStatus.Text = ex.Message;
-                return;
-            }
+            Read_Register_From_Simulator(" 00 8A", "00 04");
+            await Task.Delay(500);
+            Read_Register_From_Simulator(" 00 90", "00 08");
+            await Task.Delay(500);
+            Read_Register_From_Simulator(" 00 94", "00 08");
         }
 
         private void ClearVersions()
