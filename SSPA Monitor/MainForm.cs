@@ -782,6 +782,7 @@ namespace Monitor
         private Button button_ReadRegisterToSimulator;
         private TextBox textBox_WriteToSimulator;
         private Button button_WriteRegisterToSimulator;
+        private Button button32;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1576,6 +1577,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button32 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -4413,6 +4415,7 @@ namespace Monitor
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button32);
             this.tabPage3.Controls.Add(this.label102);
             this.tabPage3.Controls.Add(this.textBox9);
             this.tabPage3.Controls.Add(this.label145);
@@ -4712,7 +4715,7 @@ namespace Monitor
             this.textBox_ReadFlash.Name = "textBox_ReadFlash";
             this.textBox_ReadFlash.Size = new System.Drawing.Size(147, 26);
             this.textBox_ReadFlash.TabIndex = 71;
-            this.textBox_ReadFlash.Text = "00 05 00 00 00 00 00";
+            this.textBox_ReadFlash.Text = "02 00 00 00 00";
             this.textBox_ReadFlash.TextChanged += new System.EventHandler(this.textBox_ReadFlash_TextChanged);
             // 
             // button_ReadFlash
@@ -4732,9 +4735,9 @@ namespace Monitor
             this.textBox_WriteFlash.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_WriteFlash.MaxLength = 30;
             this.textBox_WriteFlash.Name = "textBox_WriteFlash";
-            this.textBox_WriteFlash.Size = new System.Drawing.Size(119, 26);
+            this.textBox_WriteFlash.Size = new System.Drawing.Size(626, 26);
             this.textBox_WriteFlash.TabIndex = 69;
-            this.textBox_WriteFlash.Text = "00 04 00 00 00 00";
+            this.textBox_WriteFlash.Text = "01 00 00 00 00 aa bb cc dd ee";
             this.textBox_WriteFlash.TextChanged += new System.EventHandler(this.textBox_WriteFlash_TextChanged);
             // 
             // button_WriteFlash
@@ -4770,6 +4773,7 @@ namespace Monitor
             this.button_EraseFlash.Text = "Erase flash";
             this.button_EraseFlash.UseVisualStyleBackColor = true;
             this.button_EraseFlash.Click += new System.EventHandler(this.button_EraseFlash_Click);
+            this.button_EraseFlash.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_EraseFlash_MouseDown);
             // 
             // label140
             // 
@@ -10075,6 +10079,16 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
+            // 
+            // button32
+            // 
+            this.button32.Location = new System.Drawing.Point(292, 455);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(75, 23);
+            this.button32.TabIndex = 96;
+            this.button32.Text = "button32";
+            this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click_3);
             // 
             // MainForm
             // 
@@ -22587,6 +22601,29 @@ Note: eStatus enum 
             }
         }
 
+        void Write_Flash(String i_Page, String i_PageInternalAddress, String i_Data)
+        {
+            textBox_WriteFlash.Text = String.Format("01 {0} {1} {2}", i_Page, i_PageInternalAddress, i_Data);
+
+            button_WriteFlash_Click(null, null);
+        }
+
+        void Read_Flash(String i_Page, String i_PageInternalAddress)
+        {
+            textBox_ReadFlash.Text = String.Format("02 {0} {1}", i_Page, i_PageInternalAddress);
+
+            button_ReadFlash_Click(null, null);
+        }
+
+        void Erase_Flash(String i_Settings = "11 00 00")
+        {
+            textBox_EraseFlash.Text = i_Settings;
+
+            button_EraseFlash_Click(null, null);
+        }
+
+
+
         private void button_WriteRegister_Click(object sender, EventArgs e)
         {
 
@@ -22639,7 +22676,7 @@ Note: eStatus enum 
             string WithoutSpaces = Regex.Replace(txtbox.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null)
+            if (buffer != null && buffer.Length == 5)
             {
                 txtbox.BackColor = Color.LightGreen;
             }
@@ -23083,10 +23120,29 @@ Note: eStatus enum 
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter && m_TextBox.BackColor == Color.LightGreen)
+            try
             {
-                textBox2.Text = GetBytesFromData(textBox1.Text, 1, 2);
+                TextBox m_TextBox = (TextBox)sender;
+                bool Do_it= false;
+                if( e == null)
+                {
+                    Do_it = true;
+                }
+                else
+                    if ((e.KeyCode == Keys.Enter ) && m_TextBox.BackColor == Color.LightGreen)
+                    {
+                    
+                        Do_it = true;
+
+                    }
+
+                if(Do_it == true)
+                {
+                    textBox2.Text = GetBytesFromData(textBox1.Text, 1, 2);
+                }
+            }
+            catch
+            {
 
             }
         }
@@ -23473,6 +23529,54 @@ Note: eStatus enum 
 
                 }
             }
+        }
+
+        private void button_EraseFlash_MouseDown(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs me = e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                MessageBox.Show(@"
+
+23 15 Frame No 1
+74 CMD: FLASH Erase
+00 Length
+03 
+11 Flash Control, Erase Command, bit 0 - enable, code - 7 downto 4, 0x1 Chip, 0x2 page, 0x3 block
+00 Page
+01
+FF CheckSum
+
+23 15 Frame No 1
+74 CMD: FLASH Erase
+00 Length
+03 
+21 Flash Control, Erase Command, bit 0 - enable, code - 7 downto 4, 0x1 Chip, 0x2 page, 0x3 block
+00 Page
+01
+FF CheckSum
+
+23 15 Frame No 1
+74 CMD: FLASH Erase
+00 Length
+03 
+31 Flash Control, Erase Command, bit 0 - enable, code - 7 downto 4, 0x1 Chip, 0x2 page, 0x3 block
+00 Page
+01
+FF CheckSum
+
+
+","Help");
+
+
+
+            }
+        }
+
+        private void button32_Click_3(object sender, EventArgs e)
+        {
+            
+            textBox1_KeyDown(null,  null);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
