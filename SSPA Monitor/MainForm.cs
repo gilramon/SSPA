@@ -12863,13 +12863,19 @@ namespace Monitor
             return ret;
         }
 
+        void WriteToSystemStatus(String i_Message,uint i_Time,Color i_Color)
+        {
+            textBox_SystemStatus.Text = i_Message;
+            textBox_SystemStatus.BackColor = i_Color;
+            textBox_SystemStatus_Timer = i_Time;
+        }
+
         private string UnHandledOpcode(KratosProtocolFrame i_Parsedframe)
         {
 
             string ret = string.Format("\n Opcode Unhandled: [{0}] \n", i_Parsedframe.Opcode);
-            textBox_SystemStatus.Text = ret;
-            textBox_SystemStatus.BackColor = Color.Orange;
-            textBox_SystemStatus_Timer = 4;
+
+            WriteToSystemStatus(ret, 4, Color.Orange);
 
             return ret;
 
@@ -13477,6 +13483,11 @@ namespace Monitor
                 
                 switch (str_Address)
                 {
+                    case "0003":
+                        textBox_SystemMode.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+
+                        break;
+
                     case "008A":
                         textBox_SystemID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -22271,6 +22282,13 @@ Note: eStatus enum 
 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
+            if (serialPort.IsOpen == false)
+            {
+                WriteToSystemStatus("Port is closed!", 4, Color.Orange);
+                return;
+
+            }
+
             groupBox_StatusUUT.Enabled = false;
             groupBox_Control1.Enabled = false;
             groupBox_Control2.Enabled = false;
@@ -22283,6 +22301,9 @@ Note: eStatus enum 
             await Task.Delay(500);
 
             Write_Register_To_UUT("00 01", "02 00");
+            await Task.Delay(500);
+
+            Read_Register_From_UUT("00 03");
             await Task.Delay(500);
 
             Read_Register_From_UUT("00 B7");
