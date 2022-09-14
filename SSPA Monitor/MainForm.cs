@@ -13570,21 +13570,46 @@ namespace Monitor
 
 
                     case "00AD":
-                        textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+
+
+                       // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        int DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 2500 * 500 / 300 / 5 / 4096);
+
+
+                        textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT7.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT8.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT9.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_StatusUUT10.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.31);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.282);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT8.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.376);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT9.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.053);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT10.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.17);
+
+                        // textBox_StatusUUT6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_StatusUUT7.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_StatusUUT8.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_StatusUUT10.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         break;
 
                     case "00B7":
                         textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
+                        textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        textBox_StatusUUT14.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00B8":
@@ -22414,23 +22439,23 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 03");
             await Task.Delay(500);
 
-            Read_Register_From_UUT("00 B7");
+            Read_Register_From_UUT("00 B7","00 14");
             await Task.Delay(500);
 
-            Read_Register_From_UUT("00 B8");
-            await Task.Delay(500);
+            //Read_Register_From_UUT("00 B8");
+            //await Task.Delay(500);
 
-            Read_Register_From_UUT("00 B9");
-            await Task.Delay(500);
+            //Read_Register_From_UUT("00 B9");
+            //await Task.Delay(500);
 
-            Read_Register_From_UUT("00 BA");
-            await Task.Delay(500);
+            //Read_Register_From_UUT("00 BA");
+            //await Task.Delay(500);
 
-            Read_Register_From_UUT("00 BB");
-            await Task.Delay(500);
+            //Read_Register_From_UUT("00 BB");
+            //await Task.Delay(500);
 
-            Read_Register_From_UUT("00 BF");
-            await Task.Delay(500);
+            //Read_Register_From_UUT("00 BF");
+            //await Task.Delay(500);
 
             //Read_Register_From_UUT("00 A0");
             //await Task.Delay(500);
