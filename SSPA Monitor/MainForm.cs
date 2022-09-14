@@ -835,11 +835,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2000,17 +2000,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea6.AxisX.Title = "Freq";
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.AxisY.Title = "Power [dBm]";
+            chartArea6.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5363,7 +5363,7 @@ namespace Monitor
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.ForeColor = System.Drawing.Color.Black;
-            this.label103.Location = new System.Drawing.Point(425, 172);
+            this.label103.Location = new System.Drawing.Point(453, 175);
             this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(81, 14);
@@ -5408,7 +5408,7 @@ namespace Monitor
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.ForeColor = System.Drawing.Color.Black;
-            this.label104.Location = new System.Drawing.Point(441, 18);
+            this.label104.Location = new System.Drawing.Point(469, 21);
             this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(40, 14);
@@ -5420,7 +5420,7 @@ namespace Monitor
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.ForeColor = System.Drawing.Color.Black;
-            this.label105.Location = new System.Drawing.Point(441, 142);
+            this.label105.Location = new System.Drawing.Point(469, 145);
             this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(27, 14);
@@ -5466,7 +5466,7 @@ namespace Monitor
             this.label106.AutoSize = true;
             this.label106.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.ForeColor = System.Drawing.Color.Black;
-            this.label106.Location = new System.Drawing.Point(441, 113);
+            this.label106.Location = new System.Drawing.Point(469, 116);
             this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(61, 14);
@@ -5511,7 +5511,7 @@ namespace Monitor
             this.label118.AutoSize = true;
             this.label118.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.Black;
-            this.label118.Location = new System.Drawing.Point(431, 79);
+            this.label118.Location = new System.Drawing.Point(459, 82);
             this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(74, 14);
@@ -5555,7 +5555,7 @@ namespace Monitor
             this.label119.AutoSize = true;
             this.label119.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label119.ForeColor = System.Drawing.Color.Black;
-            this.label119.Location = new System.Drawing.Point(429, 46);
+            this.label119.Location = new System.Drawing.Point(457, 49);
             this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(83, 14);
@@ -5589,7 +5589,7 @@ namespace Monitor
             this.textBox_StatusUUT12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT12.Name = "textBox_StatusUUT12";
             this.textBox_StatusUUT12.ReadOnly = true;
-            this.textBox_StatusUUT12.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT12.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT12.TabIndex = 55;
             this.textBox_StatusUUT12.TextChanged += new System.EventHandler(this.textBox_StatusUUT12_TextChanged);
             // 
@@ -5757,7 +5757,7 @@ namespace Monitor
             this.textBox_StatusUUT17.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT17.Name = "textBox_StatusUUT17";
             this.textBox_StatusUUT17.ReadOnly = true;
-            this.textBox_StatusUUT17.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT17.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT17.TabIndex = 43;
             this.textBox_StatusUUT17.TextChanged += new System.EventHandler(this.textBox_StatusUUT17_TextChanged);
             // 
@@ -5780,7 +5780,7 @@ namespace Monitor
             this.textBox_StatusUUT16.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT16.Name = "textBox_StatusUUT16";
             this.textBox_StatusUUT16.ReadOnly = true;
-            this.textBox_StatusUUT16.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT16.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT16.TabIndex = 41;
             this.textBox_StatusUUT16.Visible = false;
             this.textBox_StatusUUT16.TextChanged += new System.EventHandler(this.textBox_StatusUUT16_TextChanged);
@@ -5803,7 +5803,7 @@ namespace Monitor
             this.textBox_StatusUUT15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT15.Name = "textBox_StatusUUT15";
             this.textBox_StatusUUT15.ReadOnly = true;
-            this.textBox_StatusUUT15.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT15.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT15.TabIndex = 39;
             this.textBox_StatusUUT15.TextChanged += new System.EventHandler(this.textBox_StatusUUT15_TextChanged);
             // 
@@ -5826,7 +5826,7 @@ namespace Monitor
             this.textBox_StatusUUT14.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT14.Name = "textBox_StatusUUT14";
             this.textBox_StatusUUT14.ReadOnly = true;
-            this.textBox_StatusUUT14.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT14.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT14.TabIndex = 37;
             this.textBox_StatusUUT14.TextChanged += new System.EventHandler(this.textBox_StatusUUT14_TextChanged);
             // 
@@ -5848,7 +5848,7 @@ namespace Monitor
             this.textBox_StatusUUT13.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT13.Name = "textBox_StatusUUT13";
             this.textBox_StatusUUT13.ReadOnly = true;
-            this.textBox_StatusUUT13.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT13.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT13.TabIndex = 35;
             this.textBox_StatusUUT13.TextChanged += new System.EventHandler(this.textBox_StatusUUT13_TextChanged);
             // 
@@ -7479,8 +7479,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7505,8 +7505,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7911,9 +7911,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -13501,7 +13501,7 @@ namespace Monitor
 
         private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
         {
-
+            int DecimalNumber;
             try
             {
 
@@ -13575,7 +13575,7 @@ namespace Monitor
 
 
                        // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
-                        int DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 2500 * 500 / 300 / 5 / 4096);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
@@ -13617,11 +13617,41 @@ namespace Monitor
                         break;
 
                     case "00B7":
-                        textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
-                        textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
-                        textBox_StatusUUT14.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
-                        textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
-                        textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 - 3) / 0.01 + 27);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT12.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT13.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.053);
+
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT14.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 - 3) / 0.01 + 27);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
+                        if(DecimalNumber > 0)
+                        {
+                            textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (float)DecimalNumber / 4);
+                        }
+                        else
+                        {
+                            textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (4096 - (float)DecimalNumber) / 4);
+                        }
+                        
+
+                        //textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
+                        //textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        // textBox_StatusUUT13.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        // textBox_StatusUUT14.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                       // textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                      //  textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00B8":
@@ -21405,18 +21435,18 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    int.TryParse(m_TextBox.Text, out int Data);
-                    string hexValue = Data.ToString("X4");
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
-
+ 
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
+                    Write_Register_To_UUT(" 00 12", "01 FF");
+                    await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 12", hexValue);
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "08 00");
@@ -21435,17 +21465,17 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    int.TryParse(m_TextBox.Text, out int Data);
-                    string hexValue = Data.ToString("X4");
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
-
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 15", hexValue);
+                    Write_Register_To_UUT(" 00 12", "01 FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "08 00");
@@ -21462,16 +21492,17 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    int.TryParse(m_TextBox.Text, out int Data);
-                    string hexValue = Data.ToString("X4");
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 16", hexValue);
+                    Write_Register_To_UUT(" 00 12", "01 FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "08 00");
@@ -22935,17 +22966,17 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    int.TryParse(m_TextBox.Text, out int Data);
-                    string hexValue = Data.ToString("X4");
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
-
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 13", hexValue);
+                    Write_Register_To_UUT(" 00 12", "01 FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "08 00");
@@ -22962,16 +22993,17 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    int.TryParse(m_TextBox.Text, out int Data);
-                    string hexValue = Data.ToString("X4");
-
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 14", hexValue);
+                    Write_Register_To_UUT(" 00 12", "01 FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "08 00");
