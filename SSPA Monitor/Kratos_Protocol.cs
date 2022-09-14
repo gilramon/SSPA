@@ -177,7 +177,7 @@ namespace Monitor
             }
         }
 
-        static public KratosProtocolFrame DecodeKratusProtocol_Standard(byte[] i_IncomingBytes)
+        static public KratosProtocolFrame DecodeKratusProtocol_Standard(ref byte[] i_IncomingBytes)
         {
             KratosProtocolFrame Ret = new KratosProtocolFrame();
 
@@ -211,6 +211,8 @@ namespace Monitor
                 Ret.DataLength = FrameDataLength.ToString();
 
                 Ret.CheckSum = CheckSumSent.ToString("X");
+
+                i_IncomingBytes = i_IncomingBytes.Skip(CheckSumIndex + 1).ToArray(); 
                 return Ret;
 
 

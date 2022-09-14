@@ -13929,53 +13929,56 @@ namespace Monitor
                 {
                     return;
                 }
-                KratosProtocolFrame Result = new KratosProtocolFrame();
-                Result = Kratos_Protocol.DecodeKratusProtocol_Standard(i_IncomeBuffer);
-                TCPClientBuffer = new byte[0];
-
-                textBox_RxClientPreamble.BeginInvoke(new EventHandler(delegate
+                while (i_IncomeBuffer.Length != 0)
                 {
-                    if (Result != null)
+                    KratosProtocolFrame Result = new KratosProtocolFrame();
+                    Result = Kratos_Protocol.DecodeKratusProtocol_Standard(ref i_IncomeBuffer);
+                    TCPClientBuffer = new byte[0];
+
+                    textBox_RxClientPreamble.BeginInvoke(new EventHandler(delegate
                     {
-                        textBox_RxClientPreamble.BackColor = Color.LightGreen;
-                        textBox_RxClientPreamble.Text = Result.Preamble;
-
-                        textBox_RxClientOpcode.BackColor = Color.LightGreen;
-                        textBox_RxClientOpcode.Text = Result.Opcode;
-
-                        textBox_RxClientData.BackColor = Color.LightGreen;
-                        textBox_RxClientData.Text = Regex.Replace(Result.Data, ".{2}", "$0 ");
-
-                        textBox_RxClientDataLength.BackColor = Color.LightGreen;
-                        textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
-
-                        textBox_RxClientCheckSum.BackColor = Color.LightGreen;
-                        textBox_RxClientCheckSum.Text = Result.CheckSum;
-
-
-                        ParseSystemFrame(Result);
-
-                        SendMessageToSystemLogger(Result.ToString());
-
-
-
-
-
-
-
-
-                        richTextBox_ClientRx.Invoke(new EventHandler(delegate
+                        if (Result != null)
                         {
-                            byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
-                            richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
+                            textBox_RxClientPreamble.BackColor = Color.LightGreen;
+                            textBox_RxClientPreamble.Text = Result.Preamble;
+
+                            textBox_RxClientOpcode.BackColor = Color.LightGreen;
+                            textBox_RxClientOpcode.Text = Result.Opcode;
+
+                            textBox_RxClientData.BackColor = Color.LightGreen;
+                            textBox_RxClientData.Text = Regex.Replace(Result.Data, ".{2}", "$0 ");
+
+                            textBox_RxClientDataLength.BackColor = Color.LightGreen;
+                            textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
+
+                            textBox_RxClientCheckSum.BackColor = Color.LightGreen;
+                            textBox_RxClientCheckSum.Text = Result.CheckSum;
+
+
+                            ParseSystemFrame(Result);
+
+                            SendMessageToSystemLogger(Result.ToString());
+
+
+
+
+
+
+
+
+                            richTextBox_ClientRx.Invoke(new EventHandler(delegate
+                            {
+                                byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
+                                richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
                             //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
 
                         }));
 
-                    }
+                        }
 
 
-                }));
+                    }));
+                }
             }
             catch (Exception ex)
             {
@@ -17906,7 +17909,7 @@ namespace Monitor
                     };
                     byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
 
-                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
+                    KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(ref Result);
                     //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
                     textBox_SentPreamble.Text = SentFrame.Preamble;
                     textBox_SentOpcode.Text = SentFrame.Opcode;
@@ -17914,8 +17917,8 @@ namespace Monitor
                     textBox_SentDataLength.Text = SentFrame.DataLength;
                     textBox_SentChecksum.Text = SentFrame.CheckSum;
 
-
-                    stm.Write(Result, 0, Result.Length);
+                    byte[] WriteData = Kratos_Protocol.EncodeKratusProtocol_Standard(SentFrame);
+                    stm.Write(WriteData, 0, WriteData.Length);
                 }
 
 
@@ -20399,7 +20402,7 @@ Note: eStatus enum 
                 };
                 byte[] Result = Kratos_Protocol.EncodeKratusProtocol_Standard(KratosFrame);
 
-                KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(Result);
+                KratosProtocolFrame SentFrame = Kratos_Protocol.DecodeKratusProtocol_Standard(ref Result);
 
                 SentFrameGlobal = SentFrame;
                 //textBox_AllDataSent.Text = String.Format("Preamble: [{0}] Opcode: [{1}] Data : [{2}] Data length: [{3}] CheckSum: [{4}]",Ret.Preamble,Ret.Opcode,Ret.Data,Ret.DataLength,Ret.CheckSum);
@@ -20409,7 +20412,7 @@ Note: eStatus enum 
                 textBox_SentDataLength.Text = SentFrame.DataLength;
                 textBox_SentChecksum.Text = SentFrame.CheckSum;
 
-                textBox_SendSerialPort.Text = ConvertByteArraytToString(Result);
+                textBox_SendSerialPort.Text = ConvertByteArraytToString(Kratos_Protocol.EncodeKratusProtocol_Standard(SentFrame));
 
                 Button2_Click_1(null, null);
                 // button_SendSerialPort.PerformClick();
@@ -22412,35 +22415,25 @@ Note: eStatus enum 
             groupBox_Control2.Enabled = false;
             groupBox_SystemMode.Enabled = false;
 
-            if(textBox_SystemHWVersion.Text == "")
-            {
-                button70_Click_1(null, null);
-                await Task.Delay(2000);
-            }
-            
-            if (textBox_SimulatorHWVersion.Text == "")
-            {
-                button31_Click_1(null, null);
-                await Task.Delay(2000);
-            }
+
             
             Write_Register_To_UUT("00 01", "01 00");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Read_Register_From_UUT("00 0C", "00 20");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Read_Register_From_UUT("00 AD", "00 14");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Write_Register_To_UUT("00 01", "02 00");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Read_Register_From_UUT("00 03");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Read_Register_From_UUT("00 B7","00 14");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             //Read_Register_From_UUT("00 B8");
             //await Task.Delay(500);
@@ -22464,11 +22457,25 @@ Note: eStatus enum 
             //await Task.Delay(500);
 
             Read_Register_From_UUT("00 F8", "00 0E");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
             Read_Register_From_Simulator("00 F8", "00 0E");
-            await Task.Delay(500);
+            await Task.Delay(100);
 
+
+
+
+            if (textBox_SystemHWVersion.Text == "")
+            {
+                button70_Click_1(null, null);
+                await Task.Delay(2000);
+            }
+
+            if (textBox_SimulatorHWVersion.Text == "")
+            {
+                button31_Click_1(null, null);
+               // await Task.Delay(500);
+            }
 
             groupBox_UUTVersion.Enabled = true;
             groupBox_SimulatorVersion.Enabled = true;
