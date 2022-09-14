@@ -470,7 +470,7 @@ namespace Monitor
         private TextBox textBox_9V;
         private TextBox textBox_28V;
         private Label label25;
-        private GroupBox groupBox44;
+        private GroupBox groupBox_UUTVersion;
         private Button button70;
         private Label label27;
         private Label label26;
@@ -536,15 +536,15 @@ namespace Monitor
         private Label label69;
         private TextBox textBox_StatusUUT25;
         private Label label74;
-        private TextBox textBox94;
+        private TextBox textBox_SimulatorStatus5;
         private Label label73;
-        private TextBox textBox93;
+        private TextBox textBox_SimulatorStatus4;
         private Label label68;
         private Label label71;
-        private TextBox textBox90;
-        private TextBox textBox91;
+        private TextBox textBox_SimulatorStatus1;
+        private TextBox textBox_SimulatorStatus2;
         private Label label72;
-        private TextBox textBox92;
+        private TextBox textBox_SimulatorStatus3;
         private TabPage tabPage13;
         private Button button30;
         private Button button2;
@@ -596,7 +596,7 @@ namespace Monitor
         private Label label99;
         private TextBox textBox_RFWidth;
         private Label label98;
-        private GroupBox groupBox1;
+        private GroupBox groupBox_SimulatorVersion;
         private Label label97;
         private TextBox textBox_SimulatorSN;
         private Label label96;
@@ -644,7 +644,7 @@ namespace Monitor
         private CheckBox checkBox_PulseGen2;
         private CheckBox checkBox_PulseGen;
         private Label label115;
-        private TextBox textBox95;
+        private TextBox textBox_SimulatorStatus6;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
         private CheckBox checkBox9;
@@ -835,11 +835,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1202,17 +1202,17 @@ namespace Monitor
             this.textBox_StatusUUT2 = new System.Windows.Forms.TextBox();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.label115 = new System.Windows.Forms.Label();
-            this.textBox95 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus6 = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
-            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus5 = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
-            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus4 = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus3 = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus1 = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorStatus2 = new System.Windows.Forms.TextBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.label84 = new System.Windows.Forms.Label();
             this.checkBox_PulseGen2 = new System.Windows.Forms.CheckBox();
@@ -1272,7 +1272,7 @@ namespace Monitor
             this.textBox_PulseDelay = new System.Windows.Forms.TextBox();
             this.textBox_PulsePeriod = new System.Windows.Forms.TextBox();
             this.textBox_PulseWidth = new System.Windows.Forms.TextBox();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.groupBox_UUTVersion = new System.Windows.Forms.GroupBox();
             this.label121 = new System.Windows.Forms.Label();
             this.button57 = new System.Windows.Forms.Button();
             this.textBox_SystemSN = new System.Windows.Forms.TextBox();
@@ -1284,7 +1284,7 @@ namespace Monitor
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox_SimulatorVersion = new System.Windows.Forms.GroupBox();
             this.button75 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.textBox_SimulatorSN = new System.Windows.Forms.TextBox();
@@ -1615,8 +1615,8 @@ namespace Monitor
             this.groupBox_Control2.SuspendLayout();
             this.groupBox_Control1.SuspendLayout();
             this.groupBox34.SuspendLayout();
-            this.groupBox44.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_UUTVersion.SuspendLayout();
+            this.groupBox_SimulatorVersion.SuspendLayout();
             this.groupBox33.SuspendLayout();
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
@@ -2000,17 +2000,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5003,8 +5003,8 @@ namespace Monitor
             this.tabPage6.Controls.Add(this.groupBox_Control2);
             this.tabPage6.Controls.Add(this.groupBox_Control1);
             this.tabPage6.Controls.Add(this.groupBox34);
-            this.tabPage6.Controls.Add(this.groupBox44);
-            this.tabPage6.Controls.Add(this.groupBox1);
+            this.tabPage6.Controls.Add(this.groupBox_UUTVersion);
+            this.tabPage6.Controls.Add(this.groupBox_SimulatorVersion);
             this.tabPage6.Controls.Add(this.groupBox33);
             this.tabPage6.Location = new System.Drawing.Point(4, 27);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
@@ -5393,13 +5393,14 @@ namespace Monitor
             // 
             // button_GetStatus
             // 
+            this.button_GetStatus.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button_GetStatus.Location = new System.Drawing.Point(652, 330);
             this.button_GetStatus.Margin = new System.Windows.Forms.Padding(2);
             this.button_GetStatus.Name = "button_GetStatus";
             this.button_GetStatus.Size = new System.Drawing.Size(97, 43);
             this.button_GetStatus.TabIndex = 17;
             this.button_GetStatus.Text = "Get Status";
-            this.button_GetStatus.UseVisualStyleBackColor = true;
+            this.button_GetStatus.UseVisualStyleBackColor = false;
             this.button_GetStatus.Click += new System.EventHandler(this.button_GetStatus_Click);
             // 
             // label104
@@ -5434,6 +5435,7 @@ namespace Monitor
             this.textBox_StatusUUT25.ReadOnly = true;
             this.textBox_StatusUUT25.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT25.TabIndex = 57;
+            this.textBox_StatusUUT25.Visible = false;
             this.textBox_StatusUUT25.TextChanged += new System.EventHandler(this.textBox_StatusUUT25_TextChanged);
             // 
             // textBox_StatusUUT31
@@ -5457,6 +5459,7 @@ namespace Monitor
             this.label69.Size = new System.Drawing.Size(60, 14);
             this.label69.TabIndex = 58;
             this.label69.Text = "DC1 value";
+            this.label69.Visible = false;
             // 
             // label106
             // 
@@ -5500,6 +5503,7 @@ namespace Monitor
             this.textBox_StatusUUT26.ReadOnly = true;
             this.textBox_StatusUUT26.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT26.TabIndex = 59;
+            this.textBox_StatusUUT26.Visible = false;
             this.textBox_StatusUUT26.TextChanged += new System.EventHandler(this.textBox_StatusUUT26_TextChanged);
             // 
             // label118
@@ -5566,6 +5570,7 @@ namespace Monitor
             this.textBox_StatusUUT24.ReadOnly = true;
             this.textBox_StatusUUT24.Size = new System.Drawing.Size(92, 26);
             this.textBox_StatusUUT24.TabIndex = 61;
+            this.textBox_StatusUUT24.Visible = false;
             this.textBox_StatusUUT24.TextChanged += new System.EventHandler(this.textBox_StatusUUT24_TextChanged);
             // 
             // textBox_StatusUUT27
@@ -5621,6 +5626,7 @@ namespace Monitor
             this.label67.Size = new System.Drawing.Size(60, 14);
             this.label67.TabIndex = 62;
             this.label67.Text = "VVA value";
+            this.label67.Visible = false;
             // 
             // textBox_StatusUUT22
             // 
@@ -5655,6 +5661,7 @@ namespace Monitor
             this.label70.Size = new System.Drawing.Size(60, 14);
             this.label70.TabIndex = 63;
             this.label70.Text = "DC2 value";
+            this.label70.Visible = false;
             // 
             // textBox_StatusUUT21
             // 
@@ -6089,17 +6096,17 @@ namespace Monitor
             // 
             this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox39.Controls.Add(this.label115);
-            this.groupBox39.Controls.Add(this.textBox95);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus6);
             this.groupBox39.Controls.Add(this.label71);
             this.groupBox39.Controls.Add(this.label74);
-            this.groupBox39.Controls.Add(this.textBox94);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus5);
             this.groupBox39.Controls.Add(this.label73);
-            this.groupBox39.Controls.Add(this.textBox93);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus4);
             this.groupBox39.Controls.Add(this.label68);
-            this.groupBox39.Controls.Add(this.textBox92);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus3);
             this.groupBox39.Controls.Add(this.label72);
-            this.groupBox39.Controls.Add(this.textBox90);
-            this.groupBox39.Controls.Add(this.textBox91);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus1);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus2);
             this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox39.Location = new System.Drawing.Point(642, 14);
             this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
@@ -6122,15 +6129,15 @@ namespace Monitor
             this.label115.TabIndex = 75;
             this.label115.Text = "Tx OVT hazard";
             // 
-            // textBox95
+            // textBox_SimulatorStatus6
             // 
-            this.textBox95.Location = new System.Drawing.Point(115, 186);
-            this.textBox95.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.ReadOnly = true;
-            this.textBox95.Size = new System.Drawing.Size(92, 26);
-            this.textBox95.TabIndex = 74;
-            this.textBox95.TextChanged += new System.EventHandler(this.textBox95_TextChanged);
+            this.textBox_SimulatorStatus6.Location = new System.Drawing.Point(115, 186);
+            this.textBox_SimulatorStatus6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus6.Name = "textBox_SimulatorStatus6";
+            this.textBox_SimulatorStatus6.ReadOnly = true;
+            this.textBox_SimulatorStatus6.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus6.TabIndex = 74;
+            this.textBox_SimulatorStatus6.TextChanged += new System.EventHandler(this.textBox95_TextChanged);
             // 
             // label71
             // 
@@ -6158,15 +6165,15 @@ namespace Monitor
             this.label74.Text = "SEU";
             this.label74.Click += new System.EventHandler(this.label74_Click);
             // 
-            // textBox94
+            // textBox_SimulatorStatus5
             // 
-            this.textBox94.Location = new System.Drawing.Point(115, 156);
-            this.textBox94.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.ReadOnly = true;
-            this.textBox94.Size = new System.Drawing.Size(92, 26);
-            this.textBox94.TabIndex = 72;
-            this.textBox94.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
+            this.textBox_SimulatorStatus5.Location = new System.Drawing.Point(115, 156);
+            this.textBox_SimulatorStatus5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus5.Name = "textBox_SimulatorStatus5";
+            this.textBox_SimulatorStatus5.ReadOnly = true;
+            this.textBox_SimulatorStatus5.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus5.TabIndex = 72;
+            this.textBox_SimulatorStatus5.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
             // 
             // label73
             // 
@@ -6181,15 +6188,15 @@ namespace Monitor
             this.label73.Text = "Protection";
             this.label73.Click += new System.EventHandler(this.label73_Click);
             // 
-            // textBox93
+            // textBox_SimulatorStatus4
             // 
-            this.textBox93.Location = new System.Drawing.Point(115, 123);
-            this.textBox93.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.ReadOnly = true;
-            this.textBox93.Size = new System.Drawing.Size(92, 26);
-            this.textBox93.TabIndex = 70;
-            this.textBox93.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
+            this.textBox_SimulatorStatus4.Location = new System.Drawing.Point(115, 123);
+            this.textBox_SimulatorStatus4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus4.Name = "textBox_SimulatorStatus4";
+            this.textBox_SimulatorStatus4.ReadOnly = true;
+            this.textBox_SimulatorStatus4.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus4.TabIndex = 70;
+            this.textBox_SimulatorStatus4.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
             // 
             // label68
             // 
@@ -6204,15 +6211,15 @@ namespace Monitor
             this.label68.Text = "Over voltage";
             this.label68.Click += new System.EventHandler(this.label68_Click);
             // 
-            // textBox92
+            // textBox_SimulatorStatus3
             // 
-            this.textBox92.Location = new System.Drawing.Point(115, 92);
-            this.textBox92.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.ReadOnly = true;
-            this.textBox92.Size = new System.Drawing.Size(92, 26);
-            this.textBox92.TabIndex = 64;
-            this.textBox92.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
+            this.textBox_SimulatorStatus3.Location = new System.Drawing.Point(115, 92);
+            this.textBox_SimulatorStatus3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus3.Name = "textBox_SimulatorStatus3";
+            this.textBox_SimulatorStatus3.ReadOnly = true;
+            this.textBox_SimulatorStatus3.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus3.TabIndex = 64;
+            this.textBox_SimulatorStatus3.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
             // 
             // label72
             // 
@@ -6227,25 +6234,25 @@ namespace Monitor
             this.label72.Text = "Under voltage";
             this.label72.Click += new System.EventHandler(this.label72_Click);
             // 
-            // textBox90
+            // textBox_SimulatorStatus1
             // 
-            this.textBox90.Location = new System.Drawing.Point(115, 31);
-            this.textBox90.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.ReadOnly = true;
-            this.textBox90.Size = new System.Drawing.Size(92, 26);
-            this.textBox90.TabIndex = 67;
-            this.textBox90.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
+            this.textBox_SimulatorStatus1.Location = new System.Drawing.Point(115, 31);
+            this.textBox_SimulatorStatus1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus1.Name = "textBox_SimulatorStatus1";
+            this.textBox_SimulatorStatus1.ReadOnly = true;
+            this.textBox_SimulatorStatus1.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus1.TabIndex = 67;
+            this.textBox_SimulatorStatus1.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
             // 
-            // textBox91
+            // textBox_SimulatorStatus2
             // 
-            this.textBox91.Location = new System.Drawing.Point(115, 62);
-            this.textBox91.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.ReadOnly = true;
-            this.textBox91.Size = new System.Drawing.Size(92, 26);
-            this.textBox91.TabIndex = 66;
-            this.textBox91.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
+            this.textBox_SimulatorStatus2.Location = new System.Drawing.Point(115, 62);
+            this.textBox_SimulatorStatus2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus2.Name = "textBox_SimulatorStatus2";
+            this.textBox_SimulatorStatus2.ReadOnly = true;
+            this.textBox_SimulatorStatus2.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus2.TabIndex = 66;
+            this.textBox_SimulatorStatus2.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
             // groupBox35
             // 
@@ -6722,7 +6729,7 @@ namespace Monitor
             // 
             // textBox_Vgg2
             // 
-            this.textBox_Vgg2.Location = new System.Drawing.Point(120, 117);
+            this.textBox_Vgg2.Location = new System.Drawing.Point(130, 117);
             this.textBox_Vgg2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg2.Name = "textBox_Vgg2";
             this.textBox_Vgg2.Size = new System.Drawing.Size(50, 26);
@@ -6734,7 +6741,7 @@ namespace Monitor
             // 
             // textBox_Vgg1
             // 
-            this.textBox_Vgg1.Location = new System.Drawing.Point(120, 68);
+            this.textBox_Vgg1.Location = new System.Drawing.Point(120, 66);
             this.textBox_Vgg1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg1.Name = "textBox_Vgg1";
             this.textBox_Vgg1.Size = new System.Drawing.Size(50, 26);
@@ -6770,7 +6777,7 @@ namespace Monitor
             // 
             // textBox_VDDoff1
             // 
-            this.textBox_VDDoff1.Location = new System.Drawing.Point(2, 169);
+            this.textBox_VDDoff1.Location = new System.Drawing.Point(6, 166);
             this.textBox_VDDoff1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_VDDoff1.Name = "textBox_VDDoff1";
             this.textBox_VDDoff1.Size = new System.Drawing.Size(50, 26);
@@ -6781,7 +6788,7 @@ namespace Monitor
             // 
             // textBox_Vdd_temp
             // 
-            this.textBox_Vdd_temp.Location = new System.Drawing.Point(-1, 117);
+            this.textBox_Vdd_temp.Location = new System.Drawing.Point(9, 117);
             this.textBox_Vdd_temp.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vdd_temp.Name = "textBox_Vdd_temp";
             this.textBox_Vdd_temp.Size = new System.Drawing.Size(50, 26);
@@ -6842,7 +6849,7 @@ namespace Monitor
             // 
             // textBox_4V
             // 
-            this.textBox_4V.Location = new System.Drawing.Point(58, 167);
+            this.textBox_4V.Location = new System.Drawing.Point(60, 166);
             this.textBox_4V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_4V.Name = "textBox_4V";
             this.textBox_4V.Size = new System.Drawing.Size(50, 26);
@@ -6854,7 +6861,7 @@ namespace Monitor
             // 
             // textBox_5V
             // 
-            this.textBox_5V.Location = new System.Drawing.Point(60, 118);
+            this.textBox_5V.Location = new System.Drawing.Point(70, 118);
             this.textBox_5V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_5V.Name = "textBox_5V";
             this.textBox_5V.Size = new System.Drawing.Size(50, 26);
@@ -6866,7 +6873,7 @@ namespace Monitor
             // 
             // textBox_9V
             // 
-            this.textBox_9V.Location = new System.Drawing.Point(60, 69);
+            this.textBox_9V.Location = new System.Drawing.Point(60, 67);
             this.textBox_9V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_9V.Name = "textBox_9V";
             this.textBox_9V.Size = new System.Drawing.Size(50, 26);
@@ -6878,7 +6885,7 @@ namespace Monitor
             // 
             // textBox_28V
             // 
-            this.textBox_28V.Location = new System.Drawing.Point(6, 69);
+            this.textBox_28V.Location = new System.Drawing.Point(6, 67);
             this.textBox_28V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_28V.Name = "textBox_28V";
             this.textBox_28V.Size = new System.Drawing.Size(50, 26);
@@ -6997,26 +7004,26 @@ namespace Monitor
             this.textBox_PulseWidth.TextChanged += new System.EventHandler(this.textBox_PulseWidth_TextChanged);
             this.textBox_PulseWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulseWidth_KeyDown);
             // 
-            // groupBox44
+            // groupBox_UUTVersion
             // 
-            this.groupBox44.Controls.Add(this.label121);
-            this.groupBox44.Controls.Add(this.button57);
-            this.groupBox44.Controls.Add(this.textBox_SystemSN);
-            this.groupBox44.Controls.Add(this.textBox_SystemFWVersion);
-            this.groupBox44.Controls.Add(this.label122);
-            this.groupBox44.Controls.Add(this.textBox_SystemHWVersion);
-            this.groupBox44.Controls.Add(this.textBox_SystemID);
-            this.groupBox44.Controls.Add(this.button70);
-            this.groupBox44.Controls.Add(this.label27);
-            this.groupBox44.Controls.Add(this.label26);
-            this.groupBox44.Controls.Add(this.label19);
-            this.groupBox44.Location = new System.Drawing.Point(549, 4);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Size = new System.Drawing.Size(282, 104);
-            this.groupBox44.TabIndex = 0;
-            this.groupBox44.TabStop = false;
+            this.groupBox_UUTVersion.Controls.Add(this.label121);
+            this.groupBox_UUTVersion.Controls.Add(this.button57);
+            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemSN);
+            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemFWVersion);
+            this.groupBox_UUTVersion.Controls.Add(this.label122);
+            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemHWVersion);
+            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemID);
+            this.groupBox_UUTVersion.Controls.Add(this.button70);
+            this.groupBox_UUTVersion.Controls.Add(this.label27);
+            this.groupBox_UUTVersion.Controls.Add(this.label26);
+            this.groupBox_UUTVersion.Controls.Add(this.label19);
+            this.groupBox_UUTVersion.Location = new System.Drawing.Point(549, 4);
+            this.groupBox_UUTVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_UUTVersion.Name = "groupBox_UUTVersion";
+            this.groupBox_UUTVersion.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_UUTVersion.Size = new System.Drawing.Size(282, 104);
+            this.groupBox_UUTVersion.TabIndex = 0;
+            this.groupBox_UUTVersion.TabStop = false;
             // 
             // label121
             // 
@@ -7127,26 +7134,26 @@ namespace Monitor
             this.label19.TabIndex = 0;
             this.label19.Text = "UUT";
             // 
-            // groupBox1
+            // groupBox_SimulatorVersion
             // 
-            this.groupBox1.Controls.Add(this.button75);
-            this.groupBox1.Controls.Add(this.label97);
-            this.groupBox1.Controls.Add(this.textBox_SimulatorSN);
-            this.groupBox1.Controls.Add(this.label96);
-            this.groupBox1.Controls.Add(this.textBox_SimulatorID);
-            this.groupBox1.Controls.Add(this.button31);
-            this.groupBox1.Controls.Add(this.label93);
-            this.groupBox1.Controls.Add(this.label94);
-            this.groupBox1.Controls.Add(this.textBox_SimulatorFWVersion);
-            this.groupBox1.Controls.Add(this.textBox_SimulatorHWVersion);
-            this.groupBox1.Controls.Add(this.label95);
-            this.groupBox1.Location = new System.Drawing.Point(876, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(354, 102);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
+            this.groupBox_SimulatorVersion.Controls.Add(this.button75);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label97);
+            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorSN);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label96);
+            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorID);
+            this.groupBox_SimulatorVersion.Controls.Add(this.button31);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label93);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label94);
+            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorFWVersion);
+            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorHWVersion);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label95);
+            this.groupBox_SimulatorVersion.Location = new System.Drawing.Point(876, 10);
+            this.groupBox_SimulatorVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorVersion.Name = "groupBox_SimulatorVersion";
+            this.groupBox_SimulatorVersion.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorVersion.Size = new System.Drawing.Size(354, 102);
+            this.groupBox_SimulatorVersion.TabIndex = 1;
+            this.groupBox_SimulatorVersion.TabStop = false;
             // 
             // button75
             // 
@@ -7470,8 +7477,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7496,8 +7503,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -7902,9 +7909,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10172,10 +10179,10 @@ namespace Monitor
             this.groupBox_Control1.PerformLayout();
             this.groupBox34.ResumeLayout(false);
             this.groupBox34.PerformLayout();
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox44.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_UUTVersion.ResumeLayout(false);
+            this.groupBox_UUTVersion.PerformLayout();
+            this.groupBox_SimulatorVersion.ResumeLayout(false);
+            this.groupBox_SimulatorVersion.PerformLayout();
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
             this.tabPage13.ResumeLayout(false);
@@ -12880,13 +12887,27 @@ namespace Monitor
             return ret;
 
         }
+
+        
+
+        private string UnHandledAddressSimulator(String i_Address)
+        {
+
+            string ret = string.Format("\n Address Unhandled Simulator: [{0}] \n", i_Address);
+            WriteToSystemStatus(ret, 4, Color.Orange);
+
+
+
+            return ret;
+
+        }
         private string UnHandledAddress(String i_Address)
         {
 
-            string ret = string.Format("\n Address Unhandled: [{0}] \n", i_Address);
-            textBox_SystemStatus.Text = ret;
-            textBox_SystemStatus.BackColor = Color.Orange;
-            textBox_SystemStatus_Timer = 4;
+            string ret = string.Format("\n Address Unhandled UUT: [{0}] \n", i_Address);
+            WriteToSystemStatus(ret, 4, Color.Orange);
+
+
 
             return ret;
 
@@ -13327,12 +13348,12 @@ namespace Monitor
 
         private void GetSimulatorStatus(KratosProtocolFrame i_Parsedframe)
         {
-            textBox90.Text = i_Parsedframe.Data.Substring(0, 2);
-            textBox91.Text = i_Parsedframe.Data.Substring(2, 2);
-            textBox92.Text = i_Parsedframe.Data.Substring(4, 2);
-            textBox93.Text = i_Parsedframe.Data.Substring(6, 2);
-            textBox94.Text = i_Parsedframe.Data.Substring(8, 2);
-            textBox95.Text = i_Parsedframe.Data.Substring(10, 2);
+            textBox_SimulatorStatus1.Text = i_Parsedframe.Data.Substring(0, 2);
+            textBox_SimulatorStatus2.Text = i_Parsedframe.Data.Substring(2, 2);
+            textBox_SimulatorStatus3.Text = i_Parsedframe.Data.Substring(4, 2);
+            textBox_SimulatorStatus4.Text = i_Parsedframe.Data.Substring(6, 2);
+            textBox_SimulatorStatus5.Text = i_Parsedframe.Data.Substring(8, 2);
+            textBox_SimulatorStatus6.Text = i_Parsedframe.Data.Substring(10, 2);
             //int Ready_count = int.Parse(i_Parsedframe.Data.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
             //int Int_under_voltage_count = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             //int Int_over_voltage_count = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
@@ -13454,10 +13475,19 @@ namespace Monitor
                         textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
+                    case "00F8":
+                        textBox_SimulatorStatus1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorStatus2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorStatus3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorStatus4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorStatus5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorStatus6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
 
 
                     default:
-                        UnHandledAddress(str_Address);
+                        UnHandledAddressSimulator(str_Address);
                         break;
                 }
             }
@@ -13467,7 +13497,7 @@ namespace Monitor
             }
         }
 
-        private void ReadRegisterAckFrame(KratosProtocolFrame i_Parsedframe)
+        private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
         {
 
             try
@@ -13485,6 +13515,26 @@ namespace Monitor
                 {
                     case "0003":
                         textBox_SystemMode.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+
+                        break;
+
+                    case "000C":
+                        textBox_MPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_MPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+
+                        textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_9V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_Vgg1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_Vgg2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_5V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_4V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+
+                        textBox_DCA1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber) & 0x00FF).ToString();
+                        textBox_DCA2.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00) >> 8).ToString();
 
                         break;
 
@@ -13556,6 +13606,17 @@ namespace Monitor
                     case "00BF":
                         textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
+
+                    case "00F8":
+                        textBox_StatusUUT27.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT28.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT29.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT30.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT31.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_StatusUUT32.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+
+                        
 
                     default:
                         UnHandledAddress(str_Address);
@@ -13663,7 +13724,7 @@ namespace Monitor
                         break;
 
                     case "53":
-                        ReadRegisterAckFrame(i_Parsedframe);
+                        ReadRegisterAckFrameUUT(i_Parsedframe);
 
                         break;
 
@@ -21047,6 +21108,7 @@ Note: eStatus enum 
         }
         private async void button70_Click_1(object sender, EventArgs e)
         {
+            await Task.Delay(500);
             Read_Register_From_UUT(" 00 8A","00 04");
             await Task.Delay(500);
             Read_Register_From_UUT(" 00 90", "00 08");
@@ -21064,11 +21126,13 @@ Note: eStatus enum 
 
         private async void button31_Click_1(object sender, EventArgs e)
         {
+            await Task.Delay(500);
             Read_Register_From_Simulator(" 00 8A", "00 04");
             await Task.Delay(500);
             Read_Register_From_Simulator(" 00 90", "00 08");
             await Task.Delay(500);
             Read_Register_From_Simulator(" 00 94", "00 08");
+            await Task.Delay(500);
         }
 
         private void ClearVersions()
@@ -21083,7 +21147,7 @@ Note: eStatus enum 
 
         private void button75_Click_1(object sender, EventArgs e)
         {
-            foreach (Control ctr in groupBox1.Controls)
+            foreach (Control ctr in groupBox_SimulatorVersion.Controls)
             {
                 if (ctr is TextBox)
                 {
@@ -21895,6 +21959,33 @@ Note: eStatus enum 
                 }
             }
 
+            foreach (Control ctr in groupBox_Control1.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    //ctr.BackColor = default;
+                }
+            }
+
+            foreach (Control ctr in groupBox_Control2.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    //ctr.BackColor = default;
+                }
+            }
+
+            foreach (Control ctr in groupBox_SystemMode.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0000";
+                    //ctr.BackColor = default;
+                }
+            }
+
 
         }
 
@@ -22289,12 +22380,29 @@ Note: eStatus enum 
 
             }
 
+            groupBox_UUTVersion.Enabled = false;
+            groupBox_SimulatorVersion.Enabled = false;
             groupBox_StatusUUT.Enabled = false;
             groupBox_Control1.Enabled = false;
             groupBox_Control2.Enabled = false;
             groupBox_SystemMode.Enabled = false;
 
+            if(textBox_SystemHWVersion.Text == "")
+            {
+                button70_Click_1(null, null);
+                await Task.Delay(2000);
+            }
+            
+            if (textBox_SimulatorHWVersion.Text == "")
+            {
+                button31_Click_1(null, null);
+                await Task.Delay(2000);
+            }
+            
             Write_Register_To_UUT("00 01", "01 00");
+            await Task.Delay(500);
+
+            Read_Register_From_UUT("00 0C", "00 20");
             await Task.Delay(500);
 
             Read_Register_From_UUT("00 AD", "00 14");
@@ -22324,12 +22432,21 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 BF");
             await Task.Delay(500);
 
-            Read_Register_From_UUT("00 A0");
+            //Read_Register_From_UUT("00 A0");
+            //await Task.Delay(500);
+
+            //Read_Register_From_UUT("00 96");
+            //await Task.Delay(500);
+
+            Read_Register_From_UUT("00 F8", "00 0E");
             await Task.Delay(500);
 
-            Read_Register_From_UUT("00 96");
+            Read_Register_From_Simulator("00 F8", "00 0E");
             await Task.Delay(500);
 
+
+            groupBox_UUTVersion.Enabled = true;
+            groupBox_SimulatorVersion.Enabled = true;
             groupBox_StatusUUT.Enabled = true;
             groupBox_Control1.Enabled = true;
             groupBox_Control2.Enabled = true;
@@ -23698,7 +23815,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button57_Click_1(object sender, EventArgs e)
         {
-            foreach (Control ctr in groupBox44.Controls)
+            foreach (Control ctr in groupBox_UUTVersion.Controls)
             {
                 if (ctr is TextBox)
                 {
