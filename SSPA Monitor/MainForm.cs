@@ -21428,28 +21428,33 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox25_KeyDown(object sender, KeyEventArgs e)
+        async void SetU19Values()
+        {
+
+            Write_Register_To_UUT(" 00 30", "00 04");
+            await Task.Delay(500);
+
+            Write_Register_To_UUT(" 00 12", "01 FF");
+            await Task.Delay(500);
+
+            Write_Register_To_UUT(" 00 01", "40 00");
+            await Task.Delay(500);
+
+            Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
+            await Task.Delay(500);
+
+            Write_Register_To_UUT(" 00 01", "08 00");
+        }
+
+        private void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
- 
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(500);
 
-                    Write_Register_To_UUT(" 00 12", "01 FF");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(500);
-
-
-                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    SetU19Values();
 
                 }
 
@@ -21458,54 +21463,28 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox26_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox26_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 12", "01 FF");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(500);
-
-
-                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    SetU19Values();
 
                 }
 
             }
         }
 
-        private async void textBox27_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox27_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 12", "01 FF");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(500);
-
-
-                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    SetU19Values();
 
                 }
 
@@ -22070,7 +22049,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 99999999)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22090,7 +22069,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 99999999)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22110,7 +22089,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 99999999)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22966,20 +22945,7 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 12", "01 FF");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(500);
-
-
-                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    SetU19Values();
 
                 }
 
@@ -22993,20 +22959,7 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 12", "01 FF");
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(500);
-
-
-                    Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-                    await Task.Delay(500);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    SetU19Values();
 
                 }
 
