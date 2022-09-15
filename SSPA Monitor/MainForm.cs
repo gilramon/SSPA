@@ -21434,7 +21434,7 @@ Note: eStatus enum 
             Write_Register_To_UUT(" 00 30", "00 04");
             await Task.Delay(500);
 
-            Write_Register_To_UUT(" 00 12", "01 FF");
+            Write_Register_To_UUT(" 00 12", "FF FF");
             await Task.Delay(500);
 
             Write_Register_To_UUT(" 00 01", "40 00");
@@ -22938,7 +22938,7 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox11_KeyDown(object sender, KeyEventArgs e)
+        private void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22952,7 +22952,7 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox9_KeyDown(object sender, KeyEventArgs e)
+        private void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
