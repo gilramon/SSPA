@@ -13570,35 +13570,35 @@ namespace Monitor
 
                        // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 2500 * 500 / 300 / 5 / 4096);
+                        textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT2.Text = String.Format("{0} [{1:0.##}K]", DecimalNumber, (float)DecimalNumber / 4096 / 0.004 * 2.5 - 273.15);
+                        textBox_StatusUUT2.Text = String.Format("{0} [{1:0.##}K]", DecimalNumber, (float)DecimalNumber / 4096 / 0.004 * 1.8 - 273.15);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT3.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 2.5 / 4096 / 40 / 0.013);
+                        textBox_StatusUUT3.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1.8 / 4096 / 40 / 0.013);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT4.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 2500 * 500 / 300 / 5 / 4096);
+                        textBox_StatusUUT4.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT5.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 * 2.33);
+                        textBox_StatusUUT5.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 * 2.33);
                         // textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                       //  textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.31);
+                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.31);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.282);
+                        textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT8.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.376);
+                        textBox_StatusUUT8.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.376);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT9.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.053);
+                        textBox_StatusUUT9.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.053);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT10.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.17);
@@ -13611,26 +13611,26 @@ namespace Monitor
                         break;
 
                     case "00B7":
+                        // 27 + (DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01
 
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
+                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (27 + (float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 - 3) / 0.01 + 27);
-
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
                         textBox_StatusUUT12.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT13.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.053);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
+                        textBox_StatusUUT13.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.0417);
 
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
                         textBox_StatusUUT14.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 - 3) / 0.01 + 27);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
+                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (27 + (float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        if(DecimalNumber > 0)
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
+                        if (DecimalNumber > 0x1F4)
                         {
                             textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (float)DecimalNumber / 4);
                         }
@@ -22539,7 +22539,14 @@ Note: eStatus enum 
 
             if (buffer != null && buffer.Length == 2)
             {
-                txtbox.BackColor = Color.LightGreen;
+                if(txtbox.Text == "0007")
+                {
+                    txtbox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtbox.BackColor = Color.Orange;
+                }
             }
             else
             {
@@ -23292,7 +23299,7 @@ Note: eStatus enum 
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (textBox_SystemMode.BackColor == Color.LightGreen)
+                if (textBox_SystemMode.BackColor == Color.LightGreen || textBox_SystemMode.BackColor == Color.Orange)
                 {
 
                     Write_Register_To_UUT(" 00 03", textBox_SystemMode.Text);
