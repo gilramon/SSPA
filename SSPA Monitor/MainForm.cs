@@ -17713,7 +17713,7 @@ namespace Monitor
                      " ,Parity = " + serialPort.Parity,
                      New_Line = true, Show_Time = true);
 
-                    button_OpenPort.Text = "Close";
+                  //  button_OpenPort.Text = "Close";
                     button_OpenPort.BackColor = Color.LightGreen;
                     label_SerialPortConnected.BackColor = Color.LightGreen;
                     label_SerialPortStatus.Text = cmb_PortName.Text + "   \n" + cmbBaudRate.Text;
@@ -17758,7 +17758,7 @@ namespace Monitor
                 label_SerialPortStatus.Text = "";
                 gbPortSettings.Enabled = false;
                 //checkBox_ComportOpen.Enabled = false;
-                button_OpenPort.Text = "Open";
+                //button_OpenPort.Text = "Open";
 
                 CloseSerialPortTimer = true;
                 CloseSerialPortConter = 0;
