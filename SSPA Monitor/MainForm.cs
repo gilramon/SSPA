@@ -456,10 +456,10 @@ namespace Monitor
         private TabPage tabPage3038WBPAA;
         private GroupBox groupBox43;
         private TabControl tabControl1;
-        private TabPage tabPage6;
-        private TabPage tabPage7;
-        private TabPage tabPage8;
-        private TabPage tabPage9;
+        private TabPage tabPage_Main;
+        private TabPage tabPage_Page1;
+        private TabPage tabPage_Page3;
+        private TabPage tabPage_Page4;
         private GroupBox groupBox_Control1;
         private Label label31;
         private Label label30;
@@ -545,7 +545,7 @@ namespace Monitor
         private TextBox textBox_SimulatorStatus2;
         private Label label72;
         private TextBox textBox_SimulatorStatus3;
-        private TabPage tabPage13;
+        private TabPage tabPage_Page0;
         private Button button30;
         private Button button2;
         private Label label75;
@@ -646,7 +646,7 @@ namespace Monitor
         private Label label81;
         private Label label117;
         private Label label116;
-        private DataGridView dataGridView_Page1_4;
+        private DataGridView dataGridView_ValPage1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn Column13;
@@ -783,6 +783,51 @@ namespace Monitor
         private TextBox textBox_StrobeWidth;
         private TextBox textBox_StrobeDelay;
         private Label label82;
+        private TabPage tabPage_Page5;
+        private TabPage tabPage_Page6;
+        private TabPage tabPage_Page7;
+        private TabPage tabPage_Page8;
+        private TabPage tabPage_Page9;
+        private TabPage tabPage_Page10;
+        private TabPage tabPage_Page2;
+        private TabPage tabPage_Page11;
+        private TabPage tabPage_Page12;
+        private GroupBox groupBox1;
+        private Button button59;
+        private Button button71;
+        private GroupBox groupBox44;
+        private Button button72;
+        private Button button73;
+        private GroupBox groupBox45;
+        private Button button76;
+        private Button button77;
+        private GroupBox groupBox46;
+        private Button button78;
+        private Button button79;
+        private GroupBox groupBox47;
+        private Button button80;
+        private Button button81;
+        private GroupBox groupBox49;
+        private Button button82;
+        private Button button83;
+        private GroupBox groupBox51;
+        private Button button84;
+        private Button button85;
+        private GroupBox groupBox52;
+        private Button button86;
+        private Button button89;
+        private GroupBox groupBox53;
+        private Button button90;
+        private Button button91;
+        private GroupBox groupBox54;
+        private Button button92;
+        private Button button93;
+        private GroupBox groupBox55;
+        private Button button94;
+        private Button button95;
+        private GroupBox groupBox56;
+        private Button button96;
+        private Button button98;
         private static readonly string PREAMBLE = "23";
 
 
@@ -837,11 +882,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1120,7 +1165,7 @@ namespace Monitor
             this.button2 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage_Main = new System.Windows.Forms.TabPage();
             this.groupBox_SystemMode = new System.Windows.Forms.GroupBox();
             this.label77 = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
@@ -1314,17 +1359,17 @@ namespace Monitor
             this.label99 = new System.Windows.Forms.Label();
             this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page0 = new System.Windows.Forms.TabPage();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
             this.button42 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page1 = new System.Windows.Forms.TabPage();
             this.label117 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
-            this.dataGridView_Page1_4 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_ValPage1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1341,7 +1386,7 @@ namespace Monitor
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page3 = new System.Windows.Forms.TabPage();
             this.label89 = new System.Windows.Forms.Label();
             this.dataGridView_VVAOffset1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1375,7 +1420,7 @@ namespace Monitor
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page4 = new System.Windows.Forms.TabPage();
             this.label92 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1578,6 +1623,51 @@ namespace Monitor
             this.label150 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
+            this.tabPage_Page5 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page6 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page7 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page8 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page9 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page10 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page2 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page11 = new System.Windows.Forms.TabPage();
+            this.tabPage_Page12 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.button72 = new System.Windows.Forms.Button();
+            this.button73 = new System.Windows.Forms.Button();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.button78 = new System.Windows.Forms.Button();
+            this.button79 = new System.Windows.Forms.Button();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.button80 = new System.Windows.Forms.Button();
+            this.button81 = new System.Windows.Forms.Button();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.button82 = new System.Windows.Forms.Button();
+            this.button83 = new System.Windows.Forms.Button();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.button84 = new System.Windows.Forms.Button();
+            this.button85 = new System.Windows.Forms.Button();
+            this.groupBox52 = new System.Windows.Forms.GroupBox();
+            this.button86 = new System.Windows.Forms.Button();
+            this.button89 = new System.Windows.Forms.Button();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.button92 = new System.Windows.Forms.Button();
+            this.button93 = new System.Windows.Forms.Button();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.button94 = new System.Windows.Forms.Button();
+            this.button95 = new System.Windows.Forms.Button();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.button96 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1610,7 +1700,7 @@ namespace Monitor
             this.groupBox48.SuspendLayout();
             this.groupBox38.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPage_Main.SuspendLayout();
             this.groupBox_SystemMode.SuspendLayout();
             this.groupBox37.SuspendLayout();
             this.groupBox_StatusUUT.SuspendLayout();
@@ -1622,17 +1712,17 @@ namespace Monitor
             this.groupBox_UUTVersion.SuspendLayout();
             this.groupBox_SimulatorVersion.SuspendLayout();
             this.groupBox33.SuspendLayout();
-            this.tabPage13.SuspendLayout();
+            this.tabPage_Page0.SuspendLayout();
             this.groupBox50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).BeginInit();
-            this.tabPage8.SuspendLayout();
+            this.tabPage_Page1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage1)).BeginInit();
+            this.tabPage_Page3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).BeginInit();
-            this.tabPage9.SuspendLayout();
+            this.tabPage_Page4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
@@ -1669,6 +1759,27 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.tabPage_Page5.SuspendLayout();
+            this.tabPage_Page6.SuspendLayout();
+            this.tabPage_Page7.SuspendLayout();
+            this.tabPage_Page8.SuspendLayout();
+            this.tabPage_Page9.SuspendLayout();
+            this.tabPage_Page10.SuspendLayout();
+            this.tabPage_Page2.SuspendLayout();
+            this.tabPage_Page11.SuspendLayout();
+            this.tabPage_Page12.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            this.groupBox45.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox51.SuspendLayout();
+            this.groupBox52.SuspendLayout();
+            this.groupBox53.SuspendLayout();
+            this.groupBox54.SuspendLayout();
+            this.groupBox55.SuspendLayout();
+            this.groupBox56.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2003,17 +2114,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea9.AxisX.Title = "Freq";
-            chartArea9.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea9.AxisY.Title = "Power [dBm]";
-            chartArea9.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea9.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea9);
-            legend9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend9.IsTextAutoFit = false;
-            legend9.Name = "Legend1";
-            legend9.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend9);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5049,7 +5160,7 @@ namespace Monitor
             // 
             // button30
             // 
-            this.button30.BackColor = System.Drawing.Color.Transparent;
+            this.button30.BackColor = System.Drawing.Color.IndianRed;
             this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button30.Location = new System.Drawing.Point(6, 77);
             this.button30.Margin = new System.Windows.Forms.Padding(2);
@@ -5061,11 +5172,20 @@ namespace Monitor
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage13);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.tabPage_Main);
+            this.tabControl1.Controls.Add(this.tabPage_Page0);
+            this.tabControl1.Controls.Add(this.tabPage_Page1);
+            this.tabControl1.Controls.Add(this.tabPage_Page2);
+            this.tabControl1.Controls.Add(this.tabPage_Page3);
+            this.tabControl1.Controls.Add(this.tabPage_Page4);
+            this.tabControl1.Controls.Add(this.tabPage_Page5);
+            this.tabControl1.Controls.Add(this.tabPage_Page6);
+            this.tabControl1.Controls.Add(this.tabPage_Page7);
+            this.tabControl1.Controls.Add(this.tabPage_Page8);
+            this.tabControl1.Controls.Add(this.tabPage_Page9);
+            this.tabControl1.Controls.Add(this.tabPage_Page10);
+            this.tabControl1.Controls.Add(this.tabPage_Page11);
+            this.tabControl1.Controls.Add(this.tabPage_Page12);
             this.tabControl1.Location = new System.Drawing.Point(5, 17);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -5074,27 +5194,27 @@ namespace Monitor
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tabPage6
+            // tabPage_Main
             // 
-            this.tabPage6.Controls.Add(this.groupBox_SystemMode);
-            this.tabPage6.Controls.Add(this.groupBox37);
-            this.tabPage6.Controls.Add(this.groupBox_StatusUUT);
-            this.tabPage6.Controls.Add(this.groupBox35);
-            this.tabPage6.Controls.Add(this.groupBox_Control2);
-            this.tabPage6.Controls.Add(this.groupBox_Control1);
-            this.tabPage6.Controls.Add(this.groupBox34);
-            this.tabPage6.Controls.Add(this.groupBox_UUTVersion);
-            this.tabPage6.Controls.Add(this.groupBox_SimulatorVersion);
-            this.tabPage6.Controls.Add(this.groupBox33);
-            this.tabPage6.Location = new System.Drawing.Point(4, 27);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage6.TabIndex = 0;
-            this.tabPage6.Text = "Main";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click_1);
+            this.tabPage_Main.Controls.Add(this.groupBox_SystemMode);
+            this.tabPage_Main.Controls.Add(this.groupBox37);
+            this.tabPage_Main.Controls.Add(this.groupBox_StatusUUT);
+            this.tabPage_Main.Controls.Add(this.groupBox35);
+            this.tabPage_Main.Controls.Add(this.groupBox_Control2);
+            this.tabPage_Main.Controls.Add(this.groupBox_Control1);
+            this.tabPage_Main.Controls.Add(this.groupBox34);
+            this.tabPage_Main.Controls.Add(this.groupBox_UUTVersion);
+            this.tabPage_Main.Controls.Add(this.groupBox_SimulatorVersion);
+            this.tabPage_Main.Controls.Add(this.groupBox33);
+            this.tabPage_Main.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Main.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Main.Name = "tabPage_Main";
+            this.tabPage_Main.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_Main.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Main.TabIndex = 0;
+            this.tabPage_Main.Text = "Main";
+            this.tabPage_Main.UseVisualStyleBackColor = true;
+            this.tabPage_Main.Click += new System.EventHandler(this.tabPage6_Click_1);
             // 
             // groupBox_SystemMode
             // 
@@ -7436,24 +7556,24 @@ namespace Monitor
             this.label98.TabIndex = 1;
             this.label98.Text = "Width (1us)";
             // 
-            // tabPage13
+            // tabPage_Page0
             // 
-            this.tabPage13.Controls.Add(this.groupBox50);
-            this.tabPage13.Controls.Add(this.dataGridView_ValPage0);
-            this.tabPage13.Controls.Add(this.label81);
-            this.tabPage13.Location = new System.Drawing.Point(4, 27);
-            this.tabPage13.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage13.TabIndex = 4;
-            this.tabPage13.Text = "Page 0";
-            this.tabPage13.UseVisualStyleBackColor = true;
+            this.tabPage_Page0.Controls.Add(this.groupBox50);
+            this.tabPage_Page0.Controls.Add(this.dataGridView_ValPage0);
+            this.tabPage_Page0.Controls.Add(this.label81);
+            this.tabPage_Page0.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page0.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page0.Name = "tabPage_Page0";
+            this.tabPage_Page0.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page0.TabIndex = 4;
+            this.tabPage_Page0.Text = "Page0";
+            this.tabPage_Page0.UseVisualStyleBackColor = true;
             // 
             // groupBox50
             // 
             this.groupBox50.Controls.Add(this.button42);
             this.groupBox50.Controls.Add(this.button44);
-            this.groupBox50.Location = new System.Drawing.Point(1080, 16);
+            this.groupBox50.Location = new System.Drawing.Point(1091, 2);
             this.groupBox50.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox50.Name = "groupBox50";
             this.groupBox50.Padding = new System.Windows.Forms.Padding(2);
@@ -7470,7 +7590,7 @@ namespace Monitor
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(127, 43);
             this.button42.TabIndex = 18;
-            this.button42.Text = "Read Page 0 ";
+            this.button42.Text = "Read Page ";
             this.button42.UseVisualStyleBackColor = true;
             // 
             // button44
@@ -7482,7 +7602,7 @@ namespace Monitor
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(127, 43);
             this.button44.TabIndex = 21;
-            this.button44.Text = "Writeto Page 0";
+            this.button44.Text = "Write to Page";
             this.button44.UseVisualStyleBackColor = false;
             // 
             // dataGridView_ValPage0
@@ -7514,19 +7634,20 @@ namespace Monitor
             this.label81.TabIndex = 26;
             this.label81.Text = "TGA2700 DC4 Vdd";
             // 
-            // tabPage7
+            // tabPage_Page1
             // 
-            this.tabPage7.Controls.Add(this.label117);
-            this.tabPage7.Controls.Add(this.label116);
-            this.tabPage7.Controls.Add(this.dataGridView_Page1_4);
-            this.tabPage7.Location = new System.Drawing.Point(4, 27);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage7.TabIndex = 1;
-            this.tabPage7.Text = "Page 1-4";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.tabPage_Page1.Controls.Add(this.groupBox1);
+            this.tabPage_Page1.Controls.Add(this.label117);
+            this.tabPage_Page1.Controls.Add(this.label116);
+            this.tabPage_Page1.Controls.Add(this.dataGridView_ValPage1);
+            this.tabPage_Page1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page1.Name = "tabPage_Page1";
+            this.tabPage_Page1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page1.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page1.TabIndex = 1;
+            this.tabPage_Page1.Text = "Page1";
+            this.tabPage_Page1.UseVisualStyleBackColor = true;
             // 
             // label117
             // 
@@ -7550,14 +7671,14 @@ namespace Monitor
             this.label116.TabIndex = 30;
             this.label116.Text = "46 dBm";
             // 
-            // dataGridView_Page1_4
+            // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
-            this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
-            this.dataGridView_Page1_4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
+            this.dataGridView_ValPage1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn23,
@@ -7574,15 +7695,15 @@ namespace Monitor
             this.Column19,
             this.Column20,
             this.Column21});
-            this.dataGridView_Page1_4.Location = new System.Drawing.Point(9, 36);
-            this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
-            this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
-            this.dataGridView_Page1_4.TabIndex = 28;
+            this.dataGridView_ValPage1.Location = new System.Drawing.Point(9, 36);
+            this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
+            this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
+            this.dataGridView_ValPage1.TabIndex = 28;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -7696,25 +7817,26 @@ namespace Monitor
             this.Column21.Name = "Column21";
             this.Column21.Width = 47;
             // 
-            // tabPage8
+            // tabPage_Page3
             // 
-            this.tabPage8.Controls.Add(this.label89);
-            this.tabPage8.Controls.Add(this.dataGridView_VVAOffset1);
-            this.tabPage8.Controls.Add(this.label88);
-            this.tabPage8.Controls.Add(this.dataGridView_VVAOffset2);
-            this.tabPage8.Controls.Add(this.label87);
-            this.tabPage8.Controls.Add(this.label86);
-            this.tabPage8.Controls.Add(this.dataGridView_PAVVA);
-            this.tabPage8.Controls.Add(this.label76);
-            this.tabPage8.Controls.Add(this.label75);
-            this.tabPage8.Controls.Add(this.dataGridView_DC4);
-            this.tabPage8.Location = new System.Drawing.Point(4, 27);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "Page 5-7";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage_Page3.Controls.Add(this.groupBox45);
+            this.tabPage_Page3.Controls.Add(this.label89);
+            this.tabPage_Page3.Controls.Add(this.dataGridView_VVAOffset1);
+            this.tabPage_Page3.Controls.Add(this.label88);
+            this.tabPage_Page3.Controls.Add(this.dataGridView_VVAOffset2);
+            this.tabPage_Page3.Controls.Add(this.label87);
+            this.tabPage_Page3.Controls.Add(this.label86);
+            this.tabPage_Page3.Controls.Add(this.dataGridView_PAVVA);
+            this.tabPage_Page3.Controls.Add(this.label76);
+            this.tabPage_Page3.Controls.Add(this.label75);
+            this.tabPage_Page3.Controls.Add(this.dataGridView_DC4);
+            this.tabPage_Page3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page3.Name = "tabPage_Page3";
+            this.tabPage_Page3.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page3.TabIndex = 2;
+            this.tabPage_Page3.Text = "Page3";
+            this.tabPage_Page3.UseVisualStyleBackColor = true;
             // 
             // label89
             // 
@@ -7828,11 +7950,11 @@ namespace Monitor
             this.Column7,
             this.Column8,
             this.Column9});
-            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(712, 41);
+            this.dataGridView_VVAOffset2.Location = new System.Drawing.Point(712, 140);
             this.dataGridView_VVAOffset2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_VVAOffset2.Name = "dataGridView_VVAOffset2";
             this.dataGridView_VVAOffset2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(510, 262);
+            this.dataGridView_VVAOffset2.Size = new System.Drawing.Size(510, 163);
             this.dataGridView_VVAOffset2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn8
@@ -7984,9 +8106,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8019,21 +8141,22 @@ namespace Monitor
             this.Column11.Name = "Column11";
             this.Column11.Width = 55;
             // 
-            // tabPage9
+            // tabPage_Page4
             // 
-            this.tabPage9.Controls.Add(this.label92);
-            this.tabPage9.Controls.Add(this.dataGridView10);
-            this.tabPage9.Controls.Add(this.label91);
-            this.tabPage9.Controls.Add(this.dataGridView9);
-            this.tabPage9.Controls.Add(this.label90);
-            this.tabPage9.Controls.Add(this.dataGridView8);
-            this.tabPage9.Location = new System.Drawing.Point(4, 27);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage9.TabIndex = 3;
-            this.tabPage9.Text = "Page 8";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.tabPage_Page4.Controls.Add(this.groupBox46);
+            this.tabPage_Page4.Controls.Add(this.label92);
+            this.tabPage_Page4.Controls.Add(this.dataGridView10);
+            this.tabPage_Page4.Controls.Add(this.label91);
+            this.tabPage_Page4.Controls.Add(this.dataGridView9);
+            this.tabPage_Page4.Controls.Add(this.label90);
+            this.tabPage_Page4.Controls.Add(this.dataGridView8);
+            this.tabPage_Page4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page4.Name = "tabPage_Page4";
+            this.tabPage_Page4.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page4.TabIndex = 3;
+            this.tabPage_Page4.Text = "Page4";
+            this.tabPage_Page4.UseVisualStyleBackColor = true;
             // 
             // label92
             // 
@@ -10120,6 +10243,528 @@ namespace Monitor
             this.label82.TabIndex = 35;
             this.label82.Text = "Strobe";
             // 
+            // tabPage_Page5
+            // 
+            this.tabPage_Page5.Controls.Add(this.groupBox47);
+            this.tabPage_Page5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page5.Name = "tabPage_Page5";
+            this.tabPage_Page5.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page5.TabIndex = 5;
+            this.tabPage_Page5.Text = "Page5";
+            this.tabPage_Page5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page6
+            // 
+            this.tabPage_Page6.Controls.Add(this.groupBox49);
+            this.tabPage_Page6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page6.Name = "tabPage_Page6";
+            this.tabPage_Page6.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page6.TabIndex = 6;
+            this.tabPage_Page6.Text = "Page6";
+            this.tabPage_Page6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page7
+            // 
+            this.tabPage_Page7.Controls.Add(this.groupBox51);
+            this.tabPage_Page7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page7.Name = "tabPage_Page7";
+            this.tabPage_Page7.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page7.TabIndex = 7;
+            this.tabPage_Page7.Text = "Page7";
+            this.tabPage_Page7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page8
+            // 
+            this.tabPage_Page8.Controls.Add(this.groupBox52);
+            this.tabPage_Page8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page8.Name = "tabPage_Page8";
+            this.tabPage_Page8.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page8.TabIndex = 8;
+            this.tabPage_Page8.Text = "Page8";
+            this.tabPage_Page8.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page9
+            // 
+            this.tabPage_Page9.Controls.Add(this.groupBox53);
+            this.tabPage_Page9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page9.Name = "tabPage_Page9";
+            this.tabPage_Page9.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page9.TabIndex = 9;
+            this.tabPage_Page9.Text = "Page9";
+            this.tabPage_Page9.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page10
+            // 
+            this.tabPage_Page10.Controls.Add(this.groupBox54);
+            this.tabPage_Page10.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page10.Name = "tabPage_Page10";
+            this.tabPage_Page10.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page10.TabIndex = 10;
+            this.tabPage_Page10.Text = "Page10";
+            this.tabPage_Page10.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page2
+            // 
+            this.tabPage_Page2.Controls.Add(this.groupBox44);
+            this.tabPage_Page2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page2.Name = "tabPage_Page2";
+            this.tabPage_Page2.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page2.TabIndex = 11;
+            this.tabPage_Page2.Text = "Page2";
+            this.tabPage_Page2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page11
+            // 
+            this.tabPage_Page11.Controls.Add(this.groupBox55);
+            this.tabPage_Page11.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page11.Name = "tabPage_Page11";
+            this.tabPage_Page11.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page11.TabIndex = 12;
+            this.tabPage_Page11.Text = "Page11";
+            this.tabPage_Page11.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_Page12
+            // 
+            this.tabPage_Page12.Controls.Add(this.groupBox56);
+            this.tabPage_Page12.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page12.Name = "tabPage_Page12";
+            this.tabPage_Page12.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page12.TabIndex = 13;
+            this.tabPage_Page12.Text = "Page12";
+            this.tabPage_Page12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button59);
+            this.groupBox1.Controls.Add(this.button71);
+            this.groupBox1.Location = new System.Drawing.Point(1089, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(141, 130);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Flash operation";
+            // 
+            // button59
+            // 
+            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.Location = new System.Drawing.Point(6, 22);
+            this.button59.Margin = new System.Windows.Forms.Padding(2);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(127, 43);
+            this.button59.TabIndex = 18;
+            this.button59.Text = "Read Page ";
+            this.button59.UseVisualStyleBackColor = true;
+            // 
+            // button71
+            // 
+            this.button71.BackColor = System.Drawing.Color.Transparent;
+            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button71.Location = new System.Drawing.Point(6, 77);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(127, 43);
+            this.button71.TabIndex = 21;
+            this.button71.Text = "Write to Page";
+            this.button71.UseVisualStyleBackColor = false;
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.button72);
+            this.groupBox44.Controls.Add(this.button73);
+            this.groupBox44.Location = new System.Drawing.Point(1091, 0);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Size = new System.Drawing.Size(141, 130);
+            this.groupBox44.TabIndex = 29;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Flash operation";
+            // 
+            // button72
+            // 
+            this.button72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button72.Location = new System.Drawing.Point(6, 22);
+            this.button72.Margin = new System.Windows.Forms.Padding(2);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(127, 43);
+            this.button72.TabIndex = 18;
+            this.button72.Text = "Read Page ";
+            this.button72.UseVisualStyleBackColor = true;
+            // 
+            // button73
+            // 
+            this.button73.BackColor = System.Drawing.Color.Transparent;
+            this.button73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button73.Location = new System.Drawing.Point(6, 77);
+            this.button73.Margin = new System.Windows.Forms.Padding(2);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(127, 43);
+            this.button73.TabIndex = 21;
+            this.button73.Text = "Write to Page";
+            this.button73.UseVisualStyleBackColor = false;
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Controls.Add(this.button76);
+            this.groupBox45.Controls.Add(this.button77);
+            this.groupBox45.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Size = new System.Drawing.Size(141, 130);
+            this.groupBox45.TabIndex = 29;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "Flash operation";
+            // 
+            // button76
+            // 
+            this.button76.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button76.Location = new System.Drawing.Point(6, 22);
+            this.button76.Margin = new System.Windows.Forms.Padding(2);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(127, 43);
+            this.button76.TabIndex = 18;
+            this.button76.Text = "Read Page ";
+            this.button76.UseVisualStyleBackColor = true;
+            // 
+            // button77
+            // 
+            this.button77.BackColor = System.Drawing.Color.Transparent;
+            this.button77.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button77.Location = new System.Drawing.Point(6, 77);
+            this.button77.Margin = new System.Windows.Forms.Padding(2);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(127, 43);
+            this.button77.TabIndex = 21;
+            this.button77.Text = "Write to Page";
+            this.button77.UseVisualStyleBackColor = false;
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.button78);
+            this.groupBox46.Controls.Add(this.button79);
+            this.groupBox46.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Size = new System.Drawing.Size(141, 130);
+            this.groupBox46.TabIndex = 29;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "Flash operation";
+            // 
+            // button78
+            // 
+            this.button78.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button78.Location = new System.Drawing.Point(6, 22);
+            this.button78.Margin = new System.Windows.Forms.Padding(2);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(127, 43);
+            this.button78.TabIndex = 18;
+            this.button78.Text = "Read Page ";
+            this.button78.UseVisualStyleBackColor = true;
+            // 
+            // button79
+            // 
+            this.button79.BackColor = System.Drawing.Color.Transparent;
+            this.button79.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button79.Location = new System.Drawing.Point(6, 77);
+            this.button79.Margin = new System.Windows.Forms.Padding(2);
+            this.button79.Name = "button79";
+            this.button79.Size = new System.Drawing.Size(127, 43);
+            this.button79.TabIndex = 21;
+            this.button79.Text = "Write to Page";
+            this.button79.UseVisualStyleBackColor = false;
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.button80);
+            this.groupBox47.Controls.Add(this.button81);
+            this.groupBox47.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Size = new System.Drawing.Size(141, 130);
+            this.groupBox47.TabIndex = 29;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Flash operation";
+            // 
+            // button80
+            // 
+            this.button80.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button80.Location = new System.Drawing.Point(6, 22);
+            this.button80.Margin = new System.Windows.Forms.Padding(2);
+            this.button80.Name = "button80";
+            this.button80.Size = new System.Drawing.Size(127, 43);
+            this.button80.TabIndex = 18;
+            this.button80.Text = "Read Page ";
+            this.button80.UseVisualStyleBackColor = true;
+            // 
+            // button81
+            // 
+            this.button81.BackColor = System.Drawing.Color.Transparent;
+            this.button81.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button81.Location = new System.Drawing.Point(6, 77);
+            this.button81.Margin = new System.Windows.Forms.Padding(2);
+            this.button81.Name = "button81";
+            this.button81.Size = new System.Drawing.Size(127, 43);
+            this.button81.TabIndex = 21;
+            this.button81.Text = "Write to Page";
+            this.button81.UseVisualStyleBackColor = false;
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.button82);
+            this.groupBox49.Controls.Add(this.button83);
+            this.groupBox49.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox49.Size = new System.Drawing.Size(141, 130);
+            this.groupBox49.TabIndex = 29;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Flash operation";
+            // 
+            // button82
+            // 
+            this.button82.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button82.Location = new System.Drawing.Point(6, 22);
+            this.button82.Margin = new System.Windows.Forms.Padding(2);
+            this.button82.Name = "button82";
+            this.button82.Size = new System.Drawing.Size(127, 43);
+            this.button82.TabIndex = 18;
+            this.button82.Text = "Read Page ";
+            this.button82.UseVisualStyleBackColor = true;
+            // 
+            // button83
+            // 
+            this.button83.BackColor = System.Drawing.Color.Transparent;
+            this.button83.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button83.Location = new System.Drawing.Point(6, 77);
+            this.button83.Margin = new System.Windows.Forms.Padding(2);
+            this.button83.Name = "button83";
+            this.button83.Size = new System.Drawing.Size(127, 43);
+            this.button83.TabIndex = 21;
+            this.button83.Text = "Write to Page";
+            this.button83.UseVisualStyleBackColor = false;
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Controls.Add(this.button84);
+            this.groupBox51.Controls.Add(this.button85);
+            this.groupBox51.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Size = new System.Drawing.Size(141, 130);
+            this.groupBox51.TabIndex = 29;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "Flash operation";
+            // 
+            // button84
+            // 
+            this.button84.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button84.Location = new System.Drawing.Point(6, 22);
+            this.button84.Margin = new System.Windows.Forms.Padding(2);
+            this.button84.Name = "button84";
+            this.button84.Size = new System.Drawing.Size(127, 43);
+            this.button84.TabIndex = 18;
+            this.button84.Text = "Read Page ";
+            this.button84.UseVisualStyleBackColor = true;
+            // 
+            // button85
+            // 
+            this.button85.BackColor = System.Drawing.Color.Transparent;
+            this.button85.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button85.Location = new System.Drawing.Point(6, 77);
+            this.button85.Margin = new System.Windows.Forms.Padding(2);
+            this.button85.Name = "button85";
+            this.button85.Size = new System.Drawing.Size(127, 43);
+            this.button85.TabIndex = 21;
+            this.button85.Text = "Write to Page";
+            this.button85.UseVisualStyleBackColor = false;
+            // 
+            // groupBox52
+            // 
+            this.groupBox52.Controls.Add(this.button86);
+            this.groupBox52.Controls.Add(this.button89);
+            this.groupBox52.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Name = "groupBox52";
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Size = new System.Drawing.Size(141, 130);
+            this.groupBox52.TabIndex = 29;
+            this.groupBox52.TabStop = false;
+            this.groupBox52.Text = "Flash operation";
+            // 
+            // button86
+            // 
+            this.button86.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button86.Location = new System.Drawing.Point(6, 22);
+            this.button86.Margin = new System.Windows.Forms.Padding(2);
+            this.button86.Name = "button86";
+            this.button86.Size = new System.Drawing.Size(127, 43);
+            this.button86.TabIndex = 18;
+            this.button86.Text = "Read Page ";
+            this.button86.UseVisualStyleBackColor = true;
+            // 
+            // button89
+            // 
+            this.button89.BackColor = System.Drawing.Color.Transparent;
+            this.button89.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button89.Location = new System.Drawing.Point(6, 77);
+            this.button89.Margin = new System.Windows.Forms.Padding(2);
+            this.button89.Name = "button89";
+            this.button89.Size = new System.Drawing.Size(127, 43);
+            this.button89.TabIndex = 21;
+            this.button89.Text = "Write to Page";
+            this.button89.UseVisualStyleBackColor = false;
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Controls.Add(this.button90);
+            this.groupBox53.Controls.Add(this.button91);
+            this.groupBox53.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Size = new System.Drawing.Size(141, 130);
+            this.groupBox53.TabIndex = 29;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "Flash operation";
+            // 
+            // button90
+            // 
+            this.button90.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button90.Location = new System.Drawing.Point(6, 22);
+            this.button90.Margin = new System.Windows.Forms.Padding(2);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(127, 43);
+            this.button90.TabIndex = 18;
+            this.button90.Text = "Read Page ";
+            this.button90.UseVisualStyleBackColor = true;
+            // 
+            // button91
+            // 
+            this.button91.BackColor = System.Drawing.Color.Transparent;
+            this.button91.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button91.Location = new System.Drawing.Point(6, 77);
+            this.button91.Margin = new System.Windows.Forms.Padding(2);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(127, 43);
+            this.button91.TabIndex = 21;
+            this.button91.Text = "Write to Page";
+            this.button91.UseVisualStyleBackColor = false;
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Controls.Add(this.button92);
+            this.groupBox54.Controls.Add(this.button93);
+            this.groupBox54.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Size = new System.Drawing.Size(141, 130);
+            this.groupBox54.TabIndex = 29;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "Flash operation";
+            // 
+            // button92
+            // 
+            this.button92.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button92.Location = new System.Drawing.Point(6, 22);
+            this.button92.Margin = new System.Windows.Forms.Padding(2);
+            this.button92.Name = "button92";
+            this.button92.Size = new System.Drawing.Size(127, 43);
+            this.button92.TabIndex = 18;
+            this.button92.Text = "Read Page ";
+            this.button92.UseVisualStyleBackColor = true;
+            // 
+            // button93
+            // 
+            this.button93.BackColor = System.Drawing.Color.Transparent;
+            this.button93.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button93.Location = new System.Drawing.Point(6, 77);
+            this.button93.Margin = new System.Windows.Forms.Padding(2);
+            this.button93.Name = "button93";
+            this.button93.Size = new System.Drawing.Size(127, 43);
+            this.button93.TabIndex = 21;
+            this.button93.Text = "Write to Page";
+            this.button93.UseVisualStyleBackColor = false;
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Controls.Add(this.button94);
+            this.groupBox55.Controls.Add(this.button95);
+            this.groupBox55.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Size = new System.Drawing.Size(141, 130);
+            this.groupBox55.TabIndex = 29;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "Flash operation";
+            // 
+            // button94
+            // 
+            this.button94.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button94.Location = new System.Drawing.Point(6, 22);
+            this.button94.Margin = new System.Windows.Forms.Padding(2);
+            this.button94.Name = "button94";
+            this.button94.Size = new System.Drawing.Size(127, 43);
+            this.button94.TabIndex = 18;
+            this.button94.Text = "Read Page ";
+            this.button94.UseVisualStyleBackColor = true;
+            // 
+            // button95
+            // 
+            this.button95.BackColor = System.Drawing.Color.Transparent;
+            this.button95.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button95.Location = new System.Drawing.Point(6, 77);
+            this.button95.Margin = new System.Windows.Forms.Padding(2);
+            this.button95.Name = "button95";
+            this.button95.Size = new System.Drawing.Size(127, 43);
+            this.button95.TabIndex = 21;
+            this.button95.Text = "Write to Page";
+            this.button95.UseVisualStyleBackColor = false;
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Controls.Add(this.button96);
+            this.groupBox56.Controls.Add(this.button98);
+            this.groupBox56.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Size = new System.Drawing.Size(141, 130);
+            this.groupBox56.TabIndex = 29;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "Flash operation";
+            // 
+            // button96
+            // 
+            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button96.Location = new System.Drawing.Point(6, 22);
+            this.button96.Margin = new System.Windows.Forms.Padding(2);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(127, 43);
+            this.button96.TabIndex = 18;
+            this.button96.Text = "Read Page ";
+            this.button96.UseVisualStyleBackColor = true;
+            // 
+            // button98
+            // 
+            this.button98.BackColor = System.Drawing.Color.Transparent;
+            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button98.Location = new System.Drawing.Point(6, 77);
+            this.button98.Margin = new System.Windows.Forms.Padding(2);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(127, 43);
+            this.button98.TabIndex = 21;
+            this.button98.Text = "Write to Page";
+            this.button98.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -10197,7 +10842,7 @@ namespace Monitor
             this.groupBox48.ResumeLayout(false);
             this.groupBox38.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
+            this.tabPage_Main.ResumeLayout(false);
             this.groupBox_SystemMode.ResumeLayout(false);
             this.groupBox_SystemMode.PerformLayout();
             this.groupBox37.ResumeLayout(false);
@@ -10220,21 +10865,21 @@ namespace Monitor
             this.groupBox_SimulatorVersion.PerformLayout();
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
-            this.tabPage13.ResumeLayout(false);
-            this.tabPage13.PerformLayout();
+            this.tabPage_Page0.ResumeLayout(false);
+            this.tabPage_Page0.PerformLayout();
             this.groupBox50.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Page1_4)).EndInit();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.tabPage_Page1.ResumeLayout(false);
+            this.tabPage_Page1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage1)).EndInit();
+            this.tabPage_Page3.ResumeLayout(false);
+            this.tabPage_Page3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).EndInit();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
+            this.tabPage_Page4.ResumeLayout(false);
+            this.tabPage_Page4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
@@ -10293,6 +10938,27 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.tabPage_Page5.ResumeLayout(false);
+            this.tabPage_Page6.ResumeLayout(false);
+            this.tabPage_Page7.ResumeLayout(false);
+            this.tabPage_Page8.ResumeLayout(false);
+            this.tabPage_Page9.ResumeLayout(false);
+            this.tabPage_Page10.ResumeLayout(false);
+            this.tabPage_Page2.ResumeLayout(false);
+            this.tabPage_Page11.ResumeLayout(false);
+            this.tabPage_Page12.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox51.ResumeLayout(false);
+            this.groupBox52.ResumeLayout(false);
+            this.groupBox53.ResumeLayout(false);
+            this.groupBox54.ResumeLayout(false);
+            this.groupBox55.ResumeLayout(false);
+            this.groupBox56.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -11605,7 +12271,7 @@ namespace Monitor
             dataGridView_VVAOffset2.TopLeftHeaderCell.Value = "Power (dBm)";
             dataGridView_VVAOffset1.TopLeftHeaderCell.Value = "Power (dBm)";
        //     dataGridView_OverUnder.TopLeftHeaderCell.Value = "Volts (V)";
-            dataGridView_Page1_4.TopLeftHeaderCell.Value = "VVA";
+            dataGridView_ValPage1.TopLeftHeaderCell.Value = "VVA";
 
 
 
@@ -11622,8 +12288,8 @@ namespace Monitor
             for (i = 0; i < 32; i++)
             {
 
-                dataGridView_Page1_4.Rows.Add();
-                dataGridView_Page1_4.Rows[i].HeaderCell.Value = string.Format("{0}C", Temperature);
+                dataGridView_ValPage1.Rows.Add();
+                dataGridView_ValPage1.Rows[i].HeaderCell.Value = string.Format("{0}C", Temperature);
 
 
                 dataGridView8.Rows.Add();
@@ -11831,36 +12497,6 @@ namespace Monitor
             //CALIBRATION_DATE
             dataGridView_ValPage0.Rows.Add();
             dataGridView_ValPage0.Rows[i].HeaderCell.Value = "CALIBRATION_DATE";
-            i++;
-
-
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "FW clamping (uS)";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "Pulse over DC clamping";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 Vgg";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 Vdd";
-            i++;
-
-            dataGridView_ValPage0.Rows.Add();
-            dataGridView_ValPage0.Rows[i].HeaderCell.Value = "TGA2700 DC4 Vdd";
             i++;
 
 
