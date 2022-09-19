@@ -608,7 +608,6 @@ namespace Monitor
         private TextBox textBox_SimulatorHWVersion;
         private Label label95;
         private GroupBox groupBox37;
-        private Button button73;
         private Label label114;
         private Label label113;
         private Label label112;
@@ -781,6 +780,13 @@ namespace Monitor
         private Button button44;
         private Label label77;
         private Button button_SEURecover;
+        private Label label78;
+        private TextBox textBox_StatusUUT33;
+        private Label label151;
+        private Label label150;
+        private TextBox textBox_StrobeWidth;
+        private TextBox textBox_StrobeDelay;
+        private Label label82;
         private static readonly string PREAMBLE = "23";
 
 
@@ -835,11 +841,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1125,10 +1131,10 @@ namespace Monitor
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.button_SEURecover = new System.Windows.Forms.Button();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button73 = new System.Windows.Forms.Button();
             this.label114 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
@@ -1573,7 +1579,13 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button_SEURecover = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT33 = new System.Windows.Forms.TextBox();
+            this.textBox_StrobeDelay = new System.Windows.Forms.TextBox();
+            this.textBox_StrobeWidth = new System.Windows.Forms.TextBox();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2000,17 +2012,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea7.AxisX.Title = "Freq";
+            chartArea7.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.AxisY.Title = "Power [dBm]";
+            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend7.IsTextAutoFit = false;
+            legend7.Name = "Legend1";
+            legend7.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5147,11 +5159,15 @@ namespace Monitor
             // 
             // groupBox37
             // 
+            this.groupBox37.Controls.Add(this.label82);
+            this.groupBox37.Controls.Add(this.label151);
+            this.groupBox37.Controls.Add(this.label150);
+            this.groupBox37.Controls.Add(this.textBox_StrobeWidth);
+            this.groupBox37.Controls.Add(this.textBox_StrobeDelay);
             this.groupBox37.Controls.Add(this.button_SEURecover);
             this.groupBox37.Controls.Add(this.checkBox4);
             this.groupBox37.Controls.Add(this.checkBox3);
             this.groupBox37.Controls.Add(this.checkBox2);
-            this.groupBox37.Controls.Add(this.button73);
             this.groupBox37.Controls.Add(this.label114);
             this.groupBox37.Controls.Add(this.label113);
             this.groupBox37.Controls.Add(this.label112);
@@ -5171,6 +5187,16 @@ namespace Monitor
             this.groupBox37.Size = new System.Drawing.Size(354, 149);
             this.groupBox37.TabIndex = 17;
             this.groupBox37.TabStop = false;
+            // 
+            // button_SEURecover
+            // 
+            this.button_SEURecover.Location = new System.Drawing.Point(18, 114);
+            this.button_SEURecover.Name = "button_SEURecover";
+            this.button_SEURecover.Size = new System.Drawing.Size(39, 23);
+            this.button_SEURecover.TabIndex = 29;
+            this.button_SEURecover.Text = "On";
+            this.button_SEURecover.UseVisualStyleBackColor = true;
+            this.button_SEURecover.Click += new System.EventHandler(this.button_SEURecover_Click);
             // 
             // checkBox4
             // 
@@ -5210,19 +5236,6 @@ namespace Monitor
             this.checkBox2.Text = "On";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
-            // 
-            // button73
-            // 
-            this.button73.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button73.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button73.Location = new System.Drawing.Point(233, 98);
-            this.button73.Margin = new System.Windows.Forms.Padding(2);
-            this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(107, 39);
-            this.button73.TabIndex = 17;
-            this.button73.Text = "Strobe";
-            this.button73.UseVisualStyleBackColor = false;
-            this.button73.Click += new System.EventHandler(this.button73_Click_3);
             // 
             // label114
             // 
@@ -5318,7 +5331,7 @@ namespace Monitor
             this.textBox_FTbit.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_FTbit, "0-7");
             this.textBox_FTbit.TextChanged += new System.EventHandler(this.textBox_FTbit_TextChanged);
-            this.textBox_FTbit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox83_KeyDown);
+            this.textBox_FTbit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_FTbit_KeyDown);
             // 
             // label108
             // 
@@ -5340,7 +5353,7 @@ namespace Monitor
             this.textBox_FreqBit.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_FreqBit, "0-7");
             this.textBox_FreqBit.TextChanged += new System.EventHandler(this.textBox84_TextChanged);
-            this.textBox_FreqBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox84_KeyDown);
+            this.textBox_FreqBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_FreqBit_KeyDown);
             // 
             // label109
             // 
@@ -5354,6 +5367,8 @@ namespace Monitor
             // 
             // groupBox_StatusUUT
             // 
+            this.groupBox_StatusUUT.Controls.Add(this.label78);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT33);
             this.groupBox_StatusUUT.Controls.Add(this.label103);
             this.groupBox_StatusUUT.Controls.Add(this.button74);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT32);
@@ -5502,7 +5517,7 @@ namespace Monitor
             // 
             // textBox_StatusUUT25
             // 
-            this.textBox_StatusUUT25.Location = new System.Drawing.Point(538, 262);
+            this.textBox_StatusUUT25.Location = new System.Drawing.Point(541, 234);
             this.textBox_StatusUUT25.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT25.Name = "textBox_StatusUUT25";
             this.textBox_StatusUUT25.ReadOnly = true;
@@ -5526,7 +5541,7 @@ namespace Monitor
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.Black;
-            this.label69.Location = new System.Drawing.Point(446, 268);
+            this.label69.Location = new System.Drawing.Point(449, 240);
             this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(60, 14);
@@ -5554,9 +5569,9 @@ namespace Monitor
             this.label120.Location = new System.Drawing.Point(241, 351);
             this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(68, 14);
+            this.label120.Size = new System.Drawing.Size(82, 14);
             this.label120.TabIndex = 75;
-            this.label120.Text = "CAL SAR BIT";
+            this.label120.Text = "SPA rise delay";
             // 
             // textBox_StatusUUT30
             // 
@@ -5570,7 +5585,7 @@ namespace Monitor
             // 
             // textBox_StatusUUT26
             // 
-            this.textBox_StatusUUT26.Location = new System.Drawing.Point(538, 295);
+            this.textBox_StatusUUT26.Location = new System.Drawing.Point(541, 267);
             this.textBox_StatusUUT26.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT26.Name = "textBox_StatusUUT26";
             this.textBox_StatusUUT26.ReadOnly = true;
@@ -5637,7 +5652,7 @@ namespace Monitor
             // 
             // textBox_StatusUUT24
             // 
-            this.textBox_StatusUUT24.Location = new System.Drawing.Point(538, 233);
+            this.textBox_StatusUUT24.Location = new System.Drawing.Point(541, 205);
             this.textBox_StatusUUT24.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT24.Name = "textBox_StatusUUT24";
             this.textBox_StatusUUT24.ReadOnly = true;
@@ -5684,16 +5699,16 @@ namespace Monitor
             this.label57.Location = new System.Drawing.Point(241, 327);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(46, 14);
+            this.label57.Size = new System.Drawing.Size(80, 14);
             this.label57.TabIndex = 54;
-            this.label57.Text = "DCA bit";
+            this.label57.Text = "SPA fall delay";
             // 
             // label67
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(446, 239);
+            this.label67.Location = new System.Drawing.Point(449, 211);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(60, 14);
@@ -5719,16 +5734,16 @@ namespace Monitor
             this.label58.Location = new System.Drawing.Point(241, 296);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(37, 14);
+            this.label58.Size = new System.Drawing.Size(86, 14);
             this.label58.TabIndex = 52;
-            this.label58.Text = "FT bit";
+            this.label58.Text = "MPA rise delay";
             // 
             // label70
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.Black;
-            this.label70.Location = new System.Drawing.Point(446, 300);
+            this.label70.Location = new System.Drawing.Point(449, 272);
             this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(60, 14);
@@ -5754,9 +5769,9 @@ namespace Monitor
             this.label59.Location = new System.Drawing.Point(241, 264);
             this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(47, 14);
+            this.label59.Size = new System.Drawing.Size(84, 14);
             this.label59.TabIndex = 50;
-            this.label59.Text = "freq bit";
+            this.label59.Text = "MPA fall delay";
             // 
             // textBox_StatusUUT20
             // 
@@ -5776,9 +5791,9 @@ namespace Monitor
             this.label60.Location = new System.Drawing.Point(241, 234);
             this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(76, 14);
+            this.label60.Size = new System.Drawing.Size(62, 14);
             this.label60.TabIndex = 48;
-            this.label60.Text = "Pulse period";
+            this.label60.Text = "Pulse freq";
             // 
             // textBox_StatusUUT19
             // 
@@ -7582,8 +7597,8 @@ namespace Monitor
             // 
             // dataGridView_Page1_4
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView_Page1_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_Page1_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_Page1_4.ColumnHeadersHeight = 29;
@@ -7608,8 +7623,8 @@ namespace Monitor
             this.dataGridView_Page1_4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Page1_4.Name = "dataGridView_Page1_4";
             this.dataGridView_Page1_4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_Page1_4.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView_Page1_4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_Page1_4.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_Page1_4.TabIndex = 28;
@@ -8014,9 +8029,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10068,15 +10083,87 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // button_SEURecover
+            // label78
             // 
-            this.button_SEURecover.Location = new System.Drawing.Point(18, 114);
-            this.button_SEURecover.Name = "button_SEURecover";
-            this.button_SEURecover.Size = new System.Drawing.Size(39, 23);
-            this.button_SEURecover.TabIndex = 29;
-            this.button_SEURecover.Text = "On";
-            this.button_SEURecover.UseVisualStyleBackColor = true;
-            this.button_SEURecover.Click += new System.EventHandler(this.button_SEURecover_Click);
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.Black;
+            this.label78.Location = new System.Drawing.Point(450, 345);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(83, 14);
+            this.label78.TabIndex = 89;
+            this.label78.Text = "Input controls";
+            // 
+            // textBox_StatusUUT33
+            // 
+            this.textBox_StatusUUT33.Location = new System.Drawing.Point(541, 345);
+            this.textBox_StatusUUT33.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT33.Name = "textBox_StatusUUT33";
+            this.textBox_StatusUUT33.ReadOnly = true;
+            this.textBox_StatusUUT33.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT33.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.textBox_StatusUUT33, "(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4, 11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 7:F" +
+        "T3, 6:FT2, 5:FT1, 4:FT0 , 3: freq4 , 2:freq2 , 1:freq1 , 0: freq0)");
+            this.textBox_StatusUUT33.TextChanged += new System.EventHandler(this.textBox_StatusUUT33_TextChanged);
+            this.textBox_StatusUUT33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_StatusUUT33_MouseDown);
+            // 
+            // textBox_StrobeDelay
+            // 
+            this.textBox_StrobeDelay.Location = new System.Drawing.Point(244, 119);
+            this.textBox_StrobeDelay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StrobeDelay.Name = "textBox_StrobeDelay";
+            this.textBox_StrobeDelay.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeDelay.TabIndex = 30;
+            this.textBox_StrobeDelay.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_StrobeDelay, "0-7");
+            this.textBox_StrobeDelay.TextChanged += new System.EventHandler(this.textBox_StrobeDelay_TextChanged);
+            this.textBox_StrobeDelay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeDelay_KeyDown);
+            // 
+            // textBox_StrobeWidth
+            // 
+            this.textBox_StrobeWidth.Location = new System.Drawing.Point(301, 119);
+            this.textBox_StrobeWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StrobeWidth.Name = "textBox_StrobeWidth";
+            this.textBox_StrobeWidth.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeWidth.TabIndex = 31;
+            this.textBox_StrobeWidth.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_StrobeWidth, "0-7");
+            this.textBox_StrobeWidth.TextChanged += new System.EventHandler(this.textBox_StrobeWidth_TextChanged);
+            this.textBox_StrobeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeWidth_KeyDown);
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.Location = new System.Drawing.Point(253, 99);
+            this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(34, 13);
+            this.label150.TabIndex = 33;
+            this.label150.Text = "Delay";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label151.Location = new System.Drawing.Point(304, 100);
+            this.label151.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(36, 13);
+            this.label151.TabIndex = 34;
+            this.label151.Text = "Width";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(282, 85);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(38, 13);
+            this.label82.TabIndex = 35;
+            this.label82.Text = "Strobe";
             // 
             // MainForm
             // 
@@ -13536,6 +13623,11 @@ namespace Monitor
                         textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
+                    case "0088":
+                        textBox_StatusUUT33.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+
+                        break;
+
                     case "0090":
                         textBox_SystemFWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -13558,6 +13650,29 @@ namespace Monitor
                     case "00A0":
                         textBox_StatusUUT25.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x00FF).ToString();
                         textBox_StatusUUT26.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00 ) >> 8).ToString();
+                        break;
+
+
+                    case "00A7":
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT18.Text = String.Format("{0}", DecimalNumber);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT19.Text = String.Format("{0}", DecimalNumber);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT20.Text = String.Format("{0}", DecimalNumber);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT21.Text = String.Format("{0}", DecimalNumber);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT22.Text = String.Format("{0}", DecimalNumber);
+
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_StatusUUT23.Text = String.Format("{0}", DecimalNumber);
+
                         break;
 
 
@@ -21774,17 +21889,16 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                textBox4.Text = "01";
+                Write_Register_To_Simulator(" 00 03", "00 01");
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox4.Text = "00";
+
+                Write_Register_To_Simulator(" 00 03", "00 00");
                 Checkbx.BackColor = default;
             }
-
-            button51_Click(null, null);
         }
 
         private void button73_Click_3(object sender, EventArgs e)
@@ -21824,13 +21938,8 @@ Note: eStatus enum 
                     int.TryParse(m_TextBox.Text, out int Data);
                     string hexValue = Data.ToString("X4");
 
-                    //Write_Register(" 00 03", "00 07");
-                    //await Task.Delay(300);
-
                     Write_Register_To_Simulator(" 00 05", hexValue);
-                    //await Task.Delay(500);
 
-                    //Write_Register_To_UUT(" 00 01", "04 00");
 
 
                 }
@@ -22493,8 +22602,11 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 B7","00 14");
             await Task.Delay(Delay);
 
-            //Read_Register_From_UUT("00 B8");
-            //await Task.Delay(500);
+            Read_Register_From_UUT("00 A7","00 0C");
+            await Task.Delay(Delay);
+
+            Read_Register_From_UUT("00 88");
+            await Task.Delay(Delay);
 
             //Read_Register_From_UUT("00 B9");
             //await Task.Delay(500);
@@ -24160,14 +24272,165 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             Button m_button = (Button)sender;
             m_button.BackColor = Color.LightGreen;
 
-            Write_Register_To_UUT(" 00 17", "0F FF");
-            await Task.Delay(100);
+            Write_Register_To_Simulator(" 00 17", "0F FF");
+            await Task.Delay(500);
 
-            Write_Register_To_UUT(" 00 13", "00 01");
-            await Task.Delay(1000);
+            Write_Register_To_Simulator(" 00 13", "00 01");
+            await Task.Delay(500);
 
             m_button.BackColor = default;
 
+        }
+
+        private void textBox_StatusUUT33_TextChanged(object sender, EventArgs e)
+        {
+            SetTextBoxTextChangedColor((TextBox)sender);
+        }
+
+        private void textBox_StatusUUT33_MouseDown(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs me = e;
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                MessageBox.Show(@"
+
+(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4,
+11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 
+7:FT3, 6:FT2, 5:FT1, 4:FT0 ,
+3: FREQ3 , 2:FREQ2 , 1:FREQ1 , 0:FREQ0)
+
+", "Help");
+
+
+
+            }
+        }
+
+        private void textBox_FreqBit_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    Write_Register_To_Simulator(" 00 05", hexValue);
+
+
+                }
+
+            }
+        }
+
+        private void textBox_FTbit_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    Write_Register_To_Simulator(" 00 06", hexValue);
+
+
+
+                }
+
+            }
+        }
+
+        private void textBox_StrobeDelay_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            if (int.TryParse(txtbox.Text, out int Num) == true)
+            {
+                if (Num >= 0 && Num <= 99999999)
+                {
+                    txtbox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtbox.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private void textBox_StrobeWidth_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbox = (TextBox)sender;
+            if (int.TryParse(txtbox.Text, out int Num) == true)
+            {
+                if (Num >= 0 && Num <= 99999999)
+                {
+                    txtbox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    txtbox.BackColor = Color.Red;
+                }
+            }
+            else
+            {
+                txtbox.BackColor = Color.Red;
+            }
+        }
+
+        private async void textBox_StrobeDelay_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+
+                    int.TryParse(textBox_StrobeWidth.Text, out int Width);
+
+
+                    Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
+                    await Task.Delay(300);
+                    Write_Register_To_Simulator(" 00 03", "00 08");
+
+
+
+                }
+
+            }
+        }
+
+        private async void textBox_StrobeWidth_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+
+                    int.TryParse(textBox_StrobeWidth.Text, out int Width);
+
+
+                    Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
+                    await Task.Delay(300);
+                    Write_Register_To_Simulator(" 00 03", "00 08");
+
+
+
+                }
+
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
