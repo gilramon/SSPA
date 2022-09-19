@@ -647,7 +647,6 @@ namespace Monitor
         private TextBox textBox_SimulatorStatus6;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
-        private CheckBox checkBox9;
         private CheckBox checkBox2;
         private Label label81;
         private Label label117;
@@ -781,6 +780,7 @@ namespace Monitor
         private Button button42;
         private Button button44;
         private Label label77;
+        private Button button_SEURecover;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1127,7 +1127,6 @@ namespace Monitor
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button73 = new System.Windows.Forms.Button();
             this.label114 = new System.Windows.Forms.Label();
@@ -1574,6 +1573,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_SEURecover = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2287,7 +2287,7 @@ namespace Monitor
             this.checkBox_StopLogging.Location = new System.Drawing.Point(279, 609);
             this.checkBox_StopLogging.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_StopLogging.Name = "checkBox_StopLogging";
-            this.checkBox_StopLogging.Size = new System.Drawing.Size(106, 26);
+            this.checkBox_StopLogging.Size = new System.Drawing.Size(105, 26);
             this.checkBox_StopLogging.TabIndex = 8;
             this.checkBox_StopLogging.Text = "Stop Printing";
             this.checkBox_StopLogging.UseVisualStyleBackColor = true;
@@ -2312,7 +2312,7 @@ namespace Monitor
             this.checkBox_RecordGeneral.Location = new System.Drawing.Point(382, 609);
             this.checkBox_RecordGeneral.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RecordGeneral.Name = "checkBox_RecordGeneral";
-            this.checkBox_RecordGeneral.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordGeneral.Size = new System.Drawing.Size(98, 26);
             this.checkBox_RecordGeneral.TabIndex = 7;
             this.checkBox_RecordGeneral.Text = "Record Log";
             this.checkBox_RecordGeneral.UseVisualStyleBackColor = true;
@@ -2326,7 +2326,7 @@ namespace Monitor
             this.PauseCheck.Location = new System.Drawing.Point(478, 609);
             this.PauseCheck.Margin = new System.Windows.Forms.Padding(2);
             this.PauseCheck.Name = "PauseCheck";
-            this.PauseCheck.Size = new System.Drawing.Size(62, 26);
+            this.PauseCheck.Size = new System.Drawing.Size(61, 26);
             this.PauseCheck.TabIndex = 5;
             this.PauseCheck.Text = "Pause";
             this.PauseCheck.UseVisualStyleBackColor = true;
@@ -4930,7 +4930,7 @@ namespace Monitor
             this.checkBox_RecordMiniAda.Location = new System.Drawing.Point(6, 610);
             this.checkBox_RecordMiniAda.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RecordMiniAda.Name = "checkBox_RecordMiniAda";
-            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(99, 26);
+            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(98, 26);
             this.checkBox_RecordMiniAda.TabIndex = 7;
             this.checkBox_RecordMiniAda.Text = "Record Log";
             this.checkBox_RecordMiniAda.UseVisualStyleBackColor = true;
@@ -4943,7 +4943,7 @@ namespace Monitor
             this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(102, 610);
             this.checkBox_PauseMiniAda.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_PauseMiniAda.Name = "checkBox_PauseMiniAda";
-            this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(62, 26);
+            this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(61, 26);
             this.checkBox_PauseMiniAda.TabIndex = 5;
             this.checkBox_PauseMiniAda.Text = "Pause";
             this.checkBox_PauseMiniAda.UseVisualStyleBackColor = true;
@@ -5147,9 +5147,9 @@ namespace Monitor
             // 
             // groupBox37
             // 
+            this.groupBox37.Controls.Add(this.button_SEURecover);
             this.groupBox37.Controls.Add(this.checkBox4);
             this.groupBox37.Controls.Add(this.checkBox3);
-            this.groupBox37.Controls.Add(this.checkBox9);
             this.groupBox37.Controls.Add(this.checkBox2);
             this.groupBox37.Controls.Add(this.button73);
             this.groupBox37.Controls.Add(this.label114);
@@ -5197,19 +5197,6 @@ namespace Monitor
             this.checkBox3.Text = "On";
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(18, 112);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(36, 28);
-            this.checkBox9.TabIndex = 26;
-            this.checkBox9.Text = "On";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -6577,7 +6564,7 @@ namespace Monitor
             this.textBox_DCA1.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_DCA1, "Press Enter to update");
             this.textBox_DCA1.TextChanged += new System.EventHandler(this.textBox29_TextChanged);
-            this.textBox_DCA1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox29_KeyDown);
+            this.textBox_DCA1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_DCA1_KeyDown);
             // 
             // textBox_DCA2
             // 
@@ -6589,7 +6576,7 @@ namespace Monitor
             this.textBox_DCA2.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_DCA2, "Press Enter to update");
             this.textBox_DCA2.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
-            this.textBox_DCA2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox30_KeyDown);
+            this.textBox_DCA2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_DCA1_KeyDown);
             // 
             // textBox_VVA
             // 
@@ -6601,7 +6588,7 @@ namespace Monitor
             this.textBox_VVA.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_VVA, "Press Enter to update");
             this.textBox_VVA.TextChanged += new System.EventHandler(this.textBox31_TextChanged);
-            this.textBox_VVA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox31_KeyDown);
+            this.textBox_VVA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_VVA_KeyDown);
             // 
             // label36
             // 
@@ -6795,7 +6782,7 @@ namespace Monitor
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(57, 44);
+            this.label126.Location = new System.Drawing.Point(57, 41);
             this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(32, 15);
@@ -6824,7 +6811,7 @@ namespace Monitor
             this.textBox_Vgg2.TabIndex = 20;
             this.textBox_Vgg2.Text = "0";
             this.textBox_Vgg2.TextChanged += new System.EventHandler(this.textBox9_TextChanged_1);
-            this.textBox_Vgg2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox9_KeyDown);
+            this.textBox_Vgg2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Vgg2_KeyDown);
             // 
             // textBox_Vgg1
             // 
@@ -6835,7 +6822,7 @@ namespace Monitor
             this.textBox_Vgg1.TabIndex = 19;
             this.textBox_Vgg1.Text = "0";
             this.textBox_Vgg1.TextChanged += new System.EventHandler(this.textBox11_TextChanged_1);
-            this.textBox_Vgg1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
+            this.textBox_Vgg1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Vgg1_KeyDown);
             // 
             // label124
             // 
@@ -6941,7 +6928,7 @@ namespace Monitor
             this.textBox_4V.TabIndex = 4;
             this.textBox_4V.Text = "0";
             this.textBox_4V.TextChanged += new System.EventHandler(this.textBox27_TextChanged);
-            this.textBox_4V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox27_KeyDown);
+            this.textBox_4V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_4V_KeyDown);
             // 
             // textBox_5V
             // 
@@ -6952,7 +6939,7 @@ namespace Monitor
             this.textBox_5V.TabIndex = 3;
             this.textBox_5V.Text = "0";
             this.textBox_5V.TextChanged += new System.EventHandler(this.textBox26_TextChanged);
-            this.textBox_5V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox26_KeyDown);
+            this.textBox_5V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_5V_KeyDown);
             // 
             // textBox_9V
             // 
@@ -6963,7 +6950,7 @@ namespace Monitor
             this.textBox_9V.TabIndex = 2;
             this.textBox_9V.Text = "0";
             this.textBox_9V.TextChanged += new System.EventHandler(this.textBox25_TextChanged);
-            this.textBox_9V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox25_KeyDown);
+            this.textBox_9V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_9V_KeyDown);
             // 
             // textBox_28V
             // 
@@ -6975,7 +6962,7 @@ namespace Monitor
             this.textBox_28V.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_28V, "0-1000");
             this.textBox_28V.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
-            this.textBox_28V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
+            this.textBox_28V.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_28V_KeyDown);
             // 
             // label25
             // 
@@ -10081,13 +10068,23 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // button_SEURecover
+            // 
+            this.button_SEURecover.Location = new System.Drawing.Point(18, 114);
+            this.button_SEURecover.Name = "button_SEURecover";
+            this.button_SEURecover.Size = new System.Drawing.Size(39, 23);
+            this.button_SEURecover.TabIndex = 29;
+            this.button_SEURecover.Text = "On";
+            this.button_SEURecover.UseVisualStyleBackColor = true;
+            this.button_SEURecover.Click += new System.EventHandler(this.button_SEURecover_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1458, 626);
+            this.ClientSize = new System.Drawing.Size(1475, 643);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -13521,9 +13518,9 @@ namespace Monitor
                         textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_9V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_Vgg2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_Vgg1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_Vgg2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_9V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_5V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_4V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -21440,7 +21437,7 @@ Note: eStatus enum 
             Write_Register_To_UUT(" 00 01", "08 00");
         }
 
-        private void textBox25_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -21448,37 +21445,76 @@ Note: eStatus enum 
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
 
-                    SetU19Values();
+                    // SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 14", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
+            }
+        }
 
+        private async void textBox26_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    //SetU19Values();
 
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 15", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
 
             }
         }
 
-        private  void textBox26_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox27_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    SetU19Values();
+                    //SetU19Values();
 
-                }
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(500);
 
-            }
-        }
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(500);
 
-        private  void textBox27_KeyDown(object sender, KeyEventArgs e)
-        {
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-                    SetU19Values();
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 16", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -21547,6 +21583,7 @@ Note: eStatus enum 
         }
         private async void textBox30_KeyDown(object sender, KeyEventArgs e)
         {
+            int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
@@ -21564,7 +21601,7 @@ Note: eStatus enum 
                     }
 
                     Write_Register_To_UUT(" 00 1B", hexValue);
-                    await Task.Delay(500);
+                    await Task.Delay(Delay);
 
                     Write_Register_To_UUT(" 00 01", "04 00");
 
@@ -21577,7 +21614,7 @@ Note: eStatus enum 
 
         private async void textBox29_KeyDown(object sender, KeyEventArgs e)
         {
-
+            int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
@@ -21595,7 +21632,7 @@ Note: eStatus enum 
                     }
 
                     Write_Register_To_UUT(" 00 1B", hexValue);
-                    await Task.Delay(500);
+                    await Task.Delay(Delay);
 
                     Write_Register_To_UUT(" 00 01", "04 00");
 
@@ -21711,19 +21748,7 @@ Note: eStatus enum 
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox Checkbx = (CheckBox)sender;
-            if (Checkbx.Checked == true)
-            {
-                Write_Register_To_Simulator(" 00 09", "00 01");
 
-                Checkbx.BackColor = Color.LightGreen;
-            }
-            else
-            {
-
-                Write_Register_To_Simulator(" 00 09", "00 00");
-                Checkbx.BackColor = default;
-            }
         }
 
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
@@ -21875,7 +21900,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 255)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22113,7 +22138,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 255)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -22432,6 +22457,8 @@ Note: eStatus enum 
 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
+
+            int Delay = 500;
             if (serialPort.IsOpen == false)
             {
                 WriteToSystemStatus("Port is closed!", 4, Color.Orange);
@@ -22449,22 +22476,22 @@ Note: eStatus enum 
 
             
             Write_Register_To_UUT("00 01", "01 00");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 0C", "00 20");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 AD", "00 14");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Write_Register_To_UUT("00 01", "02 00");
             await Task.Delay(100);
 
             Read_Register_From_UUT("00 03");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 B7","00 14");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             //Read_Register_From_UUT("00 B8");
             //await Task.Delay(500);
@@ -22488,10 +22515,10 @@ Note: eStatus enum 
             //await Task.Delay(500);
 
             Read_Register_From_UUT("00 F8", "00 0E");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Read_Register_From_Simulator("00 F8", "00 0E");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
 
 
@@ -22954,7 +22981,7 @@ Note: eStatus enum 
             }
         }
 
-        private void textBox11_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox11_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -22962,20 +22989,48 @@ Note: eStatus enum 
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
                     SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 13", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
             }
         }
 
-        private void textBox9_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox9_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    SetU19Values();
+                   // SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -23856,6 +23911,263 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
 
             }
+        }
+
+        private async void textBox_28V_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    //Write_Register(" 00 03", "00 07");
+                    //await Task.Delay(300);
+
+                    Write_Register_To_UUT(" 00 1A", hexValue);
+                    await Task.Delay(500);
+
+                    Write_Register_To_UUT(" 00 01", "04 00");
+
+
+                }
+
+            }
+        }
+
+        private async void textBox_Vgg2_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    // SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+
+            }
+        }
+
+        private async void textBox_Vgg1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 13", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+
+            }
+        }
+
+        private async void textBox_5V_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    //SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 15", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+
+            }
+        }
+
+        private async void textBox_9V_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    // SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 14", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+            }
+        }
+
+        private async void textBox_4V_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    //SetU19Values();
+
+                    Write_Register_To_UUT(" 00 30", "00 04");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 12", "FF FF");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "40 00");
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 16", int.Parse(m_TextBox.Text).ToString("X4"));
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+
+            }
+        }
+
+        private async void textBox_VVA_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    int.TryParse(m_TextBox.Text, out int Data);
+                    string hexValue = Data.ToString("X4");
+
+                    Write_Register_To_UUT(" 00 11", hexValue);
+
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "10 00");
+                }
+
+            }
+        }
+
+        private async  void textBox_DCA1_KeyDown(object sender, KeyEventArgs e)
+        {
+            int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+
+                    string hexValue = "";
+
+                    if (int.TryParse(textBox_DCA2.Text, out int temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+                    if (int.TryParse(textBox_DCA1.Text, out temp))
+                    {
+                        hexValue += temp.ToString("X2");
+                    }
+
+
+                    Write_Register_To_UUT(" 00 1B", hexValue);
+                    await Task.Delay(Delay);
+
+                    Write_Register_To_UUT(" 00 01", "04 00");
+
+
+                }
+
+
+            }
+        }
+
+        private void checkBox_SEUrecover_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox Checkbx = (CheckBox)sender;
+            if (Checkbx.Checked == true)
+            {
+                Write_Register_To_Simulator(" 00 09", "00 01");
+
+                Checkbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+
+                Write_Register_To_Simulator(" 00 09", "00 00");
+                Checkbx.BackColor = default;
+            }
+        }
+
+        private async void button_SEURecover_Click(object sender, EventArgs e)
+        {
+            Button m_button = (Button)sender;
+            m_button.BackColor = Color.LightGreen;
+
+            Write_Register_To_UUT(" 00 17", "0F FF");
+            await Task.Delay(100);
+
+            Write_Register_To_UUT(" 00 13", "00 01");
+            await Task.Delay(1000);
+
+            m_button.BackColor = default;
+
         }
 
         private void button57_Click_1(object sender, EventArgs e)
