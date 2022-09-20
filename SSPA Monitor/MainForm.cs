@@ -474,7 +474,6 @@ namespace Monitor
         private Button button70;
         private Label label27;
         private Label label26;
-        private Label label19;
         private GroupBox groupBox_Control2;
         private Label label38;
         private Label label34;
@@ -602,19 +601,14 @@ namespace Monitor
         private Label label94;
         private TextBox textBox_SimulatorFWVersion;
         private TextBox textBox_SimulatorHWVersion;
-        private Label label95;
-        private GroupBox groupBox37;
+        private GroupBox groupBox_SimulatorControl;
         private Label label114;
         private Label label113;
         private Label label112;
-        private TextBox textBox_CALSAR;
         private Label label111;
         private Label label110;
-        private TextBox textBox_ATTBit;
         private Label label107;
-        private TextBox textBox_FTbit;
         private Label label108;
-        private TextBox textBox_FreqBit;
         private Label label109;
         private GroupBox groupBox35;
         private TextBox textBox_PulseDelay2;
@@ -640,8 +634,8 @@ namespace Monitor
         private CheckBox checkBox_PulseGen;
         private Label label115;
         private TextBox textBox_SimulatorStatus6;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
+        private CheckBox checkBox_Preserve;
+        private CheckBox checkBox_OVTcheck;
         private CheckBox checkBox2;
         private Label label81;
         private Label label117;
@@ -828,6 +822,12 @@ namespace Monitor
         private GroupBox groupBox56;
         private Button button96;
         private Button button98;
+        private ComboBox comboBox_CALSAR;
+        private ComboBox comboBox_ATTbit;
+        private ComboBox comboBox_FTbit;
+        private ComboBox comboBox_FreqBit;
+        private CheckBox checkBox_TimerClock;
+        private Label label19;
         private static readonly string PREAMBLE = "23";
 
 
@@ -882,11 +882,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1171,24 +1171,27 @@ namespace Monitor
             this.label144 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.groupBox_SimulatorControl = new System.Windows.Forms.GroupBox();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.textBox_StrobeWidth = new System.Windows.Forms.TextBox();
+            this.textBox_StrobeDelay = new System.Windows.Forms.TextBox();
             this.button_SEURecover = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox_Preserve = new System.Windows.Forms.CheckBox();
+            this.checkBox_OVTcheck = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label114 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
-            this.textBox_CALSAR = new System.Windows.Forms.TextBox();
             this.label111 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
-            this.textBox_ATTBit = new System.Windows.Forms.TextBox();
             this.label107 = new System.Windows.Forms.Label();
-            this.textBox_FTbit = new System.Windows.Forms.TextBox();
             this.label108 = new System.Windows.Forms.Label();
-            this.textBox_FreqBit = new System.Windows.Forms.TextBox();
             this.label109 = new System.Windows.Forms.Label();
             this.groupBox_StatusUUT = new System.Windows.Forms.GroupBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBox_StatusUUT33 = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.button74 = new System.Windows.Forms.Button();
             this.textBox_StatusUUT32 = new System.Windows.Forms.TextBox();
@@ -1338,7 +1341,6 @@ namespace Monitor
             this.button70 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox_SimulatorVersion = new System.Windows.Forms.GroupBox();
             this.button75 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
@@ -1350,7 +1352,6 @@ namespace Monitor
             this.label94 = new System.Windows.Forms.Label();
             this.textBox_SimulatorFWVersion = new System.Windows.Forms.TextBox();
             this.textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
-            this.label95 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.checkBox_RFGen = new System.Windows.Forms.CheckBox();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
@@ -1367,6 +1368,9 @@ namespace Monitor
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Page1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
             this.label117 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
             this.dataGridView_ValPage1 = new System.Windows.Forms.DataGridView();
@@ -1386,7 +1390,14 @@ namespace Monitor
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage_Page2 = new System.Windows.Forms.TabPage();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.button72 = new System.Windows.Forms.Button();
+            this.button73 = new System.Windows.Forms.Button();
             this.tabPage_Page3 = new System.Windows.Forms.TabPage();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
             this.label89 = new System.Windows.Forms.Label();
             this.dataGridView_VVAOffset1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1421,6 +1432,9 @@ namespace Monitor
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage_Page4 = new System.Windows.Forms.TabPage();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.button78 = new System.Windows.Forms.Button();
+            this.button79 = new System.Windows.Forms.Button();
             this.label92 = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1432,6 +1446,38 @@ namespace Monitor
             this.label90 = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage_Page5 = new System.Windows.Forms.TabPage();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.button80 = new System.Windows.Forms.Button();
+            this.button81 = new System.Windows.Forms.Button();
+            this.tabPage_Page6 = new System.Windows.Forms.TabPage();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.button82 = new System.Windows.Forms.Button();
+            this.button83 = new System.Windows.Forms.Button();
+            this.tabPage_Page7 = new System.Windows.Forms.TabPage();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.button84 = new System.Windows.Forms.Button();
+            this.button85 = new System.Windows.Forms.Button();
+            this.tabPage_Page8 = new System.Windows.Forms.TabPage();
+            this.groupBox52 = new System.Windows.Forms.GroupBox();
+            this.button86 = new System.Windows.Forms.Button();
+            this.button89 = new System.Windows.Forms.Button();
+            this.tabPage_Page9 = new System.Windows.Forms.TabPage();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
+            this.tabPage_Page10 = new System.Windows.Forms.TabPage();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.button92 = new System.Windows.Forms.Button();
+            this.button93 = new System.Windows.Forms.Button();
+            this.tabPage_Page11 = new System.Windows.Forms.TabPage();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.button94 = new System.Windows.Forms.Button();
+            this.button95 = new System.Windows.Forms.Button();
+            this.tabPage_Page12 = new System.Windows.Forms.TabPage();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.button96 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
             this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
@@ -1616,58 +1662,12 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label78 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT33 = new System.Windows.Forms.TextBox();
-            this.textBox_StrobeDelay = new System.Windows.Forms.TextBox();
-            this.textBox_StrobeWidth = new System.Windows.Forms.TextBox();
-            this.label150 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.tabPage_Page5 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page6 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page7 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page8 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page9 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page10 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page2 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page11 = new System.Windows.Forms.TabPage();
-            this.tabPage_Page12 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button59 = new System.Windows.Forms.Button();
-            this.button71 = new System.Windows.Forms.Button();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.button72 = new System.Windows.Forms.Button();
-            this.button73 = new System.Windows.Forms.Button();
-            this.groupBox45 = new System.Windows.Forms.GroupBox();
-            this.button76 = new System.Windows.Forms.Button();
-            this.button77 = new System.Windows.Forms.Button();
-            this.groupBox46 = new System.Windows.Forms.GroupBox();
-            this.button78 = new System.Windows.Forms.Button();
-            this.button79 = new System.Windows.Forms.Button();
-            this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.button80 = new System.Windows.Forms.Button();
-            this.button81 = new System.Windows.Forms.Button();
-            this.groupBox49 = new System.Windows.Forms.GroupBox();
-            this.button82 = new System.Windows.Forms.Button();
-            this.button83 = new System.Windows.Forms.Button();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.button84 = new System.Windows.Forms.Button();
-            this.button85 = new System.Windows.Forms.Button();
-            this.groupBox52 = new System.Windows.Forms.GroupBox();
-            this.button86 = new System.Windows.Forms.Button();
-            this.button89 = new System.Windows.Forms.Button();
-            this.groupBox53 = new System.Windows.Forms.GroupBox();
-            this.button90 = new System.Windows.Forms.Button();
-            this.button91 = new System.Windows.Forms.Button();
-            this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.button92 = new System.Windows.Forms.Button();
-            this.button93 = new System.Windows.Forms.Button();
-            this.groupBox55 = new System.Windows.Forms.GroupBox();
-            this.button94 = new System.Windows.Forms.Button();
-            this.button95 = new System.Windows.Forms.Button();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.button96 = new System.Windows.Forms.Button();
-            this.button98 = new System.Windows.Forms.Button();
+            this.comboBox_FreqBit = new System.Windows.Forms.ComboBox();
+            this.comboBox_FTbit = new System.Windows.Forms.ComboBox();
+            this.comboBox_ATTbit = new System.Windows.Forms.ComboBox();
+            this.comboBox_CALSAR = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.checkBox_TimerClock = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1702,7 +1702,7 @@ namespace Monitor
             this.tabControl1.SuspendLayout();
             this.tabPage_Main.SuspendLayout();
             this.groupBox_SystemMode.SuspendLayout();
-            this.groupBox37.SuspendLayout();
+            this.groupBox_SimulatorControl.SuspendLayout();
             this.groupBox_StatusUUT.SuspendLayout();
             this.groupBox39.SuspendLayout();
             this.groupBox35.SuspendLayout();
@@ -1716,16 +1716,37 @@ namespace Monitor
             this.groupBox50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).BeginInit();
             this.tabPage_Page1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage1)).BeginInit();
+            this.tabPage_Page2.SuspendLayout();
+            this.groupBox44.SuspendLayout();
             this.tabPage_Page3.SuspendLayout();
+            this.groupBox45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).BeginInit();
             this.tabPage_Page4.SuspendLayout();
+            this.groupBox46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.tabPage_Page5.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.tabPage_Page6.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.tabPage_Page7.SuspendLayout();
+            this.groupBox51.SuspendLayout();
+            this.tabPage_Page8.SuspendLayout();
+            this.groupBox52.SuspendLayout();
+            this.tabPage_Page9.SuspendLayout();
+            this.groupBox53.SuspendLayout();
+            this.tabPage_Page10.SuspendLayout();
+            this.groupBox54.SuspendLayout();
+            this.tabPage_Page11.SuspendLayout();
+            this.groupBox55.SuspendLayout();
+            this.tabPage_Page12.SuspendLayout();
+            this.groupBox56.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.S1_Configuration.SuspendLayout();
@@ -1759,27 +1780,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.tabPage_Page5.SuspendLayout();
-            this.tabPage_Page6.SuspendLayout();
-            this.tabPage_Page7.SuspendLayout();
-            this.tabPage_Page8.SuspendLayout();
-            this.tabPage_Page9.SuspendLayout();
-            this.tabPage_Page10.SuspendLayout();
-            this.tabPage_Page2.SuspendLayout();
-            this.tabPage_Page11.SuspendLayout();
-            this.tabPage_Page12.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox44.SuspendLayout();
-            this.groupBox45.SuspendLayout();
-            this.groupBox46.SuspendLayout();
-            this.groupBox47.SuspendLayout();
-            this.groupBox49.SuspendLayout();
-            this.groupBox51.SuspendLayout();
-            this.groupBox52.SuspendLayout();
-            this.groupBox53.SuspendLayout();
-            this.groupBox54.SuspendLayout();
-            this.groupBox55.SuspendLayout();
-            this.groupBox56.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2114,17 +2114,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5197,7 +5197,7 @@ namespace Monitor
             // tabPage_Main
             // 
             this.tabPage_Main.Controls.Add(this.groupBox_SystemMode);
-            this.tabPage_Main.Controls.Add(this.groupBox37);
+            this.tabPage_Main.Controls.Add(this.groupBox_SimulatorControl);
             this.tabPage_Main.Controls.Add(this.groupBox_StatusUUT);
             this.tabPage_Main.Controls.Add(this.groupBox35);
             this.tabPage_Main.Controls.Add(this.groupBox_Control2);
@@ -5268,36 +5268,96 @@ namespace Monitor
             this.textBox_SystemMode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_SystemMode_KeyDown);
             this.textBox_SystemMode.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_SystemMode_MouseDown);
             // 
-            // groupBox37
+            // groupBox_SimulatorControl
             // 
-            this.groupBox37.Controls.Add(this.label82);
-            this.groupBox37.Controls.Add(this.label151);
-            this.groupBox37.Controls.Add(this.label150);
-            this.groupBox37.Controls.Add(this.textBox_StrobeWidth);
-            this.groupBox37.Controls.Add(this.textBox_StrobeDelay);
-            this.groupBox37.Controls.Add(this.button_SEURecover);
-            this.groupBox37.Controls.Add(this.checkBox4);
-            this.groupBox37.Controls.Add(this.checkBox3);
-            this.groupBox37.Controls.Add(this.checkBox2);
-            this.groupBox37.Controls.Add(this.label114);
-            this.groupBox37.Controls.Add(this.label113);
-            this.groupBox37.Controls.Add(this.label112);
-            this.groupBox37.Controls.Add(this.textBox_CALSAR);
-            this.groupBox37.Controls.Add(this.label111);
-            this.groupBox37.Controls.Add(this.label110);
-            this.groupBox37.Controls.Add(this.textBox_ATTBit);
-            this.groupBox37.Controls.Add(this.label107);
-            this.groupBox37.Controls.Add(this.textBox_FTbit);
-            this.groupBox37.Controls.Add(this.label108);
-            this.groupBox37.Controls.Add(this.textBox_FreqBit);
-            this.groupBox37.Controls.Add(this.label109);
-            this.groupBox37.Location = new System.Drawing.Point(876, 437);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Size = new System.Drawing.Size(354, 149);
-            this.groupBox37.TabIndex = 17;
-            this.groupBox37.TabStop = false;
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_TimerClock);
+            this.groupBox_SimulatorControl.Controls.Add(this.label19);
+            this.groupBox_SimulatorControl.Controls.Add(this.comboBox_CALSAR);
+            this.groupBox_SimulatorControl.Controls.Add(this.comboBox_ATTbit);
+            this.groupBox_SimulatorControl.Controls.Add(this.comboBox_FTbit);
+            this.groupBox_SimulatorControl.Controls.Add(this.comboBox_FreqBit);
+            this.groupBox_SimulatorControl.Controls.Add(this.label82);
+            this.groupBox_SimulatorControl.Controls.Add(this.label151);
+            this.groupBox_SimulatorControl.Controls.Add(this.label150);
+            this.groupBox_SimulatorControl.Controls.Add(this.textBox_StrobeWidth);
+            this.groupBox_SimulatorControl.Controls.Add(this.textBox_StrobeDelay);
+            this.groupBox_SimulatorControl.Controls.Add(this.button_SEURecover);
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_Preserve);
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_OVTcheck);
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox2);
+            this.groupBox_SimulatorControl.Controls.Add(this.label114);
+            this.groupBox_SimulatorControl.Controls.Add(this.label113);
+            this.groupBox_SimulatorControl.Controls.Add(this.label112);
+            this.groupBox_SimulatorControl.Controls.Add(this.label111);
+            this.groupBox_SimulatorControl.Controls.Add(this.label110);
+            this.groupBox_SimulatorControl.Controls.Add(this.label107);
+            this.groupBox_SimulatorControl.Controls.Add(this.label108);
+            this.groupBox_SimulatorControl.Controls.Add(this.label109);
+            this.groupBox_SimulatorControl.Location = new System.Drawing.Point(876, 437);
+            this.groupBox_SimulatorControl.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorControl.Name = "groupBox_SimulatorControl";
+            this.groupBox_SimulatorControl.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorControl.Size = new System.Drawing.Size(354, 149);
+            this.groupBox_SimulatorControl.TabIndex = 17;
+            this.groupBox_SimulatorControl.TabStop = false;
+            this.groupBox_SimulatorControl.Text = "Simulator Control";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Location = new System.Drawing.Point(282, 83);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(38, 13);
+            this.label82.TabIndex = 35;
+            this.label82.Text = "Strobe";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label151.Location = new System.Drawing.Point(304, 100);
+            this.label151.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(36, 13);
+            this.label151.TabIndex = 34;
+            this.label151.Text = "Width";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.Location = new System.Drawing.Point(253, 99);
+            this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(34, 13);
+            this.label150.TabIndex = 33;
+            this.label150.Text = "Delay";
+            // 
+            // textBox_StrobeWidth
+            // 
+            this.textBox_StrobeWidth.Location = new System.Drawing.Point(301, 119);
+            this.textBox_StrobeWidth.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StrobeWidth.Name = "textBox_StrobeWidth";
+            this.textBox_StrobeWidth.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeWidth.TabIndex = 31;
+            this.textBox_StrobeWidth.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_StrobeWidth, "0-7");
+            this.textBox_StrobeWidth.TextChanged += new System.EventHandler(this.textBox_StrobeWidth_TextChanged);
+            this.textBox_StrobeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeWidth_KeyDown);
+            // 
+            // textBox_StrobeDelay
+            // 
+            this.textBox_StrobeDelay.Location = new System.Drawing.Point(244, 119);
+            this.textBox_StrobeDelay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StrobeDelay.Name = "textBox_StrobeDelay";
+            this.textBox_StrobeDelay.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeDelay.TabIndex = 30;
+            this.textBox_StrobeDelay.Text = "0";
+            this.toolTip1.SetToolTip(this.textBox_StrobeDelay, "0-7");
+            this.textBox_StrobeDelay.TextChanged += new System.EventHandler(this.textBox_StrobeDelay_TextChanged);
+            this.textBox_StrobeDelay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeDelay_KeyDown);
             // 
             // button_SEURecover
             // 
@@ -5309,31 +5369,31 @@ namespace Monitor
             this.button_SEURecover.UseVisualStyleBackColor = true;
             this.button_SEURecover.Click += new System.EventHandler(this.button_SEURecover_Click);
             // 
-            // checkBox4
+            // checkBox_Preserve
             // 
-            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(174, 113);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(36, 28);
-            this.checkBox4.TabIndex = 28;
-            this.checkBox4.Text = "On";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
+            this.checkBox_Preserve.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_Preserve.AutoSize = true;
+            this.checkBox_Preserve.Location = new System.Drawing.Point(120, 110);
+            this.checkBox_Preserve.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_Preserve.Name = "checkBox_Preserve";
+            this.checkBox_Preserve.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_Preserve.TabIndex = 28;
+            this.checkBox_Preserve.Text = "On";
+            this.checkBox_Preserve.UseVisualStyleBackColor = true;
+            this.checkBox_Preserve.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
-            // checkBox3
+            // checkBox_OVTcheck
             // 
-            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(96, 112);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(36, 28);
-            this.checkBox3.TabIndex = 27;
-            this.checkBox3.Text = "On";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
+            this.checkBox_OVTcheck.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_OVTcheck.AutoSize = true;
+            this.checkBox_OVTcheck.Location = new System.Drawing.Point(66, 111);
+            this.checkBox_OVTcheck.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_OVTcheck.Name = "checkBox_OVTcheck";
+            this.checkBox_OVTcheck.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_OVTcheck.TabIndex = 27;
+            this.checkBox_OVTcheck.Text = "On";
+            this.checkBox_OVTcheck.UseVisualStyleBackColor = true;
+            this.checkBox_OVTcheck.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
             // 
             // checkBox2
             // 
@@ -5351,128 +5411,88 @@ namespace Monitor
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(158, 90);
+            this.label114.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.Location = new System.Drawing.Point(107, 89);
             this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(63, 18);
+            this.label114.Size = new System.Drawing.Size(49, 13);
             this.label114.TabIndex = 24;
             this.label114.Text = "Preserve";
             // 
             // label113
             // 
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(82, 90);
+            this.label113.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.Location = new System.Drawing.Point(52, 89);
             this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(72, 18);
+            this.label113.Size = new System.Drawing.Size(54, 13);
             this.label113.TabIndex = 22;
             this.label113.Text = "OVT check";
             // 
             // label112
             // 
             this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label112.Location = new System.Drawing.Point(4, 90);
             this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(81, 18);
+            this.label112.Size = new System.Drawing.Size(62, 13);
             this.label112.TabIndex = 20;
             this.label112.Text = "SEU recover";
-            // 
-            // textBox_CALSAR
-            // 
-            this.textBox_CALSAR.Location = new System.Drawing.Point(286, 55);
-            this.textBox_CALSAR.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CALSAR.Name = "textBox_CALSAR";
-            this.textBox_CALSAR.Size = new System.Drawing.Size(53, 26);
-            this.textBox_CALSAR.TabIndex = 19;
-            this.textBox_CALSAR.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_CALSAR, "0-4");
-            this.textBox_CALSAR.TextChanged += new System.EventHandler(this.textBox_CALSAR_TextChanged);
-            this.textBox_CALSAR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CALSAR_KeyDown);
             // 
             // label111
             // 
             this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label111.Location = new System.Drawing.Point(282, 30);
             this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(58, 18);
+            this.label111.Size = new System.Drawing.Size(43, 13);
             this.label111.TabIndex = 18;
             this.label111.Text = "CAL SAR";
             // 
             // label110
             // 
             this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.Location = new System.Drawing.Point(233, 30);
             this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(32, 18);
+            this.label110.Size = new System.Drawing.Size(26, 13);
             this.label110.TabIndex = 16;
             this.label110.Text = "DC4";
-            // 
-            // textBox_ATTBit
-            // 
-            this.textBox_ATTBit.Location = new System.Drawing.Point(165, 55);
-            this.textBox_ATTBit.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ATTBit.Name = "textBox_ATTBit";
-            this.textBox_ATTBit.Size = new System.Drawing.Size(53, 26);
-            this.textBox_ATTBit.TabIndex = 15;
-            this.textBox_ATTBit.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_ATTBit, "0-15");
-            this.textBox_ATTBit.TextChanged += new System.EventHandler(this.textBox_ATTBit_TextChanged);
-            this.textBox_ATTBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox82_KeyDown);
             // 
             // label107
             // 
             this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.Location = new System.Drawing.Point(162, 30);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(50, 18);
+            this.label107.Size = new System.Drawing.Size(37, 13);
             this.label107.TabIndex = 14;
             this.label107.Text = "ATT bit";
-            // 
-            // textBox_FTbit
-            // 
-            this.textBox_FTbit.Location = new System.Drawing.Point(87, 55);
-            this.textBox_FTbit.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_FTbit.Name = "textBox_FTbit";
-            this.textBox_FTbit.Size = new System.Drawing.Size(53, 26);
-            this.textBox_FTbit.TabIndex = 13;
-            this.textBox_FTbit.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_FTbit, "0-7");
-            this.textBox_FTbit.TextChanged += new System.EventHandler(this.textBox_FTbit_TextChanged);
-            this.textBox_FTbit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_FTbit_KeyDown);
             // 
             // label108
             // 
             this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label108.Location = new System.Drawing.Point(89, 29);
             this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(42, 18);
+            this.label108.Size = new System.Drawing.Size(32, 13);
             this.label108.TabIndex = 12;
             this.label108.Text = "FT bit";
-            // 
-            // textBox_FreqBit
-            // 
-            this.textBox_FreqBit.Location = new System.Drawing.Point(18, 55);
-            this.textBox_FreqBit.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_FreqBit.Name = "textBox_FreqBit";
-            this.textBox_FreqBit.Size = new System.Drawing.Size(53, 26);
-            this.textBox_FreqBit.TabIndex = 11;
-            this.textBox_FreqBit.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_FreqBit, "0-7");
-            this.textBox_FreqBit.TextChanged += new System.EventHandler(this.textBox84_TextChanged);
-            this.textBox_FreqBit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_FreqBit_KeyDown);
             // 
             // label109
             // 
             this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label109.Location = new System.Drawing.Point(12, 30);
             this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(56, 18);
+            this.label109.Size = new System.Drawing.Size(43, 13);
             this.label109.TabIndex = 1;
             this.label109.Text = "Freq bit";
             // 
@@ -5556,6 +5576,31 @@ namespace Monitor
             this.groupBox_StatusUUT.TabIndex = 15;
             this.groupBox_StatusUUT.TabStop = false;
             this.groupBox_StatusUUT.Text = " Status UUT";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.Black;
+            this.label78.Location = new System.Drawing.Point(450, 345);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(83, 14);
+            this.label78.TabIndex = 89;
+            this.label78.Text = "Input controls";
+            // 
+            // textBox_StatusUUT33
+            // 
+            this.textBox_StatusUUT33.Location = new System.Drawing.Point(541, 345);
+            this.textBox_StatusUUT33.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT33.Name = "textBox_StatusUUT33";
+            this.textBox_StatusUUT33.ReadOnly = true;
+            this.textBox_StatusUUT33.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT33.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.textBox_StatusUUT33, "(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4, 11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 7:F" +
+        "T3, 6:FT2, 5:FT1, 4:FT0 , 3: freq4 , 2:freq2 , 1:freq1 , 0: freq0)");
+            this.textBox_StatusUUT33.TextChanged += new System.EventHandler(this.textBox_StatusUUT33_TextChanged);
+            this.textBox_StatusUUT33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_StatusUUT33_MouseDown);
             // 
             // label103
             // 
@@ -6574,6 +6619,7 @@ namespace Monitor
             this.groupBox_Control2.Size = new System.Drawing.Size(482, 106);
             this.groupBox_Control2.TabIndex = 14;
             this.groupBox_Control2.TabStop = false;
+            this.groupBox_Control2.Text = "Set Attenuation";
             this.groupBox_Control2.Enter += new System.EventHandler(this.groupBox46_Enter);
             // 
             // label136
@@ -6765,6 +6811,7 @@ namespace Monitor
             this.groupBox_Control1.Size = new System.Drawing.Size(339, 198);
             this.groupBox_Control1.TabIndex = 1;
             this.groupBox_Control1.TabStop = false;
+            this.groupBox_Control1.Text = "Set PSU Voltage and Pulse daly";
             this.groupBox_Control1.Enter += new System.EventHandler(this.groupBox45_Enter);
             // 
             // label130
@@ -7211,7 +7258,6 @@ namespace Monitor
             this.groupBox_UUTVersion.Controls.Add(this.button70);
             this.groupBox_UUTVersion.Controls.Add(this.label27);
             this.groupBox_UUTVersion.Controls.Add(this.label26);
-            this.groupBox_UUTVersion.Controls.Add(this.label19);
             this.groupBox_UUTVersion.Location = new System.Drawing.Point(549, 4);
             this.groupBox_UUTVersion.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_UUTVersion.Name = "groupBox_UUTVersion";
@@ -7219,6 +7265,7 @@ namespace Monitor
             this.groupBox_UUTVersion.Size = new System.Drawing.Size(282, 104);
             this.groupBox_UUTVersion.TabIndex = 0;
             this.groupBox_UUTVersion.TabStop = false;
+            this.groupBox_UUTVersion.Text = "UUT Version";
             // 
             // label121
             // 
@@ -7318,17 +7365,6 @@ namespace Monitor
             this.label26.TabIndex = 4;
             this.label26.Text = "HW version:";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(38, 10);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 23);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "UUT";
-            // 
             // groupBox_SimulatorVersion
             // 
             this.groupBox_SimulatorVersion.Controls.Add(this.button75);
@@ -7341,7 +7377,6 @@ namespace Monitor
             this.groupBox_SimulatorVersion.Controls.Add(this.label94);
             this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorFWVersion);
             this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorHWVersion);
-            this.groupBox_SimulatorVersion.Controls.Add(this.label95);
             this.groupBox_SimulatorVersion.Location = new System.Drawing.Point(876, 10);
             this.groupBox_SimulatorVersion.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SimulatorVersion.Name = "groupBox_SimulatorVersion";
@@ -7349,10 +7384,11 @@ namespace Monitor
             this.groupBox_SimulatorVersion.Size = new System.Drawing.Size(354, 102);
             this.groupBox_SimulatorVersion.TabIndex = 1;
             this.groupBox_SimulatorVersion.TabStop = false;
+            this.groupBox_SimulatorVersion.Text = "Simulator Version";
             // 
             // button75
             // 
-            this.button75.Location = new System.Drawing.Point(197, 10);
+            this.button75.Location = new System.Drawing.Point(227, 11);
             this.button75.Margin = new System.Windows.Forms.Padding(2);
             this.button75.Name = "button75";
             this.button75.Size = new System.Drawing.Size(69, 22);
@@ -7401,7 +7437,7 @@ namespace Monitor
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(113, 9);
+            this.button31.Location = new System.Drawing.Point(143, 10);
             this.button31.Margin = new System.Windows.Forms.Padding(2);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(69, 22);
@@ -7447,17 +7483,6 @@ namespace Monitor
             this.textBox_SimulatorHWVersion.ReadOnly = true;
             this.textBox_SimulatorHWVersion.Size = new System.Drawing.Size(92, 26);
             this.textBox_SimulatorHWVersion.TabIndex = 1;
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(5, 11);
-            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(87, 23);
-            this.label95.TabIndex = 0;
-            this.label95.Text = "Simulator";
             // 
             // groupBox33
             // 
@@ -7649,6 +7674,42 @@ namespace Monitor
             this.tabPage_Page1.Text = "Page1";
             this.tabPage_Page1.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button59);
+            this.groupBox1.Controls.Add(this.button71);
+            this.groupBox1.Location = new System.Drawing.Point(1089, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(141, 130);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Flash operation";
+            // 
+            // button59
+            // 
+            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.Location = new System.Drawing.Point(6, 22);
+            this.button59.Margin = new System.Windows.Forms.Padding(2);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(127, 43);
+            this.button59.TabIndex = 18;
+            this.button59.Text = "Read Page ";
+            this.button59.UseVisualStyleBackColor = true;
+            // 
+            // button71
+            // 
+            this.button71.BackColor = System.Drawing.Color.Transparent;
+            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button71.Location = new System.Drawing.Point(6, 77);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(127, 43);
+            this.button71.TabIndex = 21;
+            this.button71.Text = "Write to Page";
+            this.button71.UseVisualStyleBackColor = false;
+            // 
             // label117
             // 
             this.label117.AutoSize = true;
@@ -7673,8 +7734,8 @@ namespace Monitor
             // 
             // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
@@ -7699,8 +7760,8 @@ namespace Monitor
             this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
             this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_ValPage1.TabIndex = 28;
@@ -7817,6 +7878,52 @@ namespace Monitor
             this.Column21.Name = "Column21";
             this.Column21.Width = 47;
             // 
+            // tabPage_Page2
+            // 
+            this.tabPage_Page2.Controls.Add(this.groupBox44);
+            this.tabPage_Page2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page2.Name = "tabPage_Page2";
+            this.tabPage_Page2.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page2.TabIndex = 11;
+            this.tabPage_Page2.Text = "Page2";
+            this.tabPage_Page2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.button72);
+            this.groupBox44.Controls.Add(this.button73);
+            this.groupBox44.Location = new System.Drawing.Point(1091, 0);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox44.Size = new System.Drawing.Size(141, 130);
+            this.groupBox44.TabIndex = 29;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Flash operation";
+            // 
+            // button72
+            // 
+            this.button72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button72.Location = new System.Drawing.Point(6, 22);
+            this.button72.Margin = new System.Windows.Forms.Padding(2);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(127, 43);
+            this.button72.TabIndex = 18;
+            this.button72.Text = "Read Page ";
+            this.button72.UseVisualStyleBackColor = true;
+            // 
+            // button73
+            // 
+            this.button73.BackColor = System.Drawing.Color.Transparent;
+            this.button73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button73.Location = new System.Drawing.Point(6, 77);
+            this.button73.Margin = new System.Windows.Forms.Padding(2);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(127, 43);
+            this.button73.TabIndex = 21;
+            this.button73.Text = "Write to Page";
+            this.button73.UseVisualStyleBackColor = false;
+            // 
             // tabPage_Page3
             // 
             this.tabPage_Page3.Controls.Add(this.groupBox45);
@@ -7837,6 +7944,42 @@ namespace Monitor
             this.tabPage_Page3.TabIndex = 2;
             this.tabPage_Page3.Text = "Page3";
             this.tabPage_Page3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Controls.Add(this.button76);
+            this.groupBox45.Controls.Add(this.button77);
+            this.groupBox45.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox45.Size = new System.Drawing.Size(141, 130);
+            this.groupBox45.TabIndex = 29;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "Flash operation";
+            // 
+            // button76
+            // 
+            this.button76.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button76.Location = new System.Drawing.Point(6, 22);
+            this.button76.Margin = new System.Windows.Forms.Padding(2);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(127, 43);
+            this.button76.TabIndex = 18;
+            this.button76.Text = "Read Page ";
+            this.button76.UseVisualStyleBackColor = true;
+            // 
+            // button77
+            // 
+            this.button77.BackColor = System.Drawing.Color.Transparent;
+            this.button77.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button77.Location = new System.Drawing.Point(6, 77);
+            this.button77.Margin = new System.Windows.Forms.Padding(2);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(127, 43);
+            this.button77.TabIndex = 21;
+            this.button77.Text = "Write to Page";
+            this.button77.UseVisualStyleBackColor = false;
             // 
             // label89
             // 
@@ -8106,9 +8249,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -8157,6 +8300,42 @@ namespace Monitor
             this.tabPage_Page4.TabIndex = 3;
             this.tabPage_Page4.Text = "Page4";
             this.tabPage_Page4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.button78);
+            this.groupBox46.Controls.Add(this.button79);
+            this.groupBox46.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox46.Size = new System.Drawing.Size(141, 130);
+            this.groupBox46.TabIndex = 29;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "Flash operation";
+            // 
+            // button78
+            // 
+            this.button78.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button78.Location = new System.Drawing.Point(6, 22);
+            this.button78.Margin = new System.Windows.Forms.Padding(2);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(127, 43);
+            this.button78.TabIndex = 18;
+            this.button78.Text = "Read Page ";
+            this.button78.UseVisualStyleBackColor = true;
+            // 
+            // button79
+            // 
+            this.button79.BackColor = System.Drawing.Color.Transparent;
+            this.button79.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button79.Location = new System.Drawing.Point(6, 77);
+            this.button79.Margin = new System.Windows.Forms.Padding(2);
+            this.button79.Name = "button79";
+            this.button79.Size = new System.Drawing.Size(127, 43);
+            this.button79.TabIndex = 21;
+            this.button79.Text = "Write to Page";
+            this.button79.UseVisualStyleBackColor = false;
             // 
             // label92
             // 
@@ -8266,6 +8445,374 @@ namespace Monitor
             this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.Width = 68;
+            // 
+            // tabPage_Page5
+            // 
+            this.tabPage_Page5.Controls.Add(this.groupBox47);
+            this.tabPage_Page5.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page5.Name = "tabPage_Page5";
+            this.tabPage_Page5.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page5.TabIndex = 5;
+            this.tabPage_Page5.Text = "Page5";
+            this.tabPage_Page5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.button80);
+            this.groupBox47.Controls.Add(this.button81);
+            this.groupBox47.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox47.Size = new System.Drawing.Size(141, 130);
+            this.groupBox47.TabIndex = 29;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Flash operation";
+            // 
+            // button80
+            // 
+            this.button80.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button80.Location = new System.Drawing.Point(6, 22);
+            this.button80.Margin = new System.Windows.Forms.Padding(2);
+            this.button80.Name = "button80";
+            this.button80.Size = new System.Drawing.Size(127, 43);
+            this.button80.TabIndex = 18;
+            this.button80.Text = "Read Page ";
+            this.button80.UseVisualStyleBackColor = true;
+            // 
+            // button81
+            // 
+            this.button81.BackColor = System.Drawing.Color.Transparent;
+            this.button81.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button81.Location = new System.Drawing.Point(6, 77);
+            this.button81.Margin = new System.Windows.Forms.Padding(2);
+            this.button81.Name = "button81";
+            this.button81.Size = new System.Drawing.Size(127, 43);
+            this.button81.TabIndex = 21;
+            this.button81.Text = "Write to Page";
+            this.button81.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page6
+            // 
+            this.tabPage_Page6.Controls.Add(this.groupBox49);
+            this.tabPage_Page6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page6.Name = "tabPage_Page6";
+            this.tabPage_Page6.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page6.TabIndex = 6;
+            this.tabPage_Page6.Text = "Page6";
+            this.tabPage_Page6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.button82);
+            this.groupBox49.Controls.Add(this.button83);
+            this.groupBox49.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox49.Size = new System.Drawing.Size(141, 130);
+            this.groupBox49.TabIndex = 29;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Flash operation";
+            // 
+            // button82
+            // 
+            this.button82.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button82.Location = new System.Drawing.Point(6, 22);
+            this.button82.Margin = new System.Windows.Forms.Padding(2);
+            this.button82.Name = "button82";
+            this.button82.Size = new System.Drawing.Size(127, 43);
+            this.button82.TabIndex = 18;
+            this.button82.Text = "Read Page ";
+            this.button82.UseVisualStyleBackColor = true;
+            // 
+            // button83
+            // 
+            this.button83.BackColor = System.Drawing.Color.Transparent;
+            this.button83.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button83.Location = new System.Drawing.Point(6, 77);
+            this.button83.Margin = new System.Windows.Forms.Padding(2);
+            this.button83.Name = "button83";
+            this.button83.Size = new System.Drawing.Size(127, 43);
+            this.button83.TabIndex = 21;
+            this.button83.Text = "Write to Page";
+            this.button83.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page7
+            // 
+            this.tabPage_Page7.Controls.Add(this.groupBox51);
+            this.tabPage_Page7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page7.Name = "tabPage_Page7";
+            this.tabPage_Page7.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page7.TabIndex = 7;
+            this.tabPage_Page7.Text = "Page7";
+            this.tabPage_Page7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Controls.Add(this.button84);
+            this.groupBox51.Controls.Add(this.button85);
+            this.groupBox51.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Size = new System.Drawing.Size(141, 130);
+            this.groupBox51.TabIndex = 29;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "Flash operation";
+            // 
+            // button84
+            // 
+            this.button84.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button84.Location = new System.Drawing.Point(6, 22);
+            this.button84.Margin = new System.Windows.Forms.Padding(2);
+            this.button84.Name = "button84";
+            this.button84.Size = new System.Drawing.Size(127, 43);
+            this.button84.TabIndex = 18;
+            this.button84.Text = "Read Page ";
+            this.button84.UseVisualStyleBackColor = true;
+            // 
+            // button85
+            // 
+            this.button85.BackColor = System.Drawing.Color.Transparent;
+            this.button85.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button85.Location = new System.Drawing.Point(6, 77);
+            this.button85.Margin = new System.Windows.Forms.Padding(2);
+            this.button85.Name = "button85";
+            this.button85.Size = new System.Drawing.Size(127, 43);
+            this.button85.TabIndex = 21;
+            this.button85.Text = "Write to Page";
+            this.button85.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page8
+            // 
+            this.tabPage_Page8.Controls.Add(this.groupBox52);
+            this.tabPage_Page8.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page8.Name = "tabPage_Page8";
+            this.tabPage_Page8.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page8.TabIndex = 8;
+            this.tabPage_Page8.Text = "Page8";
+            this.tabPage_Page8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox52
+            // 
+            this.groupBox52.Controls.Add(this.button86);
+            this.groupBox52.Controls.Add(this.button89);
+            this.groupBox52.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Name = "groupBox52";
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Size = new System.Drawing.Size(141, 130);
+            this.groupBox52.TabIndex = 29;
+            this.groupBox52.TabStop = false;
+            this.groupBox52.Text = "Flash operation";
+            // 
+            // button86
+            // 
+            this.button86.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button86.Location = new System.Drawing.Point(6, 22);
+            this.button86.Margin = new System.Windows.Forms.Padding(2);
+            this.button86.Name = "button86";
+            this.button86.Size = new System.Drawing.Size(127, 43);
+            this.button86.TabIndex = 18;
+            this.button86.Text = "Read Page ";
+            this.button86.UseVisualStyleBackColor = true;
+            // 
+            // button89
+            // 
+            this.button89.BackColor = System.Drawing.Color.Transparent;
+            this.button89.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button89.Location = new System.Drawing.Point(6, 77);
+            this.button89.Margin = new System.Windows.Forms.Padding(2);
+            this.button89.Name = "button89";
+            this.button89.Size = new System.Drawing.Size(127, 43);
+            this.button89.TabIndex = 21;
+            this.button89.Text = "Write to Page";
+            this.button89.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page9
+            // 
+            this.tabPage_Page9.Controls.Add(this.groupBox53);
+            this.tabPage_Page9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page9.Name = "tabPage_Page9";
+            this.tabPage_Page9.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page9.TabIndex = 9;
+            this.tabPage_Page9.Text = "Page9";
+            this.tabPage_Page9.UseVisualStyleBackColor = true;
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Controls.Add(this.button90);
+            this.groupBox53.Controls.Add(this.button91);
+            this.groupBox53.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Size = new System.Drawing.Size(141, 130);
+            this.groupBox53.TabIndex = 29;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "Flash operation";
+            // 
+            // button90
+            // 
+            this.button90.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button90.Location = new System.Drawing.Point(6, 22);
+            this.button90.Margin = new System.Windows.Forms.Padding(2);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(127, 43);
+            this.button90.TabIndex = 18;
+            this.button90.Text = "Read Page ";
+            this.button90.UseVisualStyleBackColor = true;
+            // 
+            // button91
+            // 
+            this.button91.BackColor = System.Drawing.Color.Transparent;
+            this.button91.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button91.Location = new System.Drawing.Point(6, 77);
+            this.button91.Margin = new System.Windows.Forms.Padding(2);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(127, 43);
+            this.button91.TabIndex = 21;
+            this.button91.Text = "Write to Page";
+            this.button91.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page10
+            // 
+            this.tabPage_Page10.Controls.Add(this.groupBox54);
+            this.tabPage_Page10.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page10.Name = "tabPage_Page10";
+            this.tabPage_Page10.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page10.TabIndex = 10;
+            this.tabPage_Page10.Text = "Page10";
+            this.tabPage_Page10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Controls.Add(this.button92);
+            this.groupBox54.Controls.Add(this.button93);
+            this.groupBox54.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Size = new System.Drawing.Size(141, 130);
+            this.groupBox54.TabIndex = 29;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "Flash operation";
+            // 
+            // button92
+            // 
+            this.button92.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button92.Location = new System.Drawing.Point(6, 22);
+            this.button92.Margin = new System.Windows.Forms.Padding(2);
+            this.button92.Name = "button92";
+            this.button92.Size = new System.Drawing.Size(127, 43);
+            this.button92.TabIndex = 18;
+            this.button92.Text = "Read Page ";
+            this.button92.UseVisualStyleBackColor = true;
+            // 
+            // button93
+            // 
+            this.button93.BackColor = System.Drawing.Color.Transparent;
+            this.button93.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button93.Location = new System.Drawing.Point(6, 77);
+            this.button93.Margin = new System.Windows.Forms.Padding(2);
+            this.button93.Name = "button93";
+            this.button93.Size = new System.Drawing.Size(127, 43);
+            this.button93.TabIndex = 21;
+            this.button93.Text = "Write to Page";
+            this.button93.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page11
+            // 
+            this.tabPage_Page11.Controls.Add(this.groupBox55);
+            this.tabPage_Page11.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page11.Name = "tabPage_Page11";
+            this.tabPage_Page11.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page11.TabIndex = 12;
+            this.tabPage_Page11.Text = "Page11";
+            this.tabPage_Page11.UseVisualStyleBackColor = true;
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Controls.Add(this.button94);
+            this.groupBox55.Controls.Add(this.button95);
+            this.groupBox55.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Size = new System.Drawing.Size(141, 130);
+            this.groupBox55.TabIndex = 29;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "Flash operation";
+            // 
+            // button94
+            // 
+            this.button94.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button94.Location = new System.Drawing.Point(6, 22);
+            this.button94.Margin = new System.Windows.Forms.Padding(2);
+            this.button94.Name = "button94";
+            this.button94.Size = new System.Drawing.Size(127, 43);
+            this.button94.TabIndex = 18;
+            this.button94.Text = "Read Page ";
+            this.button94.UseVisualStyleBackColor = true;
+            // 
+            // button95
+            // 
+            this.button95.BackColor = System.Drawing.Color.Transparent;
+            this.button95.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button95.Location = new System.Drawing.Point(6, 77);
+            this.button95.Margin = new System.Windows.Forms.Padding(2);
+            this.button95.Name = "button95";
+            this.button95.Size = new System.Drawing.Size(127, 43);
+            this.button95.TabIndex = 21;
+            this.button95.Text = "Write to Page";
+            this.button95.UseVisualStyleBackColor = false;
+            // 
+            // tabPage_Page12
+            // 
+            this.tabPage_Page12.Controls.Add(this.groupBox56);
+            this.tabPage_Page12.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page12.Name = "tabPage_Page12";
+            this.tabPage_Page12.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page12.TabIndex = 13;
+            this.tabPage_Page12.Text = "Page12";
+            this.tabPage_Page12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Controls.Add(this.button96);
+            this.groupBox56.Controls.Add(this.button98);
+            this.groupBox56.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Size = new System.Drawing.Size(141, 130);
+            this.groupBox56.TabIndex = 29;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "Flash operation";
+            // 
+            // button96
+            // 
+            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button96.Location = new System.Drawing.Point(6, 22);
+            this.button96.Margin = new System.Windows.Forms.Padding(2);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(127, 43);
+            this.button96.TabIndex = 18;
+            this.button96.Text = "Read Page ";
+            this.button96.UseVisualStyleBackColor = true;
+            // 
+            // button98
+            // 
+            this.button98.BackColor = System.Drawing.Color.Transparent;
+            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button98.Location = new System.Drawing.Point(6, 77);
+            this.button98.Margin = new System.Windows.Forms.Padding(2);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(127, 43);
+            this.button98.TabIndex = 21;
+            this.button98.Text = "Write to Page";
+            this.button98.UseVisualStyleBackColor = false;
             // 
             // groupBox42
             // 
@@ -10161,609 +10708,120 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(450, 345);
-            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(83, 14);
-            this.label78.TabIndex = 89;
-            this.label78.Text = "Input controls";
-            // 
-            // textBox_StatusUUT33
-            // 
-            this.textBox_StatusUUT33.Location = new System.Drawing.Point(541, 345);
-            this.textBox_StatusUUT33.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT33.Name = "textBox_StatusUUT33";
-            this.textBox_StatusUUT33.ReadOnly = true;
-            this.textBox_StatusUUT33.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT33.TabIndex = 88;
-            this.toolTip1.SetToolTip(this.textBox_StatusUUT33, "(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4, 11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 7:F" +
-        "T3, 6:FT2, 5:FT1, 4:FT0 , 3: freq4 , 2:freq2 , 1:freq1 , 0: freq0)");
-            this.textBox_StatusUUT33.TextChanged += new System.EventHandler(this.textBox_StatusUUT33_TextChanged);
-            this.textBox_StatusUUT33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_StatusUUT33_MouseDown);
-            // 
-            // textBox_StrobeDelay
-            // 
-            this.textBox_StrobeDelay.Location = new System.Drawing.Point(244, 119);
-            this.textBox_StrobeDelay.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StrobeDelay.Name = "textBox_StrobeDelay";
-            this.textBox_StrobeDelay.Size = new System.Drawing.Size(53, 26);
-            this.textBox_StrobeDelay.TabIndex = 30;
-            this.textBox_StrobeDelay.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_StrobeDelay, "0-7");
-            this.textBox_StrobeDelay.TextChanged += new System.EventHandler(this.textBox_StrobeDelay_TextChanged);
-            this.textBox_StrobeDelay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeDelay_KeyDown);
-            // 
-            // textBox_StrobeWidth
-            // 
-            this.textBox_StrobeWidth.Location = new System.Drawing.Point(301, 119);
-            this.textBox_StrobeWidth.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StrobeWidth.Name = "textBox_StrobeWidth";
-            this.textBox_StrobeWidth.Size = new System.Drawing.Size(53, 26);
-            this.textBox_StrobeWidth.TabIndex = 31;
-            this.textBox_StrobeWidth.Text = "0";
-            this.toolTip1.SetToolTip(this.textBox_StrobeWidth, "0-7");
-            this.textBox_StrobeWidth.TextChanged += new System.EventHandler(this.textBox_StrobeWidth_TextChanged);
-            this.textBox_StrobeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeWidth_KeyDown);
-            // 
-            // label150
-            // 
-            this.label150.AutoSize = true;
-            this.label150.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label150.Location = new System.Drawing.Point(253, 99);
-            this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(34, 13);
-            this.label150.TabIndex = 33;
-            this.label150.Text = "Delay";
-            // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label151.Location = new System.Drawing.Point(304, 100);
-            this.label151.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(36, 13);
-            this.label151.TabIndex = 34;
-            this.label151.Text = "Width";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(282, 85);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(38, 13);
-            this.label82.TabIndex = 35;
-            this.label82.Text = "Strobe";
-            // 
-            // tabPage_Page5
-            // 
-            this.tabPage_Page5.Controls.Add(this.groupBox47);
-            this.tabPage_Page5.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page5.Name = "tabPage_Page5";
-            this.tabPage_Page5.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page5.TabIndex = 5;
-            this.tabPage_Page5.Text = "Page5";
-            this.tabPage_Page5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page6
-            // 
-            this.tabPage_Page6.Controls.Add(this.groupBox49);
-            this.tabPage_Page6.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page6.Name = "tabPage_Page6";
-            this.tabPage_Page6.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page6.TabIndex = 6;
-            this.tabPage_Page6.Text = "Page6";
-            this.tabPage_Page6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page7
-            // 
-            this.tabPage_Page7.Controls.Add(this.groupBox51);
-            this.tabPage_Page7.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page7.Name = "tabPage_Page7";
-            this.tabPage_Page7.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page7.TabIndex = 7;
-            this.tabPage_Page7.Text = "Page7";
-            this.tabPage_Page7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page8
-            // 
-            this.tabPage_Page8.Controls.Add(this.groupBox52);
-            this.tabPage_Page8.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page8.Name = "tabPage_Page8";
-            this.tabPage_Page8.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page8.TabIndex = 8;
-            this.tabPage_Page8.Text = "Page8";
-            this.tabPage_Page8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page9
-            // 
-            this.tabPage_Page9.Controls.Add(this.groupBox53);
-            this.tabPage_Page9.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page9.Name = "tabPage_Page9";
-            this.tabPage_Page9.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page9.TabIndex = 9;
-            this.tabPage_Page9.Text = "Page9";
-            this.tabPage_Page9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page10
-            // 
-            this.tabPage_Page10.Controls.Add(this.groupBox54);
-            this.tabPage_Page10.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page10.Name = "tabPage_Page10";
-            this.tabPage_Page10.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page10.TabIndex = 10;
-            this.tabPage_Page10.Text = "Page10";
-            this.tabPage_Page10.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page2
-            // 
-            this.tabPage_Page2.Controls.Add(this.groupBox44);
-            this.tabPage_Page2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page2.Name = "tabPage_Page2";
-            this.tabPage_Page2.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page2.TabIndex = 11;
-            this.tabPage_Page2.Text = "Page2";
-            this.tabPage_Page2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page11
-            // 
-            this.tabPage_Page11.Controls.Add(this.groupBox55);
-            this.tabPage_Page11.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page11.Name = "tabPage_Page11";
-            this.tabPage_Page11.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page11.TabIndex = 12;
-            this.tabPage_Page11.Text = "Page11";
-            this.tabPage_Page11.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_Page12
-            // 
-            this.tabPage_Page12.Controls.Add(this.groupBox56);
-            this.tabPage_Page12.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page12.Name = "tabPage_Page12";
-            this.tabPage_Page12.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page12.TabIndex = 13;
-            this.tabPage_Page12.Text = "Page12";
-            this.tabPage_Page12.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button59);
-            this.groupBox1.Controls.Add(this.button71);
-            this.groupBox1.Location = new System.Drawing.Point(1089, 3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(141, 130);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Flash operation";
-            // 
-            // button59
-            // 
-            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button59.Location = new System.Drawing.Point(6, 22);
-            this.button59.Margin = new System.Windows.Forms.Padding(2);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(127, 43);
-            this.button59.TabIndex = 18;
-            this.button59.Text = "Read Page ";
-            this.button59.UseVisualStyleBackColor = true;
-            // 
-            // button71
-            // 
-            this.button71.BackColor = System.Drawing.Color.Transparent;
-            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button71.Location = new System.Drawing.Point(6, 77);
-            this.button71.Margin = new System.Windows.Forms.Padding(2);
-            this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(127, 43);
-            this.button71.TabIndex = 21;
-            this.button71.Text = "Write to Page";
-            this.button71.UseVisualStyleBackColor = false;
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Controls.Add(this.button72);
-            this.groupBox44.Controls.Add(this.button73);
-            this.groupBox44.Location = new System.Drawing.Point(1091, 0);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Size = new System.Drawing.Size(141, 130);
-            this.groupBox44.TabIndex = 29;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "Flash operation";
-            // 
-            // button72
-            // 
-            this.button72.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button72.Location = new System.Drawing.Point(6, 22);
-            this.button72.Margin = new System.Windows.Forms.Padding(2);
-            this.button72.Name = "button72";
-            this.button72.Size = new System.Drawing.Size(127, 43);
-            this.button72.TabIndex = 18;
-            this.button72.Text = "Read Page ";
-            this.button72.UseVisualStyleBackColor = true;
-            // 
-            // button73
-            // 
-            this.button73.BackColor = System.Drawing.Color.Transparent;
-            this.button73.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button73.Location = new System.Drawing.Point(6, 77);
-            this.button73.Margin = new System.Windows.Forms.Padding(2);
-            this.button73.Name = "button73";
-            this.button73.Size = new System.Drawing.Size(127, 43);
-            this.button73.TabIndex = 21;
-            this.button73.Text = "Write to Page";
-            this.button73.UseVisualStyleBackColor = false;
-            // 
-            // groupBox45
-            // 
-            this.groupBox45.Controls.Add(this.button76);
-            this.groupBox45.Controls.Add(this.button77);
-            this.groupBox45.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox45.Size = new System.Drawing.Size(141, 130);
-            this.groupBox45.TabIndex = 29;
-            this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "Flash operation";
-            // 
-            // button76
-            // 
-            this.button76.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button76.Location = new System.Drawing.Point(6, 22);
-            this.button76.Margin = new System.Windows.Forms.Padding(2);
-            this.button76.Name = "button76";
-            this.button76.Size = new System.Drawing.Size(127, 43);
-            this.button76.TabIndex = 18;
-            this.button76.Text = "Read Page ";
-            this.button76.UseVisualStyleBackColor = true;
-            // 
-            // button77
-            // 
-            this.button77.BackColor = System.Drawing.Color.Transparent;
-            this.button77.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button77.Location = new System.Drawing.Point(6, 77);
-            this.button77.Margin = new System.Windows.Forms.Padding(2);
-            this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(127, 43);
-            this.button77.TabIndex = 21;
-            this.button77.Text = "Write to Page";
-            this.button77.UseVisualStyleBackColor = false;
-            // 
-            // groupBox46
-            // 
-            this.groupBox46.Controls.Add(this.button78);
-            this.groupBox46.Controls.Add(this.button79);
-            this.groupBox46.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox46.Size = new System.Drawing.Size(141, 130);
-            this.groupBox46.TabIndex = 29;
-            this.groupBox46.TabStop = false;
-            this.groupBox46.Text = "Flash operation";
-            // 
-            // button78
-            // 
-            this.button78.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button78.Location = new System.Drawing.Point(6, 22);
-            this.button78.Margin = new System.Windows.Forms.Padding(2);
-            this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(127, 43);
-            this.button78.TabIndex = 18;
-            this.button78.Text = "Read Page ";
-            this.button78.UseVisualStyleBackColor = true;
-            // 
-            // button79
-            // 
-            this.button79.BackColor = System.Drawing.Color.Transparent;
-            this.button79.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button79.Location = new System.Drawing.Point(6, 77);
-            this.button79.Margin = new System.Windows.Forms.Padding(2);
-            this.button79.Name = "button79";
-            this.button79.Size = new System.Drawing.Size(127, 43);
-            this.button79.TabIndex = 21;
-            this.button79.Text = "Write to Page";
-            this.button79.UseVisualStyleBackColor = false;
-            // 
-            // groupBox47
-            // 
-            this.groupBox47.Controls.Add(this.button80);
-            this.groupBox47.Controls.Add(this.button81);
-            this.groupBox47.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox47.Size = new System.Drawing.Size(141, 130);
-            this.groupBox47.TabIndex = 29;
-            this.groupBox47.TabStop = false;
-            this.groupBox47.Text = "Flash operation";
-            // 
-            // button80
-            // 
-            this.button80.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button80.Location = new System.Drawing.Point(6, 22);
-            this.button80.Margin = new System.Windows.Forms.Padding(2);
-            this.button80.Name = "button80";
-            this.button80.Size = new System.Drawing.Size(127, 43);
-            this.button80.TabIndex = 18;
-            this.button80.Text = "Read Page ";
-            this.button80.UseVisualStyleBackColor = true;
-            // 
-            // button81
-            // 
-            this.button81.BackColor = System.Drawing.Color.Transparent;
-            this.button81.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button81.Location = new System.Drawing.Point(6, 77);
-            this.button81.Margin = new System.Windows.Forms.Padding(2);
-            this.button81.Name = "button81";
-            this.button81.Size = new System.Drawing.Size(127, 43);
-            this.button81.TabIndex = 21;
-            this.button81.Text = "Write to Page";
-            this.button81.UseVisualStyleBackColor = false;
-            // 
-            // groupBox49
-            // 
-            this.groupBox49.Controls.Add(this.button82);
-            this.groupBox49.Controls.Add(this.button83);
-            this.groupBox49.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox49.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox49.Size = new System.Drawing.Size(141, 130);
-            this.groupBox49.TabIndex = 29;
-            this.groupBox49.TabStop = false;
-            this.groupBox49.Text = "Flash operation";
-            // 
-            // button82
-            // 
-            this.button82.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button82.Location = new System.Drawing.Point(6, 22);
-            this.button82.Margin = new System.Windows.Forms.Padding(2);
-            this.button82.Name = "button82";
-            this.button82.Size = new System.Drawing.Size(127, 43);
-            this.button82.TabIndex = 18;
-            this.button82.Text = "Read Page ";
-            this.button82.UseVisualStyleBackColor = true;
-            // 
-            // button83
-            // 
-            this.button83.BackColor = System.Drawing.Color.Transparent;
-            this.button83.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button83.Location = new System.Drawing.Point(6, 77);
-            this.button83.Margin = new System.Windows.Forms.Padding(2);
-            this.button83.Name = "button83";
-            this.button83.Size = new System.Drawing.Size(127, 43);
-            this.button83.TabIndex = 21;
-            this.button83.Text = "Write to Page";
-            this.button83.UseVisualStyleBackColor = false;
-            // 
-            // groupBox51
-            // 
-            this.groupBox51.Controls.Add(this.button84);
-            this.groupBox51.Controls.Add(this.button85);
-            this.groupBox51.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox51.Size = new System.Drawing.Size(141, 130);
-            this.groupBox51.TabIndex = 29;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "Flash operation";
-            // 
-            // button84
-            // 
-            this.button84.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button84.Location = new System.Drawing.Point(6, 22);
-            this.button84.Margin = new System.Windows.Forms.Padding(2);
-            this.button84.Name = "button84";
-            this.button84.Size = new System.Drawing.Size(127, 43);
-            this.button84.TabIndex = 18;
-            this.button84.Text = "Read Page ";
-            this.button84.UseVisualStyleBackColor = true;
-            // 
-            // button85
-            // 
-            this.button85.BackColor = System.Drawing.Color.Transparent;
-            this.button85.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button85.Location = new System.Drawing.Point(6, 77);
-            this.button85.Margin = new System.Windows.Forms.Padding(2);
-            this.button85.Name = "button85";
-            this.button85.Size = new System.Drawing.Size(127, 43);
-            this.button85.TabIndex = 21;
-            this.button85.Text = "Write to Page";
-            this.button85.UseVisualStyleBackColor = false;
-            // 
-            // groupBox52
-            // 
-            this.groupBox52.Controls.Add(this.button86);
-            this.groupBox52.Controls.Add(this.button89);
-            this.groupBox52.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox52.Size = new System.Drawing.Size(141, 130);
-            this.groupBox52.TabIndex = 29;
-            this.groupBox52.TabStop = false;
-            this.groupBox52.Text = "Flash operation";
-            // 
-            // button86
-            // 
-            this.button86.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button86.Location = new System.Drawing.Point(6, 22);
-            this.button86.Margin = new System.Windows.Forms.Padding(2);
-            this.button86.Name = "button86";
-            this.button86.Size = new System.Drawing.Size(127, 43);
-            this.button86.TabIndex = 18;
-            this.button86.Text = "Read Page ";
-            this.button86.UseVisualStyleBackColor = true;
-            // 
-            // button89
-            // 
-            this.button89.BackColor = System.Drawing.Color.Transparent;
-            this.button89.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button89.Location = new System.Drawing.Point(6, 77);
-            this.button89.Margin = new System.Windows.Forms.Padding(2);
-            this.button89.Name = "button89";
-            this.button89.Size = new System.Drawing.Size(127, 43);
-            this.button89.TabIndex = 21;
-            this.button89.Text = "Write to Page";
-            this.button89.UseVisualStyleBackColor = false;
-            // 
-            // groupBox53
-            // 
-            this.groupBox53.Controls.Add(this.button90);
-            this.groupBox53.Controls.Add(this.button91);
-            this.groupBox53.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Size = new System.Drawing.Size(141, 130);
-            this.groupBox53.TabIndex = 29;
-            this.groupBox53.TabStop = false;
-            this.groupBox53.Text = "Flash operation";
-            // 
-            // button90
-            // 
-            this.button90.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button90.Location = new System.Drawing.Point(6, 22);
-            this.button90.Margin = new System.Windows.Forms.Padding(2);
-            this.button90.Name = "button90";
-            this.button90.Size = new System.Drawing.Size(127, 43);
-            this.button90.TabIndex = 18;
-            this.button90.Text = "Read Page ";
-            this.button90.UseVisualStyleBackColor = true;
-            // 
-            // button91
-            // 
-            this.button91.BackColor = System.Drawing.Color.Transparent;
-            this.button91.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button91.Location = new System.Drawing.Point(6, 77);
-            this.button91.Margin = new System.Windows.Forms.Padding(2);
-            this.button91.Name = "button91";
-            this.button91.Size = new System.Drawing.Size(127, 43);
-            this.button91.TabIndex = 21;
-            this.button91.Text = "Write to Page";
-            this.button91.UseVisualStyleBackColor = false;
-            // 
-            // groupBox54
-            // 
-            this.groupBox54.Controls.Add(this.button92);
-            this.groupBox54.Controls.Add(this.button93);
-            this.groupBox54.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Size = new System.Drawing.Size(141, 130);
-            this.groupBox54.TabIndex = 29;
-            this.groupBox54.TabStop = false;
-            this.groupBox54.Text = "Flash operation";
-            // 
-            // button92
-            // 
-            this.button92.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button92.Location = new System.Drawing.Point(6, 22);
-            this.button92.Margin = new System.Windows.Forms.Padding(2);
-            this.button92.Name = "button92";
-            this.button92.Size = new System.Drawing.Size(127, 43);
-            this.button92.TabIndex = 18;
-            this.button92.Text = "Read Page ";
-            this.button92.UseVisualStyleBackColor = true;
-            // 
-            // button93
-            // 
-            this.button93.BackColor = System.Drawing.Color.Transparent;
-            this.button93.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button93.Location = new System.Drawing.Point(6, 77);
-            this.button93.Margin = new System.Windows.Forms.Padding(2);
-            this.button93.Name = "button93";
-            this.button93.Size = new System.Drawing.Size(127, 43);
-            this.button93.TabIndex = 21;
-            this.button93.Text = "Write to Page";
-            this.button93.UseVisualStyleBackColor = false;
-            // 
-            // groupBox55
-            // 
-            this.groupBox55.Controls.Add(this.button94);
-            this.groupBox55.Controls.Add(this.button95);
-            this.groupBox55.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Size = new System.Drawing.Size(141, 130);
-            this.groupBox55.TabIndex = 29;
-            this.groupBox55.TabStop = false;
-            this.groupBox55.Text = "Flash operation";
-            // 
-            // button94
-            // 
-            this.button94.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button94.Location = new System.Drawing.Point(6, 22);
-            this.button94.Margin = new System.Windows.Forms.Padding(2);
-            this.button94.Name = "button94";
-            this.button94.Size = new System.Drawing.Size(127, 43);
-            this.button94.TabIndex = 18;
-            this.button94.Text = "Read Page ";
-            this.button94.UseVisualStyleBackColor = true;
-            // 
-            // button95
-            // 
-            this.button95.BackColor = System.Drawing.Color.Transparent;
-            this.button95.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button95.Location = new System.Drawing.Point(6, 77);
-            this.button95.Margin = new System.Windows.Forms.Padding(2);
-            this.button95.Name = "button95";
-            this.button95.Size = new System.Drawing.Size(127, 43);
-            this.button95.TabIndex = 21;
-            this.button95.Text = "Write to Page";
-            this.button95.UseVisualStyleBackColor = false;
-            // 
-            // groupBox56
-            // 
-            this.groupBox56.Controls.Add(this.button96);
-            this.groupBox56.Controls.Add(this.button98);
-            this.groupBox56.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Size = new System.Drawing.Size(141, 130);
-            this.groupBox56.TabIndex = 29;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "Flash operation";
-            // 
-            // button96
-            // 
-            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button96.Location = new System.Drawing.Point(6, 22);
-            this.button96.Margin = new System.Windows.Forms.Padding(2);
-            this.button96.Name = "button96";
-            this.button96.Size = new System.Drawing.Size(127, 43);
-            this.button96.TabIndex = 18;
-            this.button96.Text = "Read Page ";
-            this.button96.UseVisualStyleBackColor = true;
-            // 
-            // button98
-            // 
-            this.button98.BackColor = System.Drawing.Color.Transparent;
-            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button98.Location = new System.Drawing.Point(6, 77);
-            this.button98.Margin = new System.Windows.Forms.Padding(2);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(127, 43);
-            this.button98.TabIndex = 21;
-            this.button98.Text = "Write to Page";
-            this.button98.UseVisualStyleBackColor = false;
+            // comboBox_FreqBit
+            // 
+            this.comboBox_FreqBit.FormattingEnabled = true;
+            this.comboBox_FreqBit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.comboBox_FreqBit.Location = new System.Drawing.Point(16, 54);
+            this.comboBox_FreqBit.Name = "comboBox_FreqBit";
+            this.comboBox_FreqBit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_FreqBit.TabIndex = 36;
+            this.comboBox_FreqBit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FreqBit_SelectedIndexChanged);
+            // 
+            // comboBox_FTbit
+            // 
+            this.comboBox_FTbit.FormattingEnabled = true;
+            this.comboBox_FTbit.Items.AddRange(new object[] {
+            "6  (46 dBm)",
+            "7  (45.8 dBm)",
+            "8 (45.6 dBm)",
+            "9 (45.4 dBm)",
+            "10 (45.2 dBm)",
+            "11 (45 dBm)",
+            "12 (44.8 dBm)",
+            "13 (44.6 dBm)",
+            "14 (44.4 dBm)",
+            "15 (44.2 dBm)"});
+            this.comboBox_FTbit.Location = new System.Drawing.Point(87, 54);
+            this.comboBox_FTbit.Name = "comboBox_FTbit";
+            this.comboBox_FTbit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_FTbit.TabIndex = 37;
+            this.comboBox_FTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FTbit_SelectedIndexChanged);
+            // 
+            // comboBox_ATTbit
+            // 
+            this.comboBox_ATTbit.FormattingEnabled = true;
+            this.comboBox_ATTbit.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox_ATTbit.Location = new System.Drawing.Point(164, 54);
+            this.comboBox_ATTbit.Name = "comboBox_ATTbit";
+            this.comboBox_ATTbit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_ATTbit.TabIndex = 38;
+            this.comboBox_ATTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_ATTbit_SelectedIndexChanged);
+            // 
+            // comboBox_CALSAR
+            // 
+            this.comboBox_CALSAR.FormattingEnabled = true;
+            this.comboBox_CALSAR.Items.AddRange(new object[] {
+            "0=ISO",
+            "1=J5",
+            "2=J4",
+            "3=NA"});
+            this.comboBox_CALSAR.Location = new System.Drawing.Point(285, 54);
+            this.comboBox_CALSAR.Name = "comboBox_CALSAR";
+            this.comboBox_CALSAR.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_CALSAR.TabIndex = 39;
+            this.comboBox_CALSAR.SelectedIndexChanged += new System.EventHandler(this.comboBox_CALSAR_SelectedIndexChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(158, 92);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "timer clock ";
+            // 
+            // checkBox_TimerClock
+            // 
+            this.checkBox_TimerClock.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_TimerClock.AutoSize = true;
+            this.checkBox_TimerClock.Location = new System.Drawing.Point(165, 111);
+            this.checkBox_TimerClock.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_TimerClock.Name = "checkBox_TimerClock";
+            this.checkBox_TimerClock.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_TimerClock.TabIndex = 41;
+            this.checkBox_TimerClock.Text = "On";
+            this.checkBox_TimerClock.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -10845,8 +10903,8 @@ namespace Monitor
             this.tabPage_Main.ResumeLayout(false);
             this.groupBox_SystemMode.ResumeLayout(false);
             this.groupBox_SystemMode.PerformLayout();
-            this.groupBox37.ResumeLayout(false);
-            this.groupBox37.PerformLayout();
+            this.groupBox_SimulatorControl.ResumeLayout(false);
+            this.groupBox_SimulatorControl.PerformLayout();
             this.groupBox_StatusUUT.ResumeLayout(false);
             this.groupBox_StatusUUT.PerformLayout();
             this.groupBox39.ResumeLayout(false);
@@ -10871,18 +10929,39 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage0)).EndInit();
             this.tabPage_Page1.ResumeLayout(false);
             this.tabPage_Page1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ValPage1)).EndInit();
+            this.tabPage_Page2.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
             this.tabPage_Page3.ResumeLayout(false);
             this.tabPage_Page3.PerformLayout();
+            this.groupBox45.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_VVAOffset2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PAVVA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DC4)).EndInit();
             this.tabPage_Page4.ResumeLayout(false);
             this.tabPage_Page4.PerformLayout();
+            this.groupBox46.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.tabPage_Page5.ResumeLayout(false);
+            this.groupBox47.ResumeLayout(false);
+            this.tabPage_Page6.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.tabPage_Page7.ResumeLayout(false);
+            this.groupBox51.ResumeLayout(false);
+            this.tabPage_Page8.ResumeLayout(false);
+            this.groupBox52.ResumeLayout(false);
+            this.tabPage_Page9.ResumeLayout(false);
+            this.groupBox53.ResumeLayout(false);
+            this.tabPage_Page10.ResumeLayout(false);
+            this.groupBox54.ResumeLayout(false);
+            this.tabPage_Page11.ResumeLayout(false);
+            this.groupBox55.ResumeLayout(false);
+            this.tabPage_Page12.ResumeLayout(false);
+            this.groupBox56.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -10938,27 +11017,6 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.tabPage_Page5.ResumeLayout(false);
-            this.tabPage_Page6.ResumeLayout(false);
-            this.tabPage_Page7.ResumeLayout(false);
-            this.tabPage_Page8.ResumeLayout(false);
-            this.tabPage_Page9.ResumeLayout(false);
-            this.tabPage_Page10.ResumeLayout(false);
-            this.tabPage_Page2.ResumeLayout(false);
-            this.tabPage_Page11.ResumeLayout(false);
-            this.tabPage_Page12.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox45.ResumeLayout(false);
-            this.groupBox46.ResumeLayout(false);
-            this.groupBox47.ResumeLayout(false);
-            this.groupBox49.ResumeLayout(false);
-            this.groupBox51.ResumeLayout(false);
-            this.groupBox52.ResumeLayout(false);
-            this.groupBox53.ResumeLayout(false);
-            this.groupBox54.ResumeLayout(false);
-            this.groupBox55.ResumeLayout(false);
-            this.groupBox56.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -22698,34 +22756,12 @@ Note: eStatus enum 
 
         private void textBox82_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
 
-                string hexValue = "";
-                if (int.TryParse(textBox_ATTBit.Text, out int temp))
-                {
-                    hexValue += temp.ToString("X2");
-                }
-
-                textBox8.Text = hexValue;
-                button56_Click_1(null, null);
-            }
         }
 
         private void textBox85_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
 
-                string hexValue = "";
-                if (int.TryParse(textBox_CALSAR.Text, out int temp))
-                {
-                    hexValue += temp.ToString("X2");
-                }
-
-                textBox_SimulatorDiscreteCALSARcontrol.Text = hexValue;
-                button_SimulatorDiscreteCALSARcontrol_Click(null, null);
-            }
         }
 
         private void textBox29_TextChanged(object sender, EventArgs e)
@@ -23051,23 +23087,7 @@ Note: eStatus enum 
 
         private void textBox_CALSAR_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox_CALSAR.Text, out int temp))
-            {
-                if (temp >= 0 && temp <= 3)
-                {
-                    textBox_CALSAR.BackColor = Color.LightGreen;
 
-                }
-                else
-                {
-                    textBox_CALSAR.BackColor = Color.Red;
-
-                }
-            }
-            else
-            {
-                textBox_CALSAR.BackColor = Color.Red;
-            }
         }
 
         private void checkBox_DebugMode_CheckedChanged(object sender, EventArgs e)
@@ -25155,6 +25175,43 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 }
 
             }
+        }
+
+        private void comboBox_FreqBit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox m_comboBox = (ComboBox)sender;
+            int.TryParse(m_comboBox.Text, out int Data);
+            string hexValue = Data.ToString("X4");
+
+            Write_Register_To_Simulator(" 00 05", hexValue);
+        }
+
+        private void comboBox_FTbit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox m_comboBox = (ComboBox)sender;
+            int.TryParse(m_comboBox.Text, out int Data);
+            string hexValue = Data.ToString("X4");
+
+            Write_Register_To_Simulator(" 00 06", hexValue);
+        }
+
+        private void comboBox_ATTbit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox m_comboBox = (ComboBox)sender;
+            int.TryParse(m_comboBox.Text, out int Data);
+            string hexValue = Data.ToString("X4");
+
+            //TBD
+           // Write_Register_To_Simulator(" 00 05", hexValue);
+        }
+
+        private void comboBox_CALSAR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox m_comboBox = (ComboBox)sender;
+            int.TryParse(m_comboBox.Text, out int Data);
+            string hexValue = Data.ToString("X4");
+
+            Write_Register_To_Simulator(" 00 08", hexValue);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
