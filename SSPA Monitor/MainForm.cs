@@ -830,6 +830,7 @@ namespace Monitor
         private CheckBox checkBox_TimerClock;
         private Label label19;
         private Button button_ClearPage0DataGrid;
+        private Button button42;
         private static readonly string PREAMBLE = "23";
 
 
@@ -884,11 +885,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1671,6 +1672,7 @@ namespace Monitor
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_ClearPage0DataGrid = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2117,17 +2119,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea8.AxisX.Title = "Freq";
+            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea8.AxisY.Title = "Power [dBm]";
+            chartArea8.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend8.IsTextAutoFit = false;
+            legend8.Name = "Legend1";
+            legend8.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend8);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -7701,6 +7703,7 @@ namespace Monitor
             // 
             // tabPage_Page0
             // 
+            this.tabPage_Page0.Controls.Add(this.button42);
             this.tabPage_Page0.Controls.Add(this.button_ClearPage0DataGrid);
             this.tabPage_Page0.Controls.Add(this.groupBox50);
             this.tabPage_Page0.Controls.Add(this.dataGridView_ValPage0);
@@ -7764,6 +7767,7 @@ namespace Monitor
             this.dataGridView_ValPage0.TabIndex = 27;
             this.dataGridView_ValPage0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellContentClick);
             this.dataGridView_ValPage0.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_ValPage0.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             // 
             // dataGridViewTextBoxColumn29
             // 
@@ -7857,8 +7861,8 @@ namespace Monitor
             // 
             // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
@@ -7883,8 +7887,8 @@ namespace Monitor
             this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
             this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_ValPage1.TabIndex = 28;
@@ -8372,9 +8376,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10842,6 +10846,18 @@ namespace Monitor
             this.button_ClearPage0DataGrid.Text = "Clear";
             this.button_ClearPage0DataGrid.UseVisualStyleBackColor = true;
             this.button_ClearPage0DataGrid.Click += new System.EventHandler(this.button_ClearPage0DataGrid_Click);
+            // 
+            // button42
+            // 
+            this.button42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button42.Location = new System.Drawing.Point(746, 62);
+            this.button42.Margin = new System.Windows.Forms.Padding(2);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(127, 43);
+            this.button42.TabIndex = 29;
+            this.button42.Text = "Random";
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click_4);
             // 
             // MainForm
             // 
@@ -14390,6 +14406,46 @@ namespace Monitor
             }
         }
         
+
+        void WriteFlashACKReceived(KratosProtocolFrame i_Parsedframe)
+        {
+            try
+            {
+
+                String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+                String str_Status = GetBytesFromData(i_Parsedframe.Data, 5, 4);
+
+                String message = String.Format("Flash Write :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+
+                WriteToSystemStatus(message, 4, Color.Green);
+                //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+
+
+                //switch (str_Address)
+                //{
+                //    case "0000":
+
+                //        for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+                //        {
+
+                //            dataGridView_ValPage0.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                //        }
+
+                //        break;
+
+
+
+                //    default:
+                //        UnHandledAddress(str_Address);
+                //        break;
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         void EraseFlashACKReceived(KratosProtocolFrame i_Parsedframe)
         {
             try
@@ -14430,7 +14486,7 @@ namespace Monitor
             }
         }
 
-        void ReadFlashReceived(KratosProtocolFrame i_Parsedframe)
+        void ReadFlashACKReceived(KratosProtocolFrame i_Parsedframe)
         {
             try
             {
@@ -14810,7 +14866,12 @@ namespace Monitor
                         break;
 
                     case "71":
-                        ReadFlashReceived(i_Parsedframe);
+                        ReadFlashACKReceived(i_Parsedframe);
+
+                        break;
+
+                    case "73":
+                        WriteFlashACKReceived(i_Parsedframe);
 
                         break;
 
@@ -25342,14 +25403,23 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private async void button_WritePage0_Click(object sender, EventArgs e)
         {
+            int i = 0;
+            for (i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                if (dataGridView_ValPage0.Rows[i].DefaultCellStyle.BackColor != Color.LightGreen)
+                {
+                    String message = String.Format("Data at Raw[{0}] is not OK[{1}] ",i, dataGridView_ValPage0.Rows[i].Cells[0].Value.ToString());
+                    WriteToSystemStatus(message, 4, Color.Orange);
+                    return;
+                }
+            }
 
-            String DataToWrite = "";
 
             Erase_Flash("13 00 00");
 
             await Task.Delay(5000);
-
-            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            String DataToWrite = "";
+            for (i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
             {
                 DataToWrite += dataGridView_ValPage0.Rows[i].Cells[0].Value;
             }
@@ -25420,6 +25490,34 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             catch
             {
                 
+            }
+        }
+
+        private void dgGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            var grid = sender as DataGridView;
+            var rowIdx = (e.RowIndex).ToString();
+
+            var centerFormat = new StringFormat()
+            {
+                // right alignment might actually make more sense for numbers
+                Alignment = StringAlignment.Near,
+                LineAlignment = StringAlignment.Center
+            };
+
+            var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
+            e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
+        }
+
+        private void button42_Click_4(object sender, EventArgs e)
+        {
+
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                dataGridView_ValPage0.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
             }
         }
 
