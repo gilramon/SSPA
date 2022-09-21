@@ -5706,12 +5706,12 @@ namespace Monitor
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(450, 345);
+            this.label78.Location = new System.Drawing.Point(433, 353);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(83, 14);
+            this.label78.Size = new System.Drawing.Size(105, 14);
             this.label78.TabIndex = 89;
-            this.label78.Text = "Input controls";
+            this.label78.Text = "Input controls (0x)";
             // 
             // textBox_StatusUUT33
             // 
@@ -7722,7 +7722,7 @@ namespace Monitor
             this.tabPage_Page0.Name = "tabPage_Page0";
             this.tabPage_Page0.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page0.TabIndex = 4;
-            this.tabPage_Page0.Text = "Page0";
+            this.tabPage_Page0.Text = "Block 0";
             this.tabPage_Page0.UseVisualStyleBackColor = true;
             // 
             // groupBox50
@@ -7746,7 +7746,7 @@ namespace Monitor
             this.button_ReadPage0.Name = "button_ReadPage0";
             this.button_ReadPage0.Size = new System.Drawing.Size(127, 43);
             this.button_ReadPage0.TabIndex = 18;
-            this.button_ReadPage0.Text = "Read Page 0";
+            this.button_ReadPage0.Text = "Read block 0";
             this.button_ReadPage0.UseVisualStyleBackColor = true;
             this.button_ReadPage0.Click += new System.EventHandler(this.button_ReadPage0_Click);
             // 
@@ -7759,7 +7759,7 @@ namespace Monitor
             this.button_WritePage0.Name = "button_WritePage0";
             this.button_WritePage0.Size = new System.Drawing.Size(127, 43);
             this.button_WritePage0.TabIndex = 21;
-            this.button_WritePage0.Text = "Write to Page 0";
+            this.button_WritePage0.Text = "Write to block 0";
             this.button_WritePage0.UseVisualStyleBackColor = false;
             this.button_WritePage0.Click += new System.EventHandler(this.button_WritePage0_Click);
             // 
@@ -7776,7 +7776,6 @@ namespace Monitor
             this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_ValPage0.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_ValPage0.TabIndex = 27;
-            this.dataGridView_ValPage0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellContentClick);
             this.dataGridView_ValPage0.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             this.dataGridView_ValPage0.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             // 
@@ -7802,7 +7801,7 @@ namespace Monitor
             this.tabPage_Page1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage_Page1.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page1.TabIndex = 1;
-            this.tabPage_Page1.Text = "Page1";
+            this.tabPage_Page1.Text = "Block 1";
             this.tabPage_Page1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -8016,7 +8015,7 @@ namespace Monitor
             this.tabPage_Page2.Name = "tabPage_Page2";
             this.tabPage_Page2.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page2.TabIndex = 11;
-            this.tabPage_Page2.Text = "Page2";
+            this.tabPage_Page2.Text = "Block 2";
             this.tabPage_Page2.UseVisualStyleBackColor = true;
             // 
             // groupBox44
@@ -8073,7 +8072,7 @@ namespace Monitor
             this.tabPage_Page3.Name = "tabPage_Page3";
             this.tabPage_Page3.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page3.TabIndex = 2;
-            this.tabPage_Page3.Text = "Page3";
+            this.tabPage_Page3.Text = "Block 3";
             this.tabPage_Page3.UseVisualStyleBackColor = true;
             // 
             // groupBox45
@@ -8429,7 +8428,7 @@ namespace Monitor
             this.tabPage_Page4.Name = "tabPage_Page4";
             this.tabPage_Page4.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page4.TabIndex = 3;
-            this.tabPage_Page4.Text = "Page4";
+            this.tabPage_Page4.Text = "Block 4";
             this.tabPage_Page4.UseVisualStyleBackColor = true;
             // 
             // groupBox46
@@ -8584,7 +8583,7 @@ namespace Monitor
             this.tabPage_Page5.Name = "tabPage_Page5";
             this.tabPage_Page5.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page5.TabIndex = 5;
-            this.tabPage_Page5.Text = "Page5";
+            this.tabPage_Page5.Text = "Block 5";
             this.tabPage_Page5.UseVisualStyleBackColor = true;
             // 
             // groupBox47
@@ -8630,7 +8629,7 @@ namespace Monitor
             this.tabPage_Page6.Name = "tabPage_Page6";
             this.tabPage_Page6.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page6.TabIndex = 6;
-            this.tabPage_Page6.Text = "Page6";
+            this.tabPage_Page6.Text = "Block 6";
             this.tabPage_Page6.UseVisualStyleBackColor = true;
             // 
             // groupBox49
@@ -8676,7 +8675,7 @@ namespace Monitor
             this.tabPage_Page7.Name = "tabPage_Page7";
             this.tabPage_Page7.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page7.TabIndex = 7;
-            this.tabPage_Page7.Text = "Page7";
+            this.tabPage_Page7.Text = "Block 7";
             this.tabPage_Page7.UseVisualStyleBackColor = true;
             // 
             // groupBox51
@@ -8722,7 +8721,7 @@ namespace Monitor
             this.tabPage_Page8.Name = "tabPage_Page8";
             this.tabPage_Page8.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page8.TabIndex = 8;
-            this.tabPage_Page8.Text = "Page8";
+            this.tabPage_Page8.Text = "Block 8";
             this.tabPage_Page8.UseVisualStyleBackColor = true;
             // 
             // groupBox52
@@ -8768,7 +8767,7 @@ namespace Monitor
             this.tabPage_Page9.Name = "tabPage_Page9";
             this.tabPage_Page9.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page9.TabIndex = 9;
-            this.tabPage_Page9.Text = "Page9";
+            this.tabPage_Page9.Text = "Block 9";
             this.tabPage_Page9.UseVisualStyleBackColor = true;
             // 
             // groupBox53
@@ -8814,7 +8813,7 @@ namespace Monitor
             this.tabPage_Page10.Name = "tabPage_Page10";
             this.tabPage_Page10.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page10.TabIndex = 10;
-            this.tabPage_Page10.Text = "Page10";
+            this.tabPage_Page10.Text = "Block 10";
             this.tabPage_Page10.UseVisualStyleBackColor = true;
             // 
             // groupBox54
@@ -8860,7 +8859,7 @@ namespace Monitor
             this.tabPage_Page11.Name = "tabPage_Page11";
             this.tabPage_Page11.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page11.TabIndex = 12;
-            this.tabPage_Page11.Text = "Page11";
+            this.tabPage_Page11.Text = "Block 11";
             this.tabPage_Page11.UseVisualStyleBackColor = true;
             // 
             // groupBox55
@@ -8906,7 +8905,7 @@ namespace Monitor
             this.tabPage_Page12.Name = "tabPage_Page12";
             this.tabPage_Page12.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page12.TabIndex = 13;
-            this.tabPage_Page12.Text = "Page12";
+            this.tabPage_Page12.Text = "Block 12";
             this.tabPage_Page12.UseVisualStyleBackColor = true;
             // 
             // groupBox56
@@ -14504,7 +14503,7 @@ namespace Monitor
 
                 String message = String.Format("Flash Write :  Address[{0}] Status: [{1}]", str_Address, str_Status);
 
-                WriteToSystemStatus(message, 4, Color.Green);
+                WriteToSystemStatus(message, 4, default);
                 //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
 
 
@@ -14749,7 +14748,7 @@ namespace Monitor
                         textBox_StatusUUT9.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.053);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT10.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.17);
+                        textBox_StatusUUT10.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.17);
 
                         // textBox_StatusUUT6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_StatusUUT7.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -14762,7 +14761,7 @@ namespace Monitor
                         // 27 + (DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (27 + (float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01);
+                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 + 27);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
                         textBox_StatusUUT12.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
@@ -14778,22 +14777,22 @@ namespace Monitor
                         textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 +27);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        //if (DecimalNumber > 0x1F4)
-                        //{
+                        if (DecimalNumber < 0x1F4)
+                        {
                             textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (float)DecimalNumber / 4);
-                        //}
-                        //else
-                        //{
-                        //    textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (4096 - (float)DecimalNumber) / 4);
-                        //}
-                        
+                        }
+                        else
+                        {
+                            textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (4096 - (float)DecimalNumber) / 4);
+                        }
+
 
                         //textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
                         //textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         // textBox_StatusUUT13.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         // textBox_StatusUUT14.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
-                       // textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
-                      //  textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        // textBox_StatusUUT15.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        //  textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00B8":
@@ -25519,7 +25518,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             int i = 0;
             for (i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
             {
-                if (dataGridView_ValPage0.Rows[i].DefaultCellStyle.BackColor != Color.LightGreen)
+                if (dataGridView_ValPage0.Rows[i].Cells[0].Style.BackColor != Color.LightGreen)
                 {
                     String message = String.Format("Data at Raw[{0}] is not OK[{1}] ",i, dataGridView_ValPage0.Rows[i].Cells[0].Value.ToString());
                     WriteToSystemStatus(message, 4, Color.Orange);
@@ -25548,31 +25547,6 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private void dataGridView_ValPage0_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView m_DataGrid = (DataGridView)sender;
-            for (int i = 0; i < m_DataGrid.Rows.Count; i++)
-            {
-                    if(m_DataGrid.Rows[i].Cells[0].Value == null)
-                    {
-                        m_DataGrid.Rows[i].Cells[0].Value = "";
-                    }
-
-                    string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[i].Cells[0].Value.ToString(), @"\s+", "");
-                    byte[] buffer = StringToByteArray(WithoutSpaces);
-
-                    if (buffer != null && buffer.Length == 2)
-                    {
-                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
-                    }
-                    else
-                    {
-                    m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-                }
-
-            }
-        }
-
         private void dataGridView_ValPage0_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -25585,18 +25559,20 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                         m_DataGrid.Rows[i].Cells[0].Value = "";
                     }
 
-
                     string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[i].Cells[0].Value.ToString(), @"\s+", "");
                     byte[] buffer = StringToByteArray(WithoutSpaces);
 
+
+
                     if (buffer != null && buffer.Length == 2)
                     {
-                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                        m_DataGrid.Rows[i].Cells[0].Style.BackColor = Color.LightGreen;
                     }
                     else
                     {
-                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                        m_DataGrid.Rows[i].Cells[0].Style.BackColor = Color.Red;
                     }
+                 //   m_DataGrid.Refresh();
 
                 }
             }
