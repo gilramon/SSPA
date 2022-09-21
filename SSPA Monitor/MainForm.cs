@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Pipes;
 using System.IO.Ports;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -664,8 +665,8 @@ namespace Monitor
         private DataGridViewTextBoxColumn Column21;
         private Button button57;
         private GroupBox groupBox48;
-        private Button button6;
-        private Button button29;
+        private Button button_ReadCSVFile;
+        private Button button_WriteToCSV;
         private GroupBox groupBox38;
         private Label label84;
         private Label label85;
@@ -836,6 +837,7 @@ namespace Monitor
         private Button button101;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private DataGridViewTextBoxColumn Optional;
+        private DataGridViewTextBoxColumn Verify_ReadOnly;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1167,8 +1169,8 @@ namespace Monitor
             this.tabPage3038WBPAA = new System.Windows.Forms.TabPage();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
+            this.button_ReadCSVFile = new System.Windows.Forms.Button();
+            this.button_WriteToCSV = new System.Windows.Forms.Button();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
@@ -1680,9 +1682,10 @@ namespace Monitor
             this.button_TimerClock = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
+            this.button101 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Optional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button101 = new System.Windows.Forms.Button();
+            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -5115,8 +5118,8 @@ namespace Monitor
             // 
             // groupBox48
             // 
-            this.groupBox48.Controls.Add(this.button6);
-            this.groupBox48.Controls.Add(this.button29);
+            this.groupBox48.Controls.Add(this.button_ReadCSVFile);
+            this.groupBox48.Controls.Add(this.button_WriteToCSV);
             this.groupBox48.Location = new System.Drawing.Point(1248, 184);
             this.groupBox48.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox48.Name = "groupBox48";
@@ -5126,28 +5129,30 @@ namespace Monitor
             this.groupBox48.TabStop = false;
             this.groupBox48.Text = "CSV file";
             // 
-            // button6
+            // button_ReadCSVFile
             // 
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(6, 22);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 43);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Read CSV file";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_ReadCSVFile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ReadCSVFile.Location = new System.Drawing.Point(6, 22);
+            this.button_ReadCSVFile.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadCSVFile.Name = "button_ReadCSVFile";
+            this.button_ReadCSVFile.Size = new System.Drawing.Size(127, 43);
+            this.button_ReadCSVFile.TabIndex = 18;
+            this.button_ReadCSVFile.Text = "Load CSV file";
+            this.button_ReadCSVFile.UseVisualStyleBackColor = true;
+            this.button_ReadCSVFile.Click += new System.EventHandler(this.button_ReadCSVFile_Click);
             // 
-            // button29
+            // button_WriteToCSV
             // 
-            this.button29.BackColor = System.Drawing.Color.Transparent;
-            this.button29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(6, 77);
-            this.button29.Margin = new System.Windows.Forms.Padding(2);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(127, 43);
-            this.button29.TabIndex = 21;
-            this.button29.Text = "Write CSV file";
-            this.button29.UseVisualStyleBackColor = false;
+            this.button_WriteToCSV.BackColor = System.Drawing.Color.Transparent;
+            this.button_WriteToCSV.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WriteToCSV.Location = new System.Drawing.Point(6, 77);
+            this.button_WriteToCSV.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteToCSV.Name = "button_WriteToCSV";
+            this.button_WriteToCSV.Size = new System.Drawing.Size(127, 43);
+            this.button_WriteToCSV.TabIndex = 21;
+            this.button_WriteToCSV.Text = "Save CSV file";
+            this.button_WriteToCSV.UseVisualStyleBackColor = false;
+            this.button_WriteToCSV.Click += new System.EventHandler(this.button_WriteToCSV_Click);
             // 
             // groupBox38
             // 
@@ -7763,7 +7768,8 @@ namespace Monitor
             this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn29,
-            this.Optional});
+            this.Optional,
+            this.Verify_ReadOnly});
             this.dataGridView_ValPage0.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_ValPage0.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
@@ -10902,18 +10908,6 @@ namespace Monitor
             this.button100.UseVisualStyleBackColor = true;
             this.button100.Click += new System.EventHandler(this.button100_Click_4);
             // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.Width = 125;
-            // 
-            // Optional
-            // 
-            this.Optional.HeaderText = "Optional";
-            this.Optional.Name = "Optional";
-            // 
             // button101
             // 
             this.button101.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -10925,6 +10919,30 @@ namespace Monitor
             this.button101.Text = "Copy to Optional <-----";
             this.button101.UseVisualStyleBackColor = true;
             this.button101.Click += new System.EventHandler(this.button101_Click_2);
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.Frozen = true;
+            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // Optional
+            // 
+            this.Optional.Frozen = true;
+            this.Optional.HeaderText = "Optional";
+            this.Optional.Name = "Optional";
+            this.Optional.ReadOnly = true;
+            this.Optional.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Verify_ReadOnly
+            // 
+            this.Verify_ReadOnly.Frozen = true;
+            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
+            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
+            this.Verify_ReadOnly.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -22899,22 +22917,29 @@ Note: eStatus enum 
 
         }
 
+        void Not_Implemented()
+        {
+            string message = "Gil: Not Implemented";
+            MessageBox.Show(message);
+        }
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
             CheckBox Checkbx = (CheckBox)sender;
-            if (Checkbx.Checked == true)
-            {
-                textBox16.Text = "01";
+            Not_Implemented();
 
-                Checkbx.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                textBox16.Text = "00";
-                Checkbx.BackColor = default;
-            }
+            //if (Checkbx.Checked == true)
+            //{
+            //    textBox16.Text = "01";
 
-            button117_Click(null, null);
+            //    Checkbx.BackColor = Color.LightGreen;
+            //}
+            //else
+            //{
+            //    textBox16.Text = "00";
+            //    Checkbx.BackColor = default;
+            //}
+
+            //button117_Click(null, null);
         }
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
@@ -25659,6 +25684,93 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
             {
                 dataGridView_ValPage0.Rows[i].Cells[0].Value = dataGridView_ValPage0.Rows[i].Cells[1].Value;
+            }
+        }
+
+        private void button_WriteToCSV_Click(object sender, EventArgs e)
+        {
+
+            ////before your loop
+            var CSV_bulder = new StringBuilder();
+
+            //Suggestion made by KyleMit
+            var newLine = string.Format("{0},{1}", 1, 2);
+            CSV_bulder.AppendLine(newLine);
+
+            //after your loop
+            //File.WriteAllText(".", csv.ToString());
+
+            // Displays a SaveFileDialog so the user can save the Image
+            // assigned to Button2.
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "csv|*.csv";
+            saveFileDialog1.Title = "Save a csv file";
+            saveFileDialog1.ShowDialog();
+
+            // If the file name is not an empty string open it for saving.
+            if (saveFileDialog1.FileName != "")
+            {
+                // Saves the Image via a FileStream created by the OpenFile method.
+                System.IO.FileStream fs =
+                    (System.IO.FileStream)saveFileDialog1.OpenFile();
+                // Saves the Image in the appropriate ImageFormat based upon the
+                // File type selected in the dialog box.
+                // NOTE that the FilterIndex property is one-based.
+                //switch (saveFileDialog1.FilterIndex)
+                //{
+                //    case 1:
+                //        this.button2.Image.Save(fs,
+                //          System.Drawing.Imaging.ImageFormat.Jpeg);
+                //        break;
+
+                //    case 2:
+                //        this.button2.Image.Save(fs,
+                //          System.Drawing.Imaging.ImageFormat.Bmp);
+                //        break;
+
+                //    case 3:
+                //        this.button2.Image.Save(fs,
+                //          System.Drawing.Imaging.ImageFormat.Gif);
+                //        break;
+                //}
+
+                byte[] info = new UTF8Encoding(true).GetBytes(CSV_bulder.ToString());
+                fs.Write(info, 0, info.Length);
+
+                fs.Close();
+            }
+
+
+        }
+
+        private void button_ReadCSVFile_Click(object sender, EventArgs e)
+        {
+            Stream myStream = null;
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open CSV File";
+            theDialog.Filter = "CSV files|*.csv";
+            //theDialog.InitialDirectory = @"C:\";
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = theDialog.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                            StreamReader reader = new StreamReader(myStream);
+                            string text = reader.ReadToEnd();
+                            reader.Close();
+                            string message = text;
+                            MessageBox.Show(message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
             }
         }
 
