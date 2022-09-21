@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Numerics;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -766,8 +767,8 @@ namespace Monitor
         private TextBox textBox_ACKWriteRegisterReceived;
         private TextBox textBox_ReadRegisterAnswer;
         private GroupBox groupBox50;
-        private Button button42;
-        private Button button44;
+        private Button button_ReadPage0;
+        private Button button_WritePage0;
         private Label label77;
         private Button button_SEURecover;
         private Label label78;
@@ -828,6 +829,7 @@ namespace Monitor
         private ComboBox comboBox_FreqBit;
         private CheckBox checkBox_TimerClock;
         private Label label19;
+        private Button button_ClearPage0DataGrid;
         private static readonly string PREAMBLE = "23";
 
 
@@ -882,11 +884,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1172,6 +1174,12 @@ namespace Monitor
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox_SimulatorControl = new System.Windows.Forms.GroupBox();
+            this.checkBox_TimerClock = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox_CALSAR = new System.Windows.Forms.ComboBox();
+            this.comboBox_ATTbit = new System.Windows.Forms.ComboBox();
+            this.comboBox_FTbit = new System.Windows.Forms.ComboBox();
+            this.comboBox_FreqBit = new System.Windows.Forms.ComboBox();
             this.label82 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
@@ -1362,8 +1370,8 @@ namespace Monitor
             this.label98 = new System.Windows.Forms.Label();
             this.tabPage_Page0 = new System.Windows.Forms.TabPage();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
+            this.button_ReadPage0 = new System.Windows.Forms.Button();
+            this.button_WritePage0 = new System.Windows.Forms.Button();
             this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
@@ -1662,12 +1670,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBox_FreqBit = new System.Windows.Forms.ComboBox();
-            this.comboBox_FTbit = new System.Windows.Forms.ComboBox();
-            this.comboBox_ATTbit = new System.Windows.Forms.ComboBox();
-            this.comboBox_CALSAR = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.checkBox_TimerClock = new System.Windows.Forms.CheckBox();
+            this.button_ClearPage0DataGrid = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2114,17 +2117,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea4.AxisX.Title = "Freq";
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.Title = "Power [dBm]";
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5302,6 +5305,121 @@ namespace Monitor
             this.groupBox_SimulatorControl.TabStop = false;
             this.groupBox_SimulatorControl.Text = "Simulator Control";
             // 
+            // checkBox_TimerClock
+            // 
+            this.checkBox_TimerClock.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_TimerClock.AutoSize = true;
+            this.checkBox_TimerClock.Location = new System.Drawing.Point(165, 111);
+            this.checkBox_TimerClock.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_TimerClock.Name = "checkBox_TimerClock";
+            this.checkBox_TimerClock.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_TimerClock.TabIndex = 41;
+            this.checkBox_TimerClock.Text = "On";
+            this.checkBox_TimerClock.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(158, 92);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "timer clock ";
+            // 
+            // comboBox_CALSAR
+            // 
+            this.comboBox_CALSAR.FormattingEnabled = true;
+            this.comboBox_CALSAR.Items.AddRange(new object[] {
+            "0=ISO",
+            "1=J5",
+            "2=J4",
+            "3=NA"});
+            this.comboBox_CALSAR.Location = new System.Drawing.Point(285, 54);
+            this.comboBox_CALSAR.Name = "comboBox_CALSAR";
+            this.comboBox_CALSAR.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_CALSAR.TabIndex = 39;
+            this.comboBox_CALSAR.SelectedIndexChanged += new System.EventHandler(this.comboBox_CALSAR_SelectedIndexChanged);
+            // 
+            // comboBox_ATTbit
+            // 
+            this.comboBox_ATTbit.FormattingEnabled = true;
+            this.comboBox_ATTbit.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox_ATTbit.Location = new System.Drawing.Point(164, 54);
+            this.comboBox_ATTbit.Name = "comboBox_ATTbit";
+            this.comboBox_ATTbit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_ATTbit.TabIndex = 38;
+            this.comboBox_ATTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_ATTbit_SelectedIndexChanged);
+            // 
+            // comboBox_FTbit
+            // 
+            this.comboBox_FTbit.FormattingEnabled = true;
+            this.comboBox_FTbit.Items.AddRange(new object[] {
+            "6  (46 dBm)",
+            "7  (45.8 dBm)",
+            "8 (45.6 dBm)",
+            "9 (45.4 dBm)",
+            "10 (45.2 dBm)",
+            "11 (45 dBm)",
+            "12 (44.8 dBm)",
+            "13 (44.6 dBm)",
+            "14 (44.4 dBm)",
+            "15 (44.2 dBm)"});
+            this.comboBox_FTbit.Location = new System.Drawing.Point(87, 54);
+            this.comboBox_FTbit.Name = "comboBox_FTbit";
+            this.comboBox_FTbit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_FTbit.TabIndex = 37;
+            this.comboBox_FTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FTbit_SelectedIndexChanged);
+            // 
+            // comboBox_FreqBit
+            // 
+            this.comboBox_FreqBit.FormattingEnabled = true;
+            this.comboBox_FreqBit.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.comboBox_FreqBit.Location = new System.Drawing.Point(16, 54);
+            this.comboBox_FreqBit.Name = "comboBox_FreqBit";
+            this.comboBox_FreqBit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_FreqBit.TabIndex = 36;
+            this.comboBox_FreqBit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FreqBit_SelectedIndexChanged);
+            // 
             // label82
             // 
             this.label82.AutoSize = true;
@@ -7583,6 +7701,7 @@ namespace Monitor
             // 
             // tabPage_Page0
             // 
+            this.tabPage_Page0.Controls.Add(this.button_ClearPage0DataGrid);
             this.tabPage_Page0.Controls.Add(this.groupBox50);
             this.tabPage_Page0.Controls.Add(this.dataGridView_ValPage0);
             this.tabPage_Page0.Controls.Add(this.label81);
@@ -7596,39 +7715,41 @@ namespace Monitor
             // 
             // groupBox50
             // 
-            this.groupBox50.Controls.Add(this.button42);
-            this.groupBox50.Controls.Add(this.button44);
+            this.groupBox50.Controls.Add(this.button_ReadPage0);
+            this.groupBox50.Controls.Add(this.button_WritePage0);
             this.groupBox50.Location = new System.Drawing.Point(1091, 2);
             this.groupBox50.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox50.Name = "groupBox50";
             this.groupBox50.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox50.Size = new System.Drawing.Size(141, 130);
+            this.groupBox50.Size = new System.Drawing.Size(141, 126);
             this.groupBox50.TabIndex = 28;
             this.groupBox50.TabStop = false;
             this.groupBox50.Text = "Flash operation";
             // 
-            // button42
+            // button_ReadPage0
             // 
-            this.button42.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.Location = new System.Drawing.Point(6, 22);
-            this.button42.Margin = new System.Windows.Forms.Padding(2);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(127, 43);
-            this.button42.TabIndex = 18;
-            this.button42.Text = "Read Page ";
-            this.button42.UseVisualStyleBackColor = true;
+            this.button_ReadPage0.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ReadPage0.Location = new System.Drawing.Point(6, 22);
+            this.button_ReadPage0.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadPage0.Name = "button_ReadPage0";
+            this.button_ReadPage0.Size = new System.Drawing.Size(127, 43);
+            this.button_ReadPage0.TabIndex = 18;
+            this.button_ReadPage0.Text = "Read Page 0";
+            this.button_ReadPage0.UseVisualStyleBackColor = true;
+            this.button_ReadPage0.Click += new System.EventHandler(this.button_ReadPage0_Click);
             // 
-            // button44
+            // button_WritePage0
             // 
-            this.button44.BackColor = System.Drawing.Color.Transparent;
-            this.button44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.Location = new System.Drawing.Point(6, 77);
-            this.button44.Margin = new System.Windows.Forms.Padding(2);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(127, 43);
-            this.button44.TabIndex = 21;
-            this.button44.Text = "Write to Page";
-            this.button44.UseVisualStyleBackColor = false;
+            this.button_WritePage0.BackColor = System.Drawing.Color.Transparent;
+            this.button_WritePage0.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WritePage0.Location = new System.Drawing.Point(6, 77);
+            this.button_WritePage0.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WritePage0.Name = "button_WritePage0";
+            this.button_WritePage0.Size = new System.Drawing.Size(127, 43);
+            this.button_WritePage0.TabIndex = 21;
+            this.button_WritePage0.Text = "Write to Page 0";
+            this.button_WritePage0.UseVisualStyleBackColor = false;
+            this.button_WritePage0.Click += new System.EventHandler(this.button_WritePage0_Click);
             // 
             // dataGridView_ValPage0
             // 
@@ -7641,6 +7762,8 @@ namespace Monitor
             this.dataGridView_ValPage0.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_ValPage0.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_ValPage0.TabIndex = 27;
+            this.dataGridView_ValPage0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellContentClick);
+            this.dataGridView_ValPage0.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn29
             // 
@@ -7734,8 +7857,8 @@ namespace Monitor
             // 
             // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
@@ -7760,8 +7883,8 @@ namespace Monitor
             this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
             this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_ValPage1.TabIndex = 28;
@@ -8249,9 +8372,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10708,120 +10831,17 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // comboBox_FreqBit
+            // button_ClearPage0DataGrid
             // 
-            this.comboBox_FreqBit.FormattingEnabled = true;
-            this.comboBox_FreqBit.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox_FreqBit.Location = new System.Drawing.Point(16, 54);
-            this.comboBox_FreqBit.Name = "comboBox_FreqBit";
-            this.comboBox_FreqBit.Size = new System.Drawing.Size(54, 26);
-            this.comboBox_FreqBit.TabIndex = 36;
-            this.comboBox_FreqBit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FreqBit_SelectedIndexChanged);
-            // 
-            // comboBox_FTbit
-            // 
-            this.comboBox_FTbit.FormattingEnabled = true;
-            this.comboBox_FTbit.Items.AddRange(new object[] {
-            "6  (46 dBm)",
-            "7  (45.8 dBm)",
-            "8 (45.6 dBm)",
-            "9 (45.4 dBm)",
-            "10 (45.2 dBm)",
-            "11 (45 dBm)",
-            "12 (44.8 dBm)",
-            "13 (44.6 dBm)",
-            "14 (44.4 dBm)",
-            "15 (44.2 dBm)"});
-            this.comboBox_FTbit.Location = new System.Drawing.Point(87, 54);
-            this.comboBox_FTbit.Name = "comboBox_FTbit";
-            this.comboBox_FTbit.Size = new System.Drawing.Size(54, 26);
-            this.comboBox_FTbit.TabIndex = 37;
-            this.comboBox_FTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FTbit_SelectedIndexChanged);
-            // 
-            // comboBox_ATTbit
-            // 
-            this.comboBox_ATTbit.FormattingEnabled = true;
-            this.comboBox_ATTbit.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox_ATTbit.Location = new System.Drawing.Point(164, 54);
-            this.comboBox_ATTbit.Name = "comboBox_ATTbit";
-            this.comboBox_ATTbit.Size = new System.Drawing.Size(54, 26);
-            this.comboBox_ATTbit.TabIndex = 38;
-            this.comboBox_ATTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_ATTbit_SelectedIndexChanged);
-            // 
-            // comboBox_CALSAR
-            // 
-            this.comboBox_CALSAR.FormattingEnabled = true;
-            this.comboBox_CALSAR.Items.AddRange(new object[] {
-            "0=ISO",
-            "1=J5",
-            "2=J4",
-            "3=NA"});
-            this.comboBox_CALSAR.Location = new System.Drawing.Point(285, 54);
-            this.comboBox_CALSAR.Name = "comboBox_CALSAR";
-            this.comboBox_CALSAR.Size = new System.Drawing.Size(54, 26);
-            this.comboBox_CALSAR.TabIndex = 39;
-            this.comboBox_CALSAR.SelectedIndexChanged += new System.EventHandler(this.comboBox_CALSAR_SelectedIndexChanged);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(158, 92);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 13);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "timer clock ";
-            // 
-            // checkBox_TimerClock
-            // 
-            this.checkBox_TimerClock.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_TimerClock.AutoSize = true;
-            this.checkBox_TimerClock.Location = new System.Drawing.Point(165, 111);
-            this.checkBox_TimerClock.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_TimerClock.Name = "checkBox_TimerClock";
-            this.checkBox_TimerClock.Size = new System.Drawing.Size(36, 28);
-            this.checkBox_TimerClock.TabIndex = 41;
-            this.checkBox_TimerClock.Text = "On";
-            this.checkBox_TimerClock.UseVisualStyleBackColor = true;
+            this.button_ClearPage0DataGrid.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearPage0DataGrid.Location = new System.Drawing.Point(746, 9);
+            this.button_ClearPage0DataGrid.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearPage0DataGrid.Name = "button_ClearPage0DataGrid";
+            this.button_ClearPage0DataGrid.Size = new System.Drawing.Size(127, 43);
+            this.button_ClearPage0DataGrid.TabIndex = 22;
+            this.button_ClearPage0DataGrid.Text = "Clear";
+            this.button_ClearPage0DataGrid.UseVisualStyleBackColor = true;
+            this.button_ClearPage0DataGrid.Click += new System.EventHandler(this.button_ClearPage0DataGrid_Click);
             // 
             // MainForm
             // 
@@ -13763,6 +13783,17 @@ namespace Monitor
             return ret;
 
         }
+        private string UnHandledAddressFlash(String i_Address)
+        {
+
+            string ret = string.Format("\n Flash Address Unhandled UUT: [{0}] \n", i_Address);
+            WriteToSystemStatus(ret, 4, Color.Orange);
+
+
+
+            return ret;
+
+        }
         private string UnHandledAddress(String i_Address)
         {
 
@@ -14358,8 +14389,83 @@ namespace Monitor
                 MessageBox.Show(ex.ToString());
             }
         }
+        
+        void EraseFlashACKReceived(KratosProtocolFrame i_Parsedframe)
+        {
+            try
+            {
 
-        private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
+                String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+                String str_Status = GetBytesFromData(i_Parsedframe.Data, 5, 4);
+
+                String message = String.Format("Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+
+                WriteToSystemStatus(message, 4, Color.Cyan);
+                //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+
+
+                //switch (str_Address)
+                //{
+                //    case "0000":
+
+                //        for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+                //        {
+
+                //            dataGridView_ValPage0.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                //        }
+
+                //        break;
+
+
+
+                //    default:
+                //        UnHandledAddress(str_Address);
+                //        break;
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        void ReadFlashReceived(KratosProtocolFrame i_Parsedframe)
+        {
+            try
+            {
+
+                String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
+              //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+
+
+                switch (str_Address)
+                {
+                    case "0000":
+
+                        for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+                        {
+
+                           dataGridView_ValPage0.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+     
+                        }
+
+                        break;
+
+
+
+                    default:
+                        UnHandledAddress(str_Address);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+    private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
         {
             int DecimalNumber;
             try
@@ -14399,6 +14505,11 @@ namespace Monitor
                         textBox_DCA2.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00) >> 8).ToString();
 
                         break;
+
+                    //case "0071":
+                    //    textBox_SystemID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                    //    textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                    //    break;
 
                     case "008A":
                         textBox_SystemID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -14695,6 +14806,16 @@ namespace Monitor
 
                     case "39":
                         ACK_Received(i_Parsedframe);
+
+                        break;
+
+                    case "71":
+                        ReadFlashReceived(i_Parsedframe);
+
+                        break;
+
+                    case "75":
+                        EraseFlashACKReceived(i_Parsedframe);
 
                         break;
 
@@ -23726,7 +23847,7 @@ Note: eStatus enum 
             button_WriteFlash_Click(null, null);
         }
 
-        void Read_Flash(String i_Page, String i_PageInternalAddress)
+        void Read_Flash(String i_Page, String i_PageInternalAddress = "00 00")
         {
             textBox_ReadFlash.Text = String.Format("02 {0} {1}", i_Page, i_PageInternalAddress);
 
@@ -25212,6 +25333,94 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             string hexValue = Data.ToString("X4");
 
             Write_Register_To_Simulator(" 00 08", hexValue);
+        }
+
+        private void button_ReadPage0_Click(object sender, EventArgs e)
+        {
+            Read_Flash("00 00");
+        }
+
+        private async void button_WritePage0_Click(object sender, EventArgs e)
+        {
+
+            String DataToWrite = "";
+
+            Erase_Flash("13 00 00");
+
+            await Task.Delay(5000);
+
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                DataToWrite += dataGridView_ValPage0.Rows[i].Cells[0].Value;
+            }
+
+            Write_Flash("00 00", "00 00", DataToWrite);
+        }
+
+        private void button_ClearPage0DataGrid_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                dataGridView_ValPage0.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void dataGridView_ValPage0_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView m_DataGrid = (DataGridView)sender;
+            for (int i = 0; i < m_DataGrid.Rows.Count; i++)
+            {
+                    if(m_DataGrid.Rows[i].Cells[0].Value == null)
+                    {
+                        m_DataGrid.Rows[i].Cells[0].Value = "";
+                    }
+
+                    string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[i].Cells[0].Value.ToString(), @"\s+", "");
+                    byte[] buffer = StringToByteArray(WithoutSpaces);
+
+                    if (buffer != null && buffer.Length == 2)
+                    {
+                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                    }
+                    else
+                    {
+                    m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+
+            }
+        }
+
+        private void dataGridView_ValPage0_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView m_DataGrid = (DataGridView)sender;
+                for (int i = 0; i < m_DataGrid.Rows.Count; i++)
+                {
+                    if (m_DataGrid.Rows[i].Cells[0].Value == null)
+                    {
+                        m_DataGrid.Rows[i].Cells[0].Value = "";
+                    }
+
+
+                    string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[i].Cells[0].Value.ToString(), @"\s+", "");
+                    byte[] buffer = StringToByteArray(WithoutSpaces);
+
+                    if (buffer != null && buffer.Length == 2)
+                    {
+                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                    }
+                    else
+                    {
+                        m_DataGrid.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                    }
+
+                }
+            }
+            catch
+            {
+                
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
