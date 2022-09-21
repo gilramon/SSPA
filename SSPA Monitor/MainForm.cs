@@ -646,7 +646,6 @@ namespace Monitor
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn Column13;
         private DataGridView dataGridView_ValPage0;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
@@ -827,10 +826,16 @@ namespace Monitor
         private ComboBox comboBox_ATTbit;
         private ComboBox comboBox_FTbit;
         private ComboBox comboBox_FreqBit;
-        private CheckBox checkBox_TimerClock;
         private Label label19;
         private Button button_ClearPage0DataGrid;
         private Button button42;
+        private Button button_Strobe;
+        private Button button_TimerClock;
+        private Button button44;
+        private Button button100;
+        private Button button101;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private DataGridViewTextBoxColumn Optional;
         private static readonly string PREAMBLE = "23";
 
 
@@ -885,11 +890,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1175,7 +1180,6 @@ namespace Monitor
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox_SimulatorControl = new System.Windows.Forms.GroupBox();
-            this.checkBox_TimerClock = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBox_CALSAR = new System.Windows.Forms.ComboBox();
             this.comboBox_ATTbit = new System.Windows.Forms.ComboBox();
@@ -1374,7 +1378,6 @@ namespace Monitor
             this.button_ReadPage0 = new System.Windows.Forms.Button();
             this.button_WritePage0 = new System.Windows.Forms.Button();
             this.dataGridView_ValPage0 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Page1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -1673,6 +1676,13 @@ namespace Monitor
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_ClearPage0DataGrid = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
+            this.button_Strobe = new System.Windows.Forms.Button();
+            this.button_TimerClock = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Optional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button101 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2119,17 +2129,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea8.AxisX.Title = "Freq";
-            chartArea8.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.AxisY.Title = "Power [dBm]";
-            chartArea8.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea8.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea8);
-            legend8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend8.IsTextAutoFit = false;
-            legend8.Name = "Legend1";
-            legend8.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend8);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5275,7 +5285,8 @@ namespace Monitor
             // 
             // groupBox_SimulatorControl
             // 
-            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_TimerClock);
+            this.groupBox_SimulatorControl.Controls.Add(this.button_TimerClock);
+            this.groupBox_SimulatorControl.Controls.Add(this.button_Strobe);
             this.groupBox_SimulatorControl.Controls.Add(this.label19);
             this.groupBox_SimulatorControl.Controls.Add(this.comboBox_CALSAR);
             this.groupBox_SimulatorControl.Controls.Add(this.comboBox_ATTbit);
@@ -5307,18 +5318,6 @@ namespace Monitor
             this.groupBox_SimulatorControl.TabStop = false;
             this.groupBox_SimulatorControl.Text = "Simulator Control";
             // 
-            // checkBox_TimerClock
-            // 
-            this.checkBox_TimerClock.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_TimerClock.AutoSize = true;
-            this.checkBox_TimerClock.Location = new System.Drawing.Point(165, 111);
-            this.checkBox_TimerClock.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_TimerClock.Name = "checkBox_TimerClock";
-            this.checkBox_TimerClock.Size = new System.Drawing.Size(36, 28);
-            this.checkBox_TimerClock.TabIndex = 41;
-            this.checkBox_TimerClock.Text = "On";
-            this.checkBox_TimerClock.UseVisualStyleBackColor = true;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -5333,13 +5332,13 @@ namespace Monitor
             // 
             this.comboBox_CALSAR.FormattingEnabled = true;
             this.comboBox_CALSAR.Items.AddRange(new object[] {
-            "0=ISO",
-            "1=J5",
-            "2=J4",
-            "3=NA"});
-            this.comboBox_CALSAR.Location = new System.Drawing.Point(285, 54);
+            "0 = ISO",
+            "1 = J5",
+            "2 = J4",
+            "3 = NA"});
+            this.comboBox_CALSAR.Location = new System.Drawing.Point(277, 40);
             this.comboBox_CALSAR.Name = "comboBox_CALSAR";
-            this.comboBox_CALSAR.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_CALSAR.Size = new System.Drawing.Size(59, 26);
             this.comboBox_CALSAR.TabIndex = 39;
             this.comboBox_CALSAR.SelectedIndexChanged += new System.EventHandler(this.comboBox_CALSAR_SelectedIndexChanged);
             // 
@@ -5379,7 +5378,7 @@ namespace Monitor
             "29",
             "30",
             "31"});
-            this.comboBox_ATTbit.Location = new System.Drawing.Point(164, 54);
+            this.comboBox_ATTbit.Location = new System.Drawing.Point(156, 40);
             this.comboBox_ATTbit.Name = "comboBox_ATTbit";
             this.comboBox_ATTbit.Size = new System.Drawing.Size(54, 26);
             this.comboBox_ATTbit.TabIndex = 38;
@@ -5399,9 +5398,9 @@ namespace Monitor
             "13 (44.6 dBm)",
             "14 (44.4 dBm)",
             "15 (44.2 dBm)"});
-            this.comboBox_FTbit.Location = new System.Drawing.Point(87, 54);
+            this.comboBox_FTbit.Location = new System.Drawing.Point(79, 40);
             this.comboBox_FTbit.Name = "comboBox_FTbit";
-            this.comboBox_FTbit.Size = new System.Drawing.Size(54, 26);
+            this.comboBox_FTbit.Size = new System.Drawing.Size(71, 26);
             this.comboBox_FTbit.TabIndex = 37;
             this.comboBox_FTbit.SelectedIndexChanged += new System.EventHandler(this.comboBox_FTbit_SelectedIndexChanged);
             // 
@@ -5416,7 +5415,7 @@ namespace Monitor
             "5",
             "6",
             "7"});
-            this.comboBox_FreqBit.Location = new System.Drawing.Point(16, 54);
+            this.comboBox_FreqBit.Location = new System.Drawing.Point(8, 40);
             this.comboBox_FreqBit.Name = "comboBox_FreqBit";
             this.comboBox_FreqBit.Size = new System.Drawing.Size(54, 26);
             this.comboBox_FreqBit.TabIndex = 36;
@@ -5426,7 +5425,7 @@ namespace Monitor
             // 
             this.label82.AutoSize = true;
             this.label82.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label82.Location = new System.Drawing.Point(282, 83);
+            this.label82.Location = new System.Drawing.Point(258, 67);
             this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(38, 13);
@@ -5437,7 +5436,7 @@ namespace Monitor
             // 
             this.label151.AutoSize = true;
             this.label151.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label151.Location = new System.Drawing.Point(304, 100);
+            this.label151.Location = new System.Drawing.Point(287, 78);
             this.label151.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(36, 13);
@@ -5448,7 +5447,7 @@ namespace Monitor
             // 
             this.label150.AutoSize = true;
             this.label150.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label150.Location = new System.Drawing.Point(253, 99);
+            this.label150.Location = new System.Drawing.Point(236, 77);
             this.label150.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label150.Name = "label150";
             this.label150.Size = new System.Drawing.Size(34, 13);
@@ -5457,10 +5456,10 @@ namespace Monitor
             // 
             // textBox_StrobeWidth
             // 
-            this.textBox_StrobeWidth.Location = new System.Drawing.Point(301, 119);
+            this.textBox_StrobeWidth.Location = new System.Drawing.Point(284, 97);
             this.textBox_StrobeWidth.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StrobeWidth.Name = "textBox_StrobeWidth";
-            this.textBox_StrobeWidth.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeWidth.Size = new System.Drawing.Size(39, 26);
             this.textBox_StrobeWidth.TabIndex = 31;
             this.textBox_StrobeWidth.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_StrobeWidth, "0-7");
@@ -5469,10 +5468,10 @@ namespace Monitor
             // 
             // textBox_StrobeDelay
             // 
-            this.textBox_StrobeDelay.Location = new System.Drawing.Point(244, 119);
+            this.textBox_StrobeDelay.Location = new System.Drawing.Point(227, 97);
             this.textBox_StrobeDelay.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StrobeDelay.Name = "textBox_StrobeDelay";
-            this.textBox_StrobeDelay.Size = new System.Drawing.Size(53, 26);
+            this.textBox_StrobeDelay.Size = new System.Drawing.Size(43, 26);
             this.textBox_StrobeDelay.TabIndex = 30;
             this.textBox_StrobeDelay.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_StrobeDelay, "0-7");
@@ -5519,7 +5518,7 @@ namespace Monitor
             // 
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(232, 54);
+            this.checkBox2.Location = new System.Drawing.Point(224, 40);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(36, 28);
@@ -5565,7 +5564,7 @@ namespace Monitor
             // 
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(282, 30);
+            this.label111.Location = new System.Drawing.Point(274, 16);
             this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(43, 13);
@@ -5576,7 +5575,7 @@ namespace Monitor
             // 
             this.label110.AutoSize = true;
             this.label110.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label110.Location = new System.Drawing.Point(233, 30);
+            this.label110.Location = new System.Drawing.Point(225, 16);
             this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(26, 13);
@@ -5587,7 +5586,7 @@ namespace Monitor
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.Location = new System.Drawing.Point(162, 30);
+            this.label107.Location = new System.Drawing.Point(154, 16);
             this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(37, 13);
@@ -5598,7 +5597,7 @@ namespace Monitor
             // 
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.Location = new System.Drawing.Point(89, 29);
+            this.label108.Location = new System.Drawing.Point(81, 15);
             this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(32, 13);
@@ -5609,7 +5608,7 @@ namespace Monitor
             // 
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.Location = new System.Drawing.Point(12, 30);
+            this.label109.Location = new System.Drawing.Point(4, 16);
             this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(43, 13);
@@ -6182,6 +6181,7 @@ namespace Monitor
             this.label65.Size = new System.Drawing.Size(92, 14);
             this.label65.TabIndex = 38;
             this.label65.Text = "Ch 3 Inrush_48V";
+            this.label65.Visible = false;
             this.label65.Click += new System.EventHandler(this.label65_Click);
             // 
             // textBox_StatusUUT14
@@ -6192,6 +6192,7 @@ namespace Monitor
             this.textBox_StatusUUT14.ReadOnly = true;
             this.textBox_StatusUUT14.Size = new System.Drawing.Size(115, 26);
             this.textBox_StatusUUT14.TabIndex = 37;
+            this.textBox_StatusUUT14.Visible = false;
             this.textBox_StatusUUT14.TextChanged += new System.EventHandler(this.textBox_StatusUUT14_TextChanged);
             // 
             // label66
@@ -7703,6 +7704,9 @@ namespace Monitor
             // 
             // tabPage_Page0
             // 
+            this.tabPage_Page0.Controls.Add(this.button101);
+            this.tabPage_Page0.Controls.Add(this.button100);
+            this.tabPage_Page0.Controls.Add(this.button44);
             this.tabPage_Page0.Controls.Add(this.button42);
             this.tabPage_Page0.Controls.Add(this.button_ClearPage0DataGrid);
             this.tabPage_Page0.Controls.Add(this.groupBox50);
@@ -7758,7 +7762,8 @@ namespace Monitor
             // 
             this.dataGridView_ValPage0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ValPage0.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn29});
+            this.dataGridViewTextBoxColumn29,
+            this.Optional});
             this.dataGridView_ValPage0.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_ValPage0.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage0.Name = "dataGridView_ValPage0";
@@ -7768,13 +7773,6 @@ namespace Monitor
             this.dataGridView_ValPage0.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellContentClick);
             this.dataGridView_ValPage0.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             this.dataGridView_ValPage0.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.HeaderText = "Value";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.Width = 125;
             // 
             // label81
             // 
@@ -7861,8 +7859,8 @@ namespace Monitor
             // 
             // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
@@ -7887,8 +7885,8 @@ namespace Monitor
             this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
             this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_ValPage1.TabIndex = 28;
@@ -8376,9 +8374,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -10859,6 +10857,75 @@ namespace Monitor
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.button42_Click_4);
             // 
+            // button_Strobe
+            // 
+            this.button_Strobe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button_Strobe.Location = new System.Drawing.Point(239, 124);
+            this.button_Strobe.Name = "button_Strobe";
+            this.button_Strobe.Size = new System.Drawing.Size(67, 23);
+            this.button_Strobe.TabIndex = 42;
+            this.button_Strobe.Text = "Strobe";
+            this.button_Strobe.UseVisualStyleBackColor = false;
+            this.button_Strobe.Click += new System.EventHandler(this.button_Strobe_Click);
+            // 
+            // button_TimerClock
+            // 
+            this.button_TimerClock.Location = new System.Drawing.Point(165, 110);
+            this.button_TimerClock.Name = "button_TimerClock";
+            this.button_TimerClock.Size = new System.Drawing.Size(39, 23);
+            this.button_TimerClock.TabIndex = 43;
+            this.button_TimerClock.Text = "On";
+            this.button_TimerClock.UseVisualStyleBackColor = true;
+            this.button_TimerClock.Click += new System.EventHandler(this.button_TimerClock_Click);
+            // 
+            // button44
+            // 
+            this.button44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button44.Location = new System.Drawing.Point(746, 113);
+            this.button44.Margin = new System.Windows.Forms.Padding(2);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(127, 61);
+            this.button44.TabIndex = 30;
+            this.button44.Text = "Copy to Optional ---->";
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click_1);
+            // 
+            // button100
+            // 
+            this.button100.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button100.Location = new System.Drawing.Point(746, 242);
+            this.button100.Margin = new System.Windows.Forms.Padding(2);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(127, 70);
+            this.button100.TabIndex = 31;
+            this.button100.Text = "Compare Value and optional";
+            this.button100.UseVisualStyleBackColor = true;
+            this.button100.Click += new System.EventHandler(this.button100_Click_4);
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // Optional
+            // 
+            this.Optional.HeaderText = "Optional";
+            this.Optional.Name = "Optional";
+            // 
+            // button101
+            // 
+            this.button101.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button101.Location = new System.Drawing.Point(746, 178);
+            this.button101.Margin = new System.Windows.Forms.Padding(2);
+            this.button101.Name = "button101";
+            this.button101.Size = new System.Drawing.Size(127, 61);
+            this.button101.TabIndex = 32;
+            this.button101.Text = "Copy to Optional <-----";
+            this.button101.UseVisualStyleBackColor = true;
+            this.button101.Click += new System.EventHandler(this.button101_Click_2);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -12455,6 +12522,8 @@ namespace Monitor
             //i++;
 
             //            SSPA Serial Number
+
+            
             i = 0;
 
             dataGridView_ValPage0.Rows.Add();
@@ -14688,17 +14757,17 @@ namespace Monitor
                         textBox_StatusUUT14.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (27 + (float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01);
+                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 +27);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        if (DecimalNumber > 0x1F4)
-                        {
+                        //if (DecimalNumber > 0x1F4)
+                        //{
                             textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (float)DecimalNumber / 4);
-                        }
-                        else
-                        {
-                            textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (4096 - (float)DecimalNumber) / 4);
-                        }
+                        //}
+                        //else
+                        //{
+                        //    textBox_StatusUUT17.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, (4096 - (float)DecimalNumber) / 4);
+                        //}
                         
 
                         //textBox_StatusUUT11.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber ) & 0x0FFF).ToString();
@@ -22853,14 +22922,14 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                Write_Register_To_Simulator(" 00 03", "00 01");
+                Write_Register_To_Simulator(" 00 03", "00 20");
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
 
-                Write_Register_To_Simulator(" 00 03", "00 00");
+                Write_Register_To_Simulator(" 00 03", "00 10");
                 Checkbx.BackColor = default;
             }
         }
@@ -25311,50 +25380,42 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private async void textBox_StrobeDelay_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_StrobeDelay_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-
-                    int.TryParse(textBox_StrobeDelay.Text, out int Delay);
-
-                    int.TryParse(textBox_StrobeWidth.Text, out int Width);
-
-
-                    Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
-                    await Task.Delay(300);
-                    Write_Register_To_Simulator(" 00 03", "00 08");
-
-
-
-                }
+                Strobe();
 
             }
         }
 
-        private async void textBox_StrobeWidth_KeyDown(object sender, KeyEventArgs e)
+        private async void Strobe()
+        {
+            if (textBox_StrobeDelay.BackColor == Color.LightGreen && textBox_StrobeWidth.BackColor == Color.LightGreen)
+            {
+
+                int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+
+                int.TryParse(textBox_StrobeWidth.Text, out int Width);
+
+                Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
+                await Task.Delay(500);
+                Write_Register_To_Simulator(" 00 03", "00 08");
+                await Task.Delay(500);
+                Write_Register_To_Simulator(" 00 01", "00 08");
+
+
+
+            }
+        }
+
+        private void textBox_StrobeWidth_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-
-                    int.TryParse(textBox_StrobeDelay.Text, out int Delay);
-
-                    int.TryParse(textBox_StrobeWidth.Text, out int Width);
-
-
-                    Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
-                    await Task.Delay(300);
-                    Write_Register_To_Simulator(" 00 03", "00 08");
-
-
-
-                }
+                Strobe();
 
             }
         }
@@ -25362,38 +25423,65 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         private void comboBox_FreqBit_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox m_comboBox = (ComboBox)sender;
-            int.TryParse(m_comboBox.Text, out int Data);
-            string hexValue = Data.ToString("X4");
+            if (int.TryParse(m_comboBox.Text, out int Data) == true)
+            {
+                m_comboBox.BackColor = Color.LightGreen;
+                string hexValue = Data.ToString("X4");
 
-            Write_Register_To_Simulator(" 00 05", hexValue);
+                Write_Register_To_Simulator(" 00 05", hexValue);
+            }
+            else
+            {
+                m_comboBox.BackColor = Color.Red;
+            }
         }
 
         private void comboBox_FTbit_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox m_comboBox = (ComboBox)sender;
-            int.TryParse(m_comboBox.Text, out int Data);
-            string hexValue = Data.ToString("X4");
+            if (int.TryParse(m_comboBox.Text.Substring(0,2), out int Data) == true)
+            {
+                m_comboBox.BackColor = Color.LightGreen;
+                string hexValue = Data.ToString("X4");
 
-            Write_Register_To_Simulator(" 00 06", hexValue);
+                Write_Register_To_Simulator(" 00 06", hexValue);
+            }
+            else
+            {
+                m_comboBox.BackColor = Color.Red;
+            }
         }
 
         private void comboBox_ATTbit_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox m_comboBox = (ComboBox)sender;
-            int.TryParse(m_comboBox.Text, out int Data);
-            string hexValue = Data.ToString("X4");
+            if (int.TryParse(m_comboBox.Text, out int Data) == true)
+            {
+                m_comboBox.BackColor = Color.LightGreen;
+                string hexValue = Data.ToString("X4");
 
-            //TBD
-           // Write_Register_To_Simulator(" 00 05", hexValue);
+                Write_Register_To_Simulator(" 00 07", hexValue);
+            }
+            else
+            {
+                m_comboBox.BackColor = Color.Red;
+            }
         }
 
         private void comboBox_CALSAR_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox m_comboBox = (ComboBox)sender;
-            int.TryParse(m_comboBox.Text, out int Data);
-            string hexValue = Data.ToString("X4");
+            if (int.TryParse(m_comboBox.Text.Substring(0, 2), out int Data) == true)
+            {
+                m_comboBox.BackColor = Color.LightGreen;
+                string hexValue = Data.ToString("X4");
 
-            Write_Register_To_Simulator(" 00 08", hexValue);
+                Write_Register_To_Simulator(" 00 08", hexValue);
+            }
+            else
+            {
+                m_comboBox.BackColor = Color.Red;
+            }
         }
 
         private void button_ReadPage0_Click(object sender, EventArgs e)
@@ -25518,6 +25606,59 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
             {
                 dataGridView_ValPage0.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+
+
+        private async void button_Strobe_Click(object sender, EventArgs e)
+        {
+            int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+
+            int.TryParse(textBox_StrobeWidth.Text, out int Width);
+
+
+            Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
+            await Task.Delay(300);
+            Write_Register_To_Simulator(" 00 03", "00 08");
+            await Task.Delay(300);
+            Write_Register_To_Simulator(" 00 01", "00 08");
+
+        }
+
+        private void button_TimerClock_Click(object sender, EventArgs e)
+        {
+            Write_Register_To_Simulator(" 00 16", "0F FF");
+        }
+
+        private void button44_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                dataGridView_ValPage0.Rows[i].Cells[1].Value = dataGridView_ValPage0.Rows[i].Cells[0].Value;
+            }
+        }
+
+        private void button100_Click_4(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                if(dataGridView_ValPage0.Rows[i].Cells[0].Value.ToString() == dataGridView_ValPage0.Rows[i].Cells[1].Value.ToString())
+                {
+                    dataGridView_ValPage0.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    dataGridView_ValPage0.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
+        }
+
+        private void button101_Click_2(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
+            {
+                dataGridView_ValPage0.Rows[i].Cells[0].Value = dataGridView_ValPage0.Rows[i].Cells[1].Value;
             }
         }
 
