@@ -547,7 +547,7 @@ namespace Monitor
         private Label label72;
         private TextBox textBox_SimulatorStatus3;
         private TabPage tabPage_Page0;
-        private Button button30;
+        private Button button_Writeallblockstoflash;
         private Button button2;
         private Label label75;
         private DataGridView dataGridView_DC4;
@@ -892,11 +892,11 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1173,7 +1173,7 @@ namespace Monitor
             this.button_WriteToCSV = new System.Windows.Forms.Button();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
+            this.button_Writeallblockstoflash = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Main = new System.Windows.Forms.TabPage();
             this.groupBox_SystemMode = new System.Windows.Forms.GroupBox();
@@ -2132,17 +2132,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5120,7 +5120,7 @@ namespace Monitor
             // 
             this.groupBox48.Controls.Add(this.button_ReadCSVFile);
             this.groupBox48.Controls.Add(this.button_WriteToCSV);
-            this.groupBox48.Location = new System.Drawing.Point(1248, 184);
+            this.groupBox48.Location = new System.Drawing.Point(1251, 239);
             this.groupBox48.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox48.Name = "groupBox48";
             this.groupBox48.Padding = new System.Windows.Forms.Padding(2);
@@ -5157,12 +5157,12 @@ namespace Monitor
             // groupBox38
             // 
             this.groupBox38.Controls.Add(this.button2);
-            this.groupBox38.Controls.Add(this.button30);
+            this.groupBox38.Controls.Add(this.button_Writeallblockstoflash);
             this.groupBox38.Location = new System.Drawing.Point(1248, 42);
             this.groupBox38.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox38.Size = new System.Drawing.Size(141, 130);
+            this.groupBox38.Size = new System.Drawing.Size(141, 173);
             this.groupBox38.TabIndex = 22;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Flash";
@@ -5173,22 +5173,23 @@ namespace Monitor
             this.button2.Location = new System.Drawing.Point(6, 22);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 43);
+            this.button2.Size = new System.Drawing.Size(127, 67);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Read all from flash ";
+            this.button2.Text = "Read all blocks from flash ";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // button_Writeallblockstoflash
             // 
-            this.button30.BackColor = System.Drawing.Color.IndianRed;
-            this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(6, 77);
-            this.button30.Margin = new System.Windows.Forms.Padding(2);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(127, 43);
-            this.button30.TabIndex = 21;
-            this.button30.Text = "Write all to flash";
-            this.button30.UseVisualStyleBackColor = false;
+            this.button_Writeallblockstoflash.BackColor = System.Drawing.Color.Coral;
+            this.button_Writeallblockstoflash.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Writeallblockstoflash.Location = new System.Drawing.Point(6, 99);
+            this.button_Writeallblockstoflash.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Writeallblockstoflash.Name = "button_Writeallblockstoflash";
+            this.button_Writeallblockstoflash.Size = new System.Drawing.Size(127, 61);
+            this.button_Writeallblockstoflash.TabIndex = 21;
+            this.button_Writeallblockstoflash.Text = "Write all to flash and Verify";
+            this.button_Writeallblockstoflash.UseVisualStyleBackColor = false;
+            this.button_Writeallblockstoflash.Click += new System.EventHandler(this.button_Writeallblockstoflash_Click);
             // 
             // tabControl1
             // 
@@ -7864,8 +7865,8 @@ namespace Monitor
             // 
             // dataGridView_ValPage1
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_ValPage1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView_ValPage1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.dataGridView_ValPage1.ColumnHeadersHeight = 29;
@@ -7890,8 +7891,8 @@ namespace Monitor
             this.dataGridView_ValPage1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_ValPage1.Name = "dataGridView_ValPage1";
             this.dataGridView_ValPage1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_ValPage1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_ValPage1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView_ValPage1.Size = new System.Drawing.Size(938, 552);
             this.dataGridView_ValPage1.TabIndex = 28;
@@ -8379,9 +8380,9 @@ namespace Monitor
             this.dataGridView_DC4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_DC4.Name = "dataGridView_DC4";
             this.dataGridView_DC4.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView_DC4.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_DC4.Size = new System.Drawing.Size(338, 546);
             this.dataGridView_DC4.TabIndex = 1;
             this.dataGridView_DC4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -25747,6 +25748,22 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 {
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
+            }
+        }
+
+        private void button_Writeallblockstoflash_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure write all to flash?";
+            string title = "Write Flash";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                // Do something  
             }
         }
 
