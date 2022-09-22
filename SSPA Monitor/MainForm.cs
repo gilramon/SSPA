@@ -905,8 +905,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2158,17 +2158,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5518,7 +5518,7 @@ namespace Monitor
             this.textBox_StrobeWidth.Text = "0";
             this.toolTip1.SetToolTip(this.textBox_StrobeWidth, "0-7");
             this.textBox_StrobeWidth.TextChanged += new System.EventHandler(this.textBox_StrobeWidth_TextChanged);
-            this.textBox_StrobeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeWidth_KeyDown);
+            this.textBox_StrobeWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_StrobeDelay_KeyDown);
             // 
             // textBox_StrobeDelay
             // 
@@ -25877,7 +25877,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         private void textBox_StrobeDelay_TextChanged(object sender, EventArgs e)
         {
             TextBox txtbox = (TextBox)sender;
-            if (int.TryParse(txtbox.Text, out int Num) == true)
+            if (float.TryParse(txtbox.Text, out float Num) == true)
             {
                 if (Num >= 0 && Num <= 99999999)
                 {
@@ -25897,7 +25897,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         private void textBox_StrobeWidth_TextChanged(object sender, EventArgs e)
         {
             TextBox txtbox = (TextBox)sender;
-            if (int.TryParse(txtbox.Text, out int Num) == true)
+            if (float.TryParse(txtbox.Text, out float Num) == true)
             {
                 if (Num >= 0 && Num <= 99999999)
                 {
@@ -25916,10 +25916,9 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void textBox_StrobeDelay_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                Strobe();
+                SendStrobe();
 
             }
         }
@@ -26160,19 +26159,22 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         }
 
 
-
-        private async void button_Strobe_Click(object sender, EventArgs e)
+        async void SendStrobe()
         {
-            int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+            float.TryParse(textBox_StrobeDelay.Text, out float Delay);
 
-            int.TryParse(textBox_StrobeWidth.Text, out int Width);
+            float.TryParse(textBox_StrobeWidth.Text, out float Width);
 
 
-            Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
-            await Task.Delay(300);
+            Write_Register_To_Simulator(" 00 18", ((int)(Delay * 10)).ToString("X4") + ((int)(Width * 10)).ToString("X4"));
+            await Task.Delay(400);
             Write_Register_To_Simulator(" 00 03", "00 08");
-            await Task.Delay(300);
+            await Task.Delay(400);
             Write_Register_To_Simulator(" 00 01", "00 08");
+        }
+        private void button_Strobe_Click(object sender, EventArgs e)
+        {
+            SendStrobe();
 
         }
 
