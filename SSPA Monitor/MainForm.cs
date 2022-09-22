@@ -890,8 +890,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2128,17 +2128,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -6656,6 +6656,7 @@ namespace Monitor
             // 
             this.checkBox_PulseGen2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_PulseGen2.AutoSize = true;
+            this.checkBox_PulseGen2.Enabled = false;
             this.checkBox_PulseGen2.Location = new System.Drawing.Point(232, 52);
             this.checkBox_PulseGen2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_PulseGen2.Name = "checkBox_PulseGen2";
@@ -6668,6 +6669,7 @@ namespace Monitor
             // label85
             // 
             this.label85.AutoSize = true;
+            this.label85.Enabled = false;
             this.label85.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.Location = new System.Drawing.Point(93, 34);
             this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -6679,6 +6681,7 @@ namespace Monitor
             // label101
             // 
             this.label101.AutoSize = true;
+            this.label101.Enabled = false;
             this.label101.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.Location = new System.Drawing.Point(15, 34);
             this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -6700,6 +6703,7 @@ namespace Monitor
             // 
             // textBox_PulsePeriod2
             // 
+            this.textBox_PulsePeriod2.Enabled = false;
             this.textBox_PulsePeriod2.Location = new System.Drawing.Point(87, 55);
             this.textBox_PulsePeriod2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
@@ -6711,6 +6715,7 @@ namespace Monitor
             // 
             // textBox_PulseWidth2
             // 
+            this.textBox_PulseWidth2.Enabled = false;
             this.textBox_PulseWidth2.Location = new System.Drawing.Point(18, 55);
             this.textBox_PulseWidth2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_PulseWidth2.Name = "textBox_PulseWidth2";
@@ -6935,6 +6940,7 @@ namespace Monitor
             this.groupBox_Control1.TabIndex = 1;
             this.groupBox_Control1.TabStop = false;
             this.groupBox_Control1.Text = "Set PSU Voltage and Pulse daly";
+            this.toolTip1.SetToolTip(this.groupBox_Control1, "Vgg2 Vgg1 5V 9V and 4V change togeher!!");
             this.groupBox_Control1.Enter += new System.EventHandler(this.groupBox45_Enter);
             // 
             // label130
@@ -6942,7 +6948,7 @@ namespace Monitor
             this.label130.AutoSize = true;
             this.label130.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.Color.Black;
-            this.label130.Location = new System.Drawing.Point(261, 133);
+            this.label130.Location = new System.Drawing.Point(286, 133);
             this.label130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label130.Name = "label130";
             this.label130.Size = new System.Drawing.Size(27, 15);
@@ -6954,7 +6960,7 @@ namespace Monitor
             this.label132.AutoSize = true;
             this.label132.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label132.ForeColor = System.Drawing.Color.Black;
-            this.label132.Location = new System.Drawing.Point(207, 134);
+            this.label132.Location = new System.Drawing.Point(232, 134);
             this.label132.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(26, 15);
@@ -6963,7 +6969,7 @@ namespace Monitor
             // 
             // textBox_SPA_Toff
             // 
-            this.textBox_SPA_Toff.Location = new System.Drawing.Point(252, 154);
+            this.textBox_SPA_Toff.Location = new System.Drawing.Point(277, 154);
             this.textBox_SPA_Toff.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SPA_Toff.Name = "textBox_SPA_Toff";
             this.textBox_SPA_Toff.Size = new System.Drawing.Size(50, 26);
@@ -6975,7 +6981,7 @@ namespace Monitor
             // 
             // textBox_SPA_Ton
             // 
-            this.textBox_SPA_Ton.Location = new System.Drawing.Point(192, 155);
+            this.textBox_SPA_Ton.Location = new System.Drawing.Point(217, 155);
             this.textBox_SPA_Ton.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SPA_Ton.Name = "textBox_SPA_Ton";
             this.textBox_SPA_Ton.Size = new System.Drawing.Size(50, 26);
@@ -6990,7 +6996,7 @@ namespace Monitor
             this.label134.AutoSize = true;
             this.label134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label134.ForeColor = System.Drawing.Color.Black;
-            this.label134.Location = new System.Drawing.Point(205, 114);
+            this.label134.Location = new System.Drawing.Point(230, 114);
             this.label134.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label134.Name = "label134";
             this.label134.Size = new System.Drawing.Size(76, 19);
@@ -7002,7 +7008,7 @@ namespace Monitor
             this.label131.AutoSize = true;
             this.label131.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label131.ForeColor = System.Drawing.Color.Black;
-            this.label131.Location = new System.Drawing.Point(261, 55);
+            this.label131.Location = new System.Drawing.Point(286, 55);
             this.label131.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label131.Name = "label131";
             this.label131.Size = new System.Drawing.Size(27, 15);
@@ -7012,7 +7018,7 @@ namespace Monitor
             // 
             // textBox_MPA_Toff
             // 
-            this.textBox_MPA_Toff.Location = new System.Drawing.Point(252, 76);
+            this.textBox_MPA_Toff.Location = new System.Drawing.Point(277, 76);
             this.textBox_MPA_Toff.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_MPA_Toff.Name = "textBox_MPA_Toff";
             this.textBox_MPA_Toff.Size = new System.Drawing.Size(50, 26);
@@ -7027,7 +7033,7 @@ namespace Monitor
             this.label133.AutoSize = true;
             this.label133.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label133.ForeColor = System.Drawing.Color.Black;
-            this.label133.Location = new System.Drawing.Point(207, 56);
+            this.label133.Location = new System.Drawing.Point(232, 56);
             this.label133.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label133.Name = "label133";
             this.label133.Size = new System.Drawing.Size(26, 15);
@@ -7037,7 +7043,7 @@ namespace Monitor
             // 
             // textBox_MPA_Ton
             // 
-            this.textBox_MPA_Ton.Location = new System.Drawing.Point(192, 77);
+            this.textBox_MPA_Ton.Location = new System.Drawing.Point(217, 77);
             this.textBox_MPA_Ton.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_MPA_Ton.Name = "textBox_MPA_Ton";
             this.textBox_MPA_Ton.Size = new System.Drawing.Size(50, 26);
@@ -7052,7 +7058,7 @@ namespace Monitor
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label129.ForeColor = System.Drawing.Color.Black;
-            this.label129.Location = new System.Drawing.Point(205, 36);
+            this.label129.Location = new System.Drawing.Point(230, 36);
             this.label129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(82, 19);
@@ -7065,7 +7071,7 @@ namespace Monitor
             this.label128.AutoSize = true;
             this.label128.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label128.ForeColor = System.Drawing.Color.Blue;
-            this.label128.Location = new System.Drawing.Point(189, 17);
+            this.label128.Location = new System.Drawing.Point(214, 17);
             this.label128.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label128.Name = "label128";
             this.label128.Size = new System.Drawing.Size(113, 19);
@@ -7078,7 +7084,7 @@ namespace Monitor
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.Black;
-            this.label126.Location = new System.Drawing.Point(57, 41);
+            this.label126.Location = new System.Drawing.Point(73, 41);
             this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(32, 15);
@@ -7090,7 +7096,7 @@ namespace Monitor
             this.label127.AutoSize = true;
             this.label127.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.ForeColor = System.Drawing.Color.Black;
-            this.label127.Location = new System.Drawing.Point(121, 41);
+            this.label127.Location = new System.Drawing.Point(137, 41);
             this.label127.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(32, 15);
@@ -7100,7 +7106,7 @@ namespace Monitor
             // 
             // textBox_Vgg2
             // 
-            this.textBox_Vgg2.Location = new System.Drawing.Point(60, 65);
+            this.textBox_Vgg2.Location = new System.Drawing.Point(76, 65);
             this.textBox_Vgg2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg2.Name = "textBox_Vgg2";
             this.textBox_Vgg2.Size = new System.Drawing.Size(50, 26);
@@ -7111,7 +7117,7 @@ namespace Monitor
             // 
             // textBox_Vgg1
             // 
-            this.textBox_Vgg1.Location = new System.Drawing.Point(120, 66);
+            this.textBox_Vgg1.Location = new System.Drawing.Point(136, 66);
             this.textBox_Vgg1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vgg1.Name = "textBox_Vgg1";
             this.textBox_Vgg1.Size = new System.Drawing.Size(50, 26);
@@ -7170,7 +7176,7 @@ namespace Monitor
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(67, 146);
+            this.label31.Location = new System.Drawing.Point(83, 146);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(21, 15);
@@ -7182,7 +7188,7 @@ namespace Monitor
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(67, 97);
+            this.label30.Location = new System.Drawing.Point(83, 97);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(21, 15);
@@ -7195,7 +7201,7 @@ namespace Monitor
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(121, 95);
+            this.label29.Location = new System.Drawing.Point(137, 95);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(21, 15);
@@ -7217,7 +7223,7 @@ namespace Monitor
             // 
             // textBox_4V
             // 
-            this.textBox_4V.Location = new System.Drawing.Point(60, 166);
+            this.textBox_4V.Location = new System.Drawing.Point(76, 166);
             this.textBox_4V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_4V.Name = "textBox_4V";
             this.textBox_4V.Size = new System.Drawing.Size(50, 26);
@@ -7228,7 +7234,7 @@ namespace Monitor
             // 
             // textBox_5V
             // 
-            this.textBox_5V.Location = new System.Drawing.Point(59, 118);
+            this.textBox_5V.Location = new System.Drawing.Point(75, 118);
             this.textBox_5V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_5V.Name = "textBox_5V";
             this.textBox_5V.Size = new System.Drawing.Size(50, 26);
@@ -7239,7 +7245,7 @@ namespace Monitor
             // 
             // textBox_9V
             // 
-            this.textBox_9V.Location = new System.Drawing.Point(114, 116);
+            this.textBox_9V.Location = new System.Drawing.Point(130, 116);
             this.textBox_9V.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_9V.Name = "textBox_9V";
             this.textBox_9V.Size = new System.Drawing.Size(50, 26);
@@ -7312,7 +7318,7 @@ namespace Monitor
             this.checkBox_PulseGen.TabIndex = 18;
             this.checkBox_PulseGen.Text = "Control";
             this.checkBox_PulseGen.UseVisualStyleBackColor = true;
-            this.checkBox_PulseGen.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.checkBox_PulseGen.CheckedChanged += new System.EventHandler(this.checkBox_PulseGen_CheckedChanged);
             // 
             // label80
             // 
@@ -7629,6 +7635,7 @@ namespace Monitor
             // 
             this.checkBox_RFGen.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_RFGen.AutoSize = true;
+            this.checkBox_RFGen.Enabled = false;
             this.checkBox_RFGen.Location = new System.Drawing.Point(232, 54);
             this.checkBox_RFGen.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RFGen.Name = "checkBox_RFGen";
@@ -7662,6 +7669,7 @@ namespace Monitor
             // 
             // textBox_RFPeriod
             // 
+            this.textBox_RFPeriod.Enabled = false;
             this.textBox_RFPeriod.Location = new System.Drawing.Point(87, 55);
             this.textBox_RFPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RFPeriod.Name = "textBox_RFPeriod";
@@ -7674,6 +7682,7 @@ namespace Monitor
             // label99
             // 
             this.label99.AutoSize = true;
+            this.label99.Enabled = false;
             this.label99.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.Location = new System.Drawing.Point(84, 36);
             this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -7684,6 +7693,7 @@ namespace Monitor
             // 
             // textBox_RFWidth
             // 
+            this.textBox_RFWidth.Enabled = false;
             this.textBox_RFWidth.Location = new System.Drawing.Point(18, 55);
             this.textBox_RFWidth.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RFWidth.Name = "textBox_RFWidth";
@@ -7696,6 +7706,7 @@ namespace Monitor
             // label98
             // 
             this.label98.AutoSize = true;
+            this.label98.Enabled = false;
             this.label98.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.Location = new System.Drawing.Point(6, 36);
             this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -15017,11 +15028,11 @@ namespace Monitor
                         textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_Vgg2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_Vgg1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_9V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_5V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_4V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_Vgg2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                        textBox_Vgg1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                        textBox_9V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                        textBox_5V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                        textBox_4V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
                         textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
@@ -22968,18 +22979,19 @@ Note: eStatus enum 
 
         async void SetU19Values()
         {
-
+            int Delay = 200;
             Write_Register_To_UUT(" 00 30", "00 04");
-            await Task.Delay(500);
+            await Task.Delay(Delay);
 
             Write_Register_To_UUT(" 00 12", "FF FF");
-            await Task.Delay(500);
+            await Task.Delay(Delay);
 
             Write_Register_To_UUT(" 00 01", "40 00");
-            await Task.Delay(500);
+            await Task.Delay(Delay);
 
-            Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
-            await Task.Delay(500);
+            Write_Register_To_UUT(" 00 12", (int.Parse(textBox_Vgg2.Text) << 4).ToString("X4") + (int.Parse(textBox_Vgg1.Text) << 4).ToString("X4") + (int.Parse(textBox_9V.Text) << 4).ToString("X4") + (int.Parse(textBox_5V.Text) << 4).ToString("X4") + (int.Parse(textBox_4V.Text) << 4).ToString("X4"));
+            //Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
+            await Task.Delay(Delay);
 
             Write_Register_To_UUT(" 00 01", "08 00");
         }
@@ -23214,12 +23226,13 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-
+                checkBox_RFGen.Checked = true;
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
+                checkBox_RFGen.Checked = false;
 
                 Checkbx.BackColor = default;
             }
@@ -23266,7 +23279,7 @@ Note: eStatus enum 
             }
 
 
-            SetControlGenerators();
+            //SetControlGenerators();
             
         }
 
@@ -23483,6 +23496,12 @@ Note: eStatus enum 
 
         void testPulseGenTextBoxs()
         {
+            textBox_PulsePeriod2.Text = textBox_PulsePeriod.Text;
+            textBox_RFPeriod.Text = textBox_PulsePeriod.Text;
+
+            textBox_PulseWidth2.Text = textBox_PulseWidth.Text;
+            textBox_RFWidth.Text = textBox_PulseWidth.Text;
+
             if (int.TryParse(textBox_PulsePeriod.Text, out int Period) &&
             int.TryParse(textBox_PulseWidth.Text, out int Width) &&
             int.TryParse(textBox_PulseDelay.Text, out int Delay) &&
@@ -23532,6 +23551,8 @@ Note: eStatus enum 
         private void textBox_PulsePeriod_TextChanged(object sender, EventArgs e)
         {
             testPulseGenTextBoxs();
+            testRFTextboxs();
+            testPulseGenTextBoxs2();
         }
 
         private void textBox_PulseWidth2_TextChanged(object sender, EventArgs e)
@@ -23604,7 +23625,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 4095)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -23624,7 +23645,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 4095)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -23644,7 +23665,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 4095)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -24479,7 +24500,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 99999999)
+                if (Num >= 0 && Num <= 4095)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -24701,15 +24722,14 @@ Note: eStatus enum 
             TextBox m_Textbox = (TextBox)sender;
             if (int.TryParse(m_Textbox.Text, out int Num) == true)
             {
-                m_Textbox.BackColor = Color.LightGreen;
-                //if (Num >= 0 && Num <= 4095)
-                //{
-                //    m_Textbox.BackColor = Color.LightGreen;
-                //}
-                //else
-                //{
-                //    m_Textbox.BackColor = Color.Red;
-                //}
+                if (Num >= 0 && Num <= 4095)
+                {
+                    m_Textbox.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    m_Textbox.BackColor = Color.Red;
+                }
             }
             else
             {
@@ -25032,7 +25052,7 @@ Note: eStatus enum 
             SendDataToSystem();
         }
 
-        void  WriteRFWidthToSimulator()
+        void WriteRFWidthToSimulator()
         {
 
             if (textBox_RFWidth.BackColor == Color.LightGreen  && textBox_RFPeriod.BackColor == Color.LightGreen  && textBox_RFDelay.BackColor == Color.LightGreen)
@@ -25142,7 +25162,7 @@ Note: eStatus enum 
             }
         }
 
-        private void textBox_PulseWidth_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_PulseWidth_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -25151,12 +25171,18 @@ Note: eStatus enum 
                 {
 
                     WritePulseGenToSimulator();
+                    await Task.Delay(400);
+                    WritePulseGenToSimulator2();
+                    await Task.Delay(400);
+                    WriteRFWidthToSimulator();
+
+
 
                 }
             }
         }
 
-        private void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -25164,7 +25190,12 @@ Note: eStatus enum 
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
 
+
                     WritePulseGenToSimulator();
+                    await Task.Delay(400);
+                    WritePulseGenToSimulator2();
+                    await Task.Delay(400);
+                    WriteRFWidthToSimulator();
 
                 }
             }
@@ -25242,7 +25273,7 @@ Note: eStatus enum 
             }
 
 
-            SetControlGenerators();
+            //SetControlGenerators();
         }
 
         private void textBox_FlashErase_TextChanged(object sender, EventArgs e)
@@ -25451,38 +25482,38 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private async void textBox_Vgg2_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox_Vgg2_KeyDown(object sender, KeyEventArgs e)
         {
-            int Delay = 100;
+           // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    // SetU19Values();
+                     SetU19Values();
 
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 30", "00 04");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 12", "FF FF");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 12", "FF FF");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 01", "40 00");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 12", int.Parse(m_TextBox.Text).ToString("X4"));
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 12", (int.Parse(textBox_Vgg2.Text) << 4).ToString("X4") + (int.Parse(textBox_Vgg1.Text) << 4).ToString("X4") + (int.Parse(textBox_9V.Text) << 4).ToString("X4") + (int.Parse(textBox_5V.Text) << 4).ToString("X4") + (int.Parse(textBox_4V.Text) << 4).ToString("X4"));
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    //Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
             }
         }
 
-        private async void textBox_Vgg1_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox_Vgg1_KeyDown(object sender, KeyEventArgs e)
         {
-            int Delay = 100;
+           // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
@@ -25490,78 +25521,78 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 {
                     SetU19Values();
 
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 30", "00 04");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 12", "FF FF");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 12", "FF FF");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 01", "40 00");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 13", int.Parse(m_TextBox.Text).ToString("X4"));
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 13", (int.Parse(m_TextBox.Text) << 4).ToString("X4"));
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "08 00");
-
-                }
-
-            }
-        }
-
-        private async void textBox_5V_KeyDown(object sender, KeyEventArgs e)
-        {
-            int Delay = 100;
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-                    //SetU19Values();
-
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 12", "FF FF");
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 15", int.Parse(m_TextBox.Text).ToString("X4"));
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    //Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
             }
         }
 
-        private async void textBox_9V_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_5V_KeyDown(object sender, KeyEventArgs e)
         {
-            int Delay = 100;
+           // int Delay = 100;
+            TextBox m_TextBox = (TextBox)sender;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (m_TextBox.BackColor == Color.LightGreen)
+                {
+                    SetU19Values();
+
+                    //Write_Register_To_UUT(" 00 30", "00 04");
+                    //await Task.Delay(Delay);
+
+                    //Write_Register_To_UUT(" 00 12", "FF FF");
+                    //await Task.Delay(Delay);
+
+                    //Write_Register_To_UUT(" 00 01", "40 00");
+                    //await Task.Delay(Delay);
+
+                    //Write_Register_To_UUT(" 00 15", (int.Parse(m_TextBox.Text) << 4).ToString("X4"));
+                    //await Task.Delay(Delay);
+
+                    //Write_Register_To_UUT(" 00 01", "08 00");
+
+                }
+
+            }
+        }
+
+        private  void textBox_9V_KeyDown(object sender, KeyEventArgs e)
+        {
+           // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
 
-                    // SetU19Values();
+                     SetU19Values();
 
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 30", "00 04");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 12", "FF FF");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 12", "FF FF");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 01", "40 00");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 14", int.Parse(m_TextBox.Text).ToString("X4"));
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 14", (int.Parse(m_TextBox.Text) << 4).ToString("X4"));
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    //Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
             }
@@ -25575,21 +25606,21 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                    //SetU19Values();
+                    SetU19Values();
 
-                    Write_Register_To_UUT(" 00 30", "00 04");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 30", "00 04");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 12", "FF FF");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 12", "FF FF");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "40 00");
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 01", "40 00");
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 16", int.Parse(m_TextBox.Text).ToString("X4"));
-                    await Task.Delay(Delay);
+                    //Write_Register_To_UUT(" 00 16", (int.Parse(m_TextBox.Text) << 4).ToString("X4"));
+                    //await Task.Delay(Delay);
 
-                    Write_Register_To_UUT(" 00 01", "08 00");
+                    //Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -26146,6 +26177,49 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                 // Do something  
             }
+        }
+
+        private void checkBox_PulseGen_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox Checkbx = (CheckBox)sender;
+            if (Checkbx.Checked == true)
+            {
+   
+                checkBox_RFGen.Checked = true;
+                checkBox_PulseGen2.Checked = true;
+                Checkbx.BackColor = Color.LightGreen;
+
+
+            }
+            else
+            {
+
+                checkBox_RFGen.Checked = false;
+                checkBox_PulseGen2.Checked = false;
+                Checkbx.BackColor = default;
+
+
+            }
+
+
+            int num = 0;
+            if (checkBox_RFGen.Checked == true)
+            {
+                //intValue |= 1 << bitPosition;
+                num |= (1 << 2);
+            }
+
+            if (checkBox_PulseGen.Checked == true)
+            {
+                num |= (1 << 0);
+            }
+
+            if (checkBox_PulseGen2.Checked == true)
+            {
+                num |= (1 << 1);
+            }
+            num |= (8 << 1);
+            Write_Register_To_Simulator("00 02", num.ToString("X4"));
         }
 
         private void button57_Click_1(object sender, EventArgs e)
