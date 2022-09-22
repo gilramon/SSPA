@@ -15193,7 +15193,7 @@ namespace Monitor
                       //  textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.31);
+                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, ((float)DecimalNumber )/4096*1.8/0.18  );
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
@@ -23523,7 +23523,7 @@ Note: eStatus enum 
 
         }
 
-        private bool CheckPeriodAndWidth(int i_Period, int i_Width, int i_Delay)
+        private bool CheckPeriodAndWidth(float i_Period, float i_Width, float i_Delay)
         {
             if (i_Period >= i_Width && i_Period >= i_Delay)
             {
@@ -23541,9 +23541,9 @@ Note: eStatus enum 
 
         void testRFTextboxs()
         {
-            if (int.TryParse(textBox_RFPeriod.Text, out int Period) &&
-            int.TryParse(textBox_RFWidth.Text, out int Width) &&
-            int.TryParse(textBox_RFDelay.Text, out int Delay) &&
+            if (float.TryParse(textBox_RFPeriod.Text, out float Period) &&
+            float.TryParse(textBox_RFWidth.Text, out float Width) &&
+            float.TryParse(textBox_RFDelay.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
             {
                 textBox_RFPeriod.BackColor = Color.LightGreen;
@@ -23566,9 +23566,9 @@ Note: eStatus enum 
             textBox_PulseWidth2.Text = textBox_PulseWidth.Text;
             textBox_RFWidth.Text = textBox_PulseWidth.Text;
 
-            if (int.TryParse(textBox_PulsePeriod.Text, out int Period) &&
-            int.TryParse(textBox_PulseWidth.Text, out int Width) &&
-            int.TryParse(textBox_PulseDelay.Text, out int Delay) &&
+            if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
+            float.TryParse(textBox_PulseWidth.Text, out float Width) &&
+            float.TryParse(textBox_PulseDelay.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
             {
                 textBox_PulsePeriod.BackColor = Color.LightGreen;
@@ -23585,9 +23585,9 @@ Note: eStatus enum 
 
         void testPulseGenTextBoxs2()
         {
-            if (int.TryParse(textBox_PulsePeriod2.Text, out int Period) &&
-            int.TryParse(textBox_PulseWidth2.Text, out int Width) &&
-            int.TryParse(textBox_PulseDelay2.Text, out int Delay) &&
+            if (float.TryParse(textBox_PulsePeriod2.Text, out float Period) &&
+            float.TryParse(textBox_PulseWidth2.Text, out float Width) &&
+            float.TryParse(textBox_PulseDelay2.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
             {
                 textBox_PulsePeriod2.BackColor = Color.LightGreen;
@@ -25121,29 +25121,9 @@ Note: eStatus enum 
 
             if (textBox_RFWidth.BackColor == Color.LightGreen  && textBox_RFPeriod.BackColor == Color.LightGreen  && textBox_RFDelay.BackColor == Color.LightGreen)
             {
-                int.TryParse(textBox_RFPeriod.Text, out int Period);
-                int.TryParse(textBox_RFWidth.Text, out int Width);
-                int.TryParse(textBox_RFDelay.Text, out int Delay);
-
-                //Write_Register_To_Simulator("00 10", (Width * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 11", (Period * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 12", (Delay * 10).ToString("X4"));
-                //await Task.Delay(500);
-
-                Write_Register_To_Simulator("00 10", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
-            }
-        }
-
-        void WritePulseGenToSimulator()
-        {
-
-            if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
-            {
-                int.TryParse(textBox_PulsePeriod.Text, out int Period);
-                int.TryParse(textBox_PulseWidth.Text, out int Width);
-                int.TryParse(textBox_PulseDelay.Text, out int Delay);
+                float.TryParse(textBox_RFPeriod.Text, out float Period);
+                float.TryParse(textBox_RFWidth.Text, out float Width);
+                float.TryParse(textBox_RFDelay.Text, out float Delay);
 
                 //Write_Register_To_Simulator("00 0A",(Width * 10).ToString("X4"));
                 //await Task.Delay(500);
@@ -25152,7 +25132,42 @@ Note: eStatus enum 
                 //Write_Register_To_Simulator("00 0C", (Delay * 10).ToString("X4"));
                 //await Task.Delay(500);
 
-                Write_Register_To_Simulator("00 0A", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
+                Write_Register_To_Simulator("00 10", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
+
+
+
+                //int.TryParse(textBox_RFPeriod.Text, out int Period);
+                //int.TryParse(textBox_RFWidth.Text, out int Width);
+                //int.TryParse(textBox_RFDelay.Text, out int Delay);
+
+                ////Write_Register_To_Simulator("00 10", (Width * 10).ToString("X4"));
+                ////await Task.Delay(500);
+                ////Write_Register_To_Simulator("00 11", (Period * 10).ToString("X4"));
+                ////await Task.Delay(500);
+                ////Write_Register_To_Simulator("00 12", (Delay * 10).ToString("X4"));
+                ////await Task.Delay(500);
+
+                //Write_Register_To_Simulator("00 10", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
+            }
+        }
+
+        void WritePulseGenToSimulator()
+        {
+
+            if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
+            {
+                float.TryParse(textBox_PulsePeriod.Text, out float Period);
+                float.TryParse(textBox_PulseWidth.Text, out float Width);
+                float.TryParse(textBox_PulseDelay.Text, out float Delay);
+
+                //Write_Register_To_Simulator("00 0A",(Width * 10).ToString("X4"));
+                //await Task.Delay(500);
+                //Write_Register_To_Simulator("00 0B",( Period * 10).ToString("X4"));
+                //await Task.Delay(500);
+                //Write_Register_To_Simulator("00 0C", (Delay * 10).ToString("X4"));
+                //await Task.Delay(500);
+
+                Write_Register_To_Simulator("00 0A", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
             }
         }
 
@@ -25161,18 +25176,32 @@ Note: eStatus enum 
 
             if (textBox_PulseWidth2.BackColor == Color.LightGreen && textBox_PulsePeriod2.BackColor == Color.LightGreen && textBox_PulseDelay2.BackColor == Color.LightGreen)
             {
-                int.TryParse(textBox_PulsePeriod2.Text, out int Period);
-                int.TryParse(textBox_PulseWidth2.Text, out int Width);
-                int.TryParse(textBox_PulseDelay2.Text, out int Delay);
+                float.TryParse(textBox_PulsePeriod2.Text, out float Period);
+                float.TryParse(textBox_PulseWidth2.Text, out float Width);
+                float.TryParse(textBox_PulseDelay2.Text, out float Delay);
 
-                //Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4"));
+                //Write_Register_To_Simulator("00 0A",(Width * 10).ToString("X4"));
                 //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0E", (Period * 10).ToString("X4"));
+                //Write_Register_To_Simulator("00 0B",( Period * 10).ToString("X4"));
                 //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0F", (Delay * 10).ToString("X4"));
+                //Write_Register_To_Simulator("00 0C", (Delay * 10).ToString("X4"));
                 //await Task.Delay(500);
 
-                Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
+                Write_Register_To_Simulator("00 0D", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
+
+
+                //int.TryParse(textBox_PulsePeriod2.Text, out int Period);
+                //int.TryParse(textBox_PulseWidth2.Text, out int Width);
+                //int.TryParse(textBox_PulseDelay2.Text, out int Delay);
+
+                ////Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4"));
+                ////await Task.Delay(500);
+                ////Write_Register_To_Simulator("00 0E", (Period * 10).ToString("X4"));
+                ////await Task.Delay(500);
+                ////Write_Register_To_Simulator("00 0F", (Delay * 10).ToString("X4"));
+                ////await Task.Delay(500);
+
+                //Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
             }
         }
         private void textBox_RFWidth_KeyDown(object sender, KeyEventArgs e)
@@ -26007,10 +26036,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 return source;
             return source.Substring(source.Length - tail_length);
         }
-        async void WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
+        async Task WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
         {
             int i = 0;
-
+           // tabControl_SSPA_WB_GUI.Enabled = false;
+            
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
                 String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X")); 
@@ -26045,11 +26075,13 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
                 Write_Flash(BlockAddress, "00 00", DataToWrite);
             }
+
+           // tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
-        private void button_WritePage0_Click(object sender, EventArgs e)
+        private async void button_WritePage0_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block00,true);
+            await WriteDataGridToFlash(dataGridView_Block00,true);
         }
 
         private void button_ClearPage0DataGrid_Click(object sender, EventArgs e)
@@ -26351,7 +26383,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
 
 
-            int Delay = 3000;
+            int Delay = 6000;
             string message = @"
 Are you sure write all to flash?
 This Process can take 1 minute.";
@@ -26361,34 +26393,34 @@ This Process can take 1 minute.";
             if (result == DialogResult.Yes)
             {
 
-                Erase_Flash();
-                await Task.Delay(5000);
+                //Erase_Flash();
+                //await Task.Delay(6000);
 
-                WriteDataGridToFlash(dataGridView_Block00, false);
+                await WriteDataGridToFlash(dataGridView_Block00, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block01, false);
+                await WriteDataGridToFlash(dataGridView_Block01, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block02, false);
+                await WriteDataGridToFlash(dataGridView_Block02, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block03, false);
+                await WriteDataGridToFlash(dataGridView_Block03, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block04, false);
+                await WriteDataGridToFlash(dataGridView_Block04, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block05, false);
+                await WriteDataGridToFlash(dataGridView_Block05, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block06, false);
+                await WriteDataGridToFlash(dataGridView_Block06, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block07, false);
+                await WriteDataGridToFlash(dataGridView_Block07, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block08, false);
+                await WriteDataGridToFlash(dataGridView_Block08, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block09, false);
+                await WriteDataGridToFlash(dataGridView_Block09, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block10, false);
+                await WriteDataGridToFlash(dataGridView_Block10, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block11, false);
+                await WriteDataGridToFlash(dataGridView_Block11, true);
                 await Task.Delay(Delay);
-                WriteDataGridToFlash(dataGridView_Block12, false);
+                await WriteDataGridToFlash(dataGridView_Block12, true);
                 await Task.Delay(Delay);
 
 
@@ -26551,72 +26583,72 @@ This Process can take 1 minute.";
             ReadDataGridToFlash(dataGridView_Block12);
         }
 
-        private void button_WriteBlock0_Click(object sender, EventArgs e)
+        private async void button_WriteBlock0_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block00, true);
+            await WriteDataGridToFlash(dataGridView_Block00, true);
         }
 
-        private void button_WriteBlock1_Click(object sender, EventArgs e)
+        private async void button_WriteBlock1_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block01, true);
+            await WriteDataGridToFlash(dataGridView_Block01, true);
         }
 
-        private void button_WriteBlock2_Click(object sender, EventArgs e)
+        private async void button_WriteBlock2_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block02, true);
+            await WriteDataGridToFlash(dataGridView_Block02, true);
         }
 
-        private void button_WriteBlock3_Click(object sender, EventArgs e)
+        private async void button_WriteBlock3_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block03, true);
+            await WriteDataGridToFlash(dataGridView_Block03, true);
         }
 
-        private void button_WriteBlock4_Click(object sender, EventArgs e)
+        private async void button_WriteBlock4_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block04, true);
+            await WriteDataGridToFlash(dataGridView_Block04, true);
         }
 
-        private void button_WriteBlock5_Click(object sender, EventArgs e)
+        private async void button_WriteBlock5_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block05, true);
+            await WriteDataGridToFlash(dataGridView_Block05, true);
         }
 
-        private void button_WriteBlock6_Click(object sender, EventArgs e)
+        private async void button_WriteBlock6_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block06, true);
+            await  WriteDataGridToFlash(dataGridView_Block06, true);
         }
 
-        private void button_WriteBlock7_Click(object sender, EventArgs e)
+        private async void button_WriteBlock7_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block07, true);
+            await WriteDataGridToFlash(dataGridView_Block07, true);
         }
 
-        private void button_WriteBlock8_Click(object sender, EventArgs e)
+        private async void button_WriteBlock8_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block08, true);
+            await WriteDataGridToFlash(dataGridView_Block08, true);
         }
 
-        private void button_WriteBlock9_Click(object sender, EventArgs e)
+        private async void button_WriteBlock9_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block09, true);
+            await WriteDataGridToFlash(dataGridView_Block09, true);
         }
 
-        private void button_WriteBlock10_Click(object sender, EventArgs e)
+        private async void button_WriteBlock10_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block10, true);
+            await WriteDataGridToFlash(dataGridView_Block10, true);
         }
 
-        private void button_WriteBlock11_Click(object sender, EventArgs e)
+        private async void button_WriteBlock11_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block11, true);
+            await WriteDataGridToFlash(dataGridView_Block11, true);
         }
 
-        private void button_WriteBlock12_Click(object sender, EventArgs e)
+        private async void button_WriteBlock12_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block12, true);
+            await WriteDataGridToFlash(dataGridView_Block12, true);
         }
 
-        private void button98_Click(object sender, EventArgs e)
+        private  void button98_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
 
