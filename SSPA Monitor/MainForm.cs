@@ -836,6 +836,21 @@ namespace Monitor
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private Button button59;
+        private Button button71;
+        private Button button96;
+        private Button button98;
+        private Button button124;
+        private Button button125;
+        private Button button126;
+        private Button button127;
+        private Button button128;
+        private Button button129;
+        private Button button130;
+        private Button button131;
+        private Button button132;
+        private Button button133;
+        private Button button134;
         private static readonly string PREAMBLE = "23";
 
 
@@ -890,8 +905,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1678,6 +1693,21 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button59 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button96 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
+            this.button124 = new System.Windows.Forms.Button();
+            this.button125 = new System.Windows.Forms.Button();
+            this.button126 = new System.Windows.Forms.Button();
+            this.button127 = new System.Windows.Forms.Button();
+            this.button128 = new System.Windows.Forms.Button();
+            this.button129 = new System.Windows.Forms.Button();
+            this.button130 = new System.Windows.Forms.Button();
+            this.button131 = new System.Windows.Forms.Button();
+            this.button132 = new System.Windows.Forms.Button();
+            this.button133 = new System.Windows.Forms.Button();
+            this.button134 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2128,17 +2158,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea5.AxisX.Title = "Freq";
-            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY.Title = "Power [dBm]";
-            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "Legend1";
-            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend5);
+            chartArea37.AxisX.Title = "Freq";
+            chartArea37.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea37.AxisY.Title = "Power [dBm]";
+            chartArea37.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea37.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea37);
+            legend37.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend37.IsTextAutoFit = false;
+            legend37.Name = "Legend1";
+            legend37.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend37);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -7904,6 +7934,10 @@ namespace Monitor
             // 
             // tabPage_Page1
             // 
+            this.tabPage_Page1.Controls.Add(this.button59);
+            this.tabPage_Page1.Controls.Add(this.button71);
+            this.tabPage_Page1.Controls.Add(this.button96);
+            this.tabPage_Page1.Controls.Add(this.button98);
             this.tabPage_Page1.Controls.Add(this.button6);
             this.tabPage_Page1.Controls.Add(this.dataGridView_Block01);
             this.tabPage_Page1.Controls.Add(this.groupBox1);
@@ -7926,6 +7960,7 @@ namespace Monitor
             this.button6.TabIndex = 33;
             this.button6.Text = "Clear";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_3);
             // 
             // dataGridView_Block01
             // 
@@ -7940,6 +7975,8 @@ namespace Monitor
             this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block01.TabIndex = 34;
+            this.dataGridView_Block01.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block01.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -8005,6 +8042,7 @@ namespace Monitor
             // 
             // tabPage_Page2
             // 
+            this.tabPage_Page2.Controls.Add(this.button124);
             this.tabPage_Page2.Controls.Add(this.button29);
             this.tabPage_Page2.Controls.Add(this.dataGridView_Block02);
             this.tabPage_Page2.Controls.Add(this.groupBox44);
@@ -8025,6 +8063,7 @@ namespace Monitor
             this.button29.TabIndex = 30;
             this.button29.Text = "Clear";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click_2);
             // 
             // dataGridView_Block02
             // 
@@ -8039,6 +8078,8 @@ namespace Monitor
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
+            this.dataGridView_Block02.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block02.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -8087,6 +8128,7 @@ namespace Monitor
             this.button72.TabIndex = 18;
             this.button72.Text = "Read Page ";
             this.button72.UseVisualStyleBackColor = true;
+            this.button72.Click += new System.EventHandler(this.button_ReadBlock2_Click);
             // 
             // button73
             // 
@@ -8103,6 +8145,7 @@ namespace Monitor
             // 
             // tabPage_Page3
             // 
+            this.tabPage_Page3.Controls.Add(this.button125);
             this.tabPage_Page3.Controls.Add(this.button30);
             this.tabPage_Page3.Controls.Add(this.dataGridView_Block03);
             this.tabPage_Page3.Controls.Add(this.groupBox45);
@@ -8124,6 +8167,7 @@ namespace Monitor
             this.button30.TabIndex = 30;
             this.button30.Text = "Clear";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click_1);
             // 
             // dataGridView_Block03
             // 
@@ -8138,6 +8182,8 @@ namespace Monitor
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
+            this.dataGridView_Block03.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block03.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -8203,6 +8249,7 @@ namespace Monitor
             // 
             // tabPage_Page4
             // 
+            this.tabPage_Page4.Controls.Add(this.button126);
             this.tabPage_Page4.Controls.Add(this.button102);
             this.tabPage_Page4.Controls.Add(this.dataGridView_Block04);
             this.tabPage_Page4.Controls.Add(this.groupBox46);
@@ -8224,6 +8271,7 @@ namespace Monitor
             this.button102.TabIndex = 30;
             this.button102.Text = "Clear";
             this.button102.UseVisualStyleBackColor = true;
+            this.button102.Click += new System.EventHandler(this.button102_Click_1);
             // 
             // dataGridView_Block04
             // 
@@ -8238,6 +8286,8 @@ namespace Monitor
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
+            this.dataGridView_Block04.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block04.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -8303,6 +8353,7 @@ namespace Monitor
             // 
             // tabPage_Page5
             // 
+            this.tabPage_Page5.Controls.Add(this.button127);
             this.tabPage_Page5.Controls.Add(this.button103);
             this.tabPage_Page5.Controls.Add(this.dataGridView_Block05);
             this.tabPage_Page5.Controls.Add(this.groupBox47);
@@ -8323,6 +8374,7 @@ namespace Monitor
             this.button103.TabIndex = 30;
             this.button103.Text = "Clear";
             this.button103.UseVisualStyleBackColor = true;
+            this.button103.Click += new System.EventHandler(this.button103_Click_1);
             // 
             // dataGridView_Block05
             // 
@@ -8337,6 +8389,8 @@ namespace Monitor
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
+            this.dataGridView_Block05.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block05.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -8402,6 +8456,7 @@ namespace Monitor
             // 
             // tabPage_Page6
             // 
+            this.tabPage_Page6.Controls.Add(this.button128);
             this.tabPage_Page6.Controls.Add(this.button104);
             this.tabPage_Page6.Controls.Add(this.dataGridView_Block06);
             this.tabPage_Page6.Controls.Add(this.groupBox49);
@@ -8422,6 +8477,7 @@ namespace Monitor
             this.button104.TabIndex = 30;
             this.button104.Text = "Clear";
             this.button104.UseVisualStyleBackColor = true;
+            this.button104.Click += new System.EventHandler(this.button104_Click_1);
             // 
             // dataGridView_Block06
             // 
@@ -8436,6 +8492,8 @@ namespace Monitor
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
+            this.dataGridView_Block06.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block06.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -8501,6 +8559,7 @@ namespace Monitor
             // 
             // tabPage_Page7
             // 
+            this.tabPage_Page7.Controls.Add(this.button129);
             this.tabPage_Page7.Controls.Add(this.button105);
             this.tabPage_Page7.Controls.Add(this.dataGridView_Block07);
             this.tabPage_Page7.Controls.Add(this.groupBox51);
@@ -8521,6 +8580,7 @@ namespace Monitor
             this.button105.TabIndex = 30;
             this.button105.Text = "Clear";
             this.button105.UseVisualStyleBackColor = true;
+            this.button105.Click += new System.EventHandler(this.button105_Click_1);
             // 
             // dataGridView_Block07
             // 
@@ -8535,6 +8595,8 @@ namespace Monitor
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
+            this.dataGridView_Block07.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block07.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -8600,6 +8662,7 @@ namespace Monitor
             // 
             // tabPage_Page8
             // 
+            this.tabPage_Page8.Controls.Add(this.button130);
             this.tabPage_Page8.Controls.Add(this.button106);
             this.tabPage_Page8.Controls.Add(this.dataGridView_Block08);
             this.tabPage_Page8.Controls.Add(this.groupBox52);
@@ -8620,6 +8683,7 @@ namespace Monitor
             this.button106.TabIndex = 30;
             this.button106.Text = "Clear";
             this.button106.UseVisualStyleBackColor = true;
+            this.button106.Click += new System.EventHandler(this.button106_Click_1);
             // 
             // dataGridView_Block08
             // 
@@ -8634,6 +8698,8 @@ namespace Monitor
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
+            this.dataGridView_Block08.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block08.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn22
             // 
@@ -8699,6 +8765,7 @@ namespace Monitor
             // 
             // tabPage_Page9
             // 
+            this.tabPage_Page9.Controls.Add(this.button131);
             this.tabPage_Page9.Controls.Add(this.button107);
             this.tabPage_Page9.Controls.Add(this.dataGridView_Block09);
             this.tabPage_Page9.Controls.Add(this.groupBox53);
@@ -8719,6 +8786,7 @@ namespace Monitor
             this.button107.TabIndex = 30;
             this.button107.Text = "Clear";
             this.button107.UseVisualStyleBackColor = true;
+            this.button107.Click += new System.EventHandler(this.button107_Click_1);
             // 
             // dataGridView_Block09
             // 
@@ -8733,6 +8801,8 @@ namespace Monitor
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
+            this.dataGridView_Block09.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block09.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn25
             // 
@@ -8798,6 +8868,7 @@ namespace Monitor
             // 
             // tabPage_Page10
             // 
+            this.tabPage_Page10.Controls.Add(this.button132);
             this.tabPage_Page10.Controls.Add(this.button110);
             this.tabPage_Page10.Controls.Add(this.dataGridView_Block10);
             this.tabPage_Page10.Controls.Add(this.groupBox54);
@@ -8818,6 +8889,7 @@ namespace Monitor
             this.button110.TabIndex = 30;
             this.button110.Text = "Clear";
             this.button110.UseVisualStyleBackColor = true;
+            this.button110.Click += new System.EventHandler(this.button110_Click_1);
             // 
             // dataGridView_Block10
             // 
@@ -8832,6 +8904,8 @@ namespace Monitor
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
+            this.dataGridView_Block10.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block10.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -8897,6 +8971,7 @@ namespace Monitor
             // 
             // tabPage_Page11
             // 
+            this.tabPage_Page11.Controls.Add(this.button133);
             this.tabPage_Page11.Controls.Add(this.button116);
             this.tabPage_Page11.Controls.Add(this.dataGridView_Block11);
             this.tabPage_Page11.Controls.Add(this.groupBox55);
@@ -8917,6 +8992,7 @@ namespace Monitor
             this.button116.TabIndex = 30;
             this.button116.Text = "Clear";
             this.button116.UseVisualStyleBackColor = true;
+            this.button116.Click += new System.EventHandler(this.button116_Click_1);
             // 
             // dataGridView_Block11
             // 
@@ -8931,6 +9007,8 @@ namespace Monitor
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
+            this.dataGridView_Block11.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block11.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn32
             // 
@@ -8996,6 +9074,7 @@ namespace Monitor
             // 
             // tabPage_Page12
             // 
+            this.tabPage_Page12.Controls.Add(this.button134);
             this.tabPage_Page12.Controls.Add(this.button123);
             this.tabPage_Page12.Controls.Add(this.dataGridView_Block12);
             this.tabPage_Page12.Controls.Add(this.groupBox56);
@@ -9016,6 +9095,7 @@ namespace Monitor
             this.button123.TabIndex = 30;
             this.button123.Text = "Clear";
             this.button123.UseVisualStyleBackColor = true;
+            this.button123.Click += new System.EventHandler(this.button123_Click);
             // 
             // dataGridView_Block12
             // 
@@ -9030,6 +9110,8 @@ namespace Monitor
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
+            this.dataGridView_Block12.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block12.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn35
             // 
@@ -10986,6 +11068,185 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
+            // 
+            // button59
+            // 
+            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.Location = new System.Drawing.Point(748, 177);
+            this.button59.Margin = new System.Windows.Forms.Padding(2);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(127, 61);
+            this.button59.TabIndex = 38;
+            this.button59.Text = "Copy to Optional <-----";
+            this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click_3);
+            // 
+            // button71
+            // 
+            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button71.Location = new System.Drawing.Point(748, 241);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(127, 70);
+            this.button71.TabIndex = 37;
+            this.button71.Text = "Compare Value and optional";
+            this.button71.UseVisualStyleBackColor = true;
+            // 
+            // button96
+            // 
+            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button96.Location = new System.Drawing.Point(748, 112);
+            this.button96.Margin = new System.Windows.Forms.Padding(2);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(127, 61);
+            this.button96.TabIndex = 36;
+            this.button96.Text = "Copy to Optional ---->";
+            this.button96.UseVisualStyleBackColor = true;
+            this.button96.Click += new System.EventHandler(this.button96_Click_4);
+            // 
+            // button98
+            // 
+            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button98.Location = new System.Drawing.Point(748, 61);
+            this.button98.Margin = new System.Windows.Forms.Padding(2);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(127, 43);
+            this.button98.TabIndex = 35;
+            this.button98.Text = "Random";
+            this.button98.UseVisualStyleBackColor = true;
+            this.button98.Click += new System.EventHandler(this.button98_Click);
+            // 
+            // button124
+            // 
+            this.button124.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button124.Location = new System.Drawing.Point(746, 62);
+            this.button124.Margin = new System.Windows.Forms.Padding(2);
+            this.button124.Name = "button124";
+            this.button124.Size = new System.Drawing.Size(127, 43);
+            this.button124.TabIndex = 36;
+            this.button124.Text = "Random";
+            this.button124.UseVisualStyleBackColor = true;
+            this.button124.Click += new System.EventHandler(this.button124_Click);
+            // 
+            // button125
+            // 
+            this.button125.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button125.Location = new System.Drawing.Point(746, 57);
+            this.button125.Margin = new System.Windows.Forms.Padding(2);
+            this.button125.Name = "button125";
+            this.button125.Size = new System.Drawing.Size(127, 43);
+            this.button125.TabIndex = 36;
+            this.button125.Text = "Random";
+            this.button125.UseVisualStyleBackColor = true;
+            this.button125.Click += new System.EventHandler(this.button125_Click);
+            // 
+            // button126
+            // 
+            this.button126.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button126.Location = new System.Drawing.Point(746, 57);
+            this.button126.Margin = new System.Windows.Forms.Padding(2);
+            this.button126.Name = "button126";
+            this.button126.Size = new System.Drawing.Size(127, 43);
+            this.button126.TabIndex = 36;
+            this.button126.Text = "Random";
+            this.button126.UseVisualStyleBackColor = true;
+            this.button126.Click += new System.EventHandler(this.button126_Click);
+            // 
+            // button127
+            // 
+            this.button127.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button127.Location = new System.Drawing.Point(746, 52);
+            this.button127.Margin = new System.Windows.Forms.Padding(2);
+            this.button127.Name = "button127";
+            this.button127.Size = new System.Drawing.Size(127, 43);
+            this.button127.TabIndex = 36;
+            this.button127.Text = "Random";
+            this.button127.UseVisualStyleBackColor = true;
+            this.button127.Click += new System.EventHandler(this.button127_Click);
+            // 
+            // button128
+            // 
+            this.button128.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button128.Location = new System.Drawing.Point(746, 56);
+            this.button128.Margin = new System.Windows.Forms.Padding(2);
+            this.button128.Name = "button128";
+            this.button128.Size = new System.Drawing.Size(127, 43);
+            this.button128.TabIndex = 36;
+            this.button128.Text = "Random";
+            this.button128.UseVisualStyleBackColor = true;
+            this.button128.Click += new System.EventHandler(this.button128_Click);
+            // 
+            // button129
+            // 
+            this.button129.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button129.Location = new System.Drawing.Point(746, 56);
+            this.button129.Margin = new System.Windows.Forms.Padding(2);
+            this.button129.Name = "button129";
+            this.button129.Size = new System.Drawing.Size(127, 43);
+            this.button129.TabIndex = 36;
+            this.button129.Text = "Random";
+            this.button129.UseVisualStyleBackColor = true;
+            this.button129.Click += new System.EventHandler(this.button129_Click);
+            // 
+            // button130
+            // 
+            this.button130.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button130.Location = new System.Drawing.Point(746, 56);
+            this.button130.Margin = new System.Windows.Forms.Padding(2);
+            this.button130.Name = "button130";
+            this.button130.Size = new System.Drawing.Size(127, 43);
+            this.button130.TabIndex = 36;
+            this.button130.Text = "Random";
+            this.button130.UseVisualStyleBackColor = true;
+            this.button130.Click += new System.EventHandler(this.button130_Click);
+            // 
+            // button131
+            // 
+            this.button131.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button131.Location = new System.Drawing.Point(746, 62);
+            this.button131.Margin = new System.Windows.Forms.Padding(2);
+            this.button131.Name = "button131";
+            this.button131.Size = new System.Drawing.Size(127, 43);
+            this.button131.TabIndex = 36;
+            this.button131.Text = "Random";
+            this.button131.UseVisualStyleBackColor = true;
+            this.button131.Click += new System.EventHandler(this.button131_Click);
+            // 
+            // button132
+            // 
+            this.button132.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button132.Location = new System.Drawing.Point(746, 52);
+            this.button132.Margin = new System.Windows.Forms.Padding(2);
+            this.button132.Name = "button132";
+            this.button132.Size = new System.Drawing.Size(127, 43);
+            this.button132.TabIndex = 36;
+            this.button132.Text = "Random";
+            this.button132.UseVisualStyleBackColor = true;
+            this.button132.Click += new System.EventHandler(this.button132_Click);
+            // 
+            // button133
+            // 
+            this.button133.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button133.Location = new System.Drawing.Point(746, 49);
+            this.button133.Margin = new System.Windows.Forms.Padding(2);
+            this.button133.Name = "button133";
+            this.button133.Size = new System.Drawing.Size(127, 43);
+            this.button133.TabIndex = 36;
+            this.button133.Text = "Random";
+            this.button133.UseVisualStyleBackColor = true;
+            this.button133.Click += new System.EventHandler(this.button133_Click);
+            // 
+            // button134
+            // 
+            this.button134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button134.Location = new System.Drawing.Point(746, 58);
+            this.button134.Margin = new System.Windows.Forms.Padding(2);
+            this.button134.Name = "button134";
+            this.button134.Size = new System.Drawing.Size(127, 43);
+            this.button134.TabIndex = 36;
+            this.button134.Text = "Random";
+            this.button134.UseVisualStyleBackColor = true;
+            this.button134.Click += new System.EventHandler(this.button134_Click);
             // 
             // MainForm
             // 
@@ -14763,6 +15024,19 @@ namespace Monitor
                         break;
 
                     case "B000":
+
+                        m_Datagrid = dataGridView_Block11;
+                        for (int i = 0; i < m_Datagrid.Rows.Count; i++)
+                        {
+
+                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        }
+
+                        break;
+
+
+                    case "C000":
 
                         m_Datagrid = dataGridView_Block12;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -26214,6 +26488,255 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         private void button_WriteBlock12_Click(object sender, EventArgs e)
         {
             WriteDataGridToFlash(dataGridView_Block12);
+        }
+
+        private void button98_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
+            {
+                dataGridView_Block01.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void dataGridView_ValPage0_CellValueChanged(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click_3(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
+            {
+                dataGridView_Block01.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button96_Click_4(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
+            {
+                dataGridView_Block01.Rows[i].Cells[1].Value = dataGridView_Block01.Rows[i].Cells[0].Value;
+            }
+        }
+
+        private void button59_Click_3(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
+            {
+                dataGridView_Block01.Rows[i].Cells[0].Value = dataGridView_Block01.Rows[i].Cells[1].Value;
+            }
+        }
+
+        private void button29_Click_2(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block02.Rows.Count; i++)
+            {
+                dataGridView_Block02.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button30_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block03.Rows.Count; i++)
+            {
+                dataGridView_Block03.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button102_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block04.Rows.Count; i++)
+            {
+                dataGridView_Block04.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button103_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block05.Rows.Count; i++)
+            {
+                dataGridView_Block05.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button104_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block06.Rows.Count; i++)
+            {
+                dataGridView_Block06.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button105_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block07.Rows.Count; i++)
+            {
+                dataGridView_Block07.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button106_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block08.Rows.Count; i++)
+            {
+                dataGridView_Block08.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button107_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block09.Rows.Count; i++)
+            {
+                dataGridView_Block09.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button110_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block10.Rows.Count; i++)
+            {
+                dataGridView_Block10.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button116_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block11.Rows.Count; i++)
+            {
+                dataGridView_Block11.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button123_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView_Block12.Rows.Count; i++)
+            {
+                dataGridView_Block12.Rows[i].Cells[0].Value = "";
+            }
+        }
+
+        private void button124_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block02.Rows.Count; i++)
+            {
+                dataGridView_Block02.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button125_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block03.Rows.Count; i++)
+            {
+                dataGridView_Block03.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button126_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block04.Rows.Count; i++)
+            {
+                dataGridView_Block04.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button127_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block05.Rows.Count; i++)
+            {
+                dataGridView_Block05.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button128_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block06.Rows.Count; i++)
+            {
+                dataGridView_Block06.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button129_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block07.Rows.Count; i++)
+            {
+                dataGridView_Block07.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button130_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block08.Rows.Count; i++)
+            {
+                dataGridView_Block08.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button131_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block09.Rows.Count; i++)
+            {
+                dataGridView_Block09.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button132_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block10.Rows.Count; i++)
+            {
+                dataGridView_Block10.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button133_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block11.Rows.Count; i++)
+            {
+                dataGridView_Block11.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
+        }
+
+        private void button134_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+
+
+            for (int i = 0; i < dataGridView_Block12.Rows.Count; i++)
+            {
+                dataGridView_Block12.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
