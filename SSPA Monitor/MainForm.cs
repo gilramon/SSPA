@@ -458,7 +458,7 @@ namespace Monitor
         private ProgressBar progressBar_WriteToFlash;
         private TabPage tabPage3038WBPAA;
         private GroupBox groupBox43;
-        private TabControl tabControl1;
+        private TabControl tabControl_SSPA_WB_GUI;
         private TabPage tabPage_Main;
         private TabPage tabPage_Page1;
         private TabPage tabPage_Page3;
@@ -905,8 +905,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1184,7 +1184,7 @@ namespace Monitor
             this.groupBox38 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button_Writeallblockstoflash = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl_SSPA_WB_GUI = new System.Windows.Forms.TabControl();
             this.tabPage_Main = new System.Windows.Forms.TabPage();
             this.groupBox_SystemMode = new System.Windows.Forms.GroupBox();
             this.label77 = new System.Windows.Forms.Label();
@@ -1739,7 +1739,7 @@ namespace Monitor
             this.groupBox43.SuspendLayout();
             this.groupBox48.SuspendLayout();
             this.groupBox38.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControl_SSPA_WB_GUI.SuspendLayout();
             this.tabPage_Main.SuspendLayout();
             this.groupBox_SystemMode.SuspendLayout();
             this.groupBox_SimulatorControl.SuspendLayout();
@@ -2158,17 +2158,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea37.AxisX.Title = "Freq";
-            chartArea37.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea37.AxisY.Title = "Power [dBm]";
-            chartArea37.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea37.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea37);
-            legend37.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend37.IsTextAutoFit = false;
-            legend37.Name = "Legend1";
-            legend37.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend37);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5132,7 +5132,7 @@ namespace Monitor
             // 
             this.groupBox43.Controls.Add(this.groupBox48);
             this.groupBox43.Controls.Add(this.groupBox38);
-            this.groupBox43.Controls.Add(this.tabControl1);
+            this.groupBox43.Controls.Add(this.tabControl_SSPA_WB_GUI);
             this.groupBox43.Location = new System.Drawing.Point(2, 8);
             this.groupBox43.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox43.Name = "groupBox43";
@@ -5203,6 +5203,7 @@ namespace Monitor
             this.button2.TabIndex = 18;
             this.button2.Text = "Read all blocks from flash ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_3);
             // 
             // button_Writeallblockstoflash
             // 
@@ -5217,29 +5218,29 @@ namespace Monitor
             this.button_Writeallblockstoflash.UseVisualStyleBackColor = false;
             this.button_Writeallblockstoflash.Click += new System.EventHandler(this.button_Writeallblockstoflash_Click);
             // 
-            // tabControl1
+            // tabControl_SSPA_WB_GUI
             // 
-            this.tabControl1.Controls.Add(this.tabPage_Main);
-            this.tabControl1.Controls.Add(this.tabPage_Page0);
-            this.tabControl1.Controls.Add(this.tabPage_Page1);
-            this.tabControl1.Controls.Add(this.tabPage_Page2);
-            this.tabControl1.Controls.Add(this.tabPage_Page3);
-            this.tabControl1.Controls.Add(this.tabPage_Page4);
-            this.tabControl1.Controls.Add(this.tabPage_Page5);
-            this.tabControl1.Controls.Add(this.tabPage_Page6);
-            this.tabControl1.Controls.Add(this.tabPage_Page7);
-            this.tabControl1.Controls.Add(this.tabPage_Page8);
-            this.tabControl1.Controls.Add(this.tabPage_Page9);
-            this.tabControl1.Controls.Add(this.tabPage_Page10);
-            this.tabControl1.Controls.Add(this.tabPage_Page11);
-            this.tabControl1.Controls.Add(this.tabPage_Page12);
-            this.tabControl1.Location = new System.Drawing.Point(5, 17);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1242, 623);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Main);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page0);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page1);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page2);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page3);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page4);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page5);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page6);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page7);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page8);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page9);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page10);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page11);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page12);
+            this.tabControl_SSPA_WB_GUI.Location = new System.Drawing.Point(5, 17);
+            this.tabControl_SSPA_WB_GUI.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl_SSPA_WB_GUI.Name = "tabControl_SSPA_WB_GUI";
+            this.tabControl_SSPA_WB_GUI.SelectedIndex = 0;
+            this.tabControl_SSPA_WB_GUI.Size = new System.Drawing.Size(1242, 623);
+            this.tabControl_SSPA_WB_GUI.TabIndex = 0;
+            this.tabControl_SSPA_WB_GUI.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage_Main
             // 
@@ -11324,7 +11325,7 @@ namespace Monitor
             this.groupBox43.ResumeLayout(false);
             this.groupBox48.ResumeLayout(false);
             this.groupBox38.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl_SSPA_WB_GUI.ResumeLayout(false);
             this.tabPage_Main.ResumeLayout(false);
             this.groupBox_SystemMode.ResumeLayout(false);
             this.groupBox_SystemMode.PerformLayout();
@@ -14816,9 +14817,9 @@ namespace Monitor
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 String str_Status = GetBytesFromData(i_Parsedframe.Data, 5, 4);
 
-                String message = String.Format("Flash Write :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+                String message = String.Format("Flash Write ACK recieved :  Address[{0}] Status: [{1}]", str_Address, str_Status);
 
-                WriteToSystemStatus(message, 4, default);
+                WriteToSystemStatus(message, 2, Color.Aqua);
                 //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
 
 
@@ -25985,7 +25986,6 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         }
         void ReadDataGridToFlash(DataGridView i_DataGrid)
         {
-            int i = 0;
 
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
@@ -26007,7 +26007,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 return source;
             return source.Substring(source.Length - tail_length);
         }
-        async void WriteDataGridToFlash(DataGridView i_DataGrid)
+        async void WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
         {
             int i = 0;
 
@@ -26030,10 +26030,13 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                     }
                 }
 
-                
-                Erase_Flash("13 " + BlockAddress);
+                if (i_DoErase == true)
+                {
+                    Erase_Flash("13 " + BlockAddress);
+                    await Task.Delay(5000);
+                }
 
-                await Task.Delay(5000);
+                
                 String DataToWrite = "";
                 for (i = 0; i < i_DataGrid.Rows.Count; i++)
                 {
@@ -26046,7 +26049,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button_WritePage0_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block00);
+            WriteDataGridToFlash(dataGridView_Block00,true);
         }
 
         private void button_ClearPage0DataGrid_Click(object sender, EventArgs e)
@@ -26173,62 +26176,124 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
+        String GetLinefromToCSVFromDataGrid(DataGridView i_Datagrid)
+        {
+            String ret = "";
+            for (int i = 0; i < i_Datagrid.Rows.Count; i++)
+            {
+                if(i_Datagrid.Rows[i].Cells[0].Value == null)
+                {
+                    i_Datagrid.Rows[i].Cells[0].Value = "";
+                }
+                ret += i_Datagrid.Rows[i].Cells[0].Value + ",";
+            }
+            return ret;
+        }
         private void button_WriteToCSV_Click(object sender, EventArgs e)
         {
-
-            ////before your loop
-            var CSV_bulder = new StringBuilder();
-
-            //Suggestion made by KyleMit
-            var newLine = string.Format("{0},{1}", 1, 2);
-            CSV_bulder.AppendLine(newLine);
-
-            //after your loop
-            //File.WriteAllText(".", csv.ToString());
-
-            // Displays a SaveFileDialog so the user can save the Image
-            // assigned to Button2.
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "csv|*.csv";
-            saveFileDialog1.Title = "Save a csv file";
-            saveFileDialog1.ShowDialog();
-
-            // If the file name is not an empty string open it for saving.
-            if (saveFileDialog1.FileName != "")
+            try
             {
-                // Saves the Image via a FileStream created by the OpenFile method.
-                System.IO.FileStream fs =
-                    (System.IO.FileStream)saveFileDialog1.OpenFile();
-                // Saves the Image in the appropriate ImageFormat based upon the
-                // File type selected in the dialog box.
-                // NOTE that the FilterIndex property is one-based.
-                //switch (saveFileDialog1.FilterIndex)
-                //{
-                //    case 1:
-                //        this.button2.Image.Save(fs,
-                //          System.Drawing.Imaging.ImageFormat.Jpeg);
-                //        break;
+                ////before your loop
+                var CSV_bulder = new StringBuilder();
+                var newLine = "";
 
-                //    case 2:
-                //        this.button2.Image.Save(fs,
-                //          System.Drawing.Imaging.ImageFormat.Bmp);
-                //        break;
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block00);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block01);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block02);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block03);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block04);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block05);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block06);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block07);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block08);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block09);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block10);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block11);
+                CSV_bulder.AppendLine(newLine);
+                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block12);
+                CSV_bulder.AppendLine(newLine);
 
-                //    case 3:
-                //        this.button2.Image.Save(fs,
-                //          System.Drawing.Imaging.ImageFormat.Gif);
-                //        break;
-                //}
+                //Suggestion made by KyleMit
+                //var newLine = string.Format("{0},{1}", 1, 2);
 
-                byte[] info = new UTF8Encoding(true).GetBytes(CSV_bulder.ToString());
-                fs.Write(info, 0, info.Length);
 
-                fs.Close();
+
+                //after your loop
+                //File.WriteAllText(".", csv.ToString());
+
+                // Displays a SaveFileDialog so the user can save the Image
+                // assigned to Button2.
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "csv|*.csv";
+                saveFileDialog1.Title = "Save a csv file";
+                saveFileDialog1.ShowDialog();
+
+                // If the file name is not an empty string open it for saving.
+                if (saveFileDialog1.FileName != "")
+                {
+                    // Saves the Image via a FileStream created by the OpenFile method.
+                    System.IO.FileStream fs =
+                        (System.IO.FileStream)saveFileDialog1.OpenFile();
+                    // Saves the Image in the appropriate ImageFormat based upon the
+                    // File type selected in the dialog box.
+                    // NOTE that the FilterIndex property is one-based.
+                    //switch (saveFileDialog1.FilterIndex)
+                    //{
+                    //    case 1:
+                    //        this.button2.Image.Save(fs,
+                    //          System.Drawing.Imaging.ImageFormat.Jpeg);
+                    //        break;
+
+                    //    case 2:
+                    //        this.button2.Image.Save(fs,
+                    //          System.Drawing.Imaging.ImageFormat.Bmp);
+                    //        break;
+
+                    //    case 3:
+                    //        this.button2.Image.Save(fs,
+                    //          System.Drawing.Imaging.ImageFormat.Gif);
+                    //        break;
+                    //}
+
+                    byte[] info = new UTF8Encoding(true).GetBytes(CSV_bulder.ToString());
+                    fs.Write(info, 0, info.Length);
+
+                    fs.Close();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: File is Open Original error: " + ex.Message);
             }
 
 
         }
 
+        void WriteLineToDataGrid(DataGridView i_Datagrid,String i_line)
+        {
+            String[] temp = i_line.Split(',');
+
+            for (int i = 0; i < i_Datagrid.Rows.Count; i++)
+            {
+                if (i_Datagrid.Rows[i].Cells[0].Value == null)
+                {
+                    i_Datagrid.Rows[i].Cells[0].Value = "";
+                }
+                i_Datagrid.Rows[i].Cells[0].Value = temp[i];
+            }
+            return ;
+        }
         private void button_ReadCSVFile_Click(object sender, EventArgs e)
         {
             Stream myStream = null;
@@ -26246,10 +26311,30 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                         {
                             // Insert code to read the stream here.
                             StreamReader reader = new StreamReader(myStream);
-                            string text = reader.ReadToEnd();
+                            WriteLineToDataGrid(dataGridView_Block00, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block01, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block02, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block03, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block04, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block05, reader.ReadLine()); 
+                            WriteLineToDataGrid(dataGridView_Block06, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block07, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block08, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block09, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block10, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block11, reader.ReadLine());
+                            WriteLineToDataGrid(dataGridView_Block12, reader.ReadLine());
+
+
+                            //for (int i = 0; i < 12; i++)
+                            //{
+                            //    reader.ReadLine();
+                            //    WriteLineToDataGrid
+                            //}
+
                             reader.Close();
-                            string message = text;
-                            MessageBox.Show(message);
+                            //string message = text;
+                            //MessageBox.Show(message);
                         }
                     }
                 }
@@ -26260,20 +26345,61 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private void button_Writeallblockstoflash_Click(object sender, EventArgs e)
+        private async void button_Writeallblockstoflash_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure write all to flash?";
+            tabControl_SSPA_WB_GUI.Enabled = false;
+
+
+
+            int Delay = 3000;
+            string message = @"
+Are you sure write all to flash?
+This Process can take 1 minute.";
             string title = "Write Flash";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.Yes)
             {
-                this.Close();
+
+                Erase_Flash();
+                await Task.Delay(5000);
+
+                WriteDataGridToFlash(dataGridView_Block00, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block01, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block02, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block03, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block04, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block05, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block06, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block07, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block08, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block09, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block10, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block11, false);
+                await Task.Delay(Delay);
+                WriteDataGridToFlash(dataGridView_Block12, false);
+                await Task.Delay(Delay);
+
+
+
             }
             else
             {
                 // Do something  
             }
+
+            tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
         private void checkBox_PulseGen_CheckedChanged(object sender, EventArgs e)
@@ -26427,67 +26553,67 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button_WriteBlock0_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block00);
+            WriteDataGridToFlash(dataGridView_Block00, true);
         }
 
         private void button_WriteBlock1_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block01);
+            WriteDataGridToFlash(dataGridView_Block01, true);
         }
 
         private void button_WriteBlock2_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block02);
+            WriteDataGridToFlash(dataGridView_Block02, true);
         }
 
         private void button_WriteBlock3_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block03);
+            WriteDataGridToFlash(dataGridView_Block03, true);
         }
 
         private void button_WriteBlock4_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block04);
+            WriteDataGridToFlash(dataGridView_Block04, true);
         }
 
         private void button_WriteBlock5_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block05);
+            WriteDataGridToFlash(dataGridView_Block05, true);
         }
 
         private void button_WriteBlock6_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block06);
+            WriteDataGridToFlash(dataGridView_Block06, true);
         }
 
         private void button_WriteBlock7_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block07);
+            WriteDataGridToFlash(dataGridView_Block07, true);
         }
 
         private void button_WriteBlock8_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block08);
+            WriteDataGridToFlash(dataGridView_Block08, true);
         }
 
         private void button_WriteBlock9_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block09);
+            WriteDataGridToFlash(dataGridView_Block09, true);
         }
 
         private void button_WriteBlock10_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block10);
+            WriteDataGridToFlash(dataGridView_Block10, true);
         }
 
         private void button_WriteBlock11_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block11);
+            WriteDataGridToFlash(dataGridView_Block11, true);
         }
 
         private void button_WriteBlock12_Click(object sender, EventArgs e)
         {
-            WriteDataGridToFlash(dataGridView_Block12);
+            WriteDataGridToFlash(dataGridView_Block12, true);
         }
 
         private void button98_Click(object sender, EventArgs e)
@@ -26737,6 +26863,41 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                 dataGridView_Block12.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
             }
+        }
+
+        private async void button2_Click_3(object sender, EventArgs e)
+        {
+            int Delay = 500;
+            //tabControl_SSPA_WB_GUI.Enabled = false;
+
+            ReadDataGridToFlash(dataGridView_Block00);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block01);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block02);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block03);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block04);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block05);
+            await Task.Delay(Delay); 
+            ReadDataGridToFlash(dataGridView_Block06);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block07);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block08);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block09);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block10);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block11);
+            await Task.Delay(Delay);
+            ReadDataGridToFlash(dataGridView_Block12);
+            await Task.Delay(Delay);
+
+            // tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
         private void button57_Click_1(object sender, EventArgs e)
