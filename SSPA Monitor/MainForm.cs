@@ -12605,474 +12605,112 @@ namespace Monitor
 
             //////Block 1
             ///"0
-
-            //-31 to - 28 deg"	PA_VVA_T1_FREQ1
-            i = 0;
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ1";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ2";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ3";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ4";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ5";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ6";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ7";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-31 to - 28 deg PA_VVA_T1_FREQ8";
-            i++;
-
-
-
-
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24 deg PA_VVA_T1_FREQ1";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ2";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ3";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ4";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ5";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ6";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ7";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ8";
-            i++;
-
-
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24 deg PA_VVA_T1_FREQ1";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ2";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ3";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ4";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ5";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ6";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ7";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-27 to - 24  deg PA_VVA_T1_FREQ8";
-            i++;
-
-
-
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21 deg PA_VVA_T1_FREQ1";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21   deg PA_VVA_T1_FREQ2";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21  deg PA_VVA_T1_FREQ3";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21  deg PA_VVA_T1_FREQ4";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21   deg PA_VVA_T1_FREQ5";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21   deg PA_VVA_T1_FREQ6";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21  deg PA_VVA_T1_FREQ7";
-            i++;
-
-            dataGridView_Block1.Rows.Add();
-            dataGridView_Block1.Rows[i].HeaderCell.Value = "-24 to - 21   deg PA_VVA_T1_FREQ8";
-            i++;
-
-
-
-
-            //            Vdd_DAC_T1 T = -31 ÷ -28
-            i = 0;
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd_DAC_T1 T = -31 ÷ -28";
-            i++;
-
-            //Vdd _DAC_T2 T = -27 ÷ -24
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T2 T = -27 ÷ -24";
-            i++;
-
-            //Vdd _DAC_T3 T = -23 ÷ -20
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T3 T = -23 ÷ -20";
-            i++;
-
-            //Vdd _DAC_T4 T = -19 ÷ -16
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T4 T = -19 ÷ -16";
-            i++;
-
-            //Vdd _DAC_T5 T = -15 ÷ -12
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T5 T = -15 ÷ -12";
-            i++;
-
-            //Vdd _DAC_T6 T = -11 ÷ -8
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T6 T = -11 ÷ -8";
-            i++;
-
-            //Vdd _DAC_T7 T = -7 ÷ -4
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T7 T = -7 ÷ -4";
-            i++;
-
-            //Vdd _DAC_T8 T = -3 ÷ 0
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T8 T = -3 ÷ 0";
-            i++;
-
-            //Vdd _DAC_T9 T = 1 ÷ 4
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T9 T = 1 ÷ 4";
-            i++;
-
-            //Vdd _DAC_T10    T = 5 ÷ 8
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T10    T = 5 ÷ 8";
-            i++;
-
-            //Vdd _DAC_T11    T = 9 ÷ 12
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T11    T = 9 ÷ 12";
-            i++;
-
-            //Vdd _DAC_T12    T = 13 ÷ 16
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T12    T = 13 ÷ 16";
-            i++;
-
-            //Vdd _DAC_T13    T = 17 ÷ 20
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T13    T = 17 ÷ 20";
-            i++;
-
-            //Vdd _DAC_T14    T = 21 ÷ 24
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T14    T = 21 ÷ 24";
-            i++;
-
-            //Vdd _DAC_T15    T = 25 ÷ 28
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T15    T = 25 ÷ 28";
-            i++;
-
-            //Vdd _DAC_T16    T = 29 ÷ 32
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T16    T = 29 ÷ 32";
-            i++;
-
-            //Vdd _DAC_T17    T = 33 ÷ 36
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T17    T = 33 ÷ 36";
-            i++;
-
-            //Vdd _DAC_T18    T = 37 ÷ 40
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T18    T = 37 ÷ 40";
-            i++;
-
-            //Vdd _DAC_T19    T = 41 ÷ 44
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T19    T = 41 ÷ 44";
-            i++;
-
-            //Vdd _DAC_T20    T = 45 ÷ 48
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T20    T = 45 ÷ 48";
-            i++;
-
-            //Vdd _DAC_T21    T = 49 ÷ 52
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T21    T = 49 ÷ 52";
-            i++;
-
-            //Vdd _DAC_T22    T = 53 ÷ 56
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T22    T = 53 ÷ 56";
-            i++;
-
-            //Vdd _DAC_T23    T = 57 ÷ 60
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T23    T = 57 ÷ 60";
-            i++;
-
-            //Vdd _DAC_T24    T = 61 ÷ 64
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T24    T = 61 ÷ 64";
-            i++;
-
-            //Vdd _DAC_T25    T = 65 ÷ 68
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T25    T = 65 ÷ 68";
-            i++;
-
-            //            Vdd _DAC_T26    T = 69 ÷ 72
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T26    T = 69 ÷ 72";
-            i++;
-
-            //Vdd _DAC_T27    T = 73 ÷ 76
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T27    T = 73 ÷ 76";
-            i++;
-
-            //Vdd _DAC_T28    T = 77 ÷ 80
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T28    T = 77 ÷ 80";
-            i++;
-
-            //Vdd _DAC_T29    T = 81 ÷ 84
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T29    T = 81 ÷ 84";
-            i++;
-
-            //Vdd _DAC_T30    T = 85 ÷ 88
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T30    T = 85 ÷ 88";
-            i++;
-
-            //Vdd _DAC_T31    T = 89 ÷ 92
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T31    T = 89 ÷ 92";
-            i++;
-
-            //Vdd _DAC_T32    T = 93 ÷ 96
-            dataGridView_Block2.Rows.Add();
-            dataGridView_Block2.Rows[i].HeaderCell.Value = "Vdd _DAC_T32    T = 93 ÷ 96";
-            i++;
-
-
-            //            Vgg_DAC_T1 T = -31 ÷ -28
-            i = 0;
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T1 T = -31 ÷ -28";
-            i++;
-
-            //Vgg_DAC_T2 T = -27 ÷ -24
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T2 T = -27 ÷ -24";
-            i++;
-
-            //Vgg_DAC_T3 T = -23 ÷ -20
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T3 T = -23 ÷ -20";
-            i++;
-
-            //Vgg_DAC_T4 T = -19 ÷ -16
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T4 T = -19 ÷ -16";
-            i++;
-
-            //Vgg_DAC_T5 T = -15 ÷ -12
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T5 T = -15 ÷ -12";
-            i++;
-
-            //Vgg_DAC_T6 T = -11 ÷ -8
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T6 T = -11 ÷ -8";
-            i++;
-
-            //Vgg_DAC_T7 T = -7 ÷ -4
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T7 T = -7 ÷ -4";
-            i++;
-
-            //Vgg_DAC_T8 T = -3 ÷ 0
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T8 T = -3 ÷ 0";
-            i++;
-
-            //Vgg_DAC_T9 T = 1 ÷ 4
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T9 T = 1 ÷ 4";
-            i++;
-
-            //Vgg_DAC_T10 T = 5 ÷ 8
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T10 T = 5 ÷ 8";
-            i++;
-
-            //Vgg_DAC_T11 T = 9 ÷ 12
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T11 T = 9 ÷ 12";
-            i++;
-
-            //Vgg_DAC_T12 T = 13 ÷ 16
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T12 T = 13 ÷ 16";
-            i++;
-
-            //Vgg_DAC_T13 T = 17 ÷ 20
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T13 T = 17 ÷ 20";
-            i++;
-
-            //Vgg_DAC_T14 T = 21 ÷ 24
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T14 T = 21 ÷ 24";
-            i++;
-
-            //Vgg_DAC_T15 T = 25 ÷ 28
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T15 T = 25 ÷ 28";
-            i++;
-
-            //Vgg_DAC_T16 T = 29 ÷ 32
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T16 T = 29 ÷ 32";
-            i++;
-
-            //Vgg_DAC_T17 T = 33 ÷ 36
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T17 T = 33 ÷ 36";
-            i++;
-
-            //Vgg_DAC_T18 T = 37 ÷ 40
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T18 T = 37 ÷ 40";
-            i++;
-
-            //Vgg_DAC_T19 T = 41 ÷ 44
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T19 T = 41 ÷ 44";
-            i++;
-
-            //Vgg_DAC_T20 T = 45 ÷ 48
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T20 T = 45 ÷ 48";
-            i++;
-
-            //Vgg_DAC_T21 T = 49 ÷ 52
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T21 T = 49 ÷ 52";
-            i++;
-
-            //Vgg_DAC_T22 T = 53 ÷ 56
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T22 T = 53 ÷ 56";
-            i++;
-
-            //Vgg_DAC_T23 T = 57 ÷ 60
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T23 T = 57 ÷ 60";
-            i++;
-
-            //Vgg_DAC_T24 T = 61 ÷ 64
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T24 T = 61 ÷ 64";
-            i++;
-
-            //Vgg_DAC_T25 T = 65 ÷ 68
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T25 T = 65 ÷ 68";
-            i++;
-
-            //Vgg_DAC_T26 T = 69 ÷ 72
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T26 T = 69 ÷ 72";
-            i++;
-
-            //Vgg_DAC_T27 T = 73 ÷ 76
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T27 T = 73 ÷ 76";
-            i++;
-
-            //Vgg_DAC_T28 T = 77 ÷ 80
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T28 T = 77 ÷ 80";
-            i++;
-
-            //            Vgg_DAC_T29 T = 81 ÷ 84
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T29 T = 81 ÷ 84";
-            i++;
-
-            //Vgg_DAC_T30 T = 85 ÷ 88
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T30 T = 85 ÷ 88";
-            i++;
-
-            //Vgg_DAC_T31 T = 89 ÷ 92
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T31 T = 89 ÷ 92";
-            i++;
-
-            //Vgg_DAC_T32 T = 93 ÷ 96
-            dataGridView_Block3.Rows.Add();
-            dataGridView_Block3.Rows[i].HeaderCell.Value = "Vgg_DAC_T32 T = 93 ÷ 96";
-            i++;
-
-
-
+            int row = 0;
+            for(i=-31; i< 94; i=i+4)
+            {
+
+                dataGridView_Block1.Rows.Add();
+                dataGridView_Block1.Rows[row].HeaderCell.Value = String.Format("{0} - {1} deg -deg PA_VVA_T1_FREQ{2}",i,i+3,(row % 8 +1));
+                row++;
+
+            }
+
+
+
+
+
+            row = 0;
+            for (i = -31; i < 95; i = i + 4)
+            {
+                dataGridView_Block2.Rows.Add();
+                dataGridView_Block2.Rows[row].HeaderCell.Value = String.Format("Vdd_DAC_T{0} T = {1} ÷ {2}", row, i, i + 3);
+                row++;
+            }
+
+
+
+            row = 0;
+            for (i = -31; i < 95; i=i+4)
+            {
+                dataGridView_Block3.Rows.Add();
+                dataGridView_Block3.Rows[row].HeaderCell.Value = String.Format("Vgg_DAC_T{0} T = {1} ÷ {2}", row,i,i+3);
+                row++;
+            }
+
+            row = 0;
+            for(i=0;i<26;i++)
+            {
+                dataGridView_Block4.Rows.Add();
+                dataGridView_Block4.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_D{0}",i);
+                row++;
+            }
+
+
+            row = 0;
+            for (i = 0; i < 26; i++)
+            {
+                dataGridView_Block5.Rows.Add();
+                dataGridView_Block5.Rows[row].HeaderCell.Value = String.Format("PA_DCA _D{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = 0; i < 13; i++)
+            {
+                dataGridView_Block6.Rows.Add();
+                dataGridView_Block6.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_FT{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = 0; i < 13; i++)
+            {
+                dataGridView_Block7.Rows.Add();
+                dataGridView_Block7.Rows[row].HeaderCell.Value = String.Format("PA_VDD_OFFSET_FT{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = -31; i < 95; i = i + 4)
+            {
+                dataGridView_Block8.Rows.Add();
+                dataGridView_Block8.Rows[row].HeaderCell.Value = String.Format("VVA_CAL_SAT_DAC_T{0} T = {1} ÷ {2}", row, i, i + 3);
+                row++;
+            }
+
+            
+
+            row = 0;
+            for (i = 0; i < 33; i++)
+            {
+                dataGridView_Block9.Rows.Add();
+                dataGridView_Block9.Rows[row].HeaderCell.Value = String.Format("Tx_Envelope_Rise_Delay_T{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = 0; i < 33; i++)
+            {
+                dataGridView_Block10.Rows.Add();
+                dataGridView_Block10.Rows[row].HeaderCell.Value = String.Format("Tx_Envelope_Falling_Delay_T{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = 0; i < 33; i++)
+            {
+                dataGridView_Block11.Rows.Add();
+                dataGridView_Block11.Rows[row].HeaderCell.Value = String.Format("Tx_Envelope_Rise_Delay_T{0}", i);
+                row++;
+            }
+
+            row = 0;
+            for (i = 0; i < 33; i++)
+            {
+                dataGridView_Block12.Rows.Add();
+                dataGridView_Block12.Rows[row].HeaderCell.Value = String.Format("Tx_Envelope_Rise_Delay_T{0}", i);
+                row++;
+            }
 
         }
 
@@ -25598,9 +25236,9 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private async void textBox_4V_KeyDown(object sender, KeyEventArgs e)
+        private  void textBox_4V_KeyDown(object sender, KeyEventArgs e)
         {
-            int Delay = 100;
+
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
