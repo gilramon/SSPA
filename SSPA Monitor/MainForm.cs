@@ -14852,35 +14852,39 @@ namespace Monitor
         {
             try
             {
-
+                String str_Control = GetBytesFromData(i_Parsedframe.Data, 0, 1);
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 String str_Status = GetBytesFromData(i_Parsedframe.Data, 5, 4);
 
-                String message = String.Format("Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+                
 
-                WriteToSystemStatus(message, 4, Color.Cyan);
+
                 //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
 
 
-                //switch (str_Address)
-                //{
-                //    case "0000":
+                switch (str_Control)
+                {
+                    case "11":
 
-                //        for (int i = 0; i < dataGridView_ValPage0.Rows.Count; i++)
-                //        {
+                        String message = String.Format("Chip Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+                        WriteToSystemStatus(message, 4, Color.Turquoise);
 
-                //            dataGridView_ValPage0.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        break;
 
-                //        }
+                    case "13":
 
-                //        break;
+                         message = String.Format(" Block Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+                        WriteToSystemStatus(message, 4, Color.Cyan);
+
+                        break;
 
 
-
-                //    default:
-                //        UnHandledAddress(str_Address);
-                //        break;
-                //}
+                    default:
+                        UnHandledAddress(str_Address);
+                        break;
+                }
+            
+                
             }
             catch (Exception ex)
             {
@@ -16863,8 +16867,8 @@ namespace Monitor
 
 
 
-                    SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "", New_Line = false, Show_Time = true);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
                     SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, ConvertByteArraytToString(buffer), true, false);
 
 
@@ -19709,8 +19713,8 @@ namespace Monitor
 
                 if (button_SendProtocolSerialPort.BackColor == Color.LightGreen)
                 {
-                    SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
-                    SystemLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
+                    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+                    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
                     SystemLogger.LogMessage(Color.Purple, Color.LightGray, SentFrameGlobal.ToString(), true, false);
                 }
                 else
@@ -26382,8 +26386,8 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             tabControl_SSPA_WB_GUI.Enabled = false;
 
 
-
-            int Delay = 6000;
+            bool DoErase = false;
+            int Delay = 3000;
             string message = @"
 Are you sure write all to flash?
 This Process can take 1 minute.";
@@ -26393,34 +26397,34 @@ This Process can take 1 minute.";
             if (result == DialogResult.Yes)
             {
 
-                //Erase_Flash();
-                //await Task.Delay(6000);
+                Erase_Flash();
+                await Task.Delay(4000);
 
-                await WriteDataGridToFlash(dataGridView_Block00, true);
+                await WriteDataGridToFlash(dataGridView_Block00, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block01, true);
+                await WriteDataGridToFlash(dataGridView_Block01, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block02, true);
+                await WriteDataGridToFlash(dataGridView_Block02, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block03, true);
+                await WriteDataGridToFlash(dataGridView_Block03, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block04, true);
+                await WriteDataGridToFlash(dataGridView_Block04, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block05, true);
+                await WriteDataGridToFlash(dataGridView_Block05, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block06, true);
+                await WriteDataGridToFlash(dataGridView_Block06, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block07, true);
+                await WriteDataGridToFlash(dataGridView_Block07, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block08, true);
+                await WriteDataGridToFlash(dataGridView_Block08, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block09, true);
+                await WriteDataGridToFlash(dataGridView_Block09, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block10, true);
+                await WriteDataGridToFlash(dataGridView_Block10, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block11, true);
+                await WriteDataGridToFlash(dataGridView_Block11, DoErase);
                 await Task.Delay(Delay);
-                await WriteDataGridToFlash(dataGridView_Block12, true);
+                await WriteDataGridToFlash(dataGridView_Block12, DoErase);
                 await Task.Delay(Delay);
 
 
