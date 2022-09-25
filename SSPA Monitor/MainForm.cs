@@ -1397,74 +1397,92 @@ namespace Monitor
             this.button_ReadBlock0 = new System.Windows.Forms.Button();
             this.button_WriteBlock0 = new System.Windows.Forms.Button();
             this.dataGridView_Block00 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Page1 = new System.Windows.Forms.TabPage();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button96 = new System.Windows.Forms.Button();
+            this.button98 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView_Block01 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_ReadBlock1 = new System.Windows.Forms.Button();
             this.button_WriteBlock1 = new System.Windows.Forms.Button();
             this.tabPage_Page2 = new System.Windows.Forms.TabPage();
+            this.button124 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.dataGridView_Block02 = new System.Windows.Forms.DataGridView();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.button72 = new System.Windows.Forms.Button();
             this.button73 = new System.Windows.Forms.Button();
             this.tabPage_Page3 = new System.Windows.Forms.TabPage();
+            this.button125 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.dataGridView_Block03 = new System.Windows.Forms.DataGridView();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
             this.button76 = new System.Windows.Forms.Button();
             this.button77 = new System.Windows.Forms.Button();
             this.tabPage_Page4 = new System.Windows.Forms.TabPage();
+            this.button126 = new System.Windows.Forms.Button();
             this.button102 = new System.Windows.Forms.Button();
             this.dataGridView_Block04 = new System.Windows.Forms.DataGridView();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
             this.button78 = new System.Windows.Forms.Button();
             this.button79 = new System.Windows.Forms.Button();
             this.tabPage_Page5 = new System.Windows.Forms.TabPage();
+            this.button127 = new System.Windows.Forms.Button();
             this.button103 = new System.Windows.Forms.Button();
             this.dataGridView_Block05 = new System.Windows.Forms.DataGridView();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
             this.button80 = new System.Windows.Forms.Button();
             this.button81 = new System.Windows.Forms.Button();
             this.tabPage_Page6 = new System.Windows.Forms.TabPage();
+            this.button128 = new System.Windows.Forms.Button();
             this.button104 = new System.Windows.Forms.Button();
             this.dataGridView_Block06 = new System.Windows.Forms.DataGridView();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
             this.button82 = new System.Windows.Forms.Button();
             this.button83 = new System.Windows.Forms.Button();
             this.tabPage_Page7 = new System.Windows.Forms.TabPage();
+            this.button129 = new System.Windows.Forms.Button();
             this.button105 = new System.Windows.Forms.Button();
             this.dataGridView_Block07 = new System.Windows.Forms.DataGridView();
             this.groupBox51 = new System.Windows.Forms.GroupBox();
             this.button84 = new System.Windows.Forms.Button();
             this.button85 = new System.Windows.Forms.Button();
             this.tabPage_Page8 = new System.Windows.Forms.TabPage();
+            this.button130 = new System.Windows.Forms.Button();
             this.button106 = new System.Windows.Forms.Button();
             this.dataGridView_Block08 = new System.Windows.Forms.DataGridView();
             this.groupBox52 = new System.Windows.Forms.GroupBox();
             this.button86 = new System.Windows.Forms.Button();
             this.button89 = new System.Windows.Forms.Button();
             this.tabPage_Page9 = new System.Windows.Forms.TabPage();
+            this.button131 = new System.Windows.Forms.Button();
             this.button107 = new System.Windows.Forms.Button();
             this.dataGridView_Block09 = new System.Windows.Forms.DataGridView();
             this.groupBox53 = new System.Windows.Forms.GroupBox();
             this.button90 = new System.Windows.Forms.Button();
             this.button91 = new System.Windows.Forms.Button();
             this.tabPage_Page10 = new System.Windows.Forms.TabPage();
+            this.button132 = new System.Windows.Forms.Button();
             this.button110 = new System.Windows.Forms.Button();
             this.dataGridView_Block10 = new System.Windows.Forms.DataGridView();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
             this.button92 = new System.Windows.Forms.Button();
             this.button93 = new System.Windows.Forms.Button();
             this.tabPage_Page11 = new System.Windows.Forms.TabPage();
+            this.button133 = new System.Windows.Forms.Button();
             this.button116 = new System.Windows.Forms.Button();
             this.dataGridView_Block11 = new System.Windows.Forms.DataGridView();
             this.groupBox55 = new System.Windows.Forms.GroupBox();
             this.button94 = new System.Windows.Forms.Button();
             this.button95 = new System.Windows.Forms.Button();
             this.tabPage_Page12 = new System.Windows.Forms.TabPage();
+            this.button134 = new System.Windows.Forms.Button();
             this.button123 = new System.Windows.Forms.Button();
             this.dataGridView_Block12 = new System.Windows.Forms.DataGridView();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
@@ -1654,24 +1672,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button59 = new System.Windows.Forms.Button();
-            this.button71 = new System.Windows.Forms.Button();
-            this.button96 = new System.Windows.Forms.Button();
-            this.button98 = new System.Windows.Forms.Button();
-            this.button124 = new System.Windows.Forms.Button();
-            this.button125 = new System.Windows.Forms.Button();
-            this.button126 = new System.Windows.Forms.Button();
-            this.button127 = new System.Windows.Forms.Button();
-            this.button128 = new System.Windows.Forms.Button();
-            this.button129 = new System.Windows.Forms.Button();
-            this.button130 = new System.Windows.Forms.Button();
-            this.button131 = new System.Windows.Forms.Button();
-            this.button132 = new System.Windows.Forms.Button();
-            this.button133 = new System.Windows.Forms.Button();
-            this.button134 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -7899,6 +7899,27 @@ namespace Monitor
             this.dataGridView_Block00.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             this.dataGridView_Block00.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.Frozen = true;
+            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // Decimal
+            // 
+            this.Decimal.HeaderText = "Decimal";
+            this.Decimal.Name = "Decimal";
+            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Verify_ReadOnly
+            // 
+            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
+            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
+            this.Verify_ReadOnly.ReadOnly = true;
+            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -7926,6 +7947,53 @@ namespace Monitor
             this.tabPage_Page1.TabIndex = 1;
             this.tabPage_Page1.Text = "Block 1";
             this.tabPage_Page1.UseVisualStyleBackColor = true;
+            // 
+            // button59
+            // 
+            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.Location = new System.Drawing.Point(748, 177);
+            this.button59.Margin = new System.Windows.Forms.Padding(2);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(127, 61);
+            this.button59.TabIndex = 38;
+            this.button59.Text = "Copy to Optional <-----";
+            this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click_3);
+            // 
+            // button71
+            // 
+            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button71.Location = new System.Drawing.Point(748, 241);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(127, 70);
+            this.button71.TabIndex = 37;
+            this.button71.Text = "Compare Value and optional";
+            this.button71.UseVisualStyleBackColor = true;
+            // 
+            // button96
+            // 
+            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button96.Location = new System.Drawing.Point(748, 112);
+            this.button96.Margin = new System.Windows.Forms.Padding(2);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(127, 61);
+            this.button96.TabIndex = 36;
+            this.button96.Text = "Copy to Optional ---->";
+            this.button96.UseVisualStyleBackColor = true;
+            this.button96.Click += new System.EventHandler(this.button96_Click_4);
+            // 
+            // button98
+            // 
+            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button98.Location = new System.Drawing.Point(748, 61);
+            this.button98.Margin = new System.Windows.Forms.Padding(2);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(127, 43);
+            this.button98.TabIndex = 35;
+            this.button98.Text = "Random";
+            this.button98.UseVisualStyleBackColor = true;
+            this.button98.Click += new System.EventHandler(this.button98_Click);
             // 
             // button6
             // 
@@ -8005,6 +8073,18 @@ namespace Monitor
             this.tabPage_Page2.TabIndex = 11;
             this.tabPage_Page2.Text = "Block 2";
             this.tabPage_Page2.UseVisualStyleBackColor = true;
+            // 
+            // button124
+            // 
+            this.button124.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button124.Location = new System.Drawing.Point(746, 62);
+            this.button124.Margin = new System.Windows.Forms.Padding(2);
+            this.button124.Name = "button124";
+            this.button124.Size = new System.Drawing.Size(127, 43);
+            this.button124.TabIndex = 36;
+            this.button124.Text = "Random";
+            this.button124.UseVisualStyleBackColor = true;
+            this.button124.Click += new System.EventHandler(this.button124_Click);
             // 
             // button29
             // 
@@ -8086,6 +8166,18 @@ namespace Monitor
             this.tabPage_Page3.Text = "Block 3";
             this.tabPage_Page3.UseVisualStyleBackColor = true;
             // 
+            // button125
+            // 
+            this.button125.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button125.Location = new System.Drawing.Point(746, 57);
+            this.button125.Margin = new System.Windows.Forms.Padding(2);
+            this.button125.Name = "button125";
+            this.button125.Size = new System.Drawing.Size(127, 43);
+            this.button125.TabIndex = 36;
+            this.button125.Text = "Random";
+            this.button125.UseVisualStyleBackColor = true;
+            this.button125.Click += new System.EventHandler(this.button125_Click);
+            // 
             // button30
             // 
             this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8166,6 +8258,18 @@ namespace Monitor
             this.tabPage_Page4.Text = "Block 4";
             this.tabPage_Page4.UseVisualStyleBackColor = true;
             // 
+            // button126
+            // 
+            this.button126.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button126.Location = new System.Drawing.Point(746, 57);
+            this.button126.Margin = new System.Windows.Forms.Padding(2);
+            this.button126.Name = "button126";
+            this.button126.Size = new System.Drawing.Size(127, 43);
+            this.button126.TabIndex = 36;
+            this.button126.Text = "Random";
+            this.button126.UseVisualStyleBackColor = true;
+            this.button126.Click += new System.EventHandler(this.button126_Click);
+            // 
             // button102
             // 
             this.button102.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8244,6 +8348,18 @@ namespace Monitor
             this.tabPage_Page5.TabIndex = 5;
             this.tabPage_Page5.Text = "Block 5";
             this.tabPage_Page5.UseVisualStyleBackColor = true;
+            // 
+            // button127
+            // 
+            this.button127.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button127.Location = new System.Drawing.Point(746, 52);
+            this.button127.Margin = new System.Windows.Forms.Padding(2);
+            this.button127.Name = "button127";
+            this.button127.Size = new System.Drawing.Size(127, 43);
+            this.button127.TabIndex = 36;
+            this.button127.Text = "Random";
+            this.button127.UseVisualStyleBackColor = true;
+            this.button127.Click += new System.EventHandler(this.button127_Click);
             // 
             // button103
             // 
@@ -8324,6 +8440,18 @@ namespace Monitor
             this.tabPage_Page6.Text = "Block 6";
             this.tabPage_Page6.UseVisualStyleBackColor = true;
             // 
+            // button128
+            // 
+            this.button128.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button128.Location = new System.Drawing.Point(746, 56);
+            this.button128.Margin = new System.Windows.Forms.Padding(2);
+            this.button128.Name = "button128";
+            this.button128.Size = new System.Drawing.Size(127, 43);
+            this.button128.TabIndex = 36;
+            this.button128.Text = "Random";
+            this.button128.UseVisualStyleBackColor = true;
+            this.button128.Click += new System.EventHandler(this.button128_Click);
+            // 
             // button104
             // 
             this.button104.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8402,6 +8530,18 @@ namespace Monitor
             this.tabPage_Page7.TabIndex = 7;
             this.tabPage_Page7.Text = "Block 7";
             this.tabPage_Page7.UseVisualStyleBackColor = true;
+            // 
+            // button129
+            // 
+            this.button129.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button129.Location = new System.Drawing.Point(746, 56);
+            this.button129.Margin = new System.Windows.Forms.Padding(2);
+            this.button129.Name = "button129";
+            this.button129.Size = new System.Drawing.Size(127, 43);
+            this.button129.TabIndex = 36;
+            this.button129.Text = "Random";
+            this.button129.UseVisualStyleBackColor = true;
+            this.button129.Click += new System.EventHandler(this.button129_Click);
             // 
             // button105
             // 
@@ -8482,6 +8622,18 @@ namespace Monitor
             this.tabPage_Page8.Text = "Block 8";
             this.tabPage_Page8.UseVisualStyleBackColor = true;
             // 
+            // button130
+            // 
+            this.button130.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button130.Location = new System.Drawing.Point(746, 56);
+            this.button130.Margin = new System.Windows.Forms.Padding(2);
+            this.button130.Name = "button130";
+            this.button130.Size = new System.Drawing.Size(127, 43);
+            this.button130.TabIndex = 36;
+            this.button130.Text = "Random";
+            this.button130.UseVisualStyleBackColor = true;
+            this.button130.Click += new System.EventHandler(this.button130_Click);
+            // 
             // button106
             // 
             this.button106.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8560,6 +8712,18 @@ namespace Monitor
             this.tabPage_Page9.TabIndex = 9;
             this.tabPage_Page9.Text = "Block 9";
             this.tabPage_Page9.UseVisualStyleBackColor = true;
+            // 
+            // button131
+            // 
+            this.button131.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button131.Location = new System.Drawing.Point(746, 62);
+            this.button131.Margin = new System.Windows.Forms.Padding(2);
+            this.button131.Name = "button131";
+            this.button131.Size = new System.Drawing.Size(127, 43);
+            this.button131.TabIndex = 36;
+            this.button131.Text = "Random";
+            this.button131.UseVisualStyleBackColor = true;
+            this.button131.Click += new System.EventHandler(this.button131_Click);
             // 
             // button107
             // 
@@ -8640,6 +8804,18 @@ namespace Monitor
             this.tabPage_Page10.Text = "Block 10";
             this.tabPage_Page10.UseVisualStyleBackColor = true;
             // 
+            // button132
+            // 
+            this.button132.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button132.Location = new System.Drawing.Point(746, 52);
+            this.button132.Margin = new System.Windows.Forms.Padding(2);
+            this.button132.Name = "button132";
+            this.button132.Size = new System.Drawing.Size(127, 43);
+            this.button132.TabIndex = 36;
+            this.button132.Text = "Random";
+            this.button132.UseVisualStyleBackColor = true;
+            this.button132.Click += new System.EventHandler(this.button132_Click);
+            // 
             // button110
             // 
             this.button110.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8719,6 +8895,18 @@ namespace Monitor
             this.tabPage_Page11.Text = "Block 11";
             this.tabPage_Page11.UseVisualStyleBackColor = true;
             // 
+            // button133
+            // 
+            this.button133.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button133.Location = new System.Drawing.Point(746, 49);
+            this.button133.Margin = new System.Windows.Forms.Padding(2);
+            this.button133.Name = "button133";
+            this.button133.Size = new System.Drawing.Size(127, 43);
+            this.button133.TabIndex = 36;
+            this.button133.Text = "Random";
+            this.button133.UseVisualStyleBackColor = true;
+            this.button133.Click += new System.EventHandler(this.button133_Click);
+            // 
             // button116
             // 
             this.button116.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8797,6 +8985,18 @@ namespace Monitor
             this.tabPage_Page12.TabIndex = 13;
             this.tabPage_Page12.Text = "Block 12";
             this.tabPage_Page12.UseVisualStyleBackColor = true;
+            // 
+            // button134
+            // 
+            this.button134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button134.Location = new System.Drawing.Point(746, 58);
+            this.button134.Margin = new System.Windows.Forms.Padding(2);
+            this.button134.Name = "button134";
+            this.button134.Size = new System.Drawing.Size(127, 43);
+            this.button134.TabIndex = 36;
+            this.button134.Text = "Random";
+            this.button134.UseVisualStyleBackColor = true;
+            this.button134.Click += new System.EventHandler(this.button134_Click);
             // 
             // button123
             // 
@@ -10758,212 +10958,8 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // button59
-            // 
-            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button59.Location = new System.Drawing.Point(748, 177);
-            this.button59.Margin = new System.Windows.Forms.Padding(2);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(127, 61);
-            this.button59.TabIndex = 38;
-            this.button59.Text = "Copy to Optional <-----";
-            this.button59.UseVisualStyleBackColor = true;
-            this.button59.Click += new System.EventHandler(this.button59_Click_3);
-            // 
-            // button71
-            // 
-            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button71.Location = new System.Drawing.Point(748, 241);
-            this.button71.Margin = new System.Windows.Forms.Padding(2);
-            this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(127, 70);
-            this.button71.TabIndex = 37;
-            this.button71.Text = "Compare Value and optional";
-            this.button71.UseVisualStyleBackColor = true;
-            // 
-            // button96
-            // 
-            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button96.Location = new System.Drawing.Point(748, 112);
-            this.button96.Margin = new System.Windows.Forms.Padding(2);
-            this.button96.Name = "button96";
-            this.button96.Size = new System.Drawing.Size(127, 61);
-            this.button96.TabIndex = 36;
-            this.button96.Text = "Copy to Optional ---->";
-            this.button96.UseVisualStyleBackColor = true;
-            this.button96.Click += new System.EventHandler(this.button96_Click_4);
-            // 
-            // button98
-            // 
-            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button98.Location = new System.Drawing.Point(748, 61);
-            this.button98.Margin = new System.Windows.Forms.Padding(2);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(127, 43);
-            this.button98.TabIndex = 35;
-            this.button98.Text = "Random";
-            this.button98.UseVisualStyleBackColor = true;
-            this.button98.Click += new System.EventHandler(this.button98_Click);
-            // 
-            // button124
-            // 
-            this.button124.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button124.Location = new System.Drawing.Point(746, 62);
-            this.button124.Margin = new System.Windows.Forms.Padding(2);
-            this.button124.Name = "button124";
-            this.button124.Size = new System.Drawing.Size(127, 43);
-            this.button124.TabIndex = 36;
-            this.button124.Text = "Random";
-            this.button124.UseVisualStyleBackColor = true;
-            this.button124.Click += new System.EventHandler(this.button124_Click);
-            // 
-            // button125
-            // 
-            this.button125.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button125.Location = new System.Drawing.Point(746, 57);
-            this.button125.Margin = new System.Windows.Forms.Padding(2);
-            this.button125.Name = "button125";
-            this.button125.Size = new System.Drawing.Size(127, 43);
-            this.button125.TabIndex = 36;
-            this.button125.Text = "Random";
-            this.button125.UseVisualStyleBackColor = true;
-            this.button125.Click += new System.EventHandler(this.button125_Click);
-            // 
-            // button126
-            // 
-            this.button126.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button126.Location = new System.Drawing.Point(746, 57);
-            this.button126.Margin = new System.Windows.Forms.Padding(2);
-            this.button126.Name = "button126";
-            this.button126.Size = new System.Drawing.Size(127, 43);
-            this.button126.TabIndex = 36;
-            this.button126.Text = "Random";
-            this.button126.UseVisualStyleBackColor = true;
-            this.button126.Click += new System.EventHandler(this.button126_Click);
-            // 
-            // button127
-            // 
-            this.button127.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button127.Location = new System.Drawing.Point(746, 52);
-            this.button127.Margin = new System.Windows.Forms.Padding(2);
-            this.button127.Name = "button127";
-            this.button127.Size = new System.Drawing.Size(127, 43);
-            this.button127.TabIndex = 36;
-            this.button127.Text = "Random";
-            this.button127.UseVisualStyleBackColor = true;
-            this.button127.Click += new System.EventHandler(this.button127_Click);
-            // 
-            // button128
-            // 
-            this.button128.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button128.Location = new System.Drawing.Point(746, 56);
-            this.button128.Margin = new System.Windows.Forms.Padding(2);
-            this.button128.Name = "button128";
-            this.button128.Size = new System.Drawing.Size(127, 43);
-            this.button128.TabIndex = 36;
-            this.button128.Text = "Random";
-            this.button128.UseVisualStyleBackColor = true;
-            this.button128.Click += new System.EventHandler(this.button128_Click);
-            // 
-            // button129
-            // 
-            this.button129.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button129.Location = new System.Drawing.Point(746, 56);
-            this.button129.Margin = new System.Windows.Forms.Padding(2);
-            this.button129.Name = "button129";
-            this.button129.Size = new System.Drawing.Size(127, 43);
-            this.button129.TabIndex = 36;
-            this.button129.Text = "Random";
-            this.button129.UseVisualStyleBackColor = true;
-            this.button129.Click += new System.EventHandler(this.button129_Click);
-            // 
-            // button130
-            // 
-            this.button130.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button130.Location = new System.Drawing.Point(746, 56);
-            this.button130.Margin = new System.Windows.Forms.Padding(2);
-            this.button130.Name = "button130";
-            this.button130.Size = new System.Drawing.Size(127, 43);
-            this.button130.TabIndex = 36;
-            this.button130.Text = "Random";
-            this.button130.UseVisualStyleBackColor = true;
-            this.button130.Click += new System.EventHandler(this.button130_Click);
-            // 
-            // button131
-            // 
-            this.button131.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button131.Location = new System.Drawing.Point(746, 62);
-            this.button131.Margin = new System.Windows.Forms.Padding(2);
-            this.button131.Name = "button131";
-            this.button131.Size = new System.Drawing.Size(127, 43);
-            this.button131.TabIndex = 36;
-            this.button131.Text = "Random";
-            this.button131.UseVisualStyleBackColor = true;
-            this.button131.Click += new System.EventHandler(this.button131_Click);
-            // 
-            // button132
-            // 
-            this.button132.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button132.Location = new System.Drawing.Point(746, 52);
-            this.button132.Margin = new System.Windows.Forms.Padding(2);
-            this.button132.Name = "button132";
-            this.button132.Size = new System.Drawing.Size(127, 43);
-            this.button132.TabIndex = 36;
-            this.button132.Text = "Random";
-            this.button132.UseVisualStyleBackColor = true;
-            this.button132.Click += new System.EventHandler(this.button132_Click);
-            // 
-            // button133
-            // 
-            this.button133.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button133.Location = new System.Drawing.Point(746, 49);
-            this.button133.Margin = new System.Windows.Forms.Padding(2);
-            this.button133.Name = "button133";
-            this.button133.Size = new System.Drawing.Size(127, 43);
-            this.button133.TabIndex = 36;
-            this.button133.Text = "Random";
-            this.button133.UseVisualStyleBackColor = true;
-            this.button133.Click += new System.EventHandler(this.button133_Click);
-            // 
-            // button134
-            // 
-            this.button134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button134.Location = new System.Drawing.Point(746, 58);
-            this.button134.Margin = new System.Windows.Forms.Padding(2);
-            this.button134.Name = "button134";
-            this.button134.Size = new System.Drawing.Size(127, 43);
-            this.button134.TabIndex = 36;
-            this.button134.Text = "Random";
-            this.button134.UseVisualStyleBackColor = true;
-            this.button134.Click += new System.EventHandler(this.button134_Click);
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.Frozen = true;
-            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn29.Width = 125;
-            // 
-            // Decimal
-            // 
-            this.Decimal.Frozen = true;
-            this.Decimal.HeaderText = "Decimal";
-            this.Decimal.Name = "Decimal";
-            this.Decimal.ReadOnly = true;
-            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Verify_ReadOnly
-            // 
-            this.Verify_ReadOnly.Frozen = true;
-            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
-            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
-            this.Verify_ReadOnly.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Flash Value";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -10972,22 +10968,18 @@ namespace Monitor
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.Frozen = true;
             this.dataGridViewTextBoxColumn3.HeaderText = "Verify (Read only)";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.Frozen = true;
             this.dataGridViewTextBoxColumn4.HeaderText = "Flash Value";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -10996,22 +10988,18 @@ namespace Monitor
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.Frozen = true;
             this.dataGridViewTextBoxColumn5.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
             this.dataGridViewTextBoxColumn6.HeaderText = "Verify (Read only)";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.Frozen = true;
             this.dataGridViewTextBoxColumn7.HeaderText = "Flash Value";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -11020,22 +11008,18 @@ namespace Monitor
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.Frozen = true;
             this.dataGridViewTextBoxColumn8.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.Frozen = true;
             this.dataGridViewTextBoxColumn9.HeaderText = "Verify (Read only)";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.Frozen = true;
             this.dataGridViewTextBoxColumn10.HeaderText = "Flash Value";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -11044,15 +11028,12 @@ namespace Monitor
             // 
             // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn11.Frozen = true;
             this.dataGridViewTextBoxColumn11.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.Frozen = true;
             this.dataGridViewTextBoxColumn12.HeaderText = "Verify (Read only)";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
@@ -11071,7 +11052,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn14.Frozen = true;
             this.dataGridViewTextBoxColumn14.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn15
@@ -11095,7 +11075,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn17.Frozen = true;
             this.dataGridViewTextBoxColumn17.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn18
@@ -11119,7 +11098,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn20.Frozen = true;
             this.dataGridViewTextBoxColumn20.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn21
@@ -11143,7 +11121,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn23.Frozen = true;
             this.dataGridViewTextBoxColumn23.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
             this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn24
@@ -11167,7 +11144,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn26.Frozen = true;
             this.dataGridViewTextBoxColumn26.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
             this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn27
@@ -11191,7 +11167,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn30.Frozen = true;
             this.dataGridViewTextBoxColumn30.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
             this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn31
@@ -11215,7 +11190,6 @@ namespace Monitor
             this.dataGridViewTextBoxColumn33.Frozen = true;
             this.dataGridViewTextBoxColumn33.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
             this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn34
@@ -11236,14 +11210,12 @@ namespace Monitor
             // 
             // dataGridViewTextBoxColumn36
             // 
-            this.dataGridViewTextBoxColumn36.Frozen = true;
             this.dataGridViewTextBoxColumn36.HeaderText = "Decimal";
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dataGridViewTextBoxColumn37
             // 
-            this.dataGridViewTextBoxColumn37.Frozen = true;
             this.dataGridViewTextBoxColumn37.HeaderText = "Verify (Read only)";
             this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             this.dataGridViewTextBoxColumn37.ReadOnly = true;
@@ -11254,7 +11226,7 @@ namespace Monitor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1475, 643);
+            this.ClientSize = new System.Drawing.Size(1492, 660);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -26099,6 +26071,8 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             try
             {
                 DataGridView m_DataGrid = (DataGridView)sender;
+                int CoulumnIndex = e.ColumnIndex;
+                int RowIndex = e.RowIndex;
                 for (int i = 0; i < m_DataGrid.Rows.Count; i++)
                 {
                     if (m_DataGrid.Rows[i].Cells[0].Value == null)
