@@ -26041,7 +26041,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         async Task WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
         {
             int i = 0;
-           // tabControl_SSPA_WB_GUI.Enabled = false;
+            tabControl_SSPA_WB_GUI.Enabled = false;
             
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
@@ -26078,7 +26078,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 Write_Flash(BlockAddress, "00 00", DataToWrite);
             }
 
-           // tabControl_SSPA_WB_GUI.Enabled = true;
+            tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
         private async void button_WritePage0_Click(object sender, EventArgs e)
