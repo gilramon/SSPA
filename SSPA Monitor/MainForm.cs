@@ -851,6 +851,7 @@ namespace Monitor
         private Button button135;
         private Button button136;
         private Label label75;
+        private ProgressBar progressBar_UserStatus;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1708,6 +1709,7 @@ namespace Monitor
             this.button135 = new System.Windows.Forms.Button();
             this.button136 = new System.Windows.Forms.Button();
             this.label75 = new System.Windows.Forms.Label();
+            this.progressBar_UserStatus = new System.Windows.Forms.ProgressBar();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -10622,6 +10624,7 @@ namespace Monitor
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.progressBar_UserStatus);
             this.groupBox4.Controls.Add(this.button97);
             this.groupBox4.Controls.Add(this.textBox_SystemStatus);
             this.groupBox4.Location = new System.Drawing.Point(1427, 482);
@@ -10635,7 +10638,7 @@ namespace Monitor
             // 
             // button97
             // 
-            this.button97.Location = new System.Drawing.Point(5, 182);
+            this.button97.Location = new System.Drawing.Point(109, 158);
             this.button97.Margin = new System.Windows.Forms.Padding(2);
             this.button97.Name = "button97";
             this.button97.Size = new System.Drawing.Size(53, 22);
@@ -10651,7 +10654,7 @@ namespace Monitor
             this.textBox_SystemStatus.Multiline = true;
             this.textBox_SystemStatus.Name = "textBox_SystemStatus";
             this.textBox_SystemStatus.ReadOnly = true;
-            this.textBox_SystemStatus.Size = new System.Drawing.Size(166, 163);
+            this.textBox_SystemStatus.Size = new System.Drawing.Size(166, 135);
             this.textBox_SystemStatus.TabIndex = 113;
             this.textBox_SystemStatus.TabStop = false;
             // 
@@ -11225,6 +11228,14 @@ namespace Monitor
             this.label75.Size = new System.Drawing.Size(31, 18);
             this.label75.TabIndex = 97;
             this.label75.Text = "Ans";
+            // 
+            // progressBar_UserStatus
+            // 
+            this.progressBar_UserStatus.Location = new System.Drawing.Point(4, 185);
+            this.progressBar_UserStatus.Name = "progressBar_UserStatus";
+            this.progressBar_UserStatus.Size = new System.Drawing.Size(158, 23);
+            this.progressBar_UserStatus.Step = 1;
+            this.progressBar_UserStatus.TabIndex = 115;
             // 
             // MainForm
             // 
@@ -14479,8 +14490,8 @@ namespace Monitor
             int MaxIndex = (StartIndex + i_NumOfBytes * 2);
             if (Data_Without_Spaces.Length < MaxIndex)
             {
-
-                return string.Format("Out of range Current Length [{0}] - Wanted byte:[{1}]", Data_Without_Spaces.Length/2, MaxIndex/2);
+                return "////";
+                // return string.Format("Out of range Current Length [{0}] - Wanted byte:[{1}]", Data_Without_Spaces.Length/2, MaxIndex/2);
             }
             else
             {
@@ -15129,6 +15140,11 @@ namespace Monitor
 
                     case "00A7":
 
+                        if (i_Parsedframe.Data.Length < 30)
+                        {
+                            return;
+                        }
+
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT18.Text = String.Format("{0}", DecimalNumber);
 
@@ -15153,8 +15169,13 @@ namespace Monitor
 
                     case "00AD":
 
+                        if (i_Parsedframe.Data.Length < 42)
+                        {
+                            return;
+                        }
 
-                       // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+
+                        // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
 
@@ -26412,9 +26433,15 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
+        void UpdateProgressBar(int i_value)
+        {
+
+        }
         private async void button_Writeallblockstoflash_Click(object sender, EventArgs e)
         {
             tabControl_SSPA_WB_GUI.Enabled = false;
+
+            progressBar_UserStatus.Value = 0;
 
 
             bool DoErase = false;
@@ -26430,33 +26457,46 @@ This Process can take 1 minute.";
 
                 Erase_Flash();
                 await Task.Delay(4000);
-
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block00, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block01, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block02, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block03, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block04, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block05, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block06, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block07, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block08, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block09, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block10, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block11, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block12, DoErase);
                 await Task.Delay(Delay);
+                progressBar_UserStatus.Value = 100;
 
 
 
