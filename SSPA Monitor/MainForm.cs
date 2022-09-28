@@ -15758,6 +15758,8 @@ namespace Monitor
 
         //bool timer_General_TranssmitionPeriodicallyEnable = false;
         //uint NumbeOfTransmmitions = 0;
+        private int progressBar_UserStatusTimer = -1;
+        
         private int TimerClearModemStatus = 0;
         //uint IntervalTimeBetweenTransmitions = 1;
         private void Timer_General_Tick(object sender, EventArgs e)
@@ -15770,10 +15772,35 @@ namespace Monitor
             {
                 textBox_SystemStatus.Text = "";
                 textBox_SystemStatus.BackColor = default;
+
+                if (progressBar_UserStatus.Value == 100)
+                {
+                    progressBar_UserStatus.Value = 0;
+                    progressBar_UserStatus.ForeColor = default;
+                    progressBar_UserStatus.BackColor = default;
+                    progressBar_UserStatus.ForeColor = default;
+                }
+
             }
 
-            // CheckIfSerialPortOpen();
+            //if(progressBar_UserStatus.Value == 100)
+            //{
+            //    progressBar_UserStatus.ForeColor = Color.Green;
+            //    progressBar_UserStatusTimer = 2;
+            //}
 
+            //if (progressBar_UserStatusTimer > 0)
+            //{
+            //    progressBar_UserStatusTimer--;
+            //}
+            //else
+            //{
+            //    progressBar_UserStatus.Value = 0;
+            //    progressBar_UserStatus.ForeColor = default;
+            //    progressBar_UserStatusTimer--;
+
+            //    // CheckIfSerialPortOpen();
+            //}
 
             TCPClientConnection();
 
@@ -26505,8 +26532,10 @@ This Process can take 1 minute.";
                 progressBar_UserStatus.Value += 7;
                 await WriteDataGridToFlash(dataGridView_Block12, DoErase);
                 await Task.Delay(Delay);
+
                 progressBar_UserStatus.Value = 100;
                 progressBar_UserStatus.BackColor = Color.Green;
+                progressBar_UserStatus.ForeColor = Color.Green;
 
 
 
@@ -26520,6 +26549,7 @@ This Process can take 1 minute.";
 
             tabControl_SSPA_WB_GUI.Enabled = true;
         }
+
 
         private void checkBox_PulseGen_CheckedChanged(object sender, EventArgs e)
         {
