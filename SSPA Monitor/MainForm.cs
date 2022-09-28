@@ -765,7 +765,6 @@ namespace Monitor
         private Button button_ClearPage0DataGrid;
         private Button button42;
         private Button button_Strobe;
-        private Button button_TimerClock;
         private Button button44;
         private Button button100;
         private Button button101;
@@ -852,6 +851,7 @@ namespace Monitor
         private Button button136;
         private Label label75;
         private ProgressBar progressBar_UserStatus;
+        private CheckBox checkBox_TriggerClock;
         private static readonly string PREAMBLE = "23";
 
 
@@ -906,8 +906,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1131,6 +1131,7 @@ namespace Monitor
             this.button60 = new System.Windows.Forms.Button();
             this.button_GetSystemID = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label75 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
             this.textBox_ReadSimulatorData = new System.Windows.Forms.TextBox();
             this.label145 = new System.Windows.Forms.Label();
@@ -1175,6 +1176,9 @@ namespace Monitor
             this.button_ClearMiniAda = new System.Windows.Forms.Button();
             this.tabPage3038WBPAA = new System.Windows.Forms.TabPage();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.button135 = new System.Windows.Forms.Button();
+            this.button136 = new System.Windows.Forms.Button();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
             this.button_ReadCSVFile = new System.Windows.Forms.Button();
             this.button_WriteToCSV = new System.Windows.Forms.Button();
@@ -1189,7 +1193,6 @@ namespace Monitor
             this.label123 = new System.Windows.Forms.Label();
             this.textBox_SystemMode = new System.Windows.Forms.TextBox();
             this.groupBox_SimulatorControl = new System.Windows.Forms.GroupBox();
-            this.button_TimerClock = new System.Windows.Forms.Button();
             this.button_Strobe = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBox_CALSAR = new System.Windows.Forms.ComboBox();
@@ -1650,6 +1653,7 @@ namespace Monitor
             this.groupBox_SerialPort = new System.Windows.Forms.GroupBox();
             this.label_SerialPortStatus = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.progressBar_UserStatus = new System.Windows.Forms.ProgressBar();
             this.button97 = new System.Windows.Forms.Button();
             this.textBox_SystemStatus = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -1705,11 +1709,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.button135 = new System.Windows.Forms.Button();
-            this.button136 = new System.Windows.Forms.Button();
-            this.label75 = new System.Windows.Forms.Label();
-            this.progressBar_UserStatus = new System.Windows.Forms.ProgressBar();
+            this.checkBox_TriggerClock = new System.Windows.Forms.CheckBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1739,6 +1739,7 @@ namespace Monitor
             this.groupBox32.SuspendLayout();
             this.tabPage3038WBPAA.SuspendLayout();
             this.groupBox43.SuspendLayout();
+            this.groupBox37.SuspendLayout();
             this.groupBox48.SuspendLayout();
             this.groupBox38.SuspendLayout();
             this.tabControl_SSPA_WB_GUI.SuspendLayout();
@@ -1826,7 +1827,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.groupBox37.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2161,17 +2161,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea18.AxisX.Title = "Freq";
+            chartArea18.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea18.AxisY.Title = "Power [dBm]";
+            chartArea18.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea18.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea18);
+            legend18.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend18.IsTextAutoFit = false;
+            legend18.Name = "Legend1";
+            legend18.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend18);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4620,6 +4620,15 @@ namespace Monitor
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(593, 40);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(31, 18);
+            this.label75.TabIndex = 97;
+            this.label75.Text = "Ans";
+            // 
             // label102
             // 
             this.label102.AutoSize = true;
@@ -5103,6 +5112,44 @@ namespace Monitor
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "3038 - WB PAA";
             // 
+            // groupBox37
+            // 
+            this.groupBox37.Controls.Add(this.button135);
+            this.groupBox37.Controls.Add(this.button136);
+            this.groupBox37.Location = new System.Drawing.Point(1254, 358);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Size = new System.Drawing.Size(141, 130);
+            this.groupBox37.TabIndex = 24;
+            this.groupBox37.TabStop = false;
+            this.groupBox37.Text = "Operations";
+            // 
+            // button135
+            // 
+            this.button135.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button135.Location = new System.Drawing.Point(6, 22);
+            this.button135.Margin = new System.Windows.Forms.Padding(2);
+            this.button135.Name = "button135";
+            this.button135.Size = new System.Drawing.Size(127, 43);
+            this.button135.TabIndex = 18;
+            this.button135.Text = "Clear All";
+            this.button135.UseVisualStyleBackColor = true;
+            this.button135.Click += new System.EventHandler(this.button135_Click);
+            // 
+            // button136
+            // 
+            this.button136.BackColor = System.Drawing.Color.Transparent;
+            this.button136.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button136.Location = new System.Drawing.Point(6, 77);
+            this.button136.Margin = new System.Windows.Forms.Padding(2);
+            this.button136.Name = "button136";
+            this.button136.Size = new System.Drawing.Size(127, 43);
+            this.button136.TabIndex = 21;
+            this.button136.Text = "Test all";
+            this.button136.UseVisualStyleBackColor = false;
+            this.button136.Click += new System.EventHandler(this.button136_Click);
+            // 
             // groupBox48
             // 
             this.groupBox48.Controls.Add(this.button_ReadCSVFile);
@@ -5279,7 +5326,7 @@ namespace Monitor
             // 
             // groupBox_SimulatorControl
             // 
-            this.groupBox_SimulatorControl.Controls.Add(this.button_TimerClock);
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_TriggerClock);
             this.groupBox_SimulatorControl.Controls.Add(this.button_Strobe);
             this.groupBox_SimulatorControl.Controls.Add(this.label19);
             this.groupBox_SimulatorControl.Controls.Add(this.comboBox_CALSAR);
@@ -5312,16 +5359,6 @@ namespace Monitor
             this.groupBox_SimulatorControl.TabStop = false;
             this.groupBox_SimulatorControl.Text = "Simulator Control";
             // 
-            // button_TimerClock
-            // 
-            this.button_TimerClock.Location = new System.Drawing.Point(165, 110);
-            this.button_TimerClock.Name = "button_TimerClock";
-            this.button_TimerClock.Size = new System.Drawing.Size(39, 23);
-            this.button_TimerClock.TabIndex = 43;
-            this.button_TimerClock.Text = "On";
-            this.button_TimerClock.UseVisualStyleBackColor = true;
-            this.button_TimerClock.Click += new System.EventHandler(this.button_TimerClock_Click);
-            // 
             // button_Strobe
             // 
             this.button_Strobe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -5339,9 +5376,9 @@ namespace Monitor
             this.label19.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(158, 92);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 13);
+            this.label19.Size = new System.Drawing.Size(66, 13);
             this.label19.TabIndex = 40;
-            this.label19.Text = "timer clock ";
+            this.label19.Text = "trigger clock ";
             // 
             // comboBox_CALSAR
             // 
@@ -6669,7 +6706,6 @@ namespace Monitor
             // 
             this.checkBox_PulseGen2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_PulseGen2.AutoSize = true;
-            this.checkBox_PulseGen2.Enabled = false;
             this.checkBox_PulseGen2.Location = new System.Drawing.Point(232, 52);
             this.checkBox_PulseGen2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_PulseGen2.Name = "checkBox_PulseGen2";
@@ -6690,6 +6726,7 @@ namespace Monitor
             this.label85.Size = new System.Drawing.Size(74, 15);
             this.label85.TabIndex = 22;
             this.label85.Text = "Period (1us)";
+            this.label85.Visible = false;
             // 
             // label101
             // 
@@ -6716,19 +6753,18 @@ namespace Monitor
             // 
             // textBox_PulsePeriod2
             // 
-            this.textBox_PulsePeriod2.Enabled = false;
             this.textBox_PulsePeriod2.Location = new System.Drawing.Point(87, 55);
             this.textBox_PulsePeriod2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_PulsePeriod2.Name = "textBox_PulsePeriod2";
             this.textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod2.TabIndex = 13;
             this.textBox_PulsePeriod2.Text = "16";
+            this.textBox_PulsePeriod2.Visible = false;
             this.textBox_PulsePeriod2.TextChanged += new System.EventHandler(this.textBox_PulsePeriod2_TextChanged);
             this.textBox_PulsePeriod2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulsePeriod2_KeyDown);
             // 
             // textBox_PulseWidth2
             // 
-            this.textBox_PulseWidth2.Enabled = false;
             this.textBox_PulseWidth2.Location = new System.Drawing.Point(18, 55);
             this.textBox_PulseWidth2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_PulseWidth2.Name = "textBox_PulseWidth2";
@@ -7648,7 +7684,6 @@ namespace Monitor
             // 
             this.checkBox_RFGen.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_RFGen.AutoSize = true;
-            this.checkBox_RFGen.Enabled = false;
             this.checkBox_RFGen.Location = new System.Drawing.Point(232, 54);
             this.checkBox_RFGen.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RFGen.Name = "checkBox_RFGen";
@@ -7682,13 +7717,13 @@ namespace Monitor
             // 
             // textBox_RFPeriod
             // 
-            this.textBox_RFPeriod.Enabled = false;
             this.textBox_RFPeriod.Location = new System.Drawing.Point(87, 55);
             this.textBox_RFPeriod.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RFPeriod.Name = "textBox_RFPeriod";
             this.textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFPeriod.TabIndex = 13;
             this.textBox_RFPeriod.Text = "16";
+            this.textBox_RFPeriod.Visible = false;
             this.textBox_RFPeriod.TextChanged += new System.EventHandler(this.textBox_RFPeriod_TextChanged);
             this.textBox_RFPeriod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_RFPeriod_KeyDown);
             // 
@@ -7703,10 +7738,10 @@ namespace Monitor
             this.label99.Size = new System.Drawing.Size(74, 15);
             this.label99.TabIndex = 12;
             this.label99.Text = "Period (1us)";
+            this.label99.Visible = false;
             // 
             // textBox_RFWidth
             // 
-            this.textBox_RFWidth.Enabled = false;
             this.textBox_RFWidth.Location = new System.Drawing.Point(18, 55);
             this.textBox_RFWidth.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_RFWidth.Name = "textBox_RFWidth";
@@ -7790,7 +7825,7 @@ namespace Monitor
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(127, 43);
             this.button42.TabIndex = 29;
-            this.button42.Text = "Random";
+            this.button42.Text = "Test ";
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.button42_Click_4);
             // 
@@ -7952,7 +7987,7 @@ namespace Monitor
             this.button98.Name = "button98";
             this.button98.Size = new System.Drawing.Size(127, 43);
             this.button98.TabIndex = 35;
-            this.button98.Text = "Random";
+            this.button98.Text = "Test";
             this.button98.UseVisualStyleBackColor = true;
             this.button98.Click += new System.EventHandler(this.button98_Click);
             // 
@@ -8063,7 +8098,7 @@ namespace Monitor
             this.button124.Name = "button124";
             this.button124.Size = new System.Drawing.Size(127, 43);
             this.button124.TabIndex = 36;
-            this.button124.Text = "Random";
+            this.button124.Text = "Test";
             this.button124.UseVisualStyleBackColor = true;
             this.button124.Click += new System.EventHandler(this.button124_Click);
             // 
@@ -8175,7 +8210,7 @@ namespace Monitor
             this.button125.Name = "button125";
             this.button125.Size = new System.Drawing.Size(127, 43);
             this.button125.TabIndex = 36;
-            this.button125.Text = "Random";
+            this.button125.Text = "Test";
             this.button125.UseVisualStyleBackColor = true;
             this.button125.Click += new System.EventHandler(this.button125_Click);
             // 
@@ -8287,7 +8322,7 @@ namespace Monitor
             this.button126.Name = "button126";
             this.button126.Size = new System.Drawing.Size(127, 43);
             this.button126.TabIndex = 36;
-            this.button126.Text = "Random";
+            this.button126.Text = "Test";
             this.button126.UseVisualStyleBackColor = true;
             this.button126.Click += new System.EventHandler(this.button126_Click);
             // 
@@ -8398,7 +8433,7 @@ namespace Monitor
             this.button127.Name = "button127";
             this.button127.Size = new System.Drawing.Size(127, 43);
             this.button127.TabIndex = 36;
-            this.button127.Text = "Random";
+            this.button127.Text = "Test";
             this.button127.UseVisualStyleBackColor = true;
             this.button127.Click += new System.EventHandler(this.button127_Click);
             // 
@@ -8512,7 +8547,7 @@ namespace Monitor
             this.button128.Name = "button128";
             this.button128.Size = new System.Drawing.Size(127, 43);
             this.button128.TabIndex = 36;
-            this.button128.Text = "Random";
+            this.button128.Text = "Test";
             this.button128.UseVisualStyleBackColor = true;
             this.button128.Click += new System.EventHandler(this.button128_Click);
             // 
@@ -8626,7 +8661,7 @@ namespace Monitor
             this.button129.Name = "button129";
             this.button129.Size = new System.Drawing.Size(127, 43);
             this.button129.TabIndex = 36;
-            this.button129.Text = "Random";
+            this.button129.Text = "Test";
             this.button129.UseVisualStyleBackColor = true;
             this.button129.Click += new System.EventHandler(this.button129_Click);
             // 
@@ -8740,7 +8775,7 @@ namespace Monitor
             this.button130.Name = "button130";
             this.button130.Size = new System.Drawing.Size(127, 43);
             this.button130.TabIndex = 36;
-            this.button130.Text = "Random";
+            this.button130.Text = "Test";
             this.button130.UseVisualStyleBackColor = true;
             this.button130.Click += new System.EventHandler(this.button130_Click);
             // 
@@ -8854,7 +8889,7 @@ namespace Monitor
             this.button131.Name = "button131";
             this.button131.Size = new System.Drawing.Size(127, 43);
             this.button131.TabIndex = 36;
-            this.button131.Text = "Random";
+            this.button131.Text = "Test";
             this.button131.UseVisualStyleBackColor = true;
             this.button131.Click += new System.EventHandler(this.button131_Click);
             // 
@@ -8968,7 +9003,7 @@ namespace Monitor
             this.button132.Name = "button132";
             this.button132.Size = new System.Drawing.Size(127, 43);
             this.button132.TabIndex = 36;
-            this.button132.Text = "Random";
+            this.button132.Text = "Test";
             this.button132.UseVisualStyleBackColor = true;
             this.button132.Click += new System.EventHandler(this.button132_Click);
             // 
@@ -9082,7 +9117,7 @@ namespace Monitor
             this.button133.Name = "button133";
             this.button133.Size = new System.Drawing.Size(127, 43);
             this.button133.TabIndex = 36;
-            this.button133.Text = "Random";
+            this.button133.Text = "Test";
             this.button133.UseVisualStyleBackColor = true;
             this.button133.Click += new System.EventHandler(this.button133_Click);
             // 
@@ -9196,7 +9231,7 @@ namespace Monitor
             this.button134.Name = "button134";
             this.button134.Size = new System.Drawing.Size(127, 43);
             this.button134.TabIndex = 36;
-            this.button134.Text = "Random";
+            this.button134.Text = "Test";
             this.button134.UseVisualStyleBackColor = true;
             this.button134.Click += new System.EventHandler(this.button134_Click);
             // 
@@ -10636,6 +10671,14 @@ namespace Monitor
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "User information";
             // 
+            // progressBar_UserStatus
+            // 
+            this.progressBar_UserStatus.Location = new System.Drawing.Point(4, 185);
+            this.progressBar_UserStatus.Name = "progressBar_UserStatus";
+            this.progressBar_UserStatus.Size = new System.Drawing.Size(158, 23);
+            this.progressBar_UserStatus.Step = 1;
+            this.progressBar_UserStatus.TabIndex = 115;
+            // 
             // button97
             // 
             this.button97.Location = new System.Drawing.Point(109, 158);
@@ -11182,60 +11225,18 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // groupBox37
+            // checkBox_TriggerClock
             // 
-            this.groupBox37.Controls.Add(this.button135);
-            this.groupBox37.Controls.Add(this.button136);
-            this.groupBox37.Location = new System.Drawing.Point(1254, 358);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Size = new System.Drawing.Size(141, 130);
-            this.groupBox37.TabIndex = 24;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "Operations";
-            // 
-            // button135
-            // 
-            this.button135.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button135.Location = new System.Drawing.Point(6, 22);
-            this.button135.Margin = new System.Windows.Forms.Padding(2);
-            this.button135.Name = "button135";
-            this.button135.Size = new System.Drawing.Size(127, 43);
-            this.button135.TabIndex = 18;
-            this.button135.Text = "Clear All";
-            this.button135.UseVisualStyleBackColor = true;
-            this.button135.Click += new System.EventHandler(this.button135_Click);
-            // 
-            // button136
-            // 
-            this.button136.BackColor = System.Drawing.Color.Transparent;
-            this.button136.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button136.Location = new System.Drawing.Point(6, 77);
-            this.button136.Margin = new System.Windows.Forms.Padding(2);
-            this.button136.Name = "button136";
-            this.button136.Size = new System.Drawing.Size(127, 43);
-            this.button136.TabIndex = 21;
-            this.button136.Text = "Random all";
-            this.button136.UseVisualStyleBackColor = false;
-            this.button136.Click += new System.EventHandler(this.button136_Click);
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(593, 40);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(31, 18);
-            this.label75.TabIndex = 97;
-            this.label75.Text = "Ans";
-            // 
-            // progressBar_UserStatus
-            // 
-            this.progressBar_UserStatus.Location = new System.Drawing.Point(4, 185);
-            this.progressBar_UserStatus.Name = "progressBar_UserStatus";
-            this.progressBar_UserStatus.Size = new System.Drawing.Size(158, 23);
-            this.progressBar_UserStatus.Step = 1;
-            this.progressBar_UserStatus.TabIndex = 115;
+            this.checkBox_TriggerClock.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_TriggerClock.AutoSize = true;
+            this.checkBox_TriggerClock.Location = new System.Drawing.Point(174, 111);
+            this.checkBox_TriggerClock.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_TriggerClock.Name = "checkBox_TriggerClock";
+            this.checkBox_TriggerClock.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_TriggerClock.TabIndex = 43;
+            this.checkBox_TriggerClock.Text = "On";
+            this.checkBox_TriggerClock.UseVisualStyleBackColor = true;
+            this.checkBox_TriggerClock.CheckedChanged += new System.EventHandler(this.checkBox_TriggerClock_CheckedChanged);
             // 
             // MainForm
             // 
@@ -11311,6 +11312,7 @@ namespace Monitor
             this.groupBox32.PerformLayout();
             this.tabPage3038WBPAA.ResumeLayout(false);
             this.groupBox43.ResumeLayout(false);
+            this.groupBox37.ResumeLayout(false);
             this.groupBox48.ResumeLayout(false);
             this.groupBox38.ResumeLayout(false);
             this.tabControl_SSPA_WB_GUI.ResumeLayout(false);
@@ -11432,7 +11434,6 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.groupBox37.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -14903,7 +14904,7 @@ namespace Monitor
 
                         break;
 
-                    case "1000":
+                    case "0001":
                          m_Datagrid = dataGridView_Block01;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14914,7 +14915,7 @@ namespace Monitor
 
                         break;
 
-                    case "2000":
+                    case "0002":
                         m_Datagrid = dataGridView_Block02;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14925,7 +14926,7 @@ namespace Monitor
 
                         break;
 
-                    case "3000":
+                    case "0003":
 
                         m_Datagrid = dataGridView_Block03;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -14937,7 +14938,7 @@ namespace Monitor
 
                         break;
 
-                    case "4000":
+                    case "0004":
 
                         m_Datagrid = dataGridView_Block04;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -14949,7 +14950,7 @@ namespace Monitor
 
                         break;
 
-                    case "5000":
+                    case "0005":
                         m_Datagrid = dataGridView_Block05;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14960,7 +14961,7 @@ namespace Monitor
 
                         break;
 
-                    case "6000":
+                    case "0006":
                         m_Datagrid = dataGridView_Block06;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14971,7 +14972,7 @@ namespace Monitor
 
                         break;
 
-                    case "7000":
+                    case "0007":
                         m_Datagrid = dataGridView_Block07;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14982,7 +14983,7 @@ namespace Monitor
 
                         break;
 
-                    case "8000":
+                    case "0008":
                         m_Datagrid = dataGridView_Block08;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
                         {
@@ -14993,7 +14994,7 @@ namespace Monitor
 
                         break;
 
-                    case "9000":
+                    case "0009":
 
                         m_Datagrid = dataGridView_Block09;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -15005,7 +15006,7 @@ namespace Monitor
 
                         break;
 
-                    case "A000":
+                    case "000A":
 
                         m_Datagrid = dataGridView_Block10;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -15017,7 +15018,7 @@ namespace Monitor
 
                         break;
 
-                    case "B000":
+                    case "000B":
 
                         m_Datagrid = dataGridView_Block11;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -15030,7 +15031,7 @@ namespace Monitor
                         break;
 
 
-                    case "C000":
+                    case "000C":
 
                         m_Datagrid = dataGridView_Block12;
                         for (int i = 0; i < m_Datagrid.Rows.Count; i++)
@@ -20722,6 +20723,8 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
         {
             textBox_SystemStatus.Text = string.Empty;
             textBox_SystemStatus.BackColor = default;
+            progressBar_UserStatus.Value = 0;
+            progressBar_UserStatus.BackColor = default;
         }
 
         private void comboBox_WindowsDSPLib_SelectedIndexChanged(object sender, EventArgs e)
@@ -23346,7 +23349,7 @@ Note: eStatus enum 
             }
 
 
-            //SetControlGenerators();
+            SetControlGenerators();
             
         }
 
@@ -23563,11 +23566,11 @@ Note: eStatus enum 
 
         void testPulseGenTextBoxs()
         {
-            textBox_PulsePeriod2.Text = textBox_PulsePeriod.Text;
-            textBox_RFPeriod.Text = textBox_PulsePeriod.Text;
+            //textBox_PulsePeriod2.Text = textBox_PulsePeriod.Text;
+            //textBox_RFPeriod.Text = textBox_PulsePeriod.Text;
 
-            textBox_PulseWidth2.Text = textBox_PulseWidth.Text;
-            textBox_RFWidth.Text = textBox_PulseWidth.Text;
+            //textBox_PulseWidth2.Text = textBox_PulseWidth.Text;
+            //textBox_RFWidth.Text = textBox_PulseWidth.Text;
 
             if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
             float.TryParse(textBox_PulseWidth.Text, out float Width) &&
@@ -23618,8 +23621,8 @@ Note: eStatus enum 
         private void textBox_PulsePeriod_TextChanged(object sender, EventArgs e)
         {
             testPulseGenTextBoxs();
-            testRFTextboxs();
-            testPulseGenTextBoxs2();
+            //testRFTextboxs();
+            //testPulseGenTextBoxs2();
         }
 
         private void textBox_PulseWidth2_TextChanged(object sender, EventArgs e)
@@ -25154,7 +25157,7 @@ Note: eStatus enum 
             }
         }
 
-        void WritePulseGenToSimulator()
+        async void WritePulseGenToSimulator()
         {
 
             if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
@@ -25171,10 +25174,12 @@ Note: eStatus enum 
                 //await Task.Delay(500);
 
                 Write_Register_To_Simulator("00 0A", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
+                await Task.Delay(300);
+                Write_Register_To_Simulator("00 16", ((int)(Period * 10)).ToString("X4"));
             }
         }
 
-        void WritePulseGenToSimulator2()
+         void WritePulseGenToSimulator2()
         {
 
             if (textBox_PulseWidth2.BackColor == Color.LightGreen && textBox_PulsePeriod2.BackColor == Color.LightGreen && textBox_PulseDelay2.BackColor == Color.LightGreen)
@@ -25191,7 +25196,6 @@ Note: eStatus enum 
                 //await Task.Delay(500);
 
                 Write_Register_To_Simulator("00 0D", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
-
 
                 //int.TryParse(textBox_PulsePeriod2.Text, out int Period);
                 //int.TryParse(textBox_PulseWidth2.Text, out int Width);
@@ -25278,7 +25282,7 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -25288,10 +25292,10 @@ Note: eStatus enum 
 
 
                     WritePulseGenToSimulator();
-                    await Task.Delay(400);
-                    WritePulseGenToSimulator2();
-                    await Task.Delay(400);
-                    WriteRFWidthToSimulator();
+                    //await Task.Delay(400);
+                    //WritePulseGenToSimulator2();
+                    ////await Task.Delay(400);
+                    ///WriteRFWidthToSimulator();
 
                 }
             }
@@ -25369,7 +25373,7 @@ Note: eStatus enum 
             }
 
 
-            //SetControlGenerators();
+            SetControlGenerators();
         }
 
         private void textBox_FlashErase_TextChanged(object sender, EventArgs e)
@@ -26020,7 +26024,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
-                String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X"));
+                String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
                 Read_Flash(BlockAddress);
             } 
@@ -26045,8 +26049,8 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
-                String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X")); 
-
+                // String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X")); 
+                String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
                 for (i = 0; i < i_DataGrid.Rows.Count; i++)
                 {
@@ -26196,16 +26200,21 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
 
+        void UpdateTestDataToGrid(DataGridView i_DataGrid)
+        {
+            if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
+            {
+               // String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
+
+                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+                {
+                    i_DataGrid.Rows[i].Cells[0].Value = String.Format("{0}{1}", GridNumber.ToString("X2"),i.ToString("X2"));
+                }
+            }
+        }
         private void button42_Click_4(object sender, EventArgs e)
         {
-
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block00.Rows.Count; i++)
-            {
-                dataGridView_Block00.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block00);
         }
 
 
@@ -26230,7 +26239,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button_TimerClock_Click(object sender, EventArgs e)
         {
-            Write_Register_To_Simulator(" 00 16", "0F FF");
+            
         }
 
         private void button44_Click_1(object sender, EventArgs e)
@@ -26497,6 +26506,9 @@ This Process can take 1 minute.";
                 await WriteDataGridToFlash(dataGridView_Block12, DoErase);
                 await Task.Delay(Delay);
                 progressBar_UserStatus.Value = 100;
+                progressBar_UserStatus.BackColor = Color.Green;
+
+
 
 
 
@@ -26515,8 +26527,8 @@ This Process can take 1 minute.";
             if (Checkbx.Checked == true)
             {
    
-                checkBox_RFGen.Checked = true;
-                checkBox_PulseGen2.Checked = true;
+                //checkBox_RFGen.Checked = true;
+                //checkBox_PulseGen2.Checked = true;
                 Checkbx.BackColor = Color.LightGreen;
 
 
@@ -26524,8 +26536,8 @@ This Process can take 1 minute.";
             else
             {
 
-                checkBox_RFGen.Checked = false;
-                checkBox_PulseGen2.Checked = false;
+                //checkBox_RFGen.Checked = false;
+                //checkBox_PulseGen2.Checked = false;
                 Checkbx.BackColor = default;
 
 
@@ -26725,13 +26737,7 @@ This Process can take 1 minute.";
 
         private  void button98_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
-            {
-                dataGridView_Block01.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block01);
         }
 
         private void dataGridView_ValPage0_CellValueChanged(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -26853,123 +26859,57 @@ This Process can take 1 minute.";
 
         private void button124_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block02.Rows.Count; i++)
-            {
-                dataGridView_Block02.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block02);
         }
 
         private void button125_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block03.Rows.Count; i++)
-            {
-                dataGridView_Block03.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block03);
         }
 
         private void button126_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block04.Rows.Count; i++)
-            {
-                dataGridView_Block04.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block04);
         }
 
         private void button127_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block05.Rows.Count; i++)
-            {
-                dataGridView_Block05.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block05);
         }
 
         private void button128_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block06.Rows.Count; i++)
-            {
-                dataGridView_Block06.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block06);
         }
 
         private void button129_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block07.Rows.Count; i++)
-            {
-                dataGridView_Block07.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block07);
         }
 
         private void button130_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block08.Rows.Count; i++)
-            {
-                dataGridView_Block08.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block08);
         }
 
         private void button131_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block09.Rows.Count; i++)
-            {
-                dataGridView_Block09.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block09);
         }
 
         private void button132_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block10.Rows.Count; i++)
-            {
-                dataGridView_Block10.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block10);
         }
 
         private void button133_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block11.Rows.Count; i++)
-            {
-                dataGridView_Block11.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block11);
         }
 
         private void button134_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-
-
-            for (int i = 0; i < dataGridView_Block12.Rows.Count; i++)
-            {
-                dataGridView_Block12.Rows[i].Cells[0].Value = rnd.Next(65000).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block12);
         }
 
         private async void button2_Click_3(object sender, EventArgs e)
@@ -27088,83 +27028,38 @@ This Process can take 1 minute.";
 
         private void button136_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            DataGridView m_Datagrid;
-
-            m_Datagrid = dataGridView_Block00;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block01;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block02;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block03;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block04;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block05;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block06;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block07;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block08;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-            m_Datagrid = dataGridView_Block09;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block10;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block11;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
-
-            m_Datagrid = dataGridView_Block12;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = rnd.Next(65535).ToString("X4");
-            }
+            UpdateTestDataToGrid(dataGridView_Block00);
+            UpdateTestDataToGrid(dataGridView_Block01);
+            UpdateTestDataToGrid(dataGridView_Block02);
+            UpdateTestDataToGrid(dataGridView_Block03);
+            UpdateTestDataToGrid(dataGridView_Block04);
+            UpdateTestDataToGrid(dataGridView_Block05);
+            UpdateTestDataToGrid(dataGridView_Block06);
+            UpdateTestDataToGrid(dataGridView_Block07);
+            UpdateTestDataToGrid(dataGridView_Block08);
+            UpdateTestDataToGrid(dataGridView_Block09);
+            UpdateTestDataToGrid(dataGridView_Block10);
+            UpdateTestDataToGrid(dataGridView_Block11);
+            UpdateTestDataToGrid(dataGridView_Block12);
 
 
+        }
 
+        private void checkBox_TriggerClock_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox Checkbx = (CheckBox)sender;
+            if (Checkbx.Checked == true)
+            {
+                Write_Register_To_Simulator(" 00 02", "00 10");
+
+                Checkbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+
+                Write_Register_To_Simulator(" 00 02", "00 00");
+                Checkbx.BackColor = default;
+            }   
         }
 
         private void button57_Click_1(object sender, EventArgs e)

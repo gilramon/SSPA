@@ -40,7 +40,7 @@
     <ProductName>ComCenterGilProductName</ProductName>
     <PublisherName>Gil Ramon</PublisherName>
     <SuiteName>ComCenterGilsuite</SuiteName>
-    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationRevision>43</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
