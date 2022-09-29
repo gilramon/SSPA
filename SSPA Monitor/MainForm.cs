@@ -765,9 +765,6 @@ namespace Monitor
         private Button button_ClearPage0DataGrid;
         private Button button42;
         private Button button_Strobe;
-        private Button button44;
-        private Button button100;
-        private Button button101;
         private Button button6;
         private DataGridView dataGridView_Block01;
         private Button button29;
@@ -846,7 +843,6 @@ namespace Monitor
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private GroupBox groupBox37;
         private Button button135;
         private Button button136;
         private Label label75;
@@ -906,8 +902,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1176,7 +1172,6 @@ namespace Monitor
             this.button_ClearMiniAda = new System.Windows.Forms.Button();
             this.tabPage3038WBPAA = new System.Windows.Forms.TabPage();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.button135 = new System.Windows.Forms.Button();
             this.button136 = new System.Windows.Forms.Button();
             this.groupBox48 = new System.Windows.Forms.GroupBox();
@@ -1388,9 +1383,6 @@ namespace Monitor
             this.textBox_RFWidth = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
             this.tabPage_Page0 = new System.Windows.Forms.TabPage();
-            this.button101 = new System.Windows.Forms.Button();
-            this.button100 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.button_ClearPage0DataGrid = new System.Windows.Forms.Button();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
@@ -1739,7 +1731,6 @@ namespace Monitor
             this.groupBox32.SuspendLayout();
             this.tabPage3038WBPAA.SuspendLayout();
             this.groupBox43.SuspendLayout();
-            this.groupBox37.SuspendLayout();
             this.groupBox48.SuspendLayout();
             this.groupBox38.SuspendLayout();
             this.tabControl_SSPA_WB_GUI.SuspendLayout();
@@ -2161,17 +2152,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea18.AxisX.Title = "Freq";
-            chartArea18.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea18.AxisY.Title = "Power [dBm]";
-            chartArea18.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea18.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea18);
-            legend18.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend18.IsTextAutoFit = false;
-            legend18.Name = "Legend1";
-            legend18.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend18);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -5099,7 +5090,6 @@ namespace Monitor
             // 
             // groupBox43
             // 
-            this.groupBox43.Controls.Add(this.groupBox37);
             this.groupBox43.Controls.Add(this.groupBox48);
             this.groupBox43.Controls.Add(this.groupBox38);
             this.groupBox43.Controls.Add(this.tabControl_SSPA_WB_GUI);
@@ -5112,23 +5102,10 @@ namespace Monitor
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "3038 - WB PAA";
             // 
-            // groupBox37
-            // 
-            this.groupBox37.Controls.Add(this.button135);
-            this.groupBox37.Controls.Add(this.button136);
-            this.groupBox37.Location = new System.Drawing.Point(1254, 358);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Size = new System.Drawing.Size(141, 130);
-            this.groupBox37.TabIndex = 24;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "Operations";
-            // 
             // button135
             // 
             this.button135.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button135.Location = new System.Drawing.Point(6, 22);
+            this.button135.Location = new System.Drawing.Point(6, 98);
             this.button135.Margin = new System.Windows.Forms.Padding(2);
             this.button135.Name = "button135";
             this.button135.Size = new System.Drawing.Size(127, 43);
@@ -5141,12 +5118,12 @@ namespace Monitor
             // 
             this.button136.BackColor = System.Drawing.Color.Transparent;
             this.button136.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button136.Location = new System.Drawing.Point(6, 77);
+            this.button136.Location = new System.Drawing.Point(6, 150);
             this.button136.Margin = new System.Windows.Forms.Padding(2);
             this.button136.Name = "button136";
             this.button136.Size = new System.Drawing.Size(127, 43);
             this.button136.TabIndex = 21;
-            this.button136.Text = "Test all";
+            this.button136.Text = "Set Test Data";
             this.button136.UseVisualStyleBackColor = false;
             this.button136.Click += new System.EventHandler(this.button136_Click);
             // 
@@ -5154,11 +5131,11 @@ namespace Monitor
             // 
             this.groupBox48.Controls.Add(this.button_ReadCSVFile);
             this.groupBox48.Controls.Add(this.button_WriteToCSV);
-            this.groupBox48.Location = new System.Drawing.Point(1254, 215);
+            this.groupBox48.Location = new System.Drawing.Point(1253, 316);
             this.groupBox48.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox48.Name = "groupBox48";
             this.groupBox48.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox48.Size = new System.Drawing.Size(141, 130);
+            this.groupBox48.Size = new System.Drawing.Size(135, 130);
             this.groupBox48.TabIndex = 23;
             this.groupBox48.TabStop = false;
             this.groupBox48.Text = "CSV file";
@@ -5169,7 +5146,7 @@ namespace Monitor
             this.button_ReadCSVFile.Location = new System.Drawing.Point(6, 22);
             this.button_ReadCSVFile.Margin = new System.Windows.Forms.Padding(2);
             this.button_ReadCSVFile.Name = "button_ReadCSVFile";
-            this.button_ReadCSVFile.Size = new System.Drawing.Size(127, 43);
+            this.button_ReadCSVFile.Size = new System.Drawing.Size(121, 43);
             this.button_ReadCSVFile.TabIndex = 18;
             this.button_ReadCSVFile.Text = "Load CSV file";
             this.button_ReadCSVFile.UseVisualStyleBackColor = true;
@@ -5182,7 +5159,7 @@ namespace Monitor
             this.button_WriteToCSV.Location = new System.Drawing.Point(6, 77);
             this.button_WriteToCSV.Margin = new System.Windows.Forms.Padding(2);
             this.button_WriteToCSV.Name = "button_WriteToCSV";
-            this.button_WriteToCSV.Size = new System.Drawing.Size(127, 43);
+            this.button_WriteToCSV.Size = new System.Drawing.Size(121, 43);
             this.button_WriteToCSV.TabIndex = 21;
             this.button_WriteToCSV.Text = "Save CSV file";
             this.button_WriteToCSV.UseVisualStyleBackColor = false;
@@ -5190,13 +5167,15 @@ namespace Monitor
             // 
             // groupBox38
             // 
+            this.groupBox38.Controls.Add(this.button136);
+            this.groupBox38.Controls.Add(this.button135);
             this.groupBox38.Controls.Add(this.button2);
             this.groupBox38.Controls.Add(this.button_Writeallblockstoflash);
-            this.groupBox38.Location = new System.Drawing.Point(1248, 42);
+            this.groupBox38.Location = new System.Drawing.Point(1247, 37);
             this.groupBox38.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox38.Size = new System.Drawing.Size(141, 169);
+            this.groupBox38.Size = new System.Drawing.Size(141, 273);
             this.groupBox38.TabIndex = 22;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Flash";
@@ -5217,7 +5196,7 @@ namespace Monitor
             // 
             this.button_Writeallblockstoflash.BackColor = System.Drawing.Color.Coral;
             this.button_Writeallblockstoflash.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Writeallblockstoflash.Location = new System.Drawing.Point(6, 99);
+            this.button_Writeallblockstoflash.Location = new System.Drawing.Point(6, 200);
             this.button_Writeallblockstoflash.Margin = new System.Windows.Forms.Padding(2);
             this.button_Writeallblockstoflash.Name = "button_Writeallblockstoflash";
             this.button_Writeallblockstoflash.Size = new System.Drawing.Size(127, 61);
@@ -7765,9 +7744,6 @@ namespace Monitor
             // 
             // tabPage_Page0
             // 
-            this.tabPage_Page0.Controls.Add(this.button101);
-            this.tabPage_Page0.Controls.Add(this.button100);
-            this.tabPage_Page0.Controls.Add(this.button44);
             this.tabPage_Page0.Controls.Add(this.button42);
             this.tabPage_Page0.Controls.Add(this.button_ClearPage0DataGrid);
             this.tabPage_Page0.Controls.Add(this.groupBox50);
@@ -7780,42 +7756,6 @@ namespace Monitor
             this.tabPage_Page0.TabIndex = 4;
             this.tabPage_Page0.Text = "Block 0";
             this.tabPage_Page0.UseVisualStyleBackColor = true;
-            // 
-            // button101
-            // 
-            this.button101.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button101.Location = new System.Drawing.Point(746, 178);
-            this.button101.Margin = new System.Windows.Forms.Padding(2);
-            this.button101.Name = "button101";
-            this.button101.Size = new System.Drawing.Size(127, 61);
-            this.button101.TabIndex = 32;
-            this.button101.Text = "Copy to Optional <-----";
-            this.button101.UseVisualStyleBackColor = true;
-            this.button101.Click += new System.EventHandler(this.button101_Click_2);
-            // 
-            // button100
-            // 
-            this.button100.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button100.Location = new System.Drawing.Point(746, 242);
-            this.button100.Margin = new System.Windows.Forms.Padding(2);
-            this.button100.Name = "button100";
-            this.button100.Size = new System.Drawing.Size(127, 70);
-            this.button100.TabIndex = 31;
-            this.button100.Text = "Compare Value and optional";
-            this.button100.UseVisualStyleBackColor = true;
-            this.button100.Click += new System.EventHandler(this.button100_Click_4);
-            // 
-            // button44
-            // 
-            this.button44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.Location = new System.Drawing.Point(746, 113);
-            this.button44.Margin = new System.Windows.Forms.Padding(2);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(127, 61);
-            this.button44.TabIndex = 30;
-            this.button44.Text = "Copy to Optional ---->";
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button44_Click_1);
             // 
             // button42
             // 
@@ -11312,7 +11252,6 @@ namespace Monitor
             this.groupBox32.PerformLayout();
             this.tabPage3038WBPAA.ResumeLayout(false);
             this.groupBox43.ResumeLayout(false);
-            this.groupBox37.ResumeLayout(false);
             this.groupBox48.ResumeLayout(false);
             this.groupBox38.ResumeLayout(false);
             this.tabControl_SSPA_WB_GUI.ResumeLayout(false);
@@ -12638,12 +12577,13 @@ namespace Monitor
 
         //readonly System1_parser system1_Parser = new System1_parser();
 
-
+        List<DataGridView> List_AllDataGrids = new List<DataGridView>() ;
         // List<S1_Protocol.S1_Messege_Builder.Command_Description> CommandsDescription;
         private void MainForm_Load(object sender, EventArgs e)
         {
             try
             {
+               
 
                 tabControl_Main.TabPages.RemoveAt(0);
                 tabControl_Main.TabPages.RemoveAt(0);
@@ -12703,7 +12643,19 @@ namespace Monitor
 
 
 
-
+                List_AllDataGrids.Add(dataGridView_Block00);
+                List_AllDataGrids.Add(dataGridView_Block01);
+                List_AllDataGrids.Add(dataGridView_Block02);
+                List_AllDataGrids.Add(dataGridView_Block03);
+                List_AllDataGrids.Add(dataGridView_Block04);
+                List_AllDataGrids.Add(dataGridView_Block05);
+                List_AllDataGrids.Add(dataGridView_Block06);
+                List_AllDataGrids.Add(dataGridView_Block07);
+                List_AllDataGrids.Add(dataGridView_Block08);
+                List_AllDataGrids.Add(dataGridView_Block09);
+                List_AllDataGrids.Add(dataGridView_Block10);
+                List_AllDataGrids.Add(dataGridView_Block11);
+                List_AllDataGrids.Add(dataGridView_Block12);
 
 
 
@@ -26095,7 +26047,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
                 if (i_DoErase == true)
                 {
-                    Erase_Flash("13 " + BlockAddress);
+                    Erase_Flash("31 " + BlockAddress);
                     await Task.Delay(5000);
                 }
 
@@ -26515,12 +26467,20 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private async void button_Writeallblockstoflash_Click(object sender, EventArgs e)
         {
+            
+            if(serialPort.IsOpen == false)
+            {
+                WriteToSystemStatus("port not open", 3, Color.Orange);
+                return;
+            }
+
             tabControl_SSPA_WB_GUI.Enabled = false;
+
 
             progressBar_UserStatus.Value = 0;
 
 
-            bool DoErase = false;
+
             int Delay = 3000;
             string message = @"
 Are you sure write all to flash?
@@ -26540,205 +26500,61 @@ This Process can take 1 minute.";
                 progressBar_UserStatus.Value = 10;
                 // Gil: Write all blocks flash
 
-                await WriteDataGridToFlash(dataGridView_Block00, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block01, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block02, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block03, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block04, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block05, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block06, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block07, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block08, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block09, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block10, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block11, DoErase);
-                await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 5;
-                await WriteDataGridToFlash(dataGridView_Block12, DoErase);
-                await Task.Delay(Delay);
+                foreach(DataGridView datagrid in List_AllDataGrids)
+                {
 
-                
+                    await WriteDataGridToFlash(datagrid, false);
+                    await Task.Delay(Delay);
+                    progressBar_UserStatus.Value += 5;
+                }
+
+
 
 
 
                 // Gil: Copy all the data to the other columns
-                CopyDatatoValidationColumn(dataGridView_Block00);
-                CopyDatatoValidationColumn(dataGridView_Block01);
-                CopyDatatoValidationColumn(dataGridView_Block02);
-                CopyDatatoValidationColumn(dataGridView_Block03);
-                CopyDatatoValidationColumn(dataGridView_Block04);
-                CopyDatatoValidationColumn(dataGridView_Block05); 
-                CopyDatatoValidationColumn(dataGridView_Block06);
-                CopyDatatoValidationColumn(dataGridView_Block07);
-                CopyDatatoValidationColumn(dataGridView_Block08);
-                CopyDatatoValidationColumn(dataGridView_Block09);
-                CopyDatatoValidationColumn(dataGridView_Block10);
-                CopyDatatoValidationColumn(dataGridView_Block11);
-                CopyDatatoValidationColumn(dataGridView_Block12);
+
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    CopyDatatoValidationColumn(datagrid);
+                }
+
+
 
                 //progressBar_UserStatus.Value = 60;
                 // Gil: Clear
 
-                ClearallColumnsinGrid(dataGridView_Block00, true);
-                ClearallColumnsinGrid(dataGridView_Block01, true);
-                ClearallColumnsinGrid(dataGridView_Block02, true);
-                ClearallColumnsinGrid(dataGridView_Block03, true);
-                ClearallColumnsinGrid(dataGridView_Block04, true);
-                ClearallColumnsinGrid(dataGridView_Block05, true);
-                ClearallColumnsinGrid(dataGridView_Block06, true);
-                ClearallColumnsinGrid(dataGridView_Block07, true);
-                ClearallColumnsinGrid(dataGridView_Block08, true);
-                ClearallColumnsinGrid(dataGridView_Block09, true);
-                ClearallColumnsinGrid(dataGridView_Block10, true);
-                ClearallColumnsinGrid(dataGridView_Block11, true);
-                ClearallColumnsinGrid(dataGridView_Block12, true);
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    ClearallColumnsinGrid(datagrid, true);
+                }
+
+               
 
                 progressBar_UserStatus.Value = 80;
                 // Gil: Read all from flash
 
                 Delay = 500;
 
-                ReadDataGridToFlash(dataGridView_Block00);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block01);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block02);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block03);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block04);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block05);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block06);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block07);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block08);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block09);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block10);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block11);
-                await Task.Delay(Delay);
-                ReadDataGridToFlash(dataGridView_Block12);
-                await Task.Delay(Delay);
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    ReadDataGridToFlash(datagrid);
+                    await Task.Delay(Delay);
+                }
+
 
                 // Gil compare
-                bool ret = false;
-                ret = CompareDatatoValidationColumn(dataGridView_Block00);
-                if(ret != true)
+                foreach (DataGridView datagrid in List_AllDataGrids)
                 {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
+                    bool ret = false;
+                    ret = CompareDatatoValidationColumn(datagrid);
+                    if (ret != true)
+                    {
+                        tabControl_SSPA_WB_GUI.Enabled = true;
+                        return;
+                    }
                 }
 
-                ret = CompareDatatoValidationColumn(dataGridView_Block01);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block02);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block03);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block04);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block05);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block06);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block07);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block08);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block09);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block10);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block11);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
-
-                ret = CompareDatatoValidationColumn(dataGridView_Block12);
-                if (ret != true)
-                {
-                    tabControl_SSPA_WB_GUI.Enabled = true;
-                    return;
-                }
 
 
 
@@ -27155,35 +26971,12 @@ This Process can take 1 minute.";
         private async void button2_Click_3(object sender, EventArgs e)
         {
             int Delay = 500;
-            //tabControl_SSPA_WB_GUI.Enabled = false;
 
-            ReadDataGridToFlash(dataGridView_Block00);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block01);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block02);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block03);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block04);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block05);
-            await Task.Delay(Delay); 
-            ReadDataGridToFlash(dataGridView_Block06);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block07);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block08);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block09);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block10);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block11);
-            await Task.Delay(Delay);
-            ReadDataGridToFlash(dataGridView_Block12);
-            await Task.Delay(Delay);
-
+            foreach (DataGridView datagrid in List_AllDataGrids)
+            {
+                ReadDataGridToFlash(datagrid);
+                await Task.Delay(Delay);
+            }
             // tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
@@ -27192,40 +26985,19 @@ This Process can take 1 minute.";
         private void button135_Click(object sender, EventArgs e)
         {
 
-
-            ClearallColumnsinGrid(dataGridView_Block00, false);
-            ClearallColumnsinGrid(dataGridView_Block01, false);
-            ClearallColumnsinGrid(dataGridView_Block02, false);
-            ClearallColumnsinGrid(dataGridView_Block03, false);
-            ClearallColumnsinGrid(dataGridView_Block04, false);
-            ClearallColumnsinGrid(dataGridView_Block05, false);
-            ClearallColumnsinGrid(dataGridView_Block06, false);
-            ClearallColumnsinGrid(dataGridView_Block07, false);
-            ClearallColumnsinGrid(dataGridView_Block08, false);
-            ClearallColumnsinGrid(dataGridView_Block09, false);
-            ClearallColumnsinGrid(dataGridView_Block10, false);
-            ClearallColumnsinGrid(dataGridView_Block11, false);
-            ClearallColumnsinGrid(dataGridView_Block12, false);
+            foreach (DataGridView datagrid in List_AllDataGrids)
+            {
+                ClearallColumnsinGrid(datagrid, false);
+            }
 
         }
 
         private void button136_Click(object sender, EventArgs e)
         {
-            UpdateTestDataToGrid(dataGridView_Block00);
-            UpdateTestDataToGrid(dataGridView_Block01);
-            UpdateTestDataToGrid(dataGridView_Block02);
-            UpdateTestDataToGrid(dataGridView_Block03);
-            UpdateTestDataToGrid(dataGridView_Block04);
-            UpdateTestDataToGrid(dataGridView_Block05);
-            UpdateTestDataToGrid(dataGridView_Block06);
-            UpdateTestDataToGrid(dataGridView_Block07);
-            UpdateTestDataToGrid(dataGridView_Block08);
-            UpdateTestDataToGrid(dataGridView_Block09);
-            UpdateTestDataToGrid(dataGridView_Block10);
-            UpdateTestDataToGrid(dataGridView_Block11);
-            UpdateTestDataToGrid(dataGridView_Block12);
-
-
+            foreach (DataGridView datagrid in List_AllDataGrids)
+            {
+                UpdateTestDataToGrid(datagrid);
+            }
         }
 
         private void checkBox_TriggerClock_CheckedChanged(object sender, EventArgs e)
