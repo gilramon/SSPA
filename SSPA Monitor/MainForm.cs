@@ -14116,9 +14116,9 @@ namespace Monitor
 
         void WriteToSystemStatus(String i_Message,uint i_Time,Color i_Color)
         {
-            textBox_SystemStatus.Text = i_Message;
+            textBox_SystemStatus.AppendText(i_Message + " \r\n ");
             textBox_SystemStatus.BackColor = i_Color;
-            textBox_SystemStatus_Timer = i_Time;
+            textBox_SystemStatus_Timer += i_Time;
         }
 
         private string UnHandledOpcode(KratosProtocolFrame i_Parsedframe)
@@ -14840,9 +14840,11 @@ namespace Monitor
         {
             try
             {
-
+                
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
+
+                WriteToSystemStatus(String.Format("Flash Address received: {0}", str_Address), 1, Color.White);
 
                 DataGridView m_Datagrid;
                 switch (str_Address)
@@ -26536,12 +26538,10 @@ This Process can take 1 minute.";
                 progressBar_UserStatus.Value = 80;
                 // Gil: Read all from flash
 
-                Delay = 500;
-
                 foreach (DataGridView datagrid in List_AllDataGrids)
                 {
                     ReadDataGridToFlash(datagrid);
-                    await Task.Delay(Delay);
+                    await Task.Delay(800);
                 }
 
 
@@ -26560,7 +26560,7 @@ This Process can take 1 minute.";
 
 
 
-                WriteToSystemStatus(String.Format("Data Written to the flash and validate"), 4, Color.Green);
+                WriteToSystemStatus(String.Format(" Data Written to the flash and verified :-) \n\n\n\n "), 4, Color.LightGreen);
                 progressBar_UserStatus.Value = 100;
                 progressBar_UserStatus.BackColor = Color.Green;
                 progressBar_UserStatus.ForeColor = Color.Green;
@@ -26972,7 +26972,7 @@ This Process can take 1 minute.";
 
         private async void button2_Click_3(object sender, EventArgs e)
         {
-            int Delay = 500;
+            int Delay = 800;
 
             foreach (DataGridView datagrid in List_AllDataGrids)
             {
