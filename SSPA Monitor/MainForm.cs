@@ -26560,7 +26560,7 @@ This Process can take 1 minute.";
 
 
 
-                WriteToSystemStatus(String.Format(" Data Written to the flash and verified :-) \n\n\n\n "), 4, Color.LightGreen);
+                WriteToSystemStatus(String.Format(" \r\n\r\n\r\n  Data Written to the flash and verified :-) "), 4, Color.LightGreen);
                 progressBar_UserStatus.Value = 100;
                 progressBar_UserStatus.BackColor = Color.Green;
                 progressBar_UserStatus.ForeColor = Color.Green;
