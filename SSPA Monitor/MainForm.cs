@@ -12577,7 +12577,9 @@ namespace Monitor
 
         //readonly System1_parser system1_Parser = new System1_parser();
 
-        List<DataGridView> List_AllDataGrids = new List<DataGridView>() ;
+        static List<DataGridView> List_AllDataGrids = new List<DataGridView>();
+
+        //List_AllDataGrids.Add(dataGridView_Block00);
         // List<S1_Protocol.S1_Messege_Builder.Command_Description> CommandsDescription;
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -23526,7 +23528,7 @@ Note: eStatus enum 
 
         void testRFTextboxs()
         {
-            if (float.TryParse(textBox_RFPeriod.Text, out float Period) &&
+            if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
             float.TryParse(textBox_RFWidth.Text, out float Width) &&
             float.TryParse(textBox_RFDelay.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
@@ -23570,7 +23572,7 @@ Note: eStatus enum 
 
         void testPulseGenTextBoxs2()
         {
-            if (float.TryParse(textBox_PulsePeriod2.Text, out float Period) &&
+            if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
             float.TryParse(textBox_PulseWidth2.Text, out float Width) &&
             float.TryParse(textBox_PulseDelay2.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
