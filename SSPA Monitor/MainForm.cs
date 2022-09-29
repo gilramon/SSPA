@@ -902,8 +902,21 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2152,17 +2165,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -7829,6 +7842,14 @@ namespace Monitor
             this.dataGridView_Block00.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block00.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block00.Name = "dataGridView_Block00";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Block00.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block00.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block00.TabIndex = 27;
@@ -7953,6 +7974,14 @@ namespace Monitor
             this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
             this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block01.Name = "dataGridView_Block01";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block01.TabIndex = 34;
@@ -8064,6 +8093,14 @@ namespace Monitor
             this.dataGridView_Block02.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block02.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block02.Name = "dataGridView_Block02";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
@@ -8176,6 +8213,14 @@ namespace Monitor
             this.dataGridView_Block03.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block03.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block03.Name = "dataGridView_Block03";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
@@ -8288,6 +8333,14 @@ namespace Monitor
             this.dataGridView_Block04.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block04.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block04.Name = "dataGridView_Block04";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
@@ -8399,6 +8452,14 @@ namespace Monitor
             this.dataGridView_Block05.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block05.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block05.Name = "dataGridView_Block05";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
@@ -8513,6 +8574,14 @@ namespace Monitor
             this.dataGridView_Block06.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block06.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block06.Name = "dataGridView_Block06";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
@@ -8627,6 +8696,14 @@ namespace Monitor
             this.dataGridView_Block07.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block07.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block07.Name = "dataGridView_Block07";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
@@ -8741,6 +8818,14 @@ namespace Monitor
             this.dataGridView_Block08.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block08.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block08.Name = "dataGridView_Block08";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
@@ -8855,6 +8940,14 @@ namespace Monitor
             this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block09.Name = "dataGridView_Block09";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
@@ -8969,6 +9062,14 @@ namespace Monitor
             this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block10.Name = "dataGridView_Block10";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
@@ -9083,6 +9184,14 @@ namespace Monitor
             this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block11.Name = "dataGridView_Block11";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
@@ -9197,6 +9306,14 @@ namespace Monitor
             this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block12.Name = "dataGridView_Block12";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
@@ -12839,7 +12956,33 @@ namespace Monitor
             {
 
                 dataGridView_Block01.Rows.Add();
-                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0} - {1} deg -deg PA_VVA_T1_FREQ{2}",i,i+3,(row % 8 +1));
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++; 
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++; 
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+                
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
                 row++;
 
             }
@@ -26167,11 +26310,14 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private void dgGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+         void dgGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             var grid = sender as DataGridView;
-            var rowIdx = (e.RowIndex).ToString();
 
+
+               int.TryParse(GetLast(grid.Name, 2), out int GridNumber);
+
+            String FlashAddress = GridNumber.ToString("X2") + (e.RowIndex * 2).ToString("X2");
             var centerFormat = new StringFormat()
             {
                 // right alignment might actually make more sense for numbers
@@ -26180,7 +26326,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             };
 
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
-            e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
+            e.Graphics.DrawString(FlashAddress, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
 
         void UpdateTestDataToGrid(DataGridView i_DataGrid)
@@ -26189,7 +26335,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                // String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
-                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+                for (int i = 0; i < (2*i_DataGrid.Rows.Count); i=i+2)
                 {
                     i_DataGrid.Rows[i].Cells[0].Value = String.Format("{0}{1}", GridNumber.ToString("X2"),i.ToString("X2"));
                 }
