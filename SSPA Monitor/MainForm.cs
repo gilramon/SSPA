@@ -12807,15 +12807,14 @@ namespace Monitor
                 List_AllDataGrids.Add(dataGridView_Block11);
                 List_AllDataGrids.Add(dataGridView_Block12);
 
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    datagrid.Columns[0].HeaderCell.Value = "Flash data Hex (0xFFFF)";
+                }
+
 
 
                 UpdateSerialPortComboBox();
-
-
-
-
-
-
 
                 EditDataGridForSSPAWB();
 
@@ -15022,7 +15021,7 @@ namespace Monitor
                 String str_InternalAddress = GetBytesFromData(i_Parsedframe.Data, 3, 2);
                   int m_InternalAddress = int.Parse(str_InternalAddress, System.Globalization.NumberStyles.HexNumber);
 
-                WriteToSystemStatus(String.Format("Flash Address received: {0}", str_Address), 1, Color.White);
+                WriteToSystemStatus(String.Format("Flash Address received: [{0}] internal Address [{1}]", str_Address, str_InternalAddress), 1, Color.White);
 
                 DataGridView m_Datagrid;
                 switch (str_Address)
@@ -20888,6 +20887,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
             textBox_SystemStatus.BackColor = default;
             progressBar_UserStatus.Value = 0;
             progressBar_UserStatus.BackColor = default;
+            progressBar_UserStatus.ForeColor = default;
         }
 
         private void comboBox_WindowsDSPLib_SelectedIndexChanged(object sender, EventArgs e)
@@ -26515,32 +26515,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 var CSV_bulder = new StringBuilder();
                 var newLine = "";
 
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block00);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block01);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block02);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block03);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block04);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block05);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block06);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block07);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block08);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block09);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block10);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block11);
-                CSV_bulder.AppendLine(newLine);
-                newLine = GetLinefromToCSVFromDataGrid(dataGridView_Block12);
-                CSV_bulder.AppendLine(newLine);
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    newLine = GetLinefromToCSVFromDataGrid(datagrid);
+                    CSV_bulder.AppendLine(newLine);
+                }
 
                 //Suggestion made by KyleMit
                 //var newLine = string.Format("{0},{1}", 1, 2);
@@ -26628,20 +26607,15 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                         using (myStream)
                         {
                             // Insert code to read the stream here.
+
+
                             StreamReader reader = new StreamReader(myStream);
-                            WriteLineToDataGrid(dataGridView_Block00, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block01, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block02, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block03, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block04, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block05, reader.ReadLine()); 
-                            WriteLineToDataGrid(dataGridView_Block06, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block07, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block08, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block09, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block10, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block11, reader.ReadLine());
-                            WriteLineToDataGrid(dataGridView_Block12, reader.ReadLine());
+
+                            foreach (DataGridView datagrid in List_AllDataGrids)
+                            {
+                                WriteLineToDataGrid(datagrid, reader.ReadLine());
+                            }
+
 
 
                             //for (int i = 0; i < 12; i++)
@@ -26748,7 +26722,7 @@ This Process can take 1 minute.";
                 {
 
                     await WriteDataGridToFlash(datagrid, false);
-                    await Task.Delay(1500);
+                    await Task.Delay(1000);
                     progressBar_UserStatus.Value += 5;
                 }
 
@@ -26787,24 +26761,32 @@ This Process can take 1 minute.";
 
                 // Gil compare
                 await Task.Delay(1000);
+                bool FlashCheck = true;
                 foreach (DataGridView datagrid in List_AllDataGrids)
                 {
-                    bool ret = false;
-                    ret = CompareDatatoValidationColumn(datagrid);
+                    bool ret = CompareDatatoValidationColumn(datagrid); 
                     if (ret != true)
                     {
-                      //  tabControl_SSPA_WB_GUI.Enabled = true;
-                        //return;
+                        FlashCheck = false;
                     }
                 }
 
 
+                if (FlashCheck == true)
+                {
 
-
-                WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 4, Color.LightGreen);
-                progressBar_UserStatus.Value = 100;
-                progressBar_UserStatus.BackColor = Color.Green;
-                progressBar_UserStatus.ForeColor = Color.Green;
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 4, Color.LightGreen);
+                    progressBar_UserStatus.Value = 100;
+                    progressBar_UserStatus.BackColor = Color.Green;
+                    progressBar_UserStatus.ForeColor = Color.Green;
+                }
+                else
+                {
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Something got wrong during verification :-( "), 60, Color.OrangeRed);
+                    progressBar_UserStatus.Value = 100;
+                    progressBar_UserStatus.BackColor = Color.OrangeRed;
+                    progressBar_UserStatus.ForeColor = Color.OrangeRed;
+                }
 
 
 
