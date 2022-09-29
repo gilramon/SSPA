@@ -15758,7 +15758,7 @@ namespace Monitor
 
         //bool timer_General_TranssmitionPeriodicallyEnable = false;
         //uint NumbeOfTransmmitions = 0;
-        private int progressBar_UserStatusTimer = -1;
+        //private int progressBar_UserStatusTimer = -1;
         
         private int TimerClearModemStatus = 0;
         //uint IntervalTimeBetweenTransmitions = 1;
@@ -26072,7 +26072,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         async Task WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
         {
             int i = 0;
-            tabControl_SSPA_WB_GUI.Enabled = false;
+         //   tabControl_SSPA_WB_GUI.Enabled = false;
             
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
@@ -26109,7 +26109,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 Write_Flash(BlockAddress, "00 00", DataToWrite);
             }
 
-            tabControl_SSPA_WB_GUI.Enabled = true;
+        //    tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
         private async void button_WritePage0_Click(object sender, EventArgs e)
@@ -26469,10 +26469,50 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        void UpdateProgressBar(int i_value)
+        void ClearallColumnsinGrid(DataGridView i_DataGrid,bool i_OnlyFlashData)
         {
-
+            if (i_OnlyFlashData == true)
+            {
+                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+                {
+                    i_DataGrid.Rows[i].Cells[0].Value = "";
+                }
+            }
+            else
+            {
+                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+                {
+                    i_DataGrid.Rows[i].Cells[0].Value = "";
+                    i_DataGrid.Rows[i].Cells[1].Value = "";
+                    i_DataGrid.Rows[i].Cells[2].Value = "";
+                }
+            }
         }
+
+        bool CompareDatatoValidationColumn(DataGridView i_DataGrid)
+        {
+            bool ret = true;
+            for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+            {
+                if(i_DataGrid.Rows[i].Cells[2].Value.ToString() != i_DataGrid.Rows[i].Cells[0].Value.ToString())
+                {
+                    WriteToSystemStatus(String.Format("[{0}] in Row [{1}] is not equal", i_DataGrid.Name,i), 5, Color.OrangeRed);
+                    return false;
+                }
+                
+            }
+
+            return ret;
+        }
+
+        void CopyDatatoValidationColumn(DataGridView i_DataGrid)
+        {
+            for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+            {
+                i_DataGrid.Rows[i].Cells[2].Value = i_DataGrid.Rows[i].Cells[0].Value.ToString();
+            }
+        }
+
         private async void button_Writeallblockstoflash_Click(object sender, EventArgs e)
         {
             tabControl_SSPA_WB_GUI.Enabled = false;
@@ -26491,48 +26531,218 @@ This Process can take 1 minute.";
             if (result == DialogResult.Yes)
             {
 
+                // Gil: Erase flash
                 Erase_Flash();
                 await Task.Delay(4000);
-                progressBar_UserStatus.Value += 7;
+
+
+
+                progressBar_UserStatus.Value = 10;
+                // Gil: Write all blocks flash
+
                 await WriteDataGridToFlash(dataGridView_Block00, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block01, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block02, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block03, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block04, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block05, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block06, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block07, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block08, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block09, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block10, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block11, DoErase);
                 await Task.Delay(Delay);
-                progressBar_UserStatus.Value += 7;
+                progressBar_UserStatus.Value += 5;
                 await WriteDataGridToFlash(dataGridView_Block12, DoErase);
                 await Task.Delay(Delay);
 
+                
+
+
+
+                // Gil: Copy all the data to the other columns
+                CopyDatatoValidationColumn(dataGridView_Block00);
+                CopyDatatoValidationColumn(dataGridView_Block01);
+                CopyDatatoValidationColumn(dataGridView_Block02);
+                CopyDatatoValidationColumn(dataGridView_Block03);
+                CopyDatatoValidationColumn(dataGridView_Block04);
+                CopyDatatoValidationColumn(dataGridView_Block05); 
+                CopyDatatoValidationColumn(dataGridView_Block06);
+                CopyDatatoValidationColumn(dataGridView_Block07);
+                CopyDatatoValidationColumn(dataGridView_Block08);
+                CopyDatatoValidationColumn(dataGridView_Block09);
+                CopyDatatoValidationColumn(dataGridView_Block10);
+                CopyDatatoValidationColumn(dataGridView_Block11);
+                CopyDatatoValidationColumn(dataGridView_Block12);
+
+                //progressBar_UserStatus.Value = 60;
+                // Gil: Clear
+
+                ClearallColumnsinGrid(dataGridView_Block00, true);
+                ClearallColumnsinGrid(dataGridView_Block01, true);
+                ClearallColumnsinGrid(dataGridView_Block02, true);
+                ClearallColumnsinGrid(dataGridView_Block03, true);
+                ClearallColumnsinGrid(dataGridView_Block04, true);
+                ClearallColumnsinGrid(dataGridView_Block05, true);
+                ClearallColumnsinGrid(dataGridView_Block06, true);
+                ClearallColumnsinGrid(dataGridView_Block07, true);
+                ClearallColumnsinGrid(dataGridView_Block08, true);
+                ClearallColumnsinGrid(dataGridView_Block09, true);
+                ClearallColumnsinGrid(dataGridView_Block10, true);
+                ClearallColumnsinGrid(dataGridView_Block11, true);
+                ClearallColumnsinGrid(dataGridView_Block12, true);
+
+                progressBar_UserStatus.Value = 80;
+                // Gil: Read all from flash
+
+                Delay = 500;
+
+                ReadDataGridToFlash(dataGridView_Block00);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block01);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block02);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block03);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block04);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block05);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block06);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block07);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block08);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block09);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block10);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block11);
+                await Task.Delay(Delay);
+                ReadDataGridToFlash(dataGridView_Block12);
+                await Task.Delay(Delay);
+
+                // Gil compare
+                bool ret = false;
+                ret = CompareDatatoValidationColumn(dataGridView_Block00);
+                if(ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block01);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block02);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block03);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block04);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block05);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block06);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block07);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block08);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block09);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block10);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block11);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+                ret = CompareDatatoValidationColumn(dataGridView_Block12);
+                if (ret != true)
+                {
+                    tabControl_SSPA_WB_GUI.Enabled = true;
+                    return;
+                }
+
+
+
+                WriteToSystemStatus(String.Format("Data Written to the flash and validate"), 4, Color.Green);
                 progressBar_UserStatus.Value = 100;
                 progressBar_UserStatus.BackColor = Color.Green;
                 progressBar_UserStatus.ForeColor = Color.Green;
@@ -26977,83 +27187,26 @@ This Process can take 1 minute.";
             // tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
+
+
         private void button135_Click(object sender, EventArgs e)
         {
 
-            Random rnd = new Random();
-            DataGridView m_Datagrid;
 
-            m_Datagrid = dataGridView_Block00;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block00, false);
+            ClearallColumnsinGrid(dataGridView_Block01, false);
+            ClearallColumnsinGrid(dataGridView_Block02, false);
+            ClearallColumnsinGrid(dataGridView_Block03, false);
+            ClearallColumnsinGrid(dataGridView_Block04, false);
+            ClearallColumnsinGrid(dataGridView_Block05, false);
+            ClearallColumnsinGrid(dataGridView_Block06, false);
+            ClearallColumnsinGrid(dataGridView_Block07, false);
+            ClearallColumnsinGrid(dataGridView_Block08, false);
+            ClearallColumnsinGrid(dataGridView_Block09, false);
+            ClearallColumnsinGrid(dataGridView_Block10, false);
+            ClearallColumnsinGrid(dataGridView_Block11, false);
+            ClearallColumnsinGrid(dataGridView_Block12, false);
 
-            m_Datagrid = dataGridView_Block01;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-
-            m_Datagrid = dataGridView_Block02;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-
-            m_Datagrid = dataGridView_Block03;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block04;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block05;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block06;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block07;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block08;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-            m_Datagrid = dataGridView_Block09;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-
-            m_Datagrid = dataGridView_Block10;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-
-            m_Datagrid = dataGridView_Block11;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
-
-            m_Datagrid = dataGridView_Block12;
-            for (int i = 0; i < m_Datagrid.Rows.Count; i++)
-            {
-                m_Datagrid.Rows[i].Cells[0].Value = "";
-            }
         }
 
         private void button136_Click(object sender, EventArgs e)
