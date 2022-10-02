@@ -61,7 +61,7 @@ namespace Monitor
         private TabPage tabPage_SerialPort;
         private IContainer components;
         private GroupBox groupBox5;
-        private CheckBox checkBox_S1Pause;
+        private CheckBox checkBox_SerialPortPause;
         private Button button_ClearSerialPort;
         private RichTextBox SerialPortLogger_TextBox;
         private GroupBox S1_Configuration;
@@ -171,8 +171,7 @@ namespace Monitor
         private TextBox maskedTextBox_SpeedLimit1;
         private TextBox maskedTextBox_TiltTowSens;
         private TextBox maskedTextBox_HitSensitivity;
-        private OpenFileDialog openFileDialog1;
-        private CheckBox checkBox_S1RecordLog;
+        private CheckBox checkBox_SerialPortRecordLog;
         private System.Windows.Forms.Timer timer_General_100ms;
         private TextBox textBox_NumberOfOpenConnections;
         private System.Windows.Forms.Timer timer_General_1Second;
@@ -563,10 +562,8 @@ namespace Monitor
         private Label label96;
         private TextBox textBox_SimulatorID;
         private Button button31;
-        private Label label93;
-        private Label label94;
         private TextBox textBox_SimulatorFWVersion;
-        private TextBox textBox_SimulatorHWVersion;
+        private TextBox textBox_SimulatorFWDateVersion;
         private GroupBox groupBox_SimulatorControl;
         private Label label114;
         private Label label113;
@@ -589,7 +586,7 @@ namespace Monitor
         private Label label120;
         private TextBox textBox_StatusUUT23;
         private TextBox textBox_SystemFWVersion;
-        private TextBox textBox_SystemHWVersion;
+        private TextBox textBox_SystemFWDateVersion;
         private ToolTip toolTip1;
         private CheckBox checkBox_RFGen;
         private CheckBox checkBox_PulseGen2;
@@ -789,9 +786,6 @@ namespace Monitor
         private DataGridView dataGridView_Block11;
         private Button button123;
         private DataGridView dataGridView_Block12;
-        private Button button59;
-        private Button button71;
-        private Button button96;
         private Button button98;
         private Button button124;
         private Button button125;
@@ -850,6 +844,8 @@ namespace Monitor
         private CheckBox checkBox_TriggerClock;
         private ComboBox comboBox_CALSARUUT;
         private Label label76;
+        private Label label87;
+        private Label label86;
         private static readonly string PREAMBLE = "23";
 
 
@@ -904,21 +900,21 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1025,8 +1021,8 @@ namespace Monitor
             this.textBox_SerialPortRecognizePattern3 = new System.Windows.Forms.TextBox();
             this.textBox_SerialPortRecognizePattern2 = new System.Windows.Forms.TextBox();
             this.textBox_SerialPortRecognizePattern = new System.Windows.Forms.TextBox();
-            this.checkBox_S1RecordLog = new System.Windows.Forms.CheckBox();
-            this.checkBox_S1Pause = new System.Windows.Forms.CheckBox();
+            this.checkBox_SerialPortRecordLog = new System.Windows.Forms.CheckBox();
+            this.checkBox_SerialPortPause = new System.Windows.Forms.CheckBox();
             this.button_ClearSerialPort = new System.Windows.Forms.Button();
             this.SerialPortLogger_TextBox = new System.Windows.Forms.RichTextBox();
             this.tabPage_GenericFrame = new System.Windows.Forms.TabPage();
@@ -1376,22 +1372,22 @@ namespace Monitor
             this.textBox_SystemSN = new System.Windows.Forms.TextBox();
             this.textBox_SystemFWVersion = new System.Windows.Forms.TextBox();
             this.label122 = new System.Windows.Forms.Label();
-            this.textBox_SystemHWVersion = new System.Windows.Forms.TextBox();
+            this.textBox_SystemFWDateVersion = new System.Windows.Forms.TextBox();
             this.textBox_SystemID = new System.Windows.Forms.TextBox();
             this.button70 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox_SimulatorVersion = new System.Windows.Forms.GroupBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
             this.button75 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.textBox_SimulatorSN = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
             this.textBox_SimulatorID = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
             this.textBox_SimulatorFWVersion = new System.Windows.Forms.TextBox();
-            this.textBox_SimulatorHWVersion = new System.Windows.Forms.TextBox();
+            this.textBox_SimulatorFWDateVersion = new System.Windows.Forms.TextBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.checkBox_RFGen = new System.Windows.Forms.CheckBox();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
@@ -1412,9 +1408,6 @@ namespace Monitor
             this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Page1 = new System.Windows.Forms.TabPage();
-            this.button59 = new System.Windows.Forms.Button();
-            this.button71 = new System.Windows.Forms.Button();
-            this.button96 = new System.Windows.Forms.Button();
             this.button98 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView_Block01 = new System.Windows.Forms.DataGridView();
@@ -1651,7 +1644,6 @@ namespace Monitor
             this.button_SendSelectedSMS = new System.Windows.Forms.Button();
             this.button_Ring = new System.Windows.Forms.Button();
             this.comboBox_SystemType = new System.Windows.Forms.ComboBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timer_General_100ms = new System.Windows.Forms.Timer(this.components);
             this.timer_General_1Second = new System.Windows.Forms.Timer(this.components);
             this.serialPort = new System.IO.Ports.SerialPort(this.components);
@@ -2169,17 +2161,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -2986,8 +2978,8 @@ namespace Monitor
             this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern3);
             this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern2);
             this.groupBox5.Controls.Add(this.textBox_SerialPortRecognizePattern);
-            this.groupBox5.Controls.Add(this.checkBox_S1RecordLog);
-            this.groupBox5.Controls.Add(this.checkBox_S1Pause);
+            this.groupBox5.Controls.Add(this.checkBox_SerialPortRecordLog);
+            this.groupBox5.Controls.Add(this.checkBox_SerialPortPause);
             this.groupBox5.Controls.Add(this.button_ClearSerialPort);
             this.groupBox5.Controls.Add(this.SerialPortLogger_TextBox);
             this.groupBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3163,33 +3155,33 @@ namespace Monitor
             this.textBox_SerialPortRecognizePattern.Size = new System.Drawing.Size(108, 27);
             this.textBox_SerialPortRecognizePattern.TabIndex = 73;
             // 
-            // checkBox_S1RecordLog
+            // checkBox_SerialPortRecordLog
             // 
-            this.checkBox_S1RecordLog.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_S1RecordLog.AutoSize = true;
-            this.checkBox_S1RecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1RecordLog.Location = new System.Drawing.Point(345, 14);
-            this.checkBox_S1RecordLog.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_S1RecordLog.Name = "checkBox_S1RecordLog";
-            this.checkBox_S1RecordLog.Size = new System.Drawing.Size(83, 29);
-            this.checkBox_S1RecordLog.TabIndex = 69;
-            this.checkBox_S1RecordLog.Text = "Log to file";
-            this.checkBox_S1RecordLog.UseVisualStyleBackColor = true;
-            this.checkBox_S1RecordLog.CheckedChanged += new System.EventHandler(this.CheckBox_S1RecordLog_CheckedChanged);
+            this.checkBox_SerialPortRecordLog.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_SerialPortRecordLog.AutoSize = true;
+            this.checkBox_SerialPortRecordLog.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_SerialPortRecordLog.Location = new System.Drawing.Point(345, 14);
+            this.checkBox_SerialPortRecordLog.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_SerialPortRecordLog.Name = "checkBox_SerialPortRecordLog";
+            this.checkBox_SerialPortRecordLog.Size = new System.Drawing.Size(83, 29);
+            this.checkBox_SerialPortRecordLog.TabIndex = 69;
+            this.checkBox_SerialPortRecordLog.Text = "Log to file";
+            this.checkBox_SerialPortRecordLog.UseVisualStyleBackColor = true;
+            this.checkBox_SerialPortRecordLog.CheckedChanged += new System.EventHandler(this.CheckBox_S1RecordLog_CheckedChanged);
             // 
-            // checkBox_S1Pause
+            // checkBox_SerialPortPause
             // 
-            this.checkBox_S1Pause.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_S1Pause.AutoSize = true;
-            this.checkBox_S1Pause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_S1Pause.Location = new System.Drawing.Point(443, 13);
-            this.checkBox_S1Pause.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_S1Pause.Name = "checkBox_S1Pause";
-            this.checkBox_S1Pause.Size = new System.Drawing.Size(58, 29);
-            this.checkBox_S1Pause.TabIndex = 70;
-            this.checkBox_S1Pause.Text = "Pause";
-            this.checkBox_S1Pause.UseVisualStyleBackColor = true;
-            this.checkBox_S1Pause.CheckedChanged += new System.EventHandler(this.CheckBox_S1Pause_CheckedChanged);
+            this.checkBox_SerialPortPause.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_SerialPortPause.AutoSize = true;
+            this.checkBox_SerialPortPause.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_SerialPortPause.Location = new System.Drawing.Point(443, 13);
+            this.checkBox_SerialPortPause.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_SerialPortPause.Name = "checkBox_SerialPortPause";
+            this.checkBox_SerialPortPause.Size = new System.Drawing.Size(58, 29);
+            this.checkBox_SerialPortPause.TabIndex = 70;
+            this.checkBox_SerialPortPause.Text = "Pause";
+            this.checkBox_SerialPortPause.UseVisualStyleBackColor = true;
+            this.checkBox_SerialPortPause.CheckedChanged += new System.EventHandler(this.CheckBox_S1Pause_CheckedChanged);
             // 
             // button_ClearSerialPort
             // 
@@ -5302,11 +5294,11 @@ namespace Monitor
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(17, 68);
+            this.label123.Location = new System.Drawing.Point(63, 70);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(68, 18);
+            this.label123.Size = new System.Drawing.Size(22, 18);
             this.label123.TabIndex = 33;
-            this.label123.Text = "hex value";
+            this.label123.Text = "0x";
             // 
             // textBox_SystemMode
             // 
@@ -7467,7 +7459,7 @@ namespace Monitor
             this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemSN);
             this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemFWVersion);
             this.groupBox_UUTVersion.Controls.Add(this.label122);
-            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemHWVersion);
+            this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemFWDateVersion);
             this.groupBox_UUTVersion.Controls.Add(this.textBox_SystemID);
             this.groupBox_UUTVersion.Controls.Add(this.button70);
             this.groupBox_UUTVersion.Controls.Add(this.label27);
@@ -7530,14 +7522,14 @@ namespace Monitor
             this.label122.TabIndex = 13;
             this.label122.Text = "ID:";
             // 
-            // textBox_SystemHWVersion
+            // textBox_SystemFWDateVersion
             // 
-            this.textBox_SystemHWVersion.Location = new System.Drawing.Point(102, 35);
-            this.textBox_SystemHWVersion.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_SystemHWVersion.Name = "textBox_SystemHWVersion";
-            this.textBox_SystemHWVersion.ReadOnly = true;
-            this.textBox_SystemHWVersion.Size = new System.Drawing.Size(91, 26);
-            this.textBox_SystemHWVersion.TabIndex = 12;
+            this.textBox_SystemFWDateVersion.Location = new System.Drawing.Point(102, 35);
+            this.textBox_SystemFWDateVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SystemFWDateVersion.Name = "textBox_SystemFWDateVersion";
+            this.textBox_SystemFWDateVersion.ReadOnly = true;
+            this.textBox_SystemFWDateVersion.Size = new System.Drawing.Size(91, 26);
+            this.textBox_SystemFWDateVersion.TabIndex = 12;
             // 
             // textBox_SystemID
             // 
@@ -7562,12 +7554,12 @@ namespace Monitor
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(17, 69);
+            this.label27.Location = new System.Drawing.Point(14, 73);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(81, 18);
+            this.label27.Size = new System.Drawing.Size(84, 18);
             this.label27.TabIndex = 5;
-            this.label27.Text = "FW version:";
+            this.label27.Text = "FW ver Num";
             // 
             // label26
             // 
@@ -7575,22 +7567,22 @@ namespace Monitor
             this.label26.Location = new System.Drawing.Point(15, 40);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(83, 18);
+            this.label26.Size = new System.Drawing.Size(87, 18);
             this.label26.TabIndex = 4;
-            this.label26.Text = "HW version:";
+            this.label26.Text = "FW ver Date:";
             // 
             // groupBox_SimulatorVersion
             // 
+            this.groupBox_SimulatorVersion.Controls.Add(this.label87);
+            this.groupBox_SimulatorVersion.Controls.Add(this.label86);
             this.groupBox_SimulatorVersion.Controls.Add(this.button75);
             this.groupBox_SimulatorVersion.Controls.Add(this.label97);
             this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorSN);
             this.groupBox_SimulatorVersion.Controls.Add(this.label96);
             this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorID);
             this.groupBox_SimulatorVersion.Controls.Add(this.button31);
-            this.groupBox_SimulatorVersion.Controls.Add(this.label93);
-            this.groupBox_SimulatorVersion.Controls.Add(this.label94);
             this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorFWVersion);
-            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorHWVersion);
+            this.groupBox_SimulatorVersion.Controls.Add(this.textBox_SimulatorFWDateVersion);
             this.groupBox_SimulatorVersion.Location = new System.Drawing.Point(876, 10);
             this.groupBox_SimulatorVersion.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SimulatorVersion.Name = "groupBox_SimulatorVersion";
@@ -7599,6 +7591,26 @@ namespace Monitor
             this.groupBox_SimulatorVersion.TabIndex = 1;
             this.groupBox_SimulatorVersion.TabStop = false;
             this.groupBox_SimulatorVersion.Text = "Simulator Version";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(3, 40);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(87, 18);
+            this.label87.TabIndex = 16;
+            this.label87.Text = "FW ver Date:";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(7, 69);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(84, 18);
+            this.label86.TabIndex = 16;
+            this.label86.Text = "FW ver Num";
             // 
             // button75
             // 
@@ -7660,26 +7672,6 @@ namespace Monitor
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.button31_Click_1);
             // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(12, 69);
-            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(81, 18);
-            this.label93.TabIndex = 5;
-            this.label93.Text = "FW version:";
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(7, 37);
-            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(83, 18);
-            this.label94.TabIndex = 4;
-            this.label94.Text = "HW version:";
-            // 
             // textBox_SimulatorFWVersion
             // 
             this.textBox_SimulatorFWVersion.Location = new System.Drawing.Point(94, 65);
@@ -7689,14 +7681,14 @@ namespace Monitor
             this.textBox_SimulatorFWVersion.Size = new System.Drawing.Size(92, 26);
             this.textBox_SimulatorFWVersion.TabIndex = 3;
             // 
-            // textBox_SimulatorHWVersion
+            // textBox_SimulatorFWDateVersion
             // 
-            this.textBox_SimulatorHWVersion.Location = new System.Drawing.Point(94, 36);
-            this.textBox_SimulatorHWVersion.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_SimulatorHWVersion.Name = "textBox_SimulatorHWVersion";
-            this.textBox_SimulatorHWVersion.ReadOnly = true;
-            this.textBox_SimulatorHWVersion.Size = new System.Drawing.Size(92, 26);
-            this.textBox_SimulatorHWVersion.TabIndex = 1;
+            this.textBox_SimulatorFWDateVersion.Location = new System.Drawing.Point(94, 36);
+            this.textBox_SimulatorFWDateVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorFWDateVersion.Name = "textBox_SimulatorFWDateVersion";
+            this.textBox_SimulatorFWDateVersion.ReadOnly = true;
+            this.textBox_SimulatorFWDateVersion.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorFWDateVersion.TabIndex = 1;
             // 
             // groupBox33
             // 
@@ -7886,14 +7878,14 @@ namespace Monitor
             this.dataGridView_Block00.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block00.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block00.Name = "dataGridView_Block00";
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView_Block00.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block00.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block00.TabIndex = 27;
@@ -7933,9 +7925,6 @@ namespace Monitor
             // 
             // tabPage_Page1
             // 
-            this.tabPage_Page1.Controls.Add(this.button59);
-            this.tabPage_Page1.Controls.Add(this.button71);
-            this.tabPage_Page1.Controls.Add(this.button96);
             this.tabPage_Page1.Controls.Add(this.button98);
             this.tabPage_Page1.Controls.Add(this.button6);
             this.tabPage_Page1.Controls.Add(this.dataGridView_Block01);
@@ -7948,41 +7937,6 @@ namespace Monitor
             this.tabPage_Page1.TabIndex = 1;
             this.tabPage_Page1.Text = "Block 1";
             this.tabPage_Page1.UseVisualStyleBackColor = true;
-            // 
-            // button59
-            // 
-            this.button59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button59.Location = new System.Drawing.Point(748, 177);
-            this.button59.Margin = new System.Windows.Forms.Padding(2);
-            this.button59.Name = "button59";
-            this.button59.Size = new System.Drawing.Size(127, 61);
-            this.button59.TabIndex = 38;
-            this.button59.Text = "Copy to Optional <-----";
-            this.button59.UseVisualStyleBackColor = true;
-            this.button59.Click += new System.EventHandler(this.button59_Click_3);
-            // 
-            // button71
-            // 
-            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button71.Location = new System.Drawing.Point(748, 241);
-            this.button71.Margin = new System.Windows.Forms.Padding(2);
-            this.button71.Name = "button71";
-            this.button71.Size = new System.Drawing.Size(127, 70);
-            this.button71.TabIndex = 37;
-            this.button71.Text = "Compare Value and optional";
-            this.button71.UseVisualStyleBackColor = true;
-            // 
-            // button96
-            // 
-            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button96.Location = new System.Drawing.Point(748, 112);
-            this.button96.Margin = new System.Windows.Forms.Padding(2);
-            this.button96.Name = "button96";
-            this.button96.Size = new System.Drawing.Size(127, 61);
-            this.button96.TabIndex = 36;
-            this.button96.Text = "Copy to Optional ---->";
-            this.button96.UseVisualStyleBackColor = true;
-            this.button96.Click += new System.EventHandler(this.button96_Click_4);
             // 
             // button98
             // 
@@ -8018,14 +7972,14 @@ namespace Monitor
             this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
             this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block01.Name = "dataGridView_Block01";
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block01.TabIndex = 34;
@@ -8137,14 +8091,14 @@ namespace Monitor
             this.dataGridView_Block02.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block02.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block02.Name = "dataGridView_Block02";
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
@@ -8257,14 +8211,14 @@ namespace Monitor
             this.dataGridView_Block03.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block03.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block03.Name = "dataGridView_Block03";
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
@@ -8377,14 +8331,14 @@ namespace Monitor
             this.dataGridView_Block04.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block04.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block04.Name = "dataGridView_Block04";
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
@@ -8496,14 +8450,14 @@ namespace Monitor
             this.dataGridView_Block05.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block05.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block05.Name = "dataGridView_Block05";
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
@@ -8618,14 +8572,14 @@ namespace Monitor
             this.dataGridView_Block06.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block06.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block06.Name = "dataGridView_Block06";
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
@@ -8740,14 +8694,14 @@ namespace Monitor
             this.dataGridView_Block07.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block07.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block07.Name = "dataGridView_Block07";
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
@@ -8862,14 +8816,14 @@ namespace Monitor
             this.dataGridView_Block08.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block08.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block08.Name = "dataGridView_Block08";
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
@@ -8984,14 +8938,14 @@ namespace Monitor
             this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block09.Name = "dataGridView_Block09";
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
@@ -9106,14 +9060,14 @@ namespace Monitor
             this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block10.Name = "dataGridView_Block10";
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
@@ -9228,14 +9182,14 @@ namespace Monitor
             this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block11.Name = "dataGridView_Block11";
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
@@ -9350,14 +9304,14 @@ namespace Monitor
             this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block12.Name = "dataGridView_Block12";
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
@@ -10658,10 +10612,6 @@ namespace Monitor
             this.comboBox_SystemType.TabIndex = 77;
             this.comboBox_SystemType.MouseDown += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseDown);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // timer_General_100ms
             // 
             this.timer_General_100ms.Enabled = true;
@@ -10675,6 +10625,7 @@ namespace Monitor
             // 
             // serialPort
             // 
+            this.serialPort.ErrorReceived += new System.IO.Ports.SerialErrorReceivedEventHandler(this.serialPort_ErrorReceived);
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort_DataReceived);
             // 
             // groupBox36
@@ -11762,7 +11713,7 @@ namespace Monitor
             ServerLogger.LogMessage(Color.Black, Color.White, mye.StrData, New_Line = true, Show_Time = false);
         }
 
-        private static int LastIgn = 1;
+
         private static int TimerStatusRingWait = 0;
 
         //string[] UnitNumberToConnections = new string[30];
@@ -11772,511 +11723,16 @@ namespace Monitor
         private void GilServer_DataRecievedNotifyDelegate(object sender, EventArgs e)
         {
 
-            Gil_Server.Server.DataEventArgs mye = (Gil_Server.Server.DataEventArgs)e;
 
-            ASCIIEncoding encoder = new ASCIIEncoding();
 
-            // string IncomingString = System.Text.Encoding.Default.GetString(mye.BytesData);
-            string IncomingString = ByteArrayToString(mye.BytesData.ToArray());
-            //IncomingString = IncomingString.Replace("\0", "");
 
-            ServerLogger.LogMessage(Color.Black, Color.White, "\n\nData Received: ", New_Line = false, Show_Time = true);
-            ServerLogger.LogMessage(Color.Blue, Color.White, "Connection: " + mye.ConnectionNumber, New_Line = false, Show_Time = false);
-            //     ServerLogger.LogMessage(Color.Black, Color.White, " \" ", New_Line = false, Show_Time = false);
-            ServerLogger.LogMessage(Color.DarkGreen, Color.White, "    " + IncomingString, New_Line = true, Show_Time = false);
 
-            if (checkBox_EchoResponse.Checked == true)
-            {
 
-                string ACKBack = string.Format("[{0}],ACK", IncomingString);
-                byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                SendDataToServer(mye.ConnectionNumber, b2);
-            }
 
 
-            if (checkBox_ParseMessages.Checked == false)
-            {
-                return;
-            }
 
-            string[] ParseStrings = { "" };
-            string[] Key = { "" };
-            try
-            {
-                if (IncomingString.Contains(","))
-                {
-                    ParseStrings = IncomingString.Split(',');
-                    Key = ParseStrings[1].Split('=');
-                }
-            }
-            catch
-            {
-                ServerLogger.LogMessage(Color.Black, Color.White, "Data Not Valid: " + IncomingString, New_Line = true, Show_Time = true);
-                return;
-            }
 
-            //string[] UnitNumberToConnections = new List<string>();
-
-            if (ConnectionToIDdictionary.ContainsKey(mye.ConnectionNumber) == false)
-            {
-                ConnectionToIDdictionary.Add(mye.ConnectionNumber, ParseStrings[0]);
-            }
-            PrintDictineryIDKeys();
-            //UnitNumberToConnections[mye.ConnectionNumber] = ParseStrings[0];
-
-            //dataSource.Add("None");
-            //comboBox_ConnectionNumber.DataSource = dataSource;
-
-            //comboBox_ConnectionNumber.DataSource = mye.ConnectionNumber + " " + IncomingString[0];
-
-            if (Key[0] == "POS")
-            {
-
-                //if (checkBox_ServerView.Checked == true)
-                //{
-
-                //    LogIWatcher.LogMessage(Color.Brown, Color.White, "Source: Server", New_Line = false, Show_Time = true);
-                //    LogIWatcher.LogMessage(Color.Brown, Color.White, "POSITION Message Received: ", New_Line = false, Show_Time = true);
-
-                //    string PositionString =
-                //        "\n UNIT ID = " + ParseStrings[0].Replace(";", "") +
-                //        "\n STATE = " + Key[1] +
-                //        "\n GSM LINK QUALITY = " + ParseStrings[2] +
-                //        "\n GPS STATUS = " + ParseStrings[3] +
-                //        "\n GPS NUM OF SATELLITES = " + ParseStrings[4] +
-                //        "\n CURRENT TIME AND DATE = " + ParseStrings[5] + " " + ParseStrings[6] +
-                //        "\n LAST GPS TIME AND DATE = " + ParseStrings[7] + " " + ParseStrings[8] +
-                //        "\n GPS LATITUDE = " + ParseStrings[9] +
-                //        "\n GPS LONGTITUDE = " + ParseStrings[10] +
-                //        "\n GPS SPEED = " + ParseStrings[11] +
-                //        "\n GPS DIRECTION =" + ParseStrings[12] +
-                //        "\n TRIP DISTANCE  = " + ParseStrings[13] +
-                //        "\n TOTAL DISTANCE = " + ParseStrings[14] +
-                //        "\n ANALOG 1  = " + ParseStrings[15] +
-                //        "\n ANALOG 2  = " + ParseStrings[16] +
-                //        "\n MESSAGE NUMBER  = " + ParseStrings[17];
-                //    //  "\n GPRS MESSAGE  NUMBER = " + PosStrings[15];
-
-                //    //string.Format("\n UNIT ID = {0} \n STATE = {1}\n GSM LINK QUALITY = {2}", PosStrings[0].Replace(";",""), Key[1], PosStrings[2]); 
-                //    LogIWatcher.LogMessage(Color.Brown, Color.White, PositionString, New_Line = true, Show_Time = false);
-                //}
-
-                //  string ret = "";
-                //if (checkBox_ShowURL.Checked)
-                //{
-                //    ret = "http://maps.google.com/maps?q=" + ParseStrings[9] + "," + ParseStrings[10] + "( " + " Current Time: " + DateTime.Now + "\r\n   S1TimeStamp: " + " )" + "&z=14&ll=" + "," + "&z=17";
-                //    Show_WebBrowserUrl(ret);
-                //}
-
-                //if (checkBox_RecordLatLong.Checked)
-                //{
-
-                //    NumOfPositionMessage++;
-                //    //354869050154426,POS=1,GSMLinkQual,5,8,12/9/2013,10:55:11,12/9/2013,10:55:11,32.155636,34.920308,0,304.2,
-
-
-                //    KMl_text.Add("<Placemark>");
-                //    KMl_text.Add("<name>" + "[" + NumOfPositionMessage + "]" + " " + DateTime.Now + "  </name>");
-                //    KMl_text.Add("<Point>");
-                //    KMl_text.Add("<coordinates>" + ParseStrings[10] + "," + ParseStrings[9] + "</coordinates> ");
-                //    KMl_text.Add("</Point>");
-                //    KMl_text.Add("</Placemark> ");
-                //    KMl_text.Add("</Document> \n");
-                //    KMl_text.Add("</kml> \n");
-
-                //    File.Delete(log_file_S1_LatLong);
-                //    using (System.IO.StreamWriter file = new System.IO.StreamWriter(log_file_S1_LatLong))
-                //    {
-                //        foreach (string str in KMl_text)
-                //        {
-                //            file.WriteLine(str);
-                //        }
-                //        //for (int i = 0; i < KML_Index; i++)
-                //        //{
-
-                //        //}
-                //        KMl_text.RemoveAt(KMl_text.Count - 1);
-                //        KMl_text.RemoveAt(KMl_text.Count - 1);
-                //        // KML_Index -= 2;
-                //    }
-
-
-                //}
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ParseStrings[0], ParseStrings[ParseStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-
-            }
-            else
-            if (Key[0] == "STAT")
-            {
-
-                //if (checkBox_ServerView.Checked == true)
-                //{
-
-                //    LogIWatcher.LogMessage(Color.Brown, Color.White, "Source: Server", New_Line = false, Show_Time = true);
-                //    LogIWatcher.LogMessage(Color.Red, Color.White, "STATUS Message Received: ", New_Line = false, Show_Time = true);
-
-                //    string PositionString =
-                //        "\n UNIT ID = " + ParseStrings[0].Replace(";", "") +
-                //        "\n SYSTEM STATE = " + Key[1] +
-                //        "\n IGN STATE = " + ParseStrings[2] +
-                //        "\n GP1 = " + ParseStrings[3] +
-                //        "\n GP2 = " + ParseStrings[4] +
-                //        "\n GP3 = " + ParseStrings[5] +
-                //        "\n Main Power Source = " + ParseStrings[6] +
-                //        "\n Back Up Battery problem indication = " + ParseStrings[7] +
-                //        "\n OUTPUT 1  STATE = " + ParseStrings[8] +
-                //        "\n OUTPUT 2  STATE = " + ParseStrings[9] +
-                //        "\n OUTPUT 3  STATE = " + ParseStrings[10] +
-                //        "\n OUTPUT 4  STATE = " + ParseStrings[11] +
-                //        "\n DATE = " + ParseStrings[12] +
-                //        "\n TIME  = " + ParseStrings[13] +
-                //        "\n GPS LATITUDE = " + ParseStrings[14] +
-                //        "\n GPS LONGTITUDE = " + ParseStrings[15] +
-                //        "\n VEHICLE SPEED = " + ParseStrings[16] +
-                //        "\n SPEED EVENT  = " + ParseStrings[17] +
-                //        "\n BATTERY LOW EVENT =" + ParseStrings[18] +
-                //        "\n BATTERY CUT OFF EVENT  = " + ParseStrings[19] +
-                //        "\n ACCIDENT EVENT = " + ParseStrings[20] +
-                //        "\n TOWING EVENT = " + ParseStrings[21] +
-                //        "\n TILT EVENT = " + ParseStrings[22] +
-                //        "\n ANTI JAMMING  EVENT = " + ParseStrings[23] +
-                //        "\n MESSAGE NUMBER = " + ParseStrings[24];
-                //    //  "\n GPRS MESSAGE  NUMBER = " + PosStrings[15];
-
-                //    //string.Format("\n UNIT ID = {0} \n STATE = {1}\n GSM LINK QUALITY = {2}", PosStrings[0].Replace(";",""), Key[1], PosStrings[2]); 
-                //    LogIWatcher.LogMessage(Color.Red, Color.White, PositionString, New_Line = true, Show_Time = false);
-                //}
-
-                string[] ign = ParseStrings[1].Split('=');
-                int Newign = int.Parse(ign[1]);
-                if (Newign == 1 && LastIgn == 0)
-                {
-                    ServerLogger.LogMessage(Color.Blue, Color.White, "New Driving Log Opened", New_Line = true, Show_Time = true);
-
-                    //checkBox_RecordLatLong.Invoke(new EventHandler(delegate
-                    //{
-
-                    //    checkBox_RecordLatLong.Checked = false;
-                    //    checkBox_RecordLatLong.Checked = true;
-
-                    //}));
-
-
-                }
-
-                LastIgn = Newign;
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ParseStrings[0], ParseStrings[ParseStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-                // Gil: Comare if the Unit ID is the target Unit ID For encrypted GPRS
-                if (TimerStatusRingWait > 0 && SendOneTimeFlag == 1)
-                {
-                    if (ParseStrings[0].Replace(";", "") == textBox_UnitIDForSMS.Text)
-                    {
-                        //TimerStatusRingWait = 0;
-                        SendOneTimeFlag = 0;
-                        byte[] b2 = System.Text.Encoding.ASCII.GetBytes(txtDataTx.Text);
-                        SendDataToServer(mye.ConnectionNumber, b2);
-
-                        button_Ring.Invoke(new EventHandler(delegate
-                        {
-                            button_Ring.BackColor = Color.Orange;
-                        }));
-                    }
-                }
-            }
-            else
-            if (ParseStrings[1].Contains("ACK"))
-            {
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-                if (Key[0] == OpcodeToCompare)
-                {
-                    OpcodeToCompare = "";
-                    ServerLogger.LogMessage(Color.Black, Color.Yellow, "Command Recieved OK!! ", true, true);
-                    button_Ring.Invoke(new EventHandler(delegate
-                    {
-                        button_Ring.BackColor = Color.Green;
-                        button_Ring.Text = "Ring Ok";
-                    }));
-
-                }
-            }
-            else
-            if (Key[0] == "SMSSTAT?")
-            {
-
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-            }
-            else
-                if (Key[0] == "FMS1" || Key[0] == "FMS2" || Key[0] == "FMS3")
-            {
-
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                    if (Key[0] == "MBL1")
-            {
-
-
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                        if (Key[0] == "MBL2")
-            {
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                    if (Key[0] == "OBD")
-            {
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                        if (Key[0] == "GRM") //Gil: Garmin message
-            {
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                            if (Key[0] == "DATA1") //Gil: Garmin message
-            {
-
-
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-            if (Key[0] == "GETCONFIG?")
-            {
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-            }
-            else
-                if (Key[0] == "CONFIG")
-            {
-
-                string[] ACKStrings = IncomingString.Split(',');
-
-                if (checkBox_EchoResponse.Checked == true)
-                {
-
-                    string ACKBack = string.Format("{0},ACK,{1}", ACKStrings[0], ACKStrings[ACKStrings.Length - 1].Replace(";", ",;"));
-                    //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                    byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                    SendDataToServer(mye.ConnectionNumber, b2);
-                }
-
-                //SendToConfigPage(IncomingString, "Server");
-
-            }
-            else
-                        if (Key[0] == "FOTAU")
-            {
-
-
-                int PacketNumber = int.Parse(ParseStrings[2]);
-                //int NumOfTransmitPackets = int.Parse(FOTAStrings[3]);
-                //if (NumOfTransmitPackets > 5 || NumOfTransmitPackets < 1)
-                //{
-                //    ServerLogger.LogMessage(Color.Red, Color.White, "Warning: Number Of Received Packets is no between 1-5", New_Line = true, Show_Time = true);
-                //    return;
-                //}
-
-                //byte[] buffer = new byte[256];
-                if (ConfigFileName != null)
-                {
-                    // m_BinaryReader = new BinaryReader(File.Open(ConfigFileName, FileMode.Open));
-                    string TotalStrToSend = string.Empty;
-                    //for (int i = 0; i < NumOfTransmitPackets ; i++)
-                    //{
-                    int FrameNumber = (PacketNumber);
-                    if (FrameNumber == 999999)
-                    {
-                        //textBox_FOTAEnd.Invoke(new EventHandler(delegate
-                        //{
-                        IDToFOTA_Status[ParseStrings[0].Replace(";", "")] = "Finish";
-
-                        PrintFotaIDStatus();
-                        //textBox_FOTAEnd.BackColor = Color.Green;
-                        //textBox_FOTAEnd.Text = "Finish";
-                        //}));
-
-                        string ACKBack = string.Format("{0},ACK,{1}", ParseStrings[0], ParseStrings[ParseStrings.Length - 1].Replace(";", ",;"));
-                        //ServerLogger.LogMessage(Color.DarkSalmon, Color.White, "Send Echo Back:  " + ACKBack, New_Line = true, Show_Time = true);
-                        byte[] b2 = System.Text.Encoding.ASCII.GetBytes(ACKBack);
-                        SendDataToServer(mye.ConnectionNumber, b2);
-                    }
-                    else
-                        if (FrameNumber < int.Parse(textBox_TotalFrames1280Bytes.Text))
-                    {
-
-
-                        //m_BinaryReader.BaseStream.Position = 0;
-                        //int PositionInFile = 1280 * FrameNumber;
-                        //m_BinaryReader.ReadBytes(PositionInFile);
-                        //byte[] buffer = new byte[1280];
-                        //for(int i=0;i < 1280 ; i++)
-                        //{
-                        //    buffer[i] = 0x30;
-                        //}
-                        //byte[] temp = m_BinaryReader.ReadBytes(1280);
-
-                        //temp.CopyTo(buffer, 0);
-                        ////m_BinaryReader.Read(buffer, PositionInFile, 256);
-                        //// CS,@%@, @$@FOTAS,PACK NUM,256 bytes
-                        //string str = Encoding.ASCII.GetString(buffer);
-                        //byte b = CalcCheckSumbuffer(buffer);
-                        string SendString = string.Format("{0},{1},@%@", FOTAData[FrameNumber], ParseStrings[ParseStrings.Length - 1].Replace(";", ""));
-
-                        TotalStrToSend = SendString;
-
-
-                        IDToFOTA_Status[ParseStrings[0].Replace(";", "")] = FrameNumber.ToString() + " / " + textBox_TotalFrames1280Bytes.Text;
-
-                        PrintFotaIDStatus();
-                        //textBox_MaximumNumberReceivedRequest.Invoke(new EventHandler(delegate
-                        //{
-                        //    textBox_MaximumNumberReceivedRequest.Text = "";
-
-                        //    IDToFOTA_Status[ParseStrings[0]] = FrameNumber.ToString();
-
-                        //    foreach (var pair in IDToFOTA_Status)
-                        //    {
-
-                        //        textBox_MaximumNumberReceivedRequest.AppendText(pair.Key + " | " + pair.Value + " \n");
-
-                        //    }
-
-                        //    //textBox_MaximumNumberReceivedRequest.Text += "," + FrameNumber.ToString();
-                        //    //textBox_MaximumNumberReceivedRequest.SelectionStart = textBox_MaximumNumberReceivedRequest.TextLength;
-                        //    //textBox_MaximumNumberReceivedRequest.ScrollToCaret();
-
-                        //}));
-                    }
-                    //}
-
-                    if (TotalStrToSend != string.Empty)
-                    {
-                        byte[] ByteArr = Encoding.ASCII.GetBytes(TotalStrToSend);
-                        byte[] DataToSend = new byte[1500];
-                        for (int i = 0; i < 1500; i++)
-                        {
-                            DataToSend[i] = 0;
-                        }
-
-                        ByteArr.CopyTo(DataToSend, 0);
-                        //ServerLogger.LogMessage(Color.Black, Color.White, "Send Data Length : " + ByteArr.Length, New_Line = true, Show_Time = true);
-                        SendDataToServer(mye.ConnectionNumber, DataToSend);
-                    }
-
-                    m_BinaryReader.Close();
-
-                }
-                else
-                {
-                    ServerLogger.LogMessage(Color.Red, Color.White, "Warning: FOTA file wasn't Chosen", New_Line = true, Show_Time = true);
-                }
-
-            }
+            
 
 
 
@@ -12750,7 +12206,7 @@ namespace Monitor
 
 
                 ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
-                SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, button_ClearSerialPort, checkBox_S1Pause, checkBox_S1RecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
+                SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, button_ClearSerialPort, checkBox_SerialPortPause, checkBox_SerialPortRecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
                 SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
 
 
@@ -13356,23 +12812,7 @@ namespace Monitor
             //}
         }
 
-        private string ConfigFileName;
-        private void Button28_Click(object sender, EventArgs e)
-        {
 
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                ConfigFileName = openFileDialog1.FileName;
-
-                //TextBox_File_Name.Text = openFileDialog1.FileName;
-
-
-
-            }
-
-
-        }
 
         private int NumOfRemainCommands = 0;
         private void BackgroundWorker_ConfigSystem_DoWork(object sender, DoWorkEventArgs e)
@@ -14753,7 +14193,7 @@ namespace Monitor
             int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
-            textBox_SimulatorHWVersion.Text = string.Format("\n {0},{1}/{2}/{3}\n  ",
+            textBox_SimulatorFWDateVersion.Text = string.Format("\n {0},{1}/{2}/{3}\n  ",
                 UnitMajorVersion, VersionDay, VersionMonth, VersionYear);
         }
 
@@ -14794,7 +14234,7 @@ namespace Monitor
 
         private void GetSimulatorID(KratosProtocolFrame i_Parsedframe)
         {
-            textBox_SimulatorID.Text = i_Parsedframe.Data;
+            textBox_SimulatorFWVersion.Text = i_Parsedframe.Data;
             //    SendMessageToSystemLogger(String.Format("\n Simulator ID <<0x{0}>>\n ", i_Parsedframe.Data));
 
         }
@@ -14806,7 +14246,7 @@ namespace Monitor
             int VersionDay = int.Parse(i_Parsedframe.Data.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionMonth = int.Parse(i_Parsedframe.Data.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
             int VersionYear = int.Parse(i_Parsedframe.Data.Substring(8, 2) + i_Parsedframe.Data.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
-            textBox_SystemHWVersion.Text = (string.Format("\n {0},{1}/{2}/{3}\n  ",
+            textBox_SystemFWDateVersion.Text = (string.Format("\n {0},{1}/{2}/{3}\n  ",
                UnitMajorVersion, VersionDay, VersionMonth, VersionYear));
         }
 
@@ -14884,23 +14324,27 @@ namespace Monitor
 
                 switch (str_Address)
                 {
+                    case "0080":
+                        textBox_SimulatorFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                        break;
+
                     case "008A":
                         textBox_SimulatorID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_SimulatorSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     case "0090":
-                        textBox_SimulatorFWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     case "0094":
-                        textBox_SimulatorHWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     case "00F8":
@@ -15239,6 +14683,10 @@ namespace Monitor
                     //    textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                     //    break;
 
+                    case "0080":
+                        textBox_SystemFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                        break;
+
                     case "008A":
                         textBox_SystemID.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_SystemSN.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -15250,17 +14698,17 @@ namespace Monitor
                         break;
 
                     case "0090":
-                        textBox_SystemFWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemFWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     case "0094":
-                        textBox_SystemHWVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SystemHWVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     case "0096":
@@ -15976,7 +15424,7 @@ namespace Monitor
                     if (Result == 0)
                     {
                         SerialPortLogger.LogMessage(Color.White, Color.DarkOrange, "Timer End", true, true);
-                        checkBox_S1Pause.Checked = true;
+                        checkBox_SerialPortPause.Checked = true;
 
                         ResetTimer();
                     }
@@ -16752,89 +16200,15 @@ namespace Monitor
 
         }
 
-        private BinaryReader m_BinaryReader;
+
         private readonly Dictionary<int, string> FOTAData = new Dictionary<int, string>();
         private void Button5_Click(object sender, EventArgs e)
         {
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                ConfigFileName = openFileDialog1.FileName;
-
-                textBox_FOTA.Text = openFileDialog1.FileName;
-
-                try
-                {
-                    m_BinaryReader = new BinaryReader(File.Open(ConfigFileName, FileMode.Open));
-
-                    int length = (int)m_BinaryReader.BaseStream.Length;
-                    textBox_TotalFileLength.Text = length.ToString();
-                    textBox_TotalFrames1280Bytes.Text = (Math.Ceiling((decimal)length / 1280)).ToString();
-
-                    textBox_MaximumNumberReceivedRequest.Invoke(new EventHandler(delegate
-                    {
-
-                        textBox_MaximumNumberReceivedRequest.Text = "";
-
-                    }));
-
-
-                    //txtDataTx.Text = ";<1234>STARTFOTA=," + (Math.Ceiling((decimal)length / 1280)).ToString() + "," + length.ToString() + ",;";
-                    string StartFota = string.Format(";<{0}>STARTFOTA=,{1},{2},;", "", textBox_TotalFrames1280Bytes.Text, textBox_TotalFileLength.Text);
-                    txtDataTx.Text = StartFota;
-                    richTextBox_TextSendSMS.Text = StartFota;
-                    //AddCommandToCommands(StartFota);
-
-                    FOTAData.Clear();
-                    for (int i = 0; i < int.Parse(textBox_TotalFrames1280Bytes.Text); i++)
-                    {
-
-
-                        // int PositionInFile = 1280 * i;
-                        //  m_BinaryReader.ReadBytes(PositionInFile);
-                        byte[] buffer = new byte[1280];
-
-                        for (int k = 0; k < 1280; k++)
-                        {
-                            buffer[k] = 0x30;
-                        }
-                        byte[] temp = m_BinaryReader.ReadBytes(1280);
-
-                        temp.CopyTo(buffer, 0);
-
-                        string str = Encoding.ASCII.GetString(buffer);
-                        byte b = CalcCheckSumbuffer(buffer);
-                        string SendString = string.Format("@$@FOTAS,{0},{1},{2}", i, Encoding.ASCII.GetString(buffer), CalcCheckSumbuffer(buffer).ToString("x2"));
-
-                        FOTAData[i] = SendString;
-
-
-                    }
-
-                    m_BinaryReader.Close();
+           
 
 
 
-
-                    button_StartFOTAProcess.Enabled = true;
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    ServerLogger.LogMessage(Color.Blue, Color.White, ex.ToString(), New_Line = true, Show_Time = false);
-                }
-
-                if (m_BinaryReader != null && ConfigFileName != null)
-                {
-                    button_StartFOTA.Enabled = true;
-                }
-                //AllFileLines = File.ReadAllText(ConfigFileName);
-
-
-
-            }
+            
         }
 
         private void TextBox_FOTA_TextChanged(object sender, EventArgs e)
@@ -17155,33 +16529,7 @@ namespace Monitor
         {
             //TextBox_SourceConfig_Clear();
 
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
-            {
-                ConfigFileName = openFileDialog1.FileName;
 
-                //textBox_SourceConfig.Text = "File have been chosen: \n" + openFileDialog1.FileName;
-
-                string[] lines = System.IO.File.ReadAllLines(ConfigFileName);
-
-                foreach (string line in lines)
-                {
-                    if (line.Contains("//") || line == "")
-                    {
-
-                    }
-                    else
-                    {
-                        string str;
-                        //";{CONFIG_START}," + SendStr + ",{CONFIG_END};";
-                        str = line.Replace(";{CONFIG_START},,", "");
-                        str = str.Replace(",{CONFIG_END};", "");
-                        //SendToConfigPage(str, "File");
-                    }
-                }
-
-
-            }
 
 
 
@@ -18740,7 +18088,7 @@ namespace Monitor
             CheckConfigTextboxValidData((TextBox)sender, ConfigDataType.Boolean);
         }
 
-        private string OpcodeToCompare = "";
+
         private int SendOneTimeFlag = 0;
 
         //        private void Button_Ring_Click(object sender, EventArgs e)
@@ -22966,6 +22314,8 @@ Note: eStatus enum 
             Read_Register_From_UUT(" 00 90", "00 08");
             await Task.Delay(500);
             Read_Register_From_UUT(" 00 94", "00 08");
+            await Task.Delay(500);
+            Read_Register_From_UUT(" 00 80");
 
 
         }
@@ -22985,15 +22335,17 @@ Note: eStatus enum 
             await Task.Delay(500);
             Read_Register_From_Simulator(" 00 94", "00 08");
             await Task.Delay(500);
+            Read_Register_From_Simulator(" 00 80");
+            await Task.Delay(500);
         }
 
         private void ClearVersions()
         {
-            textBox_SimulatorHWVersion.Text = "";
+            textBox_SimulatorFWDateVersion.Text = "";
             textBox_SimulatorFWVersion.Text = "";
             textBox_SimulatorSN.Text = "";
             textBox_SimulatorID.Text = "";
-            textBox_SystemHWVersion.Text = "";
+            textBox_SystemFWDateVersion.Text = "";
             textBox_SystemFWVersion.Text = "";
         }
 
@@ -24290,13 +23642,13 @@ Note: eStatus enum 
 
 
 
-            if (textBox_SystemHWVersion.Text == "")
+            if (textBox_SystemFWDateVersion.Text == "")
             {
                 button70_Click_1(null, null);
                 await Task.Delay(2000);
             }
 
-            if (textBox_SimulatorHWVersion.Text == "")
+            if (textBox_SimulatorFWDateVersion.Text == "")
             {
                 button31_Click_1(null, null);
                // await Task.Delay(500);
@@ -27337,6 +26689,14 @@ This Process can take 1 minute.";
 
             }
             TxLabelTimerBlink = 5;
+        }
+
+        private void serialPort_ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
+        {
+            SerialPortLogger.LogMessage(Color.White, Color.Red, "SerialPort Error received: ", New_Line = true, Show_Time = true);
+            SerialPortLogger.LogMessage(Color.White, Color.Red, e.ToString(), New_Line = true, Show_Time = true);
+            //SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
+           // SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
