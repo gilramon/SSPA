@@ -17,8 +17,7 @@
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Monitor</RootNamespace>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>Monitor.MainForm</StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -40,7 +39,7 @@
     <ProductName>ComCenterGilProductName</ProductName>
     <PublisherName>Gil Ramon</PublisherName>
     <SuiteName>ComCenterGilsuite</SuiteName>
-    <ApplicationRevision>52</ApplicationRevision>
+    <ApplicationRevision>55</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -194,12 +193,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Excel\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Kratos eyal gmi.jpg" />
     <Content Include="Kratos icon.ico" />
     <Content Include="Kratos png.png" />
+    <None Include="Resources\Eyal gmi.jpg" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Kratos icon.ico">
