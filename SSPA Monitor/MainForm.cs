@@ -26127,14 +26127,14 @@ This Process can take 1 minute.";
                 if (FlashCheck == true)
                 {
 
-                    WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 20, Color.LightGreen);
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 60, Color.LightGreen);
                     progressBar_UserStatus.Value = 100;
                     progressBar_UserStatus.BackColor = Color.Green;
                     progressBar_UserStatus.ForeColor = Color.Green;
                 }
                 else
                 {
-                    WriteToSystemStatus(String.Format(Environment.NewLine + " Something got wrong during verification :-( "), 60, Color.OrangeRed);
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Something got wrong during verification :-( "), 120, Color.OrangeRed);
                     progressBar_UserStatus.Value = 100;
                     progressBar_UserStatus.BackColor = Color.OrangeRed;
                     progressBar_UserStatus.ForeColor = Color.OrangeRed;
