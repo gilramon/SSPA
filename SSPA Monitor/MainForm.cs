@@ -6,14 +6,11 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.IO.Pipes;
 using System.IO.Ports;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Numerics;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -739,6 +736,9 @@ namespace Monitor
         private TextBox textBox_CLISendCommands;
         private CheckBox checkBox_CLIDeleteAfterSend;
         private Button button_CLISend;
+        private GroupBox groupBox_AllCommands;
+        private Label label75;
+        private TextBox textBox_CommandHelp;
         private static readonly string PREAMBLE = "23";
 
 
@@ -793,21 +793,21 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1497,6 +1497,9 @@ namespace Monitor
             this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
             this.button_CLISend = new System.Windows.Forms.Button();
             this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
+            this.groupBox_AllCommands = new System.Windows.Forms.GroupBox();
+            this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
+            this.label75 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1612,6 +1615,7 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.SuspendLayout();
             this.groupBox_KratosMonitor.SuspendLayout();
             this.groupBox_CLISendCommand.SuspendLayout();
+            this.groupBox_AllCommands.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1753,13 +1757,13 @@ namespace Monitor
             // 
             // tabControl_Main
             // 
-            this.tabControl_Main.Controls.Add(this.tabPage_charts);
             this.tabControl_Main.Controls.Add(this.tabPage_ServerTCP);
             this.tabControl_Main.Controls.Add(this.tabPage_ClientTCP);
             this.tabControl_Main.Controls.Add(this.tabPage_SerialPort);
             this.tabControl_Main.Controls.Add(this.tabPage_GenericFrame);
             this.tabControl_Main.Controls.Add(this.tabPage_Commands);
             this.tabControl_Main.Controls.Add(this.tabPage3038WBPAA);
+            this.tabControl_Main.Controls.Add(this.tabPage_charts);
             this.tabControl_Main.Location = new System.Drawing.Point(4, 5);
             this.tabControl_Main.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl_Main.Name = "tabControl_Main";
@@ -1946,17 +1950,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -3385,7 +3389,7 @@ namespace Monitor
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox_CLI_ALLCommands);
+            this.tabPage1.Controls.Add(this.groupBox_AllCommands);
             this.tabPage1.Controls.Add(this.groupBox_CLISendCommand);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -6252,14 +6256,14 @@ namespace Monitor
             this.dataGridView_Block00.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block00.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block00.Name = "dataGridView_Block00";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_Block00.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block00.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block00.TabIndex = 27;
@@ -6346,14 +6350,14 @@ namespace Monitor
             this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
             this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block01.Name = "dataGridView_Block01";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block01.TabIndex = 34;
@@ -6465,14 +6469,14 @@ namespace Monitor
             this.dataGridView_Block02.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block02.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block02.Name = "dataGridView_Block02";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
@@ -6585,14 +6589,14 @@ namespace Monitor
             this.dataGridView_Block03.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block03.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block03.Name = "dataGridView_Block03";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
@@ -6705,14 +6709,14 @@ namespace Monitor
             this.dataGridView_Block04.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block04.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block04.Name = "dataGridView_Block04";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
@@ -6824,14 +6828,14 @@ namespace Monitor
             this.dataGridView_Block05.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block05.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block05.Name = "dataGridView_Block05";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
@@ -6946,14 +6950,14 @@ namespace Monitor
             this.dataGridView_Block06.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block06.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block06.Name = "dataGridView_Block06";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
@@ -7068,14 +7072,14 @@ namespace Monitor
             this.dataGridView_Block07.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block07.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block07.Name = "dataGridView_Block07";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
@@ -7190,14 +7194,14 @@ namespace Monitor
             this.dataGridView_Block08.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block08.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block08.Name = "dataGridView_Block08";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
@@ -7312,14 +7316,14 @@ namespace Monitor
             this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block09.Name = "dataGridView_Block09";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
@@ -7434,14 +7438,14 @@ namespace Monitor
             this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block10.Name = "dataGridView_Block10";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
@@ -7556,14 +7560,14 @@ namespace Monitor
             this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block11.Name = "dataGridView_Block11";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
@@ -7678,14 +7682,14 @@ namespace Monitor
             this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block12.Name = "dataGridView_Block12";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
@@ -9743,7 +9747,7 @@ namespace Monitor
             this.textBox_CLISendCommands.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CLISendCommands.Name = "textBox_CLISendCommands";
             this.textBox_CLISendCommands.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_CLISendCommands.Size = new System.Drawing.Size(620, 31);
+            this.textBox_CLISendCommands.Size = new System.Drawing.Size(829, 31);
             this.textBox_CLISendCommands.TabIndex = 0;
             // 
             // checkBox_CLIDeleteAfterSend
@@ -9775,10 +9779,42 @@ namespace Monitor
             "1",
             "2",
             "3"});
-            this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(5, 104);
+            this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
-            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(332, 454);
+            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
             this.listBox_CLI_ALLCommands.TabIndex = 71;
+            // 
+            // groupBox_AllCommands
+            // 
+            this.groupBox_AllCommands.Controls.Add(this.label75);
+            this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
+            this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
+            this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
+            this.groupBox_AllCommands.Name = "groupBox_AllCommands";
+            this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 445);
+            this.groupBox_AllCommands.TabIndex = 72;
+            this.groupBox_AllCommands.TabStop = false;
+            this.groupBox_AllCommands.Text = "Command list";
+            // 
+            // textBox_CommandHelp
+            // 
+            this.textBox_CommandHelp.Location = new System.Drawing.Point(377, 44);
+            this.textBox_CommandHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CommandHelp.Multiline = true;
+            this.textBox_CommandHelp.Name = "textBox_CommandHelp";
+            this.textBox_CommandHelp.ReadOnly = true;
+            this.textBox_CommandHelp.Size = new System.Drawing.Size(192, 190);
+            this.textBox_CommandHelp.TabIndex = 114;
+            this.textBox_CommandHelp.TabStop = false;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(378, 20);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(41, 18);
+            this.label75.TabIndex = 115;
+            this.label75.Text = "Help:";
             // 
             // MainForm
             // 
@@ -9972,6 +10008,8 @@ namespace Monitor
             this.groupBox_KratosMonitor.PerformLayout();
             this.groupBox_CLISendCommand.ResumeLayout(false);
             this.groupBox_CLISendCommand.PerformLayout();
+            this.groupBox_AllCommands.ResumeLayout(false);
+            this.groupBox_AllCommands.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -10231,7 +10269,7 @@ namespace Monitor
 
 
 
-            
+
 
 
 
@@ -10684,7 +10722,7 @@ namespace Monitor
         {
             try
             {
-               
+
 
                 //tabControl_Main.TabPages.RemoveAt(0);
                 //tabControl_Main.TabPages.RemoveAt(0);
@@ -10933,7 +10971,7 @@ namespace Monitor
             //////Block 1
             ///"0
             int row = 0;
-            for(i=-31; i< 94; i=i+4)
+            for (i = -31; i < 94; i = i + 4)
             {
 
                 dataGridView_Block01.Rows.Add();
@@ -10942,14 +10980,7 @@ namespace Monitor
 
                 dataGridView_Block01.Rows.Add();
                 dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
-                row++; 
-                dataGridView_Block01.Rows.Add();
-                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
                 row++;
-
-                dataGridView_Block01.Rows.Add();
-                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
-                row++; 
                 dataGridView_Block01.Rows.Add();
                 dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
                 row++;
@@ -10957,7 +10988,14 @@ namespace Monitor
                 dataGridView_Block01.Rows.Add();
                 dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
                 row++;
-                
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
+                dataGridView_Block01.Rows.Add();
+                dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
+                row++;
+
                 dataGridView_Block01.Rows.Add();
                 dataGridView_Block01.Rows[row].HeaderCell.Value = String.Format("{0}-{1} deg PA_VVA_T1_FREQ{2}", i, i + 3, (row % 8 + 1));
                 row++;
@@ -10983,18 +11021,18 @@ namespace Monitor
 
 
             row = 0;
-            for (i = -31; i < 95; i=i+4)
+            for (i = -31; i < 95; i = i + 4)
             {
                 dataGridView_Block03.Rows.Add();
-                dataGridView_Block03.Rows[row].HeaderCell.Value = String.Format("Vgg_DAC_T{0} T = {1} ÷ {2}", row,i,i+3);
+                dataGridView_Block03.Rows[row].HeaderCell.Value = String.Format("Vgg_DAC_T{0} T = {1} ÷ {2}", row, i, i + 3);
                 row++;
             }
 
             row = 0;
-            for(i=0;i<26;i++)
+            for (i = 0; i < 26; i++)
             {
                 dataGridView_Block04.Rows.Add();
-                dataGridView_Block04.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_D{0}",i);
+                dataGridView_Block04.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_D{0}", i);
                 row++;
             }
 
@@ -11031,7 +11069,7 @@ namespace Monitor
                 row++;
             }
 
-            
+
 
             row = 0;
             for (i = 0; i < 33; i++)
@@ -12222,7 +12260,7 @@ namespace Monitor
             return ret;
         }
 
-        void WriteToSystemStatus(String i_Message,uint i_Time,Color i_Color)
+        void WriteToSystemStatus(String i_Message, uint i_Time, Color i_Color)
         {
             textBox_SystemStatus.AppendText(i_Message + Environment.NewLine + Environment.NewLine);
             textBox_SystemStatus.BackColor = i_Color;
@@ -12240,7 +12278,7 @@ namespace Monitor
 
         }
 
-        
+
 
         private string UnHandledAddressSimulator(String i_Address)
         {
@@ -12795,7 +12833,7 @@ namespace Monitor
             //        //    ICDMajor, ICDMinor ,UnitMajorNumber, UnitMinorNumber, VersionDay, VersionMonth, VersionYear);
         }
 
-        
+
 
         private void ACK_ReadRegisterReceivedSimulator(KratosProtocolFrame i_Parsedframe)
         {
@@ -12856,7 +12894,7 @@ namespace Monitor
                 MessageBox.Show(ex.ToString());
             }
         }
-        
+
 
         void WriteFlashACKReceived(KratosProtocolFrame i_Parsedframe)
         {
@@ -12906,7 +12944,7 @@ namespace Monitor
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 String str_Status = GetBytesFromData(i_Parsedframe.Data, 5, 4);
 
-                
+
 
 
                 //  int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
@@ -12918,12 +12956,12 @@ namespace Monitor
 
                         String message = String.Format("Chip Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
                         WriteToSystemStatus(message, 4, Color.Turquoise);
-                        
+
                         break;
 
                     case "31":
 
-                         message = String.Format(" Block Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
+                        message = String.Format(" Block Flash erased :  Address[{0}] Status: [{1}]", str_Address, str_Status);
                         WriteToSystemStatus(message, 4, Color.Cyan);
 
                         break;
@@ -12933,8 +12971,8 @@ namespace Monitor
                         UnHandledAddress(str_Address);
                         break;
                 }
-            
-                
+
+
             }
             catch (Exception ex)
             {
@@ -12948,10 +12986,10 @@ namespace Monitor
         {
             try
             {
-                
+
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 String str_InternalAddress = GetBytesFromData(i_Parsedframe.Data, 3, 2);
-                  int m_InternalAddress = int.Parse(str_InternalAddress, System.Globalization.NumberStyles.HexNumber);
+                int m_InternalAddress = int.Parse(str_InternalAddress, System.Globalization.NumberStyles.HexNumber);
 
                 WriteToSystemStatus(String.Format("Flash Address received: [{0}] internal Address [{1}]", str_Address, str_InternalAddress), 1, Color.White);
 
@@ -12964,16 +13002,16 @@ namespace Monitor
                         {
 
                             m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
-     
+
                         }
 
                         break;
 
                     case "0001":
-                         m_Datagrid = dataGridView_Block01;
-                       m_InternalAddress = m_InternalAddress / 2;
+                        m_Datagrid = dataGridView_Block01;
+                        m_InternalAddress = m_InternalAddress / 2;
                         int row = 0;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count -1) && row < 128; i++)
+                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1) && row < 128; i++)
                         {
                             String DataToWriteToRow = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
                             m_Datagrid.Rows[row + m_InternalAddress].Cells[0].Value = DataToWriteToRow;
@@ -13125,7 +13163,7 @@ namespace Monitor
             }
         }
 
-    private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
+        private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
         {
             int DecimalNumber;
             try
@@ -13137,7 +13175,7 @@ namespace Monitor
 
 
 
-                
+
                 switch (str_Address)
                 {
                     case "0003":
@@ -13205,7 +13243,7 @@ namespace Monitor
 
                     case "00A0":
                         textBox_StatusUUT25.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x00FF).ToString();
-                        textBox_StatusUUT26.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00 ) >> 8).ToString();
+                        textBox_StatusUUT26.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00) >> 8).ToString();
                         break;
 
 
@@ -13264,10 +13302,10 @@ namespace Monitor
                         // textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                      //  textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //  textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, ((float)DecimalNumber )/4096*1.8/0.18  );
+                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, ((float)DecimalNumber) / 4096 * 1.8 / 0.18);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
@@ -13305,7 +13343,7 @@ namespace Monitor
                         textBox_StatusUUT14.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 +27);
+                        textBox_StatusUUT15.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 + 27);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
                         if (DecimalNumber < 0x1F4)
@@ -13355,20 +13393,20 @@ namespace Monitor
                         textBox_StatusUUT32.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
-                        
+
 
                     default:
                         UnHandledAddress(str_Address);
                         break;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
 
-       
+
 
 
         /// <summary>
@@ -13696,7 +13734,7 @@ namespace Monitor
                             KratosProtocolLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
                             KratosProtocolLogger.LogMessage(Color.Blue, Color.LightGray, Result.ToString(), true, false);
 
-                            
+
 
                             GlobalSystemResultReceived += Result.ToString();
 
@@ -13711,9 +13749,9 @@ namespace Monitor
                             {
                                 byte[] Onlythe40FirstBytes = i_IncomeBuffer.Skip(0).Take(200).ToArray();
                                 richTextBox_ClientRxPrintText("[" + DateTime.Now.TimeOfDay.ToString().Substring(0, 11) + "] " + ByteArrayToString(Onlythe40FirstBytes) + "\n \n");
-                            //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
+                                //richTextBox_ClientRx.AppendText("[" + dt.TimeOfDay.ToString().Substring(0, 11) + "] " + Encoding.ASCII.GetString(buffer) + " \n");
 
-                        }));
+                            }));
 
                         }
 
@@ -14681,11 +14719,11 @@ namespace Monitor
         private readonly Dictionary<int, string> FOTAData = new Dictionary<int, string>();
         private void Button5_Click(object sender, EventArgs e)
         {
-           
 
 
 
-            
+
+
         }
 
 
@@ -14719,7 +14757,7 @@ namespace Monitor
 
 
 
-      
+
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -16214,7 +16252,7 @@ namespace Monitor
         private void CheckBox_OpenPortSMS_CheckedChanged(object sender, EventArgs e)
         {
 
-            
+
         }
 
 
@@ -16973,7 +17011,7 @@ namespace Monitor
                      " ,Parity = " + serialPort.Parity,
                      New_Line = true, Show_Time = true);
 
-                  //  button_OpenPort.Text = "Close";
+                    //  button_OpenPort.Text = "Close";
                     button_OpenPort.BackColor = Color.LightGreen;
                     label_SerialPortConnected.BackColor = Color.LightGreen;
                     label_SerialPortStatus.Text = cmb_PortName.Text + "   \n" + cmbBaudRate.Text;
@@ -17358,7 +17396,7 @@ namespace Monitor
                     KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
                     KratosProtocolLogger.LogMessage(Color.Purple, Color.LightGray, SentFrameGlobal.ToString(), true, false);
 
-                    
+
                 }
                 else
                 {
@@ -17693,7 +17731,7 @@ RX frame: 	0x004D 0x002A 0x00000000 0x77
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "26";
-           // textBox_data.Text = textBox_SetPSUOutput.Text;
+            // textBox_data.Text = textBox_SetPSUOutput.Text;
 
             SendDataToSystem();
         }
@@ -17874,7 +17912,7 @@ RX frame: 	0x004D 0x005C 0x00000001 + RX Data + checksum
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "33";
-           // textBox_data.Text = textBox_SetDCAWithBusMode.Text;
+            // textBox_data.Text = textBox_SetDCAWithBusMode.Text;
 
             SendDataToSystem();
         }
@@ -19813,7 +19851,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "90";
-           // textBox_data.Text = textBox_TxInhibit.Text;
+            // textBox_data.Text = textBox_TxInhibit.Text;
 
             SendDataToSystem();
         }
@@ -19833,7 +19871,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "93";
-      //      textBox_data.Text = textBox4.Text;
+            //      textBox_data.Text = textBox4.Text;
 
             SendDataToSystem();
         }
@@ -19842,7 +19880,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "94";
-        //    textBox_data.Text = textBox5.Text;
+            //    textBox_data.Text = textBox5.Text;
 
             SendDataToSystem();
         }
@@ -19857,7 +19895,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "98";
-      //      textBox_data.Text = textBox_PulseGenParms.Text;
+            //      textBox_data.Text = textBox_PulseGenParms.Text;
 
             SendDataToSystem();
         }
@@ -19868,7 +19906,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9A";
-      //      textBox_data.Text = textBox_RFGenParms.Text;
+            //      textBox_data.Text = textBox_RFGenParms.Text;
 
             SendDataToSystem();
         }
@@ -19877,7 +19915,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9B";
-      //      textBox_data.Text = textBox12.Text;
+            //      textBox_data.Text = textBox12.Text;
 
             SendDataToSystem();
         }
@@ -19886,7 +19924,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9C";
-    //        textBox_data.Text = textBox13.Text;
+            //        textBox_data.Text = textBox13.Text;
 
             SendDataToSystem();
         }
@@ -19895,7 +19933,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9D";
-      //      textBox_data.Text = textBox14.Text;
+            //      textBox_data.Text = textBox14.Text;
 
             SendDataToSystem();
         }
@@ -19906,7 +19944,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "9F";
-    //        textBox_data.Text = textBox15.Text;
+            //        textBox_data.Text = textBox15.Text;
 
             SendDataToSystem();
         }
@@ -20014,7 +20052,7 @@ Note: eStatus enum 
         private async void button70_Click_1(object sender, EventArgs e)
         {
             await Task.Delay(500);
-            Read_Register_From_UUT(" 00 8A","00 04");
+            Read_Register_From_UUT(" 00 8A", "00 04");
             await Task.Delay(500);
             Read_Register_From_UUT(" 00 90", "00 08");
             await Task.Delay(500);
@@ -20064,7 +20102,7 @@ Note: eStatus enum 
                 }
             }
 
-            
+
 
 
 
@@ -20247,7 +20285,7 @@ Note: eStatus enum 
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
-                if(m_TextBox.BackColor == Color.LightGreen)
+                if (m_TextBox.BackColor == Color.LightGreen)
                 {
 
                     int.TryParse(m_TextBox.Text, out int Data);
@@ -20260,7 +20298,7 @@ Note: eStatus enum 
                     await Task.Delay(500);
 
                     Write_Register_To_UUT(" 00 01", "04 00");
- 
+
 
                 }
 
@@ -20410,15 +20448,15 @@ Note: eStatus enum 
             }
         }
 
-      
-       
-        
-
-       
 
 
 
-        
+
+
+
+
+
+
 
         void SetControlGenerators()
         {
@@ -20459,7 +20497,7 @@ Note: eStatus enum 
 
 
             SetControlGenerators();
-            
+
         }
 
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
@@ -20482,7 +20520,7 @@ Note: eStatus enum 
 
 
 
-            
+
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
@@ -20945,7 +20983,7 @@ Note: eStatus enum 
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-            //    textBox_SetSystemMode.Text = "01";
+                //    textBox_SetSystemMode.Text = "01";
 
                 Checkbx.BackColor = Color.LightGreen;
             }
@@ -20961,7 +20999,7 @@ Note: eStatus enum 
         private void textBox84_TextChanged(object sender, EventArgs e)
         {
             TextBox txtbox = (TextBox)sender;
-            if(int.TryParse(txtbox.Text, out int Num) == true)
+            if (int.TryParse(txtbox.Text, out int Num) == true)
             {
                 if (Num >= 0 && Num <= 7)
                 {
@@ -21177,7 +21215,7 @@ Note: eStatus enum 
             groupBox_SystemMode.Enabled = false;
 
 
-            
+
             Write_Register_To_UUT("00 01", "01 00");
             await Task.Delay(Delay);
 
@@ -21193,10 +21231,10 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 03");
             await Task.Delay(Delay);
 
-            Read_Register_From_UUT("00 B7","00 14");
+            Read_Register_From_UUT("00 B7", "00 14");
             await Task.Delay(Delay);
 
-            Read_Register_From_UUT("00 A7","00 0C");
+            Read_Register_From_UUT("00 A7", "00 0C");
             await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 88");
@@ -21238,7 +21276,7 @@ Note: eStatus enum 
             if (textBox_SimulatorFWDateVersion.Text == "")
             {
                 button31_Click_1(null, null);
-               // await Task.Delay(500);
+                // await Task.Delay(500);
             }
 
             groupBox_UUTVersion.Enabled = true;
@@ -21259,7 +21297,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "35";
-         //   textBox_data.Text = textBox_SetSystemMode.Text;
+            //   textBox_data.Text = textBox_SetSystemMode.Text;
 
             SendDataToSystem();
         }
@@ -21272,7 +21310,7 @@ Note: eStatus enum 
 
             if (buffer != null && buffer.Length == 2)
             {
-                if(txtbox.Text == "0007")
+                if (txtbox.Text == "0007")
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -21292,14 +21330,14 @@ Note: eStatus enum 
         {
             //TextBox m_TextBox = (TextBox)sender;
 
-                if (textBox_SystemMode.BackColor == Color.LightGreen)
-                {
+            if (textBox_SystemMode.BackColor == Color.LightGreen)
+            {
 
                 Write_Register_To_UUT(" 00 03", textBox_SystemMode.Text);
 
-                }
+            }
 
-            
+
         }
 
         private void textBox_FTbit_TextChanged(object sender, EventArgs e)
@@ -21467,12 +21505,12 @@ Note: eStatus enum 
             }
         }
 
-        void  Read_Register_From_UUT(String i_Address, String i_Length = "00 02")
+        void Read_Register_From_UUT(String i_Address, String i_Length = "00 02")
         {
-         //   textBox_ReadRegister.Text = String.Format("02 {0} {1}", i_Address, i_Length);
+            //   textBox_ReadRegister.Text = String.Format("02 {0} {1}", i_Address, i_Length);
 
             button_ReadFromRegister_Click(null, null);
-  
+
         }
 
         void Write_Register_To_UUT(String i_Address, String i_Data)
@@ -21485,7 +21523,7 @@ Note: eStatus enum 
 
         void Write_Register_To_Simulator(String i_Address, String i_Data)
         {
-           // textBox_WriteToSimulator.Text = String.Format("01 {0} {1}", i_Address, i_Data);
+            // textBox_WriteToSimulator.Text = String.Format("01 {0} {1}", i_Address, i_Data);
 
             button_WriteRegisterToSimulator_Click(null, null);
 
@@ -21494,7 +21532,7 @@ Note: eStatus enum 
 
         void Read_Register_From_Simulator(String i_Address, String i_Length = "00 02")
         {
-         //   textBox_ReadToSimulator.Text = String.Format("02 {0} {1}", i_Address, i_Length);
+            //   textBox_ReadToSimulator.Text = String.Format("02 {0} {1}", i_Address, i_Length);
 
             button_ReadRegisterToSimulator_Click(null, null);
 
@@ -21509,7 +21547,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "52";
-          //  textBox_data.Text = textBox_ReadRegister.Text;
+            //  textBox_data.Text = textBox_ReadRegister.Text;
 
             SendDataToSystem();
         }
@@ -21530,7 +21568,7 @@ Note: eStatus enum 
                 txtbox.BackColor = Color.Red;
             }
 
-            
+
         }
 
         private void textBox37_TextChanged(object sender, EventArgs e)
@@ -21541,7 +21579,7 @@ Note: eStatus enum 
 
             if (buffer != null && buffer.Length == 2)
             {
-               // ReadFromRegister(textBox37.Text);
+                // ReadFromRegister(textBox37.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -21549,7 +21587,7 @@ Note: eStatus enum 
                 txtbox.BackColor = Color.Red;
             }
 
-            
+
         }
 
         private void textBox38_TextChanged(object sender, EventArgs e)
@@ -21560,7 +21598,7 @@ Note: eStatus enum 
 
             if (buffer != null && buffer.Length == 2)
             {
-               // Write_Register(textBox36.Text, textBox38.Text);
+                // Write_Register(textBox36.Text, textBox38.Text);
                 txtbox.BackColor = Color.LightGreen;
             }
             else
@@ -21578,7 +21616,7 @@ Note: eStatus enum 
 
         void Read_Flash(String i_Page, String i_PageInternalAddress = "00 00")
         {
-          //  textBox_ReadFlash.Text = String.Format("02 {0} {1}", i_Page, i_PageInternalAddress);
+            //  textBox_ReadFlash.Text = String.Format("02 {0} {1}", i_Page, i_PageInternalAddress);
 
             button_ReadFlash_Click(null, null);
         }
@@ -21596,7 +21634,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "74";
-         //   textBox_data.Text = textBox_EraseFlash.Text;
+            //   textBox_data.Text = textBox_EraseFlash.Text;
 
             SendDataToSystem();
         }
@@ -21653,7 +21691,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "72";
-          //  textBox_data.Text = textBox_WriteFlash.Text;
+            //  textBox_data.Text = textBox_WriteFlash.Text;
 
             SendDataToSystem();
         }
@@ -21662,7 +21700,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "70";
-          //  textBox_data.Text = textBox_ReadFlash.Text;
+            //  textBox_data.Text = textBox_ReadFlash.Text;
 
             SendDataToSystem();
         }
@@ -21722,7 +21760,7 @@ Note: eStatus enum 
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                   // SetU19Values();
+                    // SetU19Values();
 
                     Write_Register_To_UUT(" 00 30", "00 04");
                     await Task.Delay(500);
@@ -21964,7 +22002,7 @@ Note: eStatus enum 
 
 
 
-  
+
 
         private void button_SystemMode_MouseClick(object sender, MouseEventArgs e)
         {
@@ -22017,9 +22055,9 @@ Note: eStatus enum 
             try
             {
                 TextBox m_TextBox = (TextBox)sender;
-  
-                    if ((e.KeyCode == Keys.Enter ) && m_TextBox.BackColor == Color.LightGreen)
-                    {
+
+                if ((e.KeyCode == Keys.Enter) && m_TextBox.BackColor == Color.LightGreen)
+                {
 
                     //textBox2.Text = GetBytesFromData(textBox1.Text, 1, 2);
 
@@ -22063,7 +22101,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "B0";
-           // textBox_data.Text = textBox_WriteToSimulator.Text;
+            // textBox_data.Text = textBox_WriteToSimulator.Text;
 
             SendDataToSystem();
         }
@@ -22072,7 +22110,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "B2";
-          //  textBox_data.Text = textBox_ReadToSimulator.Text;
+            //  textBox_data.Text = textBox_ReadToSimulator.Text;
 
             SendDataToSystem();
         }
@@ -22080,7 +22118,7 @@ Note: eStatus enum 
         void WriteRFWidthToSimulator()
         {
 
-            if (textBox_RFWidth.BackColor == Color.LightGreen  && textBox_RFPeriod.BackColor == Color.LightGreen  && textBox_RFDelay.BackColor == Color.LightGreen)
+            if (textBox_RFWidth.BackColor == Color.LightGreen && textBox_RFPeriod.BackColor == Color.LightGreen && textBox_RFDelay.BackColor == Color.LightGreen)
             {
                 float.TryParse(textBox_RFPeriod.Text, out float Period);
                 float.TryParse(textBox_RFWidth.Text, out float Width);
@@ -22134,7 +22172,7 @@ Note: eStatus enum 
             }
         }
 
-         void WritePulseGenToSimulator2()
+        void WritePulseGenToSimulator2()
         {
 
             if (textBox_PulseWidth2.BackColor == Color.LightGreen && textBox_PulsePeriod2.BackColor == Color.LightGreen && textBox_PulseDelay2.BackColor == Color.LightGreen)
@@ -22184,7 +22222,7 @@ Note: eStatus enum 
         {
             textBox_Preamble.Text = PREAMBLE;
             textBox_Opcode.Text = "50";
-        //    textBox_data.Text = textBox_WriteRegisterToUUT.Text;
+            //    textBox_data.Text = textBox_WriteRegisterToUUT.Text;
 
             SendDataToSystem();
         }
@@ -22417,7 +22455,7 @@ FF CheckSum
 FF CheckSum
 
 
-","Help");
+", "Help");
 
 
 
@@ -22426,7 +22464,7 @@ FF CheckSum
 
         private void button32_Click_3(object sender, EventArgs e)
         {
-            
+
             //textBox1_KeyDown(textBox1, new KeyEventArgs(Keys.Enter));
         }
 
@@ -22435,7 +22473,7 @@ FF CheckSum
 
         }
 
- 
+
 
 
 
@@ -22487,15 +22525,15 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private  void textBox_Vgg2_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_Vgg2_KeyDown(object sender, KeyEventArgs e)
         {
-           // int Delay = 100;
+            // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
-                     SetU19Values();
+                    SetU19Values();
 
                     //Write_Register_To_UUT(" 00 30", "00 04");
                     //await Task.Delay(Delay);
@@ -22516,9 +22554,9 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private  void textBox_Vgg1_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_Vgg1_KeyDown(object sender, KeyEventArgs e)
         {
-           // int Delay = 100;
+            // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
@@ -22547,7 +22585,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void textBox_5V_KeyDown(object sender, KeyEventArgs e)
         {
-           // int Delay = 100;
+            // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
@@ -22574,16 +22612,16 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private  void textBox_9V_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_9V_KeyDown(object sender, KeyEventArgs e)
         {
-           // int Delay = 100;
+            // int Delay = 100;
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
             {
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
 
-                     SetU19Values();
+                    SetU19Values();
 
                     //Write_Register_To_UUT(" 00 30", "00 04");
                     //await Task.Delay(Delay);
@@ -22603,7 +22641,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private  void textBox_4V_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_4V_KeyDown(object sender, KeyEventArgs e)
         {
 
             TextBox m_TextBox = (TextBox)sender;
@@ -22653,7 +22691,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        private async  void textBox_DCA1_KeyDown(object sender, KeyEventArgs e)
+        private async void textBox_DCA1_KeyDown(object sender, KeyEventArgs e)
         {
             int Delay = 200;
             TextBox m_TextBox = (TextBox)sender;
@@ -22884,7 +22922,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         private void comboBox_FTbit_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox m_comboBox = (ComboBox)sender;
-            if (int.TryParse(m_comboBox.Text.Substring(0,2), out int Data) == true)
+            if (int.TryParse(m_comboBox.Text.Substring(0, 2), out int Data) == true)
             {
                 m_comboBox.BackColor = Color.LightGreen;
                 string hexValue = Data.ToString("X4");
@@ -22961,7 +22999,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
 
                 // Read_Flash(BlockAddress);
-            } 
+            }
         }
 
         private void button_ReadPage0_Click(object sender, EventArgs e)
@@ -22976,11 +23014,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 return source;
             return source.Substring(source.Length - tail_length);
         }
-        async Task WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
+        async Task WriteDataGridToFlash(DataGridView i_DataGrid, bool i_DoErase)
         {
             int i = 0;
-         //   tabControl_SSPA_WB_GUI.Enabled = false;
-            
+            //   tabControl_SSPA_WB_GUI.Enabled = false;
+
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
                 // String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X")); 
@@ -22990,7 +23028,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 {
                     if (i_DataGrid.Rows[i].Cells[0].Style.BackColor != Color.LightGreen)
                     {
-                        if(i_DataGrid.Rows[i].Cells[0].Value == null)
+                        if (i_DataGrid.Rows[i].Cells[0].Value == null)
                         {
                             i_DataGrid.Rows[i].Cells[0].Value = "";
                         }
@@ -23005,9 +23043,9 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                     Erase_Flash("31 " + BlockAddress);
                     await Task.Delay(5000);
                 }
-                
+
                 String DataToWrite = "";
-                int TotalBytesToSend = (i_DataGrid.Rows.Count-1) * 2;
+                int TotalBytesToSend = (i_DataGrid.Rows.Count - 1) * 2;
                 int InternalFlashAddress = 0;
                 int ByteCounter = 0;
                 int row = 0;
@@ -23016,38 +23054,38 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                     await Task.Delay(3000);
                     DataToWrite = "";
                     ByteCounter = 0;
-                   // String InternalAddressInFlash = InternalFlashAddress.ToString("X4");
+                    // String InternalAddressInFlash = InternalFlashAddress.ToString("X4");
                     for (i = 0; (i < TotalBytesToSend && row < i_DataGrid.Rows.Count - 1 && ByteCounter < 256); i++)
                     {
                         DataToWrite += i_DataGrid.Rows[row].Cells[0].Value;
-           //             TotalBytesToSend -= 2;
-//                        InternalFlashAddress = +2;
+                        //             TotalBytesToSend -= 2;
+                        //                        InternalFlashAddress = +2;
                         ByteCounter += 2;
                         row++;
                     }
 
-                    
+
 
                     Write_Flash(BlockAddress, InternalFlashAddress.ToString("X4"), DataToWrite);
                     InternalFlashAddress += 256;
                     TotalBytesToSend -= 256;
                 }
-                    
+
                 //for (i = 0; i < i_DataGrid.Rows.Count - 1; i++)
                 //{
                 //    DataToWrite += i_DataGrid.Rows[i].Cells[0].Value;
                 //}
 
                 //Write_Flash(BlockAddress, "00 00", DataToWrite);
-                
+
             }
 
-        //    tabControl_SSPA_WB_GUI.Enabled = true;
+            //    tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
         private async void button_WritePage0_Click(object sender, EventArgs e)
         {
-            await WriteDataGridToFlash(dataGridView_Block00,true);
+            await WriteDataGridToFlash(dataGridView_Block00, true);
         }
 
         private void button_ClearPage0DataGrid_Click(object sender, EventArgs e)
@@ -23066,7 +23104,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 int CoulumnIndex = e.ColumnIndex;
                 int RowIndex = e.RowIndex;
 
-                if(CoulumnIndex < 0 || RowIndex < 0)
+                if (CoulumnIndex < 0 || RowIndex < 0)
                 {
                     return;
                 }
@@ -23079,24 +23117,24 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 switch (CoulumnIndex)
                 {
                     case 0:
-                            string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), @"\s+", "");
-                            byte[] buffer = StringToByteArray(WithoutSpaces);
+                        string WithoutSpaces = Regex.Replace(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), @"\s+", "");
+                        byte[] buffer = StringToByteArray(WithoutSpaces);
 
-                            if (buffer != null && buffer.Length == 2)
-                            {
-                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
-                                m_DataGrid.Rows[RowIndex].Cells[1].Value = int.Parse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), System.Globalization.NumberStyles.HexNumber);
-                                m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.LightGreen;
-                            }
-                            else
-                            {
-                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
+                        if (buffer != null && buffer.Length == 2)
+                        {
+                            m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
+                            m_DataGrid.Rows[RowIndex].Cells[1].Value = int.Parse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), System.Globalization.NumberStyles.HexNumber);
+                            m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.LightGreen;
+                        }
+                        else
+                        {
+                            m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
 
-                            }
+                        }
                         break;
 
                     case 1:
-                        if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data>=0 && Data<=65535)
+                        if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data >= 0 && Data <= 65535)
                         {
                             m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
                             m_DataGrid.Rows[RowIndex].Cells[0].Value = Data.ToString("X4");
@@ -23105,7 +23143,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                         {
                             m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
                         }
-                        
+
 
                         break;
 
@@ -23138,18 +23176,18 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
                 //}
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
 
-         void dgGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        void dgGrid_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             var grid = sender as DataGridView;
 
 
-               int.TryParse(GetLast(grid.Name, 2), out int GridNumber);
+            int.TryParse(GetLast(grid.Name, 2), out int GridNumber);
 
             String FlashAddress = GridNumber.ToString("X") + (e.RowIndex * 2).ToString("X3");
             var centerFormat = new StringFormat()
@@ -23167,11 +23205,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         {
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
             {
-               // String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
+                // String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
-                for (int i = 0; i < i_DataGrid.Rows.Count-1; i++)
+                for (int i = 0; i < i_DataGrid.Rows.Count - 1; i++)
                 {
-                    i_DataGrid.Rows[i].Cells[0].Value = String.Format("{0}{1}", GridNumber.ToString("X2"),i.ToString("X2"));
+                    i_DataGrid.Rows[i].Cells[0].Value = String.Format("{0}{1}", GridNumber.ToString("X2"), i.ToString("X2"));
                 }
             }
         }
@@ -23202,7 +23240,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button_TimerClock_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button44_Click_1(object sender, EventArgs e)
@@ -23217,7 +23255,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         {
             for (int i = 0; i < dataGridView_Block00.Rows.Count; i++)
             {
-                if(dataGridView_Block00.Rows[i].Cells[0].Value.ToString() == dataGridView_Block00.Rows[i].Cells[1].Value.ToString())
+                if (dataGridView_Block00.Rows[i].Cells[0].Value.ToString() == dataGridView_Block00.Rows[i].Cells[1].Value.ToString())
                 {
                     dataGridView_Block00.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
                 }
@@ -23241,7 +23279,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             String ret = "";
             for (int i = 0; i < i_Datagrid.Rows.Count; i++)
             {
-                if(i_Datagrid.Rows[i].Cells[0].Value == null)
+                if (i_Datagrid.Rows[i].Cells[0].Value == null)
                 {
                     i_Datagrid.Rows[i].Cells[0].Value = "";
                 }
@@ -23311,7 +23349,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                     fs.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: File is Open Original error: " + ex.Message);
             }
@@ -23319,7 +23357,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         }
 
-        void WriteLineToDataGrid(DataGridView i_Datagrid,String i_line)
+        void WriteLineToDataGrid(DataGridView i_Datagrid, String i_line)
         {
             String[] temp = i_line.Split(',');
 
@@ -23331,7 +23369,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 }
                 i_Datagrid.Rows[i].Cells[0].Value = temp[i];
             }
-            return ;
+            return;
         }
         private void button_ReadCSVFile_Click(object sender, EventArgs e)
         {
@@ -23379,11 +23417,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
-        void ClearallColumnsinGrid(DataGridView i_DataGrid,bool i_OnlyFlashData)
+        void ClearallColumnsinGrid(DataGridView i_DataGrid, bool i_OnlyFlashData)
         {
             if (i_OnlyFlashData == true)
             {
-                for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+                for (int i = 0; i < i_DataGrid.Rows.Count - 1; i++)
                 {
                     i_DataGrid.Rows[i].Cells[0].Value = "";
                 }
@@ -23402,16 +23440,16 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         bool CompareDatatoValidationColumn(DataGridView i_DataGrid)
         {
             bool ret = true;
-            for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+            for (int i = 0; i < i_DataGrid.Rows.Count - 1; i++)
             {
                 String RawCell0 = i_DataGrid.Rows[i].Cells[0].Value.ToString();
                 String RawCell2 = i_DataGrid.Rows[i].Cells[2].Value.ToString();
                 if (RawCell0 != RawCell2)
                 {
-                    WriteToSystemStatus(String.Format("[{0}] in Row [{1}] is not equal", i_DataGrid.Name,i), 120, Color.OrangeRed);
+                    WriteToSystemStatus(String.Format("[{0}] in Row [{1}] is not equal", i_DataGrid.Name, i), 120, Color.OrangeRed);
                     ret = false;
                 }
-                
+
             }
 
             return ret;
@@ -23419,9 +23457,9 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         void CopyDatatoValidationColumn(DataGridView i_DataGrid)
         {
-            for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+            for (int i = 0; i < i_DataGrid.Rows.Count - 1; i++)
             {
-                if(i_DataGrid.Rows[i].Cells[0].Value == null)
+                if (i_DataGrid.Rows[i].Cells[0].Value == null)
                 {
                     i_DataGrid.Rows[i].Cells[0].Value = "";
                 }
@@ -23431,14 +23469,14 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private async void button_Writeallblockstoflash_Click(object sender, EventArgs e)
         {
-            
-            if(serialPort.IsOpen == false)
+
+            if (serialPort.IsOpen == false)
             {
                 WriteToSystemStatus("port not open", 3, Color.Orange);
                 return;
             }
 
-        //    tabControl_SSPA_WB_GUI.Enabled = false;
+            //    tabControl_SSPA_WB_GUI.Enabled = false;
 
 
             progressBar_UserStatus.Value = 0;
@@ -23464,7 +23502,7 @@ This Process can take 1 minute.";
                 progressBar_UserStatus.Value = 10;
                 // Gil: Write all blocks flash
 
-                foreach(DataGridView datagrid in List_AllDataGrids)
+                foreach (DataGridView datagrid in List_AllDataGrids)
                 {
 
                     await WriteDataGridToFlash(datagrid, false);
@@ -23493,7 +23531,7 @@ This Process can take 1 minute.";
                     ClearallColumnsinGrid(datagrid, true);
                 }
 
-               
+
 
                 progressBar_UserStatus.Value = 80;
                 // Gil: Read all from flash
@@ -23510,7 +23548,7 @@ This Process can take 1 minute.";
                 bool FlashCheck = true;
                 foreach (DataGridView datagrid in List_AllDataGrids)
                 {
-                    bool ret = CompareDatatoValidationColumn(datagrid); 
+                    bool ret = CompareDatatoValidationColumn(datagrid);
                     if (ret != true)
                     {
                         FlashCheck = false;
@@ -23544,7 +23582,7 @@ This Process can take 1 minute.";
                 // Do something  
             }
 
-         //   tabControl_SSPA_WB_GUI.Enabled = true;
+            //   tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
 
@@ -23553,7 +23591,7 @@ This Process can take 1 minute.";
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-   
+
                 //checkBox_RFGen.Checked = true;
                 //checkBox_PulseGen2.Checked = true;
                 Checkbx.BackColor = Color.LightGreen;
@@ -23729,7 +23767,7 @@ This Process can take 1 minute.";
 
         private async void button_WriteBlock6_Click(object sender, EventArgs e)
         {
-            await  WriteDataGridToFlash(dataGridView_Block06, true);
+            await WriteDataGridToFlash(dataGridView_Block06, true);
         }
 
         private async void button_WriteBlock7_Click(object sender, EventArgs e)
@@ -23762,7 +23800,7 @@ This Process can take 1 minute.";
             await WriteDataGridToFlash(dataGridView_Block12, true);
         }
 
-        private  void button98_Click(object sender, EventArgs e)
+        private void button98_Click(object sender, EventArgs e)
         {
             UpdateTestDataToGrid(dataGridView_Block01);
         }
@@ -23985,12 +24023,12 @@ This Process can take 1 minute.";
 
                 Write_Register_To_Simulator(" 00 02", "00 00");
                 Checkbx.BackColor = default;
-            }   
+            }
         }
 
-        private async  void comboBox_CALSARUUT_SelectedIndexChanged(object sender, EventArgs e)
+        private async void comboBox_CALSARUUT_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             ComboBox m_comboBox = (ComboBox)sender;
             if (int.TryParse(m_comboBox.Text.Substring(0, 2), out int Data) == true)
             {
@@ -24007,7 +24045,7 @@ This Process can take 1 minute.";
             }
 
 
-            
+
         }
 
         private void button_SendSerialPort_Click(object sender, EventArgs e)
@@ -24090,7 +24128,7 @@ This Process can take 1 minute.";
             SerialPortLogger.LogMessage(Color.White, Color.Red, "SerialPort Error received: ", New_Line = true, Show_Time = true);
             SerialPortLogger.LogMessage(Color.White, Color.Red, e.ToString(), New_Line = true, Show_Time = true);
             //SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
-           // SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
+            // SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
