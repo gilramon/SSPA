@@ -118,7 +118,7 @@ namespace Monitor
 
                     Ret.DataLength = FrameDataLength.ToString();
 
-                    Ret.CheckSum = CheckSumSent.ToString("X4");
+                    Ret.CheckSum = CheckSumSent.ToString("X2");
                     return Ret;
 
 
@@ -210,7 +210,7 @@ namespace Monitor
 
                 Ret.DataLength = FrameDataLength.ToString();
 
-                Ret.CheckSum = CheckSumSent.ToString("X");
+                Ret.CheckSum = CheckSumSent.ToString("X2");
 
                 i_IncomingBytes = i_IncomingBytes.Skip(CheckSumIndex + 1).ToArray(); 
                 return Ret;
