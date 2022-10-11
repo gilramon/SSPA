@@ -15354,14 +15354,12 @@ namespace Monitor
             else
             {
                 textBox_SystemStatus.Text = "";
-                textBox_SystemStatus.BackColor = default;
+                progressBar_UserStatus.ForeColor = Color.Blue;
+                progressBar_UserStatus.BackColor = default;
 
                 if (progressBar_UserStatus.Value == 100)
                 {
                     progressBar_UserStatus.Value = 0;
-                    progressBar_UserStatus.ForeColor = default;
-                    progressBar_UserStatus.BackColor = default;
-                    progressBar_UserStatus.ForeColor = default;
                 }
 
             }
