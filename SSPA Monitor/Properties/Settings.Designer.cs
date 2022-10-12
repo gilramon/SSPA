@@ -130,5 +130,31 @@ namespace Monitor.Properties {
                 this["SerialPort_History"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>1</string>
+  <string>2</string>
+  <string>3</string>
+  <string>4</string>
+  <string>5</string>
+  <string>6</string>
+  <string>7</string>
+  <string>8</string>
+  <string>9</string>
+  <string>10</string>
+  <string>11</string>
+  <string>12</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection CLICommad_History {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["CLICommad_History"]));
+            }
+            set {
+                this["CLICommad_History"] = value;
+            }
+        }
     }
 }

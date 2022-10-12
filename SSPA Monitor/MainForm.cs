@@ -1,4 +1,5 @@
 ﻿using DSPLib;
+using Monitor.Properties;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -793,21 +794,21 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -821,21 +822,6 @@ namespace Monitor
             this.button1 = new System.Windows.Forms.Button();
             this.txtDataTx = new System.Windows.Forms.TextBox();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
-            this.tabPage_charts = new System.Windows.Forms.TabPage();
-            this.button99 = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.textBox_MaxXAxis = new System.Windows.Forms.TextBox();
-            this.textBox_MinXAxis = new System.Windows.Forms.TextBox();
-            this.comboBox_ChartUpdateTime = new System.Windows.Forms.ComboBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.listBox_Charts = new System.Windows.Forms.ListBox();
-            this.button_OpenFolder2 = new System.Windows.Forms.Button();
-            this.button_GraphPause = new System.Windows.Forms.Button();
-            this.Button_Export_excel = new System.Windows.Forms.Button();
-            this.button_ResetGraphs = new System.Windows.Forms.Button();
-            this.textBox_graph_XY = new System.Windows.Forms.TextBox();
-            this.button_ScreenShot = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage_ServerTCP = new System.Windows.Forms.TabPage();
             this.checkBox_ParseMessages = new System.Windows.Forms.CheckBox();
             this.textBox_IDKey = new System.Windows.Forms.RichTextBox();
@@ -910,7 +896,10 @@ namespace Monitor
             this.button_ClearSerialPort = new System.Windows.Forms.Button();
             this.SerialPortLogger_TextBox = new System.Windows.Forms.RichTextBox();
             this.tabPage_GenericFrame = new System.Windows.Forms.TabPage();
-            this.button52 = new System.Windows.Forms.Button();
+            this.groupBox_KratosMonitor = new System.Windows.Forms.GroupBox();
+            this.checkBox_RecordKratosProtocol = new System.Windows.Forms.CheckBox();
+            this.button_ClearKratosProtocol = new System.Windows.Forms.Button();
+            this.richTextBox_KratosProtocol = new System.Windows.Forms.RichTextBox();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.textBox_RxClientCheckSum = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -926,6 +915,7 @@ namespace Monitor
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox_clientTX = new System.Windows.Forms.GroupBox();
             this.button_SendProtocolSerialPort = new System.Windows.Forms.Button();
+            this.button52 = new System.Windows.Forms.Button();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.textBox_SentChecksum = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -951,6 +941,16 @@ namespace Monitor
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.tabControl_System = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox_AllCommands = new System.Windows.Forms.GroupBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
+            this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
+            this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
+            this.textBox_CLIsendperodically = new System.Windows.Forms.TextBox();
+            this.checkBox_SendPeriodically = new System.Windows.Forms.CheckBox();
+            this.textBox_CLISendCommands = new System.Windows.Forms.TextBox();
+            this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
+            this.button_CLISend = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
             this.checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
@@ -1302,6 +1302,21 @@ namespace Monitor
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.button_ReadBlock12 = new System.Windows.Forms.Button();
             this.button_WriteBlock12 = new System.Windows.Forms.Button();
+            this.tabPage_charts = new System.Windows.Forms.TabPage();
+            this.button99 = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox_MaxXAxis = new System.Windows.Forms.TextBox();
+            this.textBox_MinXAxis = new System.Windows.Forms.TextBox();
+            this.comboBox_ChartUpdateTime = new System.Windows.Forms.ComboBox();
+            this.button28 = new System.Windows.Forms.Button();
+            this.listBox_Charts = new System.Windows.Forms.ListBox();
+            this.button_OpenFolder2 = new System.Windows.Forms.Button();
+            this.button_GraphPause = new System.Windows.Forms.Button();
+            this.Button_Export_excel = new System.Windows.Forms.Button();
+            this.button_ResetGraphs = new System.Windows.Forms.Button();
+            this.textBox_graph_XY = new System.Windows.Forms.TextBox();
+            this.button_ScreenShot = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
             this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
@@ -1486,25 +1501,9 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox_KratosMonitor = new System.Windows.Forms.GroupBox();
-            this.richTextBox_KratosProtocol = new System.Windows.Forms.RichTextBox();
-            this.button_ClearKratosProtocol = new System.Windows.Forms.Button();
-            this.checkBox_RecordKratosProtocol = new System.Windows.Forms.CheckBox();
-            this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
-            this.textBox_CLIsendperodically = new System.Windows.Forms.TextBox();
-            this.checkBox_SendPeriodically = new System.Windows.Forms.CheckBox();
-            this.textBox_CLISendCommands = new System.Windows.Forms.TextBox();
-            this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
-            this.button_CLISend = new System.Windows.Forms.Button();
-            this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
-            this.groupBox_AllCommands = new System.Windows.Forms.GroupBox();
-            this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
-            this.label75 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
-            this.tabPage_charts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage_ServerTCP.SuspendLayout();
             this.groupBox_ConnectionTimedOut.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1516,6 +1515,7 @@ namespace Monitor
             this.groupBox_Timer.SuspendLayout();
             this.groupBox_Stopwatch.SuspendLayout();
             this.tabPage_GenericFrame.SuspendLayout();
+            this.groupBox_KratosMonitor.SuspendLayout();
             this.groupBox31.SuspendLayout();
             this.groupBox_clientTX.SuspendLayout();
             this.groupBox41.SuspendLayout();
@@ -1523,6 +1523,8 @@ namespace Monitor
             this.groupBox40.SuspendLayout();
             this.tabControl_System.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox_AllCommands.SuspendLayout();
+            this.groupBox_CLISendCommand.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.tabPage3038WBPAA.SuspendLayout();
             this.groupBox43.SuspendLayout();
@@ -1580,6 +1582,8 @@ namespace Monitor
             this.tabPage_Page12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).BeginInit();
             this.groupBox56.SuspendLayout();
+            this.tabPage_charts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox42.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.S1_Configuration.SuspendLayout();
@@ -1613,9 +1617,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.groupBox_KratosMonitor.SuspendLayout();
-            this.groupBox_CLISendCommand.SuspendLayout();
-            this.groupBox_AllCommands.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -1772,204 +1773,7 @@ namespace Monitor
             this.tabControl_Main.TabIndex = 8;
             this.tabControl_Main.TabStop = false;
             this.tabControl_Main.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControl_Main_KeyDown);
-            // 
-            // tabPage_charts
-            // 
-            this.tabPage_charts.Controls.Add(this.button99);
-            this.tabPage_charts.Controls.Add(this.label37);
-            this.tabPage_charts.Controls.Add(this.textBox_MaxXAxis);
-            this.tabPage_charts.Controls.Add(this.textBox_MinXAxis);
-            this.tabPage_charts.Controls.Add(this.comboBox_ChartUpdateTime);
-            this.tabPage_charts.Controls.Add(this.button28);
-            this.tabPage_charts.Controls.Add(this.listBox_Charts);
-            this.tabPage_charts.Controls.Add(this.button_OpenFolder2);
-            this.tabPage_charts.Controls.Add(this.button_GraphPause);
-            this.tabPage_charts.Controls.Add(this.Button_Export_excel);
-            this.tabPage_charts.Controls.Add(this.button_ResetGraphs);
-            this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
-            this.tabPage_charts.Controls.Add(this.button_ScreenShot);
-            this.tabPage_charts.Controls.Add(this.chart1);
-            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_charts.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage_charts.Name = "tabPage_charts";
-            this.tabPage_charts.Size = new System.Drawing.Size(1414, 659);
-            this.tabPage_charts.TabIndex = 7;
-            this.tabPage_charts.Text = "Charts";
-            this.tabPage_charts.UseVisualStyleBackColor = true;
-            // 
-            // button99
-            // 
-            this.button99.Location = new System.Drawing.Point(121, 367);
-            this.button99.Margin = new System.Windows.Forms.Padding(2);
-            this.button99.Name = "button99";
-            this.button99.Size = new System.Drawing.Size(53, 22);
-            this.button99.TabIndex = 84;
-            this.button99.Text = "auto";
-            this.button99.UseVisualStyleBackColor = true;
-            this.button99.Click += new System.EventHandler(this.button99_Click);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(2, 343);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(102, 18);
-            this.label37.TabIndex = 83;
-            this.label37.Text = "Min/Max X axis";
-            // 
-            // textBox_MaxXAxis
-            // 
-            this.textBox_MaxXAxis.Location = new System.Drawing.Point(56, 366);
-            this.textBox_MaxXAxis.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_MaxXAxis.Name = "textBox_MaxXAxis";
-            this.textBox_MaxXAxis.Size = new System.Drawing.Size(59, 26);
-            this.textBox_MaxXAxis.TabIndex = 82;
-            this.textBox_MaxXAxis.TextChanged += new System.EventHandler(this.textBox_MaxXAxis_TextChanged);
-            // 
-            // textBox_MinXAxis
-            // 
-            this.textBox_MinXAxis.Location = new System.Drawing.Point(2, 366);
-            this.textBox_MinXAxis.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_MinXAxis.Name = "textBox_MinXAxis";
-            this.textBox_MinXAxis.Size = new System.Drawing.Size(44, 26);
-            this.textBox_MinXAxis.TabIndex = 81;
-            this.textBox_MinXAxis.TextChanged += new System.EventHandler(this.textBox_MinXAxis_TextChanged);
-            // 
-            // comboBox_ChartUpdateTime
-            // 
-            this.comboBox_ChartUpdateTime.FormattingEnabled = true;
-            this.comboBox_ChartUpdateTime.Items.AddRange(new object[] {
-            "100",
-            "200",
-            "500",
-            "1000",
-            "2000",
-            "5000",
-            "10000"});
-            this.comboBox_ChartUpdateTime.Location = new System.Drawing.Point(5, 593);
-            this.comboBox_ChartUpdateTime.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox_ChartUpdateTime.Name = "comboBox_ChartUpdateTime";
-            this.comboBox_ChartUpdateTime.Size = new System.Drawing.Size(169, 26);
-            this.comboBox_ChartUpdateTime.TabIndex = 80;
-            this.comboBox_ChartUpdateTime.Text = "Update time ms";
-            this.comboBox_ChartUpdateTime.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChartUpdateTime_SelectedIndexChanged);
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(2, 538);
-            this.button28.Margin = new System.Windows.Forms.Padding(2);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(170, 22);
-            this.button28.TabIndex = 79;
-            this.button28.Text = "Reset X point";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.Button28_Click_2);
-            // 
-            // listBox_Charts
-            // 
-            this.listBox_Charts.FormattingEnabled = true;
-            this.listBox_Charts.ItemHeight = 18;
-            this.listBox_Charts.Location = new System.Drawing.Point(2, 162);
-            this.listBox_Charts.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox_Charts.Name = "listBox_Charts";
-            this.listBox_Charts.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox_Charts.Size = new System.Drawing.Size(170, 148);
-            this.listBox_Charts.TabIndex = 78;
-            this.listBox_Charts.SelectedIndexChanged += new System.EventHandler(this.ListBox_Charts_SelectedIndexChanged);
-            this.listBox_Charts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_Charts_KeyDown);
-            this.listBox_Charts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listBox_Charts_KeyPress);
-            // 
-            // button_OpenFolder2
-            // 
-            this.button_OpenFolder2.Location = new System.Drawing.Point(4, 420);
-            this.button_OpenFolder2.Margin = new System.Windows.Forms.Padding(2);
-            this.button_OpenFolder2.Name = "button_OpenFolder2";
-            this.button_OpenFolder2.Size = new System.Drawing.Size(169, 26);
-            this.button_OpenFolder2.TabIndex = 77;
-            this.button_OpenFolder2.Text = "Open Local Folder";
-            this.button_OpenFolder2.UseVisualStyleBackColor = true;
-            this.button_OpenFolder2.Click += new System.EventHandler(this.Button_OpenFolder2_Click);
-            // 
-            // button_GraphPause
-            // 
-            this.button_GraphPause.Location = new System.Drawing.Point(2, 565);
-            this.button_GraphPause.Margin = new System.Windows.Forms.Padding(2);
-            this.button_GraphPause.Name = "button_GraphPause";
-            this.button_GraphPause.Size = new System.Drawing.Size(170, 22);
-            this.button_GraphPause.TabIndex = 8;
-            this.button_GraphPause.Text = "Pause";
-            this.button_GraphPause.UseVisualStyleBackColor = true;
-            this.button_GraphPause.Click += new System.EventHandler(this.Button_GraphPause_Click);
-            // 
-            // Button_Export_excel
-            // 
-            this.Button_Export_excel.Location = new System.Drawing.Point(2, 451);
-            this.Button_Export_excel.Margin = new System.Windows.Forms.Padding(2);
-            this.Button_Export_excel.Name = "Button_Export_excel";
-            this.Button_Export_excel.Size = new System.Drawing.Size(170, 22);
-            this.Button_Export_excel.TabIndex = 7;
-            this.Button_Export_excel.Text = "Export to excel";
-            this.Button_Export_excel.UseVisualStyleBackColor = true;
-            this.Button_Export_excel.Click += new System.EventHandler(this.Button_Export_excel_Click);
-            // 
-            // button_ResetGraphs
-            // 
-            this.button_ResetGraphs.Location = new System.Drawing.Point(2, 509);
-            this.button_ResetGraphs.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ResetGraphs.Name = "button_ResetGraphs";
-            this.button_ResetGraphs.Size = new System.Drawing.Size(170, 22);
-            this.button_ResetGraphs.TabIndex = 6;
-            this.button_ResetGraphs.Text = "Reset chart data";
-            this.button_ResetGraphs.UseVisualStyleBackColor = true;
-            this.button_ResetGraphs.Click += new System.EventHandler(this.Button_ResetGraphs_Click);
-            // 
-            // textBox_graph_XY
-            // 
-            this.textBox_graph_XY.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_graph_XY.Location = new System.Drawing.Point(4, 8);
-            this.textBox_graph_XY.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_graph_XY.Multiline = true;
-            this.textBox_graph_XY.Name = "textBox_graph_XY";
-            this.textBox_graph_XY.ReadOnly = true;
-            this.textBox_graph_XY.Size = new System.Drawing.Size(170, 149);
-            this.textBox_graph_XY.TabIndex = 4;
-            this.textBox_graph_XY.Text = "Message box ";
-            this.textBox_graph_XY.TextChanged += new System.EventHandler(this.TextBox_graph_XY_TextChanged);
-            // 
-            // button_ScreenShot
-            // 
-            this.button_ScreenShot.Location = new System.Drawing.Point(2, 478);
-            this.button_ScreenShot.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ScreenShot.Name = "button_ScreenShot";
-            this.button_ScreenShot.Size = new System.Drawing.Size(170, 22);
-            this.button_ScreenShot.TabIndex = 1;
-            this.button_ScreenShot.Text = "Take screen shot";
-            this.button_ScreenShot.UseVisualStyleBackColor = true;
-            this.button_ScreenShot.Click += new System.EventHandler(this.Button_ScreenShot_Click);
-            // 
-            // chart1
-            // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(178, 2);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(1234, 644);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
-            this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseClick);
-            this.chart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseMove);
+            this.tabControl_Main.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tabControl_Main_PreviewKeyDown);
             // 
             // tabPage_ServerTCP
             // 
@@ -2906,16 +2710,52 @@ namespace Monitor
             this.tabPage_GenericFrame.Enter += new System.EventHandler(this.tabPage_GenericFrame_Enter);
             this.tabPage_GenericFrame.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tabPage_GenericFrame_PreviewKeyDown);
             // 
-            // button52
+            // groupBox_KratosMonitor
             // 
-            this.button52.Location = new System.Drawing.Point(481, 153);
-            this.button52.Margin = new System.Windows.Forms.Padding(2);
-            this.button52.Name = "button52";
-            this.button52.Size = new System.Drawing.Size(69, 22);
-            this.button52.TabIndex = 15;
-            this.button52.Text = "Clear";
-            this.button52.UseVisualStyleBackColor = true;
-            this.button52.Click += new System.EventHandler(this.button52_Click);
+            this.groupBox_KratosMonitor.Controls.Add(this.checkBox_RecordKratosProtocol);
+            this.groupBox_KratosMonitor.Controls.Add(this.button_ClearKratosProtocol);
+            this.groupBox_KratosMonitor.Controls.Add(this.richTextBox_KratosProtocol);
+            this.groupBox_KratosMonitor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_KratosMonitor.Location = new System.Drawing.Point(577, 16);
+            this.groupBox_KratosMonitor.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_KratosMonitor.Name = "groupBox_KratosMonitor";
+            this.groupBox_KratosMonitor.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_KratosMonitor.Size = new System.Drawing.Size(835, 647);
+            this.groupBox_KratosMonitor.TabIndex = 16;
+            this.groupBox_KratosMonitor.TabStop = false;
+            this.groupBox_KratosMonitor.Text = "Kratos Protocol Monitor";
+            // 
+            // checkBox_RecordKratosProtocol
+            // 
+            this.checkBox_RecordKratosProtocol.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_RecordKratosProtocol.AutoSize = true;
+            this.checkBox_RecordKratosProtocol.Location = new System.Drawing.Point(96, 600);
+            this.checkBox_RecordKratosProtocol.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_RecordKratosProtocol.Name = "checkBox_RecordKratosProtocol";
+            this.checkBox_RecordKratosProtocol.Size = new System.Drawing.Size(110, 29);
+            this.checkBox_RecordKratosProtocol.TabIndex = 18;
+            this.checkBox_RecordKratosProtocol.Text = "Record To File";
+            this.checkBox_RecordKratosProtocol.UseVisualStyleBackColor = true;
+            // 
+            // button_ClearKratosProtocol
+            // 
+            this.button_ClearKratosProtocol.Location = new System.Drawing.Point(5, 603);
+            this.button_ClearKratosProtocol.Name = "button_ClearKratosProtocol";
+            this.button_ClearKratosProtocol.Size = new System.Drawing.Size(75, 23);
+            this.button_ClearKratosProtocol.TabIndex = 8;
+            this.button_ClearKratosProtocol.Text = "Clear";
+            this.button_ClearKratosProtocol.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_KratosProtocol
+            // 
+            this.richTextBox_KratosProtocol.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox_KratosProtocol.EnableAutoDragDrop = true;
+            this.richTextBox_KratosProtocol.Location = new System.Drawing.Point(4, 16);
+            this.richTextBox_KratosProtocol.Margin = new System.Windows.Forms.Padding(2);
+            this.richTextBox_KratosProtocol.Name = "richTextBox_KratosProtocol";
+            this.richTextBox_KratosProtocol.Size = new System.Drawing.Size(831, 574);
+            this.richTextBox_KratosProtocol.TabIndex = 0;
+            this.richTextBox_KratosProtocol.Text = "";
             // 
             // groupBox31
             // 
@@ -3107,6 +2947,17 @@ namespace Monitor
             this.button_SendProtocolSerialPort.Text = "Send SerialPort";
             this.button_SendProtocolSerialPort.UseVisualStyleBackColor = true;
             this.button_SendProtocolSerialPort.Click += new System.EventHandler(this.button_SendProtocolSerialPort_Click);
+            // 
+            // button52
+            // 
+            this.button52.Location = new System.Drawing.Point(481, 153);
+            this.button52.Margin = new System.Windows.Forms.Padding(2);
+            this.button52.Name = "button52";
+            this.button52.Size = new System.Drawing.Size(69, 22);
+            this.button52.TabIndex = 15;
+            this.button52.Text = "Clear";
+            this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.button52_Click);
             // 
             // groupBox41
             // 
@@ -3399,6 +3250,125 @@ namespace Monitor
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "System CLI";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_AllCommands
+            // 
+            this.groupBox_AllCommands.Controls.Add(this.label75);
+            this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
+            this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
+            this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
+            this.groupBox_AllCommands.Name = "groupBox_AllCommands";
+            this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 445);
+            this.groupBox_AllCommands.TabIndex = 72;
+            this.groupBox_AllCommands.TabStop = false;
+            this.groupBox_AllCommands.Text = "Command list";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(378, 20);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(41, 18);
+            this.label75.TabIndex = 115;
+            this.label75.Text = "Help:";
+            // 
+            // textBox_CommandHelp
+            // 
+            this.textBox_CommandHelp.Location = new System.Drawing.Point(377, 44);
+            this.textBox_CommandHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CommandHelp.Multiline = true;
+            this.textBox_CommandHelp.Name = "textBox_CommandHelp";
+            this.textBox_CommandHelp.ReadOnly = true;
+            this.textBox_CommandHelp.Size = new System.Drawing.Size(192, 190);
+            this.textBox_CommandHelp.TabIndex = 114;
+            this.textBox_CommandHelp.TabStop = false;
+            // 
+            // listBox_CLI_ALLCommands
+            // 
+            this.listBox_CLI_ALLCommands.FormattingEnabled = true;
+            this.listBox_CLI_ALLCommands.ItemHeight = 18;
+            this.listBox_CLI_ALLCommands.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
+            this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
+            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
+            this.listBox_CLI_ALLCommands.TabIndex = 71;
+            // 
+            // groupBox_CLISendCommand
+            // 
+            this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLIsendperodically);
+            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_SendPeriodically);
+            this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLISendCommands);
+            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_CLIDeleteAfterSend);
+            this.groupBox_CLISendCommand.Controls.Add(this.button_CLISend);
+            this.groupBox_CLISendCommand.Location = new System.Drawing.Point(4, 9);
+            this.groupBox_CLISendCommand.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_CLISendCommand.Name = "groupBox_CLISendCommand";
+            this.groupBox_CLISendCommand.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_CLISendCommand.Size = new System.Drawing.Size(841, 90);
+            this.groupBox_CLISendCommand.TabIndex = 70;
+            this.groupBox_CLISendCommand.TabStop = false;
+            this.groupBox_CLISendCommand.Text = "CLI send command";
+            // 
+            // textBox_CLIsendperodically
+            // 
+            this.textBox_CLIsendperodically.Location = new System.Drawing.Point(254, 55);
+            this.textBox_CLIsendperodically.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIsendperodically.Name = "textBox_CLIsendperodically";
+            this.textBox_CLIsendperodically.Size = new System.Drawing.Size(46, 26);
+            this.textBox_CLIsendperodically.TabIndex = 108;
+            this.textBox_CLIsendperodically.Text = "10";
+            // 
+            // checkBox_SendPeriodically
+            // 
+            this.checkBox_SendPeriodically.AutoSize = true;
+            this.checkBox_SendPeriodically.Location = new System.Drawing.Point(315, 57);
+            this.checkBox_SendPeriodically.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_SendPeriodically.Name = "checkBox_SendPeriodically";
+            this.checkBox_SendPeriodically.Size = new System.Drawing.Size(189, 22);
+            this.checkBox_SendPeriodically.TabIndex = 6;
+            this.checkBox_SendPeriodically.Text = "Send Periodically (100 ms)";
+            this.checkBox_SendPeriodically.UseVisualStyleBackColor = true;
+            // 
+            // textBox_CLISendCommands
+            // 
+            this.textBox_CLISendCommands.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox_CLISendCommands.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_CLISendCommands.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CLISendCommands.Location = new System.Drawing.Point(8, 20);
+            this.textBox_CLISendCommands.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLISendCommands.Name = "textBox_CLISendCommands";
+            this.textBox_CLISendCommands.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_CLISendCommands.Size = new System.Drawing.Size(829, 31);
+            this.textBox_CLISendCommands.TabIndex = 0;
+            this.textBox_CLISendCommands.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CLISendCommands_KeyDown);
+            this.textBox_CLISendCommands.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.textBox_CLISendCommands_PreviewKeyDown);
+            // 
+            // checkBox_CLIDeleteAfterSend
+            // 
+            this.checkBox_CLIDeleteAfterSend.AutoSize = true;
+            this.checkBox_CLIDeleteAfterSend.Checked = true;
+            this.checkBox_CLIDeleteAfterSend.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_CLIDeleteAfterSend.Location = new System.Drawing.Point(115, 59);
+            this.checkBox_CLIDeleteAfterSend.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_CLIDeleteAfterSend.Name = "checkBox_CLIDeleteAfterSend";
+            this.checkBox_CLIDeleteAfterSend.Size = new System.Drawing.Size(135, 22);
+            this.checkBox_CLIDeleteAfterSend.TabIndex = 4;
+            this.checkBox_CLIDeleteAfterSend.Text = "Delete after Send";
+            this.checkBox_CLIDeleteAfterSend.UseVisualStyleBackColor = true;
+            // 
+            // button_CLISend
+            // 
+            this.button_CLISend.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_CLISend.Location = new System.Drawing.Point(8, 56);
+            this.button_CLISend.Margin = new System.Windows.Forms.Padding(2);
+            this.button_CLISend.Name = "button_CLISend";
+            this.button_CLISend.Size = new System.Drawing.Size(96, 23);
+            this.button_CLISend.TabIndex = 1;
+            this.button_CLISend.Text = "Send";
+            this.button_CLISend.Click += new System.EventHandler(this.button_CLISend_Click);
             // 
             // groupBox32
             // 
@@ -6256,14 +6226,14 @@ namespace Monitor
             this.dataGridView_Block00.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block00.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block00.Name = "dataGridView_Block00";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.dataGridView_Block00.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block00.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block00.TabIndex = 27;
@@ -6350,14 +6320,14 @@ namespace Monitor
             this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
             this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block01.Name = "dataGridView_Block01";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block01.TabIndex = 34;
@@ -6469,14 +6439,14 @@ namespace Monitor
             this.dataGridView_Block02.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block02.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block02.Name = "dataGridView_Block02";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle55.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle55;
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
@@ -6589,14 +6559,14 @@ namespace Monitor
             this.dataGridView_Block03.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block03.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block03.Name = "dataGridView_Block03";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle56;
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
@@ -6709,14 +6679,14 @@ namespace Monitor
             this.dataGridView_Block04.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block04.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block04.Name = "dataGridView_Block04";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle57;
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
@@ -6828,14 +6798,14 @@ namespace Monitor
             this.dataGridView_Block05.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block05.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block05.Name = "dataGridView_Block05";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle58;
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
@@ -6950,14 +6920,14 @@ namespace Monitor
             this.dataGridView_Block06.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block06.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block06.Name = "dataGridView_Block06";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle59;
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
@@ -7072,14 +7042,14 @@ namespace Monitor
             this.dataGridView_Block07.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block07.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block07.Name = "dataGridView_Block07";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
@@ -7194,14 +7164,14 @@ namespace Monitor
             this.dataGridView_Block08.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block08.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block08.Name = "dataGridView_Block08";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle61.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle61;
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
@@ -7316,14 +7286,14 @@ namespace Monitor
             this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block09.Name = "dataGridView_Block09";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle62;
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
@@ -7438,14 +7408,14 @@ namespace Monitor
             this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block10.Name = "dataGridView_Block10";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
@@ -7560,14 +7530,14 @@ namespace Monitor
             this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block11.Name = "dataGridView_Block11";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
@@ -7682,14 +7652,14 @@ namespace Monitor
             this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block12.Name = "dataGridView_Block12";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle65;
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
@@ -7754,6 +7724,204 @@ namespace Monitor
             this.button_WriteBlock12.Text = "Write to Page";
             this.button_WriteBlock12.UseVisualStyleBackColor = false;
             this.button_WriteBlock12.Click += new System.EventHandler(this.button_WriteBlock12_Click);
+            // 
+            // tabPage_charts
+            // 
+            this.tabPage_charts.Controls.Add(this.button99);
+            this.tabPage_charts.Controls.Add(this.label37);
+            this.tabPage_charts.Controls.Add(this.textBox_MaxXAxis);
+            this.tabPage_charts.Controls.Add(this.textBox_MinXAxis);
+            this.tabPage_charts.Controls.Add(this.comboBox_ChartUpdateTime);
+            this.tabPage_charts.Controls.Add(this.button28);
+            this.tabPage_charts.Controls.Add(this.listBox_Charts);
+            this.tabPage_charts.Controls.Add(this.button_OpenFolder2);
+            this.tabPage_charts.Controls.Add(this.button_GraphPause);
+            this.tabPage_charts.Controls.Add(this.Button_Export_excel);
+            this.tabPage_charts.Controls.Add(this.button_ResetGraphs);
+            this.tabPage_charts.Controls.Add(this.textBox_graph_XY);
+            this.tabPage_charts.Controls.Add(this.button_ScreenShot);
+            this.tabPage_charts.Controls.Add(this.chart1);
+            this.tabPage_charts.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_charts.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_charts.Name = "tabPage_charts";
+            this.tabPage_charts.Size = new System.Drawing.Size(1414, 659);
+            this.tabPage_charts.TabIndex = 7;
+            this.tabPage_charts.Text = "Charts";
+            this.tabPage_charts.UseVisualStyleBackColor = true;
+            // 
+            // button99
+            // 
+            this.button99.Location = new System.Drawing.Point(121, 367);
+            this.button99.Margin = new System.Windows.Forms.Padding(2);
+            this.button99.Name = "button99";
+            this.button99.Size = new System.Drawing.Size(53, 22);
+            this.button99.TabIndex = 84;
+            this.button99.Text = "auto";
+            this.button99.UseVisualStyleBackColor = true;
+            this.button99.Click += new System.EventHandler(this.button99_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(2, 343);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(102, 18);
+            this.label37.TabIndex = 83;
+            this.label37.Text = "Min/Max X axis";
+            // 
+            // textBox_MaxXAxis
+            // 
+            this.textBox_MaxXAxis.Location = new System.Drawing.Point(56, 366);
+            this.textBox_MaxXAxis.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MaxXAxis.Name = "textBox_MaxXAxis";
+            this.textBox_MaxXAxis.Size = new System.Drawing.Size(59, 26);
+            this.textBox_MaxXAxis.TabIndex = 82;
+            this.textBox_MaxXAxis.TextChanged += new System.EventHandler(this.textBox_MaxXAxis_TextChanged);
+            // 
+            // textBox_MinXAxis
+            // 
+            this.textBox_MinXAxis.Location = new System.Drawing.Point(2, 366);
+            this.textBox_MinXAxis.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_MinXAxis.Name = "textBox_MinXAxis";
+            this.textBox_MinXAxis.Size = new System.Drawing.Size(44, 26);
+            this.textBox_MinXAxis.TabIndex = 81;
+            this.textBox_MinXAxis.TextChanged += new System.EventHandler(this.textBox_MinXAxis_TextChanged);
+            // 
+            // comboBox_ChartUpdateTime
+            // 
+            this.comboBox_ChartUpdateTime.FormattingEnabled = true;
+            this.comboBox_ChartUpdateTime.Items.AddRange(new object[] {
+            "100",
+            "200",
+            "500",
+            "1000",
+            "2000",
+            "5000",
+            "10000"});
+            this.comboBox_ChartUpdateTime.Location = new System.Drawing.Point(5, 593);
+            this.comboBox_ChartUpdateTime.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox_ChartUpdateTime.Name = "comboBox_ChartUpdateTime";
+            this.comboBox_ChartUpdateTime.Size = new System.Drawing.Size(169, 26);
+            this.comboBox_ChartUpdateTime.TabIndex = 80;
+            this.comboBox_ChartUpdateTime.Text = "Update time ms";
+            this.comboBox_ChartUpdateTime.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChartUpdateTime_SelectedIndexChanged);
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(2, 538);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(170, 22);
+            this.button28.TabIndex = 79;
+            this.button28.Text = "Reset X point";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.Button28_Click_2);
+            // 
+            // listBox_Charts
+            // 
+            this.listBox_Charts.FormattingEnabled = true;
+            this.listBox_Charts.ItemHeight = 18;
+            this.listBox_Charts.Location = new System.Drawing.Point(2, 162);
+            this.listBox_Charts.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox_Charts.Name = "listBox_Charts";
+            this.listBox_Charts.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox_Charts.Size = new System.Drawing.Size(170, 148);
+            this.listBox_Charts.TabIndex = 78;
+            this.listBox_Charts.SelectedIndexChanged += new System.EventHandler(this.ListBox_Charts_SelectedIndexChanged);
+            this.listBox_Charts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox_Charts_KeyDown);
+            this.listBox_Charts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listBox_Charts_KeyPress);
+            // 
+            // button_OpenFolder2
+            // 
+            this.button_OpenFolder2.Location = new System.Drawing.Point(4, 420);
+            this.button_OpenFolder2.Margin = new System.Windows.Forms.Padding(2);
+            this.button_OpenFolder2.Name = "button_OpenFolder2";
+            this.button_OpenFolder2.Size = new System.Drawing.Size(169, 26);
+            this.button_OpenFolder2.TabIndex = 77;
+            this.button_OpenFolder2.Text = "Open Local Folder";
+            this.button_OpenFolder2.UseVisualStyleBackColor = true;
+            this.button_OpenFolder2.Click += new System.EventHandler(this.Button_OpenFolder2_Click);
+            // 
+            // button_GraphPause
+            // 
+            this.button_GraphPause.Location = new System.Drawing.Point(2, 565);
+            this.button_GraphPause.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GraphPause.Name = "button_GraphPause";
+            this.button_GraphPause.Size = new System.Drawing.Size(170, 22);
+            this.button_GraphPause.TabIndex = 8;
+            this.button_GraphPause.Text = "Pause";
+            this.button_GraphPause.UseVisualStyleBackColor = true;
+            this.button_GraphPause.Click += new System.EventHandler(this.Button_GraphPause_Click);
+            // 
+            // Button_Export_excel
+            // 
+            this.Button_Export_excel.Location = new System.Drawing.Point(2, 451);
+            this.Button_Export_excel.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_Export_excel.Name = "Button_Export_excel";
+            this.Button_Export_excel.Size = new System.Drawing.Size(170, 22);
+            this.Button_Export_excel.TabIndex = 7;
+            this.Button_Export_excel.Text = "Export to excel";
+            this.Button_Export_excel.UseVisualStyleBackColor = true;
+            this.Button_Export_excel.Click += new System.EventHandler(this.Button_Export_excel_Click);
+            // 
+            // button_ResetGraphs
+            // 
+            this.button_ResetGraphs.Location = new System.Drawing.Point(2, 509);
+            this.button_ResetGraphs.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ResetGraphs.Name = "button_ResetGraphs";
+            this.button_ResetGraphs.Size = new System.Drawing.Size(170, 22);
+            this.button_ResetGraphs.TabIndex = 6;
+            this.button_ResetGraphs.Text = "Reset chart data";
+            this.button_ResetGraphs.UseVisualStyleBackColor = true;
+            this.button_ResetGraphs.Click += new System.EventHandler(this.Button_ResetGraphs_Click);
+            // 
+            // textBox_graph_XY
+            // 
+            this.textBox_graph_XY.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_graph_XY.Location = new System.Drawing.Point(4, 8);
+            this.textBox_graph_XY.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_graph_XY.Multiline = true;
+            this.textBox_graph_XY.Name = "textBox_graph_XY";
+            this.textBox_graph_XY.ReadOnly = true;
+            this.textBox_graph_XY.Size = new System.Drawing.Size(170, 149);
+            this.textBox_graph_XY.TabIndex = 4;
+            this.textBox_graph_XY.Text = "Message box ";
+            this.textBox_graph_XY.TextChanged += new System.EventHandler(this.TextBox_graph_XY_TextChanged);
+            // 
+            // button_ScreenShot
+            // 
+            this.button_ScreenShot.Location = new System.Drawing.Point(2, 478);
+            this.button_ScreenShot.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ScreenShot.Name = "button_ScreenShot";
+            this.button_ScreenShot.Size = new System.Drawing.Size(170, 22);
+            this.button_ScreenShot.TabIndex = 1;
+            this.button_ScreenShot.Text = "Take screen shot";
+            this.button_ScreenShot.UseVisualStyleBackColor = true;
+            this.button_ScreenShot.Click += new System.EventHandler(this.Button_ScreenShot_Click);
+            // 
+            // chart1
+            // 
+            chartArea5.AxisX.Title = "Freq";
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Title = "Power [dBm]";
+            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(178, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(1234, 644);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.chart1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseClick);
+            this.chart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Chart1_MouseMove);
             // 
             // groupBox42
             // 
@@ -9655,174 +9823,13 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // groupBox_KratosMonitor
-            // 
-            this.groupBox_KratosMonitor.Controls.Add(this.checkBox_RecordKratosProtocol);
-            this.groupBox_KratosMonitor.Controls.Add(this.button_ClearKratosProtocol);
-            this.groupBox_KratosMonitor.Controls.Add(this.richTextBox_KratosProtocol);
-            this.groupBox_KratosMonitor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_KratosMonitor.Location = new System.Drawing.Point(577, 16);
-            this.groupBox_KratosMonitor.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_KratosMonitor.Name = "groupBox_KratosMonitor";
-            this.groupBox_KratosMonitor.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_KratosMonitor.Size = new System.Drawing.Size(835, 647);
-            this.groupBox_KratosMonitor.TabIndex = 16;
-            this.groupBox_KratosMonitor.TabStop = false;
-            this.groupBox_KratosMonitor.Text = "Kratos Protocol Monitor";
-            // 
-            // richTextBox_KratosProtocol
-            // 
-            this.richTextBox_KratosProtocol.BackColor = System.Drawing.Color.LightGray;
-            this.richTextBox_KratosProtocol.EnableAutoDragDrop = true;
-            this.richTextBox_KratosProtocol.Location = new System.Drawing.Point(4, 16);
-            this.richTextBox_KratosProtocol.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox_KratosProtocol.Name = "richTextBox_KratosProtocol";
-            this.richTextBox_KratosProtocol.Size = new System.Drawing.Size(831, 574);
-            this.richTextBox_KratosProtocol.TabIndex = 0;
-            this.richTextBox_KratosProtocol.Text = "";
-            // 
-            // button_ClearKratosProtocol
-            // 
-            this.button_ClearKratosProtocol.Location = new System.Drawing.Point(5, 603);
-            this.button_ClearKratosProtocol.Name = "button_ClearKratosProtocol";
-            this.button_ClearKratosProtocol.Size = new System.Drawing.Size(75, 23);
-            this.button_ClearKratosProtocol.TabIndex = 8;
-            this.button_ClearKratosProtocol.Text = "Clear";
-            this.button_ClearKratosProtocol.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_RecordKratosProtocol
-            // 
-            this.checkBox_RecordKratosProtocol.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox_RecordKratosProtocol.AutoSize = true;
-            this.checkBox_RecordKratosProtocol.Location = new System.Drawing.Point(96, 600);
-            this.checkBox_RecordKratosProtocol.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_RecordKratosProtocol.Name = "checkBox_RecordKratosProtocol";
-            this.checkBox_RecordKratosProtocol.Size = new System.Drawing.Size(110, 29);
-            this.checkBox_RecordKratosProtocol.TabIndex = 18;
-            this.checkBox_RecordKratosProtocol.Text = "Record To File";
-            this.checkBox_RecordKratosProtocol.UseVisualStyleBackColor = true;
-            // 
-            // groupBox_CLISendCommand
-            // 
-            this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLIsendperodically);
-            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_SendPeriodically);
-            this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLISendCommands);
-            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_CLIDeleteAfterSend);
-            this.groupBox_CLISendCommand.Controls.Add(this.button_CLISend);
-            this.groupBox_CLISendCommand.Location = new System.Drawing.Point(4, 9);
-            this.groupBox_CLISendCommand.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_CLISendCommand.Name = "groupBox_CLISendCommand";
-            this.groupBox_CLISendCommand.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_CLISendCommand.Size = new System.Drawing.Size(841, 90);
-            this.groupBox_CLISendCommand.TabIndex = 70;
-            this.groupBox_CLISendCommand.TabStop = false;
-            this.groupBox_CLISendCommand.Text = "CLI send command";
-            // 
-            // textBox_CLIsendperodically
-            // 
-            this.textBox_CLIsendperodically.Location = new System.Drawing.Point(254, 55);
-            this.textBox_CLIsendperodically.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CLIsendperodically.Name = "textBox_CLIsendperodically";
-            this.textBox_CLIsendperodically.Size = new System.Drawing.Size(46, 26);
-            this.textBox_CLIsendperodically.TabIndex = 108;
-            this.textBox_CLIsendperodically.Text = "10";
-            // 
-            // checkBox_SendPeriodically
-            // 
-            this.checkBox_SendPeriodically.AutoSize = true;
-            this.checkBox_SendPeriodically.Location = new System.Drawing.Point(315, 57);
-            this.checkBox_SendPeriodically.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_SendPeriodically.Name = "checkBox_SendPeriodically";
-            this.checkBox_SendPeriodically.Size = new System.Drawing.Size(189, 22);
-            this.checkBox_SendPeriodically.TabIndex = 6;
-            this.checkBox_SendPeriodically.Text = "Send Periodically (100 ms)";
-            this.checkBox_SendPeriodically.UseVisualStyleBackColor = true;
-            // 
-            // textBox_CLISendCommands
-            // 
-            this.textBox_CLISendCommands.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox_CLISendCommands.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_CLISendCommands.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_CLISendCommands.Location = new System.Drawing.Point(8, 20);
-            this.textBox_CLISendCommands.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CLISendCommands.Name = "textBox_CLISendCommands";
-            this.textBox_CLISendCommands.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_CLISendCommands.Size = new System.Drawing.Size(829, 31);
-            this.textBox_CLISendCommands.TabIndex = 0;
-            // 
-            // checkBox_CLIDeleteAfterSend
-            // 
-            this.checkBox_CLIDeleteAfterSend.AutoSize = true;
-            this.checkBox_CLIDeleteAfterSend.Location = new System.Drawing.Point(115, 59);
-            this.checkBox_CLIDeleteAfterSend.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_CLIDeleteAfterSend.Name = "checkBox_CLIDeleteAfterSend";
-            this.checkBox_CLIDeleteAfterSend.Size = new System.Drawing.Size(135, 22);
-            this.checkBox_CLIDeleteAfterSend.TabIndex = 4;
-            this.checkBox_CLIDeleteAfterSend.Text = "Delete after Send";
-            this.checkBox_CLIDeleteAfterSend.UseVisualStyleBackColor = true;
-            // 
-            // button_CLISend
-            // 
-            this.button_CLISend.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_CLISend.Location = new System.Drawing.Point(8, 56);
-            this.button_CLISend.Margin = new System.Windows.Forms.Padding(2);
-            this.button_CLISend.Name = "button_CLISend";
-            this.button_CLISend.Size = new System.Drawing.Size(96, 23);
-            this.button_CLISend.TabIndex = 1;
-            this.button_CLISend.Text = "Send";
-            // 
-            // listBox_CLI_ALLCommands
-            // 
-            this.listBox_CLI_ALLCommands.FormattingEnabled = true;
-            this.listBox_CLI_ALLCommands.ItemHeight = 18;
-            this.listBox_CLI_ALLCommands.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
-            this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
-            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
-            this.listBox_CLI_ALLCommands.TabIndex = 71;
-            // 
-            // groupBox_AllCommands
-            // 
-            this.groupBox_AllCommands.Controls.Add(this.label75);
-            this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
-            this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
-            this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
-            this.groupBox_AllCommands.Name = "groupBox_AllCommands";
-            this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 445);
-            this.groupBox_AllCommands.TabIndex = 72;
-            this.groupBox_AllCommands.TabStop = false;
-            this.groupBox_AllCommands.Text = "Command list";
-            // 
-            // textBox_CommandHelp
-            // 
-            this.textBox_CommandHelp.Location = new System.Drawing.Point(377, 44);
-            this.textBox_CommandHelp.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CommandHelp.Multiline = true;
-            this.textBox_CommandHelp.Name = "textBox_CommandHelp";
-            this.textBox_CommandHelp.ReadOnly = true;
-            this.textBox_CommandHelp.Size = new System.Drawing.Size(192, 190);
-            this.textBox_CommandHelp.TabIndex = 114;
-            this.textBox_CommandHelp.TabStop = false;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(378, 20);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(41, 18);
-            this.label75.TabIndex = 115;
-            this.label75.Text = "Help:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1492, 660);
+            this.ClientSize = new System.Drawing.Size(1509, 677);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -9846,9 +9853,6 @@ namespace Monitor
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl_Main.ResumeLayout(false);
-            this.tabPage_charts.ResumeLayout(false);
-            this.tabPage_charts.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage_ServerTCP.ResumeLayout(false);
             this.tabPage_ServerTCP.PerformLayout();
             this.groupBox_ConnectionTimedOut.ResumeLayout(false);
@@ -9869,6 +9873,8 @@ namespace Monitor
             this.groupBox_Stopwatch.ResumeLayout(false);
             this.groupBox_Stopwatch.PerformLayout();
             this.tabPage_GenericFrame.ResumeLayout(false);
+            this.groupBox_KratosMonitor.ResumeLayout(false);
+            this.groupBox_KratosMonitor.PerformLayout();
             this.groupBox31.ResumeLayout(false);
             this.groupBox31.PerformLayout();
             this.groupBox_clientTX.ResumeLayout(false);
@@ -9879,6 +9885,10 @@ namespace Monitor
             this.groupBox40.ResumeLayout(false);
             this.tabControl_System.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox_AllCommands.ResumeLayout(false);
+            this.groupBox_AllCommands.PerformLayout();
+            this.groupBox_CLISendCommand.ResumeLayout(false);
+            this.groupBox_CLISendCommand.PerformLayout();
             this.groupBox32.ResumeLayout(false);
             this.groupBox32.PerformLayout();
             this.tabPage3038WBPAA.ResumeLayout(false);
@@ -9949,6 +9959,9 @@ namespace Monitor
             this.tabPage_Page12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).EndInit();
             this.groupBox56.ResumeLayout(false);
+            this.tabPage_charts.ResumeLayout(false);
+            this.tabPage_charts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -10004,18 +10017,14 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.groupBox_KratosMonitor.ResumeLayout(false);
-            this.groupBox_KratosMonitor.PerformLayout();
-            this.groupBox_CLISendCommand.ResumeLayout(false);
-            this.groupBox_CLISendCommand.PerformLayout();
-            this.groupBox_AllCommands.ResumeLayout(false);
-            this.groupBox_AllCommands.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         private readonly List<string> CommandsHistoy = new List<string>();
+     //   private readonly List<string> CLI_CommandsHistoy = new List<string>();
         private int HistoryIndex = -1;
+        private int CLI_HistoryIndex = -1;
         // bool SelfMonitorCommandsMode = false;
 
 
@@ -12231,6 +12240,13 @@ namespace Monitor
                 return null;
             }
 
+
+        }
+
+        public class CLI_Command
+        {
+            public String Opcode;
+            public String Description;
 
         }
 
@@ -14764,8 +14780,36 @@ namespace Monitor
 
         }
 
-        private void UpdateSerialPortHistory(string i_SendString)
+        private void UpdateCommandCLIHistory(string i_SendString)
         {
+            bool Found = false;
+
+            foreach (string str in Monitor.Properties.Settings.Default.CLICommad_History)
+            {
+                //comboBox_SerialPortHistory.Items.Add((object)str);
+                // comboBox_SMSCommands.Items.Add(str);
+                if (str == i_SendString)
+                {
+                    Found = true;
+                }
+            }
+
+            if (Found == false)
+            {
+                Monitor.Properties.Settings.Default.CLICommad_History.Add(i_SendString);
+                Monitor.Properties.Settings.Default.Save();
+            }
+            CLI_HistoryIndex = Settings.Default.CLICommad_History.Count;
+
+        }
+
+            private void UpdateSerialPortHistory(string i_SendString)
+        {
+            if(i_SendString == "")
+            {
+                return;
+            }
+
             bool Found = false;
 
             foreach (string str in Monitor.Properties.Settings.Default.SerialPort_History)
@@ -24129,6 +24173,162 @@ This Process can take 1 minute.";
             SerialPortLogger.LogMessage(Color.White, Color.Red, e.ToString(), New_Line = true, Show_Time = true);
             //SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
             // SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
+        }
+
+        private void textBox_CLISendCommands_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    //case Keys.F1:
+                    //    SerialTerminalPrintHelp();
+
+                    //    break;
+
+                    case Keys.F2:
+                        SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "F2 function reads all commands to history", New_Line = true, Show_Time = true);
+                        break;
+
+                    //case Keys.ControlKey:
+                    //    SelfMonitorCommandsMode = !SelfMonitorCommandsMode;
+                    //    if (SelfMonitorCommandsMode == true)
+                    //    {
+                    //        textBox_SendSerialPort.BackColor = SystemColors.Info;
+                    //        groupBox_SendSerialOrMonitorCommands.BackColor = SystemColors.Info;
+                    //        SerialPortLogger.LogMessage(Color.Black, Color.Chartreuse, "Change to Monitor commands mode", New_Line = true, Show_Time = true);
+                    //    }
+                    //    else
+                    //    {
+                    //        groupBox_SendSerialOrMonitorCommands.BackColor = default(Color);
+                    //        textBox_SendSerialPort.BackColor = SystemColors.ActiveCaption;
+                    //        SerialPortLogger.LogMessage(Color.Black, Color.Chartreuse, "Change to Send to serial port mode", New_Line = true, Show_Time = true);
+
+
+                    //    }
+                    //    break;
+
+
+                    case Keys.Enter:
+                        //if (SelfMonitorCommandsMode == true)
+                        //{
+
+                        //}
+                        //else
+                        //{
+                        button_CLISend.PerformClick();
+                        //}
+
+                        break;
+
+                    case Keys.Up:
+                        
+                        //SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, " History Index: " + HistoryIndex.ToString(), New_Line = true, Show_Time = false);
+                        if (CLI_HistoryIndex > Monitor.Properties.Settings.Default.CLICommad_History.Count - 1 || CLI_HistoryIndex < 0)
+                        {
+                            CLI_HistoryIndex = Monitor.Properties.Settings.Default.CLICommad_History.Count;
+                        }
+
+                        //if(textBox_SendSerialPort.Text == string.Empty)
+                        //{
+                        //    HistoryIndex = CommandsHistoy.Count;
+                        //}
+
+
+                        if (CLI_HistoryIndex > 0)
+                        {
+                            CLI_HistoryIndex--;
+                        }
+                        textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
+                        break;
+
+                    case Keys.Down:
+
+                        textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
+                        if (CLI_HistoryIndex < Monitor.Properties.Settings.Default.CLICommad_History.Count - 1)
+                        {
+                            CLI_HistoryIndex++;
+                        }
+                        break;
+
+                    case Keys.Tab:
+                        List<string> Strlist = new List<string>();
+                        foreach (string str in Monitor.Properties.Settings.Default.CLICommad_History)
+                        {
+                            if (str.StartsWith(textBox_CLISendCommands.Text))
+                            {
+                                Strlist.Add(str);
+                            }
+                        }
+
+                        if (Strlist.Count > 1)
+                        {
+                            SystemLogger.LogMessage(Color.Black, Color.Yellow, "Total sub commands: " + Strlist.Count.ToString() + " ", New_Line = true, Show_Time = true);
+                            foreach (string str in Strlist)
+                            {
+                                SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, New_Line = true, Show_Time = false);
+                                if (CLI_HistoryIndex == Strlist.IndexOf(str))
+                                {
+                                    SystemLogger.LogMessage(Color.Black, Color.Chartreuse, "<------", New_Line = false, Show_Time = false);
+                                }
+                            }
+                        }
+                        else
+                            if (Strlist.Count == 1)
+                        {
+                            textBox_CLISendCommands.Text = Strlist[0];
+                        }
+                        break;
+
+                    default:
+                        CLI_HistoryIndex = Monitor.Properties.Settings.Default.CLICommad_History.Count - 1;
+                        break;
+                }
+
+                //  CommandsHistoy.SelectedIndex = HistoryIndex;
+            }
+            catch (Exception ex)
+            {
+                SystemLogger.LogMessage(Color.Blue, Color.White, ex.ToString(), New_Line = true, Show_Time = false);
+            }
+        }
+
+        private void tabControl_Main_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab)
+            {
+                // MessageBox.Show("Tab");
+                e.IsInputKey = true;
+            }
+            if (e.KeyData == (Keys.Tab | Keys.Shift))
+            {
+                //  MessageBox.Show("Shift + Tab");
+                e.IsInputKey = true;
+            }
+        }
+
+        private void button_CLISend_Click(object sender, EventArgs e)
+        {
+            UpdateCommandCLIHistory(textBox_CLISendCommands.Text);
+
+            if (checkBox_CLIDeleteAfterSend.Checked == true)
+            {
+                textBox_CLISendCommands.Text = "";
+            }
+        }
+
+        private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab)
+            {
+                // MessageBox.Show("Tab");
+                e.IsInputKey = true;
+            }
+            if (e.KeyData == (Keys.Tab | Keys.Shift))
+            {
+                //  MessageBox.Show("Shift + Tab");
+                e.IsInputKey = true;
+            }
         }
 
         private void button57_Click_1(object sender, EventArgs e)
