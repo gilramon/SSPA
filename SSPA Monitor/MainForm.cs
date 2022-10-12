@@ -16703,7 +16703,7 @@ This Process can take 1 minute.";
 
                         if (Strlist.Count > 1)
                         {
-                            SystemLogger.LogMessage(Color.Black, Color.Yellow, "Total sub commands: " + Strlist.Count.ToString() + " ", New_Line = true, Show_Time = true);
+                            SystemLogger.LogMessage(Color.Black, Color.AliceBlue, "History commands: " + Strlist.Count.ToString() + " ", New_Line = true, Show_Time = true);
                             foreach (string str in Strlist)
                             {
                                 SystemLogger.LogMessage(Color.Black, Color.Chartreuse, str, New_Line = true, Show_Time = false);
