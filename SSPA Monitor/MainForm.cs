@@ -382,7 +382,7 @@ namespace Monitor
         private ListBox listBox_CLI_ALLCommands;
         private GroupBox groupBox_CLISendCommand;
         private TextBox textBox_CLIsendperodically;
-        private CheckBox checkBox_SendPeriodically;
+        private CheckBox checkBox_CLI_SendPeriodically;
         private TextBox textBox_CLISendCommands;
         private CheckBox checkBox_CLIDeleteAfterSend;
         private Button button_CLISend;
@@ -445,8 +445,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -580,7 +580,7 @@ namespace Monitor
             this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
             this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
             this.textBox_CLIsendperodically = new System.Windows.Forms.TextBox();
-            this.checkBox_SendPeriodically = new System.Windows.Forms.CheckBox();
+            this.checkBox_CLI_SendPeriodically = new System.Windows.Forms.CheckBox();
             this.textBox_CLISendCommands = new System.Windows.Forms.TextBox();
             this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
             this.button_CLISend = new System.Windows.Forms.Button();
@@ -2426,7 +2426,6 @@ namespace Monitor
             // 
             // groupBox_AllCommands
             // 
-            this.groupBox_AllCommands.Controls.Add(this.button_DeleteCommandsHistory);
             this.groupBox_AllCommands.Controls.Add(this.label75);
             this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
             this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
@@ -2472,8 +2471,9 @@ namespace Monitor
             // 
             // groupBox_CLISendCommand
             // 
+            this.groupBox_CLISendCommand.Controls.Add(this.button_DeleteCommandsHistory);
             this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLIsendperodically);
-            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_SendPeriodically);
+            this.groupBox_CLISendCommand.Controls.Add(this.checkBox_CLI_SendPeriodically);
             this.groupBox_CLISendCommand.Controls.Add(this.textBox_CLISendCommands);
             this.groupBox_CLISendCommand.Controls.Add(this.checkBox_CLIDeleteAfterSend);
             this.groupBox_CLISendCommand.Controls.Add(this.button_CLISend);
@@ -2494,17 +2494,18 @@ namespace Monitor
             this.textBox_CLIsendperodically.Size = new System.Drawing.Size(46, 26);
             this.textBox_CLIsendperodically.TabIndex = 108;
             this.textBox_CLIsendperodically.Text = "10";
+            this.textBox_CLIsendperodically.TextChanged += new System.EventHandler(this.textBox_CLIsendperodically_TextChanged);
             // 
-            // checkBox_SendPeriodically
+            // checkBox_CLI_SendPeriodically
             // 
-            this.checkBox_SendPeriodically.AutoSize = true;
-            this.checkBox_SendPeriodically.Location = new System.Drawing.Point(315, 57);
-            this.checkBox_SendPeriodically.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox_SendPeriodically.Name = "checkBox_SendPeriodically";
-            this.checkBox_SendPeriodically.Size = new System.Drawing.Size(189, 22);
-            this.checkBox_SendPeriodically.TabIndex = 6;
-            this.checkBox_SendPeriodically.Text = "Send Periodically (100 ms)";
-            this.checkBox_SendPeriodically.UseVisualStyleBackColor = true;
+            this.checkBox_CLI_SendPeriodically.AutoSize = true;
+            this.checkBox_CLI_SendPeriodically.Location = new System.Drawing.Point(315, 57);
+            this.checkBox_CLI_SendPeriodically.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_CLI_SendPeriodically.Name = "checkBox_CLI_SendPeriodically";
+            this.checkBox_CLI_SendPeriodically.Size = new System.Drawing.Size(189, 22);
+            this.checkBox_CLI_SendPeriodically.TabIndex = 6;
+            this.checkBox_CLI_SendPeriodically.Text = "Send Periodically (100 ms)";
+            this.checkBox_CLI_SendPeriodically.UseVisualStyleBackColor = true;
             // 
             // textBox_CLISendCommands
             // 
@@ -2785,17 +2786,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea4.AxisX.Title = "Freq";
-            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.AxisY.Title = "Power [dBm]";
-            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend4);
+            chartArea5.AxisX.Title = "Freq";
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.AxisY.Title = "Power [dBm]";
+            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend5);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4716,7 +4717,7 @@ namespace Monitor
             // button_DeleteCommandsHistory
             // 
             this.button_DeleteCommandsHistory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DeleteCommandsHistory.Location = new System.Drawing.Point(713, 20);
+            this.button_DeleteCommandsHistory.Location = new System.Drawing.Point(713, 59);
             this.button_DeleteCommandsHistory.Margin = new System.Windows.Forms.Padding(2);
             this.button_DeleteCommandsHistory.Name = "button_DeleteCommandsHistory";
             this.button_DeleteCommandsHistory.Size = new System.Drawing.Size(124, 23);
@@ -6105,10 +6106,21 @@ namespace Monitor
                     {
                         if (Timer_100ms % TimeSend == 0)
                         {
-                            Button2_Click_1(null, null);
+                            button_SendSerialPort.PerformClick();
                         }
                     }
 
+                }
+            }
+
+            if (checkBox_CLI_SendPeriodically.CheckState == CheckState.Checked)
+            {
+                if (int.TryParse(textBox_CLIsendperodically.Text, out int TimeSend))
+                {
+                    if (Timer_100ms % TimeSend == 0)
+                    {
+                        button_CLISend.PerformClick();
+                    }
                 }
             }
 
@@ -14613,13 +14625,14 @@ Note: eStatus enum 
 
         private void textBox_SendSerialPortPeriod_TextChanged(object sender, EventArgs e)
         {
-            if (IsDigitsOnly(textBox_SendSerialPortPeriod.Text) == true)
+            TextBox Txtbx = (TextBox)sender;
+            if (int.TryParse(Txtbx.Text, out int result) == true)
             {
-                textBox_SendSerialPortPeriod.BackColor = Color.LightGreen;
+                Txtbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_SendSerialPortPeriod.BackColor = Color.Red;
+                Txtbx.BackColor = Color.Red;
             }
         }
 
@@ -16770,6 +16783,19 @@ This Process can take 1 minute.";
             Monitor.Properties.Settings.Default.CLICommad_History.Clear();
             Monitor.Properties.Settings.Default.Save();
 
+        }
+
+        private void textBox_CLIsendperodically_TextChanged(object sender, EventArgs e)
+        {
+            TextBox Txtbx = (TextBox)sender;
+            if (int.TryParse(Txtbx.Text,out int result) == true)
+            {
+                Txtbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                Txtbx.BackColor = Color.Red;
+            }
         }
 
         private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
