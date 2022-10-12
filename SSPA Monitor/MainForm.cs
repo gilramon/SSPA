@@ -45,7 +45,6 @@ namespace Monitor
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPortNo;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtDataTx;
         private System.Windows.Forms.Button button1;
         //TcpListener tcpListener;
         //private Thread listenThread;
@@ -185,10 +184,6 @@ namespace Monitor
         private Label lblDataBits;
         private Label label3;
         private System.IO.Ports.SerialPort serialPort;
-        private GroupBox groupBox_ConnectionTimedOut;
-        private TextBox textBox_ConnectionTimedOut;
-        private Button button_SetTimedOut;
-        private TextBox textBox_CurrentTimeOut;
         private TextBox textBox_ServerOpen;
         private TabPage tabPage_ServerTCP;
         private TabPage tabPage4;
@@ -394,6 +389,8 @@ namespace Monitor
         private GroupBox groupBox_AllCommands;
         private Label label75;
         private TextBox textBox_CommandHelp;
+        private TextBox txtDataTx;
+        private Button button_DeleteCommandsHistory;
         private static readonly string PREAMBLE = "23";
 
 
@@ -448,8 +445,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -461,16 +458,11 @@ namespace Monitor
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox_ConnectionNumber = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtDataTx = new System.Windows.Forms.TextBox();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage_ServerTCP = new System.Windows.Forms.TabPage();
             this.checkBox_ParseMessages = new System.Windows.Forms.CheckBox();
             this.textBox_IDKey = new System.Windows.Forms.RichTextBox();
             this.checkBox_EchoResponse = new System.Windows.Forms.CheckBox();
-            this.groupBox_ConnectionTimedOut = new System.Windows.Forms.GroupBox();
-            this.textBox_CurrentTimeOut = new System.Windows.Forms.TextBox();
-            this.button_SetTimedOut = new System.Windows.Forms.Button();
-            this.textBox_ConnectionTimedOut = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox_ServerRecord = new System.Windows.Forms.CheckBox();
             this.checkBox_ServerPause = new System.Windows.Forms.CheckBox();
@@ -796,11 +788,12 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtDataTx = new System.Windows.Forms.TextBox();
+            this.button_DeleteCommandsHistory = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
             this.tabPage_ServerTCP.SuspendLayout();
-            this.groupBox_ConnectionTimedOut.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage_ClientTCP.SuspendLayout();
             this.tabPage_SerialPort.SuspendLayout();
@@ -949,14 +942,14 @@ namespace Monitor
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtDataTx);
             this.groupBox2.Controls.Add(this.comboBox_ConnectionNumber);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.txtDataTx);
             this.groupBox2.Location = new System.Drawing.Point(2, 63);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(250, 210);
+            this.groupBox2.Size = new System.Drawing.Size(250, 93);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Send Data";
@@ -964,7 +957,7 @@ namespace Monitor
             // comboBox_ConnectionNumber
             // 
             this.comboBox_ConnectionNumber.FormattingEnabled = true;
-            this.comboBox_ConnectionNumber.Location = new System.Drawing.Point(77, 182);
+            this.comboBox_ConnectionNumber.Location = new System.Drawing.Point(89, 50);
             this.comboBox_ConnectionNumber.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox_ConnectionNumber.Name = "comboBox_ConnectionNumber";
             this.comboBox_ConnectionNumber.Size = new System.Drawing.Size(156, 26);
@@ -974,26 +967,13 @@ namespace Monitor
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 181);
+            this.button1.Location = new System.Drawing.Point(16, 51);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Send";
             this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // txtDataTx
-            // 
-            this.txtDataTx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDataTx.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
-            this.txtDataTx.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDataTx.Multiline = true;
-            this.txtDataTx.Name = "txtDataTx";
-            this.txtDataTx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDataTx.Size = new System.Drawing.Size(236, 158);
-            this.txtDataTx.TabIndex = 0;
-            this.txtDataTx.TextChanged += new System.EventHandler(this.TxtDataTx_TextChanged);
             // 
             // tabControl_Main
             // 
@@ -1019,7 +999,6 @@ namespace Monitor
             this.tabPage_ServerTCP.Controls.Add(this.textBox_IDKey);
             this.tabPage_ServerTCP.Controls.Add(this.checkBox_EchoResponse);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox_ServerSettings);
-            this.tabPage_ServerTCP.Controls.Add(this.groupBox_ConnectionTimedOut);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox2);
             this.tabPage_ServerTCP.Controls.Add(this.groupBox3);
             this.tabPage_ServerTCP.Location = new System.Drawing.Point(4, 27);
@@ -1034,7 +1013,7 @@ namespace Monitor
             // checkBox_ParseMessages
             // 
             this.checkBox_ParseMessages.AutoSize = true;
-            this.checkBox_ParseMessages.Location = new System.Drawing.Point(106, 332);
+            this.checkBox_ParseMessages.Location = new System.Drawing.Point(123, 163);
             this.checkBox_ParseMessages.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_ParseMessages.Name = "checkBox_ParseMessages";
             this.checkBox_ParseMessages.Size = new System.Drawing.Size(124, 22);
@@ -1056,7 +1035,7 @@ namespace Monitor
             // checkBox_EchoResponse
             // 
             this.checkBox_EchoResponse.AutoSize = true;
-            this.checkBox_EchoResponse.Location = new System.Drawing.Point(5, 332);
+            this.checkBox_EchoResponse.Location = new System.Drawing.Point(4, 163);
             this.checkBox_EchoResponse.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_EchoResponse.Name = "checkBox_EchoResponse";
             this.checkBox_EchoResponse.Size = new System.Drawing.Size(117, 22);
@@ -1064,50 +1043,6 @@ namespace Monitor
             this.checkBox_EchoResponse.Text = "Send ACK Back";
             this.checkBox_EchoResponse.UseVisualStyleBackColor = true;
             this.checkBox_EchoResponse.CheckedChanged += new System.EventHandler(this.CheckBox_EchoResponse_CheckedChanged);
-            // 
-            // groupBox_ConnectionTimedOut
-            // 
-            this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_CurrentTimeOut);
-            this.groupBox_ConnectionTimedOut.Controls.Add(this.button_SetTimedOut);
-            this.groupBox_ConnectionTimedOut.Controls.Add(this.textBox_ConnectionTimedOut);
-            this.groupBox_ConnectionTimedOut.Location = new System.Drawing.Point(2, 279);
-            this.groupBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox_ConnectionTimedOut.Name = "groupBox_ConnectionTimedOut";
-            this.groupBox_ConnectionTimedOut.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_ConnectionTimedOut.Size = new System.Drawing.Size(250, 51);
-            this.groupBox_ConnectionTimedOut.TabIndex = 9;
-            this.groupBox_ConnectionTimedOut.TabStop = false;
-            this.groupBox_ConnectionTimedOut.Text = "Server Connection Timed Out (seconds)";
-            this.groupBox_ConnectionTimedOut.Visible = false;
-            // 
-            // textBox_CurrentTimeOut
-            // 
-            this.textBox_CurrentTimeOut.Location = new System.Drawing.Point(134, 20);
-            this.textBox_CurrentTimeOut.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CurrentTimeOut.Name = "textBox_CurrentTimeOut";
-            this.textBox_CurrentTimeOut.ReadOnly = true;
-            this.textBox_CurrentTimeOut.Size = new System.Drawing.Size(58, 26);
-            this.textBox_CurrentTimeOut.TabIndex = 10;
-            // 
-            // button_SetTimedOut
-            // 
-            this.button_SetTimedOut.Location = new System.Drawing.Point(59, 20);
-            this.button_SetTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            this.button_SetTimedOut.Name = "button_SetTimedOut";
-            this.button_SetTimedOut.Size = new System.Drawing.Size(69, 22);
-            this.button_SetTimedOut.TabIndex = 9;
-            this.button_SetTimedOut.Text = "Set";
-            this.button_SetTimedOut.UseVisualStyleBackColor = true;
-            this.button_SetTimedOut.Click += new System.EventHandler(this.Button_SetTimedOut_Click);
-            // 
-            // textBox_ConnectionTimedOut
-            // 
-            this.textBox_ConnectionTimedOut.Location = new System.Drawing.Point(6, 22);
-            this.textBox_ConnectionTimedOut.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_ConnectionTimedOut.Name = "textBox_ConnectionTimedOut";
-            this.textBox_ConnectionTimedOut.Size = new System.Drawing.Size(49, 26);
-            this.textBox_ConnectionTimedOut.TabIndex = 8;
-            this.textBox_ConnectionTimedOut.Text = "300";
             // 
             // groupBox3
             // 
@@ -2491,6 +2426,7 @@ namespace Monitor
             // 
             // groupBox_AllCommands
             // 
+            this.groupBox_AllCommands.Controls.Add(this.button_DeleteCommandsHistory);
             this.groupBox_AllCommands.Controls.Add(this.label75);
             this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
             this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
@@ -2849,17 +2785,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea4.AxisX.Title = "Freq";
+            chartArea4.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.AxisY.Title = "Power [dBm]";
+            chartArea4.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            legend4.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4770,6 +4706,24 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // txtDataTx
+            // 
+            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
+            this.txtDataTx.Name = "txtDataTx";
+            this.txtDataTx.Size = new System.Drawing.Size(232, 26);
+            this.txtDataTx.TabIndex = 3;
+            // 
+            // button_DeleteCommandsHistory
+            // 
+            this.button_DeleteCommandsHistory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteCommandsHistory.Location = new System.Drawing.Point(713, 20);
+            this.button_DeleteCommandsHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.button_DeleteCommandsHistory.Name = "button_DeleteCommandsHistory";
+            this.button_DeleteCommandsHistory.Size = new System.Drawing.Size(124, 23);
+            this.button_DeleteCommandsHistory.TabIndex = 109;
+            this.button_DeleteCommandsHistory.Text = "Delete history";
+            this.button_DeleteCommandsHistory.Click += new System.EventHandler(this.button_DeleteCommandsHistory_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -4802,8 +4756,6 @@ namespace Monitor
             this.tabControl_Main.ResumeLayout(false);
             this.tabPage_ServerTCP.ResumeLayout(false);
             this.tabPage_ServerTCP.PerformLayout();
-            this.groupBox_ConnectionTimedOut.ResumeLayout(false);
-            this.groupBox_ConnectionTimedOut.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabPage_ClientTCP.ResumeLayout(false);
@@ -8067,11 +8019,7 @@ namespace Monitor
 
 
 
-            if (m_Server != null)
-            {
-                textBox_CurrentTimeOut.Text = ((TimeOutKeepAlivein100ms / 10) - (GetDataIntervalCounter / 10)).ToString();
 
-            }
 
 
 
@@ -8693,27 +8641,7 @@ namespace Monitor
         }
 
 
-        private void Button_SetTimedOut_Click(object sender, EventArgs e)
-        {
 
-            try
-            {
-                int Timeoutvalue = int.Parse(textBox_ConnectionTimedOut.Text);
-
-                //if(m_Server != null)
-                //{
-                //     m_Server.SetTimeoutinSeconds = Timeoutvalue * 10;
-                //}
-                TimeOutKeepAlivein100ms = Timeoutvalue * 10;
-                GetDataIntervalCounter = 0;
-
-
-            }
-            catch
-            {
-                textBox_ConnectionTimedOut.Text = "300";
-            }
-        }
 
         //  static int LastNumOfConnections = 0;
         private void TextBox_NumberOfOpenConnections_TextChanged(object sender, EventArgs e)
@@ -8853,24 +8781,12 @@ namespace Monitor
 
         private void UpdateCommandCLIHistory(string i_SendString)
         {
-            bool Found = false;
-
-            foreach (string str in Monitor.Properties.Settings.Default.CLICommad_History)
-            {
-                //comboBox_SerialPortHistory.Items.Add((object)str);
-                // comboBox_SMSCommands.Items.Add(str);
-                if (str == i_SendString)
-                {
-                    Found = true;
-                }
-            }
-
-            if (Found == false)
-            {
-                Monitor.Properties.Settings.Default.CLICommad_History.Add(i_SendString);
-                Monitor.Properties.Settings.Default.Save();
-            }
-            CLI_HistoryIndex = Settings.Default.CLICommad_History.Count;
+        Monitor.Properties.Settings.Default.CLICommad_History.Remove(i_SendString);
+        Monitor.Properties.Settings.Default.CLICommad_History.Add(i_SendString);
+        Monitor.Properties.Settings.Default.CLICommad_History.Remove("");
+        Monitor.Properties.Settings.Default.Save();
+            
+        CLI_HistoryIndex = Settings.Default.CLICommad_History.Count;
 
         }
 
@@ -16754,9 +16670,10 @@ This Process can take 1 minute.";
 
                     case Keys.Down:
 
-                        textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
-                        if (CLI_HistoryIndex < Monitor.Properties.Settings.Default.CLICommad_History.Count - 1)
+                        
+                        if (CLI_HistoryIndex < Monitor.Properties.Settings.Default.CLICommad_History.Count - 1 && CLI_HistoryIndex > 0)
                         {
+                            textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
                             CLI_HistoryIndex++;
                         }
                         break;
@@ -16846,6 +16763,13 @@ This Process can take 1 minute.";
             {
                 textBox_CLISendCommands.Text = "";
             }
+        }
+
+        private void button_DeleteCommandsHistory_Click(object sender, EventArgs e)
+        {
+            Monitor.Properties.Settings.Default.CLICommad_History.Clear();
+            Monitor.Properties.Settings.Default.Save();
+
         }
 
         private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
