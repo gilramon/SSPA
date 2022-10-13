@@ -14407,7 +14407,16 @@ namespace Monitor
             }
         }
 
+        void WriteDataToTheDataGrid(DataGridView i_grid, KratosProtocolFrame i_Parsedframe)
+        {
 
+            for (int i = 0; i < (i_grid.Rows.Count); i++)
+            {
+
+                i_grid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+            }
+        }
 
         void ReadFlashACKReceived(KratosProtocolFrame i_Parsedframe)
         {
@@ -14424,13 +14433,15 @@ namespace Monitor
                 switch (str_Address)
                 {
                     case "0000":
-                        m_Datagrid = dataGridView_Block00;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block00, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block00;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count); i++)
+                        //{
+
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
      
-                        }
+                        //}
 
                         break;
 
@@ -14438,7 +14449,7 @@ namespace Monitor
                          m_Datagrid = dataGridView_Block01;
                        m_InternalAddress = m_InternalAddress / 2;
                         int row = 0;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count -1) && row < 128; i++)
+                        for (int i = 0; i < (m_Datagrid.Rows.Count) && row < 128; i++)
                         {
                             String DataToWriteToRow = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
                             m_Datagrid.Rows[row + m_InternalAddress].Cells[0].Value = DataToWriteToRow;
@@ -14448,130 +14459,146 @@ namespace Monitor
                         break;
 
                     case "0002":
-                        m_Datagrid = dataGridView_Block02;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block02, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block02;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count); i++)
+                        //{
 
-                        }
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        //}
 
                         break;
 
                     case "0003":
 
-                        m_Datagrid = dataGridView_Block03;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block03, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block03;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
                     case "0004":
 
-                        m_Datagrid = dataGridView_Block04;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block04, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block04;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
                     case "0005":
-                        m_Datagrid = dataGridView_Block05;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block05, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block05;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count); i++)
+                        //{
 
-                        }
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        //}
 
                         break;
 
                     case "0006":
-                        m_Datagrid = dataGridView_Block06;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block06, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block06;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                        }
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        //}
 
                         break;
 
                     case "0007":
-                        m_Datagrid = dataGridView_Block07;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block07, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block07;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count); i++)
+                        //{
 
-                        }
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        //}
 
                         break;
 
                     case "0008":
-                        m_Datagrid = dataGridView_Block08;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        WriteDataToTheDataGrid(dataGridView_Block08, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block08;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                        }
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+
+                        //}
 
                         break;
 
                     case "0009":
 
-                        m_Datagrid = dataGridView_Block09;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block09, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block09;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
                     case "000A":
 
-                        m_Datagrid = dataGridView_Block10;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block10, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block10;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
                     case "000B":
 
-                        m_Datagrid = dataGridView_Block11;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block11, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block11;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
 
                     case "000C":
 
-                        m_Datagrid = dataGridView_Block12;
-                        for (int i = 0; i < (m_Datagrid.Rows.Count - 1); i++)
-                        {
+                        WriteDataToTheDataGrid(dataGridView_Block12, i_Parsedframe);
+                        //m_Datagrid = dataGridView_Block12;
+                        //for (int i = 0; i < (m_Datagrid.Rows.Count ); i++)
+                        //{
 
-                            m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
+                        //    m_Datagrid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
-                        }
+                        //}
 
                         break;
 
@@ -15546,7 +15573,7 @@ namespace Monitor
             }
 
             // This method will be called when there is data waiting in the port's buffer
-            Thread.Sleep(300);
+            Thread.Sleep(100);
 
             if (!serialPort.IsOpen)
             {
@@ -25127,7 +25154,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                 String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
-                int TotalBytesToRead = (i_DataGrid.Rows.Count - 1) * 2;
+                int TotalBytesToRead = (i_DataGrid.Rows.Count) * 2;
                 int InternalFlashAddress = 0;
 
 
@@ -25178,7 +25205,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 // String BlockAddress = String.Format("{0}0 00", GridNumber.ToString("X")); 
                 String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
-                for (i = 0; i < i_DataGrid.Rows.Count - 1; i++)
+                for (i = 0; i < i_DataGrid.Rows.Count ; i++)
                 {
                     if (i_DataGrid.Rows[i].Cells[0].Style.BackColor != Color.LightGreen)
                     {
@@ -25361,7 +25388,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             {
                // String BlockAddress = String.Format("00 0{0}", GridNumber.ToString("X"));
 
-                for (int i = 0; i < i_DataGrid.Rows.Count-1; i++)
+                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
                 {
                     i_DataGrid.Rows[i].Cells[0].Value = String.Format("{0}{1}", GridNumber.ToString("X"),i.ToString("X3"));
                 }
@@ -25433,11 +25460,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             String ret = "";
             for (int i = 0; i < i_Datagrid.Rows.Count; i++)
             {
-                if(i_Datagrid.Rows[i].Cells[0].Value == null)
+                if(i_Datagrid.Rows[i].Cells[1].Value == null)
                 {
-                    i_Datagrid.Rows[i].Cells[0].Value = "";
+                    i_Datagrid.Rows[i].Cells[1].Value = "";
                 }
-                ret += i_Datagrid.Rows[i].Cells[0].Value + ",";
+                ret += i_Datagrid.Rows[i].Cells[1].Value + ",";
             }
             return ret;
         }
@@ -25517,11 +25544,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
             for (int i = 0; i < i_Datagrid.Rows.Count; i++)
             {
-                if (i_Datagrid.Rows[i].Cells[0].Value == null)
+                if (i_Datagrid.Rows[i].Cells[1].Value == null)
                 {
-                    i_Datagrid.Rows[i].Cells[0].Value = "";
+                    i_Datagrid.Rows[i].Cells[1].Value = "";
                 }
-                i_Datagrid.Rows[i].Cells[0].Value = temp[i];
+                i_Datagrid.Rows[i].Cells[1].Value = temp[i];
             }
             return ;
         }
@@ -25575,7 +25602,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
         {
             if (i_OnlyFlashData == true)
             {
-                for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+                for (int i = 0; i < i_DataGrid.Rows.Count; i++)
                 {
                     i_DataGrid.Rows[i].Cells[0].Value = "";
                 }
@@ -25591,10 +25618,27 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
             }
         }
 
+        bool CheckIfdataisValidColumn(DataGridView i_DataGrid)
+        {
+            bool ret = true;
+            for (int i = 0; i < i_DataGrid.Rows.Count; i++)
+            {
+
+                if (i_DataGrid.Rows[i].Cells[1].Style.BackColor != Color.LightGreen)
+                {
+                    WriteToSystemStatus(String.Format("[{0}] in Row [{1}] data is not valid", i_DataGrid.Name, i), 60, Color.OrangeRed);
+                    ret = false;
+                }
+
+            }
+
+            return ret;
+        }
+
         bool CompareDatatoValidationColumn(DataGridView i_DataGrid)
         {
             bool ret = true;
-            for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+            for (int i = 0; i < i_DataGrid.Rows.Count; i++)
             {
                 String RawCell0 = i_DataGrid.Rows[i].Cells[0].Value.ToString();
                 String RawCell2 = i_DataGrid.Rows[i].Cells[2].Value.ToString();
@@ -25611,7 +25655,7 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         void CopyDatatoValidationColumn(DataGridView i_DataGrid)
         {
-            for (int i = 0; i < i_DataGrid.Rows.Count -1; i++)
+            for (int i = 0; i < i_DataGrid.Rows.Count; i++)
             {
                 i_DataGrid.Rows[i].Cells[2].Value = i_DataGrid.Rows[i].Cells[0].Value.ToString();
             }
@@ -25642,6 +25686,21 @@ This Process can take 1 minute.";
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.Yes)
             {
+
+                //Gil: Check if all the Data cells are valid
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    
+                    bool ret = CheckIfdataisValidColumn(datagrid);
+                    if (ret != true)
+                    {
+                        return;
+                    }
+
+                }
+
+                WriteToSystemStatus(String.Format("All data valid :-)"), 2, Color.LightGreen);
+
 
                 // Gil: Erase flash
                 Erase_Flash();
@@ -25709,14 +25768,14 @@ This Process can take 1 minute.";
                 if (FlashCheck == true)
                 {
 
-                    WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 60, Color.LightGreen);
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Data Written to the flash and verified :-) "), 30, Color.LightGreen);
                     progressBar_UserStatus.Value = 100;
                     progressBar_UserStatus.BackColor = Color.Green;
                     progressBar_UserStatus.ForeColor = Color.Green;
                 }
                 else
                 {
-                    WriteToSystemStatus(String.Format(Environment.NewLine + " Something got wrong during verification :-( "), 120, Color.OrangeRed);
+                    WriteToSystemStatus(String.Format(Environment.NewLine + " Something got wrong during verification :-( "), 70, Color.OrangeRed);
                     progressBar_UserStatus.Value = 100;
                     progressBar_UserStatus.BackColor = Color.OrangeRed;
                     progressBar_UserStatus.ForeColor = Color.OrangeRed;
