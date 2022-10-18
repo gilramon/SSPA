@@ -15250,46 +15250,46 @@ namespace Monitor
                         textBox_StatusUUT17.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
-                    case "00C0":
+                    case "00C1":
                         if (i_Parsedframe.Data.Length < 30)
                         {
                             return;
                         }
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 4, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_VVA_temp.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_Vdd_temp.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 6, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_Vgg1.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_VVAoff1.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 8, 1), System.Globalization.NumberStyles.HexNumber) ;
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) ;
                         textBox_DCA1.Text = String.Format("{0}", DecimalNumber & 0x00FF);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 8, 1), System.Globalization.NumberStyles.HexNumber);
-                        textBox_DCA1.Text = String.Format("{0}", DecimalNumber & 0xFF00 >> 8);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
+                        textBox_DCA1.Text = String.Format("{0}", (DecimalNumber & 0xFF00) >> 8);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_VVAoff2.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 10, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_Vddoff1.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 12, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_MPA_Ton.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_MPA_Toff.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 14, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 25, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_SPA_Ton.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 1), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 27, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_SPA_Toff.Text = String.Format("{0}", DecimalNumber);
 
 
@@ -23696,32 +23696,9 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 88");
             await Task.Delay(Delay);
 
-            //Read_Register_From_UUT("00 B9");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 BA");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 BB");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 BF");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 A0");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 96");
-            //await Task.Delay(500);
-
-            //Read_Register_From_UUT("00 F8", "00 0E");
-            //await Task.Delay(Delay);
-
-            Read_Register_From_UUT("00 C0", "00 0D");
+            Read_Register_From_UUT("00 C1", "00 36");
             await Task.Delay(Delay);
 
-            //Read_Register_From_Simulator("00 F8", "00 0E");
-            //await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 81");
             await Task.Delay(Delay);
