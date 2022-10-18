@@ -762,7 +762,7 @@ namespace Monitor
         private DataGridView dataGridView_Block02;
         private Button button30;
         private DataGridView dataGridView_Block03;
-        private Button button102;
+        private Button button_ClearBlock04;
         private DataGridView dataGridView_Block04;
         private Button button103;
         private DataGridView dataGridView_Block05;
@@ -859,6 +859,15 @@ namespace Monitor
         private Button button5;
         private Button button32;
         private Button button_StatusInformationShow;
+        private TabPage tabPage7;
+        private DataGridView dataGridView_Block4_DCA;
+        private DataGridViewTextBoxColumn Column9;
+        private DataGridViewTextBoxColumn Column10;
+        private Button button44;
+        private Button button_ClearBlockDCA04;
+        private GroupBox groupBox57;
+        private Button button71;
+        private Button button96;
         private static readonly string PREAMBLE = "23";
 
 
@@ -915,8 +924,6 @@ namespace Monitor
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -929,6 +936,9 @@ namespace Monitor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -1416,6 +1426,10 @@ namespace Monitor
             this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button35 = new System.Windows.Forms.Button();
+            this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
             this.dataGridView_Block01_FreqTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1425,16 +1439,6 @@ namespace Monitor
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage_Page1_Block1Flash = new System.Windows.Forms.TabPage();
-            this.button98 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView_Block01 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_ReadBlock1 = new System.Windows.Forms.Button();
-            this.button_WriteBlock1 = new System.Windows.Forms.Button();
             this.tabPage_Page2 = new System.Windows.Forms.TabPage();
             this.button124 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
@@ -1457,7 +1461,7 @@ namespace Monitor
             this.button77 = new System.Windows.Forms.Button();
             this.tabPage_Page4 = new System.Windows.Forms.TabPage();
             this.button126 = new System.Windows.Forms.Button();
-            this.button102 = new System.Windows.Forms.Button();
+            this.button_ClearBlock04 = new System.Windows.Forms.Button();
             this.dataGridView_Block04 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1545,6 +1549,20 @@ namespace Monitor
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.button_ReadBlock12 = new System.Windows.Forms.Button();
             this.button_WriteBlock12 = new System.Windows.Forms.Button();
+            this.tabPage_Page1_Block1Flash = new System.Windows.Forms.TabPage();
+            this.button98 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView_Block01 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_ReadBlock1 = new System.Windows.Forms.Button();
+            this.button_WriteBlock1 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dataGridView_Block4_DCA = new System.Windows.Forms.DataGridView();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
             this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
@@ -1673,6 +1691,7 @@ namespace Monitor
             this.groupBox_SerialPort = new System.Windows.Forms.GroupBox();
             this.label_SerialPortStatus = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button_StatusInformationShow = new System.Windows.Forms.Button();
             this.textBox_SystemStatus = new System.Windows.Forms.RichTextBox();
             this.progressBar_UserStatus = new System.Windows.Forms.ProgressBar();
             this.button97 = new System.Windows.Forms.Button();
@@ -1729,11 +1748,11 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button_StatusInformationShow = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button_ClearBlockDCA04 = new System.Windows.Forms.Button();
+            this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button96 = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1781,10 +1800,8 @@ namespace Monitor
             this.groupBox50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block00)).BeginInit();
             this.tabPage6.SuspendLayout();
+            this.groupBox37.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01_FreqTable)).BeginInit();
-            this.tabPage_Page1_Block1Flash.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.tabPage_Page2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block02)).BeginInit();
             this.groupBox44.SuspendLayout();
@@ -1818,6 +1835,11 @@ namespace Monitor
             this.tabPage_Page12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).BeginInit();
             this.groupBox56.SuspendLayout();
+            this.tabPage_Page1_Block1Flash.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block4_DCA)).BeginInit();
             this.groupBox42.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.S1_Configuration.SuspendLayout();
@@ -1851,7 +1873,7 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.groupBox37.SuspendLayout();
+            this.groupBox57.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -5154,7 +5176,7 @@ namespace Monitor
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage6);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page2);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page3);
-            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page4);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage7);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page5);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page6);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page7);
@@ -5164,6 +5186,7 @@ namespace Monitor
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page11);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page12);
             this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page1_Block1Flash);
+            this.tabControl_SSPA_WB_GUI.Controls.Add(this.tabPage_Page4);
             this.tabControl_SSPA_WB_GUI.Location = new System.Drawing.Point(5, 17);
             this.tabControl_SSPA_WB_GUI.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl_SSPA_WB_GUI.Name = "tabControl_SSPA_WB_GUI";
@@ -7835,14 +7858,14 @@ namespace Monitor
             this.dataGridView_Block00.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block00.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block00.Name = "dataGridView_Block00";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block00.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Block00.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block00.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block00.TabIndex = 27;
@@ -7892,6 +7915,56 @@ namespace Monitor
             this.tabPage6.Text = "Block 1 Freq";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // button35
+            // 
+            this.button35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button35.Location = new System.Drawing.Point(960, 33);
+            this.button35.Margin = new System.Windows.Forms.Padding(2);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(127, 43);
+            this.button35.TabIndex = 39;
+            this.button35.Text = "Clear";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button6_Click_3);
+            // 
+            // groupBox37
+            // 
+            this.groupBox37.Controls.Add(this.button5);
+            this.groupBox37.Controls.Add(this.button32);
+            this.groupBox37.Location = new System.Drawing.Point(1091, 8);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Name = "groupBox37";
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox37.Size = new System.Drawing.Size(141, 130);
+            this.groupBox37.TabIndex = 38;
+            this.groupBox37.TabStop = false;
+            this.groupBox37.Text = "Flash operation";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(6, 22);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 43);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Read Page ";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button_ReadBlock1_Click);
+            // 
+            // button32
+            // 
+            this.button32.BackColor = System.Drawing.Color.Transparent;
+            this.button32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button32.Location = new System.Drawing.Point(6, 77);
+            this.button32.Margin = new System.Windows.Forms.Padding(2);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(127, 43);
+            this.button32.TabIndex = 21;
+            this.button32.Text = "Write to Page";
+            this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button_WriteBlock1_Click);
+            // 
             // dataGridView_Block01_FreqTable
             // 
             this.dataGridView_Block01_FreqTable.AllowUserToAddRows = false;
@@ -7911,18 +7984,19 @@ namespace Monitor
             this.dataGridView_Block01_FreqTable.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block01_FreqTable.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block01_FreqTable.Name = "dataGridView_Block01_FreqTable";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block01_FreqTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01_FreqTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView_Block01_FreqTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block01_FreqTable.Size = new System.Drawing.Size(954, 587);
             this.dataGridView_Block01_FreqTable.TabIndex = 37;
             this.dataGridView_Block01_FreqTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Block01_FreqTable_CellValueChanged);
+            this.dataGridView_Block01_FreqTable.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             this.dataGridView_Block01_FreqTable.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
             // 
             // Column1
@@ -7964,129 +8038,6 @@ namespace Monitor
             // 
             this.Column2.HeaderText = "F8";
             this.Column2.Name = "Column2";
-            // 
-            // tabPage_Page1_Block1Flash
-            // 
-            this.tabPage_Page1_Block1Flash.Controls.Add(this.button98);
-            this.tabPage_Page1_Block1Flash.Controls.Add(this.button6);
-            this.tabPage_Page1_Block1Flash.Controls.Add(this.dataGridView_Block01);
-            this.tabPage_Page1_Block1Flash.Controls.Add(this.groupBox1);
-            this.tabPage_Page1_Block1Flash.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Page1_Block1Flash.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage_Page1_Block1Flash.Name = "tabPage_Page1_Block1Flash";
-            this.tabPage_Page1_Block1Flash.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage_Page1_Block1Flash.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Page1_Block1Flash.TabIndex = 1;
-            this.tabPage_Page1_Block1Flash.Text = "Block 1 (not use)";
-            this.tabPage_Page1_Block1Flash.UseVisualStyleBackColor = true;
-            // 
-            // button98
-            // 
-            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button98.Location = new System.Drawing.Point(748, 61);
-            this.button98.Margin = new System.Windows.Forms.Padding(2);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(127, 43);
-            this.button98.TabIndex = 35;
-            this.button98.Text = "Test";
-            this.button98.UseVisualStyleBackColor = true;
-            this.button98.Click += new System.EventHandler(this.button98_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(748, 11);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(127, 43);
-            this.button6.TabIndex = 33;
-            this.button6.Text = "Clear";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_3);
-            // 
-            // dataGridView_Block01
-            // 
-            this.dataGridView_Block01.AllowUserToResizeColumns = false;
-            this.dataGridView_Block01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block01.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
-            this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block01.Name = "dataGridView_Block01";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
-            this.dataGridView_Block01.TabIndex = 34;
-            this.dataGridView_Block01.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block01.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Decimal";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Verify (Read only)";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button_ReadBlock1);
-            this.groupBox1.Controls.Add(this.button_WriteBlock1);
-            this.groupBox1.Location = new System.Drawing.Point(1089, 3);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(141, 130);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Flash operation";
-            // 
-            // button_ReadBlock1
-            // 
-            this.button_ReadBlock1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ReadBlock1.Location = new System.Drawing.Point(6, 22);
-            this.button_ReadBlock1.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ReadBlock1.Name = "button_ReadBlock1";
-            this.button_ReadBlock1.Size = new System.Drawing.Size(127, 43);
-            this.button_ReadBlock1.TabIndex = 18;
-            this.button_ReadBlock1.Text = "Read Page ";
-            this.button_ReadBlock1.UseVisualStyleBackColor = true;
-            this.button_ReadBlock1.Click += new System.EventHandler(this.button_ReadBlock1_Click);
-            // 
-            // button_WriteBlock1
-            // 
-            this.button_WriteBlock1.BackColor = System.Drawing.Color.Transparent;
-            this.button_WriteBlock1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WriteBlock1.Location = new System.Drawing.Point(6, 77);
-            this.button_WriteBlock1.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WriteBlock1.Name = "button_WriteBlock1";
-            this.button_WriteBlock1.Size = new System.Drawing.Size(127, 43);
-            this.button_WriteBlock1.TabIndex = 21;
-            this.button_WriteBlock1.Text = "Write to Page";
-            this.button_WriteBlock1.UseVisualStyleBackColor = false;
-            this.button_WriteBlock1.Click += new System.EventHandler(this.button_WriteBlock1_Click);
             // 
             // tabPage_Page2
             // 
@@ -8135,19 +8086,20 @@ namespace Monitor
             this.dataGridView_Block02.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block02.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block02.Name = "dataGridView_Block02";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block02.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView_Block02.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block02.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block02.TabIndex = 31;
             this.dataGridView_Block02.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             this.dataGridView_Block02.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block02.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -8255,14 +8207,14 @@ namespace Monitor
             this.dataGridView_Block03.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block03.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block03.Name = "dataGridView_Block03";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block03.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridView_Block03.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block03.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block03.TabIndex = 31;
@@ -8331,7 +8283,7 @@ namespace Monitor
             // tabPage_Page4
             // 
             this.tabPage_Page4.Controls.Add(this.button126);
-            this.tabPage_Page4.Controls.Add(this.button102);
+            this.tabPage_Page4.Controls.Add(this.button_ClearBlock04);
             this.tabPage_Page4.Controls.Add(this.dataGridView_Block04);
             this.tabPage_Page4.Controls.Add(this.groupBox46);
             this.tabPage_Page4.Location = new System.Drawing.Point(4, 27);
@@ -8339,7 +8291,7 @@ namespace Monitor
             this.tabPage_Page4.Name = "tabPage_Page4";
             this.tabPage_Page4.Size = new System.Drawing.Size(1234, 592);
             this.tabPage_Page4.TabIndex = 3;
-            this.tabPage_Page4.Text = "Block 4";
+            this.tabPage_Page4.Text = "Block 4 (not use)";
             this.tabPage_Page4.UseVisualStyleBackColor = true;
             // 
             // button126
@@ -8354,17 +8306,17 @@ namespace Monitor
             this.button126.UseVisualStyleBackColor = true;
             this.button126.Click += new System.EventHandler(this.button126_Click);
             // 
-            // button102
+            // button_ClearBlock04
             // 
-            this.button102.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button102.Location = new System.Drawing.Point(746, 9);
-            this.button102.Margin = new System.Windows.Forms.Padding(2);
-            this.button102.Name = "button102";
-            this.button102.Size = new System.Drawing.Size(127, 43);
-            this.button102.TabIndex = 30;
-            this.button102.Text = "Clear";
-            this.button102.UseVisualStyleBackColor = true;
-            this.button102.Click += new System.EventHandler(this.button102_Click_1);
+            this.button_ClearBlock04.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearBlock04.Location = new System.Drawing.Point(746, 9);
+            this.button_ClearBlock04.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearBlock04.Name = "button_ClearBlock04";
+            this.button_ClearBlock04.Size = new System.Drawing.Size(127, 43);
+            this.button_ClearBlock04.TabIndex = 30;
+            this.button_ClearBlock04.Text = "Clear";
+            this.button_ClearBlock04.UseVisualStyleBackColor = true;
+            this.button_ClearBlock04.Click += new System.EventHandler(this.button_ClearBlock04_Click);
             // 
             // dataGridView_Block04
             // 
@@ -8376,14 +8328,14 @@ namespace Monitor
             this.dataGridView_Block04.Location = new System.Drawing.Point(2, 6);
             this.dataGridView_Block04.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block04.Name = "dataGridView_Block04";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block04.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridView_Block04.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block04.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block04.TabIndex = 31;
@@ -8496,14 +8448,14 @@ namespace Monitor
             this.dataGridView_Block05.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block05.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block05.Name = "dataGridView_Block05";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block05.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView_Block05.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block05.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block05.TabIndex = 31;
@@ -8619,14 +8571,14 @@ namespace Monitor
             this.dataGridView_Block06.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block06.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block06.Name = "dataGridView_Block06";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block06.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridView_Block06.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block06.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block06.TabIndex = 31;
@@ -8742,14 +8694,14 @@ namespace Monitor
             this.dataGridView_Block07.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block07.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block07.Name = "dataGridView_Block07";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block07.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridView_Block07.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block07.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block07.TabIndex = 31;
@@ -8865,14 +8817,14 @@ namespace Monitor
             this.dataGridView_Block08.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block08.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block08.Name = "dataGridView_Block08";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block08.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView_Block08.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block08.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block08.TabIndex = 31;
@@ -8988,14 +8940,14 @@ namespace Monitor
             this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block09.Name = "dataGridView_Block09";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block09.TabIndex = 31;
@@ -9111,14 +9063,14 @@ namespace Monitor
             this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block10.Name = "dataGridView_Block10";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block10.TabIndex = 31;
@@ -9234,14 +9186,14 @@ namespace Monitor
             this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block11.Name = "dataGridView_Block11";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block11.TabIndex = 31;
@@ -9357,14 +9309,14 @@ namespace Monitor
             this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
             this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block12.Name = "dataGridView_Block12";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
             this.dataGridView_Block12.TabIndex = 31;
@@ -9430,6 +9382,177 @@ namespace Monitor
             this.button_WriteBlock12.Text = "Write to Page";
             this.button_WriteBlock12.UseVisualStyleBackColor = false;
             this.button_WriteBlock12.Click += new System.EventHandler(this.button_WriteBlock12_Click);
+            // 
+            // tabPage_Page1_Block1Flash
+            // 
+            this.tabPage_Page1_Block1Flash.Controls.Add(this.button98);
+            this.tabPage_Page1_Block1Flash.Controls.Add(this.button6);
+            this.tabPage_Page1_Block1Flash.Controls.Add(this.dataGridView_Block01);
+            this.tabPage_Page1_Block1Flash.Controls.Add(this.groupBox1);
+            this.tabPage_Page1_Block1Flash.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Page1_Block1Flash.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page1_Block1Flash.Name = "tabPage_Page1_Block1Flash";
+            this.tabPage_Page1_Block1Flash.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage_Page1_Block1Flash.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Page1_Block1Flash.TabIndex = 1;
+            this.tabPage_Page1_Block1Flash.Text = "Block 1 (not use)";
+            this.tabPage_Page1_Block1Flash.UseVisualStyleBackColor = true;
+            // 
+            // button98
+            // 
+            this.button98.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button98.Location = new System.Drawing.Point(748, 61);
+            this.button98.Margin = new System.Windows.Forms.Padding(2);
+            this.button98.Name = "button98";
+            this.button98.Size = new System.Drawing.Size(127, 43);
+            this.button98.TabIndex = 35;
+            this.button98.Text = "Test";
+            this.button98.UseVisualStyleBackColor = true;
+            this.button98.Click += new System.EventHandler(this.button98_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(748, 11);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(127, 43);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "Clear";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_3);
+            // 
+            // dataGridView_Block01
+            // 
+            this.dataGridView_Block01.AllowUserToResizeColumns = false;
+            this.dataGridView_Block01.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block01.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView_Block01.Location = new System.Drawing.Point(4, 6);
+            this.dataGridView_Block01.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block01.Name = "dataGridView_Block01";
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block01.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.dataGridView_Block01.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block01.Size = new System.Drawing.Size(740, 578);
+            this.dataGridView_Block01.TabIndex = 34;
+            this.dataGridView_Block01.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block01.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block01.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Decimal";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Verify (Read only)";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button_ReadBlock1);
+            this.groupBox1.Controls.Add(this.button_WriteBlock1);
+            this.groupBox1.Location = new System.Drawing.Point(1089, 3);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(141, 130);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Flash operation";
+            // 
+            // button_ReadBlock1
+            // 
+            this.button_ReadBlock1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ReadBlock1.Location = new System.Drawing.Point(6, 22);
+            this.button_ReadBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadBlock1.Name = "button_ReadBlock1";
+            this.button_ReadBlock1.Size = new System.Drawing.Size(127, 43);
+            this.button_ReadBlock1.TabIndex = 18;
+            this.button_ReadBlock1.Text = "Read Page ";
+            this.button_ReadBlock1.UseVisualStyleBackColor = true;
+            this.button_ReadBlock1.Click += new System.EventHandler(this.button_ReadBlock1_Click);
+            // 
+            // button_WriteBlock1
+            // 
+            this.button_WriteBlock1.BackColor = System.Drawing.Color.Transparent;
+            this.button_WriteBlock1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WriteBlock1.Location = new System.Drawing.Point(6, 77);
+            this.button_WriteBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteBlock1.Name = "button_WriteBlock1";
+            this.button_WriteBlock1.Size = new System.Drawing.Size(127, 43);
+            this.button_WriteBlock1.TabIndex = 21;
+            this.button_WriteBlock1.Text = "Write to Page";
+            this.button_WriteBlock1.UseVisualStyleBackColor = false;
+            this.button_WriteBlock1.Click += new System.EventHandler(this.button_WriteBlock1_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.button44);
+            this.tabPage7.Controls.Add(this.button_ClearBlockDCA04);
+            this.tabPage7.Controls.Add(this.groupBox57);
+            this.tabPage7.Controls.Add(this.dataGridView_Block4_DCA);
+            this.tabPage7.Location = new System.Drawing.Point(4, 27);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage7.TabIndex = 15;
+            this.tabPage7.Text = "block 4 DCA";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_Block4_DCA
+            // 
+            this.dataGridView_Block4_DCA.AllowUserToResizeColumns = false;
+            this.dataGridView_Block4_DCA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block4_DCA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
+            this.Column10});
+            this.dataGridView_Block4_DCA.Location = new System.Drawing.Point(2, 5);
+            this.dataGridView_Block4_DCA.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block4_DCA.Name = "dataGridView_Block4_DCA";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block4_DCA.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView_Block4_DCA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block4_DCA.Size = new System.Drawing.Size(435, 578);
+            this.dataGridView_Block4_DCA.TabIndex = 35;
+            this.dataGridView_Block4_DCA.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Block4_DCA_CellValueChanged);
+            this.dataGridView_Block4_DCA.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
+            this.dataGridView_Block4_DCA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "DCA1";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "DCA2";
+            this.Column10.Name = "Column10";
             // 
             // groupBox42
             // 
@@ -10779,6 +10902,17 @@ namespace Monitor
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "User information";
             // 
+            // button_StatusInformationShow
+            // 
+            this.button_StatusInformationShow.Location = new System.Drawing.Point(52, 158);
+            this.button_StatusInformationShow.Margin = new System.Windows.Forms.Padding(2);
+            this.button_StatusInformationShow.Name = "button_StatusInformationShow";
+            this.button_StatusInformationShow.Size = new System.Drawing.Size(53, 22);
+            this.button_StatusInformationShow.TabIndex = 117;
+            this.button_StatusInformationShow.Text = "Show";
+            this.button_StatusInformationShow.UseVisualStyleBackColor = true;
+            this.button_StatusInformationShow.Click += new System.EventHandler(this.button_StatusInformationShow_Click);
+            // 
             // textBox_SystemStatus
             // 
             this.textBox_SystemStatus.Location = new System.Drawing.Point(8, 16);
@@ -11330,66 +11464,66 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // groupBox37
+            // button44
             // 
-            this.groupBox37.Controls.Add(this.button5);
-            this.groupBox37.Controls.Add(this.button32);
-            this.groupBox37.Location = new System.Drawing.Point(1091, 8);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox37.Size = new System.Drawing.Size(141, 130);
-            this.groupBox37.TabIndex = 38;
-            this.groupBox37.TabStop = false;
-            this.groupBox37.Text = "Flash operation";
+            this.button44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button44.Location = new System.Drawing.Point(746, 60);
+            this.button44.Margin = new System.Windows.Forms.Padding(2);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(127, 43);
+            this.button44.TabIndex = 39;
+            this.button44.Text = "Test";
+            this.button44.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button_ClearBlockDCA04
             // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(6, 22);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 43);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Read Page ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button_ReadBlock1_Click);
+            this.button_ClearBlockDCA04.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ClearBlockDCA04.Location = new System.Drawing.Point(746, 12);
+            this.button_ClearBlockDCA04.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearBlockDCA04.Name = "button_ClearBlockDCA04";
+            this.button_ClearBlockDCA04.Size = new System.Drawing.Size(127, 43);
+            this.button_ClearBlockDCA04.TabIndex = 38;
+            this.button_ClearBlockDCA04.Text = "Clear";
+            this.button_ClearBlockDCA04.UseVisualStyleBackColor = true;
+            this.button_ClearBlockDCA04.Click += new System.EventHandler(this.button_ClearBlockDCA04_Click);
             // 
-            // button32
+            // groupBox57
             // 
-            this.button32.BackColor = System.Drawing.Color.Transparent;
-            this.button32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(6, 77);
-            this.button32.Margin = new System.Windows.Forms.Padding(2);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(127, 43);
-            this.button32.TabIndex = 21;
-            this.button32.Text = "Write to Page";
-            this.button32.UseVisualStyleBackColor = false;
-            this.button32.Click += new System.EventHandler(this.button_WriteBlock1_Click);
+            this.groupBox57.Controls.Add(this.button71);
+            this.groupBox57.Controls.Add(this.button96);
+            this.groupBox57.Location = new System.Drawing.Point(1091, 5);
+            this.groupBox57.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox57.Name = "groupBox57";
+            this.groupBox57.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox57.Size = new System.Drawing.Size(141, 130);
+            this.groupBox57.TabIndex = 37;
+            this.groupBox57.TabStop = false;
+            this.groupBox57.Text = "Flash operation";
             // 
-            // button35
+            // button71
             // 
-            this.button35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.Location = new System.Drawing.Point(960, 33);
-            this.button35.Margin = new System.Windows.Forms.Padding(2);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(127, 43);
-            this.button35.TabIndex = 39;
-            this.button35.Text = "Clear";
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.button6_Click_3);
+            this.button71.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button71.Location = new System.Drawing.Point(6, 22);
+            this.button71.Margin = new System.Windows.Forms.Padding(2);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(127, 43);
+            this.button71.TabIndex = 18;
+            this.button71.Text = "Read Page ";
+            this.button71.UseVisualStyleBackColor = true;
+            this.button71.Click += new System.EventHandler(this.button_ReadBlock4_Click);
             // 
-            // button_StatusInformationShow
+            // button96
             // 
-            this.button_StatusInformationShow.Location = new System.Drawing.Point(52, 158);
-            this.button_StatusInformationShow.Margin = new System.Windows.Forms.Padding(2);
-            this.button_StatusInformationShow.Name = "button_StatusInformationShow";
-            this.button_StatusInformationShow.Size = new System.Drawing.Size(53, 22);
-            this.button_StatusInformationShow.TabIndex = 117;
-            this.button_StatusInformationShow.Text = "Show";
-            this.button_StatusInformationShow.UseVisualStyleBackColor = true;
-            this.button_StatusInformationShow.Click += new System.EventHandler(this.button_StatusInformationShow_Click);
+            this.button96.BackColor = System.Drawing.Color.Transparent;
+            this.button96.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button96.Location = new System.Drawing.Point(6, 77);
+            this.button96.Margin = new System.Windows.Forms.Padding(2);
+            this.button96.Name = "button96";
+            this.button96.Size = new System.Drawing.Size(127, 43);
+            this.button96.TabIndex = 21;
+            this.button96.Text = "Write to Page";
+            this.button96.UseVisualStyleBackColor = false;
+            this.button96.Click += new System.EventHandler(this.button_WriteBlock4_Click);
             // 
             // MainForm
             // 
@@ -11397,7 +11531,7 @@ namespace Monitor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1492, 660);
+            this.ClientSize = new System.Drawing.Size(1618, 716);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -11495,10 +11629,8 @@ namespace Monitor
             this.groupBox50.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block00)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            this.groupBox37.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01_FreqTable)).EndInit();
-            this.tabPage_Page1_Block1Flash.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.tabPage_Page2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block02)).EndInit();
             this.groupBox44.ResumeLayout(false);
@@ -11532,6 +11664,11 @@ namespace Monitor
             this.tabPage_Page12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).EndInit();
             this.groupBox56.ResumeLayout(false);
+            this.tabPage_Page1_Block1Flash.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block4_DCA)).EndInit();
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -11586,7 +11723,7 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.groupBox37.ResumeLayout(false);
+            this.groupBox57.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -12386,6 +12523,13 @@ namespace Monitor
                     datagrid.AllowUserToAddRows = false;
                     datagrid.AllowUserToDeleteRows = false;
                     datagrid.AllowUserToOrderColumns = false;
+
+                    //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+                    //datagrid.Columns.Add(btn);
+                    //btn.HeaderText = "Click Data";
+                    //btn.Text = "Click Here";
+                    //btn.Name = "btn";
+                    //btn.UseColumnTextForButtonValue = true;
                 }
 
            //     ((Control)this.tabPage_Page1_Block1Flash).Enabled = false;
@@ -12696,6 +12840,12 @@ namespace Monitor
             row = 0;
             for(i=0;i<26;i++)
             {
+
+
+                dataGridView_Block4_DCA.Rows.Add();
+                dataGridView_Block4_DCA.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_D{0}", i);
+
+
                 dataGridView_Block04.Rows.Add();
                 dataGridView_Block04.Rows[row].HeaderCell.Value = String.Format("PA_VVA_OFFSET_D{0}",i);
                 row++;
@@ -20145,7 +20295,7 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         }
 
-        private int PlotGraphTimer = 0;
+       // private int PlotGraphTimer = 0;
         //private void button96_Click(object sender, EventArgs e)
         //{
         //    PlotGraphTimer = 60;
@@ -25602,10 +25752,11 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
 
         private void button_ClearPage0DataGrid_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block00.Rows.Count; i++)
-            {
-                dataGridView_Block00.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block00, false);
+            //for (int i = 0; i < dataGridView_Block00.Rows.Count; i++)
+            //{
+            //    dataGridView_Block00.Rows[i].Cells[0].Value = "";
+            //}
         }
 
         private void dataGridView_ValPage0_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -25660,7 +25811,25 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                         {
                             dataGridView_Block01_FreqTable.Rows[RowIndex / 8].Cells[RowIndex % 8].Value = m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value;
                         }
-                        
+
+                        if (m_DataGrid.Name == "dataGridView_Block04")
+                        {
+                            //int CellValue = int.Parse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString());
+                            if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString(), out int CellValue) == true)
+                            {
+                                int DCA1 = CellValue & 0xFF;
+                                int DCA2 = (CellValue & 0xFF00) >> 8;
+
+                                dataGridView_Block4_DCA.Rows[RowIndex].Cells[0].Value = DCA1;
+                                dataGridView_Block4_DCA.Rows[RowIndex].Cells[1].Value = DCA2;
+                            }
+                            else
+                            {
+                                dataGridView_Block4_DCA.Rows[RowIndex].Cells[0].Value = "";
+                                dataGridView_Block4_DCA.Rows[RowIndex].Cells[1].Value = "";
+                            }
+                        }
+
 
                         break;
 
@@ -26359,10 +26528,7 @@ This Process can take 1 minute.";
         private void button6_Click_3(object sender, EventArgs e)
         {
             ClearallColumnsinGrid(dataGridView_Block01, false);
-            //for (int i = 0; i < dataGridView_Block01.Rows.Count; i++)
-            //{
-            //    dataGridView_Block01.Rows[i].Cells[0].Value = "";
-            //}
+
         }
 
         private void button96_Click_4(object sender, EventArgs e)
@@ -26383,90 +26549,61 @@ This Process can take 1 minute.";
 
         private void button29_Click_2(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block02.Rows.Count; i++)
-            {
-                dataGridView_Block02.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block02, false);
+            //for (int i = 0; i < dataGridView_Block02.Rows.Count; i++)
+            //{
+            //    dataGridView_Block02.Rows[i].Cells[0].Value = "";
+            //}
         }
 
         private void button30_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block03.Rows.Count; i++)
-            {
-                dataGridView_Block03.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block03, false);
         }
 
         private void button102_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block04.Rows.Count; i++)
-            {
-                dataGridView_Block04.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block04, false);
         }
 
         private void button103_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block05.Rows.Count; i++)
-            {
-                dataGridView_Block05.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block05, false);
         }
 
         private void button104_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block06.Rows.Count; i++)
-            {
-                dataGridView_Block06.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block06, false);
         }
 
         private void button105_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block07.Rows.Count; i++)
-            {
-                dataGridView_Block07.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block07, false);
         }
 
         private void button106_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block08.Rows.Count; i++)
-            {
-                dataGridView_Block08.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block08, false);
         }
 
         private void button107_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block09.Rows.Count; i++)
-            {
-                dataGridView_Block09.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block09, false);
         }
 
         private void button110_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block10.Rows.Count; i++)
-            {
-                dataGridView_Block10.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block10, false);
         }
 
         private void button116_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block11.Rows.Count; i++)
-            {
-                dataGridView_Block11.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block11, false);
         }
 
         private void button123_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView_Block12.Rows.Count; i++)
-            {
-                dataGridView_Block12.Rows[i].Cells[0].Value = "";
-            }
+            ClearallColumnsinGrid(dataGridView_Block12, false);
         }
 
         private void button124_Click(object sender, EventArgs e)
@@ -26810,6 +26947,73 @@ for example: 40FE
             {
                 Console.WriteLine("Executing finally block.");
             }
+        }
+
+        private void dataGridView_Block4_DCA_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView m_DataGrid = (DataGridView)sender;
+                int CoulumnIndex = e.ColumnIndex;
+                int RowIndex = e.RowIndex;
+
+                if (CoulumnIndex < 0 || RowIndex < 0)
+                {
+                    return;
+                }
+
+                if (m_DataGrid.Rows[RowIndex].Cells[0].Value == null)
+                {
+                    m_DataGrid.Rows[RowIndex].Cells[0].Value = "";
+                }
+
+
+                if (m_DataGrid.Rows[RowIndex].Cells[1].Value == null)
+                {
+                    m_DataGrid.Rows[RowIndex].Cells[1].Value = "";
+                }
+
+                //if (dataGridView_Block04.Rows[RowIndex].Cells[1].Value == null)
+                //{
+                //    dataGridView_Block04.Rows[RowIndex].Cells[1].Value = "";
+                //}
+
+
+                if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[0].Value.ToString(), out int DCA1) == true && DCA1 >= 0 && DCA1 <= 255
+                    && int.TryParse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString(), out int DCA2) == true && DCA2 >= 0 && DCA2 <= 255
+                    )
+                {
+                    m_DataGrid.Rows[RowIndex].Cells[0].Style.BackColor = Color.LightGreen;
+                    m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.LightGreen;
+
+
+
+                      dataGridView_Block04.Rows[RowIndex].Cells[1].Value = (DCA1 & 0xFF | ((DCA2 & 0xFF) << 8)).ToString();
+
+                }
+                else
+                {
+                    m_DataGrid.Rows[RowIndex].Cells[0].Style.BackColor = Color.OrangeRed;
+                    m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.OrangeRed;
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button_ClearBlock04_Click(object sender, EventArgs e)
+        {
+            ClearallColumnsinGrid(dataGridView_Block04, false);
+        }
+
+        private void button_ClearBlockDCA04_Click(object sender, EventArgs e)
+        {
+            ClearallColumnsinGrid(dataGridView_Block04, false);
         }
 
         private void button57_Click_1(object sender, EventArgs e)
