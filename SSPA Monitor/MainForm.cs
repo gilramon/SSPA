@@ -14081,11 +14081,31 @@ namespace Monitor
 
         }
 
+        void ProgressBarStatus()
+        {
+            if (progressBar_UserStatus.Value != 100 && progressBar_UserStatus.Value != 0)
+            {
+                progressBar_UserStatus.ForeColor = Color.DeepSkyBlue;
+                progressBar_UserStatus.BackColor = default;
+
+                int percent = (int)(((double)progressBar_UserStatus.Value / (double)progressBar_UserStatus.Maximum) * 100);
+                progressBar_UserStatus.Refresh();
+                progressBar_UserStatus.CreateGraphics().DrawString(percent.ToString() + "%",
+                    new Font("Calibri", (float)11, FontStyle.Bold),
+                Brushes.Black,
+                    new PointF(progressBar_UserStatus.Width / 2 - 10, progressBar_UserStatus.Height / 2 - 7));
+            }
+        }
+
         private int TimeOutKeepAlivein100ms = 3000000;
         private int RxLabelTimerBlink = 0, TxLabelTimerBlink = 0;
         private void Timer_ConectionKeepAlive_Tick(object sender, EventArgs e)
         {
             Timer_100ms++;
+
+            ProgressBarStatus();
+
+
 
             if (checkBox_SendEveryOneSecond.CheckState == CheckState.Checked)
             {
@@ -16547,18 +16567,7 @@ namespace Monitor
 
             }
 
-            if (progressBar_UserStatus.Value != 100 && progressBar_UserStatus.Value != 0)
-            {
-                progressBar_UserStatus.ForeColor = Color.DeepSkyBlue;
-                progressBar_UserStatus.BackColor = default;
 
-                int percent = (int)(((double)progressBar_UserStatus.Value / (double)progressBar_UserStatus.Maximum) * 100);
-                progressBar_UserStatus.Refresh();
-                progressBar_UserStatus.CreateGraphics().DrawString(percent.ToString() + "%",
-                    new Font("Calibri", (float)11, FontStyle.Bold),
-                Brushes.Black,
-                    new PointF(progressBar_UserStatus.Width / 2 - 10, progressBar_UserStatus.Height / 2 - 7));
-            }
 
 
 
