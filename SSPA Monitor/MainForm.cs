@@ -257,9 +257,9 @@ namespace Monitor
         private Label label6;
         private Label label4;
         private GroupBox groupBox_ClentTCPStatus;
-        private Label label12;
+        private Label Label_TCPClientTx;
         private Label label_ClientTCPConnected;
-        private Label label14;
+        private Label Label_TCPClientRx;
         private Button button_ClearServer;
         private GroupBox groupBox31;
         private Label label13;
@@ -445,8 +445,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -456,6 +456,7 @@ namespace Monitor
             this.ListenBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDataTx = new System.Windows.Forms.TextBox();
             this.comboBox_ConnectionNumber = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl_Main = new System.Windows.Forms.TabControl();
@@ -579,6 +580,7 @@ namespace Monitor
             this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
             this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
             this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
+            this.button_DeleteCommandsHistory = new System.Windows.Forms.Button();
             this.textBox_CLIsendperodically = new System.Windows.Forms.TextBox();
             this.checkBox_CLI_SendPeriodically = new System.Windows.Forms.CheckBox();
             this.textBox_CLISendCommands = new System.Windows.Forms.TextBox();
@@ -738,9 +740,9 @@ namespace Monitor
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox_ClentTCPStatus = new System.Windows.Forms.GroupBox();
             this.label_TCPClient = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Label_TCPClientTx = new System.Windows.Forms.Label();
             this.label_ClientTCPConnected = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.Label_TCPClientRx = new System.Windows.Forms.Label();
             this.checkedListBox_PhoneBook = new System.Windows.Forms.CheckedListBox();
             this.button_AddContact = new System.Windows.Forms.Button();
             this.button_RemoveContact = new System.Windows.Forms.Button();
@@ -788,8 +790,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtDataTx = new System.Windows.Forms.TextBox();
-            this.button_DeleteCommandsHistory = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -953,6 +953,13 @@ namespace Monitor
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Send Data";
+            // 
+            // txtDataTx
+            // 
+            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
+            this.txtDataTx.Name = "txtDataTx";
+            this.txtDataTx.Size = new System.Drawing.Size(232, 26);
+            this.txtDataTx.TabIndex = 3;
             // 
             // comboBox_ConnectionNumber
             // 
@@ -2486,6 +2493,17 @@ namespace Monitor
             this.groupBox_CLISendCommand.TabStop = false;
             this.groupBox_CLISendCommand.Text = "CLI send command";
             // 
+            // button_DeleteCommandsHistory
+            // 
+            this.button_DeleteCommandsHistory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DeleteCommandsHistory.Location = new System.Drawing.Point(713, 59);
+            this.button_DeleteCommandsHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.button_DeleteCommandsHistory.Name = "button_DeleteCommandsHistory";
+            this.button_DeleteCommandsHistory.Size = new System.Drawing.Size(124, 23);
+            this.button_DeleteCommandsHistory.TabIndex = 109;
+            this.button_DeleteCommandsHistory.Text = "Delete history";
+            this.button_DeleteCommandsHistory.Click += new System.EventHandler(this.button_DeleteCommandsHistory_Click);
+            // 
             // textBox_CLIsendperodically
             // 
             this.textBox_CLIsendperodically.Location = new System.Drawing.Point(254, 55);
@@ -2786,17 +2804,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea5.AxisX.Title = "Freq";
-            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY.Title = "Power [dBm]";
-            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "Legend1";
-            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend5);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4197,9 +4215,9 @@ namespace Monitor
             // groupBox_ClentTCPStatus
             // 
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_TCPClient);
-            this.groupBox_ClentTCPStatus.Controls.Add(this.label12);
+            this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientTx);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
-            this.groupBox_ClentTCPStatus.Controls.Add(this.label14);
+            this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientRx);
             this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 237);
             this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
@@ -4219,15 +4237,15 @@ namespace Monitor
             this.label_TCPClient.TabIndex = 111;
             this.label_TCPClient.Text = " None";
             // 
-            // label12
+            // Label_TCPClientTx
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(59, 52);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(21, 18);
-            this.label12.TabIndex = 110;
-            this.label12.Text = "Tx";
+            this.Label_TCPClientTx.AutoSize = true;
+            this.Label_TCPClientTx.Location = new System.Drawing.Point(59, 52);
+            this.Label_TCPClientTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_TCPClientTx.Name = "Label_TCPClientTx";
+            this.Label_TCPClientTx.Size = new System.Drawing.Size(21, 18);
+            this.Label_TCPClientTx.TabIndex = 110;
+            this.Label_TCPClientTx.Text = "Tx";
             // 
             // label_ClientTCPConnected
             // 
@@ -4240,15 +4258,15 @@ namespace Monitor
             this.label_ClientTCPConnected.TabIndex = 109;
             this.label_ClientTCPConnected.Text = "Conneted";
             // 
-            // label14
+            // Label_TCPClientRx
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 52);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 18);
-            this.label14.TabIndex = 108;
-            this.label14.Text = "Rx";
+            this.Label_TCPClientRx.AutoSize = true;
+            this.Label_TCPClientRx.Location = new System.Drawing.Point(19, 52);
+            this.Label_TCPClientRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_TCPClientRx.Name = "Label_TCPClientRx";
+            this.Label_TCPClientRx.Size = new System.Drawing.Size(23, 18);
+            this.Label_TCPClientRx.TabIndex = 108;
+            this.Label_TCPClientRx.Text = "Rx";
             // 
             // checkedListBox_PhoneBook
             // 
@@ -4706,24 +4724,6 @@ namespace Monitor
             this.progressBar_WriteToFlash.Name = "progressBar_WriteToFlash";
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
-            // 
-            // txtDataTx
-            // 
-            this.txtDataTx.Location = new System.Drawing.Point(13, 18);
-            this.txtDataTx.Name = "txtDataTx";
-            this.txtDataTx.Size = new System.Drawing.Size(232, 26);
-            this.txtDataTx.TabIndex = 3;
-            // 
-            // button_DeleteCommandsHistory
-            // 
-            this.button_DeleteCommandsHistory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DeleteCommandsHistory.Location = new System.Drawing.Point(713, 59);
-            this.button_DeleteCommandsHistory.Margin = new System.Windows.Forms.Padding(2);
-            this.button_DeleteCommandsHistory.Name = "button_DeleteCommandsHistory";
-            this.button_DeleteCommandsHistory.Size = new System.Drawing.Size(124, 23);
-            this.button_DeleteCommandsHistory.TabIndex = 109;
-            this.button_DeleteCommandsHistory.Text = "Delete history";
-            this.button_DeleteCommandsHistory.Click += new System.EventHandler(this.button_DeleteCommandsHistory_Click);
             // 
             // MainForm
             // 
@@ -6214,8 +6214,8 @@ namespace Monitor
             if (RxLabelTimerBlink > 0)
             {
                 RxLabelTimerBlink--;
-                if (Timer_100ms % 2 == 0)
-                {
+                //if (Timer_100ms % 2 == 0)
+                //{
                     SerialRxBlinklled = !SerialRxBlinklled;
                     if (SerialRxBlinklled == true)
                     {
@@ -6225,7 +6225,7 @@ namespace Monitor
                     {
                         Label_SerialPortRx.BackColor = default;
                     }
-                }
+           //     }
             }
             else
             if (RxLabelTimerBlink == 0)
@@ -6236,8 +6236,8 @@ namespace Monitor
             if (TxLabelTimerBlink > 0)
             {
                 TxLabelTimerBlink--;
-                if (Timer_100ms % 2 == 0)
-                {
+                //if (Timer_100ms % 2 == 0)
+                //{
                     SerialTxBlinklled = !SerialTxBlinklled;
                     if (SerialTxBlinklled == true)
                     {
@@ -6247,7 +6247,7 @@ namespace Monitor
                     {
                         Label_SerialPortTx.BackColor = default;
                     }
-                }
+             //   }
             }
             else
             if (TxLabelTimerBlink == 0)
