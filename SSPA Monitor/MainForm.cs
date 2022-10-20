@@ -14212,8 +14212,8 @@ namespace Monitor
             if (RxLabelTimerBlink > 0)
             {
                 RxLabelTimerBlink--;
-                if (Timer_100ms % 2 == 0)
-                {
+                //if (Timer_100ms % 2 == 0)
+                //{
                     SerialRxBlinklled = !SerialRxBlinklled;
                     if (SerialRxBlinklled == true)
                     {
@@ -14223,7 +14223,7 @@ namespace Monitor
                     {
                         Label_SerialPortRx.BackColor = default;
                     }
-                }
+          //      }
             }
             else
             if (RxLabelTimerBlink == 0)
@@ -14234,8 +14234,8 @@ namespace Monitor
             if (TxLabelTimerBlink > 0)
             {
                 TxLabelTimerBlink--;
-                if (Timer_100ms % 2 == 0)
-                {
+                //if (Timer_100ms % 2 == 0)
+                //{
                     SerialTxBlinklled = !SerialTxBlinklled;
                     if (SerialTxBlinklled == true)
                     {
@@ -14245,7 +14245,7 @@ namespace Monitor
                     {
                         Label_SerialPortTx.BackColor = default;
                     }
-                }
+            //    }
             }
             else
             if (TxLabelTimerBlink == 0)
