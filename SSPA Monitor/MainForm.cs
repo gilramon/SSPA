@@ -15441,10 +15441,10 @@ namespace Monitor
                         break;
 
                     case "0094":
-                        textBox_SimulatorFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SimulatorFWDateVersion.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SimulatorFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
                     //case "00F8":
@@ -15795,22 +15795,22 @@ namespace Monitor
                         break;
 
                     case "000C":
-                        textBox_MPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_MPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_MPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_MPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         textBox_Vgg2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                        textBox_Vgg1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                     //   textBox_Vgg1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
                         textBox_9V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
                         textBox_5V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
                         textBox_4V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
                         textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
-                        textBox_DCA1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber) & 0x00FF).ToString();
-                        textBox_DCA2.Text = ((int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber) & 0xFF00) >> 8).ToString();
+                        //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 1), System.Globalization.NumberStyles.HexNumber).ToString();
+                        //textBox_DCA2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 34, 1), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         break;
 
@@ -16022,11 +16022,11 @@ namespace Monitor
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_VVAoff1.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) ;
-                        textBox_DCA1.Text = String.Format("{0}", DecimalNumber & 0x00FF);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 1), System.Globalization.NumberStyles.HexNumber) ;
+                        textBox_DCA1.Text = String.Format("{0}", DecimalNumber );
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_DCA1.Text = String.Format("{0}", (DecimalNumber & 0xFF00) >> 8);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 12, 1), System.Globalization.NumberStyles.HexNumber);
+                        textBox_DCA2.Text = String.Format("{0}", DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_VVAoff2.Text = String.Format("{0}", DecimalNumber);
@@ -23414,126 +23414,14 @@ Note: eStatus enum 
             }
         }
 
-        private async void SetDCAValues()
-        {
-
-            string hexValue = "";
-            if (int.TryParse(textBox_DCA1.Text, out int temp))
-            {
-                hexValue += temp.ToString("X4");
-            }
-
-            if (int.TryParse(textBox_DCA2.Text, out temp))
-            {
-                hexValue += temp.ToString("X4");
-            }
-
-            textBox_SetDCAWithBusMode.Text = hexValue;
-            button87_Click(null, null);
-
-            await Task.Delay(500);
-            button_GetStatus_Click(null, null);
-        }
-        private async void textBox30_KeyDown(object sender, KeyEventArgs e)
-        {
-            int Delay = 100;
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-                    string hexValue = "";
-                    if (int.TryParse(textBox_DCA1.Text, out int temp))
-                    {
-                        hexValue += temp.ToString("X2");
-                    }
-
-                    if (int.TryParse(textBox_DCA2.Text, out temp))
-                    {
-                        hexValue += temp.ToString("X2");
-                    }
-
-                    Write_Register_To_UUT(" 00 1B", hexValue);
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 01", "04 00");
 
 
-                }
 
 
-            }
-        }
-
-        private async void textBox29_KeyDown(object sender, KeyEventArgs e)
-        {
-            int Delay = 100;
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (m_TextBox.BackColor == Color.LightGreen)
-                {
-                    string hexValue = "";
-                    if (int.TryParse(textBox_DCA1.Text, out int temp))
-                    {
-                        hexValue += temp.ToString("X2");
-                    }
-
-                    if (int.TryParse(textBox_DCA2.Text, out temp))
-                    {
-                        hexValue += temp.ToString("X2");
-                    }
-
-                    Write_Register_To_UUT(" 00 1B", hexValue);
-                    await Task.Delay(Delay);
-
-                    Write_Register_To_UUT(" 00 01", "04 00");
-
-                        
-                }
 
 
-            }
-
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox Checkbx = (CheckBox)sender;
-            if (Checkbx.Checked == true)
-            {
-                textBox12.Text = "01";
-
-                Checkbx.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                textBox12.Text = "00";
-                Checkbx.BackColor = default;
-            }
-
-            button111_Click(null, null);
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox Checkbx = (CheckBox)sender;
-            if (Checkbx.Checked == true)
-            {
-                checkBox_RFGen.Checked = true;
-
-                Checkbx.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                checkBox_RFGen.Checked = false;
-
-                Checkbx.BackColor = default;
-            }
 
 
-            SetControlGenerators();
-        }
 
         void SetControlGenerators()
         {
