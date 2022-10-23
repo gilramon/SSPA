@@ -14856,16 +14856,21 @@ namespace Monitor
             return ret;
         }
 
+
+
         void WriteToSystemStatus(String i_Message,uint i_Time,Color i_Color)
         {
-            textBox_SystemStatus.AppendText(i_Message + Environment.NewLine + Environment.NewLine);
-            textBox_SystemStatus.BackColor = i_Color;
-            textBox_SystemStatus_Timer += i_Time;
+            textBox_SystemStatus.BeginInvoke(new EventHandler(delegate
+            {
+                textBox_SystemStatus.AppendText(i_Message + Environment.NewLine + Environment.NewLine);
+                textBox_SystemStatus.BackColor = i_Color;
+                textBox_SystemStatus_Timer += i_Time;
 
-            // set the current caret position to the end
-            textBox_SystemStatus.SelectionStart = textBox_SystemStatus.Text.Length;
-            // scroll it automatically
-            textBox_SystemStatus.ScrollToCaret();
+                // set the current caret position to the end
+                textBox_SystemStatus.SelectionStart = textBox_SystemStatus.Text.Length;
+                // scroll it automatically
+                textBox_SystemStatus.ScrollToCaret();
+            }));
 
 
         }
@@ -26162,7 +26167,7 @@ Input -  Freq bit (4, input to SSPA)	LSB
                 m_comboBox.BackColor = Color.Red;
             }
         }
-        async void ReadDataGridToFlash(DataGridView i_DataGrid)
+        async Task<Task> ReadDataGridToFlash(DataGridView i_DataGrid)
         {
 
             if (Int32.TryParse(GetLast(i_DataGrid.Name, 2), out int GridNumber))
@@ -26193,14 +26198,15 @@ Input -  Freq bit (4, input to SSPA)	LSB
                 }
 
 
-
+                
                 // Read_Flash(BlockAddress);
-            } 
+            }
+            return Task.CompletedTask;
         }
 
-        private void button_ReadPage0_Click(object sender, EventArgs e)
+        private async void button_ReadPage0_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block00);
+            await ReadDataGridToFlash(dataGridView_Block00);
         }
 
 
@@ -26210,7 +26216,7 @@ Input -  Freq bit (4, input to SSPA)	LSB
                 return source;
             return source.Substring(source.Length - tail_length);
         }
-        async Task WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
+        async Task<Task> WriteDataGridToFlash(DataGridView i_DataGrid,bool i_DoErase)
         {
             int i = 0;
          //   tabControl_SSPA_WB_GUI.Enabled = false;
@@ -26230,7 +26236,7 @@ Input -  Freq bit (4, input to SSPA)	LSB
                         }
                         String message = String.Format("DataGrid [{0}] at Raw[{1}] is not OK[{2}] ", i_DataGrid.Name, i, i_DataGrid.Rows[i].Cells[0].Value.ToString());
                         WriteToSystemStatus(message, 4, Color.Orange);
-                        return;
+                        return Task.CompletedTask;
                     }
                 }
 
@@ -26247,6 +26253,7 @@ Input -  Freq bit (4, input to SSPA)	LSB
                 int row = 0;
                 while (TotalBytesToSend > 0)
                 {
+                    //Thread.Sleep(3000);
                     await Task.Delay(3000);
                     DataToWrite = "";
                     ByteCounter = 0;
@@ -26266,15 +26273,13 @@ Input -  Freq bit (4, input to SSPA)	LSB
                     InternalFlashAddress += 256;
                     TotalBytesToSend -= 256;
                 }
-                    
-                //for (i = 0; i < i_DataGrid.Rows.Count - 1; i++)
-                //{
-                //    DataToWrite += i_DataGrid.Rows[i].Cells[0].Value;
-                //}
 
-                //Write_Flash(BlockAddress, "00 00", DataToWrite);
-                
+
+                WriteToSystemStatus(String.Format("Block[{0}] wrote done. ", i_DataGrid.Name), 4, Color.LightGreen);
+
             }
+
+            return Task.CompletedTask;
 
         //    tabControl_SSPA_WB_GUI.Enabled = true;
         }
@@ -26827,7 +26832,6 @@ This Process can take 1 minute.";
 
                 foreach(DataGridView datagrid in List_AllDataGrids)
                 {
-
                     await WriteDataGridToFlash(datagrid, false);
                     await Task.Delay(1000);
                     progressBar_UserStatus.Value += 5;
@@ -26861,7 +26865,7 @@ This Process can take 1 minute.";
 
                 foreach (DataGridView datagrid in List_AllDataGrids)
                 {
-                    ReadDataGridToFlash(datagrid);
+                    await ReadDataGridToFlash(datagrid);
                     await Task.Delay(800);
                 }
 
@@ -26993,69 +26997,69 @@ This Process can take 1 minute.";
         //    WriteDataGridToFlash(dataGridView_Block12);
         //}
 
-        private void button_ReadBlock0_Click(object sender, EventArgs e)
+        private async void button_ReadBlock0_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block00);
+            await ReadDataGridToFlash(dataGridView_Block00);
         }
 
-        private void button_ReadBlock1_Click(object sender, EventArgs e)
+        private async void button_ReadBlock1_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block01);
+            await ReadDataGridToFlash(dataGridView_Block01);
         }
 
-        private void button_ReadBlock2_Click(object sender, EventArgs e)
+        private async void button_ReadBlock2_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block02);
+            await ReadDataGridToFlash(dataGridView_Block02);
         }
 
-        private void button_ReadBlock3_Click(object sender, EventArgs e)
+        private async void button_ReadBlock3_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block03);
+            await ReadDataGridToFlash(dataGridView_Block03);
         }
 
-        private void button_ReadBlock4_Click(object sender, EventArgs e)
+        private async void button_ReadBlock4_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block04);
+            await ReadDataGridToFlash(dataGridView_Block04);
         }
 
-        private void button_ReadBlock5_Click(object sender, EventArgs e)
+        private async void button_ReadBlock5_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block05);
+            await ReadDataGridToFlash(dataGridView_Block05);
         }
 
-        private void button_ReadBlock6_Click(object sender, EventArgs e)
+        private async void button_ReadBlock6_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block06);
+            await ReadDataGridToFlash(dataGridView_Block06);
         }
 
-        private void button_ReadBlock7_Click(object sender, EventArgs e)
+        private async void button_ReadBlock7_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block07);
+            await ReadDataGridToFlash(dataGridView_Block07);
         }
 
-        private void button_ReadBlock8_Click(object sender, EventArgs e)
+        private async void button_ReadBlock8_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block08);
+            await ReadDataGridToFlash(dataGridView_Block08);
         }
 
-        private void button_ReadBlock9_Click(object sender, EventArgs e)
+        private async void button_ReadBlock9_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block09);
+            await ReadDataGridToFlash(dataGridView_Block09);
         }
 
-        private void button_ReadBlock10_Click(object sender, EventArgs e)
+        private async void button_ReadBlock10_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block10);
+            await ReadDataGridToFlash(dataGridView_Block10);
         }
 
-        private void button_ReadBlock11_Click(object sender, EventArgs e)
+        private async void button_ReadBlock11_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block11);
+            await ReadDataGridToFlash(dataGridView_Block11);
         }
 
-        private void button_ReadBlock12_Click(object sender, EventArgs e)
+        private async void button_ReadBlock12_Click(object sender, EventArgs e)
         {
-            ReadDataGridToFlash(dataGridView_Block12);
+            await ReadDataGridToFlash(dataGridView_Block12);
         }
 
         private async void button_WriteBlock0_Click(object sender, EventArgs e)
@@ -27275,7 +27279,7 @@ This Process can take 1 minute.";
 
             foreach (DataGridView datagrid in List_AllDataGrids)
             {
-                ReadDataGridToFlash(datagrid);
+                await ReadDataGridToFlash(datagrid);
                 await Task.Delay(Delay);
             }
             // tabControl_SSPA_WB_GUI.Enabled = true;
