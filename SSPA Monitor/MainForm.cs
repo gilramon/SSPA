@@ -16603,6 +16603,7 @@ namespace Monitor
 
                 if (progressBar_UserStatus.Value == 100)
                 {
+                    progressBar_UserStatus.BackColor = default;
                     progressBar_UserStatus.Value = 0;
                 }
 
