@@ -24360,7 +24360,7 @@ Note: eStatus enum 
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
 
-            int Delay = 500;
+            int Delay = 100;
             if (serialPort.IsOpen == false)
             {
                 WriteToSystemStatus("Port is closed!", 4, Color.Orange);
@@ -27084,7 +27084,7 @@ This Process can take 1 minute.";
                 foreach (DataGridView datagrid in List_AllDataGrids)
                 {
                     await ReadDataGridToFlash(datagrid);
-                    await Task.Delay(800);
+                    await Task.Delay(100);
                 }
 
 
@@ -27493,7 +27493,7 @@ This Process can take 1 minute.";
 
         private async void button2_Click_3(object sender, EventArgs e)
         {
-            int Delay = 800;
+            int Delay = 100;
 
             foreach (DataGridView datagrid in List_AllDataGrids)
             {
