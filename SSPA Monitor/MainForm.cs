@@ -778,9 +778,6 @@ namespace Monitor
         private Button button132;
         private Button button133;
         private Button button134;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private DataGridViewTextBoxColumn Decimal;
-        private DataGridViewTextBoxColumn Verify_ReadOnly;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -919,6 +916,11 @@ namespace Monitor
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
         private DataGridViewTextBoxColumn SPA_rise;
         private DataGridViewTextBoxColumn Column19;
+        private Label label57;
+        private TextBox textBox_SimulatorStatus7;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private DataGridViewTextBoxColumn Decimal;
+        private DataGridViewTextBoxColumn Verify_ReadOnly;
         private static readonly string PREAMBLE = "23";
 
 
@@ -1463,9 +1465,6 @@ namespace Monitor
             this.button_ReadBlock0 = new System.Windows.Forms.Button();
             this.button_WriteBlock0 = new System.Windows.Forms.Button();
             this.dataGridView_Block00 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Block1DC4off = new System.Windows.Forms.TabPage();
             this.button35 = new System.Windows.Forms.Button();
@@ -1860,6 +1859,11 @@ namespace Monitor
             this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SPA_rise = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label57 = new System.Windows.Forms.Label();
+            this.textBox_SimulatorStatus7 = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -5848,7 +5852,7 @@ namespace Monitor
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(429, 250);
+            this.label78.Location = new System.Drawing.Point(367, 270);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(107, 14);
@@ -5857,7 +5861,7 @@ namespace Monitor
             // 
             // textBox_StatusUUT33
             // 
-            this.textBox_StatusUUT33.Location = new System.Drawing.Point(545, 242);
+            this.textBox_StatusUUT33.Location = new System.Drawing.Point(483, 262);
             this.textBox_StatusUUT33.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_StatusUUT33.Name = "textBox_StatusUUT33";
             this.textBox_StatusUUT33.ReadOnly = true;
@@ -6449,6 +6453,8 @@ namespace Monitor
             // groupBox39
             // 
             this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox39.Controls.Add(this.label57);
+            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus7);
             this.groupBox39.Controls.Add(this.label115);
             this.groupBox39.Controls.Add(this.textBox_SimulatorStatus6);
             this.groupBox39.Controls.Add(this.label71);
@@ -6466,7 +6472,7 @@ namespace Monitor
             this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox39.Size = new System.Drawing.Size(211, 215);
+            this.groupBox39.Size = new System.Drawing.Size(211, 251);
             this.groupBox39.TabIndex = 76;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "Status Simulator";
@@ -6485,11 +6491,11 @@ namespace Monitor
             // 
             // textBox_SimulatorStatus6
             // 
-            this.textBox_SimulatorStatus6.Location = new System.Drawing.Point(115, 186);
+            this.textBox_SimulatorStatus6.Location = new System.Drawing.Point(139, 186);
             this.textBox_SimulatorStatus6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus6.Name = "textBox_SimulatorStatus6";
             this.textBox_SimulatorStatus6.ReadOnly = true;
-            this.textBox_SimulatorStatus6.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus6.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus6.TabIndex = 74;
             this.textBox_SimulatorStatus6.TextChanged += new System.EventHandler(this.textBox95_TextChanged);
             // 
@@ -6521,11 +6527,11 @@ namespace Monitor
             // 
             // textBox_SimulatorStatus5
             // 
-            this.textBox_SimulatorStatus5.Location = new System.Drawing.Point(115, 156);
+            this.textBox_SimulatorStatus5.Location = new System.Drawing.Point(139, 156);
             this.textBox_SimulatorStatus5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus5.Name = "textBox_SimulatorStatus5";
             this.textBox_SimulatorStatus5.ReadOnly = true;
-            this.textBox_SimulatorStatus5.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus5.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus5.TabIndex = 72;
             this.textBox_SimulatorStatus5.TextChanged += new System.EventHandler(this.textBox60_TextChanged);
             // 
@@ -6544,11 +6550,11 @@ namespace Monitor
             // 
             // textBox_SimulatorStatus4
             // 
-            this.textBox_SimulatorStatus4.Location = new System.Drawing.Point(115, 123);
+            this.textBox_SimulatorStatus4.Location = new System.Drawing.Point(139, 123);
             this.textBox_SimulatorStatus4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus4.Name = "textBox_SimulatorStatus4";
             this.textBox_SimulatorStatus4.ReadOnly = true;
-            this.textBox_SimulatorStatus4.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus4.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus4.TabIndex = 70;
             this.textBox_SimulatorStatus4.TextChanged += new System.EventHandler(this.textBox59_TextChanged);
             // 
@@ -6567,11 +6573,11 @@ namespace Monitor
             // 
             // textBox_SimulatorStatus3
             // 
-            this.textBox_SimulatorStatus3.Location = new System.Drawing.Point(115, 92);
+            this.textBox_SimulatorStatus3.Location = new System.Drawing.Point(139, 92);
             this.textBox_SimulatorStatus3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus3.Name = "textBox_SimulatorStatus3";
             this.textBox_SimulatorStatus3.ReadOnly = true;
-            this.textBox_SimulatorStatus3.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus3.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus3.TabIndex = 64;
             this.textBox_SimulatorStatus3.TextChanged += new System.EventHandler(this.textBox58_TextChanged);
             // 
@@ -6590,21 +6596,21 @@ namespace Monitor
             // 
             // textBox_SimulatorStatus1
             // 
-            this.textBox_SimulatorStatus1.Location = new System.Drawing.Point(115, 31);
+            this.textBox_SimulatorStatus1.Location = new System.Drawing.Point(139, 31);
             this.textBox_SimulatorStatus1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus1.Name = "textBox_SimulatorStatus1";
             this.textBox_SimulatorStatus1.ReadOnly = true;
-            this.textBox_SimulatorStatus1.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus1.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus1.TabIndex = 67;
             this.textBox_SimulatorStatus1.TextChanged += new System.EventHandler(this.textBox56_TextChanged);
             // 
             // textBox_SimulatorStatus2
             // 
-            this.textBox_SimulatorStatus2.Location = new System.Drawing.Point(115, 62);
+            this.textBox_SimulatorStatus2.Location = new System.Drawing.Point(139, 62);
             this.textBox_SimulatorStatus2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_SimulatorStatus2.Name = "textBox_SimulatorStatus2";
             this.textBox_SimulatorStatus2.ReadOnly = true;
-            this.textBox_SimulatorStatus2.Size = new System.Drawing.Size(92, 26);
+            this.textBox_SimulatorStatus2.Size = new System.Drawing.Size(68, 26);
             this.textBox_SimulatorStatus2.TabIndex = 66;
             this.textBox_SimulatorStatus2.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
@@ -7827,26 +7833,6 @@ namespace Monitor
             this.dataGridView_Block00.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             this.dataGridView_Block00.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
             // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.Frozen = true;
-            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn29.Width = 125;
-            // 
-            // Decimal
-            // 
-            this.Decimal.HeaderText = "Decimal";
-            this.Decimal.Name = "Decimal";
-            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Verify_ReadOnly
-            // 
-            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
-            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
-            // 
             // label81
             // 
             this.label81.AutoSize = true;
@@ -8136,6 +8122,7 @@ namespace Monitor
             this.dataGridView_Block2_Vdd.AllowUserToAddRows = false;
             this.dataGridView_Block2_Vdd.AllowUserToDeleteRows = false;
             this.dataGridView_Block2_Vdd.AllowUserToResizeColumns = false;
+            this.dataGridView_Block2_Vdd.AllowUserToResizeRows = false;
             this.dataGridView_Block2_Vdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Block2_Vdd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn46,
@@ -8143,6 +8130,7 @@ namespace Monitor
             this.dataGridView_Block2_Vdd.Location = new System.Drawing.Point(2, 8);
             this.dataGridView_Block2_Vdd.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_Block2_Vdd.Name = "dataGridView_Block2_Vdd";
+            this.dataGridView_Block2_Vdd.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -8162,11 +8150,13 @@ namespace Monitor
             // 
             this.dataGridViewTextBoxColumn46.HeaderText = "DC4 off";
             this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn47
             // 
             this.dataGridViewTextBoxColumn47.HeaderText = "DC4 on";
             this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
             // 
             // tabPage_Block3Vgg
             // 
@@ -12203,6 +12193,48 @@ namespace Monitor
             this.Column19.HeaderText = "SPA fall";
             this.Column19.Name = "Column19";
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Black;
+            this.label57.Location = new System.Drawing.Point(2, 222);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(136, 14);
+            this.label57.TabIndex = 77;
+            this.label57.Text = "Temperature supervisor";
+            // 
+            // textBox_SimulatorStatus7
+            // 
+            this.textBox_SimulatorStatus7.Location = new System.Drawing.Point(139, 216);
+            this.textBox_SimulatorStatus7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus7.Name = "textBox_SimulatorStatus7";
+            this.textBox_SimulatorStatus7.ReadOnly = true;
+            this.textBox_SimulatorStatus7.Size = new System.Drawing.Size(68, 26);
+            this.textBox_SimulatorStatus7.TabIndex = 76;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.Frozen = true;
+            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // Decimal
+            // 
+            this.Decimal.HeaderText = "Decimal";
+            this.Decimal.Name = "Decimal";
+            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Verify_ReadOnly
+            // 
+            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
+            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
+            this.Verify_ReadOnly.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -13320,12 +13352,7 @@ namespace Monitor
                 datagrid.Columns[0].HeaderCell.Value = "Flash data Hex (0xFFFF)";
                 datagrid.Columns[0].Visible = false;
                 datagrid.Columns[2].Visible = false;
-                // datagrid.KeyUp += dataGridView_CopyPaste_KeyUP;
-                datagrid.AllowUserToAddRows = false;
-                datagrid.AllowUserToDeleteRows = false;
-                datagrid.AllowUserToOrderColumns = false;
-                datagrid.TopLeftHeaderCell.Style.ForeColor = Color.Blue;
-                datagrid.TopLeftHeaderCell.Style.Font = new Font("Calibri", 14, FontStyle.Bold);
+
 
 
             }
@@ -13761,6 +13788,25 @@ namespace Monitor
             if (ctl.GetType().FullName == "System.Windows.Forms.CheckBox")
             {
                 CheckBox chk = (CheckBox)ctl;
+            }
+
+            if (ctl.GetType().FullName == "System.Windows.Forms.DataGridView")
+            {
+                DataGridView DataGrid = (DataGridView)ctl;
+
+                DataGrid.KeyUp += dataGridView_CopyPaste_KeyUP;
+                DataGrid.RowPostPaint += dgGrid_RowPostPaint;
+                DataGrid.AllowUserToAddRows = false;
+                DataGrid.AllowUserToDeleteRows = false;
+                DataGrid.AllowUserToOrderColumns = false;
+                DataGrid.TopLeftHeaderCell.Style.ForeColor = Color.Blue;
+                DataGrid.TopLeftHeaderCell.Style.Font = new Font("Calibri", 14, FontStyle.Bold);
+
+                foreach (DataGridViewColumn column in DataGrid.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
             }
 
             foreach (Control ctrl in ctl.Controls)
@@ -15557,6 +15603,24 @@ namespace Monitor
                         //textBox_SimulatorStatus5.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
                         //textBox_SimulatorStatus6.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
                         break;
+
+                    case "00CD":
+                       int Temperature = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        sbyte temp = (sbyte)(Temperature >> 8);
+                        temp /= 2;
+                        double FinalResult = temp;
+
+                        //Gil: from the datasheet of the temperature sensor
+                        if(( (Temperature >> 7) & 0x1) == 1)
+                        {
+                            FinalResult += 0.5;
+                        }
+
+                        textBox_SimulatorStatus7.Text = FinalResult.ToString("0.0");
+
+
+                        break;
+
 
 
 
@@ -24350,6 +24414,9 @@ Note: eStatus enum 
             await Task.Delay(Delay);
 
             Read_Register_From_Simulator("00 81");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 CD");
             await Task.Delay(Delay);
 
 
