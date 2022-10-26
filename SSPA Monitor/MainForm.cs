@@ -479,9 +479,9 @@ namespace Monitor
         private TextBox textBox_VVA;
         private Label label36;
         private GroupBox groupBox_StatusUUT;
-        private Button button_GetStatus;
+        private Button button_GetStatusUUT;
         private Label label56;
-        private TextBox textBox_StatusUUT12;
+        private TextBox textBox_StatusUUT12_CH1CS48V;
         private Label label60;
         private TextBox textBox_StatusUUT19;
         private Label label61;
@@ -495,29 +495,29 @@ namespace Monitor
         private Label label65;
         private TextBox textBox_StatusUUT14;
         private Label label66;
-        private TextBox textBox_StatusUUT13;
+        private TextBox textBox_StatusUUT13_VIN_F;
         private Label label55;
-        private TextBox textBox_StatusUUT1;
+        private TextBox textBox_StatusUUT1_5Vcurrent;
         private Label label54;
-        private TextBox textBox_StatusUUT11;
+        private TextBox textBox_StatusUUT11_Ch0PRM;
         private Label label53;
-        private TextBox textBox_StatusUUT10;
+        private TextBox textBox_StatusUUT10_Vdd9V;
         private Label label52;
-        private TextBox textBox_StatusUUT9;
+        private TextBox textBox_StatusUUT9_Vdd28V;
         private Label label51;
-        private TextBox textBox_StatusUUT8;
+        private TextBox textBox_StatusUUT8_VDD4V;
         private Label label50;
-        private TextBox textBox_StatusUUT7;
+        private TextBox textBox_StatusUUT7_Vdd5V;
         private Label label49;
-        private TextBox textBox_StatusUUT6;
+        private TextBox textBox_StatusUUT6_VggN5V;
         private Label label40;
-        private TextBox textBox_StatusUUT5;
+        private TextBox textBox_StatusUUT5_DETECTORvoltage;
         private Label label39;
-        private TextBox textBox_StatusUUT4;
+        private TextBox textBox_StatusUUT4_CS9V;
         private Label label33;
-        private TextBox textBox_StatusUUT3;
+        private TextBox textBox_StatusUUT3_CS28V;
         private Label label32;
-        private TextBox textBox_StatusUUT2;
+        private TextBox textBox_StatusUUT2_THERM_VPATAT;
         private Label label74;
         private TextBox textBox_SimulatorStatus5;
         private Label label73;
@@ -531,7 +531,7 @@ namespace Monitor
         private TabPage tabPage_Block0;
         private Button button_Writeallblockstoflash;
         private Button button2;
-        private GroupBox groupBox33;
+        private GroupBox groupBox_RFgen;
         private TextBox textBox_RFDelay;
         private Label label100;
         private TextBox textBox_RFPeriod;
@@ -555,16 +555,16 @@ namespace Monitor
         private Label label107;
         private Label label108;
         private Label label109;
-        private GroupBox groupBox35;
+        private GroupBox groupBox_PulseGen2;
         private TextBox textBox_PulseDelay2;
         private TextBox textBox_PulsePeriod2;
         private TextBox textBox_PulseWidth2;
-        private GroupBox groupBox34;
+        private GroupBox groupBox_PulseGen;
         private TextBox textBox_PulseDelay;
         private TextBox textBox_PulsePeriod;
         private TextBox textBox_PulseWidth;
         private Button button75;
-        private GroupBox groupBox39;
+        private GroupBox groupBox_SimulatorStatus;
         private TextBox textBox_SystemFWVersion;
         private TextBox textBox_SystemFWDateVersion;
         private ToolTip toolTip1;
@@ -575,7 +575,7 @@ namespace Monitor
         private TextBox textBox_SimulatorStatus6;
         private CheckBox checkBox_Preserve;
         private CheckBox checkBox_OVTcheck;
-        private CheckBox checkBox2;
+        private CheckBox checkBox_DC4on;
         private Label label81;
         private DataGridView dataGridView_Block00;
         private Button button57;
@@ -683,7 +683,7 @@ namespace Monitor
         private Label label77;
         private Button button_SEURecover;
         private Label label78;
-        private TextBox textBox_StatusUUT33;
+        private TextBox textBox_StatusUUT33_INPUTcontrols;
         private Label label151;
         private Label label150;
         private TextBox textBox_StrobeWidth;
@@ -921,6 +921,12 @@ namespace Monitor
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private DataGridViewTextBoxColumn Decimal;
         private DataGridViewTextBoxColumn Verify_ReadOnly;
+        private CheckBox checkBox_SendStatusPerodically;
+        private GroupBox groupBox63;
+        private GroupBox groupBox64;
+        private CheckBox checkBox_SendStatusSimulatorPeriodically;
+        private Button button_GetStatusSimulator;
+        private Button button_ClearSimulatorStatus;
         private static readonly string PREAMBLE = "23";
 
 
@@ -986,18 +992,18 @@ namespace Monitor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
             this.textBox_ServerActive = new System.Windows.Forms.TextBox();
@@ -1288,7 +1294,7 @@ namespace Monitor
             this.button_SEURecover = new System.Windows.Forms.Button();
             this.checkBox_Preserve = new System.Windows.Forms.CheckBox();
             this.checkBox_OVTcheck = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_DC4on = new System.Windows.Forms.CheckBox();
             this.label114 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
@@ -1301,11 +1307,11 @@ namespace Monitor
             this.label88 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT34 = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT33 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT33_INPUTcontrols = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
             this.button74 = new System.Windows.Forms.Button();
             this.textBox_StatusUUT32 = new System.Windows.Forms.TextBox();
-            this.button_GetStatus = new System.Windows.Forms.Button();
+            this.button_GetStatusUUT = new System.Windows.Forms.Button();
             this.label104 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT31 = new System.Windows.Forms.TextBox();
@@ -1316,7 +1322,7 @@ namespace Monitor
             this.label56 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT27 = new System.Windows.Forms.TextBox();
-            this.textBox_StatusUUT12 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT12_CH1CS48V = new System.Windows.Forms.TextBox();
             this.textBox_StatusUUT28 = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT19 = new System.Windows.Forms.TextBox();
@@ -1331,30 +1337,32 @@ namespace Monitor
             this.label65 = new System.Windows.Forms.Label();
             this.textBox_StatusUUT14 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT13 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT13_VIN_F = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT1 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT1_5Vcurrent = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT11 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT11_Ch0PRM = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT10 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT10_Vdd9V = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT9 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT9_Vdd28V = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT8 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT8_VDD4V = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT7 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT7_Vdd5V = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT6 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT6_VggN5V = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT5 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT5_DETECTORvoltage = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT4 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT4_CS9V = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT3 = new System.Windows.Forms.TextBox();
+            this.textBox_StatusUUT3_CS28V = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox_StatusUUT2 = new System.Windows.Forms.TextBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.textBox_StatusUUT2_THERM_VPATAT = new System.Windows.Forms.TextBox();
+            this.groupBox_SimulatorStatus = new System.Windows.Forms.GroupBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.textBox_SimulatorStatus7 = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
             this.textBox_SimulatorStatus6 = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
@@ -1367,7 +1375,7 @@ namespace Monitor
             this.label72 = new System.Windows.Forms.Label();
             this.textBox_SimulatorStatus1 = new System.Windows.Forms.TextBox();
             this.textBox_SimulatorStatus2 = new System.Windows.Forms.TextBox();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.groupBox_PulseGen2 = new System.Windows.Forms.GroupBox();
             this.label84 = new System.Windows.Forms.Label();
             this.checkBox_PulseGen2 = new System.Windows.Forms.CheckBox();
             this.label85 = new System.Windows.Forms.Label();
@@ -1420,7 +1428,7 @@ namespace Monitor
             this.textBox_9V = new System.Windows.Forms.TextBox();
             this.textBox_28V = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.groupBox_PulseGen = new System.Windows.Forms.GroupBox();
             this.label79 = new System.Windows.Forms.Label();
             this.checkBox_PulseGen = new System.Windows.Forms.CheckBox();
             this.label80 = new System.Windows.Forms.Label();
@@ -1450,7 +1458,7 @@ namespace Monitor
             this.button31 = new System.Windows.Forms.Button();
             this.textBox_SimulatorFWVersion = new System.Windows.Forms.TextBox();
             this.textBox_SimulatorFWDateVersion = new System.Windows.Forms.TextBox();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.groupBox_RFgen = new System.Windows.Forms.GroupBox();
             this.checkBox_RFGen = new System.Windows.Forms.CheckBox();
             this.textBox_RFDelay = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
@@ -1465,6 +1473,9 @@ namespace Monitor
             this.button_ReadBlock0 = new System.Windows.Forms.Button();
             this.button_WriteBlock0 = new System.Windows.Forms.Button();
             this.dataGridView_Block00 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label81 = new System.Windows.Forms.Label();
             this.tabPage_Block1DC4off = new System.Windows.Forms.TabPage();
             this.button35 = new System.Windows.Forms.Button();
@@ -1563,46 +1574,17 @@ namespace Monitor
             this.groupBox52 = new System.Windows.Forms.GroupBox();
             this.button86 = new System.Windows.Forms.Button();
             this.button89 = new System.Windows.Forms.Button();
-            this.tabPage_Block9 = new System.Windows.Forms.TabPage();
-            this.button131 = new System.Windows.Forms.Button();
-            this.button107 = new System.Windows.Forms.Button();
-            this.dataGridView_Block09 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox53 = new System.Windows.Forms.GroupBox();
-            this.button90 = new System.Windows.Forms.Button();
-            this.button91 = new System.Windows.Forms.Button();
-            this.tabPage_Block10 = new System.Windows.Forms.TabPage();
-            this.button132 = new System.Windows.Forms.Button();
-            this.button110 = new System.Windows.Forms.Button();
-            this.dataGridView_Block10 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.button92 = new System.Windows.Forms.Button();
-            this.button93 = new System.Windows.Forms.Button();
-            this.tabPage_Block11 = new System.Windows.Forms.TabPage();
-            this.button133 = new System.Windows.Forms.Button();
-            this.button116 = new System.Windows.Forms.Button();
-            this.dataGridView_Block11 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox55 = new System.Windows.Forms.GroupBox();
-            this.button94 = new System.Windows.Forms.Button();
-            this.button95 = new System.Windows.Forms.Button();
-            this.tabPage_Block12 = new System.Windows.Forms.TabPage();
-            this.button134 = new System.Windows.Forms.Button();
-            this.button123 = new System.Windows.Forms.Button();
-            this.dataGridView_Block12 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.button_ReadBlock12 = new System.Windows.Forms.Button();
-            this.button_WriteBlock12 = new System.Windows.Forms.Button();
+            this.tabPage_Blocks9_12_MPA_SPA = new System.Windows.Forms.TabPage();
+            this.button147 = new System.Windows.Forms.Button();
+            this.button148 = new System.Windows.Forms.Button();
+            this.groupBox62 = new System.Windows.Forms.GroupBox();
+            this.button149 = new System.Windows.Forms.Button();
+            this.button150 = new System.Windows.Forms.Button();
+            this.dataGridView_Block9_12_MPA_SPA = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SPA_rise = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage_Page1_Block1Flash = new System.Windows.Forms.TabPage();
             this.button98 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -1663,6 +1645,46 @@ namespace Monitor
             this.groupBox51 = new System.Windows.Forms.GroupBox();
             this.button84 = new System.Windows.Forms.Button();
             this.button85 = new System.Windows.Forms.Button();
+            this.tabPage_Block9 = new System.Windows.Forms.TabPage();
+            this.button131 = new System.Windows.Forms.Button();
+            this.button107 = new System.Windows.Forms.Button();
+            this.dataGridView_Block09 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
+            this.tabPage_Block10 = new System.Windows.Forms.TabPage();
+            this.button132 = new System.Windows.Forms.Button();
+            this.button110 = new System.Windows.Forms.Button();
+            this.dataGridView_Block10 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.button92 = new System.Windows.Forms.Button();
+            this.button93 = new System.Windows.Forms.Button();
+            this.tabPage_Block11 = new System.Windows.Forms.TabPage();
+            this.button133 = new System.Windows.Forms.Button();
+            this.button116 = new System.Windows.Forms.Button();
+            this.dataGridView_Block11 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.button94 = new System.Windows.Forms.Button();
+            this.button95 = new System.Windows.Forms.Button();
+            this.tabPage_Block12 = new System.Windows.Forms.TabPage();
+            this.button134 = new System.Windows.Forms.Button();
+            this.button123 = new System.Windows.Forms.Button();
+            this.dataGridView_Block12 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.button_ReadBlock12 = new System.Windows.Forms.Button();
+            this.button_WriteBlock12 = new System.Windows.Forms.Button();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.radioButton_TCPIP = new System.Windows.Forms.RadioButton();
             this.radioButton_SerialPort = new System.Windows.Forms.RadioButton();
@@ -1848,22 +1870,12 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage_Blocks9_12_MPA_SPA = new System.Windows.Forms.TabPage();
-            this.button147 = new System.Windows.Forms.Button();
-            this.button148 = new System.Windows.Forms.Button();
-            this.groupBox62 = new System.Windows.Forms.GroupBox();
-            this.button149 = new System.Windows.Forms.Button();
-            this.button150 = new System.Windows.Forms.Button();
-            this.dataGridView_Block9_12_MPA_SPA = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SPA_rise = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label57 = new System.Windows.Forms.Label();
-            this.textBox_SimulatorStatus7 = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Decimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verify_ReadOnly = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox_SendStatusPerodically = new System.Windows.Forms.CheckBox();
+            this.groupBox63 = new System.Windows.Forms.GroupBox();
+            this.groupBox64 = new System.Windows.Forms.GroupBox();
+            this.checkBox_SendStatusSimulatorPeriodically = new System.Windows.Forms.CheckBox();
+            this.button_GetStatusSimulator = new System.Windows.Forms.Button();
+            this.button_ClearSimulatorStatus = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -1899,14 +1911,14 @@ namespace Monitor
             this.groupBox_SystemMode.SuspendLayout();
             this.groupBox_SimulatorControl.SuspendLayout();
             this.groupBox_StatusUUT.SuspendLayout();
-            this.groupBox39.SuspendLayout();
-            this.groupBox35.SuspendLayout();
+            this.groupBox_SimulatorStatus.SuspendLayout();
+            this.groupBox_PulseGen2.SuspendLayout();
             this.groupBox_Control2.SuspendLayout();
             this.groupBox_Control1.SuspendLayout();
-            this.groupBox34.SuspendLayout();
+            this.groupBox_PulseGen.SuspendLayout();
             this.groupBox_UUTVersion.SuspendLayout();
             this.groupBox_SimulatorVersion.SuspendLayout();
-            this.groupBox33.SuspendLayout();
+            this.groupBox_RFgen.SuspendLayout();
             this.tabPage_Block0.SuspendLayout();
             this.groupBox50.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block00)).BeginInit();
@@ -1934,18 +1946,9 @@ namespace Monitor
             this.tabPage_Block8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block08)).BeginInit();
             this.groupBox52.SuspendLayout();
-            this.tabPage_Block9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block09)).BeginInit();
-            this.groupBox53.SuspendLayout();
-            this.tabPage_Block10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block10)).BeginInit();
-            this.groupBox54.SuspendLayout();
-            this.tabPage_Block11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block11)).BeginInit();
-            this.groupBox55.SuspendLayout();
-            this.tabPage_Block12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).BeginInit();
-            this.groupBox56.SuspendLayout();
+            this.tabPage_Blocks9_12_MPA_SPA.SuspendLayout();
+            this.groupBox62.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block9_12_MPA_SPA)).BeginInit();
             this.tabPage_Page1_Block1Flash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -1964,6 +1967,18 @@ namespace Monitor
             this.tabPage_Block7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block07)).BeginInit();
             this.groupBox51.SuspendLayout();
+            this.tabPage_Block9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block09)).BeginInit();
+            this.groupBox53.SuspendLayout();
+            this.tabPage_Block10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block10)).BeginInit();
+            this.groupBox54.SuspendLayout();
+            this.tabPage_Block11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block11)).BeginInit();
+            this.groupBox55.SuspendLayout();
+            this.tabPage_Block12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).BeginInit();
+            this.groupBox56.SuspendLayout();
             this.groupBox42.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.S1_Configuration.SuspendLayout();
@@ -1997,9 +2012,8 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.tabPage_Blocks9_12_MPA_SPA.SuspendLayout();
-            this.groupBox62.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block9_12_MPA_SPA)).BeginInit();
+            this.groupBox63.SuspendLayout();
+            this.groupBox64.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -5330,13 +5344,13 @@ namespace Monitor
             this.tabPage_Main.Controls.Add(this.groupBox_SystemMode);
             this.tabPage_Main.Controls.Add(this.groupBox_SimulatorControl);
             this.tabPage_Main.Controls.Add(this.groupBox_StatusUUT);
-            this.tabPage_Main.Controls.Add(this.groupBox35);
+            this.tabPage_Main.Controls.Add(this.groupBox_PulseGen2);
             this.tabPage_Main.Controls.Add(this.groupBox_Control2);
             this.tabPage_Main.Controls.Add(this.groupBox_Control1);
-            this.tabPage_Main.Controls.Add(this.groupBox34);
+            this.tabPage_Main.Controls.Add(this.groupBox_PulseGen);
             this.tabPage_Main.Controls.Add(this.groupBox_UUTVersion);
             this.tabPage_Main.Controls.Add(this.groupBox_SimulatorVersion);
-            this.tabPage_Main.Controls.Add(this.groupBox33);
+            this.tabPage_Main.Controls.Add(this.groupBox_RFgen);
             this.tabPage_Main.Location = new System.Drawing.Point(4, 27);
             this.tabPage_Main.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage_Main.Name = "tabPage_Main";
@@ -5416,7 +5430,7 @@ namespace Monitor
             this.groupBox_SimulatorControl.Controls.Add(this.button_SEURecover);
             this.groupBox_SimulatorControl.Controls.Add(this.checkBox_Preserve);
             this.groupBox_SimulatorControl.Controls.Add(this.checkBox_OVTcheck);
-            this.groupBox_SimulatorControl.Controls.Add(this.checkBox2);
+            this.groupBox_SimulatorControl.Controls.Add(this.checkBox_DC4on);
             this.groupBox_SimulatorControl.Controls.Add(this.label114);
             this.groupBox_SimulatorControl.Controls.Add(this.label113);
             this.groupBox_SimulatorControl.Controls.Add(this.label112);
@@ -5655,18 +5669,18 @@ namespace Monitor
             this.checkBox_OVTcheck.UseVisualStyleBackColor = true;
             this.checkBox_OVTcheck.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged_1);
             // 
-            // checkBox2
+            // checkBox_DC4on
             // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(234, 40);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(36, 28);
-            this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "On";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
+            this.checkBox_DC4on.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_DC4on.AutoSize = true;
+            this.checkBox_DC4on.Location = new System.Drawing.Point(234, 40);
+            this.checkBox_DC4on.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox_DC4on.Name = "checkBox_DC4on";
+            this.checkBox_DC4on.Size = new System.Drawing.Size(36, 28);
+            this.checkBox_DC4on.TabIndex = 20;
+            this.checkBox_DC4on.Text = "On";
+            this.checkBox_DC4on.UseVisualStyleBackColor = true;
+            this.checkBox_DC4on.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
             // label114
             // 
@@ -5758,14 +5772,14 @@ namespace Monitor
             // 
             // groupBox_StatusUUT
             // 
+            this.groupBox_StatusUUT.Controls.Add(this.groupBox64);
+            this.groupBox_StatusUUT.Controls.Add(this.groupBox63);
             this.groupBox_StatusUUT.Controls.Add(this.label88);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT34);
             this.groupBox_StatusUUT.Controls.Add(this.label78);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT33);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT33_INPUTcontrols);
             this.groupBox_StatusUUT.Controls.Add(this.label103);
-            this.groupBox_StatusUUT.Controls.Add(this.button74);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT32);
-            this.groupBox_StatusUUT.Controls.Add(this.button_GetStatus);
             this.groupBox_StatusUUT.Controls.Add(this.label104);
             this.groupBox_StatusUUT.Controls.Add(this.label105);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT31);
@@ -5776,7 +5790,7 @@ namespace Monitor
             this.groupBox_StatusUUT.Controls.Add(this.label56);
             this.groupBox_StatusUUT.Controls.Add(this.label119);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT27);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT12);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT12_CH1CS48V);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT28);
             this.groupBox_StatusUUT.Controls.Add(this.label60);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT19);
@@ -5791,30 +5805,30 @@ namespace Monitor
             this.groupBox_StatusUUT.Controls.Add(this.label65);
             this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT14);
             this.groupBox_StatusUUT.Controls.Add(this.label66);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT13);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT13_VIN_F);
             this.groupBox_StatusUUT.Controls.Add(this.label55);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT1);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT1_5Vcurrent);
             this.groupBox_StatusUUT.Controls.Add(this.label54);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT11);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT11_Ch0PRM);
             this.groupBox_StatusUUT.Controls.Add(this.label53);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT10);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT10_Vdd9V);
             this.groupBox_StatusUUT.Controls.Add(this.label52);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT9);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT9_Vdd28V);
             this.groupBox_StatusUUT.Controls.Add(this.label51);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT8);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT8_VDD4V);
             this.groupBox_StatusUUT.Controls.Add(this.label50);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT7);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT7_Vdd5V);
             this.groupBox_StatusUUT.Controls.Add(this.label49);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT6);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT6_VggN5V);
             this.groupBox_StatusUUT.Controls.Add(this.label40);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT5);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT5_DETECTORvoltage);
             this.groupBox_StatusUUT.Controls.Add(this.label39);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT4);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT4_CS9V);
             this.groupBox_StatusUUT.Controls.Add(this.label33);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT3);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT3_CS28V);
             this.groupBox_StatusUUT.Controls.Add(this.label32);
-            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT2);
-            this.groupBox_StatusUUT.Controls.Add(this.groupBox39);
+            this.groupBox_StatusUUT.Controls.Add(this.textBox_StatusUUT2_THERM_VPATAT);
+            this.groupBox_StatusUUT.Controls.Add(this.groupBox_SimulatorStatus);
             this.groupBox_StatusUUT.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_StatusUUT.Location = new System.Drawing.Point(6, 209);
             this.groupBox_StatusUUT.Margin = new System.Windows.Forms.Padding(2);
@@ -5851,25 +5865,25 @@ namespace Monitor
             this.label78.AutoSize = true;
             this.label78.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.Black;
-            this.label78.Location = new System.Drawing.Point(367, 270);
+            this.label78.Location = new System.Drawing.Point(485, 214);
             this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(107, 14);
             this.label78.TabIndex = 89;
             this.label78.Text = "Input controls (0b)";
             // 
-            // textBox_StatusUUT33
+            // textBox_StatusUUT33_INPUTcontrols
             // 
-            this.textBox_StatusUUT33.Location = new System.Drawing.Point(483, 262);
-            this.textBox_StatusUUT33.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT33.Name = "textBox_StatusUUT33";
-            this.textBox_StatusUUT33.ReadOnly = true;
-            this.textBox_StatusUUT33.Size = new System.Drawing.Size(152, 26);
-            this.textBox_StatusUUT33.TabIndex = 88;
-            this.toolTip1.SetToolTip(this.textBox_StatusUUT33, "(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4, 11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 7:F" +
+            this.textBox_StatusUUT33_INPUTcontrols.Location = new System.Drawing.Point(488, 236);
+            this.textBox_StatusUUT33_INPUTcontrols.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT33_INPUTcontrols.Name = "textBox_StatusUUT33_INPUTcontrols";
+            this.textBox_StatusUUT33_INPUTcontrols.ReadOnly = true;
+            this.textBox_StatusUUT33_INPUTcontrols.Size = new System.Drawing.Size(152, 26);
+            this.textBox_StatusUUT33_INPUTcontrols.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.textBox_StatusUUT33_INPUTcontrols, "(15:DC4, 14:CAL_SAR1, 13:CAL_SAR0, 12:DCA4, 11:DCA3, 10:DCA2, 9:DCA1, 8:DCA0, 7:F" +
         "T3, 6:FT2, 5:FT1, 4:FT0 , 3: freq4 , 2:freq2 , 1:freq1 , 0: freq0)");
-            this.textBox_StatusUUT33.TextChanged += new System.EventHandler(this.textBox_StatusUUT33_TextChanged);
-            this.textBox_StatusUUT33.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_StatusUUT33_MouseDown);
+            this.textBox_StatusUUT33_INPUTcontrols.TextChanged += new System.EventHandler(this.textBox_StatusUUT33_TextChanged);
+            this.textBox_StatusUUT33_INPUTcontrols.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox_StatusUUT33_MouseDown);
             // 
             // label103
             // 
@@ -5885,10 +5899,10 @@ namespace Monitor
             // 
             // button74
             // 
-            this.button74.Location = new System.Drawing.Point(757, 330);
+            this.button74.Location = new System.Drawing.Point(122, 27);
             this.button74.Margin = new System.Windows.Forms.Padding(2);
             this.button74.Name = "button74";
-            this.button74.Size = new System.Drawing.Size(97, 43);
+            this.button74.Size = new System.Drawing.Size(73, 30);
             this.button74.TabIndex = 77;
             this.button74.Text = "Clear";
             this.button74.UseVisualStyleBackColor = true;
@@ -5904,17 +5918,17 @@ namespace Monitor
             this.textBox_StatusUUT32.TabIndex = 86;
             this.textBox_StatusUUT32.TextChanged += new System.EventHandler(this.textBox_StatusUUT32_TextChanged);
             // 
-            // button_GetStatus
+            // button_GetStatusUUT
             // 
-            this.button_GetStatus.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button_GetStatus.Location = new System.Drawing.Point(652, 330);
-            this.button_GetStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.button_GetStatus.Name = "button_GetStatus";
-            this.button_GetStatus.Size = new System.Drawing.Size(97, 43);
-            this.button_GetStatus.TabIndex = 17;
-            this.button_GetStatus.Text = "Get Status";
-            this.button_GetStatus.UseVisualStyleBackColor = false;
-            this.button_GetStatus.Click += new System.EventHandler(this.button_GetStatus_Click);
+            this.button_GetStatusUUT.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_GetStatusUUT.Location = new System.Drawing.Point(23, 25);
+            this.button_GetStatusUUT.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GetStatusUUT.Name = "button_GetStatusUUT";
+            this.button_GetStatusUUT.Size = new System.Drawing.Size(86, 34);
+            this.button_GetStatusUUT.TabIndex = 17;
+            this.button_GetStatusUUT.Text = "Get Status";
+            this.button_GetStatusUUT.UseVisualStyleBackColor = false;
+            this.button_GetStatusUUT.Click += new System.EventHandler(this.button_GetStatus_Click);
             // 
             // label104
             // 
@@ -6028,15 +6042,15 @@ namespace Monitor
             this.textBox_StatusUUT27.TabIndex = 79;
             this.textBox_StatusUUT27.TextChanged += new System.EventHandler(this.textBox_StatusUUT27_TextChanged);
             // 
-            // textBox_StatusUUT12
+            // textBox_StatusUUT12_CH1CS48V
             // 
-            this.textBox_StatusUUT12.Location = new System.Drawing.Point(332, 9);
-            this.textBox_StatusUUT12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT12.Name = "textBox_StatusUUT12";
-            this.textBox_StatusUUT12.ReadOnly = true;
-            this.textBox_StatusUUT12.Size = new System.Drawing.Size(115, 26);
-            this.textBox_StatusUUT12.TabIndex = 55;
-            this.textBox_StatusUUT12.TextChanged += new System.EventHandler(this.textBox_StatusUUT12_TextChanged);
+            this.textBox_StatusUUT12_CH1CS48V.Location = new System.Drawing.Point(332, 9);
+            this.textBox_StatusUUT12_CH1CS48V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT12_CH1CS48V.Name = "textBox_StatusUUT12_CH1CS48V";
+            this.textBox_StatusUUT12_CH1CS48V.ReadOnly = true;
+            this.textBox_StatusUUT12_CH1CS48V.Size = new System.Drawing.Size(115, 26);
+            this.textBox_StatusUUT12_CH1CS48V.TabIndex = 55;
+            this.textBox_StatusUUT12_CH1CS48V.TextChanged += new System.EventHandler(this.textBox_StatusUUT12_TextChanged);
             // 
             // textBox_StatusUUT28
             // 
@@ -6197,15 +6211,15 @@ namespace Monitor
             this.label66.TabIndex = 36;
             this.label66.Text = "Ch 2 VIN_F";
             // 
-            // textBox_StatusUUT13
+            // textBox_StatusUUT13_VIN_F
             // 
-            this.textBox_StatusUUT13.Location = new System.Drawing.Point(332, 38);
-            this.textBox_StatusUUT13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT13.Name = "textBox_StatusUUT13";
-            this.textBox_StatusUUT13.ReadOnly = true;
-            this.textBox_StatusUUT13.Size = new System.Drawing.Size(115, 26);
-            this.textBox_StatusUUT13.TabIndex = 35;
-            this.textBox_StatusUUT13.TextChanged += new System.EventHandler(this.textBox_StatusUUT13_TextChanged);
+            this.textBox_StatusUUT13_VIN_F.Location = new System.Drawing.Point(332, 38);
+            this.textBox_StatusUUT13_VIN_F.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT13_VIN_F.Name = "textBox_StatusUUT13_VIN_F";
+            this.textBox_StatusUUT13_VIN_F.ReadOnly = true;
+            this.textBox_StatusUUT13_VIN_F.Size = new System.Drawing.Size(115, 26);
+            this.textBox_StatusUUT13_VIN_F.TabIndex = 35;
+            this.textBox_StatusUUT13_VIN_F.TextChanged += new System.EventHandler(this.textBox_StatusUUT13_TextChanged);
             // 
             // label55
             // 
@@ -6219,15 +6233,15 @@ namespace Monitor
             this.label55.TabIndex = 34;
             this.label55.Text = "5V current";
             // 
-            // textBox_StatusUUT1
+            // textBox_StatusUUT1_5Vcurrent
             // 
-            this.textBox_StatusUUT1.Location = new System.Drawing.Point(147, 10);
-            this.textBox_StatusUUT1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT1.Name = "textBox_StatusUUT1";
-            this.textBox_StatusUUT1.ReadOnly = true;
-            this.textBox_StatusUUT1.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT1.TabIndex = 33;
-            this.textBox_StatusUUT1.TextChanged += new System.EventHandler(this.textBox_StatusUUT1_TextChanged);
+            this.textBox_StatusUUT1_5Vcurrent.Location = new System.Drawing.Point(147, 10);
+            this.textBox_StatusUUT1_5Vcurrent.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT1_5Vcurrent.Name = "textBox_StatusUUT1_5Vcurrent";
+            this.textBox_StatusUUT1_5Vcurrent.ReadOnly = true;
+            this.textBox_StatusUUT1_5Vcurrent.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT1_5Vcurrent.TabIndex = 33;
+            this.textBox_StatusUUT1_5Vcurrent.TextChanged += new System.EventHandler(this.textBox_StatusUUT1_TextChanged);
             // 
             // label54
             // 
@@ -6241,15 +6255,15 @@ namespace Monitor
             this.label54.TabIndex = 32;
             this.label54.Text = "Ch 0 PRM_ tempra";
             // 
-            // textBox_StatusUUT11
+            // textBox_StatusUUT11_Ch0PRM
             // 
-            this.textBox_StatusUUT11.Location = new System.Drawing.Point(148, 353);
-            this.textBox_StatusUUT11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT11.Name = "textBox_StatusUUT11";
-            this.textBox_StatusUUT11.ReadOnly = true;
-            this.textBox_StatusUUT11.Size = new System.Drawing.Size(93, 26);
-            this.textBox_StatusUUT11.TabIndex = 31;
-            this.textBox_StatusUUT11.TextChanged += new System.EventHandler(this.textBox_StatusUUT11_TextChanged);
+            this.textBox_StatusUUT11_Ch0PRM.Location = new System.Drawing.Point(148, 353);
+            this.textBox_StatusUUT11_Ch0PRM.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT11_Ch0PRM.Name = "textBox_StatusUUT11_Ch0PRM";
+            this.textBox_StatusUUT11_Ch0PRM.ReadOnly = true;
+            this.textBox_StatusUUT11_Ch0PRM.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT11_Ch0PRM.TabIndex = 31;
+            this.textBox_StatusUUT11_Ch0PRM.TextChanged += new System.EventHandler(this.textBox_StatusUUT11_TextChanged);
             // 
             // label53
             // 
@@ -6263,15 +6277,15 @@ namespace Monitor
             this.label53.TabIndex = 30;
             this.label53.Text = "Vdd_9V";
             // 
-            // textBox_StatusUUT10
+            // textBox_StatusUUT10_Vdd9V
             // 
-            this.textBox_StatusUUT10.Location = new System.Drawing.Point(148, 321);
-            this.textBox_StatusUUT10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT10.Name = "textBox_StatusUUT10";
-            this.textBox_StatusUUT10.ReadOnly = true;
-            this.textBox_StatusUUT10.Size = new System.Drawing.Size(93, 26);
-            this.textBox_StatusUUT10.TabIndex = 29;
-            this.textBox_StatusUUT10.TextChanged += new System.EventHandler(this.textBox_StatusUUT10_TextChanged);
+            this.textBox_StatusUUT10_Vdd9V.Location = new System.Drawing.Point(148, 321);
+            this.textBox_StatusUUT10_Vdd9V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT10_Vdd9V.Name = "textBox_StatusUUT10_Vdd9V";
+            this.textBox_StatusUUT10_Vdd9V.ReadOnly = true;
+            this.textBox_StatusUUT10_Vdd9V.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT10_Vdd9V.TabIndex = 29;
+            this.textBox_StatusUUT10_Vdd9V.TextChanged += new System.EventHandler(this.textBox_StatusUUT10_TextChanged);
             // 
             // label52
             // 
@@ -6285,15 +6299,15 @@ namespace Monitor
             this.label52.TabIndex = 28;
             this.label52.Text = "Vdd_28V";
             // 
-            // textBox_StatusUUT9
+            // textBox_StatusUUT9_Vdd28V
             // 
-            this.textBox_StatusUUT9.Location = new System.Drawing.Point(148, 289);
-            this.textBox_StatusUUT9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT9.Name = "textBox_StatusUUT9";
-            this.textBox_StatusUUT9.ReadOnly = true;
-            this.textBox_StatusUUT9.Size = new System.Drawing.Size(93, 26);
-            this.textBox_StatusUUT9.TabIndex = 27;
-            this.textBox_StatusUUT9.TextChanged += new System.EventHandler(this.textBox_StatusUUT9_TextChanged);
+            this.textBox_StatusUUT9_Vdd28V.Location = new System.Drawing.Point(148, 289);
+            this.textBox_StatusUUT9_Vdd28V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT9_Vdd28V.Name = "textBox_StatusUUT9_Vdd28V";
+            this.textBox_StatusUUT9_Vdd28V.ReadOnly = true;
+            this.textBox_StatusUUT9_Vdd28V.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT9_Vdd28V.TabIndex = 27;
+            this.textBox_StatusUUT9_Vdd28V.TextChanged += new System.EventHandler(this.textBox_StatusUUT9_TextChanged);
             // 
             // label51
             // 
@@ -6307,15 +6321,15 @@ namespace Monitor
             this.label51.TabIndex = 26;
             this.label51.Text = "Vdd_4V";
             // 
-            // textBox_StatusUUT8
+            // textBox_StatusUUT8_VDD4V
             // 
-            this.textBox_StatusUUT8.Location = new System.Drawing.Point(148, 258);
-            this.textBox_StatusUUT8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT8.Name = "textBox_StatusUUT8";
-            this.textBox_StatusUUT8.ReadOnly = true;
-            this.textBox_StatusUUT8.Size = new System.Drawing.Size(93, 26);
-            this.textBox_StatusUUT8.TabIndex = 25;
-            this.textBox_StatusUUT8.TextChanged += new System.EventHandler(this.textBox_StatusUUT8_TextChanged);
+            this.textBox_StatusUUT8_VDD4V.Location = new System.Drawing.Point(148, 258);
+            this.textBox_StatusUUT8_VDD4V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT8_VDD4V.Name = "textBox_StatusUUT8_VDD4V";
+            this.textBox_StatusUUT8_VDD4V.ReadOnly = true;
+            this.textBox_StatusUUT8_VDD4V.Size = new System.Drawing.Size(93, 26);
+            this.textBox_StatusUUT8_VDD4V.TabIndex = 25;
+            this.textBox_StatusUUT8_VDD4V.TextChanged += new System.EventHandler(this.textBox_StatusUUT8_TextChanged);
             // 
             // label50
             // 
@@ -6329,15 +6343,15 @@ namespace Monitor
             this.label50.TabIndex = 24;
             this.label50.Text = "Vdd_5V";
             // 
-            // textBox_StatusUUT7
+            // textBox_StatusUUT7_Vdd5V
             // 
-            this.textBox_StatusUUT7.Location = new System.Drawing.Point(147, 228);
-            this.textBox_StatusUUT7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT7.Name = "textBox_StatusUUT7";
-            this.textBox_StatusUUT7.ReadOnly = true;
-            this.textBox_StatusUUT7.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT7.TabIndex = 23;
-            this.textBox_StatusUUT7.TextChanged += new System.EventHandler(this.textBox_StatusUUT7_TextChanged);
+            this.textBox_StatusUUT7_Vdd5V.Location = new System.Drawing.Point(147, 228);
+            this.textBox_StatusUUT7_Vdd5V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT7_Vdd5V.Name = "textBox_StatusUUT7_Vdd5V";
+            this.textBox_StatusUUT7_Vdd5V.ReadOnly = true;
+            this.textBox_StatusUUT7_Vdd5V.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT7_Vdd5V.TabIndex = 23;
+            this.textBox_StatusUUT7_Vdd5V.TextChanged += new System.EventHandler(this.textBox_StatusUUT7_TextChanged);
             // 
             // label49
             // 
@@ -6351,15 +6365,15 @@ namespace Monitor
             this.label49.TabIndex = 22;
             this.label49.Text = "Vgg_N5V";
             // 
-            // textBox_StatusUUT6
+            // textBox_StatusUUT6_VggN5V
             // 
-            this.textBox_StatusUUT6.Location = new System.Drawing.Point(147, 197);
-            this.textBox_StatusUUT6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT6.Name = "textBox_StatusUUT6";
-            this.textBox_StatusUUT6.ReadOnly = true;
-            this.textBox_StatusUUT6.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT6.TabIndex = 21;
-            this.textBox_StatusUUT6.TextChanged += new System.EventHandler(this.textBox_StatusUUT6_TextChanged);
+            this.textBox_StatusUUT6_VggN5V.Location = new System.Drawing.Point(147, 197);
+            this.textBox_StatusUUT6_VggN5V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT6_VggN5V.Name = "textBox_StatusUUT6_VggN5V";
+            this.textBox_StatusUUT6_VggN5V.ReadOnly = true;
+            this.textBox_StatusUUT6_VggN5V.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT6_VggN5V.TabIndex = 21;
+            this.textBox_StatusUUT6_VggN5V.TextChanged += new System.EventHandler(this.textBox_StatusUUT6_TextChanged);
             // 
             // label40
             // 
@@ -6373,15 +6387,15 @@ namespace Monitor
             this.label40.TabIndex = 20;
             this.label40.Text = "DETECTOR voltage";
             // 
-            // textBox_StatusUUT5
+            // textBox_StatusUUT5_DETECTORvoltage
             // 
-            this.textBox_StatusUUT5.Location = new System.Drawing.Point(147, 162);
-            this.textBox_StatusUUT5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT5.Name = "textBox_StatusUUT5";
-            this.textBox_StatusUUT5.ReadOnly = true;
-            this.textBox_StatusUUT5.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT5.TabIndex = 19;
-            this.textBox_StatusUUT5.TextChanged += new System.EventHandler(this.textBox_StatusUUT5_TextChanged);
+            this.textBox_StatusUUT5_DETECTORvoltage.Location = new System.Drawing.Point(147, 162);
+            this.textBox_StatusUUT5_DETECTORvoltage.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT5_DETECTORvoltage.Name = "textBox_StatusUUT5_DETECTORvoltage";
+            this.textBox_StatusUUT5_DETECTORvoltage.ReadOnly = true;
+            this.textBox_StatusUUT5_DETECTORvoltage.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT5_DETECTORvoltage.TabIndex = 19;
+            this.textBox_StatusUUT5_DETECTORvoltage.TextChanged += new System.EventHandler(this.textBox_StatusUUT5_TextChanged);
             // 
             // label39
             // 
@@ -6395,15 +6409,15 @@ namespace Monitor
             this.label39.TabIndex = 18;
             this.label39.Text = "CS 9V";
             // 
-            // textBox_StatusUUT4
+            // textBox_StatusUUT4_CS9V
             // 
-            this.textBox_StatusUUT4.Location = new System.Drawing.Point(147, 132);
-            this.textBox_StatusUUT4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT4.Name = "textBox_StatusUUT4";
-            this.textBox_StatusUUT4.ReadOnly = true;
-            this.textBox_StatusUUT4.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT4.TabIndex = 17;
-            this.textBox_StatusUUT4.TextChanged += new System.EventHandler(this.textBox_StatusUUT4_TextChanged);
+            this.textBox_StatusUUT4_CS9V.Location = new System.Drawing.Point(147, 132);
+            this.textBox_StatusUUT4_CS9V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT4_CS9V.Name = "textBox_StatusUUT4_CS9V";
+            this.textBox_StatusUUT4_CS9V.ReadOnly = true;
+            this.textBox_StatusUUT4_CS9V.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT4_CS9V.TabIndex = 17;
+            this.textBox_StatusUUT4_CS9V.TextChanged += new System.EventHandler(this.textBox_StatusUUT4_TextChanged);
             // 
             // label33
             // 
@@ -6417,15 +6431,15 @@ namespace Monitor
             this.label33.TabIndex = 16;
             this.label33.Text = "CS 28V";
             // 
-            // textBox_StatusUUT3
+            // textBox_StatusUUT3_CS28V
             // 
-            this.textBox_StatusUUT3.Location = new System.Drawing.Point(147, 101);
-            this.textBox_StatusUUT3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT3.Name = "textBox_StatusUUT3";
-            this.textBox_StatusUUT3.ReadOnly = true;
-            this.textBox_StatusUUT3.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT3.TabIndex = 15;
-            this.textBox_StatusUUT3.TextChanged += new System.EventHandler(this.textBox_StatusUUT3_TextChanged);
+            this.textBox_StatusUUT3_CS28V.Location = new System.Drawing.Point(147, 101);
+            this.textBox_StatusUUT3_CS28V.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT3_CS28V.Name = "textBox_StatusUUT3_CS28V";
+            this.textBox_StatusUUT3_CS28V.ReadOnly = true;
+            this.textBox_StatusUUT3_CS28V.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT3_CS28V.TabIndex = 15;
+            this.textBox_StatusUUT3_CS28V.TextChanged += new System.EventHandler(this.textBox_StatusUUT3_TextChanged);
             // 
             // label32
             // 
@@ -6439,42 +6453,63 @@ namespace Monitor
             this.label32.TabIndex = 14;
             this.label32.Text = "THERM_VPTAT";
             // 
-            // textBox_StatusUUT2
+            // textBox_StatusUUT2_THERM_VPATAT
             // 
-            this.textBox_StatusUUT2.Location = new System.Drawing.Point(147, 39);
-            this.textBox_StatusUUT2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_StatusUUT2.Name = "textBox_StatusUUT2";
-            this.textBox_StatusUUT2.ReadOnly = true;
-            this.textBox_StatusUUT2.Size = new System.Drawing.Size(92, 26);
-            this.textBox_StatusUUT2.TabIndex = 0;
-            this.textBox_StatusUUT2.TextChanged += new System.EventHandler(this.textBox_StatusUUT2_TextChanged);
+            this.textBox_StatusUUT2_THERM_VPATAT.Location = new System.Drawing.Point(147, 39);
+            this.textBox_StatusUUT2_THERM_VPATAT.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_StatusUUT2_THERM_VPATAT.Name = "textBox_StatusUUT2_THERM_VPATAT";
+            this.textBox_StatusUUT2_THERM_VPATAT.ReadOnly = true;
+            this.textBox_StatusUUT2_THERM_VPATAT.Size = new System.Drawing.Size(92, 26);
+            this.textBox_StatusUUT2_THERM_VPATAT.TabIndex = 0;
+            this.textBox_StatusUUT2_THERM_VPATAT.TextChanged += new System.EventHandler(this.textBox_StatusUUT2_TextChanged);
             // 
-            // groupBox39
+            // groupBox_SimulatorStatus
             // 
-            this.groupBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox39.Controls.Add(this.label57);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus7);
-            this.groupBox39.Controls.Add(this.label115);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus6);
-            this.groupBox39.Controls.Add(this.label71);
-            this.groupBox39.Controls.Add(this.label74);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus5);
-            this.groupBox39.Controls.Add(this.label73);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus4);
-            this.groupBox39.Controls.Add(this.label68);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus3);
-            this.groupBox39.Controls.Add(this.label72);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus1);
-            this.groupBox39.Controls.Add(this.textBox_SimulatorStatus2);
-            this.groupBox39.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox39.Location = new System.Drawing.Point(642, 14);
-            this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox39.Size = new System.Drawing.Size(211, 251);
-            this.groupBox39.TabIndex = 76;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "Status Simulator";
+            this.groupBox_SimulatorStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox_SimulatorStatus.Controls.Add(this.label57);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus7);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label115);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus6);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label71);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label74);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus5);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label73);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus4);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label68);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus3);
+            this.groupBox_SimulatorStatus.Controls.Add(this.label72);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus1);
+            this.groupBox_SimulatorStatus.Controls.Add(this.textBox_SimulatorStatus2);
+            this.groupBox_SimulatorStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox_SimulatorStatus.Location = new System.Drawing.Point(642, 14);
+            this.groupBox_SimulatorStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorStatus.Name = "groupBox_SimulatorStatus";
+            this.groupBox_SimulatorStatus.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_SimulatorStatus.Size = new System.Drawing.Size(211, 251);
+            this.groupBox_SimulatorStatus.TabIndex = 76;
+            this.groupBox_SimulatorStatus.TabStop = false;
+            this.groupBox_SimulatorStatus.Text = "Status Simulator";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Black;
+            this.label57.Location = new System.Drawing.Point(2, 222);
+            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(136, 14);
+            this.label57.TabIndex = 77;
+            this.label57.Text = "Temperature supervisor";
+            // 
+            // textBox_SimulatorStatus7
+            // 
+            this.textBox_SimulatorStatus7.Location = new System.Drawing.Point(139, 216);
+            this.textBox_SimulatorStatus7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_SimulatorStatus7.Name = "textBox_SimulatorStatus7";
+            this.textBox_SimulatorStatus7.ReadOnly = true;
+            this.textBox_SimulatorStatus7.Size = new System.Drawing.Size(68, 26);
+            this.textBox_SimulatorStatus7.TabIndex = 76;
             // 
             // label115
             // 
@@ -6613,23 +6648,23 @@ namespace Monitor
             this.textBox_SimulatorStatus2.TabIndex = 66;
             this.textBox_SimulatorStatus2.TextChanged += new System.EventHandler(this.textBox57_TextChanged);
             // 
-            // groupBox35
+            // groupBox_PulseGen2
             // 
-            this.groupBox35.Controls.Add(this.label84);
-            this.groupBox35.Controls.Add(this.checkBox_PulseGen2);
-            this.groupBox35.Controls.Add(this.label85);
-            this.groupBox35.Controls.Add(this.label101);
-            this.groupBox35.Controls.Add(this.textBox_PulseDelay2);
-            this.groupBox35.Controls.Add(this.textBox_PulsePeriod2);
-            this.groupBox35.Controls.Add(this.textBox_PulseWidth2);
-            this.groupBox35.Location = new System.Drawing.Point(876, 340);
-            this.groupBox35.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox35.Size = new System.Drawing.Size(354, 97);
-            this.groupBox35.TabIndex = 18;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "GP pulse gen";
+            this.groupBox_PulseGen2.Controls.Add(this.label84);
+            this.groupBox_PulseGen2.Controls.Add(this.checkBox_PulseGen2);
+            this.groupBox_PulseGen2.Controls.Add(this.label85);
+            this.groupBox_PulseGen2.Controls.Add(this.label101);
+            this.groupBox_PulseGen2.Controls.Add(this.textBox_PulseDelay2);
+            this.groupBox_PulseGen2.Controls.Add(this.textBox_PulsePeriod2);
+            this.groupBox_PulseGen2.Controls.Add(this.textBox_PulseWidth2);
+            this.groupBox_PulseGen2.Location = new System.Drawing.Point(876, 340);
+            this.groupBox_PulseGen2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_PulseGen2.Name = "groupBox_PulseGen2";
+            this.groupBox_PulseGen2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_PulseGen2.Size = new System.Drawing.Size(354, 97);
+            this.groupBox_PulseGen2.TabIndex = 18;
+            this.groupBox_PulseGen2.TabStop = false;
+            this.groupBox_PulseGen2.Text = "GP pulse gen";
             // 
             // label84
             // 
@@ -6666,7 +6701,6 @@ namespace Monitor
             this.label85.Size = new System.Drawing.Size(74, 15);
             this.label85.TabIndex = 22;
             this.label85.Text = "Period (1us)";
-            this.label85.Visible = false;
             // 
             // label101
             // 
@@ -6699,7 +6733,6 @@ namespace Monitor
             this.textBox_PulsePeriod2.Size = new System.Drawing.Size(53, 26);
             this.textBox_PulsePeriod2.TabIndex = 13;
             this.textBox_PulsePeriod2.Text = "16";
-            this.textBox_PulsePeriod2.Visible = false;
             this.textBox_PulsePeriod2.TextChanged += new System.EventHandler(this.textBox_PulsePeriod2_TextChanged);
             this.textBox_PulsePeriod2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_PulsePeriod2_KeyDown);
             // 
@@ -7294,23 +7327,23 @@ namespace Monitor
             this.label25.TabIndex = 7;
             this.label25.Text = "Set PSU voltage";
             // 
-            // groupBox34
+            // groupBox_PulseGen
             // 
-            this.groupBox34.Controls.Add(this.label79);
-            this.groupBox34.Controls.Add(this.checkBox_PulseGen);
-            this.groupBox34.Controls.Add(this.label80);
-            this.groupBox34.Controls.Add(this.label83);
-            this.groupBox34.Controls.Add(this.textBox_PulseDelay);
-            this.groupBox34.Controls.Add(this.textBox_PulsePeriod);
-            this.groupBox34.Controls.Add(this.textBox_PulseWidth);
-            this.groupBox34.Location = new System.Drawing.Point(876, 235);
-            this.groupBox34.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox34.Size = new System.Drawing.Size(354, 97);
-            this.groupBox34.TabIndex = 17;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Pulse gen";
+            this.groupBox_PulseGen.Controls.Add(this.label79);
+            this.groupBox_PulseGen.Controls.Add(this.checkBox_PulseGen);
+            this.groupBox_PulseGen.Controls.Add(this.label80);
+            this.groupBox_PulseGen.Controls.Add(this.label83);
+            this.groupBox_PulseGen.Controls.Add(this.textBox_PulseDelay);
+            this.groupBox_PulseGen.Controls.Add(this.textBox_PulsePeriod);
+            this.groupBox_PulseGen.Controls.Add(this.textBox_PulseWidth);
+            this.groupBox_PulseGen.Location = new System.Drawing.Point(876, 235);
+            this.groupBox_PulseGen.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_PulseGen.Name = "groupBox_PulseGen";
+            this.groupBox_PulseGen.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_PulseGen.Size = new System.Drawing.Size(354, 97);
+            this.groupBox_PulseGen.TabIndex = 17;
+            this.groupBox_PulseGen.TabStop = false;
+            this.groupBox_PulseGen.Text = "Pulse gen";
             // 
             // label79
             // 
@@ -7629,23 +7662,23 @@ namespace Monitor
             this.textBox_SimulatorFWDateVersion.Size = new System.Drawing.Size(92, 26);
             this.textBox_SimulatorFWDateVersion.TabIndex = 1;
             // 
-            // groupBox33
+            // groupBox_RFgen
             // 
-            this.groupBox33.Controls.Add(this.checkBox_RFGen);
-            this.groupBox33.Controls.Add(this.textBox_RFDelay);
-            this.groupBox33.Controls.Add(this.label100);
-            this.groupBox33.Controls.Add(this.textBox_RFPeriod);
-            this.groupBox33.Controls.Add(this.label99);
-            this.groupBox33.Controls.Add(this.textBox_RFWidth);
-            this.groupBox33.Controls.Add(this.label98);
-            this.groupBox33.Location = new System.Drawing.Point(876, 116);
-            this.groupBox33.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox33.Size = new System.Drawing.Size(354, 97);
-            this.groupBox33.TabIndex = 2;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "RF gen";
+            this.groupBox_RFgen.Controls.Add(this.checkBox_RFGen);
+            this.groupBox_RFgen.Controls.Add(this.textBox_RFDelay);
+            this.groupBox_RFgen.Controls.Add(this.label100);
+            this.groupBox_RFgen.Controls.Add(this.textBox_RFPeriod);
+            this.groupBox_RFgen.Controls.Add(this.label99);
+            this.groupBox_RFgen.Controls.Add(this.textBox_RFWidth);
+            this.groupBox_RFgen.Controls.Add(this.label98);
+            this.groupBox_RFgen.Location = new System.Drawing.Point(876, 116);
+            this.groupBox_RFgen.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox_RFgen.Name = "groupBox_RFgen";
+            this.groupBox_RFgen.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox_RFgen.Size = new System.Drawing.Size(354, 97);
+            this.groupBox_RFgen.TabIndex = 2;
+            this.groupBox_RFgen.TabStop = false;
+            this.groupBox_RFgen.Text = "RF gen";
             // 
             // checkBox_RFGen
             // 
@@ -7690,7 +7723,6 @@ namespace Monitor
             this.textBox_RFPeriod.Size = new System.Drawing.Size(53, 26);
             this.textBox_RFPeriod.TabIndex = 13;
             this.textBox_RFPeriod.Text = "16";
-            this.textBox_RFPeriod.Visible = false;
             this.textBox_RFPeriod.TextChanged += new System.EventHandler(this.textBox_RFPeriod_TextChanged);
             this.textBox_RFPeriod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_RFPeriod_KeyDown);
             // 
@@ -7705,7 +7737,6 @@ namespace Monitor
             this.label99.Size = new System.Drawing.Size(74, 15);
             this.label99.TabIndex = 12;
             this.label99.Text = "Period (1us)";
-            this.label99.Visible = false;
             // 
             // textBox_RFWidth
             // 
@@ -7831,6 +7862,27 @@ namespace Monitor
             this.dataGridView_Block00.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
             this.dataGridView_Block00.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
             this.dataGridView_Block00.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.Frozen = true;
+            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 125;
+            // 
+            // Decimal
+            // 
+            this.Decimal.HeaderText = "Decimal";
+            this.Decimal.Name = "Decimal";
+            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Verify_ReadOnly
+            // 
+            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
+            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
+            this.Verify_ReadOnly.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label81
             // 
@@ -8912,503 +8964,128 @@ namespace Monitor
             this.button89.UseVisualStyleBackColor = false;
             this.button89.Click += new System.EventHandler(this.button_WriteBlock8_Click);
             // 
-            // tabPage_Block9
-            // 
-            this.tabPage_Block9.Controls.Add(this.button131);
-            this.tabPage_Block9.Controls.Add(this.button107);
-            this.tabPage_Block9.Controls.Add(this.dataGridView_Block09);
-            this.tabPage_Block9.Controls.Add(this.groupBox53);
-            this.tabPage_Block9.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Block9.Name = "tabPage_Block9";
-            this.tabPage_Block9.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Block9.TabIndex = 9;
-            this.tabPage_Block9.Text = "Block 9 (not use)";
-            this.tabPage_Block9.UseVisualStyleBackColor = true;
-            // 
-            // button131
-            // 
-            this.button131.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button131.Location = new System.Drawing.Point(746, 62);
-            this.button131.Margin = new System.Windows.Forms.Padding(2);
-            this.button131.Name = "button131";
-            this.button131.Size = new System.Drawing.Size(127, 43);
-            this.button131.TabIndex = 36;
-            this.button131.Text = "Test";
-            this.button131.UseVisualStyleBackColor = true;
-            this.button131.Click += new System.EventHandler(this.button131_Click);
-            // 
-            // button107
-            // 
-            this.button107.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button107.Location = new System.Drawing.Point(746, 11);
-            this.button107.Margin = new System.Windows.Forms.Padding(2);
-            this.button107.Name = "button107";
-            this.button107.Size = new System.Drawing.Size(127, 43);
-            this.button107.TabIndex = 30;
-            this.button107.Text = "Clear";
-            this.button107.UseVisualStyleBackColor = true;
-            this.button107.Click += new System.EventHandler(this.button107_Click_1);
-            // 
-            // dataGridView_Block09
-            // 
-            this.dataGridView_Block09.AllowUserToAddRows = false;
-            this.dataGridView_Block09.AllowUserToDeleteRows = false;
-            this.dataGridView_Block09.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block09.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27});
-            this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
-            this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block09.Name = "dataGridView_Block09";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
-            this.dataGridView_Block09.TabIndex = 31;
-            this.dataGridView_Block09.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block09.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block09.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.Frozen = true;
-            this.dataGridViewTextBoxColumn25.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn25.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.Frozen = true;
-            this.dataGridViewTextBoxColumn26.HeaderText = "Decimal";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.Frozen = true;
-            this.dataGridViewTextBoxColumn27.HeaderText = "Verify (Read only)";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // groupBox53
-            // 
-            this.groupBox53.Controls.Add(this.button90);
-            this.groupBox53.Controls.Add(this.button91);
-            this.groupBox53.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Size = new System.Drawing.Size(141, 130);
-            this.groupBox53.TabIndex = 29;
-            this.groupBox53.TabStop = false;
-            this.groupBox53.Text = "Flash operation";
-            // 
-            // button90
-            // 
-            this.button90.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button90.Location = new System.Drawing.Point(6, 22);
-            this.button90.Margin = new System.Windows.Forms.Padding(2);
-            this.button90.Name = "button90";
-            this.button90.Size = new System.Drawing.Size(127, 43);
-            this.button90.TabIndex = 18;
-            this.button90.Text = "Read Page ";
-            this.button90.UseVisualStyleBackColor = true;
-            this.button90.Click += new System.EventHandler(this.button_ReadBlock9_Click);
-            // 
-            // button91
-            // 
-            this.button91.BackColor = System.Drawing.Color.Transparent;
-            this.button91.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button91.Location = new System.Drawing.Point(6, 77);
-            this.button91.Margin = new System.Windows.Forms.Padding(2);
-            this.button91.Name = "button91";
-            this.button91.Size = new System.Drawing.Size(127, 43);
-            this.button91.TabIndex = 21;
-            this.button91.Text = "Write to Page";
-            this.button91.UseVisualStyleBackColor = false;
-            this.button91.Click += new System.EventHandler(this.button_WriteBlock9_Click);
-            // 
-            // tabPage_Block10
-            // 
-            this.tabPage_Block10.Controls.Add(this.button132);
-            this.tabPage_Block10.Controls.Add(this.button110);
-            this.tabPage_Block10.Controls.Add(this.dataGridView_Block10);
-            this.tabPage_Block10.Controls.Add(this.groupBox54);
-            this.tabPage_Block10.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Block10.Name = "tabPage_Block10";
-            this.tabPage_Block10.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Block10.TabIndex = 10;
-            this.tabPage_Block10.Text = "Block 10 (not use)";
-            this.tabPage_Block10.UseVisualStyleBackColor = true;
-            // 
-            // button132
-            // 
-            this.button132.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button132.Location = new System.Drawing.Point(746, 52);
-            this.button132.Margin = new System.Windows.Forms.Padding(2);
-            this.button132.Name = "button132";
-            this.button132.Size = new System.Drawing.Size(127, 43);
-            this.button132.TabIndex = 36;
-            this.button132.Text = "Test";
-            this.button132.UseVisualStyleBackColor = true;
-            this.button132.Click += new System.EventHandler(this.button132_Click);
-            // 
-            // button110
-            // 
-            this.button110.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button110.Location = new System.Drawing.Point(746, 2);
-            this.button110.Margin = new System.Windows.Forms.Padding(2);
-            this.button110.Name = "button110";
-            this.button110.Size = new System.Drawing.Size(127, 43);
-            this.button110.TabIndex = 30;
-            this.button110.Text = "Clear";
-            this.button110.UseVisualStyleBackColor = true;
-            this.button110.Click += new System.EventHandler(this.button110_Click_1);
-            // 
-            // dataGridView_Block10
-            // 
-            this.dataGridView_Block10.AllowUserToAddRows = false;
-            this.dataGridView_Block10.AllowUserToDeleteRows = false;
-            this.dataGridView_Block10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31});
-            this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block10.Name = "dataGridView_Block10";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
-            this.dataGridView_Block10.TabIndex = 31;
-            this.dataGridView_Block10.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block10.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.Frozen = true;
-            this.dataGridViewTextBoxColumn28.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn28.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.Frozen = true;
-            this.dataGridViewTextBoxColumn30.HeaderText = "Decimal";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.Frozen = true;
-            this.dataGridViewTextBoxColumn31.HeaderText = "Verify (Read only)";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
-            // 
-            // groupBox54
-            // 
-            this.groupBox54.Controls.Add(this.button92);
-            this.groupBox54.Controls.Add(this.button93);
-            this.groupBox54.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Size = new System.Drawing.Size(141, 130);
-            this.groupBox54.TabIndex = 29;
-            this.groupBox54.TabStop = false;
-            this.groupBox54.Text = "Flash operation";
-            // 
-            // button92
-            // 
-            this.button92.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button92.Location = new System.Drawing.Point(6, 22);
-            this.button92.Margin = new System.Windows.Forms.Padding(2);
-            this.button92.Name = "button92";
-            this.button92.Size = new System.Drawing.Size(127, 43);
-            this.button92.TabIndex = 18;
-            this.button92.Text = "Read Page ";
-            this.button92.UseVisualStyleBackColor = true;
-            this.button92.Click += new System.EventHandler(this.button_ReadBlock10_Click);
-            // 
-            // button93
-            // 
-            this.button93.BackColor = System.Drawing.Color.Transparent;
-            this.button93.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button93.Location = new System.Drawing.Point(6, 77);
-            this.button93.Margin = new System.Windows.Forms.Padding(2);
-            this.button93.Name = "button93";
-            this.button93.Size = new System.Drawing.Size(127, 43);
-            this.button93.TabIndex = 21;
-            this.button93.Text = "Write to Page";
-            this.button93.UseVisualStyleBackColor = false;
-            this.button93.Click += new System.EventHandler(this.button_WriteBlock10_Click);
-            // 
-            // tabPage_Block11
-            // 
-            this.tabPage_Block11.Controls.Add(this.button133);
-            this.tabPage_Block11.Controls.Add(this.button116);
-            this.tabPage_Block11.Controls.Add(this.dataGridView_Block11);
-            this.tabPage_Block11.Controls.Add(this.groupBox55);
-            this.tabPage_Block11.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Block11.Name = "tabPage_Block11";
-            this.tabPage_Block11.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Block11.TabIndex = 12;
-            this.tabPage_Block11.Text = "Block 11 (not use)";
-            this.tabPage_Block11.UseVisualStyleBackColor = true;
-            // 
-            // button133
-            // 
-            this.button133.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button133.Location = new System.Drawing.Point(746, 49);
-            this.button133.Margin = new System.Windows.Forms.Padding(2);
-            this.button133.Name = "button133";
-            this.button133.Size = new System.Drawing.Size(127, 43);
-            this.button133.TabIndex = 36;
-            this.button133.Text = "Test";
-            this.button133.UseVisualStyleBackColor = true;
-            this.button133.Click += new System.EventHandler(this.button133_Click);
-            // 
-            // button116
-            // 
-            this.button116.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button116.Location = new System.Drawing.Point(746, 2);
-            this.button116.Margin = new System.Windows.Forms.Padding(2);
-            this.button116.Name = "button116";
-            this.button116.Size = new System.Drawing.Size(127, 43);
-            this.button116.TabIndex = 30;
-            this.button116.Text = "Clear";
-            this.button116.UseVisualStyleBackColor = true;
-            this.button116.Click += new System.EventHandler(this.button116_Click_1);
-            // 
-            // dataGridView_Block11
-            // 
-            this.dataGridView_Block11.AllowUserToAddRows = false;
-            this.dataGridView_Block11.AllowUserToDeleteRows = false;
-            this.dataGridView_Block11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn34});
-            this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block11.Name = "dataGridView_Block11";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
-            this.dataGridView_Block11.TabIndex = 31;
-            this.dataGridView_Block11.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block11.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.Frozen = true;
-            this.dataGridViewTextBoxColumn32.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn32.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn32.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.Frozen = true;
-            this.dataGridViewTextBoxColumn33.HeaderText = "Decimal";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.Frozen = true;
-            this.dataGridViewTextBoxColumn34.HeaderText = "Verify (Read only)";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
-            // 
-            // groupBox55
-            // 
-            this.groupBox55.Controls.Add(this.button94);
-            this.groupBox55.Controls.Add(this.button95);
-            this.groupBox55.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Size = new System.Drawing.Size(141, 130);
-            this.groupBox55.TabIndex = 29;
-            this.groupBox55.TabStop = false;
-            this.groupBox55.Text = "Flash operation";
-            // 
-            // button94
-            // 
-            this.button94.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button94.Location = new System.Drawing.Point(6, 22);
-            this.button94.Margin = new System.Windows.Forms.Padding(2);
-            this.button94.Name = "button94";
-            this.button94.Size = new System.Drawing.Size(127, 43);
-            this.button94.TabIndex = 18;
-            this.button94.Text = "Read Page ";
-            this.button94.UseVisualStyleBackColor = true;
-            this.button94.Click += new System.EventHandler(this.button_ReadBlock11_Click);
-            // 
-            // button95
-            // 
-            this.button95.BackColor = System.Drawing.Color.Transparent;
-            this.button95.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button95.Location = new System.Drawing.Point(6, 77);
-            this.button95.Margin = new System.Windows.Forms.Padding(2);
-            this.button95.Name = "button95";
-            this.button95.Size = new System.Drawing.Size(127, 43);
-            this.button95.TabIndex = 21;
-            this.button95.Text = "Write to Page";
-            this.button95.UseVisualStyleBackColor = false;
-            this.button95.Click += new System.EventHandler(this.button_WriteBlock11_Click);
-            // 
-            // tabPage_Block12
-            // 
-            this.tabPage_Block12.Controls.Add(this.button134);
-            this.tabPage_Block12.Controls.Add(this.button123);
-            this.tabPage_Block12.Controls.Add(this.dataGridView_Block12);
-            this.tabPage_Block12.Controls.Add(this.groupBox56);
-            this.tabPage_Block12.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Block12.Name = "tabPage_Block12";
-            this.tabPage_Block12.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Block12.TabIndex = 13;
-            this.tabPage_Block12.Text = "Block 12 (not use)";
-            this.tabPage_Block12.UseVisualStyleBackColor = true;
-            // 
-            // button134
-            // 
-            this.button134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button134.Location = new System.Drawing.Point(746, 58);
-            this.button134.Margin = new System.Windows.Forms.Padding(2);
-            this.button134.Name = "button134";
-            this.button134.Size = new System.Drawing.Size(127, 43);
-            this.button134.TabIndex = 36;
-            this.button134.Text = "Test";
-            this.button134.UseVisualStyleBackColor = true;
-            this.button134.Click += new System.EventHandler(this.button134_Click);
-            // 
-            // button123
-            // 
-            this.button123.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button123.Location = new System.Drawing.Point(746, 8);
-            this.button123.Margin = new System.Windows.Forms.Padding(2);
-            this.button123.Name = "button123";
-            this.button123.Size = new System.Drawing.Size(127, 43);
-            this.button123.TabIndex = 30;
-            this.button123.Text = "Clear";
-            this.button123.UseVisualStyleBackColor = true;
-            this.button123.Click += new System.EventHandler(this.button123_Click);
-            // 
-            // dataGridView_Block12
-            // 
-            this.dataGridView_Block12.AllowUserToAddRows = false;
-            this.dataGridView_Block12.AllowUserToDeleteRows = false;
-            this.dataGridView_Block12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37});
-            this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
-            this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block12.Name = "dataGridView_Block12";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
-            this.dataGridView_Block12.TabIndex = 31;
-            this.dataGridView_Block12.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block12.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
-            this.dataGridView_Block12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.Frozen = true;
-            this.dataGridViewTextBoxColumn35.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn35.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn35.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.HeaderText = "Decimal";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.HeaderText = "Verify (Read only)";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            // 
-            // groupBox56
-            // 
-            this.groupBox56.Controls.Add(this.button_ReadBlock12);
-            this.groupBox56.Controls.Add(this.button_WriteBlock12);
-            this.groupBox56.Location = new System.Drawing.Point(1091, 2);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Size = new System.Drawing.Size(141, 130);
-            this.groupBox56.TabIndex = 29;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "Flash operation";
-            // 
-            // button_ReadBlock12
-            // 
-            this.button_ReadBlock12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ReadBlock12.Location = new System.Drawing.Point(6, 22);
-            this.button_ReadBlock12.Margin = new System.Windows.Forms.Padding(2);
-            this.button_ReadBlock12.Name = "button_ReadBlock12";
-            this.button_ReadBlock12.Size = new System.Drawing.Size(127, 43);
-            this.button_ReadBlock12.TabIndex = 18;
-            this.button_ReadBlock12.Text = "Read Page ";
-            this.button_ReadBlock12.UseVisualStyleBackColor = true;
-            this.button_ReadBlock12.Click += new System.EventHandler(this.button_ReadBlock12_Click);
-            // 
-            // button_WriteBlock12
-            // 
-            this.button_WriteBlock12.BackColor = System.Drawing.Color.Transparent;
-            this.button_WriteBlock12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WriteBlock12.Location = new System.Drawing.Point(6, 77);
-            this.button_WriteBlock12.Margin = new System.Windows.Forms.Padding(2);
-            this.button_WriteBlock12.Name = "button_WriteBlock12";
-            this.button_WriteBlock12.Size = new System.Drawing.Size(127, 43);
-            this.button_WriteBlock12.TabIndex = 21;
-            this.button_WriteBlock12.Text = "Write to Page";
-            this.button_WriteBlock12.UseVisualStyleBackColor = false;
-            this.button_WriteBlock12.Click += new System.EventHandler(this.button_WriteBlock12_Click);
+            // tabPage_Blocks9_12_MPA_SPA
+            // 
+            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.button147);
+            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.button148);
+            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.groupBox62);
+            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.dataGridView_Block9_12_MPA_SPA);
+            this.tabPage_Blocks9_12_MPA_SPA.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Blocks9_12_MPA_SPA.Name = "tabPage_Blocks9_12_MPA_SPA";
+            this.tabPage_Blocks9_12_MPA_SPA.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Blocks9_12_MPA_SPA.TabIndex = 21;
+            this.tabPage_Blocks9_12_MPA_SPA.Text = "Blocks9_12_MPA_SPA";
+            this.tabPage_Blocks9_12_MPA_SPA.UseVisualStyleBackColor = true;
+            // 
+            // button147
+            // 
+            this.button147.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button147.Location = new System.Drawing.Point(735, 60);
+            this.button147.Margin = new System.Windows.Forms.Padding(2);
+            this.button147.Name = "button147";
+            this.button147.Size = new System.Drawing.Size(127, 43);
+            this.button147.TabIndex = 51;
+            this.button147.Text = "Test";
+            this.button147.UseVisualStyleBackColor = true;
+            // 
+            // button148
+            // 
+            this.button148.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button148.Location = new System.Drawing.Point(735, 12);
+            this.button148.Margin = new System.Windows.Forms.Padding(2);
+            this.button148.Name = "button148";
+            this.button148.Size = new System.Drawing.Size(127, 43);
+            this.button148.TabIndex = 50;
+            this.button148.Text = "Clear";
+            this.button148.UseVisualStyleBackColor = true;
+            this.button148.Click += new System.EventHandler(this.button148_Click);
+            // 
+            // groupBox62
+            // 
+            this.groupBox62.Controls.Add(this.button149);
+            this.groupBox62.Controls.Add(this.button150);
+            this.groupBox62.Location = new System.Drawing.Point(1091, 8);
+            this.groupBox62.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox62.Name = "groupBox62";
+            this.groupBox62.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox62.Size = new System.Drawing.Size(141, 130);
+            this.groupBox62.TabIndex = 49;
+            this.groupBox62.TabStop = false;
+            this.groupBox62.Text = "Flash operation";
+            // 
+            // button149
+            // 
+            this.button149.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button149.Location = new System.Drawing.Point(6, 22);
+            this.button149.Margin = new System.Windows.Forms.Padding(2);
+            this.button149.Name = "button149";
+            this.button149.Size = new System.Drawing.Size(127, 43);
+            this.button149.TabIndex = 18;
+            this.button149.Text = "Read Page ";
+            this.button149.UseVisualStyleBackColor = true;
+            this.button149.Click += new System.EventHandler(this.button149_Click);
+            // 
+            // button150
+            // 
+            this.button150.BackColor = System.Drawing.Color.Transparent;
+            this.button150.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button150.Location = new System.Drawing.Point(6, 77);
+            this.button150.Margin = new System.Windows.Forms.Padding(2);
+            this.button150.Name = "button150";
+            this.button150.Size = new System.Drawing.Size(127, 43);
+            this.button150.TabIndex = 21;
+            this.button150.Text = "Write to Page";
+            this.button150.UseVisualStyleBackColor = false;
+            this.button150.Click += new System.EventHandler(this.button150_Click);
+            // 
+            // dataGridView_Block9_12_MPA_SPA
+            // 
+            this.dataGridView_Block9_12_MPA_SPA.AllowUserToAddRows = false;
+            this.dataGridView_Block9_12_MPA_SPA.AllowUserToDeleteRows = false;
+            this.dataGridView_Block9_12_MPA_SPA.AllowUserToResizeColumns = false;
+            this.dataGridView_Block9_12_MPA_SPA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block9_12_MPA_SPA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn58,
+            this.dataGridViewTextBoxColumn59,
+            this.SPA_rise,
+            this.Column19});
+            this.dataGridView_Block9_12_MPA_SPA.Location = new System.Drawing.Point(2, 8);
+            this.dataGridView_Block9_12_MPA_SPA.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block9_12_MPA_SPA.Name = "dataGridView_Block9_12_MPA_SPA";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block9_12_MPA_SPA.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView_Block9_12_MPA_SPA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block9_12_MPA_SPA.Size = new System.Drawing.Size(729, 578);
+            this.dataGridView_Block9_12_MPA_SPA.TabIndex = 48;
+            this.dataGridView_Block9_12_MPA_SPA.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Block9_12_MPA_SPA_CellValueChanged);
+            this.dataGridView_Block9_12_MPA_SPA.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
+            this.dataGridView_Block9_12_MPA_SPA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.HeaderText = "MPA rise";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.HeaderText = "MPA fall";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            // 
+            // SPA_rise
+            // 
+            this.SPA_rise.HeaderText = "SPA rise";
+            this.SPA_rise.Name = "SPA_rise";
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "SPA fall";
+            this.Column19.Name = "Column19";
             // 
             // tabPage_Page1_Block1Flash
             // 
@@ -10154,6 +9831,504 @@ namespace Monitor
             this.button85.Text = "Write to Page";
             this.button85.UseVisualStyleBackColor = false;
             this.button85.Click += new System.EventHandler(this.button_WriteBlock7_Click);
+            // 
+            // tabPage_Block9
+            // 
+            this.tabPage_Block9.Controls.Add(this.button131);
+            this.tabPage_Block9.Controls.Add(this.button107);
+            this.tabPage_Block9.Controls.Add(this.dataGridView_Block09);
+            this.tabPage_Block9.Controls.Add(this.groupBox53);
+            this.tabPage_Block9.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Block9.Name = "tabPage_Block9";
+            this.tabPage_Block9.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Block9.TabIndex = 9;
+            this.tabPage_Block9.Text = "Block 9 (not use)";
+            this.tabPage_Block9.UseVisualStyleBackColor = true;
+            // 
+            // button131
+            // 
+            this.button131.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button131.Location = new System.Drawing.Point(746, 62);
+            this.button131.Margin = new System.Windows.Forms.Padding(2);
+            this.button131.Name = "button131";
+            this.button131.Size = new System.Drawing.Size(127, 43);
+            this.button131.TabIndex = 36;
+            this.button131.Text = "Test";
+            this.button131.UseVisualStyleBackColor = true;
+            this.button131.Click += new System.EventHandler(this.button131_Click);
+            // 
+            // button107
+            // 
+            this.button107.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button107.Location = new System.Drawing.Point(746, 11);
+            this.button107.Margin = new System.Windows.Forms.Padding(2);
+            this.button107.Name = "button107";
+            this.button107.Size = new System.Drawing.Size(127, 43);
+            this.button107.TabIndex = 30;
+            this.button107.Text = "Clear";
+            this.button107.UseVisualStyleBackColor = true;
+            this.button107.Click += new System.EventHandler(this.button107_Click_1);
+            // 
+            // dataGridView_Block09
+            // 
+            this.dataGridView_Block09.AllowUserToAddRows = false;
+            this.dataGridView_Block09.AllowUserToDeleteRows = false;
+            this.dataGridView_Block09.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block09.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27});
+            this.dataGridView_Block09.Location = new System.Drawing.Point(2, 4);
+            this.dataGridView_Block09.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block09.Name = "dataGridView_Block09";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block09.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView_Block09.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block09.Size = new System.Drawing.Size(740, 578);
+            this.dataGridView_Block09.TabIndex = 31;
+            this.dataGridView_Block09.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block09.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block09.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.Frozen = true;
+            this.dataGridViewTextBoxColumn25.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn25.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.Frozen = true;
+            this.dataGridViewTextBoxColumn26.HeaderText = "Decimal";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.Frozen = true;
+            this.dataGridViewTextBoxColumn27.HeaderText = "Verify (Read only)";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Controls.Add(this.button90);
+            this.groupBox53.Controls.Add(this.button91);
+            this.groupBox53.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Size = new System.Drawing.Size(141, 130);
+            this.groupBox53.TabIndex = 29;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "Flash operation";
+            // 
+            // button90
+            // 
+            this.button90.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button90.Location = new System.Drawing.Point(6, 22);
+            this.button90.Margin = new System.Windows.Forms.Padding(2);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(127, 43);
+            this.button90.TabIndex = 18;
+            this.button90.Text = "Read Page ";
+            this.button90.UseVisualStyleBackColor = true;
+            this.button90.Click += new System.EventHandler(this.button_ReadBlock9_Click);
+            // 
+            // button91
+            // 
+            this.button91.BackColor = System.Drawing.Color.Transparent;
+            this.button91.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button91.Location = new System.Drawing.Point(6, 77);
+            this.button91.Margin = new System.Windows.Forms.Padding(2);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(127, 43);
+            this.button91.TabIndex = 21;
+            this.button91.Text = "Write to Page";
+            this.button91.UseVisualStyleBackColor = false;
+            this.button91.Click += new System.EventHandler(this.button_WriteBlock9_Click);
+            // 
+            // tabPage_Block10
+            // 
+            this.tabPage_Block10.Controls.Add(this.button132);
+            this.tabPage_Block10.Controls.Add(this.button110);
+            this.tabPage_Block10.Controls.Add(this.dataGridView_Block10);
+            this.tabPage_Block10.Controls.Add(this.groupBox54);
+            this.tabPage_Block10.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Block10.Name = "tabPage_Block10";
+            this.tabPage_Block10.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Block10.TabIndex = 10;
+            this.tabPage_Block10.Text = "Block 10 (not use)";
+            this.tabPage_Block10.UseVisualStyleBackColor = true;
+            // 
+            // button132
+            // 
+            this.button132.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button132.Location = new System.Drawing.Point(746, 52);
+            this.button132.Margin = new System.Windows.Forms.Padding(2);
+            this.button132.Name = "button132";
+            this.button132.Size = new System.Drawing.Size(127, 43);
+            this.button132.TabIndex = 36;
+            this.button132.Text = "Test";
+            this.button132.UseVisualStyleBackColor = true;
+            this.button132.Click += new System.EventHandler(this.button132_Click);
+            // 
+            // button110
+            // 
+            this.button110.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button110.Location = new System.Drawing.Point(746, 2);
+            this.button110.Margin = new System.Windows.Forms.Padding(2);
+            this.button110.Name = "button110";
+            this.button110.Size = new System.Drawing.Size(127, 43);
+            this.button110.TabIndex = 30;
+            this.button110.Text = "Clear";
+            this.button110.UseVisualStyleBackColor = true;
+            this.button110.Click += new System.EventHandler(this.button110_Click_1);
+            // 
+            // dataGridView_Block10
+            // 
+            this.dataGridView_Block10.AllowUserToAddRows = false;
+            this.dataGridView_Block10.AllowUserToDeleteRows = false;
+            this.dataGridView_Block10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31});
+            this.dataGridView_Block10.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView_Block10.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block10.Name = "dataGridView_Block10";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block10.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView_Block10.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block10.Size = new System.Drawing.Size(740, 578);
+            this.dataGridView_Block10.TabIndex = 31;
+            this.dataGridView_Block10.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block10.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.Frozen = true;
+            this.dataGridViewTextBoxColumn28.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn28.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.Frozen = true;
+            this.dataGridViewTextBoxColumn30.HeaderText = "Decimal";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.Frozen = true;
+            this.dataGridViewTextBoxColumn31.HeaderText = "Verify (Read only)";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Controls.Add(this.button92);
+            this.groupBox54.Controls.Add(this.button93);
+            this.groupBox54.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Size = new System.Drawing.Size(141, 130);
+            this.groupBox54.TabIndex = 29;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "Flash operation";
+            // 
+            // button92
+            // 
+            this.button92.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button92.Location = new System.Drawing.Point(6, 22);
+            this.button92.Margin = new System.Windows.Forms.Padding(2);
+            this.button92.Name = "button92";
+            this.button92.Size = new System.Drawing.Size(127, 43);
+            this.button92.TabIndex = 18;
+            this.button92.Text = "Read Page ";
+            this.button92.UseVisualStyleBackColor = true;
+            this.button92.Click += new System.EventHandler(this.button_ReadBlock10_Click);
+            // 
+            // button93
+            // 
+            this.button93.BackColor = System.Drawing.Color.Transparent;
+            this.button93.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button93.Location = new System.Drawing.Point(6, 77);
+            this.button93.Margin = new System.Windows.Forms.Padding(2);
+            this.button93.Name = "button93";
+            this.button93.Size = new System.Drawing.Size(127, 43);
+            this.button93.TabIndex = 21;
+            this.button93.Text = "Write to Page";
+            this.button93.UseVisualStyleBackColor = false;
+            this.button93.Click += new System.EventHandler(this.button_WriteBlock10_Click);
+            // 
+            // tabPage_Block11
+            // 
+            this.tabPage_Block11.Controls.Add(this.button133);
+            this.tabPage_Block11.Controls.Add(this.button116);
+            this.tabPage_Block11.Controls.Add(this.dataGridView_Block11);
+            this.tabPage_Block11.Controls.Add(this.groupBox55);
+            this.tabPage_Block11.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Block11.Name = "tabPage_Block11";
+            this.tabPage_Block11.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Block11.TabIndex = 12;
+            this.tabPage_Block11.Text = "Block 11 (not use)";
+            this.tabPage_Block11.UseVisualStyleBackColor = true;
+            // 
+            // button133
+            // 
+            this.button133.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button133.Location = new System.Drawing.Point(746, 49);
+            this.button133.Margin = new System.Windows.Forms.Padding(2);
+            this.button133.Name = "button133";
+            this.button133.Size = new System.Drawing.Size(127, 43);
+            this.button133.TabIndex = 36;
+            this.button133.Text = "Test";
+            this.button133.UseVisualStyleBackColor = true;
+            this.button133.Click += new System.EventHandler(this.button133_Click);
+            // 
+            // button116
+            // 
+            this.button116.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button116.Location = new System.Drawing.Point(746, 2);
+            this.button116.Margin = new System.Windows.Forms.Padding(2);
+            this.button116.Name = "button116";
+            this.button116.Size = new System.Drawing.Size(127, 43);
+            this.button116.TabIndex = 30;
+            this.button116.Text = "Clear";
+            this.button116.UseVisualStyleBackColor = true;
+            this.button116.Click += new System.EventHandler(this.button116_Click_1);
+            // 
+            // dataGridView_Block11
+            // 
+            this.dataGridView_Block11.AllowUserToAddRows = false;
+            this.dataGridView_Block11.AllowUserToDeleteRows = false;
+            this.dataGridView_Block11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34});
+            this.dataGridView_Block11.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView_Block11.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block11.Name = "dataGridView_Block11";
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block11.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridView_Block11.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block11.Size = new System.Drawing.Size(740, 578);
+            this.dataGridView_Block11.TabIndex = 31;
+            this.dataGridView_Block11.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block11.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.Frozen = true;
+            this.dataGridViewTextBoxColumn32.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn32.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn32.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.Frozen = true;
+            this.dataGridViewTextBoxColumn33.HeaderText = "Decimal";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.Frozen = true;
+            this.dataGridViewTextBoxColumn34.HeaderText = "Verify (Read only)";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Controls.Add(this.button94);
+            this.groupBox55.Controls.Add(this.button95);
+            this.groupBox55.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Size = new System.Drawing.Size(141, 130);
+            this.groupBox55.TabIndex = 29;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "Flash operation";
+            // 
+            // button94
+            // 
+            this.button94.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button94.Location = new System.Drawing.Point(6, 22);
+            this.button94.Margin = new System.Windows.Forms.Padding(2);
+            this.button94.Name = "button94";
+            this.button94.Size = new System.Drawing.Size(127, 43);
+            this.button94.TabIndex = 18;
+            this.button94.Text = "Read Page ";
+            this.button94.UseVisualStyleBackColor = true;
+            this.button94.Click += new System.EventHandler(this.button_ReadBlock11_Click);
+            // 
+            // button95
+            // 
+            this.button95.BackColor = System.Drawing.Color.Transparent;
+            this.button95.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button95.Location = new System.Drawing.Point(6, 77);
+            this.button95.Margin = new System.Windows.Forms.Padding(2);
+            this.button95.Name = "button95";
+            this.button95.Size = new System.Drawing.Size(127, 43);
+            this.button95.TabIndex = 21;
+            this.button95.Text = "Write to Page";
+            this.button95.UseVisualStyleBackColor = false;
+            this.button95.Click += new System.EventHandler(this.button_WriteBlock11_Click);
+            // 
+            // tabPage_Block12
+            // 
+            this.tabPage_Block12.Controls.Add(this.button134);
+            this.tabPage_Block12.Controls.Add(this.button123);
+            this.tabPage_Block12.Controls.Add(this.dataGridView_Block12);
+            this.tabPage_Block12.Controls.Add(this.groupBox56);
+            this.tabPage_Block12.Location = new System.Drawing.Point(4, 27);
+            this.tabPage_Block12.Name = "tabPage_Block12";
+            this.tabPage_Block12.Size = new System.Drawing.Size(1234, 592);
+            this.tabPage_Block12.TabIndex = 13;
+            this.tabPage_Block12.Text = "Block 12 (not use)";
+            this.tabPage_Block12.UseVisualStyleBackColor = true;
+            // 
+            // button134
+            // 
+            this.button134.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button134.Location = new System.Drawing.Point(746, 58);
+            this.button134.Margin = new System.Windows.Forms.Padding(2);
+            this.button134.Name = "button134";
+            this.button134.Size = new System.Drawing.Size(127, 43);
+            this.button134.TabIndex = 36;
+            this.button134.Text = "Test";
+            this.button134.UseVisualStyleBackColor = true;
+            this.button134.Click += new System.EventHandler(this.button134_Click);
+            // 
+            // button123
+            // 
+            this.button123.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button123.Location = new System.Drawing.Point(746, 8);
+            this.button123.Margin = new System.Windows.Forms.Padding(2);
+            this.button123.Name = "button123";
+            this.button123.Size = new System.Drawing.Size(127, 43);
+            this.button123.TabIndex = 30;
+            this.button123.Text = "Clear";
+            this.button123.UseVisualStyleBackColor = true;
+            this.button123.Click += new System.EventHandler(this.button123_Click);
+            // 
+            // dataGridView_Block12
+            // 
+            this.dataGridView_Block12.AllowUserToAddRows = false;
+            this.dataGridView_Block12.AllowUserToDeleteRows = false;
+            this.dataGridView_Block12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Block12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37});
+            this.dataGridView_Block12.Location = new System.Drawing.Point(2, 4);
+            this.dataGridView_Block12.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_Block12.Name = "dataGridView_Block12";
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Block12.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridView_Block12.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView_Block12.Size = new System.Drawing.Size(740, 578);
+            this.dataGridView_Block12.TabIndex = 31;
+            this.dataGridView_Block12.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block12.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_ValPage0_CellValueChanged);
+            this.dataGridView_Block12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.Frozen = true;
+            this.dataGridViewTextBoxColumn35.HeaderText = "Flash Value";
+            this.dataGridViewTextBoxColumn35.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn35.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.HeaderText = "Decimal";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.HeaderText = "Verify (Read only)";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Controls.Add(this.button_ReadBlock12);
+            this.groupBox56.Controls.Add(this.button_WriteBlock12);
+            this.groupBox56.Location = new System.Drawing.Point(1091, 2);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Size = new System.Drawing.Size(141, 130);
+            this.groupBox56.TabIndex = 29;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "Flash operation";
+            // 
+            // button_ReadBlock12
+            // 
+            this.button_ReadBlock12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ReadBlock12.Location = new System.Drawing.Point(6, 22);
+            this.button_ReadBlock12.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ReadBlock12.Name = "button_ReadBlock12";
+            this.button_ReadBlock12.Size = new System.Drawing.Size(127, 43);
+            this.button_ReadBlock12.TabIndex = 18;
+            this.button_ReadBlock12.Text = "Read Page ";
+            this.button_ReadBlock12.UseVisualStyleBackColor = true;
+            this.button_ReadBlock12.Click += new System.EventHandler(this.button_ReadBlock12_Click);
+            // 
+            // button_WriteBlock12
+            // 
+            this.button_WriteBlock12.BackColor = System.Drawing.Color.Transparent;
+            this.button_WriteBlock12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_WriteBlock12.Location = new System.Drawing.Point(6, 77);
+            this.button_WriteBlock12.Margin = new System.Windows.Forms.Padding(2);
+            this.button_WriteBlock12.Name = "button_WriteBlock12";
+            this.button_WriteBlock12.Size = new System.Drawing.Size(127, 43);
+            this.button_WriteBlock12.TabIndex = 21;
+            this.button_WriteBlock12.Text = "Write to Page";
+            this.button_WriteBlock12.UseVisualStyleBackColor = false;
+            this.button_WriteBlock12.Click += new System.EventHandler(this.button_WriteBlock12_Click);
             // 
             // groupBox42
             // 
@@ -12066,170 +12241,73 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // tabPage_Blocks9_12_MPA_SPA
+            // checkBox_SendStatusPerodically
             // 
-            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.button147);
-            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.button148);
-            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.groupBox62);
-            this.tabPage_Blocks9_12_MPA_SPA.Controls.Add(this.dataGridView_Block9_12_MPA_SPA);
-            this.tabPage_Blocks9_12_MPA_SPA.Location = new System.Drawing.Point(4, 27);
-            this.tabPage_Blocks9_12_MPA_SPA.Name = "tabPage_Blocks9_12_MPA_SPA";
-            this.tabPage_Blocks9_12_MPA_SPA.Size = new System.Drawing.Size(1234, 592);
-            this.tabPage_Blocks9_12_MPA_SPA.TabIndex = 21;
-            this.tabPage_Blocks9_12_MPA_SPA.Text = "Blocks9_12_MPA_SPA";
-            this.tabPage_Blocks9_12_MPA_SPA.UseVisualStyleBackColor = true;
+            this.checkBox_SendStatusPerodically.AutoSize = true;
+            this.checkBox_SendStatusPerodically.Location = new System.Drawing.Point(28, 67);
+            this.checkBox_SendStatusPerodically.Name = "checkBox_SendStatusPerodically";
+            this.checkBox_SendStatusPerodically.Size = new System.Drawing.Size(166, 22);
+            this.checkBox_SendStatusPerodically.TabIndex = 92;
+            this.checkBox_SendStatusPerodically.Text = "Status every 5 seconds";
+            this.checkBox_SendStatusPerodically.UseVisualStyleBackColor = true;
+            this.checkBox_SendStatusPerodically.CheckedChanged += new System.EventHandler(this.checkBox_SendStatusPerodically_CheckedChanged);
             // 
-            // button147
+            // groupBox63
             // 
-            this.button147.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button147.Location = new System.Drawing.Point(735, 60);
-            this.button147.Margin = new System.Windows.Forms.Padding(2);
-            this.button147.Name = "button147";
-            this.button147.Size = new System.Drawing.Size(127, 43);
-            this.button147.TabIndex = 51;
-            this.button147.Text = "Test";
-            this.button147.UseVisualStyleBackColor = true;
+            this.groupBox63.Controls.Add(this.checkBox_SendStatusPerodically);
+            this.groupBox63.Controls.Add(this.button_GetStatusUUT);
+            this.groupBox63.Controls.Add(this.button74);
+            this.groupBox63.Location = new System.Drawing.Point(435, 276);
+            this.groupBox63.Name = "groupBox63";
+            this.groupBox63.Size = new System.Drawing.Size(199, 100);
+            this.groupBox63.TabIndex = 93;
+            this.groupBox63.TabStop = false;
+            this.groupBox63.Text = "Get Status UUT";
             // 
-            // button148
+            // groupBox64
             // 
-            this.button148.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button148.Location = new System.Drawing.Point(735, 12);
-            this.button148.Margin = new System.Windows.Forms.Padding(2);
-            this.button148.Name = "button148";
-            this.button148.Size = new System.Drawing.Size(127, 43);
-            this.button148.TabIndex = 50;
-            this.button148.Text = "Clear";
-            this.button148.UseVisualStyleBackColor = true;
-            this.button148.Click += new System.EventHandler(this.button148_Click);
+            this.groupBox64.Controls.Add(this.checkBox_SendStatusSimulatorPeriodically);
+            this.groupBox64.Controls.Add(this.button_GetStatusSimulator);
+            this.groupBox64.Controls.Add(this.button_ClearSimulatorStatus);
+            this.groupBox64.Location = new System.Drawing.Point(650, 276);
+            this.groupBox64.Name = "groupBox64";
+            this.groupBox64.Size = new System.Drawing.Size(199, 100);
+            this.groupBox64.TabIndex = 94;
+            this.groupBox64.TabStop = false;
+            this.groupBox64.Text = "Get Status Simulator";
             // 
-            // groupBox62
+            // checkBox_SendStatusSimulatorPeriodically
             // 
-            this.groupBox62.Controls.Add(this.button149);
-            this.groupBox62.Controls.Add(this.button150);
-            this.groupBox62.Location = new System.Drawing.Point(1091, 8);
-            this.groupBox62.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox62.Size = new System.Drawing.Size(141, 130);
-            this.groupBox62.TabIndex = 49;
-            this.groupBox62.TabStop = false;
-            this.groupBox62.Text = "Flash operation";
+            this.checkBox_SendStatusSimulatorPeriodically.AutoSize = true;
+            this.checkBox_SendStatusSimulatorPeriodically.Location = new System.Drawing.Point(28, 67);
+            this.checkBox_SendStatusSimulatorPeriodically.Name = "checkBox_SendStatusSimulatorPeriodically";
+            this.checkBox_SendStatusSimulatorPeriodically.Size = new System.Drawing.Size(166, 22);
+            this.checkBox_SendStatusSimulatorPeriodically.TabIndex = 92;
+            this.checkBox_SendStatusSimulatorPeriodically.Text = "Status every 5 seconds";
+            this.checkBox_SendStatusSimulatorPeriodically.UseVisualStyleBackColor = true;
             // 
-            // button149
+            // button_GetStatusSimulator
             // 
-            this.button149.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button149.Location = new System.Drawing.Point(6, 22);
-            this.button149.Margin = new System.Windows.Forms.Padding(2);
-            this.button149.Name = "button149";
-            this.button149.Size = new System.Drawing.Size(127, 43);
-            this.button149.TabIndex = 18;
-            this.button149.Text = "Read Page ";
-            this.button149.UseVisualStyleBackColor = true;
-            this.button149.Click += new System.EventHandler(this.button149_Click);
+            this.button_GetStatusSimulator.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button_GetStatusSimulator.Location = new System.Drawing.Point(23, 25);
+            this.button_GetStatusSimulator.Margin = new System.Windows.Forms.Padding(2);
+            this.button_GetStatusSimulator.Name = "button_GetStatusSimulator";
+            this.button_GetStatusSimulator.Size = new System.Drawing.Size(86, 34);
+            this.button_GetStatusSimulator.TabIndex = 17;
+            this.button_GetStatusSimulator.Text = "Get Status";
+            this.button_GetStatusSimulator.UseVisualStyleBackColor = false;
+            this.button_GetStatusSimulator.Click += new System.EventHandler(this.button_GetStatusSimulator_Click);
             // 
-            // button150
+            // button_ClearSimulatorStatus
             // 
-            this.button150.BackColor = System.Drawing.Color.Transparent;
-            this.button150.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button150.Location = new System.Drawing.Point(6, 77);
-            this.button150.Margin = new System.Windows.Forms.Padding(2);
-            this.button150.Name = "button150";
-            this.button150.Size = new System.Drawing.Size(127, 43);
-            this.button150.TabIndex = 21;
-            this.button150.Text = "Write to Page";
-            this.button150.UseVisualStyleBackColor = false;
-            this.button150.Click += new System.EventHandler(this.button150_Click);
-            // 
-            // dataGridView_Block9_12_MPA_SPA
-            // 
-            this.dataGridView_Block9_12_MPA_SPA.AllowUserToAddRows = false;
-            this.dataGridView_Block9_12_MPA_SPA.AllowUserToDeleteRows = false;
-            this.dataGridView_Block9_12_MPA_SPA.AllowUserToResizeColumns = false;
-            this.dataGridView_Block9_12_MPA_SPA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Block9_12_MPA_SPA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn58,
-            this.dataGridViewTextBoxColumn59,
-            this.SPA_rise,
-            this.Column19});
-            this.dataGridView_Block9_12_MPA_SPA.Location = new System.Drawing.Point(2, 8);
-            this.dataGridView_Block9_12_MPA_SPA.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_Block9_12_MPA_SPA.Name = "dataGridView_Block9_12_MPA_SPA";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Block9_12_MPA_SPA.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView_Block9_12_MPA_SPA.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_Block9_12_MPA_SPA.Size = new System.Drawing.Size(729, 578);
-            this.dataGridView_Block9_12_MPA_SPA.TabIndex = 48;
-            this.dataGridView_Block9_12_MPA_SPA.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Block9_12_MPA_SPA_CellValueChanged);
-            this.dataGridView_Block9_12_MPA_SPA.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgGrid_RowPostPaint);
-            this.dataGridView_Block9_12_MPA_SPA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dataGridView_CopyPaste_KeyUP);
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            this.dataGridViewTextBoxColumn58.HeaderText = "MPA rise";
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            this.dataGridViewTextBoxColumn59.HeaderText = "MPA fall";
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            // 
-            // SPA_rise
-            // 
-            this.SPA_rise.HeaderText = "SPA rise";
-            this.SPA_rise.Name = "SPA_rise";
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "SPA fall";
-            this.Column19.Name = "Column19";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(2, 222);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(136, 14);
-            this.label57.TabIndex = 77;
-            this.label57.Text = "Temperature supervisor";
-            // 
-            // textBox_SimulatorStatus7
-            // 
-            this.textBox_SimulatorStatus7.Location = new System.Drawing.Point(139, 216);
-            this.textBox_SimulatorStatus7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_SimulatorStatus7.Name = "textBox_SimulatorStatus7";
-            this.textBox_SimulatorStatus7.ReadOnly = true;
-            this.textBox_SimulatorStatus7.Size = new System.Drawing.Size(68, 26);
-            this.textBox_SimulatorStatus7.TabIndex = 76;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.Frozen = true;
-            this.dataGridViewTextBoxColumn29.HeaderText = "Flash Value";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn29.Width = 125;
-            // 
-            // Decimal
-            // 
-            this.Decimal.HeaderText = "Decimal";
-            this.Decimal.Name = "Decimal";
-            this.Decimal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Verify_ReadOnly
-            // 
-            this.Verify_ReadOnly.HeaderText = "Verify (Read only)";
-            this.Verify_ReadOnly.Name = "Verify_ReadOnly";
-            this.Verify_ReadOnly.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.button_ClearSimulatorStatus.Location = new System.Drawing.Point(122, 27);
+            this.button_ClearSimulatorStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.button_ClearSimulatorStatus.Name = "button_ClearSimulatorStatus";
+            this.button_ClearSimulatorStatus.Size = new System.Drawing.Size(73, 30);
+            this.button_ClearSimulatorStatus.TabIndex = 77;
+            this.button_ClearSimulatorStatus.Text = "Clear";
+            this.button_ClearSimulatorStatus.UseVisualStyleBackColor = true;
+            this.button_ClearSimulatorStatus.Click += new System.EventHandler(this.button_ClearSimulatorStatus_Click);
             // 
             // MainForm
             // 
@@ -12314,22 +12392,22 @@ namespace Monitor
             this.groupBox_SimulatorControl.PerformLayout();
             this.groupBox_StatusUUT.ResumeLayout(false);
             this.groupBox_StatusUUT.PerformLayout();
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox39.PerformLayout();
-            this.groupBox35.ResumeLayout(false);
-            this.groupBox35.PerformLayout();
+            this.groupBox_SimulatorStatus.ResumeLayout(false);
+            this.groupBox_SimulatorStatus.PerformLayout();
+            this.groupBox_PulseGen2.ResumeLayout(false);
+            this.groupBox_PulseGen2.PerformLayout();
             this.groupBox_Control2.ResumeLayout(false);
             this.groupBox_Control2.PerformLayout();
             this.groupBox_Control1.ResumeLayout(false);
             this.groupBox_Control1.PerformLayout();
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox34.PerformLayout();
+            this.groupBox_PulseGen.ResumeLayout(false);
+            this.groupBox_PulseGen.PerformLayout();
             this.groupBox_UUTVersion.ResumeLayout(false);
             this.groupBox_UUTVersion.PerformLayout();
             this.groupBox_SimulatorVersion.ResumeLayout(false);
             this.groupBox_SimulatorVersion.PerformLayout();
-            this.groupBox33.ResumeLayout(false);
-            this.groupBox33.PerformLayout();
+            this.groupBox_RFgen.ResumeLayout(false);
+            this.groupBox_RFgen.PerformLayout();
             this.tabPage_Block0.ResumeLayout(false);
             this.tabPage_Block0.PerformLayout();
             this.groupBox50.ResumeLayout(false);
@@ -12358,18 +12436,9 @@ namespace Monitor
             this.tabPage_Block8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block08)).EndInit();
             this.groupBox52.ResumeLayout(false);
-            this.tabPage_Block9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block09)).EndInit();
-            this.groupBox53.ResumeLayout(false);
-            this.tabPage_Block10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block10)).EndInit();
-            this.groupBox54.ResumeLayout(false);
-            this.tabPage_Block11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block11)).EndInit();
-            this.groupBox55.ResumeLayout(false);
-            this.tabPage_Block12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).EndInit();
-            this.groupBox56.ResumeLayout(false);
+            this.tabPage_Blocks9_12_MPA_SPA.ResumeLayout(false);
+            this.groupBox62.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block9_12_MPA_SPA)).EndInit();
             this.tabPage_Page1_Block1Flash.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block01)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -12388,6 +12457,18 @@ namespace Monitor
             this.tabPage_Block7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block07)).EndInit();
             this.groupBox51.ResumeLayout(false);
+            this.tabPage_Block9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block09)).EndInit();
+            this.groupBox53.ResumeLayout(false);
+            this.tabPage_Block10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block10)).EndInit();
+            this.groupBox54.ResumeLayout(false);
+            this.tabPage_Block11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block11)).EndInit();
+            this.groupBox55.ResumeLayout(false);
+            this.tabPage_Block12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block12)).EndInit();
+            this.groupBox56.ResumeLayout(false);
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -12442,9 +12523,10 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.tabPage_Blocks9_12_MPA_SPA.ResumeLayout(false);
-            this.groupBox62.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Block9_12_MPA_SPA)).EndInit();
+            this.groupBox63.ResumeLayout(false);
+            this.groupBox63.PerformLayout();
+            this.groupBox64.ResumeLayout(false);
+            this.groupBox64.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -15316,19 +15398,19 @@ namespace Monitor
             if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
             {
 
-                textBox_StatusUUT1.Text = GetBytesFromData(i_Parsedframe.Data, 0, 2);
-                textBox_StatusUUT2.Text = GetBytesFromData(i_Parsedframe.Data, 2, 2);
-                textBox_StatusUUT3.Text = GetBytesFromData(i_Parsedframe.Data, 4, 2);
-                textBox_StatusUUT4.Text = GetBytesFromData(i_Parsedframe.Data, 6, 2);
-                textBox_StatusUUT5.Text = GetBytesFromData(i_Parsedframe.Data, 8, 2);
-                textBox_StatusUUT6.Text = GetBytesFromData(i_Parsedframe.Data, 10, 2);
-                textBox_StatusUUT7.Text = GetBytesFromData(i_Parsedframe.Data, 12, 2);
-                textBox_StatusUUT8.Text = GetBytesFromData(i_Parsedframe.Data, 14, 2);
-                textBox_StatusUUT9.Text = GetBytesFromData(i_Parsedframe.Data, 16, 2);
-                textBox_StatusUUT10.Text = GetBytesFromData(i_Parsedframe.Data, 18, 2);
-                textBox_StatusUUT11.Text = GetBytesFromData(i_Parsedframe.Data, 20, 2);
-                textBox_StatusUUT12.Text = GetBytesFromData(i_Parsedframe.Data, 22, 2);
-                textBox_StatusUUT13.Text = GetBytesFromData(i_Parsedframe.Data, 24, 2);
+                textBox_StatusUUT1_5Vcurrent.Text = GetBytesFromData(i_Parsedframe.Data, 0, 2);
+                textBox_StatusUUT2_THERM_VPATAT.Text = GetBytesFromData(i_Parsedframe.Data, 2, 2);
+                textBox_StatusUUT3_CS28V.Text = GetBytesFromData(i_Parsedframe.Data, 4, 2);
+                textBox_StatusUUT4_CS9V.Text = GetBytesFromData(i_Parsedframe.Data, 6, 2);
+                textBox_StatusUUT5_DETECTORvoltage.Text = GetBytesFromData(i_Parsedframe.Data, 8, 2);
+                textBox_StatusUUT6_VggN5V.Text = GetBytesFromData(i_Parsedframe.Data, 10, 2);
+                textBox_StatusUUT7_Vdd5V.Text = GetBytesFromData(i_Parsedframe.Data, 12, 2);
+                textBox_StatusUUT8_VDD4V.Text = GetBytesFromData(i_Parsedframe.Data, 14, 2);
+                textBox_StatusUUT9_Vdd28V.Text = GetBytesFromData(i_Parsedframe.Data, 16, 2);
+                textBox_StatusUUT10_Vdd9V.Text = GetBytesFromData(i_Parsedframe.Data, 18, 2);
+                textBox_StatusUUT11_Ch0PRM.Text = GetBytesFromData(i_Parsedframe.Data, 20, 2);
+                textBox_StatusUUT12_CH1CS48V.Text = GetBytesFromData(i_Parsedframe.Data, 22, 2);
+                textBox_StatusUUT13_VIN_F.Text = GetBytesFromData(i_Parsedframe.Data, 24, 2);
                 textBox_StatusUUT14.Text = GetBytesFromData(i_Parsedframe.Data, 26, 2);
                 textBox_StatusUUT15.Text = GetBytesFromData(i_Parsedframe.Data, 28, 2);
                 textBox_StatusUUT16.Text = GetBytesFromData(i_Parsedframe.Data, 30, 2);
@@ -15344,9 +15426,16 @@ namespace Monitor
             //  SendMessageToSystemLogger(ret);
         }
 
-        private string GetBit(byte b, int bitNumber)
+        private int Is_BIT_is_On(int b, int bitNumber)
         {
-            return (b & (1 << bitNumber)).ToString();
+            if( (b & (1 << bitNumber)) > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         private void GetDiscreteStatusBusmode(KratosProtocolFrame i_Parsedframe)
@@ -15556,7 +15645,7 @@ namespace Monitor
 
             try
             {
-
+                int Num;
                 String str_Address = GetBytesFromData(i_Parsedframe.Data, 1, 2);
                 String str_Data = GetBytesFromData(i_Parsedframe.Data, 3, 2);
                 int m_Address = int.Parse(str_Address, System.Globalization.NumberStyles.HexNumber);
@@ -15567,6 +15656,162 @@ namespace Monitor
 
                 switch (str_Address)
                 {
+                    case "0002":
+                        //if (checkBox_RFGen.Checked == true)
+                        //{
+                        //    //intValue |= 1 << bitPosition;
+                        //    num |= (1 << 2);
+                        //}
+
+                        //if (checkBox_PulseGen.Checked == true)
+                        //{
+                        //    num |= (1 << 0);
+                        //}
+
+                        //if (checkBox_PulseGen2.Checked == true)
+                        //{
+                        //    num |= (1 << 1);
+                        //}
+
+                        //if (checkBox_TriggerClock.Checked == true)
+                        //{
+                        //    num |= (1 << 4);
+                        //}
+
+                        //if (checkBox_OVTcheck.Checked == true)
+                        //{
+                        //    num |= (1 << 5);
+                        //}
+                        Simulator0x2Register = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+
+                        if (Is_BIT_is_On(Simulator0x2Register, 0) == 1)
+                        {
+                            
+                            checkBox_PulseGen2.Checked = true;
+                        }
+                        else
+                        {
+
+                            checkBox_PulseGen2.Checked = false;
+                        }
+
+
+                        if (Is_BIT_is_On(Simulator0x2Register, 1) == 1)
+                        {
+                            checkBox_PulseGen.Checked = true;
+                        }
+                        else
+                        {
+                            checkBox_PulseGen.Checked = false;
+                        }
+
+                        if (Is_BIT_is_On(Simulator0x2Register, 2) == 1)
+                        {
+                            checkBox_RFGen.Checked = true;
+                        }
+                        else
+                        {
+                            checkBox_RFGen.Checked = false;
+                        }
+
+                        if (Is_BIT_is_On(Simulator0x2Register, 3) == 1)
+                        {
+                            checkBox_TriggerClock.Checked = true;
+                        }
+                        else
+                        {
+                            checkBox_TriggerClock.Checked = false;
+                        }
+
+
+                        if (Is_BIT_is_On(Simulator0x2Register, 4) == 1)
+                        {
+                            checkBox_OVTcheck.Checked = true;
+                        }
+                        else
+                        {
+                            checkBox_OVTcheck.Checked = false;
+                        }
+
+
+
+
+
+
+                        if (Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber), 4) == 1)
+                        {
+                            checkBox_Preserve.Checked = true;
+                        }
+                        else
+                        {
+                            if (Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber), 3) == 1)
+                            {
+                                checkBox_Preserve.Checked = false;
+                            }
+                            
+                        }
+
+                        Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0xF;
+                        comboBox_FreqBit.SelectedIndex = Num;
+
+
+                        Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
+                        Num -= 6;
+                        if (Num >= 0 && Num <= 9)
+                        {
+                            comboBox_FTbit.SelectedIndex = Num;
+                        }
+
+                        Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
+                        comboBox_ATTbit.SelectedIndex = Num;
+
+                        Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
+                        comboBox_CALSAR.SelectedIndex = Num;
+
+
+                        if (Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber), 0) == 1)
+                        {
+                            checkBox_DC4on.Checked = true;
+                        }
+                        else
+                        {
+                            checkBox_DC4on.Checked = false;
+                        }
+
+
+
+                        break;
+
+                    case "0018":
+                        textBox_StrobeDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_StrobeWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        break;
+
+
+                    //case "0010":
+
+
+                    //    break;
+
+                    //case "000D":
+
+                    //    break;
+
+                    case "000A":
+                        textBox_PulsePeriod.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+
+                        textBox_PulsePeriod2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseWidth2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseDelay2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+
+
+                        textBox_RFPeriod.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_RFWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_RFDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        break;
+
                     case "0080":
                         textBox_SimulatorFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
                         break;
@@ -15600,18 +15845,18 @@ namespace Monitor
                     //    break;
 
                     case "0081":
-                        textBox_SimulatorStatus1.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber),4).ToString();
-                        textBox_SimulatorStatus2.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 3).ToString();
-                        textBox_SimulatorStatus3.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 2).ToString();
-                        textBox_SimulatorStatus4.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 5).ToString() + "," + GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 6).ToString();
-                        //textBox_SimulatorStatus5.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
-                        //textBox_SimulatorStatus6.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
+                        textBox_SimulatorStatus1.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 4).ToString();
+                        textBox_SimulatorStatus2.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 3).ToString();
+                        textBox_SimulatorStatus3.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 2).ToString();
+                        textBox_SimulatorStatus4.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 7).ToString(); //+ "," + GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 6).ToString();
+                        textBox_SimulatorStatus5.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 11).ToString();
+                        textBox_SimulatorStatus6.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 13).ToString();
+
                         break;
 
                     case "00CD":
                        int Temperature = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         sbyte temp = (sbyte)(Temperature >> 8);
-                        temp /= 2;
                         double FinalResult = temp;
 
                         //Gil: from the datasheet of the temperature sensor
@@ -15999,7 +16244,7 @@ namespace Monitor
                         binarystring = binarystring.Insert(10, " ");
                         binarystring = binarystring.Insert(15, " ");
 
-                        textBox_StatusUUT33.Text = binarystring;
+                        textBox_StatusUUT33_INPUTcontrols.Text = binarystring;
 
                         break;
 
@@ -16094,38 +16339,38 @@ namespace Monitor
 
                         // textBox_StatusUUT1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber).ToString();
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT1.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
+                        textBox_StatusUUT1_5Vcurrent.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT2.Text = String.Format("{0} [{1:0.##}K]", DecimalNumber, (float)DecimalNumber / 4096 / 0.004 * 1.8 - 273.15);
+                        textBox_StatusUUT2_THERM_VPATAT.Text = String.Format("{0} [{1:0.##}K]", DecimalNumber, (float)DecimalNumber / 4096 / 0.004 * 1.8 - 273.15);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT3.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1.8 / 4096 / 40 / 0.013);
+                        textBox_StatusUUT3_CS28V.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1.8 / 4096 / 40 / 0.013);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT4.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
+                        textBox_StatusUUT4_CS9V.Text = String.Format("{0} [{1:0.##}mA]", DecimalNumber, (float)DecimalNumber * 1800 * 500 / 300 / 5 / 4096);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT5.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 * 2.33);
+                        textBox_StatusUUT5_DETECTORvoltage.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 * 2.33);
                         // textBox_StatusUUT2.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT3.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //  textBox_StatusUUT4.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                       //  textBox_StatusUUT5.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT6.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, ((float)DecimalNumber )/4096*1.8/0.18  );
+                        textBox_StatusUUT6_VggN5V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, ((float)DecimalNumber )/4096*1.8/0.18  );
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT7.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
+                        textBox_StatusUUT7_Vdd5V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT8.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.376);
+                        textBox_StatusUUT8_VDD4V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.376);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT9.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.053);
+                        textBox_StatusUUT9_Vdd28V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.053);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_StatusUUT10.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.17);
+                        textBox_StatusUUT10_Vdd9V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.17);
 
                         // textBox_StatusUUT6.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_StatusUUT7.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -16138,13 +16383,13 @@ namespace Monitor
                         // 27 + (DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT11.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 + 27);
+                        textBox_StatusUUT11_Ch0PRM.Text = String.Format("{0} [{1:0.##}C]", DecimalNumber, ((float)DecimalNumber * 2.5 / 4096 / 0.555 - 3) / 0.01 + 27);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT12.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
+                        textBox_StatusUUT12_CH1CS48V.Text = String.Format("{0} [{1:0.##}A]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.013 / 40);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
-                        textBox_StatusUUT13.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.0417);
+                        textBox_StatusUUT13_VIN_F.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 2.5 / 0.0417);
 
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF;
@@ -16173,11 +16418,11 @@ namespace Monitor
                         break;
 
                     case "00B8":
-                        textBox_StatusUUT12.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        textBox_StatusUUT12_CH1CS48V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00B9":
-                        textBox_StatusUUT13.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
+                        textBox_StatusUUT13_VIN_F.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0x0FFF).ToString();
                         break;
 
                     case "00BA":
@@ -16222,7 +16467,7 @@ namespace Monitor
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_Vddoff1.Text = String.Format("{0}", DecimalNumber);
 
-                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber);
+                        DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_MPA_Ton.Text = String.Format("{0}", DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber);
@@ -16252,12 +16497,160 @@ namespace Monitor
                     //    break;
 
                     case "0081":
-                        textBox_StatusUUT27.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
-                        textBox_StatusUUT28.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 3).ToString();
-                        textBox_StatusUUT29.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 2).ToString();
-                        textBox_StatusUUT30.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 5).ToString() + "," + GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 6).ToString();
-                        //textBox_SimulatorStatus5.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
-                        //textBox_SimulatorStatus6.Text = GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 4).ToString();
+                        textBox_StatusUUT27.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 4).ToString();
+                        textBox_StatusUUT28.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 3).ToString();
+                        textBox_StatusUUT29.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 2).ToString();
+                        textBox_StatusUUT30.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 7).ToString(); //+ "," + GetBit((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 1), System.Globalization.NumberStyles.HexNumber), 6).ToString();
+                        textBox_StatusUUT31.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 11).ToString();
+                        textBox_StatusUUT32.Text = Is_BIT_is_On(int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 13).ToString();
+
+
+                        break;
+
+                    case "0082":
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 9) == 1)
+                        {
+                            textBox_StatusUUT6_VggN5V.BackColor = Color.LightBlue;
+                        }
+                        
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 0) == 1)
+                        {
+                            textBox_StatusUUT6_VggN5V.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT6_VggN5V.BackColor = default;
+                            textBox_StatusUUT6_VggN5V.ForeColor = default;
+                        }
+
+
+
+
+
+
+
+
+
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 10) == 1)
+                        {
+                            textBox_StatusUUT7_Vdd5V.BackColor = Color.LightBlue;
+                        }
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 2) == 1)
+                        {
+
+                            textBox_StatusUUT7_Vdd5V.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT7_Vdd5V.BackColor = default;
+                            textBox_StatusUUT7_Vdd5V.ForeColor = default;
+                        }
+
+
+
+
+
+
+
+
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 12) == 1)
+                        {
+                            textBox_StatusUUT8_VDD4V.BackColor = Color.LightBlue;
+                        }
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 4) == 1)
+                        {
+
+                            textBox_StatusUUT8_VDD4V.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT8_VDD4V.BackColor = default;
+                            textBox_StatusUUT8_VDD4V.ForeColor = default;
+                        }
+
+
+
+
+
+
+
+
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 8) == 1)
+                        {
+                            textBox_StatusUUT9_Vdd28V.BackColor = Color.LightBlue;
+                        }
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 0) == 1)
+                        {
+
+                            textBox_StatusUUT9_Vdd28V.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT9_Vdd28V.BackColor = default;
+                            textBox_StatusUUT9_Vdd28V.ForeColor = default;
+                        }
+
+
+
+
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 11) == 1)
+                        {
+                            textBox_StatusUUT10_Vdd9V.BackColor = Color.LightBlue;
+                        }
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 3) == 1)
+                        {
+
+                            textBox_StatusUUT10_Vdd9V.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT10_Vdd9V.BackColor = default;
+                            textBox_StatusUUT10_Vdd9V.ForeColor = default;
+                        }
+
+
+
+ 
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 13) == 1)
+                        {
+                            textBox_StatusUUT13_VIN_F.BackColor = Color.LightBlue;
+                        }
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 5) == 1)
+                        {
+
+
+                            textBox_StatusUUT13_VIN_F.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT13_VIN_F.BackColor = default;
+                            textBox_StatusUUT13_VIN_F.ForeColor = default;
+                        }
+
+
+
+
+                        if (Is_BIT_is_On((byte)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber), 6) == 1)
+                        {
+
+                            textBox_StatusUUT12_CH1CS48V.BackColor = Color.Red;
+                        }
+                        else
+                        {
+                            textBox_StatusUUT12_CH1CS48V.BackColor = default;
+                        }
+
+
+
                         break;
 
 
@@ -16734,10 +17127,51 @@ namespace Monitor
         //bool timer_General_TranssmitionPeriodicallyEnable = false;
         //uint NumbeOfTransmmitions = 0;
         //private int progressBar_UserStatusTimer = -1;
-        
+
         //uint IntervalTimeBetweenTransmitions = 1;
+        bool ReadBothUUTAndSimulator = false;
+        void SendStatusPeriodically()
+        {
+            if(Timer1second % 7 ==0)
+            {
+
+                if (checkBox_SendStatusPerodically.Checked == true && checkBox_SendStatusSimulatorPeriodically.Checked == true)
+                {
+                    ReadBothUUTAndSimulator = !ReadBothUUTAndSimulator;
+                    if (ReadBothUUTAndSimulator == true)
+                    {
+                        button_GetStatus_Click(null, null);
+                    }
+                    else
+                    {
+                        button_GetStatusSimulator_Click(null, null);
+                    }
+
+
+                }
+                else
+                {
+                    if (checkBox_SendStatusSimulatorPeriodically.Checked == true)
+                    {
+                        //button_GetStatus.PerformClick();
+                        button_GetStatusSimulator_Click(null, null);
+                    }
+
+                    if (checkBox_SendStatusPerodically.Checked == true)
+                    {
+                        //button_GetStatus.PerformClick();
+                        button_GetStatus_Click(null, null);
+                    }
+                }
+                
+            }
+        }
+        int Timer1second = 0;
         private void Timer_General_Tick(object sender, EventArgs e)
         {
+            Timer1second++;
+
+
             if (textBox_SystemStatus_Timer > 0)
             {
                 textBox_SystemStatus_Timer--;
@@ -16755,29 +17189,9 @@ namespace Monitor
                 }
 
             }
+           // 
+            SendStatusPeriodically();
 
-
-
-
-
-            //if(progressBar_UserStatus.Value == 100)
-            //{
-            //    progressBar_UserStatus.ForeColor = Color.Green;
-            //    progressBar_UserStatusTimer = 2;
-            //}
-
-            //if (progressBar_UserStatusTimer > 0)
-            //{
-            //    progressBar_UserStatusTimer--;
-            //}
-            //else
-            //{
-            //    progressBar_UserStatus.Value = 0;
-            //    progressBar_UserStatus.ForeColor = default;
-            //    progressBar_UserStatusTimer--;
-
-            //    // CheckIfSerialPortOpen();
-            //}
 
             TCPClientConnection();
 
@@ -23682,29 +24096,32 @@ Note: eStatus enum 
 
         }
 
-        void Not_Implemented()
+        void Not_Implemented_Message()
         {
-            string message = "Gil: Not Implemented";
+            string message = "Gil Ramon: Not Implemented";
             MessageBox.Show(message);
         }
+
+
         private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
             CheckBox Checkbx = (CheckBox)sender;
-            Not_Implemented();
 
-            //if (Checkbx.Checked == true)
-            //{
-            //    textBox16.Text = "01";
+            
+            if (Checkbx.Checked == true)
+            {
 
-            //    Checkbx.BackColor = Color.LightGreen;
-            //}
-            //else
-            //{
-            //    textBox16.Text = "00";
-            //    Checkbx.BackColor = default;
-            //}
+                WriteRegisterSimulator_0x2();
 
-            //button117_Click(null, null);
+                Checkbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+
+                WriteRegisterSimulator_0x2();
+
+                Checkbx.BackColor = default;
+            }
         }
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
@@ -23848,7 +24265,7 @@ Note: eStatus enum 
 
         void testRFTextboxs()
         {
-            if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
+            if (float.TryParse(textBox_RFPeriod.Text, out float Period) &&
             float.TryParse(textBox_RFWidth.Text, out float Width) &&
             float.TryParse(textBox_RFDelay.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
@@ -23892,7 +24309,7 @@ Note: eStatus enum 
 
         void testPulseGenTextBoxs2()
         {
-            if (float.TryParse(textBox_PulsePeriod.Text, out float Period) &&
+            if (float.TryParse(textBox_PulsePeriod2.Text, out float Period) &&
             float.TryParse(textBox_PulseWidth2.Text, out float Width) &&
             float.TryParse(textBox_PulseDelay2.Text, out float Delay) &&
             CheckPeriodAndWidth(Period, Width, Delay) == true)
@@ -23947,14 +24364,7 @@ Note: eStatus enum 
                 }
             }
 
-            foreach (Control ctr in groupBox39.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "";
-                    ctr.BackColor = default;
-                }
-            }
+
 
             foreach (Control ctr in groupBox_Control1.Controls)
             {
@@ -24357,10 +24767,19 @@ Note: eStatus enum 
             SetTextBoxTextChangedColor((TextBox)sender);
         }
 
+        //private static object LockingVar = new object();
+
+        bool WaitForEnter = true;
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
 
-            int Delay = 100;
+            if (WaitForEnter == false)
+            {
+                return;
+            }
+            WaitForEnter = false;
+
+            int Delay = 500;
             if (serialPort.IsOpen == false)
             {
                 WriteToSystemStatus("Port is closed!", 4, Color.Orange);
@@ -24368,12 +24787,12 @@ Note: eStatus enum 
 
             }
 
-            groupBox_UUTVersion.Enabled = false;
-            groupBox_SimulatorVersion.Enabled = false;
-            groupBox_StatusUUT.Enabled = false;
-            groupBox_Control1.Enabled = false;
-            groupBox_Control2.Enabled = false;
-            groupBox_SystemMode.Enabled = false;
+            //groupBox_UUTVersion.Enabled = false;
+            //groupBox_SimulatorVersion.Enabled = false;
+            //groupBox_StatusUUT.Enabled = false;
+            //groupBox_Control1.Enabled = false;
+            //groupBox_Control2.Enabled = false;
+            //groupBox_SystemMode.Enabled = false;
 
 
             
@@ -24387,7 +24806,7 @@ Note: eStatus enum 
             await Task.Delay(Delay);
 
             Write_Register_To_UUT("00 01", "02 00");
-            await Task.Delay(100);
+            await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 03");
             await Task.Delay(Delay);
@@ -24411,17 +24830,16 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 81");
             await Task.Delay(Delay);
 
+            Read_Register_From_UUT("00 82");
+            await Task.Delay(Delay);
+
             //Read_Register_From_UUT("00 A5");
             //await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 9D","00 12");
             await Task.Delay(Delay);
 
-            Read_Register_From_Simulator("00 81");
-            await Task.Delay(Delay);
 
-            Read_Register_From_Simulator("00 CD");
-            await Task.Delay(Delay);
 
 
 
@@ -24432,18 +24850,16 @@ Note: eStatus enum 
                 await Task.Delay(2000);
             }
 
-            if (textBox_SimulatorFWDateVersion.Text == "")
-            {
-                button31_Click_1(null, null);
-               // await Task.Delay(500);
-            }
 
-            groupBox_UUTVersion.Enabled = true;
-            groupBox_SimulatorVersion.Enabled = true;
-            groupBox_StatusUUT.Enabled = true;
-            groupBox_Control1.Enabled = true;
-            groupBox_Control2.Enabled = true;
-            groupBox_SystemMode.Enabled = true;
+
+            //groupBox_UUTVersion.Enabled = true;
+            //groupBox_SimulatorVersion.Enabled = true;
+            //groupBox_StatusUUT.Enabled = true;
+            //groupBox_Control1.Enabled = true;
+            //groupBox_Control2.Enabled = true;
+            //groupBox_SystemMode.Enabled = true;
+
+            WaitForEnter = true;
 
         }
 
@@ -25456,7 +25872,7 @@ Note: eStatus enum 
             }
         }
 
-        async void WritePulseGenToSimulator()
+        void WritePulseGenToSimulator()
         {
 
             if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
@@ -25465,16 +25881,9 @@ Note: eStatus enum 
                 float.TryParse(textBox_PulseWidth.Text, out float Width);
                 float.TryParse(textBox_PulseDelay.Text, out float Delay);
 
-                //Write_Register_To_Simulator("00 0A",(Width * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0B",( Period * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0C", (Delay * 10).ToString("X4"));
-                //await Task.Delay(500);
 
                 Write_Register_To_Simulator("00 0A", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
-                await Task.Delay(300);
-                Write_Register_To_Simulator("00 16", ((int)(Period * 10)).ToString("X4"));
+
             }
         }
 
@@ -25487,27 +25896,9 @@ Note: eStatus enum 
                 float.TryParse(textBox_PulseWidth2.Text, out float Width);
                 float.TryParse(textBox_PulseDelay2.Text, out float Delay);
 
-                //Write_Register_To_Simulator("00 0A",(Width * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0B",( Period * 10).ToString("X4"));
-                //await Task.Delay(500);
-                //Write_Register_To_Simulator("00 0C", (Delay * 10).ToString("X4"));
-                //await Task.Delay(500);
 
                 Write_Register_To_Simulator("00 0D", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
 
-                //int.TryParse(textBox_PulsePeriod2.Text, out int Period);
-                //int.TryParse(textBox_PulseWidth2.Text, out int Width);
-                //int.TryParse(textBox_PulseDelay2.Text, out int Delay);
-
-                ////Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4"));
-                ////await Task.Delay(500);
-                ////Write_Register_To_Simulator("00 0E", (Period * 10).ToString("X4"));
-                ////await Task.Delay(500);
-                ////Write_Register_To_Simulator("00 0F", (Delay * 10).ToString("X4"));
-                ////await Task.Delay(500);
-
-                //Write_Register_To_Simulator("00 0D", (Width * 10).ToString("X4") + (Period * 10).ToString("X4") + (Delay * 10).ToString("X4"));
             }
         }
         private void textBox_RFWidth_KeyDown(object sender, KeyEventArgs e)
@@ -25561,7 +25952,7 @@ Note: eStatus enum 
             }
         }
 
-        private async void textBox_PulseWidth_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_PulseWidth_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
@@ -25570,10 +25961,10 @@ Note: eStatus enum 
                 {
 
                     WritePulseGenToSimulator();
-                    await Task.Delay(400);
-                    WritePulseGenToSimulator2();
-                    await Task.Delay(400);
-                    WriteRFWidthToSimulator();
+                    //await Task.Delay(400);
+                    //WritePulseGenToSimulator2();
+                    //await Task.Delay(400);
+                    //WriteRFWidthToSimulator();
 
 
 
@@ -27130,13 +27521,69 @@ This Process can take 1 minute.";
          //   tabControl_SSPA_WB_GUI.Enabled = true;
         }
 
+        int Simulator0x2Register = 0;
+        void WriteRegisterSimulator_0x2()
+        {
+            
+            if (checkBox_RFGen.Checked == true)
+            {
+                //intValue |= 1 << bitPosition;
+                Simulator0x2Register |= (1 << 2);
+            }
+            else
+            {
+                Simulator0x2Register &= (1 << 2);
+            }
+
+            if (checkBox_PulseGen.Checked == true)
+            {
+                Simulator0x2Register |= (1 << 0);
+            }
+            else
+            {
+                Simulator0x2Register &= (1 << 0);
+            }
+
+            if (checkBox_PulseGen2.Checked == true)
+            {
+                Simulator0x2Register |= (1 << 1);
+            }
+            else
+            {
+                Simulator0x2Register &= (1 << 1);
+            }
+
+            if (checkBox_TriggerClock.Checked == true)
+            {
+                Simulator0x2Register |= (1 << 4);
+            }
+            else
+            {
+                Simulator0x2Register &= (1 << 4);
+            }
+
+            if (checkBox_OVTcheck.Checked == true)
+            {
+                Simulator0x2Register |= (1 << 5);
+            }
+            else
+            {
+                Simulator0x2Register &= (1 << 5);
+            }
+
+
+
+
+            //num |= (8 << 1);
+            Write_Register_To_Simulator("00 02", Simulator0x2Register.ToString("X4"));
+        }
 
         private void checkBox_PulseGen_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-   
+
                 //checkBox_RFGen.Checked = true;
                 //checkBox_PulseGen2.Checked = true;
                 Checkbx.BackColor = Color.LightGreen;
@@ -27153,25 +27600,25 @@ This Process can take 1 minute.";
 
             }
 
+            WriteRegisterSimulator_0x2();
+            //int num = 0;
+            //if (checkBox_RFGen.Checked == true)
+            //{
+            //    //intValue |= 1 << bitPosition;
+            //    num |= (1 << 2);
+            //}
 
-            int num = 0;
-            if (checkBox_RFGen.Checked == true)
-            {
-                //intValue |= 1 << bitPosition;
-                num |= (1 << 2);
-            }
+            //if (checkBox_PulseGen.Checked == true)
+            //{
+            //    num |= (1 << 0);
+            //}
 
-            if (checkBox_PulseGen.Checked == true)
-            {
-                num |= (1 << 0);
-            }
-
-            if (checkBox_PulseGen2.Checked == true)
-            {
-                num |= (1 << 1);
-            }
-            num |= (8 << 1);
-            Write_Register_To_Simulator("00 02", num.ToString("X4"));
+            //if (checkBox_PulseGen2.Checked == true)
+            //{
+            //    num |= (1 << 1);
+            //}
+            //num |= (8 << 1);
+            //Write_Register_To_Simulator("00 02", num.ToString("X4"));
         }
 
         private void button59_Click_2(object sender, EventArgs e)
@@ -27493,7 +27940,7 @@ This Process can take 1 minute.";
 
         private async void button2_Click_3(object sender, EventArgs e)
         {
-            int Delay = 100;
+            int Delay = 500;
 
             foreach (DataGridView datagrid in List_AllDataGrids)
             {
@@ -27534,14 +27981,15 @@ for example: 41df
             CheckBox Checkbx = (CheckBox)sender;
             if (Checkbx.Checked == true)
             {
-                Write_Register_To_Simulator(" 00 02", "00 10");
+
+                WriteRegisterSimulator_0x2();
 
                 Checkbx.BackColor = Color.LightGreen;
             }
             else
             {
 
-                Write_Register_To_Simulator(" 00 02", "00 00");
+                WriteRegisterSimulator_0x2();
                 Checkbx.BackColor = default;
             }   
         }
@@ -28156,6 +28604,165 @@ for example: 41df
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void checkBox_SendStatusPerodically_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void button_GetStatusSimulator_Click(object sender, EventArgs e)
+        {
+            int Delay = 500;
+            Read_Register_From_Simulator("00 81");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 CD");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 02","00 28");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 18", "00 04");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 0A", "00 12");
+            await Task.Delay(Delay);
+
+
+
+            if (textBox_SimulatorFWDateVersion.Text == "")
+            {
+                button31_Click_1(null, null);
+            }
+        }
+
+        private void button_ClearSimulatorStatus_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctr in groupBox_SimulatorStatus.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                    ctr.BackColor = default;
+                }
+            }
+
+            foreach (Control ctr in groupBox_SimulatorControl.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                    ctr.BackColor = default;
+                }
+
+                if (ctr is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)ctr;
+                    //chk.BackColor = default;
+                    chk.Checked = false;
+                }
+
+                if (ctr is ComboBox)
+                {
+                    ComboBox chk = (ComboBox)ctr;
+                  //  chk.BackColor = default;
+                    chk.SelectedIndex = 0;
+                }
+            }
+
+            foreach (Control ctr in groupBox_SimulatorControl.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    ctr.BackColor = default;
+                }
+
+                if (ctr is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)ctr;
+                    chk.BackColor = default;
+                    chk.Checked = false;
+                }
+
+                if (ctr is ComboBox)
+                {
+                    ComboBox chk = (ComboBox)ctr;
+                    chk.BackColor = default;
+                    chk.SelectedIndex = 0;
+                }
+            }
+
+            foreach (Control ctr in groupBox_RFgen.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    ctr.BackColor = default;
+                }
+
+                if (ctr is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)ctr;
+                    chk.BackColor = default;
+                    chk.Checked = false;
+                }
+
+                if (ctr is ComboBox)
+                {
+                    ComboBox chk = (ComboBox)ctr;
+                    chk.BackColor = default;
+                    chk.SelectedIndex = 0;
+                }
+            }
+
+
+            foreach (Control ctr in groupBox_PulseGen.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    ctr.BackColor = default;
+                }
+
+                if (ctr is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)ctr;
+                    chk.BackColor = default;
+                    chk.Checked = false;
+                }
+
+                if (ctr is ComboBox)
+                {
+                    ComboBox chk = (ComboBox)ctr;
+                    chk.BackColor = default;
+                    chk.SelectedIndex = 0;
+                }
+            }
+
+            foreach (Control ctr in groupBox_PulseGen2.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "0";
+                    ctr.BackColor = default;
+                }
+
+                if (ctr is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)ctr;
+                    chk.BackColor = default;
+                    chk.Checked = false;
+                }
+
+                if (ctr is ComboBox)
+                {
+                    ComboBox chk = (ComboBox)ctr;
+                    chk.BackColor = default;
+                    chk.SelectedIndex = 0;
+                }
             }
         }
 
