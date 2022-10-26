@@ -15781,7 +15781,11 @@ namespace Monitor
 
 
                         break;
+                        
 
+                     case "0003":
+                        SimulatorRegister0x3 = UInt16.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        break;
                     case "0018":
                         textBox_StrobeDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
                         textBox_StrobeWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
@@ -16206,13 +16210,13 @@ namespace Monitor
                         //textBox_SPA_Ton.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_SPA_Toff.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
-                        textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
-                        textBox_Vgg2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                     //   textBox_Vgg1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                        textBox_9V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                        textBox_5V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                        textBox_4V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
-                        textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                     //   textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                     //   textBox_Vgg2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber)).ToString();
+                     ////   textBox_Vgg1.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 17, 2), System.Globalization.NumberStyles.HexNumber) >> 4).ToString();
+                     //   textBox_9V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 19, 2), System.Globalization.NumberStyles.HexNumber)).ToString();
+                     //   textBox_5V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber)).ToString();
+                     //   textBox_4V.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 23, 2), System.Globalization.NumberStyles.HexNumber)).ToString();
+                     //   textBox_28V.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 31, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 2), System.Globalization.NumberStyles.HexNumber).ToString();
 
                         //textBox_DCA1.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 33, 1), System.Globalization.NumberStyles.HexNumber).ToString();
@@ -23876,7 +23880,7 @@ Note: eStatus enum 
 
         async void SetU19Values()
         {
-            int Delay = 200;
+            int Delay = 400;
             Write_Register_To_UUT(" 00 30", "00 04");
             await Task.Delay(Delay);
 
@@ -23886,7 +23890,7 @@ Note: eStatus enum 
             Write_Register_To_UUT(" 00 01", "40 00");
             await Task.Delay(Delay);
 
-            Write_Register_To_UUT(" 00 12", (int.Parse(textBox_Vgg2.Text) << 4).ToString("X4") + (int.Parse(textBox_Vgg1.Text) << 4).ToString("X4") + (int.Parse(textBox_9V.Text) << 4).ToString("X4") + (int.Parse(textBox_5V.Text) << 4).ToString("X4") + (int.Parse(textBox_4V.Text) << 4).ToString("X4"));
+            Write_Register_To_UUT(" 00 12", (int.Parse(textBox_Vgg2.Text)).ToString("X4") + (int.Parse(textBox_Vgg1.Text) ).ToString("X4") + (int.Parse(textBox_9V.Text)).ToString("X4") + (int.Parse(textBox_5V.Text)).ToString("X4") + (int.Parse(textBox_4V.Text)).ToString("X4"));
             //Write_Register_To_UUT(" 00 12", int.Parse(textBox_9V.Text).ToString("X4") + int.Parse(textBox_Vgg1.Text).ToString("X4") + int.Parse(textBox_Vgg2.Text).ToString("X4") + int.Parse(textBox_5V.Text).ToString("X4") + int.Parse(textBox_4V.Text).ToString("X4"));
             await Task.Delay(Delay);
 
@@ -24406,7 +24410,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 0xFFFF)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -24426,7 +24430,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 0xFFFF)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -24446,7 +24450,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 0xFFFF)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -25285,7 +25289,7 @@ Note: eStatus enum 
             TextBox txtbox = (TextBox)sender;
             if (int.TryParse(txtbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 0xFFFF)
                 {
                     txtbox.BackColor = Color.LightGreen;
                 }
@@ -25507,7 +25511,7 @@ Note: eStatus enum 
             TextBox m_Textbox = (TextBox)sender;
             if (int.TryParse(m_Textbox.Text, out int Num) == true)
             {
-                if (Num >= 0 && Num <= 4095)
+                if (Num >= 0 && Num <= 0xFFFF)
                 {
                     m_Textbox.BackColor = Color.LightGreen;
                 }
@@ -26281,20 +26285,6 @@ Bit 2 - Enable Peripherals Debug All Peripherals enables by Force Command ONLY
                 if (m_TextBox.BackColor == Color.LightGreen)
                 {
                      SetU19Values();
-
-                    //Write_Register_To_UUT(" 00 30", "00 04");
-                    //await Task.Delay(Delay);
-
-                    //Write_Register_To_UUT(" 00 12", "FF FF");
-                    //await Task.Delay(Delay);
-
-                    //Write_Register_To_UUT(" 00 01", "40 00");
-                    //await Task.Delay(Delay);
-
-                    //Write_Register_To_UUT(" 00 12", (int.Parse(textBox_Vgg2.Text) << 4).ToString("X4") + (int.Parse(textBox_Vgg1.Text) << 4).ToString("X4") + (int.Parse(textBox_9V.Text) << 4).ToString("X4") + (int.Parse(textBox_5V.Text) << 4).ToString("X4") + (int.Parse(textBox_4V.Text) << 4).ToString("X4"));
-                    //await Task.Delay(Delay);
-
-                    //Write_Register_To_UUT(" 00 01", "08 00");
 
                 }
 
@@ -27127,16 +27117,20 @@ Input -  Freq bit (4, input to SSPA)	LSB
         }
 
 
+        UInt16 SimulatorRegister0x3 = 0;
         async void SendStrobe()
         {
+
+            Read_Register_From_Simulator("00 03");
+            await Task.Delay(400);
             float.TryParse(textBox_StrobeDelay.Text, out float Delay);
 
             float.TryParse(textBox_StrobeWidth.Text, out float Width);
 
-
+            SimulatorRegister0x3 |= (1 << 3);
             Write_Register_To_Simulator(" 00 18", ((int)(Delay * 10)).ToString("X4") + ((int)(Width * 10)).ToString("X4"));
             await Task.Delay(400);
-            Write_Register_To_Simulator(" 00 03", "00 1A");
+            Write_Register_To_Simulator(" 00 03", SimulatorRegister0x3.ToString("X4"));
             await Task.Delay(400);
             Write_Register_To_Simulator(" 00 01", "00 08");
         }
@@ -28645,7 +28639,6 @@ for example: 41df
                 if (ctr is TextBox)
                 {
                     ctr.Text = "";
-                    ctr.BackColor = default;
                 }
             }
 
@@ -28654,20 +28647,17 @@ for example: 41df
                 if (ctr is TextBox)
                 {
                     ctr.Text = "";
-                    ctr.BackColor = default;
                 }
 
                 if (ctr is CheckBox)
                 {
                     CheckBox chk = (CheckBox)ctr;
-                    //chk.BackColor = default;
                     chk.Checked = false;
                 }
 
                 if (ctr is ComboBox)
                 {
                     ComboBox chk = (ComboBox)ctr;
-                  //  chk.BackColor = default;
                     chk.SelectedIndex = 0;
                 }
             }
@@ -28677,20 +28667,17 @@ for example: 41df
                 if (ctr is TextBox)
                 {
                     ctr.Text = "0";
-                    ctr.BackColor = default;
                 }
 
                 if (ctr is CheckBox)
                 {
                     CheckBox chk = (CheckBox)ctr;
-                    chk.BackColor = default;
                     chk.Checked = false;
                 }
 
                 if (ctr is ComboBox)
                 {
                     ComboBox chk = (ComboBox)ctr;
-                    chk.BackColor = default;
                     chk.SelectedIndex = 0;
                 }
             }
@@ -28700,20 +28687,17 @@ for example: 41df
                 if (ctr is TextBox)
                 {
                     ctr.Text = "0";
-                    ctr.BackColor = default;
                 }
 
                 if (ctr is CheckBox)
                 {
                     CheckBox chk = (CheckBox)ctr;
-                    chk.BackColor = default;
                     chk.Checked = false;
                 }
 
                 if (ctr is ComboBox)
                 {
                     ComboBox chk = (ComboBox)ctr;
-                    chk.BackColor = default;
                     chk.SelectedIndex = 0;
                 }
             }
@@ -28724,20 +28708,17 @@ for example: 41df
                 if (ctr is TextBox)
                 {
                     ctr.Text = "0";
-                    ctr.BackColor = default;
                 }
 
                 if (ctr is CheckBox)
                 {
                     CheckBox chk = (CheckBox)ctr;
-                    chk.BackColor = default;
                     chk.Checked = false;
                 }
 
                 if (ctr is ComboBox)
                 {
                     ComboBox chk = (ComboBox)ctr;
-                    chk.BackColor = default;
                     chk.SelectedIndex = 0;
                 }
             }
