@@ -27120,18 +27120,18 @@ Input -  Freq bit (4, input to SSPA)	LSB
         UInt16 SimulatorRegister0x3 = 0;
         async void SendStrobe()
         {
-
+            int m_Delay = 500;
             Read_Register_From_Simulator("00 03");
-            await Task.Delay(400);
+            await Task.Delay(m_Delay);
             float.TryParse(textBox_StrobeDelay.Text, out float Delay);
 
             float.TryParse(textBox_StrobeWidth.Text, out float Width);
 
             SimulatorRegister0x3 |= (1 << 3);
             Write_Register_To_Simulator(" 00 18", ((int)(Delay * 10)).ToString("X4") + ((int)(Width * 10)).ToString("X4"));
-            await Task.Delay(400);
+            await Task.Delay(m_Delay);
             Write_Register_To_Simulator(" 00 03", SimulatorRegister0x3.ToString("X4"));
-            await Task.Delay(400);
+            await Task.Delay(m_Delay);
             Write_Register_To_Simulator(" 00 01", "00 08");
         }
         private void button_Strobe_Click(object sender, EventArgs e)
@@ -28649,17 +28649,17 @@ for example: 41df
                     ctr.Text = "";
                 }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+                //if (ctr is CheckBox)
+                //{
+                //    CheckBox chk = (CheckBox)ctr;
+                //    chk.Checked = false;
+                //}
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
+                //if (ctr is ComboBox)
+                //{
+                //    ComboBox chk = (ComboBox)ctr;
+                //    chk.SelectedIndex = 0;
+                //}
             }
 
             foreach (Control ctr in groupBox_SimulatorControl.Controls)
@@ -28669,17 +28669,17 @@ for example: 41df
                     ctr.Text = "0";
                 }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+                //if (ctr is CheckBox)
+                //{
+                //    CheckBox chk = (CheckBox)ctr;
+                //    chk.Checked = false;
+                //}
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
+                //if (ctr is ComboBox)
+                //{
+                //    ComboBox chk = (ComboBox)ctr;
+                //    chk.SelectedIndex = 0;
+                //}
             }
 
             foreach (Control ctr in groupBox_RFgen.Controls)
@@ -28689,17 +28689,17 @@ for example: 41df
                     ctr.Text = "0";
                 }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+                //if (ctr is CheckBox)
+                //{
+                //    CheckBox chk = (CheckBox)ctr;
+                //    chk.Checked = false;
+                //}
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
+                //if (ctr is ComboBox)
+                //{
+                //    ComboBox chk = (ComboBox)ctr;
+                //    chk.SelectedIndex = 0;
+                //}
             }
 
 
@@ -28710,17 +28710,17 @@ for example: 41df
                     ctr.Text = "0";
                 }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+                //if (ctr is CheckBox)
+                //{
+                //    CheckBox chk = (CheckBox)ctr;
+                //    chk.Checked = false;
+                //}
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
+                //if (ctr is ComboBox)
+                //{
+                //    ComboBox chk = (ComboBox)ctr;
+                //    chk.SelectedIndex = 0;
+                //}
             }
 
             foreach (Control ctr in groupBox_PulseGen2.Controls)
@@ -28731,19 +28731,19 @@ for example: 41df
                     ctr.BackColor = default;
                 }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.BackColor = default;
-                    chk.Checked = false;
-                }
+                //if (ctr is CheckBox)
+                //{
+                //    CheckBox chk = (CheckBox)ctr;
+                //    chk.BackColor = default;
+                //    chk.Checked = false;
+                //}
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.BackColor = default;
-                    chk.SelectedIndex = 0;
-                }
+                //if (ctr is ComboBox)
+                //{
+                //    ComboBox chk = (ComboBox)ctr;
+                //    chk.BackColor = default;
+                //    chk.SelectedIndex = 0;
+                //}
             }
         }
 
