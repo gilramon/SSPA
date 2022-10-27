@@ -26032,9 +26032,9 @@ Note: eStatus enum 
 
 
                     WritePulseGenToSimulator();
-                    await Task.Delay(400);
+                    await Task.Delay(600);
                     WritePulseGenToSimulator2();
-                    await Task.Delay(400);
+                    await Task.Delay(600);
                      WriteRFWidthToSimulator();
 
                 }
