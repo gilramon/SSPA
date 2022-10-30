@@ -25922,7 +25922,7 @@ Note: eStatus enum 
             }
         }
 
-        void WritePulseGenToSimulator()
+        async void WritePulseGenToSimulator()
         {
 
             if (textBox_PulseWidth.BackColor == Color.LightGreen && textBox_PulsePeriod.BackColor == Color.LightGreen && textBox_PulseDelay.BackColor == Color.LightGreen)
@@ -25933,7 +25933,8 @@ Note: eStatus enum 
 
 
                 Write_Register_To_Simulator("00 0A", ((int)(Width * 10)).ToString("X4") + ((int)(Period * 10)).ToString("X4") + ((int)(Delay * 10)).ToString("X4"));
-
+                await Task.Delay(500);
+                Write_Register_To_Simulator("00 16",  ((int)(Period * 10)).ToString("X4")) ;
             }
         }
 
@@ -26022,7 +26023,7 @@ Note: eStatus enum 
             }
         }
 
-        private async  void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
+        private void textBox_PulsePeriod_KeyDown(object sender, KeyEventArgs e)
         {
             TextBox m_TextBox = (TextBox)sender;
             if (e.KeyCode == Keys.Enter)
