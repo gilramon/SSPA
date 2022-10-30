@@ -26032,10 +26032,10 @@ Note: eStatus enum 
 
 
                     WritePulseGenToSimulator();
-                    await Task.Delay(600);
-                    WritePulseGenToSimulator2();
-                    await Task.Delay(600);
-                     WriteRFWidthToSimulator();
+                    //await Task.Delay(600);
+                    //WritePulseGenToSimulator2();
+                    //await Task.Delay(600);
+                    // WriteRFWidthToSimulator();
 
                 }
             }
@@ -27612,7 +27612,7 @@ This Process can take 1 minute.";
 
 
 
-            //num |= (8 << 1);
+            Simulator0x2Register |= (8 << 1);
             Write_Register_To_Simulator("00 02", Simulator0x2Register.ToString("X4"));
         }
 
@@ -27622,16 +27622,16 @@ This Process can take 1 minute.";
             if (Checkbx.Checked == true)
             {
 
-                checkBox_RFGen.Checked = true;
-                checkBox_PulseGen2.Checked = true;
+                //checkBox_RFGen.Checked = true;
+                //checkBox_PulseGen2.Checked = true;
                 Checkbx.BackColor = Color.LightGreen;
 
 
             }
             else
             {
-                checkBox_RFGen.Checked = false;
-                checkBox_PulseGen2.Checked = false;
+                //checkBox_RFGen.Checked = false;
+                //checkBox_PulseGen2.Checked = false;
                 Checkbx.BackColor = default;
             }
 
