@@ -5439,6 +5439,7 @@ namespace Monitor
             this.groupBox_SimulatorControl.Controls.Add(this.label107);
             this.groupBox_SimulatorControl.Controls.Add(this.label108);
             this.groupBox_SimulatorControl.Controls.Add(this.label109);
+            this.groupBox_SimulatorControl.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_SimulatorControl.Location = new System.Drawing.Point(876, 437);
             this.groupBox_SimulatorControl.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SimulatorControl.Name = "groupBox_SimulatorControl";
@@ -26659,35 +26660,35 @@ Input -  Freq bit (4, input to SSPA)	LSB
             }
         }
 
-        private async void Strobe()
-        {
-            if (textBox_StrobeDelay.BackColor == Color.LightGreen && textBox_StrobeWidth.BackColor == Color.LightGreen)
-            {
+        //private async void Strobe()
+        //{
+        //    if (textBox_StrobeDelay.BackColor == Color.LightGreen && textBox_StrobeWidth.BackColor == Color.LightGreen)
+        //    {
 
-                int.TryParse(textBox_StrobeDelay.Text, out int Delay);
+        //        int.TryParse(textBox_StrobeDelay.Text, out int Delay);
 
-                int.TryParse(textBox_StrobeWidth.Text, out int Width);
+        //        int.TryParse(textBox_StrobeWidth.Text, out int Width);
 
-                Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
-                await Task.Delay(500);
-                Write_Register_To_Simulator(" 00 03", "00 08");
-                await Task.Delay(500);
-                Write_Register_To_Simulator(" 00 01", "00 08");
+        //        Write_Register_To_Simulator(" 00 18", Delay.ToString("X4") + Width.ToString("X4"));
+        //        await Task.Delay(500);
+        //        Write_Register_To_Simulator(" 00 03", "00 08");
+        //        await Task.Delay(500);
+        //        Write_Register_To_Simulator("00 01", "00 08");
 
 
 
-            }
-        }
+        //    }
+        //}
 
-        private void textBox_StrobeWidth_KeyDown(object sender, KeyEventArgs e)
-        {
-            TextBox m_TextBox = (TextBox)sender;
-            if (e.KeyCode == Keys.Enter)
-            {
-                Strobe();
+        //private void textBox_StrobeWidth_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    TextBox m_TextBox = (TextBox)sender;
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        Strobe();
 
-            }
-        }
+        //    }
+        //}
 
         private void comboBox_FreqBit_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -27178,8 +27179,8 @@ Input -  Freq bit (4, input to SSPA)	LSB
             Write_Register_To_Simulator(" 00 18", ((int)(Delay * 10)).ToString("X4") + ((int)(Width * 10)).ToString("X4"));
             await Task.Delay(m_Delay);
             Write_Register_To_Simulator(" 00 03", SimulatorRegister0x3.ToString("X4"));
-            await Task.Delay(m_Delay);
-            Write_Register_To_Simulator(" 00 01", "00 08");
+            //await Task.Delay(m_Delay);
+            //Write_Register_To_Simulator("00 01", "00 08");
         }
         private void button_Strobe_Click(object sender, EventArgs e)
         {
