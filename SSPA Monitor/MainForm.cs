@@ -28698,109 +28698,109 @@ for example: 41df
                 }
             }
 
-            foreach (Control ctr in groupBox_SimulatorControl.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "";
-                }
+            //foreach (Control ctr in groupBox_SimulatorControl.Controls)
+            //{
+            //    if (ctr is TextBox)
+            //    {
+            //        ctr.Text = "";
+            //    }
 
-                //if (ctr is CheckBox)
-                //{
-                //    CheckBox chk = (CheckBox)ctr;
-                //    chk.Checked = false;
-                //}
+            //    //if (ctr is CheckBox)
+            //    //{
+            //    //    CheckBox chk = (CheckBox)ctr;
+            //    //    chk.Checked = false;
+            //    //}
 
-                //if (ctr is ComboBox)
-                //{
-                //    ComboBox chk = (ComboBox)ctr;
-                //    chk.SelectedIndex = 0;
-                //}
-            }
+            //    //if (ctr is ComboBox)
+            //    //{
+            //    //    ComboBox chk = (ComboBox)ctr;
+            //    //    chk.SelectedIndex = 0;
+            //    //}
+            //}
 
-            foreach (Control ctr in groupBox_SimulatorControl.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "0";
-                }
+            //foreach (Control ctr in groupBox_SimulatorControl.Controls)
+            //{
+            //    if (ctr is TextBox)
+            //    {
+            //        ctr.Text = "0";
+            //    }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+            //    if (ctr is CheckBox)
+            //    {
+            //        CheckBox chk = (CheckBox)ctr;
+            //        chk.Checked = false;
+            //    }
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
-            }
+            //    if (ctr is ComboBox)
+            //    {
+            //        ComboBox chk = (ComboBox)ctr;
+            //        chk.SelectedIndex = 0;
+            //    }
+            //}
 
-            foreach (Control ctr in groupBox_RFgen.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "0";
-                }
+            //foreach (Control ctr in groupBox_RFgen.Controls)
+            //{
+            //    if (ctr is TextBox)
+            //    {
+            //        ctr.Text = "0";
+            //    }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+            //    if (ctr is CheckBox)
+            //    {
+            //        CheckBox chk = (CheckBox)ctr;
+            //        chk.Checked = false;
+            //    }
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
-            }
+            //    if (ctr is ComboBox)
+            //    {
+            //        ComboBox chk = (ComboBox)ctr;
+            //        chk.SelectedIndex = 0;
+            //    }
+            //}
 
 
-            foreach (Control ctr in groupBox_PulseGen.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "0";
-                }
+            //foreach (Control ctr in groupBox_PulseGen.Controls)
+            //{
+            //    if (ctr is TextBox)
+            //    {
+            //        ctr.Text = "0";
+            //    }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.Checked = false;
-                }
+            //    if (ctr is CheckBox)
+            //    {
+            //        CheckBox chk = (CheckBox)ctr;
+            //        chk.Checked = false;
+            //    }
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.SelectedIndex = 0;
-                }
-            }
+            //    if (ctr is ComboBox)
+            //    {
+            //        ComboBox chk = (ComboBox)ctr;
+            //        chk.SelectedIndex = 0;
+            //    }
+            //}
 
-            foreach (Control ctr in groupBox_PulseGen2.Controls)
-            {
-                if (ctr is TextBox)
-                {
-                    ctr.Text = "0";
-                    ctr.BackColor = default;
-                }
+            //foreach (Control ctr in groupBox_PulseGen2.Controls)
+            //{
+            //    if (ctr is TextBox)
+            //    {
+            //        ctr.Text = "0";
+            //        ctr.BackColor = default;
+            //    }
 
-                if (ctr is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)ctr;
-                    chk.BackColor = default;
-                    chk.Checked = false;
-                }
+            //    if (ctr is CheckBox)
+            //    {
+            //        CheckBox chk = (CheckBox)ctr;
+            //        chk.BackColor = default;
+            //        chk.Checked = false;
+            //    }
 
-                if (ctr is ComboBox)
-                {
-                    ComboBox chk = (ComboBox)ctr;
-                    chk.BackColor = default;
-                    chk.SelectedIndex = 0;
-                }
-            }
+            //    if (ctr is ComboBox)
+            //    {
+            //        ComboBox chk = (ComboBox)ctr;
+            //        chk.BackColor = default;
+            //        chk.SelectedIndex = 0;
+            //    }
+            //}
         }
 
         private void comboBox_FreqBit_KeyDown(object sender, KeyEventArgs e)
