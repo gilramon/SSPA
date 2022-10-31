@@ -15728,19 +15728,19 @@ namespace Monitor
 
 
 
-                        short Simulator0x3_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
-                        if (Is_BIT_is_On(Simulator0x3_Register, 4) == 1)
-                        {
-                            checkBox_Preserve.Checked = false;
-                        }
-                        else
-                        {
-                            if (Is_BIT_is_On(Simulator0x3_Register, 5) == 1)
-                            {
-                                checkBox_Preserve.Checked = true;
-                            }
+                        //short Simulator0x3_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        //if (Is_BIT_is_On(Simulator0x3_Register, 4) == 1)
+                        //{
+                        //    checkBox_Preserve.Checked = false;
+                        //}
+                        //else
+                        //{
+                        //    if (Is_BIT_is_On(Simulator0x3_Register, 5) == 1)
+                        //    {
+                        //        checkBox_Preserve.Checked = true;
+                        //    }
 
-                        }
+                        //}
 
                         //Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber) & 0xF;
                         //comboBox_FreqBit.SelectedIndex = Num;
@@ -15774,6 +15774,22 @@ namespace Monitor
 
                         break;
 
+                    case "0003":
+                        short Simulator0x3_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        if (Is_BIT_is_On(Simulator0x3_Register, 4) == 1)
+                        {
+                            checkBox_Preserve.Checked = false;
+                        }
+                        else
+                        {
+                            if (Is_BIT_is_On(Simulator0x3_Register, 5) == 1)
+                            {
+                                checkBox_Preserve.Checked = true;
+                            }
+
+                        }
+                        break;
+
                     case "0005":
 
                         Num = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) & 0xF;
@@ -15801,7 +15817,22 @@ namespace Monitor
                         comboBox_CALSAR.SelectedIndex = Num;
 
 
-                        short Simulator0x9_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        //short Simulator0x9_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
+                        //if (Is_BIT_is_On(Simulator0x9_Register, 0) == 1)
+                        //{
+                        //    checkBox_DC4on.Checked = true;
+                        //}
+                        //else
+                        //{
+                        //    checkBox_DC4on.Checked = false;
+                        //}
+
+
+                        break;
+
+                    case "0009":
+
+                        short Simulator0x9_Register = short.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         if (Is_BIT_is_On(Simulator0x9_Register, 0) == 1)
                         {
                             checkBox_DC4on.Checked = true;
@@ -15811,13 +15842,12 @@ namespace Monitor
                             checkBox_DC4on.Checked = false;
                         }
 
-
                         break;
 
 
-                    case "0003":
-                        SimulatorRegister0x3 = UInt16.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
-                        break;
+                    //case "0003":
+                    //    SimulatorRegister0x3 = UInt16.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                    //    break;
 
                     case "0018":
                         textBox_StrobeDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
@@ -16303,13 +16333,13 @@ namespace Monitor
                         }
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_9V.Text = String.Format("{0}", DecimalNumber);
+                        textBox_Vgg2.Text = String.Format("{0}", DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_Vgg1.Text = String.Format("{0}", DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_Vgg2.Text = String.Format("{0}", DecimalNumber);
+                        textBox_9V.Text = String.Format("{0}", DecimalNumber);
 
                         //DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
                         //textBox_5V.Text = String.Format("{0}", DecimalNumber);
@@ -24867,6 +24897,8 @@ Note: eStatus enum 
         bool WaitForEnter = true;
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
+            //  Button btn = (Button)sender;
+            button_GetStatusUUT.BackColor = Color.Blue;
 
             if (WaitForEnter == false)
             {
@@ -24970,6 +25002,7 @@ Note: eStatus enum 
             //groupBox_SystemMode.Enabled = true;
 
             WaitForEnter = true;
+            button_GetStatusUUT.BackColor = Color.DeepSkyBlue;
 
         }
 
@@ -28711,6 +28744,9 @@ for example: 41df
 
         private async void button_GetStatusSimulator_Click(object sender, EventArgs e)
         {
+
+            button_GetStatusSimulator.BackColor = Color.Blue;
+
             int Delay = 500;
             Read_Register_From_Simulator("00 81");
             await Task.Delay(Delay);
@@ -28718,13 +28754,22 @@ for example: 41df
             Read_Register_From_Simulator("00 CD");
             await Task.Delay(Delay);
 
-            Read_Register_From_Simulator("00 02","00 06");
+            Read_Register_From_Simulator("00 02");
             await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 03");
+            await Task.Delay(Delay);
+
+            //Read_Register_From_Simulator("00 04");
+            //await Task.Delay(Delay);
 
             Read_Register_From_Simulator("00 05", "00 06");
             await Task.Delay(Delay);
 
-            Read_Register_From_Simulator("00 08", "00 04");
+            Read_Register_From_Simulator("00 08");
+            await Task.Delay(Delay);
+
+            Read_Register_From_Simulator("00 09");
             await Task.Delay(Delay);
 
             Read_Register_From_Simulator("00 18", "00 04");
@@ -28745,6 +28790,8 @@ for example: 41df
             {
                 button31_Click_1(null, null);
             }
+
+            button_GetStatusSimulator.BackColor = Color.DeepSkyBlue;
         }
 
         private void button_ClearSimulatorStatus_Click(object sender, EventArgs e)
