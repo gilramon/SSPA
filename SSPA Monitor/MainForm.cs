@@ -13346,79 +13346,97 @@ namespace Monitor
 
         }
 
-        bool IsFirstTimeUse = true;
+    //    bool IsFirstTimeUse = true;
         private void dataGridView_CopyPaste_KeyUP(object sender, KeyEventArgs e)
         {
             //if user clicked Shift+Ins or Ctrl+V (paste from clipboard)
             DataGridView grid = (DataGridView)sender;
-            if(IsFirstTimeUse == true)
-            {
-                IsFirstTimeUse = false;
-                WriteToSystemStatus("When Copy/pate to excel please use exactly the same size of table", 15, Color.Blue);
-            }
+            //if(IsFirstTimeUse == true)
+            //{
+            //    IsFirstTimeUse = false;
+            //    WriteToSystemStatus("When Copy/pate to excel please use exactly the same size of table", 15, Color.Blue);
+            //}
 
             if ((e.Shift && e.KeyCode == Keys.Insert) || (e.Control && e.KeyCode == Keys.V))
 
             {
-
-                char[] rowSplitter = { '\r', '\n' };
-
-                char[] columnSplitter = { '\t' };
-
-                //get the text from clipboard
-
-                IDataObject dataInClipboard = Clipboard.GetDataObject();
-
-                string stringInClipboard = (string)dataInClipboard.GetData(DataFormats.Text);
-
-                //split it into lines
-
-                string[] rowsInClipboard = stringInClipboard.Split(rowSplitter, StringSplitOptions.RemoveEmptyEntries);
-
-                //get the row and column of selected cell in grid
-
-                int r = grid.SelectedCells[0].RowIndex;
-
-                int c = grid.SelectedCells[0].ColumnIndex;
-
-                //add rows into grid to fit clipboard lines
-
-                if (grid.Rows.Count < (r + rowsInClipboard.Length))
-
+                try
                 {
+                    char[] rowSplitter = { '\r', '\n' };
 
-                    grid.Rows.Add(r + rowsInClipboard.Length - grid.Rows.Count);
+                    char[] columnSplitter = { '\t' };
 
-                }
+                    //get the text from clipboard
 
-                // loop through the lines, split them into cells and place the values in the corresponding cell.
+                    IDataObject dataInClipboard = Clipboard.GetDataObject();
 
-                for (int iRow = 0; iRow < rowsInClipboard.Length; iRow++)
+                    string stringInClipboard = (string)dataInClipboard.GetData(DataFormats.Text);
 
-                {
+                    //split it into lines
 
-                    //split row into cell values
+                    string[] rowsInClipboard = stringInClipboard.Split(rowSplitter, StringSplitOptions.RemoveEmptyEntries);
 
-                    string[] valuesInRow = rowsInClipboard[iRow].Split(columnSplitter);
 
-                    //cycle through cell values
+                    int RowIndex = grid.SelectedCells[0].RowIndex;
 
-                    for (int iCol = 0; iCol < valuesInRow.Length; iCol++)
+                    int ColumnIndex = grid.SelectedCells[0].ColumnIndex;
+                    string[] valuesInRow = rowsInClipboard[0].Split(columnSplitter);
+                    if (rowsInClipboard.Length == 1 && valuesInRow.Length == 1)
+                    { 
+                            Int32 selectedCellCount = grid.GetCellCount(DataGridViewElementStates.Selected);
+                            if (selectedCellCount > 0)
+                            {
+                                if (grid.AreAllCellsSelected(true))
+                                {
+                                    //MessageBox.Show("All cells are selected", "Selected Cells");
+                                }
+                                else
+                                {
+                                    for (int i = 0;i < selectedCellCount; i++)
+                                    {
+                                        grid.SelectedCells[i].Value = valuesInRow[0];
+                                    }
+                                }
+                            }
+                        
+                    }
 
+                    //get the row and column of selected cell in grid
+
+                    //add rows into grid to fit clipboard lines
+
+                    //if (grid.Rows.Count < (r + rowsInClipboard.Length))
+
+                    //{
+
+                    //    grid.Rows.Add(r + rowsInClipboard.Length - grid.Rows.Count);
+
+                    //}
+
+                    // loop through the lines, split them into cells and place the values in the corresponding cell.
+
+                    for (int iRow = 0; iRow < rowsInClipboard.Length && iRow < grid.Rows.Count; iRow++)
                     {
-
-                        //assign cell value, only if it within columns of the grid
-
-                        if (grid.ColumnCount - 1 >= c + iCol)
+                        //split row into cell values
+                        valuesInRow = rowsInClipboard[iRow].Split(columnSplitter);
+                        //cycle through cell values
+                        for (int iCol = 0; iCol < valuesInRow.Length && iCol < grid.ColumnCount; iCol++)
 
                         {
+                            //assign cell value, only if it within columns of the grid
+                            if (grid.ColumnCount - 1 >= ColumnIndex + iCol)
 
-                            grid.Rows[r + iRow].Cells[c + iCol].Value = valuesInRow[iCol];
-
+                            {
+                                grid.Rows[RowIndex + iRow].Cells[ColumnIndex + iCol].Value = valuesInRow[iCol];
+                            }
                         }
 
                     }
-
+                }
+                catch
+                {
+                 //   WriteToSystemStatus(ex.Message, 4, Color.Orange);
+                    return;
                 }
 
             }
