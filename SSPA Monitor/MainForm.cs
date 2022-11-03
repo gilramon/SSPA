@@ -13386,17 +13386,17 @@ namespace Monitor
                             Int32 selectedCellCount = grid.GetCellCount(DataGridViewElementStates.Selected);
                             if (selectedCellCount > 0)
                             {
-                                if (grid.AreAllCellsSelected(true))
-                                {
-                                    //MessageBox.Show("All cells are selected", "Selected Cells");
-                                }
-                                else
-                                {
+                                //if (grid.AreAllCellsSelected(true))
+                                //{
+                                //    //MessageBox.Show("All cells are selected", "Selected Cells");
+                                //}
+                                //else
+                                //{
                                     for (int i = 0;i < selectedCellCount; i++)
                                     {
                                         grid.SelectedCells[i].Value = valuesInRow[0];
                                     }
-                                }
+                              //  }
                             }
                         
                     }
@@ -15873,22 +15873,22 @@ namespace Monitor
 
 
                     case "0010":
-                        textBox_RFPeriod.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_RFWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_RFDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_RFPeriod.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_RFWidth.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_RFDelay.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
 
                         break;
 
                     case "000D":
-                        textBox_PulsePeriod2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_PulseWidth2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_PulseDelay2.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulsePeriod2.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseWidth2.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseDelay2.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
                         break;
 
                     case "000A":
-                        textBox_PulsePeriod.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_PulseWidth.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
-                        textBox_PulseDelay.Text = (int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulsePeriod.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 5, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseWidth.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
+                        textBox_PulseDelay.Text = ((float)int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber) / 10).ToString();
 
                         break;
 
@@ -15935,12 +15935,12 @@ namespace Monitor
                         break;
 
                     case "00CD":
-                       int Temperature = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
+                        int Temperature = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         sbyte temp = (sbyte)(Temperature >> 8);
                         double FinalResult = temp;
 
                         //Gil: from the datasheet of the temperature sensor
-                        if(( (Temperature >> 7) & 0x1) == 1)
+                        if (((Temperature >> 7) & 0x1) == 1)
                         {
                             FinalResult += 0.5;
                         }
@@ -15958,10 +15958,11 @@ namespace Monitor
                         break;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+
             }
+
         }
         
 
@@ -16043,9 +16044,9 @@ namespace Monitor
             
                 
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
             }
         }
 
@@ -16058,6 +16059,8 @@ namespace Monitor
                 i_grid.Rows[i].Cells[0].Value = GetBytesFromData(i_Parsedframe.Data, (i * 2) + 5, 2);
 
             }
+
+            
         }
 
         void ReadFlashACKReceived(KratosProtocolFrame i_Parsedframe)
@@ -16253,13 +16256,14 @@ namespace Monitor
                         break;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+
             }
+
         }
 
-    private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
+        private void ReadRegisterAckFrameUUT(KratosProtocolFrame i_Parsedframe)
         {
             int DecimalNumber;
             try
@@ -16342,6 +16346,10 @@ namespace Monitor
                         textBox_SystemFWDateVersion.Text += "," + int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber).ToString();
                         break;
 
+                    case "009C":
+                        textBox_VVA.Text = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber).ToString();
+                        break;
+                        
                     case "009D":
 
                         if (i_Parsedframe.Data.Length < 6)
@@ -16579,8 +16587,9 @@ namespace Monitor
                         //DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 7, 2), System.Globalization.NumberStyles.HexNumber);
                         //textBox_Vgg1.Text = String.Format("{0}", DecimalNumber);
 
+                        
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 9, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_VVAoff1.Text = String.Format("{0}", DecimalNumber);
+                        textBox_VVAoff1.Text = String.Format("{0}", (short)DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 11, 1), System.Globalization.NumberStyles.HexNumber) ;
                         textBox_DCA1.Text = String.Format("{0}", DecimalNumber );
@@ -16589,10 +16598,10 @@ namespace Monitor
                         textBox_DCA2.Text = String.Format("{0}", DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 13, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_VVAoff2.Text = String.Format("{0}", DecimalNumber);
+                        textBox_VVAoff2.Text = String.Format("{0}", (short)DecimalNumber);
 
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 15, 2), System.Globalization.NumberStyles.HexNumber);
-                        textBox_Vddoff1.Text = String.Format("{0}", DecimalNumber);
+                        textBox_Vddoff1.Text = String.Format("{0}", (short)DecimalNumber);
 
                         //DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 21, 2), System.Globalization.NumberStyles.HexNumber);
                         //textBox_MPA_Ton.Text = String.Format("{0}", DecimalNumber);
@@ -16801,9 +16810,9 @@ namespace Monitor
                         break;
                 }
             }
-            catch(Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                
             }
         }
 
@@ -24907,8 +24916,8 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 82");
             await Task.Delay(Delay);
 
-            //Read_Register_From_UUT("00 A5");
-            //await Task.Delay(Delay);
+            Read_Register_From_UUT("00 9C");
+            await Task.Delay(Delay);
 
             Read_Register_From_UUT("00 9D","00 06");
             await Task.Delay(Delay);
@@ -26940,9 +26949,18 @@ Input -  Freq bit (4, input to SSPA)	LSB
 
                             if (buffer != null && buffer.Length == 2)
                             {
+                                if (m_DataGrid.Name == "dataGridView_Block04" || m_DataGrid.Name == "dataGridView_Block06" || m_DataGrid.Name == "dataGridView_Block07")
+                                {
                                 m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
-                                m_DataGrid.Rows[RowIndex].Cells[1].Value = int.Parse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), System.Globalization.NumberStyles.HexNumber);
+                                m_DataGrid.Rows[RowIndex].Cells[1].Value = short.Parse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), System.Globalization.NumberStyles.HexNumber);
                                 m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.LightGreen;
+                            }
+                                else
+                                {
+                                    m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
+                                    m_DataGrid.Rows[RowIndex].Cells[1].Value = int.Parse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), System.Globalization.NumberStyles.HexNumber);
+                                    m_DataGrid.Rows[RowIndex].Cells[1].Style.BackColor = Color.LightGreen;
+                                }
                             }
                             else
                             {
@@ -26952,14 +26970,30 @@ Input -  Freq bit (4, input to SSPA)	LSB
                         break;
 
                     case 1:
-                        if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data>=0 && Data<=65535)
+                        if (m_DataGrid.Name == "dataGridView_Block04" || m_DataGrid.Name == "dataGridView_Block06" || m_DataGrid.Name == "dataGridView_Block07")
                         {
-                            m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
-                            m_DataGrid.Rows[RowIndex].Cells[0].Value = Data.ToString("X4");
+                            if (short.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out short Data) == true )
+                            {
+                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
+                                m_DataGrid.Rows[RowIndex].Cells[0].Value = Data.ToString("X4");
+                            }
+                            else
+                            {
+                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
+                            }
                         }
                         else
                         {
-                            m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
+
+                            if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data >= 0 && Data <= 65535)
+                            {
+                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
+                                m_DataGrid.Rows[RowIndex].Cells[0].Value = Data.ToString("X4");
+                            }
+                            else
+                            {
+                                m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.OrangeRed;
+                            }
                         }
 
                         if(m_DataGrid.Name == "dataGridView_Block01")
@@ -27044,7 +27078,7 @@ Input -  Freq bit (4, input to SSPA)	LSB
                         {
 
                             //int CellValue = int.Parse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString());
-                            if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString(), out int CellValue) == true)
+                            if (short.TryParse(m_DataGrid.Rows[RowIndex].Cells[1].Value.ToString(), out short CellValue) == true)
                             {
                                 int RowNum = (RowIndex % 16);
                                 int ColumnNum = (RowIndex / 16);
@@ -28464,11 +28498,11 @@ for example: 41df
                 }
 
 
-                if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data >= 0 && Data <= 65535)
+                if (short.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out short Data) == true )
                 {
                     m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
 
-                    dataGridView_Block06.Rows[RowIndex + (CoulumnIndex * 16)].Cells[1].Value = m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value;
+                    dataGridView_Block06.Rows[RowIndex + (CoulumnIndex * 16)].Cells[1].Value = Data;
                     
                 }
                 else
@@ -28560,11 +28594,11 @@ for example: 41df
                 }
 
 
-                if (int.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out int Data) == true && Data >= 0 && Data <= 65535)
+                if (short.TryParse(m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value.ToString(), out short Data) == true)
                 {
                     m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Style.BackColor = Color.LightGreen;
 
-                    dataGridView_Block07.Rows[RowIndex + (CoulumnIndex * 16)].Cells[1].Value = m_DataGrid.Rows[RowIndex].Cells[CoulumnIndex].Value;
+                    dataGridView_Block07.Rows[RowIndex + (CoulumnIndex * 16)].Cells[1].Value = Data;
 
                 }
                 else
