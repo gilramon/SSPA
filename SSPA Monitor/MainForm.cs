@@ -16787,16 +16787,61 @@ This Process can take 1 minute.";
             }
         }
 
-        private String ParseCLICommand(String i_Command)
+        void WriteToRegister()
         {
-            return "OK";
+          //  return "WriteToReg";
+        }
+
+        void ReadFromRegister()
+        {
+            //return "ReadFromReg";
+        }
+        void ExectuteCommand(String i_Command)
+        {
+            switch(i_Command)
+            {
+                case "WriteReg":
+                     WriteToRegister();
+                    break;
+
+                case "ReadReg":
+                    ReadFromRegister();
+                    break;
+
+                default:
+                    SystemLogger.LogMessage(Color.Orange, Color.LightGray, String.Format("[{0}] command not implemented", i_Command), true, true);
+                    break;
+
+            }
+
+           // return ret;
+        }
+
+        private bool ParseCLICommand(String i_Command)
+        {
+            String[] tempStr = i_Command.Split(' ');
+            bool ret = false;
+            foreach (CommandClass cmd in List_AllCommands)
+            {
+                if(cmd.Command_name == tempStr[0])
+                {
+                    ret = true;
+                    ExectuteCommand(cmd.Command_name);
+                }
+            }
+            if(ret == false)
+            {
+                SystemLogger.LogMessage(Color.OrangeRed, Color.White, String.Format("[{0}] command not implemented", tempStr[0]), New_Line = true, Show_Time = true);
+            }
+
+            return ret;
 
         }
 
         private void button_CLISend_Click(object sender, EventArgs e)
         {
-            String ret = ParseCLICommand(textBox_CLISendCommands.Text);
-            if (ret == "OK")
+            bool IsCommandFound = ParseCLICommand(textBox_CLISendCommands.Text);
+            if (IsCommandFound == true)
             {
                 UpdateCommandCLIHistory(textBox_CLISendCommands.Text);
 
@@ -16809,7 +16854,7 @@ This Process can take 1 minute.";
             }
             else
             {
-                SystemLogger.LogMessage(Color.OrangeRed, Color.White, ret, New_Line = true, Show_Time = true);
+                
             }
 
             if (checkBox_CLIDeleteAfterSend.Checked == true)
