@@ -33,18 +33,9 @@
     <Setting Name="CLICommad_History" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;string&gt;1&lt;/string&gt;
-  &lt;string&gt;2&lt;/string&gt;
-  &lt;string&gt;3&lt;/string&gt;
-  &lt;string&gt;4&lt;/string&gt;
-  &lt;string&gt;5&lt;/string&gt;
-  &lt;string&gt;6&lt;/string&gt;
-  &lt;string&gt;7&lt;/string&gt;
-  &lt;string&gt;8&lt;/string&gt;
-  &lt;string&gt;9&lt;/string&gt;
-  &lt;string&gt;10&lt;/string&gt;
-  &lt;string&gt;11&lt;/string&gt;
-  &lt;string&gt;12&lt;/string&gt;
+  &lt;string&gt;WriteReg&lt;/string&gt;
+  &lt;string&gt;ReadReg&lt;/string&gt;
+  &lt;string&gt;SetAll Parameters&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>

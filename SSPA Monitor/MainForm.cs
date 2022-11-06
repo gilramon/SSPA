@@ -387,10 +387,10 @@ namespace Monitor
         private CheckBox checkBox_CLIDeleteAfterSend;
         private Button button_CLISend;
         private GroupBox groupBox_AllCommands;
-        private Label label75;
         private TextBox textBox_CommandHelp;
         private TextBox txtDataTx;
         private Button button_DeleteCommandsHistory;
+        private GroupBox groupBox_Help;
         private static readonly string PREAMBLE = "23";
 
 
@@ -576,7 +576,6 @@ namespace Monitor
             this.tabControl_System = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox_AllCommands = new System.Windows.Forms.GroupBox();
-            this.label75 = new System.Windows.Forms.Label();
             this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
             this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
             this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
@@ -790,6 +789,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox_Help = new System.Windows.Forms.GroupBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -849,6 +849,7 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.groupBox_Help.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2392,7 +2393,7 @@ namespace Monitor
             this.tabPage_Commands.Name = "tabPage_Commands";
             this.tabPage_Commands.Size = new System.Drawing.Size(1414, 659);
             this.tabPage_Commands.TabIndex = 11;
-            this.tabPage_Commands.Text = "T CLI";
+            this.tabPage_Commands.Text = "3036 - mIFRS CLI";
             this.tabPage_Commands.UseVisualStyleBackColor = true;
             // 
             // groupBox40
@@ -2405,7 +2406,7 @@ namespace Monitor
             this.groupBox40.Size = new System.Drawing.Size(886, 642);
             this.groupBox40.TabIndex = 11;
             this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "System CLI";
+            this.groupBox40.Text = "3036 - mIFRS CLI";
             // 
             // tabControl_System
             // 
@@ -2433,8 +2434,7 @@ namespace Monitor
             // 
             // groupBox_AllCommands
             // 
-            this.groupBox_AllCommands.Controls.Add(this.label75);
-            this.groupBox_AllCommands.Controls.Add(this.textBox_CommandHelp);
+            this.groupBox_AllCommands.Controls.Add(this.groupBox_Help);
             this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
             this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
             this.groupBox_AllCommands.Name = "groupBox_AllCommands";
@@ -2443,23 +2443,14 @@ namespace Monitor
             this.groupBox_AllCommands.TabStop = false;
             this.groupBox_AllCommands.Text = "Command list";
             // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(378, 20);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(41, 18);
-            this.label75.TabIndex = 115;
-            this.label75.Text = "Help:";
-            // 
             // textBox_CommandHelp
             // 
-            this.textBox_CommandHelp.Location = new System.Drawing.Point(377, 44);
+            this.textBox_CommandHelp.Location = new System.Drawing.Point(5, 19);
             this.textBox_CommandHelp.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CommandHelp.Multiline = true;
             this.textBox_CommandHelp.Name = "textBox_CommandHelp";
             this.textBox_CommandHelp.ReadOnly = true;
-            this.textBox_CommandHelp.Size = new System.Drawing.Size(192, 190);
+            this.textBox_CommandHelp.Size = new System.Drawing.Size(359, 350);
             this.textBox_CommandHelp.TabIndex = 114;
             this.textBox_CommandHelp.TabStop = false;
             // 
@@ -2467,14 +2458,11 @@ namespace Monitor
             // 
             this.listBox_CLI_ALLCommands.FormattingEnabled = true;
             this.listBox_CLI_ALLCommands.ItemHeight = 18;
-            this.listBox_CLI_ALLCommands.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
             this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
             this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
             this.listBox_CLI_ALLCommands.TabIndex = 71;
+            this.listBox_CLI_ALLCommands.SelectedIndexChanged += new System.EventHandler(this.listBox_CLI_ALLCommands_SelectedIndexChanged);
             // 
             // groupBox_CLISendCommand
             // 
@@ -4725,13 +4713,23 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // groupBox_Help
+            // 
+            this.groupBox_Help.Controls.Add(this.textBox_CommandHelp);
+            this.groupBox_Help.Location = new System.Drawing.Point(378, 18);
+            this.groupBox_Help.Name = "groupBox_Help";
+            this.groupBox_Help.Size = new System.Drawing.Size(369, 372);
+            this.groupBox_Help.TabIndex = 115;
+            this.groupBox_Help.TabStop = false;
+            this.groupBox_Help.Text = "Help";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1509, 677);
+            this.ClientSize = new System.Drawing.Size(1526, 694);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -4746,9 +4744,9 @@ namespace Monitor
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
-            this.Text = "3041 - T project";
+            this.Text = "3036 - mIFRS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed_1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox_ServerSettings.ResumeLayout(false);
             this.groupBox_ServerSettings.PerformLayout();
@@ -4786,7 +4784,6 @@ namespace Monitor
             this.tabControl_System.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox_AllCommands.ResumeLayout(false);
-            this.groupBox_AllCommands.PerformLayout();
             this.groupBox_CLISendCommand.ResumeLayout(false);
             this.groupBox_CLISendCommand.PerformLayout();
             this.groupBox32.ResumeLayout(false);
@@ -4849,12 +4846,14 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.groupBox_Help.ResumeLayout(false);
+            this.groupBox_Help.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         private readonly List<string> CommandsHistoy = new List<string>();
-     //   private readonly List<string> CLI_CommandsHistoy = new List<string>();
+        //   private readonly List<string> CLI_CommandsHistoy = new List<string>();
         private int HistoryIndex = -1;
         private int CLI_HistoryIndex = -1;
         // bool SelfMonitorCommandsMode = false;
@@ -5556,7 +5555,46 @@ namespace Monitor
         //readonly System1_parser system1_Parser = new System1_parser();
 
         static List<DataGridView> List_AllDataGrids = new List<DataGridView>();
+        static List<CommandClass> List_AllCommands = new List<CommandClass>();
+        void SetAllCLIcommands()
+            {
+            CommandClass WriteReg = new CommandClass("WriteReg",
+@"
+Description: 
+Write to Register 
 
+Syntax:
+WriteReg address[2 bytes] data[2 bytes]
+
+Example:
+
+WriteReg 0x48BF 0xFFFF ---> Write to Register 0x48BF data 0xFFFF
+");
+
+            List_AllCommands.Add(WriteReg);
+
+            CommandClass ReadReg = new CommandClass("ReadReg",
+@"
+Description: 
+Read From Register 
+
+Syntax:
+ReadReg address[2 bytes]
+
+Example:
+
+ReadReg 0x48BF ---> Read from Register 0x48BF
+");
+
+            List_AllCommands.Add(ReadReg);
+
+
+            foreach(CommandClass cmd in List_AllCommands)
+            {
+                listBox_CLI_ALLCommands.Items.Add(cmd.Command_name);
+            }
+
+        }
         //List_AllDataGrids.Add(dataGridView_Block00);
         // List<S1_Protocol.S1_Messege_Builder.Command_Description> CommandsDescription;
         private void MainForm_Load(object sender, EventArgs e)
@@ -5565,12 +5603,12 @@ namespace Monitor
             {
 
 
-                //tabControl_Main.TabPages.RemoveAt(0);
-                //tabControl_Main.TabPages.RemoveAt(0);
+                tabControl_Main.TabPages.RemoveAt(0);
+                tabControl_Main.TabPages.RemoveAt(0);
                 //tabControl_Main.TabPages.RemoveAt(0);
 
 
-
+                SetAllCLIcommands();
 
                 chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.###E+0";
 
@@ -5725,6 +5763,8 @@ namespace Monitor
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseClentConnection();
+            m_Exit = true;
+            System.GC.Collect();
         }
 
         //Color Tab0Color;
@@ -16798,6 +16838,11 @@ This Process can take 1 minute.";
             }
         }
 
+        private void listBox_CLI_ALLCommands_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox_CommandHelp.Text = List_AllCommands[listBox_CLI_ALLCommands.SelectedIndex].Help;
+        }
+
         private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyData == Keys.Tab)
@@ -16916,4 +16961,17 @@ This Process can take 1 minute.";
 
         //}
     }
+}
+
+class CommandClass
+{
+    public String Command_name = "";
+    public String Help = "";
+
+    public CommandClass(String i_CommandName, String i_Help)
+    {
+        Command_name = i_CommandName;
+        Help = i_Help;
+    }
+
 }
