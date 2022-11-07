@@ -452,8 +452,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2452,12 +2452,13 @@ namespace Monitor
             // 
             this.groupBox_AllCommands.Controls.Add(this.groupBox_Help);
             this.groupBox_AllCommands.Controls.Add(this.listBox_CLI_ALLCommands);
+            this.groupBox_AllCommands.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
             this.groupBox_AllCommands.Name = "groupBox_AllCommands";
             this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 445);
             this.groupBox_AllCommands.TabIndex = 72;
             this.groupBox_AllCommands.TabStop = false;
-            this.groupBox_AllCommands.Text = "Command list";
+            this.groupBox_AllCommands.Text = "Commands list";
             // 
             // groupBox_Help
             // 
@@ -2471,22 +2472,23 @@ namespace Monitor
             // 
             // textBox_CommandHelp
             // 
+            this.textBox_CommandHelp.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_CommandHelp.Location = new System.Drawing.Point(5, 19);
             this.textBox_CommandHelp.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CommandHelp.Multiline = true;
             this.textBox_CommandHelp.Name = "textBox_CommandHelp";
             this.textBox_CommandHelp.ReadOnly = true;
-            this.textBox_CommandHelp.Size = new System.Drawing.Size(359, 350);
+            this.textBox_CommandHelp.Size = new System.Drawing.Size(359, 411);
             this.textBox_CommandHelp.TabIndex = 114;
             this.textBox_CommandHelp.TabStop = false;
             // 
             // listBox_CLI_ALLCommands
             // 
             this.listBox_CLI_ALLCommands.FormattingEnabled = true;
-            this.listBox_CLI_ALLCommands.ItemHeight = 18;
+            this.listBox_CLI_ALLCommands.ItemHeight = 19;
             this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
-            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
+            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 403);
             this.listBox_CLI_ALLCommands.TabIndex = 2;
             this.listBox_CLI_ALLCommands.Click += new System.EventHandler(this.listBox_CLI_ALLCommands_Click);
             this.listBox_CLI_ALLCommands.SelectedIndexChanged += new System.EventHandler(this.listBox_CLI_ALLCommands_SelectedIndexChanged);
@@ -2883,17 +2885,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -16780,10 +16782,10 @@ This Process can take 1 minute.";
             }
 
             // Gil Ramon: If the is a syntax problem the command function return the message.
-            if(ret != "")
-            {
-                SystemLogger.LogMessage(Color.Black, Color.Orange, ret, true, true);
-            }
+            //if(ret != "")
+            //{
+            //    SystemLogger.LogMessage(Color.Black, Color.Orange, ret, true, true);
+            //}
 
 
             //SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
@@ -16797,10 +16799,12 @@ This Process can take 1 minute.";
         {
             String[] tempStr = i_Command.Split(' ');
             String ret = "";
+            bool IsCommandFound = false;
             foreach (CommandClass cmd in List_AllCommands)
             {
                 if(cmd.Command_name == tempStr[0])
                 {
+                    IsCommandFound = true;
 
                     SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                     SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
@@ -16809,12 +16813,18 @@ This Process can take 1 minute.";
                     UpdateCommandCLIHistory(i_Command);
 
                     ret = ExectuteOrCheckValidityCommand(cmd.Command_name, false);
+
+                    if (ret != "")
+                    {
+                        SystemLogger.LogMessage(Color.DarkOrange, Color.White, ret, New_Line = true, Show_Time = true);
+                    }
                 }
             }
-            if(ret != "")
+            if (IsCommandFound == false)
             {
-                SystemLogger.LogMessage(Color.OrangeRed, Color.White, ret, New_Line = true, Show_Time = true);
+                SystemLogger.LogMessage(Color.DarkOrange, Color.White, String.Format(" command '{0}' is not found", tempStr[0]), New_Line = true, Show_Time = true);
             }
+
 
         }
 
