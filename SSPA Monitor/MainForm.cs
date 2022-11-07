@@ -452,8 +452,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -593,6 +593,10 @@ namespace Monitor
             this.textBox_CLISendCommands = new System.Windows.Forms.TextBox();
             this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
             this.button_CLISend = new System.Windows.Forms.Button();
+            this.tabPage2_Script = new System.Windows.Forms.TabPage();
+            this.button_RunScript = new System.Windows.Forms.Button();
+            this.richTextBox_Scripts = new System.Windows.Forms.RichTextBox();
+            this.button_LoadScriptCLI = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.textBox_CLIrecognize3 = new System.Windows.Forms.TextBox();
             this.textBox_CLIrecognize2 = new System.Windows.Forms.TextBox();
@@ -800,10 +804,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage2_Script = new System.Windows.Forms.TabPage();
-            this.button_LoadScriptCLI = new System.Windows.Forms.Button();
-            this.richTextBox_Scripts = new System.Windows.Forms.RichTextBox();
-            this.button_RunScript = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -828,6 +828,7 @@ namespace Monitor
             this.groupBox_AllCommands.SuspendLayout();
             this.groupBox_Help.SuspendLayout();
             this.groupBox_CLISendCommand.SuspendLayout();
+            this.tabPage2_Script.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.tabPage_charts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -864,7 +865,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.tabPage2_Script.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2487,7 +2487,7 @@ namespace Monitor
             this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
             this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
-            this.listBox_CLI_ALLCommands.TabIndex = 71;
+            this.listBox_CLI_ALLCommands.TabIndex = 2;
             this.listBox_CLI_ALLCommands.Click += new System.EventHandler(this.listBox_CLI_ALLCommands_Click);
             this.listBox_CLI_ALLCommands.SelectedIndexChanged += new System.EventHandler(this.listBox_CLI_ALLCommands_SelectedIndexChanged);
             // 
@@ -2550,7 +2550,7 @@ namespace Monitor
             this.textBox_CLISendCommands.Name = "textBox_CLISendCommands";
             this.textBox_CLISendCommands.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_CLISendCommands.Size = new System.Drawing.Size(829, 31);
-            this.textBox_CLISendCommands.TabIndex = 0;
+            this.textBox_CLISendCommands.TabIndex = 1;
             this.textBox_CLISendCommands.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_CLISendCommands_KeyDown);
             this.textBox_CLISendCommands.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.textBox_CLISendCommands_PreviewKeyDown);
             // 
@@ -2572,9 +2572,48 @@ namespace Monitor
             this.button_CLISend.Margin = new System.Windows.Forms.Padding(2);
             this.button_CLISend.Name = "button_CLISend";
             this.button_CLISend.Size = new System.Drawing.Size(96, 23);
-            this.button_CLISend.TabIndex = 1;
+            this.button_CLISend.TabIndex = 11;
             this.button_CLISend.Text = "Send";
             this.button_CLISend.Click += new System.EventHandler(this.button_CLISend_Click);
+            // 
+            // tabPage2_Script
+            // 
+            this.tabPage2_Script.Controls.Add(this.button_RunScript);
+            this.tabPage2_Script.Controls.Add(this.richTextBox_Scripts);
+            this.tabPage2_Script.Controls.Add(this.button_LoadScriptCLI);
+            this.tabPage2_Script.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2_Script.Name = "tabPage2_Script";
+            this.tabPage2_Script.Size = new System.Drawing.Size(867, 584);
+            this.tabPage2_Script.TabIndex = 1;
+            this.tabPage2_Script.Text = "Scripts";
+            this.tabPage2_Script.UseVisualStyleBackColor = true;
+            // 
+            // button_RunScript
+            // 
+            this.button_RunScript.Location = new System.Drawing.Point(463, 61);
+            this.button_RunScript.Name = "button_RunScript";
+            this.button_RunScript.Size = new System.Drawing.Size(89, 45);
+            this.button_RunScript.TabIndex = 75;
+            this.button_RunScript.Text = "Run";
+            this.button_RunScript.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_Scripts
+            // 
+            this.richTextBox_Scripts.Location = new System.Drawing.Point(4, 9);
+            this.richTextBox_Scripts.Name = "richTextBox_Scripts";
+            this.richTextBox_Scripts.Size = new System.Drawing.Size(448, 564);
+            this.richTextBox_Scripts.TabIndex = 74;
+            this.richTextBox_Scripts.Text = "";
+            // 
+            // button_LoadScriptCLI
+            // 
+            this.button_LoadScriptCLI.Location = new System.Drawing.Point(463, 9);
+            this.button_LoadScriptCLI.Name = "button_LoadScriptCLI";
+            this.button_LoadScriptCLI.Size = new System.Drawing.Size(89, 45);
+            this.button_LoadScriptCLI.TabIndex = 73;
+            this.button_LoadScriptCLI.Text = "Load";
+            this.button_LoadScriptCLI.UseVisualStyleBackColor = true;
+            this.button_LoadScriptCLI.Click += new System.EventHandler(this.button_LoadScriptCLI_Click);
             // 
             // groupBox32
             // 
@@ -2844,17 +2883,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4765,45 +4804,6 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // tabPage2_Script
-            // 
-            this.tabPage2_Script.Controls.Add(this.button_RunScript);
-            this.tabPage2_Script.Controls.Add(this.richTextBox_Scripts);
-            this.tabPage2_Script.Controls.Add(this.button_LoadScriptCLI);
-            this.tabPage2_Script.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2_Script.Name = "tabPage2_Script";
-            this.tabPage2_Script.Size = new System.Drawing.Size(867, 584);
-            this.tabPage2_Script.TabIndex = 1;
-            this.tabPage2_Script.Text = "Scripts";
-            this.tabPage2_Script.UseVisualStyleBackColor = true;
-            // 
-            // button_LoadScriptCLI
-            // 
-            this.button_LoadScriptCLI.Location = new System.Drawing.Point(463, 9);
-            this.button_LoadScriptCLI.Name = "button_LoadScriptCLI";
-            this.button_LoadScriptCLI.Size = new System.Drawing.Size(89, 45);
-            this.button_LoadScriptCLI.TabIndex = 73;
-            this.button_LoadScriptCLI.Text = "Load";
-            this.button_LoadScriptCLI.UseVisualStyleBackColor = true;
-            this.button_LoadScriptCLI.Click += new System.EventHandler(this.button_LoadScriptCLI_Click);
-            // 
-            // richTextBox_Scripts
-            // 
-            this.richTextBox_Scripts.Location = new System.Drawing.Point(4, 9);
-            this.richTextBox_Scripts.Name = "richTextBox_Scripts";
-            this.richTextBox_Scripts.Size = new System.Drawing.Size(448, 564);
-            this.richTextBox_Scripts.TabIndex = 74;
-            this.richTextBox_Scripts.Text = "";
-            // 
-            // button_RunScript
-            // 
-            this.button_RunScript.Location = new System.Drawing.Point(463, 61);
-            this.button_RunScript.Name = "button_RunScript";
-            this.button_RunScript.Size = new System.Drawing.Size(89, 45);
-            this.button_RunScript.TabIndex = 75;
-            this.button_RunScript.Text = "Run";
-            this.button_RunScript.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -4869,6 +4869,7 @@ namespace Monitor
             this.groupBox_Help.PerformLayout();
             this.groupBox_CLISendCommand.ResumeLayout(false);
             this.groupBox_CLISendCommand.PerformLayout();
+            this.tabPage2_Script.ResumeLayout(false);
             this.groupBox32.ResumeLayout(false);
             this.groupBox32.PerformLayout();
             this.tabPage_charts.ResumeLayout(false);
@@ -4929,7 +4930,6 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.tabPage2_Script.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -16747,34 +16747,49 @@ This Process can take 1 minute.";
             }
         }
 
-        void WriteToRegister(bool i_OnlyCheckValidity)
+        String WriteToRegister(bool i_OnlyCheckValidity)
         {
-          //  return "WriteToReg";
+            String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            return ret;
         }
 
-        void ReadFromRegister(bool i_OnlyCheckValidity)
+        String ReadFromRegister(bool i_OnlyCheckValidity)
         {
-            //return "ReadFromReg";
+            String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            return ret;
         }
         void ExectuteCommand(String i_Command,bool i_OnlyCheckValidity)
         {
+            String ret = "";
             switch(i_Command)
             {
                 case "WriteReg":
-                     WriteToRegister(i_OnlyCheckValidity);
+                    ret = WriteToRegister(i_OnlyCheckValidity);
                     break;
 
                 case "ReadReg":
-                    ReadFromRegister(i_OnlyCheckValidity);
+                    ret = ReadFromRegister(i_OnlyCheckValidity);
                     break;
 
                 default:
                     SystemLogger.LogMessage(Color.Orange, Color.LightGray, String.Format("[{0}] command not implemented", i_Command), true, true);
-                    break;
+                    return;
+                   // break;
 
             }
 
-           // return ret;
+            // Gil Ramon: If the is a syntax problem the command function return the message.
+            if(ret != "")
+            {
+                SystemLogger.LogMessage(Color.Black, Color.Orange, ret, true, true);
+            }
+
+
+            //SystemLogger.LogMessage(Color.Blue, Color.Azure, "", New_Line = false, Show_Time = true);
+            //SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
+
+
+            // return ret;
         }
 
         private void ParseCLICommand(String i_Command)
