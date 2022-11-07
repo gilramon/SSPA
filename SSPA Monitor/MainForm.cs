@@ -16681,7 +16681,7 @@ namespace Monitor
 
                         break;
 
-                    case "00B4":
+                    case "00B3":
                         DecimalNumber = int.Parse(GetBytesFromData(i_Parsedframe.Data, 3, 2), System.Globalization.NumberStyles.HexNumber);
                         textBox_StatusUUT7_Vdd5V.Text = String.Format("{0} [{1:0.##}V]", DecimalNumber, (float)DecimalNumber / 4096 * 1.8 / 0.282);
 
@@ -25064,7 +25064,7 @@ Note: eStatus enum 
             Read_Register_From_UUT("00 B0", "00 06");
             await Task.Delay(Delay);
 
-            Read_Register_From_UUT("00 B4", "00 08");
+            Read_Register_From_UUT("00 B3", "00 08");
             await Task.Delay(Delay);
 
             Write_Register_To_UUT("00 01", "02 00");
