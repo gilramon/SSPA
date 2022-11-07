@@ -16669,7 +16669,8 @@ This Process can take 1 minute.";
                         }
                         textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
 
-
+                        m_textBox.SelectionStart = m_textBox.Text.Length;
+                        m_textBox.SelectionLength = 0;
 
                         break;
 
@@ -16681,6 +16682,9 @@ This Process can take 1 minute.";
                             textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
                             CLI_HistoryIndex++;
                         }
+
+                        m_textBox.SelectionStart = m_textBox.Text.Length;
+                        m_textBox.SelectionLength = 0;
                         break;
 
                     case Keys.Tab:
@@ -16718,10 +16722,8 @@ This Process can take 1 minute.";
                 }
 
 
-                m_textBox.Focus();
-                m_textBox.Select(m_textBox.Text.Length, 0);
-                //m_textBox.SelectionStart = m_textBox.Text.Length;
-                //m_textBox.SelectionLength = 1;
+
+
 
                 //  CommandsHistoy.SelectedIndex = HistoryIndex;
             }
@@ -16745,25 +16747,25 @@ This Process can take 1 minute.";
             }
         }
 
-        void WriteToRegister()
+        void WriteToRegister(bool i_OnlyCheckValidity)
         {
           //  return "WriteToReg";
         }
 
-        void ReadFromRegister()
+        void ReadFromRegister(bool i_OnlyCheckValidity)
         {
             //return "ReadFromReg";
         }
-        void ExectuteCommand(String i_Command)
+        void ExectuteCommand(String i_Command,bool i_OnlyCheckValidity)
         {
             switch(i_Command)
             {
                 case "WriteReg":
-                     WriteToRegister();
+                     WriteToRegister(i_OnlyCheckValidity);
                     break;
 
                 case "ReadReg":
-                    ReadFromRegister();
+                    ReadFromRegister(i_OnlyCheckValidity);
                     break;
 
                 default:
@@ -16775,7 +16777,7 @@ This Process can take 1 minute.";
            // return ret;
         }
 
-        private bool ParseCLICommand(String i_Command)
+        private void ParseCLICommand(String i_Command)
         {
             String[] tempStr = i_Command.Split(' ');
             bool ret = false;
@@ -16784,7 +16786,14 @@ This Process can take 1 minute.";
                 if(cmd.Command_name == tempStr[0])
                 {
                     ret = true;
-                    ExectuteCommand(cmd.Command_name);
+
+                    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+                    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
+                    SystemLogger.LogMessage(Color.Purple, Color.Yellow, textBox_CLISendCommands.Text, true, false);
+
+                    UpdateCommandCLIHistory(i_Command);
+
+                    ExectuteCommand(cmd.Command_name, false);
                 }
             }
             if(ret == false)
@@ -16792,29 +16801,27 @@ This Process can take 1 minute.";
                 SystemLogger.LogMessage(Color.OrangeRed, Color.White, String.Format("[{0}] command not implemented", tempStr[0]), New_Line = true, Show_Time = true);
             }
 
-            return ret;
-
         }
 
         private void button_CLISend_Click(object sender, EventArgs e)
         {
-            bool IsCommandFound = ParseCLICommand(textBox_CLISendCommands.Text);
+            ParseCLICommand(textBox_CLISendCommands.Text);
 
-            if (IsCommandFound == true)
-            {
-                UpdateCommandCLIHistory(textBox_CLISendCommands.Text);
-
-
+            //if (IsCommandFound == true)
+            //{
+            //    UpdateCommandCLIHistory(textBox_CLISendCommands.Text);
 
 
-                SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
-                SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
-                SystemLogger.LogMessage(Color.Purple, Color.Yellow, textBox_CLISendCommands.Text, true, false);
-            }
-            else
-            {
+
+
+            //    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+            //    SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
+            //    SystemLogger.LogMessage(Color.Purple, Color.Yellow, textBox_CLISendCommands.Text, true, false);
+            //}
+            //else
+            //{
                 
-            }
+            //}
 
             if (checkBox_CLIDeleteAfterSend.Checked == true)
             {
