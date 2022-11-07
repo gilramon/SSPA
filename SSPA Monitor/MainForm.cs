@@ -391,6 +391,9 @@ namespace Monitor
         private TextBox txtDataTx;
         private Button button_DeleteCommandsHistory;
         private GroupBox groupBox_Help;
+        private TextBox textBox_CLIrecognize3;
+        private TextBox textBox_CLIrecognize2;
+        private TextBox textBox_CLIrecognize1;
         private static readonly string PREAMBLE = "23";
 
 
@@ -576,6 +579,7 @@ namespace Monitor
             this.tabControl_System = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox_AllCommands = new System.Windows.Forms.GroupBox();
+            this.groupBox_Help = new System.Windows.Forms.GroupBox();
             this.textBox_CommandHelp = new System.Windows.Forms.TextBox();
             this.listBox_CLI_ALLCommands = new System.Windows.Forms.ListBox();
             this.groupBox_CLISendCommand = new System.Windows.Forms.GroupBox();
@@ -789,7 +793,9 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox_Help = new System.Windows.Forms.GroupBox();
+            this.textBox_CLIrecognize3 = new System.Windows.Forms.TextBox();
+            this.textBox_CLIrecognize2 = new System.Windows.Forms.TextBox();
+            this.textBox_CLIrecognize1 = new System.Windows.Forms.TextBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -812,6 +818,7 @@ namespace Monitor
             this.tabControl_System.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox_AllCommands.SuspendLayout();
+            this.groupBox_Help.SuspendLayout();
             this.groupBox_CLISendCommand.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.tabPage_charts.SuspendLayout();
@@ -849,7 +856,6 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
-            this.groupBox_Help.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2443,6 +2449,16 @@ namespace Monitor
             this.groupBox_AllCommands.TabStop = false;
             this.groupBox_AllCommands.Text = "Command list";
             // 
+            // groupBox_Help
+            // 
+            this.groupBox_Help.Controls.Add(this.textBox_CommandHelp);
+            this.groupBox_Help.Location = new System.Drawing.Point(378, 18);
+            this.groupBox_Help.Name = "groupBox_Help";
+            this.groupBox_Help.Size = new System.Drawing.Size(369, 372);
+            this.groupBox_Help.TabIndex = 115;
+            this.groupBox_Help.TabStop = false;
+            this.groupBox_Help.Text = "Help";
+            // 
             // textBox_CommandHelp
             // 
             this.textBox_CommandHelp.Location = new System.Drawing.Point(5, 19);
@@ -2462,6 +2478,7 @@ namespace Monitor
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
             this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 418);
             this.listBox_CLI_ALLCommands.TabIndex = 71;
+            this.listBox_CLI_ALLCommands.Click += new System.EventHandler(this.listBox_CLI_ALLCommands_Click);
             this.listBox_CLI_ALLCommands.SelectedIndexChanged += new System.EventHandler(this.listBox_CLI_ALLCommands_SelectedIndexChanged);
             // 
             // groupBox_CLISendCommand
@@ -2553,6 +2570,9 @@ namespace Monitor
             // 
             // groupBox32
             // 
+            this.groupBox32.Controls.Add(this.textBox_CLIrecognize3);
+            this.groupBox32.Controls.Add(this.textBox_CLIrecognize2);
+            this.groupBox32.Controls.Add(this.textBox_CLIrecognize1);
             this.groupBox32.Controls.Add(this.richTextBox_SSPA);
             this.groupBox32.Controls.Add(this.checkBox_RecordMiniAda);
             this.groupBox32.Controls.Add(this.checkBox_PauseMiniAda);
@@ -2571,10 +2591,10 @@ namespace Monitor
             // 
             this.richTextBox_SSPA.BackColor = System.Drawing.Color.LightGray;
             this.richTextBox_SSPA.EnableAutoDragDrop = true;
-            this.richTextBox_SSPA.Location = new System.Drawing.Point(6, 17);
+            this.richTextBox_SSPA.Location = new System.Drawing.Point(6, 54);
             this.richTextBox_SSPA.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox_SSPA.Name = "richTextBox_SSPA";
-            this.richTextBox_SSPA.Size = new System.Drawing.Size(506, 588);
+            this.richTextBox_SSPA.Size = new System.Drawing.Size(506, 551);
             this.richTextBox_SSPA.TabIndex = 0;
             this.richTextBox_SSPA.Text = "";
             // 
@@ -2586,9 +2606,9 @@ namespace Monitor
             this.checkBox_RecordMiniAda.Location = new System.Drawing.Point(6, 610);
             this.checkBox_RecordMiniAda.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_RecordMiniAda.Name = "checkBox_RecordMiniAda";
-            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(98, 26);
+            this.checkBox_RecordMiniAda.Size = new System.Drawing.Size(140, 26);
             this.checkBox_RecordMiniAda.TabIndex = 7;
-            this.checkBox_RecordMiniAda.Text = "Record Log";
+            this.checkBox_RecordMiniAda.Text = "Record Log to file";
             this.checkBox_RecordMiniAda.UseVisualStyleBackColor = true;
             // 
             // checkBox_PauseMiniAda
@@ -2596,7 +2616,7 @@ namespace Monitor
             this.checkBox_PauseMiniAda.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox_PauseMiniAda.AutoSize = true;
             this.checkBox_PauseMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(102, 610);
+            this.checkBox_PauseMiniAda.Location = new System.Drawing.Point(150, 610);
             this.checkBox_PauseMiniAda.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_PauseMiniAda.Name = "checkBox_PauseMiniAda";
             this.checkBox_PauseMiniAda.Size = new System.Drawing.Size(61, 26);
@@ -2607,7 +2627,7 @@ namespace Monitor
             // button_ClearMiniAda
             // 
             this.button_ClearMiniAda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ClearMiniAda.Location = new System.Drawing.Point(165, 610);
+            this.button_ClearMiniAda.Location = new System.Drawing.Point(215, 611);
             this.button_ClearMiniAda.Margin = new System.Windows.Forms.Padding(2);
             this.button_ClearMiniAda.Name = "button_ClearMiniAda";
             this.button_ClearMiniAda.Size = new System.Drawing.Size(57, 25);
@@ -4713,15 +4733,29 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // groupBox_Help
+            // textBox_CLIrecognize3
             // 
-            this.groupBox_Help.Controls.Add(this.textBox_CommandHelp);
-            this.groupBox_Help.Location = new System.Drawing.Point(378, 18);
-            this.groupBox_Help.Name = "groupBox_Help";
-            this.groupBox_Help.Size = new System.Drawing.Size(369, 372);
-            this.groupBox_Help.TabIndex = 115;
-            this.groupBox_Help.TabStop = false;
-            this.groupBox_Help.Text = "Help";
+            this.textBox_CLIrecognize3.Location = new System.Drawing.Point(235, 21);
+            this.textBox_CLIrecognize3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize3.Name = "textBox_CLIrecognize3";
+            this.textBox_CLIrecognize3.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize3.TabIndex = 78;
+            // 
+            // textBox_CLIrecognize2
+            // 
+            this.textBox_CLIrecognize2.Location = new System.Drawing.Point(123, 22);
+            this.textBox_CLIrecognize2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize2.Name = "textBox_CLIrecognize2";
+            this.textBox_CLIrecognize2.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize2.TabIndex = 77;
+            // 
+            // textBox_CLIrecognize1
+            // 
+            this.textBox_CLIrecognize1.Location = new System.Drawing.Point(11, 22);
+            this.textBox_CLIrecognize1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize1.Name = "textBox_CLIrecognize1";
+            this.textBox_CLIrecognize1.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize1.TabIndex = 76;
             // 
             // MainForm
             // 
@@ -4784,6 +4818,8 @@ namespace Monitor
             this.tabControl_System.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox_AllCommands.ResumeLayout(false);
+            this.groupBox_Help.ResumeLayout(false);
+            this.groupBox_Help.PerformLayout();
             this.groupBox_CLISendCommand.ResumeLayout(false);
             this.groupBox_CLISendCommand.PerformLayout();
             this.groupBox32.ResumeLayout(false);
@@ -4846,8 +4882,6 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
-            this.groupBox_Help.ResumeLayout(false);
-            this.groupBox_Help.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -5619,7 +5653,7 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
                 KratosProtocolLogger = new TextBox_Logger("Kratos_Protocol", richTextBox_KratosProtocol, button_ClearKratosProtocol, null, checkBox_RecordKratosProtocol, null, null, null, null);
                 ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
                 SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, button_ClearSerialPort, checkBox_SerialPortPause, checkBox_SerialPortRecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
-                SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, null, null, null, checkBox_StopLogging);
+                SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, textBox_CLIrecognize1, textBox_CLIrecognize2, textBox_CLIrecognize3, checkBox_StopLogging);
 
 
                 ScanComports();
@@ -8937,7 +8971,7 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
 
                     SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                     SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, ConvertByteArraytToString(buffer), true, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, ConvertByteArraytToString(buffer), true, false);
 
 
 
@@ -8968,9 +9002,9 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
 
 
 
-                    SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "", New_Line = false, Show_Time = true);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, Encoding.ASCII.GetString(buffer), true, false);
 
                 }
 
@@ -11477,7 +11511,7 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
 
                     KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                     KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
-                    KratosProtocolLogger.LogMessage(Color.Purple, Color.LightGray, SentFrameGlobal.ToString(), true, false);
+                    KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, SentFrameGlobal.ToString(), true, false);
 
 
                 }
@@ -11501,10 +11535,10 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
                 //string str = string.Format("Preamble [{0}],Opcode [{1}],Data [{2}] ", textBox_Preamble.Text, textBox_Opcode.Text, textBox_data.Text);
                 //SystemLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
 
-                KratosProtocolLogger.LogMessage(Color.Purple, Color.LightYellow, "", New_Line = false, Show_Time = true);
-                KratosProtocolLogger.LogMessage(Color.Purple, Color.LightYellow, "Tx:>", false, false);
+                KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
+                KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
                 string str = string.Format("Preamble [{0}],Opcode [{1}],Data [{2}] ", textBox_Preamble.Text, textBox_Opcode.Text, textBox_data.Text);
-                KratosProtocolLogger.LogMessage(Color.Purple, Color.LightYellow, str, true, false);
+                KratosProtocolLogger.LogMessage(Color.Purple, Color.Yellow, str, true, false);
             }
             else
             {
@@ -16604,7 +16638,7 @@ This Process can take 1 minute.";
 
                     SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                     SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, ConvertByteArraytToString(buffer), true, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, ConvertByteArraytToString(buffer), true, false);
 
 
 
@@ -16637,7 +16671,7 @@ This Process can take 1 minute.";
 
                     SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "", New_Line = false, Show_Time = true);
                     SerialPortLogger.LogMessage(Color.Purple, Color.Azure, "Tx:>", false, false);
-                    SerialPortLogger.LogMessage(Color.Purple, Color.LightGray, Encoding.ASCII.GetString(buffer), true, false);
+                    SerialPortLogger.LogMessage(Color.Purple, Color.Yellow, Encoding.ASCII.GetString(buffer), true, false);
 
                 }
 
@@ -16658,6 +16692,7 @@ This Process can take 1 minute.";
         {
             try
             {
+                TextBox m_textBox = (TextBox)sender;
                 switch (e.KeyCode)
                 {
                     //case Keys.F1:
@@ -16719,6 +16754,9 @@ This Process can take 1 minute.";
                             CLI_HistoryIndex--;
                         }
                         textBox_CLISendCommands.Text = Monitor.Properties.Settings.Default.CLICommad_History[CLI_HistoryIndex];
+
+
+
                         break;
 
                     case Keys.Down:
@@ -16764,6 +16802,12 @@ This Process can take 1 minute.";
                         CLI_HistoryIndex = Monitor.Properties.Settings.Default.CLICommad_History.Count - 1;
                         break;
                 }
+
+
+                m_textBox.Focus();
+                m_textBox.Select(m_textBox.Text.Length, 0);
+                //m_textBox.SelectionStart = m_textBox.Text.Length;
+                //m_textBox.SelectionLength = 1;
 
                 //  CommandsHistoy.SelectedIndex = HistoryIndex;
             }
@@ -16841,6 +16885,7 @@ This Process can take 1 minute.";
         private void button_CLISend_Click(object sender, EventArgs e)
         {
             bool IsCommandFound = ParseCLICommand(textBox_CLISendCommands.Text);
+
             if (IsCommandFound == true)
             {
                 UpdateCommandCLIHistory(textBox_CLISendCommands.Text);
@@ -16850,7 +16895,7 @@ This Process can take 1 minute.";
 
                 SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                 SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
-                SystemLogger.LogMessage(Color.Purple, Color.LightGray, textBox_CLISendCommands.Text, true, false);
+                SystemLogger.LogMessage(Color.Purple, Color.Yellow, textBox_CLISendCommands.Text, true, false);
             }
             else
             {
@@ -16886,6 +16931,11 @@ This Process can take 1 minute.";
         private void listBox_CLI_ALLCommands_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox_CommandHelp.Text = List_AllCommands[listBox_CLI_ALLCommands.SelectedIndex].Help;
+        }
+
+        private void listBox_CLI_ALLCommands_Click(object sender, EventArgs e)
+        {
+            textBox_CLISendCommands.Text=List_AllCommands[listBox_CLI_ALLCommands.SelectedIndex].Command_name;
         }
 
         private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -17008,15 +17058,3 @@ This Process can take 1 minute.";
     }
 }
 
-class CommandClass
-{
-    public String Command_name = "";
-    public String Help = "";
-
-    public CommandClass(String i_CommandName, String i_Help)
-    {
-        Command_name = i_CommandName;
-        Help = i_Help;
-    }
-
-}
