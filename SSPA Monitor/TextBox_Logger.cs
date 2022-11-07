@@ -270,7 +270,7 @@ namespace Monitor
                 {
                     if (i_msg.Contains(m_RecognizePatternTextBox.Text) && m_RecognizePatternTextBox.Text != string.Empty)
                     {
-                        i_TextBackgroundColor = Color.Yellow;
+                        i_TextBackgroundColor = Color.LimeGreen;
                     }
                 }
 
