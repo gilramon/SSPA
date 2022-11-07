@@ -394,6 +394,10 @@ namespace Monitor
         private TextBox textBox_CLIrecognize3;
         private TextBox textBox_CLIrecognize2;
         private TextBox textBox_CLIrecognize1;
+        private TabPage tabPage2_Script;
+        private Button button_LoadScriptCLI;
+        private RichTextBox richTextBox_Scripts;
+        private Button button_RunScript;
         private static readonly string PREAMBLE = "23";
 
 
@@ -796,6 +800,10 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPage2_Script = new System.Windows.Forms.TabPage();
+            this.button_LoadScriptCLI = new System.Windows.Forms.Button();
+            this.richTextBox_Scripts = new System.Windows.Forms.RichTextBox();
+            this.button_RunScript = new System.Windows.Forms.Button();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -856,6 +864,7 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.tabPage2_Script.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2417,6 +2426,7 @@ namespace Monitor
             // tabControl_System
             // 
             this.tabControl_System.Controls.Add(this.tabPage1);
+            this.tabControl_System.Controls.Add(this.tabPage2_Script);
             this.tabControl_System.Location = new System.Drawing.Point(6, 22);
             this.tabControl_System.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl_System.Name = "tabControl_System";
@@ -2452,7 +2462,7 @@ namespace Monitor
             // groupBox_Help
             // 
             this.groupBox_Help.Controls.Add(this.textBox_CommandHelp);
-            this.groupBox_Help.Location = new System.Drawing.Point(378, 18);
+            this.groupBox_Help.Location = new System.Drawing.Point(378, 6);
             this.groupBox_Help.Name = "groupBox_Help";
             this.groupBox_Help.Size = new System.Drawing.Size(369, 372);
             this.groupBox_Help.TabIndex = 115;
@@ -4755,13 +4765,52 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // tabPage2_Script
+            // 
+            this.tabPage2_Script.Controls.Add(this.button_RunScript);
+            this.tabPage2_Script.Controls.Add(this.richTextBox_Scripts);
+            this.tabPage2_Script.Controls.Add(this.button_LoadScriptCLI);
+            this.tabPage2_Script.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2_Script.Name = "tabPage2_Script";
+            this.tabPage2_Script.Size = new System.Drawing.Size(867, 584);
+            this.tabPage2_Script.TabIndex = 1;
+            this.tabPage2_Script.Text = "Scripts";
+            this.tabPage2_Script.UseVisualStyleBackColor = true;
+            // 
+            // button_LoadScriptCLI
+            // 
+            this.button_LoadScriptCLI.Location = new System.Drawing.Point(463, 9);
+            this.button_LoadScriptCLI.Name = "button_LoadScriptCLI";
+            this.button_LoadScriptCLI.Size = new System.Drawing.Size(89, 45);
+            this.button_LoadScriptCLI.TabIndex = 73;
+            this.button_LoadScriptCLI.Text = "Load";
+            this.button_LoadScriptCLI.UseVisualStyleBackColor = true;
+            this.button_LoadScriptCLI.Click += new System.EventHandler(this.button_LoadScriptCLI_Click);
+            // 
+            // richTextBox_Scripts
+            // 
+            this.richTextBox_Scripts.Location = new System.Drawing.Point(4, 9);
+            this.richTextBox_Scripts.Name = "richTextBox_Scripts";
+            this.richTextBox_Scripts.Size = new System.Drawing.Size(448, 564);
+            this.richTextBox_Scripts.TabIndex = 74;
+            this.richTextBox_Scripts.Text = "";
+            // 
+            // button_RunScript
+            // 
+            this.button_RunScript.Location = new System.Drawing.Point(463, 61);
+            this.button_RunScript.Name = "button_RunScript";
+            this.button_RunScript.Size = new System.Drawing.Size(89, 45);
+            this.button_RunScript.TabIndex = 75;
+            this.button_RunScript.Text = "Run";
+            this.button_RunScript.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1543, 711);
+            this.ClientSize = new System.Drawing.Size(1526, 694);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -4880,6 +4929,7 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.tabPage2_Script.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -16827,6 +16877,42 @@ This Process can take 1 minute.";
             //        textBox_SendSerialPort.Text = comboBox_SerialPortHistory.SelectedItem.ToString();
             //    }
             //}
+        }
+
+        private void button_LoadScriptCLI_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        String[] filelines = File.ReadAllLines(filePath);
+                        foreach(String line in filelines)
+                        {
+                            richTextBox_Scripts.AppendText(line + "\r\n");
+                            richTextBox_Scripts.ScrollToCaret();
+                        }
+                        
+
+                    }
+                }
+            }
+
         }
 
         private void ListBox_Charts_SelectedIndexChanged(object sender, EventArgs e)
