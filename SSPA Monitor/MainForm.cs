@@ -590,6 +590,9 @@ namespace Monitor
             this.checkBox_CLIDeleteAfterSend = new System.Windows.Forms.CheckBox();
             this.button_CLISend = new System.Windows.Forms.Button();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.textBox_CLIrecognize3 = new System.Windows.Forms.TextBox();
+            this.textBox_CLIrecognize2 = new System.Windows.Forms.TextBox();
+            this.textBox_CLIrecognize1 = new System.Windows.Forms.TextBox();
             this.richTextBox_SSPA = new System.Windows.Forms.RichTextBox();
             this.checkBox_RecordMiniAda = new System.Windows.Forms.CheckBox();
             this.checkBox_PauseMiniAda = new System.Windows.Forms.CheckBox();
@@ -793,9 +796,6 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox_CLIrecognize3 = new System.Windows.Forms.TextBox();
-            this.textBox_CLIrecognize2 = new System.Windows.Forms.TextBox();
-            this.textBox_CLIrecognize1 = new System.Windows.Forms.TextBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2547,8 +2547,6 @@ namespace Monitor
             // checkBox_CLIDeleteAfterSend
             // 
             this.checkBox_CLIDeleteAfterSend.AutoSize = true;
-            this.checkBox_CLIDeleteAfterSend.Checked = true;
-            this.checkBox_CLIDeleteAfterSend.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_CLIDeleteAfterSend.Location = new System.Drawing.Point(115, 59);
             this.checkBox_CLIDeleteAfterSend.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox_CLIDeleteAfterSend.Name = "checkBox_CLIDeleteAfterSend";
@@ -2586,6 +2584,30 @@ namespace Monitor
             this.groupBox32.TabIndex = 9;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "CLI Monitor";
+            // 
+            // textBox_CLIrecognize3
+            // 
+            this.textBox_CLIrecognize3.Location = new System.Drawing.Point(235, 21);
+            this.textBox_CLIrecognize3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize3.Name = "textBox_CLIrecognize3";
+            this.textBox_CLIrecognize3.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize3.TabIndex = 78;
+            // 
+            // textBox_CLIrecognize2
+            // 
+            this.textBox_CLIrecognize2.Location = new System.Drawing.Point(123, 22);
+            this.textBox_CLIrecognize2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize2.Name = "textBox_CLIrecognize2";
+            this.textBox_CLIrecognize2.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize2.TabIndex = 77;
+            // 
+            // textBox_CLIrecognize1
+            // 
+            this.textBox_CLIrecognize1.Location = new System.Drawing.Point(11, 22);
+            this.textBox_CLIrecognize1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CLIrecognize1.Name = "textBox_CLIrecognize1";
+            this.textBox_CLIrecognize1.Size = new System.Drawing.Size(108, 27);
+            this.textBox_CLIrecognize1.TabIndex = 76;
             // 
             // richTextBox_SSPA
             // 
@@ -4733,37 +4755,13 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
-            // textBox_CLIrecognize3
-            // 
-            this.textBox_CLIrecognize3.Location = new System.Drawing.Point(235, 21);
-            this.textBox_CLIrecognize3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CLIrecognize3.Name = "textBox_CLIrecognize3";
-            this.textBox_CLIrecognize3.Size = new System.Drawing.Size(108, 27);
-            this.textBox_CLIrecognize3.TabIndex = 78;
-            // 
-            // textBox_CLIrecognize2
-            // 
-            this.textBox_CLIrecognize2.Location = new System.Drawing.Point(123, 22);
-            this.textBox_CLIrecognize2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CLIrecognize2.Name = "textBox_CLIrecognize2";
-            this.textBox_CLIrecognize2.Size = new System.Drawing.Size(108, 27);
-            this.textBox_CLIrecognize2.TabIndex = 77;
-            // 
-            // textBox_CLIrecognize1
-            // 
-            this.textBox_CLIrecognize1.Location = new System.Drawing.Point(11, 22);
-            this.textBox_CLIrecognize1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_CLIrecognize1.Name = "textBox_CLIrecognize1";
-            this.textBox_CLIrecognize1.Size = new System.Drawing.Size(108, 27);
-            this.textBox_CLIrecognize1.TabIndex = 76;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1526, 694);
+            this.ClientSize = new System.Drawing.Size(1543, 711);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -5590,141 +5588,7 @@ namespace Monitor
 
         static List<DataGridView> List_AllDataGrids = new List<DataGridView>();
         static List<CommandClass> List_AllCommands = new List<CommandClass>();
-        void SetAllCLIcommands()
-            {
-            CommandClass WriteReg = new CommandClass("WriteReg",
-@"
-Description: 
-Write to Register 
-
-Syntax:
-WriteReg address[2 bytes] data[2 bytes]
-
-Example:
-
-WriteReg 0x48BF 0xFFFF ---> Write to Register 0x48BF data 0xFFFF
-");
-
-            List_AllCommands.Add(WriteReg);
-
-            CommandClass ReadReg = new CommandClass("ReadReg",
-@"
-Description: 
-Read From Register 
-
-Syntax:
-ReadReg address[2 bytes]
-
-Example:
-
-ReadReg 0x48BF ---> Read from Register 0x48BF
-");
-
-            List_AllCommands.Add(ReadReg);
-
-
-            foreach(CommandClass cmd in List_AllCommands)
-            {
-                listBox_CLI_ALLCommands.Items.Add(cmd.Command_name);
-            }
-
-        }
-        //List_AllDataGrids.Add(dataGridView_Block00);
-        // List<S1_Protocol.S1_Messege_Builder.Command_Description> CommandsDescription;
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-                tabControl_Main.TabPages.RemoveAt(0);
-                tabControl_Main.TabPages.RemoveAt(0);
-                //tabControl_Main.TabPages.RemoveAt(0);
-
-
-                SetAllCLIcommands();
-
-                chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.###E+0";
-
-
-
-
-
-                KratosProtocolLogger = new TextBox_Logger("Kratos_Protocol", richTextBox_KratosProtocol, button_ClearKratosProtocol, null, checkBox_RecordKratosProtocol, null, null, null, null);
-                ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
-                SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, button_ClearSerialPort, checkBox_SerialPortPause, checkBox_SerialPortRecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
-                SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, textBox_CLIrecognize1, textBox_CLIrecognize2, textBox_CLIrecognize3, checkBox_StopLogging);
-
-
-                ScanComports();
-
-
-                cmb_StopBits.DataSource = Enum.GetValues(typeof(StopBits));
-                cmb_StopBits.SelectedIndex = (int)StopBits.One;
-
-                cmbParity.DataSource = Enum.GetValues(typeof(Parity));
-                cmbParity.SelectedIndex = (int)Parity.None;
-
-
-                txtPortNo.Text = Monitor.Properties.Settings.Default.Start_Port;
-                txtDataTx.Text = Monitor.Properties.Settings.Default.Default_Server_Message;
-                cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
-                cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits;
-                cmb_StopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit;
-                cmbParity.Text = Monitor.Properties.Settings.Default.Comport_Parity;
-                cmb_PortName.Text = Monitor.Properties.Settings.Default.Comport_Port;
-
-
-
-
-                //Gil: Set Versions Names
-                string path = Directory.GetCurrentDirectory();
-                string lastFolderName = Path.GetFileName(path);
-                //string[] dir = Directory.GetCurrentDirectory().Split('\\');
-                string version = lastFolderName;
-                //if (ApplicationDeployment.IsNetworkDeployed)
-                //{
-                //    version = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-                //}
-                //else
-                //{
-                //    version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-                //}
-
-                Text = Text + " [ " + ", Version: " + version + ", Compiled: " + RetrieveLinkerTimestamp().ToString() + " ]";
-
-
-
-
-
-                foreach (DataGridView datagrid in List_AllDataGrids)
-                {
-                    datagrid.Columns[0].HeaderCell.Value = "Flash data Hex (0xFFFF)";
-                }
-
-
-
-                UpdateSerialPortComboBox();
-
-
-
-
-
-
-                foreach (Control allContrls in Controls)
-                {
-                    FindControls(allContrls);
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                //  ServerLogger.LogMessage(Color.Orange, Color.White, ex.ToString(), true, true);
-            }
-
-        }
+ 
 
       
 
@@ -16935,7 +16799,7 @@ This Process can take 1 minute.";
 
         private void listBox_CLI_ALLCommands_Click(object sender, EventArgs e)
         {
-            textBox_CLISendCommands.Text=List_AllCommands[listBox_CLI_ALLCommands.SelectedIndex].Command_name;
+            textBox_CLISendCommands.Text=List_AllCommands[listBox_CLI_ALLCommands.SelectedIndex].Example;
         }
 
         private void textBox_CLISendCommands_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -17055,6 +16919,162 @@ This Process can take 1 minute.";
         //{
 
         //}
+
+        void SetAllCLIcommands()
+        {
+
+            CommandClass WriteReg = new CommandClass("WriteReg",
+@"
+Description: 
+Write to Register 
+
+Syntax:
+WriteReg address[2 bytes] data[2 bytes]
+
+Example:
+
+WriteReg 0x48BF 0xFFFF ---> Write to Register 0x48BF data 0xFFFF
+");
+
+            WriteReg.Example = "WriteReg 0x48BF 0xFFFF";
+
+            List_AllCommands.Add(WriteReg);
+
+
+
+
+
+
+
+            CommandClass ReadReg = new CommandClass("ReadReg",
+@"
+Description: 
+Read From Register 
+
+Syntax:
+ReadReg address[2 bytes]
+
+Example:
+
+ReadReg 0x48BF ---> Read from Register 0x48BF
+");
+
+            ReadReg.Example = "ReadReg 0x48BF";
+            List_AllCommands.Add(ReadReg);
+
+
+
+
+
+
+
+
+
+
+            foreach (CommandClass cmd in List_AllCommands)
+            {
+                listBox_CLI_ALLCommands.Items.Add(cmd.Command_name);
+            }
+
+        }
+        //List_AllDataGrids.Add(dataGridView_Block00);
+        // List<S1_Protocol.S1_Messege_Builder.Command_Description> CommandsDescription;
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                tabControl_Main.TabPages.RemoveAt(0);
+                tabControl_Main.TabPages.RemoveAt(0);
+                //tabControl_Main.TabPages.RemoveAt(0);
+
+
+                SetAllCLIcommands();
+
+                chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0.###E+0";
+
+
+
+
+
+                KratosProtocolLogger = new TextBox_Logger("Kratos_Protocol", richTextBox_KratosProtocol, button_ClearKratosProtocol, null, checkBox_RecordKratosProtocol, null, null, null, null);
+                ServerLogger = new TextBox_Logger("Server", TextBox_Server, button_ClearServer, checkBox_ServerPause, checkBox_ServerRecord, null, null, null, checkBox_StopLogging);
+                SerialPortLogger = new TextBox_Logger("Serial_Port", SerialPortLogger_TextBox, button_ClearSerialPort, checkBox_SerialPortPause, checkBox_SerialPortRecordLog, textBox_SerialPortRecognizePattern, textBox_SerialPortRecognizePattern2, textBox_SerialPortRecognizePattern3, null);
+                SystemLogger = new TextBox_Logger("SystemLogger", richTextBox_SSPA, button_ClearMiniAda, checkBox_PauseMiniAda, checkBox_RecordMiniAda, textBox_CLIrecognize1, textBox_CLIrecognize2, textBox_CLIrecognize3, checkBox_StopLogging);
+
+
+                ScanComports();
+
+
+                cmb_StopBits.DataSource = Enum.GetValues(typeof(StopBits));
+                cmb_StopBits.SelectedIndex = (int)StopBits.One;
+
+                cmbParity.DataSource = Enum.GetValues(typeof(Parity));
+                cmbParity.SelectedIndex = (int)Parity.None;
+
+
+                txtPortNo.Text = Monitor.Properties.Settings.Default.Start_Port;
+                txtDataTx.Text = Monitor.Properties.Settings.Default.Default_Server_Message;
+                cmbBaudRate.Text = Monitor.Properties.Settings.Default.Comport_BaudRate;
+                cmbDataBits.Text = Monitor.Properties.Settings.Default.Comport_DataBits;
+                cmb_StopBits.Text = Monitor.Properties.Settings.Default.Comport_StopBit;
+                cmbParity.Text = Monitor.Properties.Settings.Default.Comport_Parity;
+                cmb_PortName.Text = Monitor.Properties.Settings.Default.Comport_Port;
+
+
+
+
+                //Gil: Set Versions Names
+                string path = Directory.GetCurrentDirectory();
+                string lastFolderName = Path.GetFileName(path);
+                //string[] dir = Directory.GetCurrentDirectory().Split('\\');
+                string version = lastFolderName;
+                //if (ApplicationDeployment.IsNetworkDeployed)
+                //{
+                //    version = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+                //}
+                //else
+                //{
+                //    version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                //}
+
+                Text = Text + " [ " + ", Version: " + version + ", Compiled: " + RetrieveLinkerTimestamp().ToString() + " ]";
+
+
+
+
+
+                foreach (DataGridView datagrid in List_AllDataGrids)
+                {
+                    datagrid.Columns[0].HeaderCell.Value = "Flash data Hex (0xFFFF)";
+                }
+
+
+
+                UpdateSerialPortComboBox();
+
+
+
+
+
+
+                foreach (Control allContrls in Controls)
+                {
+                    FindControls(allContrls);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                //  ServerLogger.LogMessage(Color.Orange, Color.White, ex.ToString(), true, true);
+            }
+
+        }
     }
+
+
 }
 

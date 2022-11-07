@@ -10,11 +10,17 @@ namespace Monitor
     {
         public String Command_name = "";
         public String Help = "";
+        public String Example = "";
 
-        public CommandClass(String i_CommandName, String i_Help)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="i_CommandName"></param>
+        /// <param name="i_CommandHelp"></param>
+        public CommandClass(String i_CommandName, String i_CommandHelp)
         {
             Command_name = i_CommandName;
-            Help = i_Help;
+            Help = i_CommandHelp;
         }
     }
 }
