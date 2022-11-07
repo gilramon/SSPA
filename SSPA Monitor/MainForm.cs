@@ -16758,7 +16758,7 @@ This Process can take 1 minute.";
             String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
             return ret;
         }
-        void ExectuteCommand(String i_Command,bool i_OnlyCheckValidity)
+        String ExectuteOrCheckValidityCommand(String i_Command,bool i_OnlyCheckValidity)
         {
             String ret = "";
             switch(i_Command)
@@ -16772,9 +16772,10 @@ This Process can take 1 minute.";
                     break;
 
                 default:
-                    SystemLogger.LogMessage(Color.Orange, Color.LightGray, String.Format("[{0}] command not implemented", i_Command), true, true);
-                    return;
-                   // break;
+                    ret = String.Format("[{0}] command not implemented", i_Command);
+                   // SystemLogger.LogMessage(Color.Orange, Color.LightGray, String.Format(ret, i_Command), true, true);
+
+                    break;
 
             }
 
@@ -16789,18 +16790,17 @@ This Process can take 1 minute.";
             //SystemLogger.LogMessage(Color.Blue, Color.Azure, "Rx:>", false, false);
 
 
-            // return ret;
+             return ret;
         }
 
         private void ParseCLICommand(String i_Command)
         {
             String[] tempStr = i_Command.Split(' ');
-            bool ret = false;
+            String ret = "";
             foreach (CommandClass cmd in List_AllCommands)
             {
                 if(cmd.Command_name == tempStr[0])
                 {
-                    ret = true;
 
                     SystemLogger.LogMessage(Color.Purple, Color.Yellow, "", New_Line = false, Show_Time = true);
                     SystemLogger.LogMessage(Color.Purple, Color.Yellow, "Tx:>", false, false);
@@ -16808,12 +16808,12 @@ This Process can take 1 minute.";
 
                     UpdateCommandCLIHistory(i_Command);
 
-                    ExectuteCommand(cmd.Command_name, false);
+                    ret = ExectuteOrCheckValidityCommand(cmd.Command_name, false);
                 }
             }
-            if(ret == false)
+            if(ret != "")
             {
-                SystemLogger.LogMessage(Color.OrangeRed, Color.White, String.Format("[{0}] command not implemented", tempStr[0]), New_Line = true, Show_Time = true);
+                SystemLogger.LogMessage(Color.OrangeRed, Color.White, ret, New_Line = true, Show_Time = true);
             }
 
         }
