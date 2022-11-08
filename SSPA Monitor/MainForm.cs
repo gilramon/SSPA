@@ -398,6 +398,7 @@ namespace Monitor
         private Button button_LoadScriptCLI;
         private RichTextBox richTextBox_Scripts;
         private Button button_RunScript;
+        private Label label_Projectname;
         private static readonly string PREAMBLE = "23";
 
 
@@ -452,8 +453,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -804,6 +805,7 @@ namespace Monitor
             this.button_SynthL2 = new System.Windows.Forms.Button();
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label_Projectname = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2885,17 +2887,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea3.AxisX.Title = "Freq";
-            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.Title = "Power [dBm]";
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend3);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4218,11 +4220,11 @@ namespace Monitor
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
             this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
-            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 125);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 159);
             this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SerialPort.Name = "groupBox_SerialPort";
             this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 103);
+            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 92);
             this.groupBox_SerialPort.TabIndex = 111;
             this.groupBox_SerialPort.TabStop = false;
             this.groupBox_SerialPort.Text = "Serial port";
@@ -4299,11 +4301,11 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientTx);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
             this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientRx);
-            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 237);
+            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 255);
             this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
             this.groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 103);
+            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 85);
             this.groupBox_ClentTCPStatus.TabIndex = 112;
             this.groupBox_ClentTCPStatus.TabStop = false;
             this.groupBox_ClentTCPStatus.Text = "Client TCP";
@@ -4806,6 +4808,17 @@ namespace Monitor
             this.progressBar_WriteToFlash.Size = new System.Drawing.Size(144, 23);
             this.progressBar_WriteToFlash.TabIndex = 82;
             // 
+            // label_Projectname
+            // 
+            this.label_Projectname.AutoSize = true;
+            this.label_Projectname.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Projectname.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_Projectname.Location = new System.Drawing.Point(1428, 127);
+            this.label_Projectname.Name = "label_Projectname";
+            this.label_Projectname.Size = new System.Drawing.Size(76, 26);
+            this.label_Projectname.TabIndex = 116;
+            this.label_Projectname.Text = "label12";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -4813,6 +4826,7 @@ namespace Monitor
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1526, 694);
+            this.Controls.Add(this.label_Projectname);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -4933,6 +4947,7 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -17157,8 +17172,9 @@ ReadReg 0x48BF ---> Read from Register 0x48BF
                 //    version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 //}
 
+                label_Projectname.Text = Text;
                 Text = Text + " [ " + ", Version: " + version + ", Compiled: " + RetrieveLinkerTimestamp().ToString() + " ]";
-
+                
 
 
 
