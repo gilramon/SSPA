@@ -399,6 +399,7 @@ namespace Monitor
         private RichTextBox richTextBox_Scripts;
         private Button button_RunScript;
         private Label label_Projectname;
+        private GroupBox groupBox1;
         private static readonly string PREAMBLE = "23";
 
 
@@ -453,8 +454,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -806,6 +807,7 @@ namespace Monitor
             this.progressBar_WriteToFlash = new System.Windows.Forms.ProgressBar();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label_Projectname = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -867,6 +869,7 @@ namespace Monitor
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox_ClentTCPStatus.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox_ServerSettings
@@ -2887,17 +2890,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4186,7 +4189,7 @@ namespace Monitor
             // Label_SerialPortRx
             // 
             this.Label_SerialPortRx.AutoSize = true;
-            this.Label_SerialPortRx.Location = new System.Drawing.Point(19, 52);
+            this.Label_SerialPortRx.Location = new System.Drawing.Point(12, 45);
             this.Label_SerialPortRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_SerialPortRx.Name = "Label_SerialPortRx";
             this.Label_SerialPortRx.Size = new System.Drawing.Size(23, 18);
@@ -4197,7 +4200,7 @@ namespace Monitor
             // 
             this.label_SerialPortConnected.AutoSize = true;
             this.label_SerialPortConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SerialPortConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_SerialPortConnected.Location = new System.Drawing.Point(8, 21);
             this.label_SerialPortConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SerialPortConnected.Name = "label_SerialPortConnected";
             this.label_SerialPortConnected.Size = new System.Drawing.Size(69, 18);
@@ -4207,7 +4210,7 @@ namespace Monitor
             // Label_SerialPortTx
             // 
             this.Label_SerialPortTx.AutoSize = true;
-            this.Label_SerialPortTx.Location = new System.Drawing.Point(59, 52);
+            this.Label_SerialPortTx.Location = new System.Drawing.Point(52, 45);
             this.Label_SerialPortTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_SerialPortTx.Name = "Label_SerialPortTx";
             this.Label_SerialPortTx.Size = new System.Drawing.Size(21, 18);
@@ -4220,11 +4223,11 @@ namespace Monitor
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
             this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
-            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 159);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 190);
             this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SerialPort.Name = "groupBox_SerialPort";
             this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 92);
+            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 72);
             this.groupBox_SerialPort.TabIndex = 111;
             this.groupBox_SerialPort.TabStop = false;
             this.groupBox_SerialPort.Text = "Serial port";
@@ -4233,7 +4236,7 @@ namespace Monitor
             // label_SerialPortStatus
             // 
             this.label_SerialPortStatus.AutoSize = true;
-            this.label_SerialPortStatus.Location = new System.Drawing.Point(87, 28);
+            this.label_SerialPortStatus.Location = new System.Drawing.Point(80, 21);
             this.label_SerialPortStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SerialPortStatus.Name = "label_SerialPortStatus";
             this.label_SerialPortStatus.Size = new System.Drawing.Size(42, 18);
@@ -4301,11 +4304,11 @@ namespace Monitor
             this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientTx);
             this.groupBox_ClentTCPStatus.Controls.Add(this.label_ClientTCPConnected);
             this.groupBox_ClentTCPStatus.Controls.Add(this.Label_TCPClientRx);
-            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 255);
+            this.groupBox_ClentTCPStatus.Location = new System.Drawing.Point(1427, 268);
             this.groupBox_ClentTCPStatus.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_ClentTCPStatus.Name = "groupBox_ClentTCPStatus";
             this.groupBox_ClentTCPStatus.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 85);
+            this.groupBox_ClentTCPStatus.Size = new System.Drawing.Size(174, 72);
             this.groupBox_ClentTCPStatus.TabIndex = 112;
             this.groupBox_ClentTCPStatus.TabStop = false;
             this.groupBox_ClentTCPStatus.Text = "Client TCP";
@@ -4313,7 +4316,7 @@ namespace Monitor
             // label_TCPClient
             // 
             this.label_TCPClient.AutoSize = true;
-            this.label_TCPClient.Location = new System.Drawing.Point(84, 28);
+            this.label_TCPClient.Location = new System.Drawing.Point(77, 21);
             this.label_TCPClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_TCPClient.Name = "label_TCPClient";
             this.label_TCPClient.Size = new System.Drawing.Size(45, 18);
@@ -4323,7 +4326,7 @@ namespace Monitor
             // Label_TCPClientTx
             // 
             this.Label_TCPClientTx.AutoSize = true;
-            this.Label_TCPClientTx.Location = new System.Drawing.Point(59, 52);
+            this.Label_TCPClientTx.Location = new System.Drawing.Point(52, 45);
             this.Label_TCPClientTx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_TCPClientTx.Name = "Label_TCPClientTx";
             this.Label_TCPClientTx.Size = new System.Drawing.Size(21, 18);
@@ -4334,7 +4337,7 @@ namespace Monitor
             // 
             this.label_ClientTCPConnected.AutoSize = true;
             this.label_ClientTCPConnected.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ClientTCPConnected.Location = new System.Drawing.Point(15, 28);
+            this.label_ClientTCPConnected.Location = new System.Drawing.Point(8, 21);
             this.label_ClientTCPConnected.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_ClientTCPConnected.Name = "label_ClientTCPConnected";
             this.label_ClientTCPConnected.Size = new System.Drawing.Size(69, 18);
@@ -4344,7 +4347,7 @@ namespace Monitor
             // Label_TCPClientRx
             // 
             this.Label_TCPClientRx.AutoSize = true;
-            this.Label_TCPClientRx.Location = new System.Drawing.Point(19, 52);
+            this.Label_TCPClientRx.Location = new System.Drawing.Point(12, 45);
             this.Label_TCPClientRx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label_TCPClientRx.Name = "Label_TCPClientRx";
             this.Label_TCPClientRx.Size = new System.Drawing.Size(23, 18);
@@ -4813,11 +4816,21 @@ namespace Monitor
             this.label_Projectname.AutoSize = true;
             this.label_Projectname.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Projectname.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_Projectname.Location = new System.Drawing.Point(1428, 127);
+            this.label_Projectname.Location = new System.Drawing.Point(6, 14);
             this.label_Projectname.Name = "label_Projectname";
-            this.label_Projectname.Size = new System.Drawing.Size(76, 26);
+            this.label_Projectname.Size = new System.Drawing.Size(127, 26);
             this.label_Projectname.TabIndex = 116;
-            this.label_Projectname.Text = "label12";
+            this.label_Projectname.Text = "Project name";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label_Projectname);
+            this.groupBox1.Location = new System.Drawing.Point(1427, 125);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(172, 50);
+            this.groupBox1.TabIndex = 117;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Project name";
             // 
             // MainForm
             // 
@@ -4826,7 +4839,7 @@ namespace Monitor
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1526, 694);
-            this.Controls.Add(this.label_Projectname);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_ClentTCPStatus);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -4946,8 +4959,9 @@ namespace Monitor
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox_ClentTCPStatus.ResumeLayout(false);
             this.groupBox_ClentTCPStatus.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -16764,28 +16778,32 @@ This Process can take 1 minute.";
             }
         }
 
-        String WriteToRegister(bool i_OnlyCheckValidity)
+        String WriteToRegister(String i_Command, bool i_OnlyCheckValidity)
+        {
+            String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            // 
+
+            return ret;
+        }
+
+        String ReadFromRegister(String i_Command, bool i_OnlyCheckValidity)
         {
             String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
             return ret;
         }
 
-        String ReadFromRegister(bool i_OnlyCheckValidity)
-        {
-            String ret = System.Reflection.MethodBase.GetCurrentMethod().Name;
-            return ret;
-        }
+
         String ExectuteOrCheckValidityCommand(String i_Command,bool i_OnlyCheckValidity)
         {
             String ret = "";
             switch(i_Command)
             {
                 case "WriteReg":
-                    ret = WriteToRegister(i_OnlyCheckValidity);
+                    ret = WriteToRegister(i_Command,i_OnlyCheckValidity);
                     break;
 
                 case "ReadReg":
-                    ret = ReadFromRegister(i_OnlyCheckValidity);
+                    ret = ReadFromRegister(i_Command,i_OnlyCheckValidity);
                     break;
 
                 default:
@@ -16835,6 +16853,7 @@ This Process can take 1 minute.";
                     }
                 }
             }
+
             if (IsCommandFound == false)
             {
                 SystemLogger.LogMessage(Color.DarkOrange, Color.White, String.Format(" command '{0}' is not found", tempStr[0]), New_Line = true, Show_Time = true);
