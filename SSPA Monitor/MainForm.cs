@@ -1,4 +1,4 @@
-﻿using DSPLib;
+﻿
 using Monitor.Properties;
 using System;
 using System.Collections;
@@ -6566,71 +6566,71 @@ namespace Monitor
 
         private void MarkTheBiggestFreq(Series i_serias, double[] i_lmSpectrum, double[] i_freqSpan)
         {
-            double minX = i_serias.Points.Select(v => v.XValue).Min();
-            double maxX = i_serias.Points.Select(v => v.XValue).Max();
-            double minY = i_serias.Points.Select(v => v.YValues[0]).Min();
-            double maxY = i_serias.Points.Select(v => v.YValues[0]).Max();
+            //double minX = i_serias.Points.Select(v => v.XValue).Min();
+            //double maxX = i_serias.Points.Select(v => v.XValue).Max();
+            //double minY = i_serias.Points.Select(v => v.YValues[0]).Min();
+            //double maxY = i_serias.Points.Select(v => v.YValues[0]).Max();
 
-            // find datapoints from left..
-            DataPoint minXpt = i_serias.Points.Select(p => p)
-                                .Where(p => p.XValue == minX)
-                                .DefaultIfEmpty(i_serias.Points.First()).First();
-            DataPoint minYpt = i_serias.Points.Select(p => p)
-                                .Where(p => p.YValues[0] == minY)
-                                .DefaultIfEmpty(i_serias.Points.First()).First();
-            //..or from right
-            DataPoint maxXpt = i_serias.Points.Select(p => p)
-                                .Where(p => p.XValue == maxX)
-                                .DefaultIfEmpty(i_serias.Points.Last()).Last();
-            DataPoint maxYpt = i_serias.Points.Select(p => p)
-                                .Where(p => p.YValues[0] == maxY)
-                                .DefaultIfEmpty(i_serias.Points.Last()).Last();
+            //// find datapoints from left..
+            //DataPoint minXpt = i_serias.Points.Select(p => p)
+            //                    .Where(p => p.XValue == minX)
+            //                    .DefaultIfEmpty(i_serias.Points.First()).First();
+            //DataPoint minYpt = i_serias.Points.Select(p => p)
+            //                    .Where(p => p.YValues[0] == minY)
+            //                    .DefaultIfEmpty(i_serias.Points.First()).First();
+            ////..or from right
+            //DataPoint maxXpt = i_serias.Points.Select(p => p)
+            //                    .Where(p => p.XValue == maxX)
+            //                    .DefaultIfEmpty(i_serias.Points.Last()).Last();
+            //DataPoint maxYpt = i_serias.Points.Select(p => p)
+            //                    .Where(p => p.YValues[0] == maxY)
+            //                    .DefaultIfEmpty(i_serias.Points.Last()).Last();
 
-            textBox_MaxXAxis.Text = maxXpt.XValue.ToString();
-            textBox_MinXAxis.Text = minXpt.XValue.ToString();
+            //textBox_MaxXAxis.Text = maxXpt.XValue.ToString();
+            //textBox_MinXAxis.Text = minXpt.XValue.ToString();
 
-            // textBox_SystemStatus.Text += maxYpt.ToString();
-
-
-
-
-            Color c = Color.Red;
-            //  minXpt.MarkerColor = c;
-            //   minYpt.MarkerColor = c;
-            //   maxXpt.MarkerColor = c;
-            maxYpt.MarkerColor = c;
-            //   minXpt.MarkerSize = 12;
-            //   minYpt.MarkerSize = 12;
-            //    maxXpt.MarkerSize = 12;
-            maxYpt.MarkerSize = 20;
-            maxYpt.MarkerStyle = MarkerStyle.Triangle;
-            maxYpt.Label = string.Format("X= {0} Y= {1} dBm", maxYpt.XValue.ToString("0.##E+0"), maxYpt.YValues[0].ToString("0.00"));
-            //Plot fig3 = new Plot("Figure 3 - FFT Log Magnitude ", "Frequency (Hz)", "Mag (dBV)");
-            //fig3.PlotData(freqSpan, lmSpectrum);
-
-
-            double MaxAmplitude = DSP.Analyze.FindMaxAmplitude(i_lmSpectrum);
-            double MaxPosition = DSP.Analyze.FindMaxPosition(i_lmSpectrum);
-            double MaxFrequency = DSP.Analyze.FindMaxFrequency(i_lmSpectrum, i_freqSpan);
-
-            double Mean = DSP.Analyze.FindMean(i_lmSpectrum);
-
-
-            double RMS = DSP.Analyze.FindRms(i_lmSpectrum);
+            //// textBox_SystemStatus.Text += maxYpt.ToString();
 
 
 
-            // Create a new legend called "Legend2".
-            //  chart1.Legends.Add(new Legend(i_serias.Name));
-            // Set Docking of the Legend chart to the Default Chart Area.
-            //chart1.Legends[i_serias.Name].DockToChartArea = "Default";
-            // Assign the legend to Series1.
 
-            DataPoint prop = new DataPoint(0, 0);
-            //chart1.Series[i_serias.Name].Points[(int)prop.XValue].Label = String.Format(" \n Mean [{0}] RMS [{1}]  MaxAmplitude [{2}] MaxPosition [{3}] MaxFrequency [{4}] \n \n", Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.00"));
+            //Color c = Color.Red;
+            ////  minXpt.MarkerColor = c;
+            ////   minYpt.MarkerColor = c;
+            ////   maxXpt.MarkerColor = c;
+            //maxYpt.MarkerColor = c;
+            ////   minXpt.MarkerSize = 12;
+            ////   minYpt.MarkerSize = 12;
+            ////    maxXpt.MarkerSize = 12;
+            //maxYpt.MarkerSize = 20;
+            //maxYpt.MarkerStyle = MarkerStyle.Triangle;
+            //maxYpt.Label = string.Format("X= {0} Y= {1} dBm", maxYpt.XValue.ToString("0.##E+0"), maxYpt.YValues[0].ToString("0.00"));
+            ////Plot fig3 = new Plot("Figure 3 - FFT Log Magnitude ", "Frequency (Hz)", "Mag (dBV)");
+            ////fig3.PlotData(freqSpan, lmSpectrum);
 
-            int index = listBox_Charts.Items.Add(i_serias.Name);
-            i_serias.LegendToolTip = string.Format(" \n{0} \n Mean [{1}] \n RMS [{2}] \n MaxAmplitude [{3}] \n MaxPosition [{4}] \n MaxFrequency [{5}] \n \n", i_serias.Name, Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.##E+0"));
+
+            ////double MaxAmplitude = DSP.Analyze.FindMaxAmplitude(i_lmSpectrum);
+            ////double MaxPosition = DSP.Analyze.FindMaxPosition(i_lmSpectrum);
+            ////double MaxFrequency = DSP.Analyze.FindMaxFrequency(i_lmSpectrum, i_freqSpan);
+
+            ////double Mean = DSP.Analyze.FindMean(i_lmSpectrum);
+
+
+            ////double RMS = DSP.Analyze.FindRms(i_lmSpectrum);
+
+
+
+            //// Create a new legend called "Legend2".
+            ////  chart1.Legends.Add(new Legend(i_serias.Name));
+            //// Set Docking of the Legend chart to the Default Chart Area.
+            ////chart1.Legends[i_serias.Name].DockToChartArea = "Default";
+            //// Assign the legend to Series1.
+
+            //DataPoint prop = new DataPoint(0, 0);
+            ////chart1.Series[i_serias.Name].Points[(int)prop.XValue].Label = String.Format(" \n Mean [{0}] RMS [{1}]  MaxAmplitude [{2}] MaxPosition [{3}] MaxFrequency [{4}] \n \n", Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.00"));
+
+            //int index = listBox_Charts.Items.Add(i_serias.Name);
+            //i_serias.LegendToolTip = string.Format(" \n{0} \n Mean [{1}] \n RMS [{2}] \n MaxAmplitude [{3}] \n MaxPosition [{4}] \n MaxFrequency [{5}] \n \n", i_serias.Name, Mean.ToString("0.00"), RMS.ToString("0.00"), MaxAmplitude.ToString("0.00"), MaxPosition.ToString("0.00"), MaxFrequency.ToString("0.##E+0"));
         }
 
         //void CheckForMiniAdaDataDFT(SSPA_Parser i_MiniAdaParser)
@@ -12319,89 +12319,89 @@ RX frame: 	0x004D 0x0087 0x00000000 0xD4
 
         private void button94_Click(object sender, EventArgs e)
         {
-            // Generate a test signal,
-            //  1 Vrms at 20,000 Hz
-            //  Sampling Rate = 100,000 Hz
-            //  DFT Length is 1000 Points
-            double amplitude = 1.0;
-            double frequency = 20000;
-            uint length = 1000;
-            double samplingRate = 100000;
-            double[] inputSignal = DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
-            // Instantiate a new DFT
-            DFT dft = new DFT();
-            // Initialize the DFT
-            // You only need to do this once or if you change any of the DFT parameters.
-            dft.Initialize(length);
-            // Call the DFT and get the scaled spectrum back
-            Complex[] cSpectrum = dft.Execute(inputSignal);
-            // Convert the complex spectrum to magnitude
-            double[] lmSpectrum = DSP.ConvertComplex.ToMagnitude(cSpectrum);
-            // Note: At this point, lmSpectrum is a 501 byte array that 
-            // contains a properly scaled Spectrum from 0 - 50,000 Hz (1/2 the Sampling Frequency)
-            // For plotting on an XY Scatter plot, generate the X Axis frequency Span
-            double[] freqSpan = dft.FrequencySpan(samplingRate);
-            // At this point a XY Scatter plot can be generated from,
-            // X axis => freqSpan
-            // Y axis => lmSpectrum
-            // In this example, the maximum value of 1 Vrms is located at bin 200 (20,000 Hz)
-            Series series = new Series("Freq");
-            Series series2 = new Series("Time");
-            listBox_Charts.Items.Add(series.Name);
-            listBox_Charts.Items.Add(series2.Name);
-            // Frist parameter is X-Axis and Second is Collection of Y- Axis
-            series.Points.DataBindXY(freqSpan, lmSpectrum);
+            //// Generate a test signal,
+            ////  1 Vrms at 20,000 Hz
+            ////  Sampling Rate = 100,000 Hz
+            ////  DFT Length is 1000 Points
+            //double amplitude = 1.0;
+            //double frequency = 20000;
+            //uint length = 1000;
+            //double samplingRate = 100000;
+            //double[] inputSignal = DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
+            //// Instantiate a new DFT
+            //DFT dft = new DFT();
+            //// Initialize the DFT
+            //// You only need to do this once or if you change any of the DFT parameters.
+            //dft.Initialize(length);
+            //// Call the DFT and get the scaled spectrum back
+            //Complex[] cSpectrum = dft.Execute(inputSignal);
+            //// Convert the complex spectrum to magnitude
+            //double[] lmSpectrum = DSP.ConvertComplex.ToMagnitude(cSpectrum);
+            //// Note: At this point, lmSpectrum is a 501 byte array that 
+            //// contains a properly scaled Spectrum from 0 - 50,000 Hz (1/2 the Sampling Frequency)
+            //// For plotting on an XY Scatter plot, generate the X Axis frequency Span
+            //double[] freqSpan = dft.FrequencySpan(samplingRate);
+            //// At this point a XY Scatter plot can be generated from,
+            //// X axis => freqSpan
+            //// Y axis => lmSpectrum
+            //// In this example, the maximum value of 1 Vrms is located at bin 200 (20,000 Hz)
+            //Series series = new Series("Freq");
+            //Series series2 = new Series("Time");
+            //listBox_Charts.Items.Add(series.Name);
+            //listBox_Charts.Items.Add(series2.Name);
+            //// Frist parameter is X-Axis and Second is Collection of Y- Axis
+            //series.Points.DataBindXY(freqSpan, lmSpectrum);
 
-            for (int i = 0; i < inputSignal.Length / 10; i++)
-            {
-                series2.Points.AddXY(i, inputSignal[i]);
-            }
-            series2.ChartType = SeriesChartType.Line;
-            chart1.Series.Add(series);
-            chart1.Series.Add(series2);
+            //for (int i = 0; i < inputSignal.Length / 10; i++)
+            //{
+            //    series2.Points.AddXY(i, inputSignal[i]);
+            //}
+            //series2.ChartType = SeriesChartType.Line;
+            //chart1.Series.Add(series);
+            //chart1.Series.Add(series2);
 
         }
 
         private void button95_Click(object sender, EventArgs e)
         {
-            // Same Input Signal as Example 1 - Except a fractional cycle for frequency.
-            double amplitude = 1.0; double frequency = 20000.5;
-            uint length = 1000; uint zeroPadding = 9000; // NOTE: Zero Padding
-            double samplingRate = 100000;
-            double[] inputSignal = DSPLib.DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
-            // Apply window to the Input Data & calculate Scale Factor
-            double[] wCoefs = DSP.Window.Coefficients(DSP.Window.Type.FTNI, length);
-            double[] wInputData = DSP.Math.Multiply(inputSignal, wCoefs);
-            double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
-            // Instantiate & Initialize a new DFT
-            DSPLib.DFT dft = new DSPLib.DFT();
-            dft.Initialize(length, zeroPadding); // NOTE: Zero Padding
-                                                 // Call the DFT and get the scaled spectrum back
-            Complex[] cSpectrum = dft.Execute(wInputData);
-            // Convert the complex spectrum to note: Magnitude Format
-            double[] lmSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum);
-            // Properly scale the spectrum for the added window
-            lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
-            // For plotting on an XY Scatter plot generate the X Axis frequency Span
-            double[] freqSpan = dft.FrequencySpan(samplingRate);
-            // At this point a XY Scatter plot can be generated from,
-            // X axis => freqSpan
-            // Y axis => lmSpectrum
+            //// Same Input Signal as Example 1 - Except a fractional cycle for frequency.
+            //double amplitude = 1.0; double frequency = 20000.5;
+            //uint length = 1000; uint zeroPadding = 9000; // NOTE: Zero Padding
+            //double samplingRate = 100000;
+            ////double[] inputSignal = DSPLib.DSP.Generate.ToneSampling(amplitude, frequency, samplingRate, length);
+            ////// Apply window to the Input Data & calculate Scale Factor
+            ////double[] wCoefs = DSP.Window.Coefficients(DSP.Window.Type.FTNI, length);
+            ////double[] wInputData = DSP.Math.Multiply(inputSignal, wCoefs);
+            ////double wScaleFactor = DSP.Window.ScaleFactor.Signal(wCoefs);
+            ////// Instantiate & Initialize a new DFT
+            ////DSPLib.DFT dft = new DSPLib.DFT();
+            ////dft.Initialize(length, zeroPadding); // NOTE: Zero Padding
+            ////                                     // Call the DFT and get the scaled spectrum back
+            ////Complex[] cSpectrum = dft.Execute(wInputData);
+            ////// Convert the complex spectrum to note: Magnitude Format
+            ////double[] lmSpectrum = DSPLib.DSP.ConvertComplex.ToMagnitude(cSpectrum);
+            //// Properly scale the spectrum for the added window
+            ////lmSpectrum = DSP.Math.Multiply(lmSpectrum, wScaleFactor);
+            //// For plotting on an XY Scatter plot generate the X Axis frequency Span
+            ////double[] freqSpan = dft.FrequencySpan(samplingRate);
+            //// At this point a XY Scatter plot can be generated from,
+            //// X axis => freqSpan
+            //// Y axis => lmSpectrum
 
-            Series series = new Series("Freq 2");
-            Series series2 = new Series("Time 2");
-            listBox_Charts.Items.Add(series.Name);
-            listBox_Charts.Items.Add(series2.Name);
-            // Frist parameter is X-Axis and Second is Collection of Y- Axis
-            series.Points.DataBindXY(freqSpan, lmSpectrum);
+            //Series series = new Series("Freq 2");
+            //Series series2 = new Series("Time 2");
+            //listBox_Charts.Items.Add(series.Name);
+            //listBox_Charts.Items.Add(series2.Name);
+            //// Frist parameter is X-Axis and Second is Collection of Y- Axis
+            //series.Points.DataBindXY(freqSpan, lmSpectrum);
 
-            for (int i = 0; i < inputSignal.Length / 10; i++)
-            {
-                series2.Points.AddXY(i, inputSignal[i]);
-            }
-            series2.ChartType = SeriesChartType.Line;
-            chart1.Series.Add(series);
-            chart1.Series.Add(series2);
+            //for (int i = 0; i < inputSignal.Length / 10; i++)
+            //{
+            //    series2.Points.AddXY(i, inputSignal[i]);
+            //}
+            //series2.ChartType = SeriesChartType.Line;
+            //chart1.Series.Add(series);
+            //chart1.Series.Add(series2);
         }
 
         private void textBox_MinXAxis_TextChanged(object sender, EventArgs e)
