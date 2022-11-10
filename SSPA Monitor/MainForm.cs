@@ -454,8 +454,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -885,7 +885,7 @@ namespace Monitor
             this.groupBox_ServerSettings.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_ServerSettings.Name = "groupBox_ServerSettings";
             this.groupBox_ServerSettings.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_ServerSettings.Size = new System.Drawing.Size(378, 56);
+            this.groupBox_ServerSettings.Size = new System.Drawing.Size(444, 56);
             this.groupBox_ServerSettings.TabIndex = 0;
             this.groupBox_ServerSettings.TabStop = false;
             this.groupBox_ServerSettings.Text = "Server Settings";
@@ -894,7 +894,7 @@ namespace Monitor
             // 
             this.textBox_ServerOpen.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ServerOpen.ForeColor = System.Drawing.Color.White;
-            this.textBox_ServerOpen.Location = new System.Drawing.Point(252, 17);
+            this.textBox_ServerOpen.Location = new System.Drawing.Point(321, 15);
             this.textBox_ServerOpen.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ServerOpen.Multiline = true;
             this.textBox_ServerOpen.Name = "textBox_ServerOpen";
@@ -907,7 +907,7 @@ namespace Monitor
             // 
             this.textBox_ServerActive.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ServerActive.ForeColor = System.Drawing.Color.White;
-            this.textBox_ServerActive.Location = new System.Drawing.Point(192, 17);
+            this.textBox_ServerActive.Location = new System.Drawing.Point(261, 15);
             this.textBox_ServerActive.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ServerActive.Multiline = true;
             this.textBox_ServerActive.Name = "textBox_ServerActive";
@@ -918,7 +918,7 @@ namespace Monitor
             // 
             // txtPortNo
             // 
-            this.txtPortNo.Location = new System.Drawing.Point(78, 15);
+            this.txtPortNo.Location = new System.Drawing.Point(142, 20);
             this.txtPortNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtPortNo.Name = "txtPortNo";
             this.txtPortNo.Size = new System.Drawing.Size(38, 23);
@@ -929,7 +929,7 @@ namespace Monitor
             // textBox_NumberOfOpenConnections
             // 
             this.textBox_NumberOfOpenConnections.ForeColor = System.Drawing.Color.White;
-            this.textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(339, 17);
+            this.textBox_NumberOfOpenConnections.Location = new System.Drawing.Point(408, 15);
             this.textBox_NumberOfOpenConnections.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_NumberOfOpenConnections.Name = "textBox_NumberOfOpenConnections";
             this.textBox_NumberOfOpenConnections.ReadOnly = true;
@@ -942,7 +942,7 @@ namespace Monitor
             this.ListenBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.ListenBox.AutoSize = true;
             this.ListenBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListenBox.Location = new System.Drawing.Point(121, 14);
+            this.ListenBox.Location = new System.Drawing.Point(184, 16);
             this.ListenBox.Margin = new System.Windows.Forms.Padding(2);
             this.ListenBox.Name = "ListenBox";
             this.ListenBox.Size = new System.Drawing.Size(74, 28);
@@ -954,7 +954,7 @@ namespace Monitor
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Location = new System.Drawing.Point(45, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 15);
@@ -2890,17 +2890,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea5.AxisX.Title = "Freq";
-            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.AxisY.Title = "Power [dBm]";
-            chartArea5.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "Legend1";
-            legend5.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend5);
+            chartArea1.AxisX.Title = "Freq";
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.Title = "Power [dBm]";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
