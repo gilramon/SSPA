@@ -13819,7 +13819,7 @@ Note: eStatus enum 
 
                 textBox_SendSerialPort.Text = ConvertByteArraytToString(Kratos_Protocol.EncodeKratusProtocol_Standard(SentFrame));
 
-                Button2_Click_1(null, null);
+                button_SendSerialPort_Click(null, null);
                 // button_SendSerialPort.PerformClick();
                 //stm.Write(Result, 0, Result.Length);
 
