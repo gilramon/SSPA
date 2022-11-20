@@ -20,7 +20,7 @@ namespace Monitor
         public String Command_name = "";
         public String Help = "";
         public String Example = "";
-        public ArgumentType[] Arguments;
+     //   public ArgumentType[] Arguments;
 
         /// <summary>
         /// 
@@ -38,38 +38,38 @@ namespace Monitor
             String ret = "";
             String[] tempStr = i_Command.Split(' ');
 
-            if(tempStr.Length-1 == Arguments.Length)
-            {
-                ret = String.Format("Command {0} should have {1} arguments", tempStr[0], Arguments.Length);
-                return ret;
-            }
+            //if(tempStr.Length-1 == Arguments.Length)
+            //{
+            //    ret = String.Format("Command {0} should have {1} arguments", tempStr[0], Arguments.Length);
+            //    return ret;
+            //}
 
 
-            for(int i=0; i < Arguments.Length;i++)
-            {
-                switch(Arguments[i])
-                {
-                    case ArgumentType.String:
+            //for(int i=0; i < Arguments.Length;i++)
+            //{
+            //    switch(Arguments[i])
+            //    {
+            //        case ArgumentType.String:
                         
-                        break;
+            //            break;
 
-                    case ArgumentType.integer:
-                        if(int.TryParse(tempStr[i+1],out int Number) == true)
-                        {
+            //        case ArgumentType.integer:
+            //            if(int.TryParse(tempStr[i+1],out int Number) == true)
+            //            {
                              
-                        }
-                        break;
+            //            }
+            //            break;
 
-                    case ArgumentType.HexString:
-                        break;
+            //        case ArgumentType.HexString:
+            //            break;
 
-                    case ArgumentType.int16:
-                        break;
+            //        case ArgumentType.int16:
+            //            break;
 
-                    default:
-                        break;
-                }
-            }
+            //        default:
+            //            break;
+            //    }
+            //}
 
 
             return ret;

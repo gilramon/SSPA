@@ -7235,7 +7235,7 @@ namespace Monitor
         }
         private void GetSystemStatus(KratosProtocolFrame i_Parsedframe)
         {
-            if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
+            if (int.TryParse(i_Parsedframe.LengthOfEntireMessage, out int DataLength) == true)
             {
 
 
@@ -7251,7 +7251,7 @@ namespace Monitor
 
         private void GetDiscreteStatusBusmode(KratosProtocolFrame i_Parsedframe)
         {
-            if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
+            if (int.TryParse(i_Parsedframe.LengthOfEntireMessage, out int DataLength) == true)
             {
                 // byte Data = byte.Parse(GetBytesFromData(i_Parsedframe.Data, 0, 2), System.Globalization.NumberStyles.HexNumber);
 
@@ -7263,7 +7263,7 @@ namespace Monitor
 
         private void GetSystemTableIndexes(KratosProtocolFrame i_Parsedframe)
         {
-            if (int.TryParse(i_Parsedframe.DataLength, out int DataLength) == true)
+            if (int.TryParse(i_Parsedframe.LengthOfEntireMessage, out int DataLength) == true)
             {
                 // byte Data = byte.Parse(GetBytesFromData(i_Parsedframe.Data, 0, 2), System.Globalization.NumberStyles.HexNumber);
 
@@ -7274,7 +7274,7 @@ namespace Monitor
         private void ReadFromFlash(KratosProtocolFrame i_Parsedframe)
         {
             string ret = "";
-            int.TryParse(i_Parsedframe.DataLength, out int DataLength);
+            int.TryParse(i_Parsedframe.LengthOfEntireMessage, out int DataLength);
 
             for (int i = 0; i < DataLength - 2; i = i + 2)
             {
@@ -7837,7 +7837,7 @@ namespace Monitor
                             textBox_RxClientData.Text = Regex.Replace(Result.Data, ".{2}", "$0 ");
 
                             textBox_RxClientDataLength.BackColor = Color.LightGreen;
-                            textBox_RxClientDataLength.Text = Result.DataLength + " Bytes";
+                            textBox_RxClientDataLength.Text = Result.LengthOfEntireMessage + " Bytes";
 
                             textBox_RxClientCheckSum.BackColor = Color.LightGreen;
                             textBox_RxClientCheckSum.Text = Result.CheckSum;
@@ -11354,7 +11354,7 @@ namespace Monitor
                     textBox_SentPreamble.Text = SentFrame.Preamble;
                     textBox_SentOpcode.Text = SentFrame.Opcode;
                     textBox_SentData.Text = Regex.Replace(SentFrame.Data, ".{2}", "$0 ");
-                    textBox_SentDataLength.Text = SentFrame.DataLength;
+                    textBox_SentDataLength.Text = SentFrame.LengthOfEntireMessage;
                     textBox_SentChecksum.Text = SentFrame.CheckSum;
 
                     byte[] WriteData = Kratos_Protocol.EncodeKratusProtocol_Standard(SentFrame);
@@ -13861,7 +13861,7 @@ Note: eStatus enum 
                 textBox_SentPreamble.Text = SentFrame.Preamble;
                 textBox_SentOpcode.Text = SentFrame.Opcode;
                 textBox_SentData.Text = textBox_SentData.Text = Regex.Replace(SentFrame.Data, ".{2}", "$0 ");
-                textBox_SentDataLength.Text = SentFrame.DataLength;
+                textBox_SentDataLength.Text = SentFrame.LengthOfEntireMessage;
                 textBox_SentChecksum.Text = SentFrame.CheckSum;
 
                 textBox_SendSerialPort.Text = ConvertByteArraytToString(Kratos_Protocol.EncodeKratusProtocol_Standard(SentFrame));
