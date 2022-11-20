@@ -454,8 +454,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -2460,7 +2460,7 @@ namespace Monitor
             this.groupBox_AllCommands.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_AllCommands.Location = new System.Drawing.Point(3, 104);
             this.groupBox_AllCommands.Name = "groupBox_AllCommands";
-            this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 445);
+            this.groupBox_AllCommands.Size = new System.Drawing.Size(842, 475);
             this.groupBox_AllCommands.TabIndex = 72;
             this.groupBox_AllCommands.TabStop = false;
             this.groupBox_AllCommands.Text = "Commands list";
@@ -2470,7 +2470,7 @@ namespace Monitor
             this.groupBox_Help.Controls.Add(this.textBox_CommandHelp);
             this.groupBox_Help.Location = new System.Drawing.Point(378, 11);
             this.groupBox_Help.Name = "groupBox_Help";
-            this.groupBox_Help.Size = new System.Drawing.Size(369, 429);
+            this.groupBox_Help.Size = new System.Drawing.Size(369, 464);
             this.groupBox_Help.TabIndex = 115;
             this.groupBox_Help.TabStop = false;
             this.groupBox_Help.Text = "Help";
@@ -2483,9 +2483,10 @@ namespace Monitor
             this.textBox_CommandHelp.Multiline = true;
             this.textBox_CommandHelp.Name = "textBox_CommandHelp";
             this.textBox_CommandHelp.ReadOnly = true;
-            this.textBox_CommandHelp.Size = new System.Drawing.Size(359, 403);
+            this.textBox_CommandHelp.Size = new System.Drawing.Size(359, 437);
             this.textBox_CommandHelp.TabIndex = 114;
             this.textBox_CommandHelp.TabStop = false;
+            this.textBox_CommandHelp.Text = "General Format:\r\nCommand arg1 arg2 arg3...\r\n\r\nFor example:\r\nRunCommand 12 abc\r\n";
             // 
             // listBox_CLI_ALLCommands
             // 
@@ -2493,7 +2494,7 @@ namespace Monitor
             this.listBox_CLI_ALLCommands.ItemHeight = 19;
             this.listBox_CLI_ALLCommands.Location = new System.Drawing.Point(6, 18);
             this.listBox_CLI_ALLCommands.Name = "listBox_CLI_ALLCommands";
-            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 422);
+            this.listBox_CLI_ALLCommands.Size = new System.Drawing.Size(366, 441);
             this.listBox_CLI_ALLCommands.TabIndex = 2;
             this.listBox_CLI_ALLCommands.Click += new System.EventHandler(this.listBox_CLI_ALLCommands_Click);
             this.listBox_CLI_ALLCommands.SelectedIndexChanged += new System.EventHandler(this.listBox_CLI_ALLCommands_SelectedIndexChanged);
@@ -2890,17 +2891,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea1.AxisX.Title = "Freq";
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.Title = "Power [dBm]";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisX.Title = "Freq";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "Power [dBm]";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4223,11 +4224,11 @@ namespace Monitor
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortTx);
             this.groupBox_SerialPort.Controls.Add(this.label_SerialPortConnected);
             this.groupBox_SerialPort.Controls.Add(this.Label_SerialPortRx);
-            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 190);
+            this.groupBox_SerialPort.Location = new System.Drawing.Point(1427, 180);
             this.groupBox_SerialPort.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox_SerialPort.Name = "groupBox_SerialPort";
             this.groupBox_SerialPort.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 72);
+            this.groupBox_SerialPort.Size = new System.Drawing.Size(174, 82);
             this.groupBox_SerialPort.TabIndex = 111;
             this.groupBox_SerialPort.TabStop = false;
             this.groupBox_SerialPort.Text = "Serial port";
@@ -17081,14 +17082,14 @@ Description:
 Write to Register 
 
 Syntax:
-WriteReg address[2 bytes] data[2 bytes]
+WriteReg address[2 hex bytes] data[2 hex bytes]
 
 Example:
 
-WriteReg 0x48BF 0xFFFF ---> Write to Register 0x48BF data 0xFFFF
+WriteReg 48BF FFFF ---> Write to Register 0x48BF data 0xFFFF
 ");
 
-            WriteReg.Example = "WriteReg 0x48BF 0xFFFF";
+            WriteReg.Example = "WriteReg 48BF FFFF";
 
             List_AllCommands.Add(WriteReg);
 
@@ -17104,14 +17105,14 @@ Description:
 Read From Register 
 
 Syntax:
-ReadReg address[2 bytes]
+ReadReg address[2 hex bytes]
 
 Example:
 
-ReadReg 0x48BF ---> Read from Register 0x48BF
+ReadReg 48BF ---> Read from Register 48BF
 ");
 
-            ReadReg.Example = "ReadReg 0x48BF";
+            ReadReg.Example = "ReadReg 48BF";
             List_AllCommands.Add(ReadReg);
 
 
