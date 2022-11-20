@@ -400,6 +400,9 @@ namespace Monitor
         private Button button_RunScript;
         private Label label_Projectname;
         private GroupBox groupBox1;
+        private TextBox textBox_CommandActivation;
+        private Label label12;
+        private Label label14;
         private static readonly string PREAMBLE = "23";
 
 
@@ -454,8 +457,8 @@ namespace Monitor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox_ServerSettings = new System.Windows.Forms.GroupBox();
             this.textBox_ServerOpen = new System.Windows.Forms.TextBox();
@@ -808,6 +811,9 @@ namespace Monitor
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label_Projectname = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_CommandActivation = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox_ServerSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl_Main.SuspendLayout();
@@ -2116,6 +2122,9 @@ namespace Monitor
             // 
             // groupBox_clientTX
             // 
+            this.groupBox_clientTX.Controls.Add(this.label14);
+            this.groupBox_clientTX.Controls.Add(this.textBox_CommandActivation);
+            this.groupBox_clientTX.Controls.Add(this.label12);
             this.groupBox_clientTX.Controls.Add(this.button_SendProtocolSerialPort);
             this.groupBox_clientTX.Controls.Add(this.button52);
             this.groupBox_clientTX.Controls.Add(this.groupBox41);
@@ -2139,10 +2148,10 @@ namespace Monitor
             // 
             // button_SendProtocolSerialPort
             // 
-            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(120, 122);
+            this.button_SendProtocolSerialPort.Location = new System.Drawing.Point(120, 151);
             this.button_SendProtocolSerialPort.Margin = new System.Windows.Forms.Padding(2);
             this.button_SendProtocolSerialPort.Name = "button_SendProtocolSerialPort";
-            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(110, 22);
+            this.button_SendProtocolSerialPort.Size = new System.Drawing.Size(128, 22);
             this.button_SendProtocolSerialPort.TabIndex = 16;
             this.button_SendProtocolSerialPort.TabStop = false;
             this.button_SendProtocolSerialPort.Text = "Send SerialPort";
@@ -2320,7 +2329,7 @@ namespace Monitor
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Maroon;
-            this.label17.Location = new System.Drawing.Point(192, 22);
+            this.label17.Location = new System.Drawing.Point(369, 20);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(97, 21);
@@ -2339,19 +2348,19 @@ namespace Monitor
             // 
             // textBox_Preamble
             // 
-            this.textBox_Preamble.Location = new System.Drawing.Point(89, 18);
+            this.textBox_Preamble.Location = new System.Drawing.Point(156, 14);
             this.textBox_Preamble.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Preamble.MaxLength = 5;
             this.textBox_Preamble.Name = "textBox_Preamble";
             this.textBox_Preamble.Size = new System.Drawing.Size(92, 26);
             this.textBox_Preamble.TabIndex = 0;
-            this.textBox_Preamble.Text = "23";
+            this.textBox_Preamble.Text = "82";
             this.textBox_Preamble.TextChanged += new System.EventHandler(this.textBox_Preamble_TextChanged);
             this.textBox_Preamble.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Preamble_KeyDown);
             // 
             // button_SendProtocolTCPIP
             // 
-            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 122);
+            this.button_SendProtocolTCPIP.Location = new System.Drawing.Point(6, 151);
             this.button_SendProtocolTCPIP.Margin = new System.Windows.Forms.Padding(2);
             this.button_SendProtocolTCPIP.Name = "button_SendProtocolTCPIP";
             this.button_SendProtocolTCPIP.Size = new System.Drawing.Size(109, 22);
@@ -2363,24 +2372,24 @@ namespace Monitor
             // 
             // textBox_Opcode
             // 
-            this.textBox_Opcode.Location = new System.Drawing.Point(89, 52);
+            this.textBox_Opcode.Location = new System.Drawing.Point(156, 47);
             this.textBox_Opcode.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Opcode.MaxLength = 5;
             this.textBox_Opcode.Name = "textBox_Opcode";
             this.textBox_Opcode.Size = new System.Drawing.Size(92, 26);
             this.textBox_Opcode.TabIndex = 1;
-            this.textBox_Opcode.Text = "70 00";
+            this.textBox_Opcode.Text = "70";
             this.textBox_Opcode.TextChanged += new System.EventHandler(this.textBox_Opcode_TextChanged);
             this.textBox_Opcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_Opcode_KeyDown);
             // 
             // textBox_data
             // 
-            this.textBox_data.Location = new System.Drawing.Point(89, 86);
+            this.textBox_data.Location = new System.Drawing.Point(156, 114);
             this.textBox_data.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_data.Name = "textBox_data";
-            this.textBox_data.Size = new System.Drawing.Size(206, 26);
+            this.textBox_data.Size = new System.Drawing.Size(394, 26);
             this.textBox_data.TabIndex = 2;
-            this.textBox_data.Text = "04 00 00 00";
+            this.textBox_data.Text = "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00";
             this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
             this.textBox_data.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_data_KeyDown);
             // 
@@ -2397,7 +2406,7 @@ namespace Monitor
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 88);
+            this.label11.Location = new System.Drawing.Point(15, 119);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 18);
@@ -2891,17 +2900,17 @@ namespace Monitor
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Freq";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "Power [dBm]";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            legend2.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chart1.Legends.Add(legend2);
+            chartArea3.AxisX.Title = "Freq";
+            chartArea3.AxisX.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.Title = "Power [dBm]";
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            legend3.TitleFont = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(178, 2);
             this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
@@ -4832,6 +4841,40 @@ namespace Monitor
             this.groupBox1.TabIndex = 117;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Project name";
+            // 
+            // textBox_CommandActivation
+            // 
+            this.textBox_CommandActivation.Location = new System.Drawing.Point(156, 83);
+            this.textBox_CommandActivation.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_CommandActivation.MaxLength = 5;
+            this.textBox_CommandActivation.Name = "textBox_CommandActivation";
+            this.textBox_CommandActivation.Size = new System.Drawing.Size(92, 26);
+            this.textBox_CommandActivation.TabIndex = 17;
+            this.textBox_CommandActivation.Text = "01";
+            this.textBox_CommandActivation.TextChanged += new System.EventHandler(this.textBox_CommandActivation_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 87);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 18);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Command activation";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
+            this.label14.Location = new System.Drawing.Point(257, 85);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 21);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "01, 02, 04";
             // 
             // MainForm
             // 
@@ -11329,46 +11372,49 @@ namespace Monitor
 
         private void textBox_Preamble_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_Preamble.Text, @"\s+", "");
+            TextBox txtbx = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbx.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null && textBox_Preamble.Text.Length <= 5)
+            if (buffer != null && buffer.Length == 1)
             {
-                textBox_Preamble.BackColor = Color.LightGreen;
+                txtbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_Preamble.BackColor = Color.Red;
+                txtbx.BackColor = Color.Red;
             }
         }
 
         private void textBox_Opcode_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_Opcode.Text, @"\s+", "");
+            TextBox txtbx = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbx.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null && textBox_Opcode.Text.Length <= 5)
+            if (buffer != null && buffer.Length == 1)
             {
-                textBox_Opcode.BackColor = Color.LightGreen;
+                txtbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_Opcode.BackColor = Color.Red;
+                txtbx.BackColor = Color.Red;
             }
         }
 
         private void textBox_data_TextChanged(object sender, EventArgs e)
         {
-            string WithoutSpaces = Regex.Replace(textBox_data.Text, @"\s+", "");
+            TextBox txtbx = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbx.Text, @"\s+", "");
             byte[] buffer = StringToByteArray(WithoutSpaces);
 
-            if (buffer != null)
+            if (buffer != null && buffer.Length == 20)
             {
-                textBox_data.BackColor = Color.LightGreen;
+                txtbx.BackColor = Color.LightGreen;
             }
             else
             {
-                textBox_data.BackColor = Color.Red;
+                txtbx.BackColor = Color.Red;
             }
         }
 
@@ -16980,6 +17026,22 @@ This Process can take 1 minute.";
                 }
             }
 
+        }
+
+        private void textBox_CommandActivation_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txtbx = (TextBox)sender;
+            string WithoutSpaces = Regex.Replace(txtbx.Text, @"\s+", "");
+            byte[] buffer = StringToByteArray(WithoutSpaces);
+
+            if (buffer != null && buffer.Length == 1)
+            {
+                txtbx.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                txtbx.BackColor = Color.Red;
+            }
         }
 
         private void ListBox_Charts_SelectedIndexChanged(object sender, EventArgs e)
