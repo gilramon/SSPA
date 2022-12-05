@@ -13756,7 +13756,7 @@ namespace Monitor
 
                     }
                 }
-                catch(Exception ex)
+                catch//(Exception ex)
                 {
                     //Gil_ExceptionOccured(ex);
                 //    WriteToSystemStatus(ex.ToString(), 4, Color.White);
@@ -16265,7 +16265,7 @@ namespace Monitor
                         break;
 
                     case "0080":
-                        textBox_SimulatorFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                        textBox_SimulatorFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 4, 1);
                         break;
 
                     case "008A":
@@ -16678,7 +16678,7 @@ namespace Monitor
                     //    break;
 
                     case "0080":
-                        textBox_SystemFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 3, 2);
+                        textBox_SystemFWVersion.Text = GetBytesFromData(i_Parsedframe.Data, 4, 1);
                         break;
 
                     case "008A":
@@ -25140,6 +25140,13 @@ Note: eStatus enum 
         bool WaitForEnter = true;
         private async void button_GetStatus_Click(object sender, EventArgs e)
         {
+            if (serialPort.IsOpen == false)
+            {
+                WriteToSystemStatus("Port is closed!", 4, Color.Orange);
+                return;
+
+            }
+
             //  Button btn = (Button)sender;
             button_GetStatusUUT.BackColor = Color.Blue;
 
@@ -25150,12 +25157,7 @@ Note: eStatus enum 
             WaitForEnter = false;
 
             int Delay = 500;
-            if (serialPort.IsOpen == false)
-            {
-                WriteToSystemStatus("Port is closed!", 4, Color.Orange);
-                return;
 
-            }
 
             //groupBox_UUTVersion.Enabled = false;
             //groupBox_SimulatorVersion.Enabled = false;
@@ -27805,8 +27807,8 @@ This Process can take 1 minute.";
                     ClearallColumnsinGrid(datagrid, true);
                 }
 
-               
 
+                await Task.Delay(500);
                 progressBar_UserStatus.Value = 80;
                 // Gil: Read all from flash
 
